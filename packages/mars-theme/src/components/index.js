@@ -33,22 +33,21 @@ const Theme = ({ state }) => {
       <Global styles={css(externalCss)} />
 
       {/* Add the header of the site. */}
-      <HeadContainer>
+      {/* <HeadContainer>
         <Header />
-      </HeadContainer>
-
+      </HeadContainer> */}
+      <List when={data.isArchive} />
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
-      <Main>
+      {/* <Main> */}
         <Switch>
           <Hello when={data.isSignUp} />
           <Personal when={data.isPersonal} />
           <Loading when={data.isFetching} />
-          <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
-      </Main>
+      {/* </Main> */}
     </>
   );
 };

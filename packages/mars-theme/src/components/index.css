@@ -3830,7 +3830,7 @@ button:focus {
     padding-bottom: 30px; } }
 
 .PesonalBanner {
-  background-image: url("../../assets/PersonalBg.png");
+  background-image: url("../assets/PersonalBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4098,7 +4098,7 @@ button:focus {
     height: 100%; }
 
 .PesonalBanner {
-  background-image: url("../../assets/PersonalBg.png");
+  background-image: url("../assets/PersonalBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4300,7 +4300,7 @@ button:focus {
       text-align: center; } }
 
 .ExchangeBanner {
-  background-image: url("../../assets/PersonalBg.png");
+  background-image: url("../assets/PersonalBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4844,7 +4844,7 @@ button:focus {
     height: 100%; }
 
 .PesonalBanner {
-  background-image: url("../../assets/PersonalBg.png");
+  background-image: url("../assets/PersonalBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -5094,7 +5094,7 @@ button:focus {
         width: 100%; } }
 
 .PesonalBanner {
-  background-image: url("../../assets/PersonalBg.png");
+  background-image: url("../assets/PersonalBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -5357,7 +5357,7 @@ button:focus {
     background-color: transparent !important; }
 
 .PesonalBanner {
-  background-image: url("../../assets/PersonalBg.png");
+  background-image: url("../assets/PersonalBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -5527,7 +5527,7 @@ button:focus {
       height: 45px; } }
 
 .PesonalBanner {
-  background-image: url("../../assets/PersonalBg.png");
+  background-image: url("../assets/PersonalBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
