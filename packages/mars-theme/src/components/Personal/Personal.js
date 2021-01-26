@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
+// import { Theme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/styles";
 import NumericLabel from 'react-pretty-numbers';
 import Clock from "../../assets/clockImg.svg"
 import Arrow from "../../assets/arrow.svg";
@@ -9,19 +11,19 @@ import ListPhone from "../../assets/ListPhone.svg";
 import Draw from "../../assets/draw.svg";
 import listHome from "../../assets/listHome.svg";
 import { NoEffort } from "../NoEffort/NoEffort";
-import { Savings } from "../../components/Savings/Savings";
-import { Simple } from "../../components/Simple/Simple";
+import { Savings } from "../Savings/Savings";
+import { Simple } from "../Simple/Simple";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import WalletCoins from "../../assets/WalletCoins.png";
 import ArrowUp from "../../assets/Arrowup.png";
 import Arrow1 from "../../assets/arrowLink.svg";
-import { PeoplesSection } from "../../components/PeoplesSection/PeoplesSection";
-import { Companies } from "../../components/Companies/Companies";
-import { TextfieldBanner } from "../../components/TextfieldBanner/TextfieldBanner";
-import { QuestionTabs } from "../../components/Tabs/Tabs";
-import { SignupSection } from "../../components/signupSection/signupSection";
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
+import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
+import { Companies } from "../Companies/Companies";
+import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
+import { QuestionTabs } from "../Tabs/Tabs";
+import { SignupSection } from "../signupSection/signupSection";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Wait2 from "../../assets/wait.svg";
 import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
@@ -483,7 +485,7 @@ export function Personal() {
 
 			<NoEffort />
 			<div className="container">
-				<Savings />
+				{/* <Savings /> */}
 				<Simple />
 
 
@@ -562,86 +564,88 @@ export function Personal() {
 	);
 }
 
-// const useStyles = makeStyles((theme: Theme) => ({
-// 	root: {
-// 		width: "100%",
-// 		height: "100%",
-// 		zIndex: 1,
-// 		overflow: "hidden",
-// 	},
+const useStyles = makeStyles((theme) => ({
+	root: {
+		width: "100%",
+		height: "100%",
+		zIndex: 1,
+		overflow: "hidden",
+	},
 
-// 	appFrame: {
-// 		position: "relative",
-// 		display: "flex",
-// 		width: "100%",
-// 		height: "100%",
-// 	},
-// 	modal: {
-// 		display: "flex",
-// 		alignItems: "center",
-// 		justifyContent: "center",
-// 	},
-// 	paper: {
-// 		backgroundColor: theme.palette.background.paper,
-// 		// border: "2px solid #000",
-// 		boxShadow: theme.shadows[5],
-// 		padding: theme.spacing(2, 4, 3),
-// 		width: "100% !important",
-// 		height: "100vh !important",
-// 	},
-// 	menuButton: {
-// 		marginRight: theme.spacing(2),
-// 	},
-// 	title: {
-// 		flexGrow: 1,
-// 	},
-// 	appBar: {
-// 		zIndex: theme.zIndex.drawer + 1,
-// 		position: "absolute",
-// 	},
-// 	navIconHide: {
-// 		[theme.breakpoints.up("md")]: {
-// 			display: "none",
-// 		},
-// 	},
-// 	drawerHeader: { ...theme.mixins.toolbar },
-// 	drawerPaper: {
-// 		width: 250,
-// 		backgroundColor: theme.palette.background.default,
-// 		[theme.breakpoints.up("md")]: {
-// 			width: drawerWidth,
-// 			position: "relative",
-// 			height: "100%",
-// 		},
-// 	},
-// 	closeButton: {
-// 		position: "absolute",
-// 		// right: theme.spacing.unit / 2,
-// 		// top: theme.spacing.unit / 2,
-// 		right: 0,
-// 		color: theme.palette.grey[500],
-// 	},
-// 	content: {
-// 		backgroundColor: theme.palette.background.default,
-// 		width: "100%",
-// 		height: "100vh",
+	appFrame: {
+		position: "relative",
+		display: "flex",
+		width: "100%",
+		height: "100%",
+	},
+	modal: {
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	paper: {
+		// backgroundColor: theme.palette.background.paper,
+		// border: "2px solid #000",
+		// boxShadow: theme.shadows[5],
+		// padding: theme.spacing(2, 4, 3),
+		width: "100% !important",
+		height: "100vh !important",
+	},
+	menuButton: {
+		// marginRight: theme.spacing(2),
+	},
+	title: {
+		flexGrow: 1,
+	},
+	appBar: {
+		// zIndex: theme.zIndex.drawer + 1,
+		position: "absolute",
+	},
+	navIconHide: {
+		// [theme.breakpoints.up("md")]: {
+		// 	display: "none",
+		// },
+	},
+	drawerHeader: {
+		// ...theme.mixins.toolbar 
+	},
+	drawerPaper: {
+		width: 250,
+		// backgroundColor: theme.palette.background.default,
+		// [theme.breakpoints.up("md")]: {
+		// 	width: drawerWidth,
+		// 	position: "relative",
+		// 	height: "100%",
+		// },
+	},
+	closeButton: {
+		position: "absolute",
+		// right: theme.spacing.unit / 2,
+		// top: theme.spacing.unit / 2,
+		right: 0,
+		// color: theme.palette.grey[500],
+	},
+	content: {
+		// backgroundColor: theme.palette.background.default,
+		width: "100%",
+		height: "100vh",
 
-// 		// [theme.breakpoints.up("sm")]: {
-// 		// 	height: "calc(100% - 64px)",
-// 		// },
-// 	},
-// 	container: {
-// 		width: "100%",
-// 		maxWidth: "1140px",
-// 		margin: "0 auto",
-// 		background: "#fff",
-// 		position: "relative",
-// 		padding: "0px 10px",
-// 	},
-// 	CustomHeader: {
-// 		background: "#fff",
-// 		color: "#0667EB",
-// 		boxShadow: "inherit",
-// 	},
-// }));
-// const drawerWidth = 240;
+		// [theme.breakpoints.up("sm")]: {
+		// 	height: "calc(100% - 64px)",
+		// },
+	},
+	container: {
+		width: "100%",
+		maxWidth: "1140px",
+		margin: "0 auto",
+		background: "#fff",
+		position: "relative",
+		padding: "0px 10px",
+	},
+	CustomHeader: {
+		background: "#fff",
+		color: "#0667EB",
+		boxShadow: "inherit",
+	},
+}));
+const drawerWidth = 240;

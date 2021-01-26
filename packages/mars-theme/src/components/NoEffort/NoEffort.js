@@ -1,17 +1,17 @@
 import { makeStyles } from "@material-ui/styles";
 import React, { useState } from "react";
-import {
-	// withRouter,
-	Redirect,
-} from "react-router-dom";
-import { useSelector } from "react-redux";
-import {firebase} from "../../config/firebase";
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
+// import {
+// 	// withRouter,
+// 	Redirect,
+// } from "react-router-dom";
+// import { useSelector } from "react-redux";
+// import Firebase from "../../config/firebase";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 
 import CircularProgress from "@material-ui/core/CircularProgress";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../../styles/scss/NoEffort.scss";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import "../../styles/scss/NoEffort.scss";
 // import Country from "../../assets/Country.svg";
 import coinsUp from "../../assets/coinsUp.svg";
 import Arrow from "../../assets/arrowLink.svg";
@@ -21,9 +21,9 @@ import { Fade } from "react-awesome-reveal";
 
 export function NoEffort(props) {
 	const classes = useStyles();
-	const passcode = localStorage.getItem("passcodeInput");
+	// const passcode = localStorage.getItem("passcodeInput");
 	// const [value, setValue] = React.useState(0);
-	const [loading, setLoading] = React.useState(true);
+	const [loading, setLoading] = React.useState(false);
 	// const [mobileNum, setMobileNumber] = useState<string>();
 	const [appModal, setAppModal] = useState(false)
 	// const [country, setCountry] = React.useState<CountryType>({
@@ -35,7 +35,7 @@ export function NoEffort(props) {
 	// const [apy, setApy] = useState("");
 	// const [open, setOpen] = React.useState(false);
 
-	const auth = useSelector((state) => state.authList.auth);
+	// const auth = useSelector((state) => state.authList.auth);
 
 	// const settings = {
 	// 	dots: false,
@@ -62,42 +62,42 @@ export function NoEffort(props) {
 	}
 
 
-	React.useEffect(() => {
-		// Firebase.firestore()
-		// 	.collection("LiveEarnings")
-		// 	.doc("usdc")
-		// 	.get()
-		// 	.then((doc) => {
-		// 		setAmount(doc?.data()?.amount);
-		// 		setApy(doc?.data()?.apy);
-		// 	})
-		// 	.catch((error) => { });
-		firebase.auth().onAuthStateChanged((user) => {
-			if (user) {
-				firebase.firestore()
-					.collection("Users")
-					.doc(user.uid)
-					.get()
-					.then((doc) => {
-						if (doc.exists) {
-							// localStorage.setItem(
-							// 	"passcodeInput",
-							// 	doc?.data()?.passCode
-							// );
-							// localStorage.setItem("passcode", "true");
-							setLoading(false);
-						} else {
-							setLoading(false);
-						}
-					})
-					.catch((error) => {
-						setLoading(false);
-					});
-			} else {
-				setLoading(false);
-			}
-		});
-	});
+	// React.useEffect(() => {
+	// 	// Firebase.firestore()
+	// 	// 	.collection("LiveEarnings")
+	// 	// 	.doc("usdc")
+	// 	// 	.get()
+	// 	// 	.then((doc) => {
+	// 	// 		setAmount(doc?.data()?.amount);
+	// 	// 		setApy(doc?.data()?.apy);
+	// 	// 	})
+	// 	// 	.catch((error) => { });
+	// 	Firebase.auth().onAuthStateChanged((user) => {
+	// 		if (user) {
+	// 			Firebase.firestore()
+	// 				.collection("Users")
+	// 				.doc(user.uid)
+	// 				.get()
+	// 				.then((doc) => {
+	// 					if (doc.exists) {
+	// 						// localStorage.setItem(
+	// 						// 	"passcodeInput",
+	// 						// 	doc?.data()?.passCode
+	// 						// );
+	// 						// localStorage.setItem("passcode", "true");
+	// 						setLoading(false);
+	// 					} else {
+	// 						setLoading(false);
+	// 					}
+	// 				})
+	// 				.catch((error) => {
+	// 					setLoading(false);
+	// 				});
+	// 		} else {
+	// 			setLoading(false);
+	// 		}
+	// 	});
+	// });
 	if (loading) {
 		return (
 			<div className={classes.pageContainer}>
@@ -107,9 +107,9 @@ export function NoEffort(props) {
 			</div>
 		);
 	}
-	if (passcode && !auth) {
-		return <Redirect to="/signin" />;
-	}
+	// if (passcode && !auth) {
+	// 	return <Redirect to="/signin" />;
+	// }
 
 	// var userId = localStorage.getItem("user");
 
