@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="Group_3542" data-name="Group 3542" transform="translate(-6168 1132)">
+    <g id="Group_3542-2" data-name="Group 3542">
+      <path id="Path_318" data-name="Path 318" d="M0,0H36V36H0Z" transform="translate(6168 -1132)" fill="none"/>
+      <g id="Group_2221" data-name="Group 2221" transform="translate(6173 -1127)">
+        <g id="Group_2220" data-name="Group 2220" transform="translate(0)">
+          <g id="Group_2219" data-name="Group 2219">
+            <g id="Group_2218" data-name="Group 2218">
+              <path id="Path_330" data-name="Path 330" d="M197.338,500.574V507h10.81a1.918,1.918,0,0,0,1.908-1.928V502.5a1.918,1.918,0,0,0-1.908-1.928Zm-1.273,0H185.253a1.918,1.918,0,0,0-1.908,1.928v2.573A1.918,1.918,0,0,0,185.253,507h10.812Z" transform="translate(-183.345 -496.716)" fill="#ced5db" fill-rule="evenodd"/>
+              <path id="Path_331" data-name="Path 331" d="M189.1,525.6h5.725V510.167H184.65v10.927A4.477,4.477,0,0,0,189.1,525.6Zm7,0V510.167h10.177v10.927a4.477,4.477,0,0,1-4.452,4.5Zm-.635-25.275a3.8,3.8,0,0,1,6.779.846H188.683a3.8,3.8,0,0,1,6.779-.846Z" transform="translate(-182.106 -498.595)" fill="#ced5db" fill-rule="evenodd"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
