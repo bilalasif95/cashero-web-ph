@@ -1,7 +1,8 @@
 import React from 'react'
 import Modal from "@material-ui/core/Modal";
-import { Theme } from "@material-ui/core/styles";
-import { makeStyles } from "@material-ui/styles";
+import { styled } from "frontity";
+// import { Theme } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/styles";
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 // import SearchIcon from '@material-ui/icons/Search';
@@ -16,113 +17,113 @@ import CloseIcon from '@material-ui/icons/Close';
 // import counrtrylist from "../../config/config/countrylist";
 import Wait2 from "../../assets/wait.svg";
 
-const drawerWidth = 240;
-const useStyles = makeStyles((theme) => ({
-    root: {
-        width: "100%",
-        height: "100%",
-        zIndex: 1,
-        overflow: "hidden",
-    },
-    appFrame: {
-        position: "relative",
-        display: "flex",
-        width: "100%",
-        height: "100%",
-    },
-    modal: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    paper: {
-        // backgroundColor: theme.palette.background.paper,
-        // border: "2px solid #000",
-        // boxShadow: theme.shadows[5],
-        // padding: theme.spacing(2, 4, 3),
-        width: "100% !important",
-        height: "100vh !important",
+// const drawerWidth = 240;
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//         width: "100%",
+//         height: "100%",
+//         zIndex: 1,
+//         overflow: "hidden",
+//     },
+//     appFrame: {
+//         position: "relative",
+//         display: "flex",
+//         width: "100%",
+//         height: "100%",
+//     },
+//     modal: {
+//         display: "flex",
+//         alignItems: "center",
+//         justifyContent: "center",
+//     },
+//     paper: {
+//         // backgroundColor: theme.palette.background.paper,
+//         // border: "2px solid #000",
+//         // boxShadow: theme.shadows[5],
+//         // padding: theme.spacing(2, 4, 3),
+//         width: "100% !important",
+//         height: "100vh !important",
 
-    },
-    menuButton: {
-        // marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
-    },
-    appBar: {
-        // zIndex: theme.zIndex.drawer + 1,
-        position: "absolute",
-    },
-    navIconHide: {
-        // [theme.breakpoints.up("md")]: {
-        //     display: "none",
-        // },
-    },
-    drawerHeader: {
-        // ...theme.mixins.toolbar
-    },
-    drawerPaper: {
-        width: 250,
-        // backgroundColor: theme.palette.background.default,
-        // [theme.breakpoints.up("md")]: {
-        //     width: drawerWidth,
-        //     position: "relative",
-        //     height: "100%",
-        // },
-    },
-    closeButton: {
-        position: "absolute",
-        // right: theme.spacing.unit / 2,
-        // top: theme.spacing.unit / 2,
-        // color: theme.palette.grey[500],
-        top: "81px",
-        right: "86px",
-        "& svg": {
-            height: "32px",
-            width: "32px",
-            "& path": {
-                fill: "#000",
-            },
-        },
-        // [theme.breakpoints.down('sm')]: {
-        //     top: "0px !important",
-        //     right: "0px !important",
-        //     "& svg": {
-        //         height: "32px",
-        //         width: "32px",
-        //         "& path": {
-        //             fill: "#000",
-        //         },
-        //     },
-        // },
-    },
-    content: {
-        // backgroundColor: theme.palette.background.default,
-        width: "100%",
-        height: "100vh",
+//     },
+//     menuButton: {
+//         // marginRight: theme.spacing(2),
+//     },
+//     title: {
+//         flexGrow: 1,
+//     },
+//     appBar: {
+//         // zIndex: theme.zIndex.drawer + 1,
+//         position: "absolute",
+//     },
+//     navIconHide: {
+//         // [theme.breakpoints.up("md")]: {
+//         //     display: "none",
+//         // },
+//     },
+//     drawerHeader: {
+//         // ...theme.mixins.toolbar
+//     },
+//     drawerPaper: {
+//         width: 250,
+//         // backgroundColor: theme.palette.background.default,
+//         // [theme.breakpoints.up("md")]: {
+//         //     width: drawerWidth,
+//         //     position: "relative",
+//         //     height: "100%",
+//         // },
+//     },
+//     closeButton: {
+//         position: "absolute",
+//         // right: theme.spacing.unit / 2,
+//         // top: theme.spacing.unit / 2,
+//         // color: theme.palette.grey[500],
+//         top: "81px",
+//         right: "86px",
+//         "& svg": {
+//             height: "32px",
+//             width: "32px",
+//             "& path": {
+//                 fill: "#000",
+//             },
+//         },
+//         // [theme.breakpoints.down('sm')]: {
+//         //     top: "0px !important",
+//         //     right: "0px !important",
+//         //     "& svg": {
+//         //         height: "32px",
+//         //         width: "32px",
+//         //         "& path": {
+//         //             fill: "#000",
+//         //         },
+//         //     },
+//         // },
+//     },
+//     content: {
+//         // backgroundColor: theme.palette.background.default,
+//         width: "100%",
+//         height: "100vh",
 
-        // [theme.breakpoints.up("sm")]: {
-        // 	height: "calc(100% - 64px)",
-        // },
-    },
-    container: {
-        width: "100%",
-        maxWidth: "1140px",
-        margin: "0 auto",
-        background: "#fff",
-        position: "relative",
-        padding: "0px 10px",
-    },
-    CustomHeader: {
-        background: "#fff",
-        color: "#0667EB",
-        boxShadow: "inherit",
-    },
-}));
+//         // [theme.breakpoints.up("sm")]: {
+//         // 	height: "calc(100% - 64px)",
+//         // },
+//     },
+//     container: {
+//         width: "100%",
+//         maxWidth: "1140px",
+//         margin: "0 auto",
+//         background: "#fff",
+//         position: "relative",
+//         padding: "0px 10px",
+//     },
+//     CustomHeader: {
+//         background: "#fff",
+//         color: "#0667EB",
+//         boxShadow: "inherit",
+//     },
+// }));
 
 export default function ThanksModal(props) {
-    const classes = useStyles();
+    // const classes = useStyles();
 
     // const [open,setOpen] = useState(false);
     // const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -190,7 +191,7 @@ export default function ThanksModal(props) {
         <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
-            className={classes.modal}
+            className="modal"
             open={open}
             onClose={handleClose}
             closeAfterTransition
@@ -199,11 +200,11 @@ export default function ThanksModal(props) {
         // 	timeout: 500,
         // }}
         >
-            <div className={classes.paper}>
+            <Paper>
                 <IconButton
                     aria-label="Close"
-                    className={classes.closeButton}
-                    onClick={() => { handleClose() }}
+                    className="closeButton"
+                    onClick={() => { handleClose(); }}
                 >
                     <CloseIcon />
                 </IconButton>
@@ -239,7 +240,24 @@ export default function ThanksModal(props) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Paper>
         </Modal>
     )
 }
+
+const Paper = styled.div`
+  background-color: #fff;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+  padding: 16px 32px 24px;
+  width: 100% !important;
+  height: 100vh !important;
+  .MuiButtonBase-root {
+    top: 81px;
+    right: 86px;
+    position: absolute;
+   @media(max-width: 540px){
+      top: 0px;
+      right: 0px;
+    },
+  }
+`;
