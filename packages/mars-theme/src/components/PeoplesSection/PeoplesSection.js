@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/styles";
+// import { makeStyles } from "@material-ui/styles";
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 // import {
@@ -7,7 +7,7 @@ import Slider from "react-slick";
 // } from "react-router-dom";
 // import { useSelector } from "react-redux";
 // import firebase from "../../config/firebase";
-import CircularProgress from "@material-ui/core/CircularProgress";
+// import CircularProgress from "@material-ui/core/CircularProgress";
 import Map_dot from "../../assets/Map_dot.svg";
 import Peoples from "../../assets/Peoples.svg";
 import Renee from "../../assets/renee.svg";
@@ -22,10 +22,10 @@ import Star from "../../assets/star.svg";
 import People from "../../assets/People.svg";
 
 export function PeoplesSection(props) {
-	const classes = useStyles();
+	// const classes = useStyles();
 	// const passcode = localStorage.getItem("passcodeInput");
 	// const [value, setValue] = useState(0);
-	const [loading, setLoading] = useState(false);
+	// const [loading, setLoading] = useState(false);
 	// const [mobileNum, setMobileNumber] = useState<string>();
 	// const [country, setCountry] = useState<CountryType>({
 	// 	phone: "",
@@ -91,15 +91,15 @@ export function PeoplesSection(props) {
 	// 		}
 	// 	});
 	// });
-	if (loading) {
-		return (
-			<div className={classes.pageContainer}>
-				<div className={classes.centerContainer}>
-					<CircularProgress />
-				</div>
-			</div>
-		);
-	}
+	// if (loading) {
+	// 	return (
+	// 		<div className={classes.pageContainer}>
+	// 			<div className={classes.centerContainer}>
+	// 				<CircularProgress />
+	// 			</div>
+	// 		</div>
+	// 	);
+	// }
 	// if (passcode && !auth) {
 	// 	return <Redirect to="/signin" />;
 	// }
@@ -274,17 +274,17 @@ export function PeoplesSection(props) {
 	);
 }
 
-const useStyles = makeStyles({
-	pageContainer: {
-		minHeight: "99vh",
-	},
-	centerContainer: {
-		flex: 1,
-		width: "100%",
-		height: "100%",
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-		flexDirection: "column",
-	},
-});
+// const useStyles = makeStyles({
+// 	pageContainer: {
+// 		minHeight: "99vh",
+// 	},
+// 	centerContainer: {
+// 		flex: 1,
+// 		width: "100%",
+// 		height: "100%",
+// 		display: "flex",
+// 		alignItems: "center",
+// 		justifyContent: "center",
+// 		flexDirection: "column",
+// 	},
+// });

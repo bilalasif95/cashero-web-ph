@@ -1,5 +1,5 @@
-import { makeStyles } from "@material-ui/styles";
-import React, { useState, useEffect } from "react";
+// import { makeStyles } from "@material-ui/styles";
+import React from "react";
 // import Slider from "react-slick";
 // import {
 // 	// withRouter,
@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 // } from "react-router-dom";
 // import { useSelector } from "react-redux";
 // import firebase from "../../config/firebase";
-import CircularProgress from "@material-ui/core/CircularProgress";
+// import CircularProgress from "@material-ui/core/CircularProgress";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import listImg1 from "../../assets/listImg1.svg";
@@ -19,10 +19,10 @@ import listImg6 from "../../assets/listImg6.svg";
 // import "../../styles/scss/Companies.scss";
 
 export function Companies(props) {
-	const classes = useStyles();
+	// const classes = useStyles();
 	// const passcode = localStorage.getItem("passcodeInput");
 	// const [value, setValue] = useState(0);
-	const [loading, setLoading] = useState(false);
+	// const [loading, setLoading] = useState(false);
 	// const [mobileNum, setMobileNumber] = useState<string>();
 	// const [country, setCountry] = useState<CountryType>({
 	// 	phone: "",
@@ -81,15 +81,15 @@ export function Companies(props) {
 	// 		}
 	// 	});
 	// });
-	if (loading) {
-		return (
-			<div className={classes.pageContainer}>
-				<div className={classes.centerContainer}>
-					<CircularProgress />
-				</div>
-			</div>
-		);
-	}
+	// if (loading) {
+	// 	return (
+	// 		<div className={classes.pageContainer}>
+	// 			<div className={classes.centerContainer}>
+	// 				<CircularProgress />
+	// 			</div>
+	// 		</div>
+	// 	);
+	// }
 	// if (passcode && !auth) {
 	// 	return <Redirect to="/signin" />;
 	// }
@@ -151,17 +151,17 @@ export function Companies(props) {
 	);
 }
 
-const useStyles = makeStyles({
-	pageContainer: {
-		minHeight: "99vh",
-	},
-	centerContainer: {
-		flex: 1,
-		width: "100%",
-		height: "100%",
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-		flexDirection: "column",
-	},
-});
+// const useStyles = makeStyles({
+// 	pageContainer: {
+// 		minHeight: "99vh",
+// 	},
+// 	centerContainer: {
+// 		flex: 1,
+// 		width: "100%",
+// 		height: "100%",
+// 		display: "flex",
+// 		alignItems: "center",
+// 		justifyContent: "center",
+// 		flexDirection: "column",
+// 	},
+// });

@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
@@ -18,7 +18,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Box from "@material-ui/core/Box";
 import Tab from "@material-ui/core/Tab";
-import CircularProgress from "@material-ui/core/CircularProgress";
+// import CircularProgress from "@material-ui/core/CircularProgress";
 import PropTypes from 'prop-types';
 
 function TabPanel(props) {
@@ -55,10 +55,10 @@ function a11yProps(index) {
 }
 
 export function QuestionTabs(props) {
-	const classes = useStyles();
+	// const classes = useStyles();
 	// const passcode = localStorage.getItem("passcodeInput");
 	const [value, setValue] = useState(props.activeTab);
-	const [loading, setLoading] = useState(false);
+	// const [loading, setLoading] = useState(false);
 	// const [amount, setAmount] = useState("");
 	// const [apy, setApy] = useState("");
 	const handleChange = (event, newValue) => {
@@ -112,15 +112,15 @@ export function QuestionTabs(props) {
 	// 		}
 	// 	});
 	// });
-	if (loading) {
-		return (
-			<div className={classes.pageContainer}>
-				<div className={classes.centerContainer}>
-					<CircularProgress />
-				</div>
-			</div>
-		);
-	}
+	// if (loading) {
+	// 	return (
+	// 		<div className={classes.pageContainer}>
+	// 			<div className={classes.centerContainer}>
+	// 				<CircularProgress />
+	// 			</div>
+	// 		</div>
+	// 	);
+	// }
 	// if (passcode && !auth) {
 	// 	return <Redirect to="/signin" />;
 	// }
@@ -2627,17 +2627,17 @@ export function QuestionTabs(props) {
 	);
 }
 
-const useStyles = makeStyles((theme) => ({
-	pageContainer: {
-		minHeight: "99vh",
-	},
-	centerContainer: {
-		flex: 1,
-		width: "100%",
-		height: "100%",
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-		flexDirection: "column",
-	},
-}));
+// const useStyles = makeStyles((theme) => ({
+// 	pageContainer: {
+// 		minHeight: "99vh",
+// 	},
+// 	centerContainer: {
+// 		flex: 1,
+// 		width: "100%",
+// 		height: "100%",
+// 		display: "flex",
+// 		alignItems: "center",
+// 		justifyContent: "center",
+// 		flexDirection: "column",
+// 	},
+// }));

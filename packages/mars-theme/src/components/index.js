@@ -10,6 +10,8 @@ import PageError from "./page-error";
 import Hello from "./hello";
 import externalCss from "./index.css";
 import { Personal } from "./Personal/Personal";
+import { Footer } from "./footer/Footer";
+import { HomePage } from "./HomePage/HomePage";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -36,18 +38,20 @@ const Theme = ({ state }) => {
       {/* <HeadContainer>
         <Header />
       </HeadContainer> */}
-      <List when={data.isArchive} />
+      <List />
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
       {/* <Main> */}
-        <Switch>
-          <Hello when={data.isSignUp} />
-          <Personal when={data.isPersonal} />
-          <Loading when={data.isFetching} />
-          <Post when={data.isPostType} />
-          <PageError when={data.isError} />
-        </Switch>
+      <Switch>
+        <Hello when={data.isSignUp} />
+        <Personal when={data.isPersonal} />
+        <Loading when={data.isFetching} />
+        <HomePage when={data.isArchive} />
+        <Post when={data.isPostType} />
+        <PageError when={data.isError} />
+      </Switch>
       {/* </Main> */}
+      <Footer />
     </>
   );
 };

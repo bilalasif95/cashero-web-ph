@@ -1,5 +1,5 @@
-import { makeStyles } from "@material-ui/styles";
-import { Theme } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/styles";
+// import { Theme } from "@material-ui/core/styles";
 import React, { useState } from "react";
 import TextField from "../../common/textFiled";
 // import {
@@ -23,7 +23,7 @@ import Wait2 from "../../assets/wait.svg";
 // import counrtrylist from "../../config/config/countrylist";
 
 export function SignupSection(props) {
-	const classes = useStyles();
+	// const classes = useStyles();
 	// const [searchTerm, setSearchTerm] = useState<any>("");
 	// const [searchResults, setSearchResults] = useState<any>(counrtrylist);
 	// const [searchResults2, setSearchResults2] = useState<any>([]);
@@ -116,7 +116,7 @@ export function SignupSection(props) {
 			<Modal
 				aria-labelledby="transition-modal-title"
 				aria-describedby="transition-modal-description"
-				className={classes.modal}
+				className="modal"
 				open={openSuccessModal}
 				onClose={() => setSuccessModal(false)}
 				closeAfterTransition
@@ -125,10 +125,10 @@ export function SignupSection(props) {
 			// 	timeout: 500,
 			// }}
 			>
-				<div className={classes.paper}>
+				<Paper>
 					<IconButton
 						aria-label="Close"
-						className={classes.closeButton}
+						className="closeButton"
 						onClick={() => setSuccessModal(false)}
 					>
 						<CloseIcon />
@@ -191,7 +191,7 @@ export function SignupSection(props) {
 								</div>
 							</div>
 						</div> */}
-				</div>
+				</Paper>
 			</Modal>
 			{/* SignUp */}
 			<div className="SignUp">
@@ -358,109 +358,109 @@ export function SignupSection(props) {
 	);
 }
 
-const drawerWidth = 240;
-const useStyles = makeStyles((theme) => ({
-	pageContainer: {
-		minHeight: "99vh",
-	},
+// const drawerWidth = 240;
+// const useStyles = makeStyles((theme) => ({
+// 	pageContainer: {
+// 		minHeight: "99vh",
+// 	},
 
-	centerContainer: {
-		flex: 1,
-		width: "100%",
-		height: "100%",
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-		flexDirection: "column",
-	},
-	root: {
-		width: "100%",
-		height: "100%",
-		zIndex: 1,
-		overflow: "hidden",
-	},
+// 	centerContainer: {
+// 		flex: 1,
+// 		width: "100%",
+// 		height: "100%",
+// 		display: "flex",
+// 		alignItems: "center",
+// 		justifyContent: "center",
+// 		flexDirection: "column",
+// 	},
+// 	root: {
+// 		width: "100%",
+// 		height: "100%",
+// 		zIndex: 1,
+// 		overflow: "hidden",
+// 	},
 
-	appFrame: {
-		position: "relative",
-		display: "flex",
-		width: "100%",
-		height: "100%",
-	},
-	modal: {
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-	paper: {
-		// backgroundColor: theme.palette.background.paper,
-		// border: '2px solid #000',
-		// boxShadow: theme.shadows[5],
-		// padding: theme.spacing(2, 4, 3),
-		width: "100% !important",
-		height: "100vh !important",
-	},
-	menuButton: {
-		// marginRight: theme.spacing(2),
-	},
-	title: {
-		flexGrow: 1,
-	},
-	appBar: {
-		// zIndex: theme.zIndex.drawer + 1,
-		position: "absolute",
-	},
-	navIconHide: {
-		// [theme.breakpoints.up("md")]: {
-		// 	display: "none",
-		// },
-	},
-	drawerHeader: {
-		// ...theme.mixins.toolbar 
-	},
-	drawerPaper: {
-		width: 250,
-		// backgroundColor: theme.palette.background.default,
-		// [theme.breakpoints.up("md")]: {
-		// 	width: drawerWidth,
-		// 	position: "relative",
-		// 	height: "100%",
-		// },
-	},
-	closeButton: {
-		position: "absolute",
-		// right: theme.spacing.unit / 2,
-		// top: theme.spacing.unit / 2,
-		top: " 81px !important",
-		right: " 86px !important",
-		// color: theme.palette.grey[500],
-		"& svg": {
-			width: "32px !important",
-			height: "32px !important",
-		},
-		"&:hover": {
-			backgroundColor: "rgba(0, 0, 0, 0.04) !important",
-		},
-	},
-	content: {
-		// backgroundColor: theme.palette.background.default,
-		width: "100%",
-		height: "100vh",
+// 	appFrame: {
+// 		position: "relative",
+// 		display: "flex",
+// 		width: "100%",
+// 		height: "100%",
+// 	},
+// 	modal: {
+// 		display: "flex",
+// 		alignItems: "center",
+// 		justifyContent: "center",
+// 	},
+// 	paper: {
+// 		// backgroundColor: theme.palette.background.paper,
+// 		// border: '2px solid #000',
+// 		// boxShadow: theme.shadows[5],
+// 		// padding: theme.spacing(2, 4, 3),
+// 		width: "100% !important",
+// 		height: "100vh !important",
+// 	},
+// 	menuButton: {
+// 		// marginRight: theme.spacing(2),
+// 	},
+// 	title: {
+// 		flexGrow: 1,
+// 	},
+// 	appBar: {
+// 		// zIndex: theme.zIndex.drawer + 1,
+// 		position: "absolute",
+// 	},
+// 	navIconHide: {
+// 		// [theme.breakpoints.up("md")]: {
+// 		// 	display: "none",
+// 		// },
+// 	},
+// 	drawerHeader: {
+// 		// ...theme.mixins.toolbar 
+// 	},
+// 	drawerPaper: {
+// 		width: 250,
+// 		// backgroundColor: theme.palette.background.default,
+// 		// [theme.breakpoints.up("md")]: {
+// 		// 	width: drawerWidth,
+// 		// 	position: "relative",
+// 		// 	height: "100%",
+// 		// },
+// 	},
+// 	closeButton: {
+// 		position: "absolute",
+// 		// right: theme.spacing.unit / 2,
+// 		// top: theme.spacing.unit / 2,
+// 		top: " 81px !important",
+// 		right: " 86px !important",
+// 		// color: theme.palette.grey[500],
+// 		"& svg": {
+// 			width: "32px !important",
+// 			height: "32px !important",
+// 		},
+// 		"&:hover": {
+// 			backgroundColor: "rgba(0, 0, 0, 0.04) !important",
+// 		},
+// 	},
+// 	content: {
+// 		// backgroundColor: theme.palette.background.default,
+// 		width: "100%",
+// 		height: "100vh",
 
-		// [theme.breakpoints.up("sm")]: {
-		// 	height: "calc(100% - 64px)",
-		// },
-	},
-	container: {
-		width: "100%",
-		maxWidth: "1140px",
-		margin: "0 auto",
-		background: "#fff",
-		position: "relative",
-		padding: "0px 10px",
-	},
-	CustomHeader: {
-		background: "#fff",
-		color: "#0667EB",
-		boxShadow: "inherit",
-	},
-}));
+// 		// [theme.breakpoints.up("sm")]: {
+// 		// 	height: "calc(100% - 64px)",
+// 		// },
+// 	},
+// 	container: {
+// 		width: "100%",
+// 		maxWidth: "1140px",
+// 		margin: "0 auto",
+// 		background: "#fff",
+// 		position: "relative",
+// 		padding: "0px 10px",
+// 	},
+// 	CustomHeader: {
+// 		background: "#fff",
+// 		color: "#0667EB",
+// 		boxShadow: "inherit",
+// 	},
+// }));
