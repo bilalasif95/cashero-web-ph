@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TextField from "../../common/textFiled";
+import { styled } from "frontity";
 // import {
 // 	Dropdown,
 // 	DropdownToggle,
@@ -7,7 +8,7 @@ import TextField from "../../common/textFiled";
 // 	DropdownItem,
 // } from "reactstrap";
 // import SearchIcon from "@material-ui/icons/Search";
-import { makeStyles } from "@material-ui/styles";
+// import { makeStyles } from "@material-ui/styles";
 // import { Theme } from "@material-ui/core/styles";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -51,7 +52,7 @@ export function HomePage(props) {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState)
 	// };
-	const classes = useStyles();
+	// const classes = useStyles();
 	const [email, setEmail] = useState("");
 	// const [error, setError] = useState<string>("");
 	const [loading, setLoading] = useState(false);
@@ -137,7 +138,7 @@ export function HomePage(props) {
 			<Modal
 				aria-labelledby="transition-modal-title"
 				aria-describedby="transition-modal-description"
-				className={classes.modal}
+				className="modal"
 				open={openSuccessModal}
 				onClose={() => setSuccessModal(false)}
 				closeAfterTransition
@@ -147,10 +148,10 @@ export function HomePage(props) {
 			// }}
 			>
 
-				<div className={classes.paper}>
+				<Paper>
 					<IconButton
 						aria-label="Close"
-						className={classes.closeButton}
+						className="closeButton"
 						onClick={() => setSuccessModal(false)}
 					>
 						<CloseIcon />
@@ -217,7 +218,7 @@ export function HomePage(props) {
 								</div>
 							</div>
 						</div> */}
-				</div>
+				</Paper>
 
 			</Modal>
 			<div className="container">
@@ -443,100 +444,117 @@ export function HomePage(props) {
 	);
 }
 
-const drawerWidth = 240;
-const useStyles = makeStyles((theme) => ({
-	pageContainer: {
-		minHeight: "99vh",
-	},
-	centerContainer: {
-		flex: 1,
-		width: "100%",
-		height: "100%",
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-		flexDirection: "column",
-	},
-	root: {
-		width: "100%",
-		height: "100%",
-		zIndex: 1,
-		overflow: "hidden",
-	},
+// const drawerWidth = 240;
+// const useStyles = makeStyles((theme) => ({
+// 	pageContainer: {
+// 		minHeight: "99vh",
+// 	},
+// 	centerContainer: {
+// 		flex: 1,
+// 		width: "100%",
+// 		height: "100%",
+// 		display: "flex",
+// 		alignItems: "center",
+// 		justifyContent: "center",
+// 		flexDirection: "column",
+// 	},
+// 	root: {
+// 		width: "100%",
+// 		height: "100%",
+// 		zIndex: 1,
+// 		overflow: "hidden",
+// 	},
 
-	appFrame: {
-		position: "relative",
-		display: "flex",
-		width: "100%",
-		height: "100%",
-	},
-	modal: {
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-	paper: {
-		// backgroundColor: theme.palette.background.paper,
-		// border: "2px solid #000",
-		// boxShadow: theme.shadows[5],
-		// padding: theme.spacing(2, 4, 3),
-		width: "100% !important",
-		height: "100vh !important",
-	},
-	menuButton: {
-		// marginRight: theme.spacing(2),
-	},
-	title: {
-		flexGrow: 1,
-	},
-	appBar: {
-		// zIndex: theme.zIndex.drawer + 1,
-		position: "absolute",
-	},
-	navIconHide: {
-		// [theme.breakpoints.up("md")]: {
-		// 	display: "none",
-		// },
-	},
-	drawerHeader: {
-		// ...theme.mixins.toolbar
-	},
-	drawerPaper: {
-		width: 250,
-		// backgroundColor: theme.palette.background.default,
-		// [theme.breakpoints.up("md")]: {
-		// 	width: drawerWidth,
-		// 	position: "relative",
-		// 	height: "100%",
-		// },
-	},
-	closeButton: {
-		position: "absolute",
-		// right: theme.spacing.unit / 2,
-		// top: theme.spacing.unit / 2,
-		right: 0,
-		// color: theme.palette.grey[500],
-	},
-	content: {
-		// backgroundColor: theme.palette.background.default,
-		width: "100%",
-		height: "100vh",
+// 	appFrame: {
+// 		position: "relative",
+// 		display: "flex",
+// 		width: "100%",
+// 		height: "100%",
+// 	},
+// 	modal: {
+// 		display: "flex",
+// 		alignItems: "center",
+// 		justifyContent: "center",
+// 	},
+// 	paper: {
+// 		// backgroundColor: theme.palette.background.paper,
+// 		// border: "2px solid #000",
+// 		// boxShadow: theme.shadows[5],
+// 		// padding: theme.spacing(2, 4, 3),
+// 		width: "100% !important",
+// 		height: "100vh !important",
+// 	},
+// 	menuButton: {
+// 		// marginRight: theme.spacing(2),
+// 	},
+// 	title: {
+// 		flexGrow: 1,
+// 	},
+// 	appBar: {
+// 		// zIndex: theme.zIndex.drawer + 1,
+// 		position: "absolute",
+// 	},
+// 	navIconHide: {
+// 		// [theme.breakpoints.up("md")]: {
+// 		// 	display: "none",
+// 		// },
+// 	},
+// 	drawerHeader: {
+// 		// ...theme.mixins.toolbar
+// 	},
+// 	drawerPaper: {
+// 		width: 250,
+// 		// backgroundColor: theme.palette.background.default,
+// 		// [theme.breakpoints.up("md")]: {
+// 		// 	width: drawerWidth,
+// 		// 	position: "relative",
+// 		// 	height: "100%",
+// 		// },
+// 	},
+// 	closeButton: {
+// 		position: "absolute",
+// 		// right: theme.spacing.unit / 2,
+// 		// top: theme.spacing.unit / 2,
+// 		right: 0,
+// 		// color: theme.palette.grey[500],
+// 	},
+// 	content: {
+// 		// backgroundColor: theme.palette.background.default,
+// 		width: "100%",
+// 		height: "100vh",
 
-		// [theme.breakpoints.up("sm")]: {
-		// 	height: "calc(100% - 64px)",
-		// },
-	},
-	container: {
-		width: "100%",
-		maxWidth: "1140px",
-		margin: "0 auto",
-		background: "#fff",
-		position: "relative",
-		padding: "0px 10px",
-	},
-	CustomHeader: {
-		background: "#fff",
-		color: "#0667EB",
-		boxShadow: "inherit",
-	},
-}));
+// 		// [theme.breakpoints.up("sm")]: {
+// 		// 	height: "calc(100% - 64px)",
+// 		// },
+// 	},
+// 	container: {
+// 		width: "100%",
+// 		maxWidth: "1140px",
+// 		margin: "0 auto",
+// 		background: "#fff",
+// 		position: "relative",
+// 		padding: "0px 10px",
+// 	},
+// 	CustomHeader: {
+// 		background: "#fff",
+// 		color: "#0667EB",
+// 		boxShadow: "inherit",
+// 	},
+// }));
+
+const Paper = styled.div`
+  background-color: #fff;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+  padding: 16px 32px 24px;
+  width: 100% !important;
+  height: 100vh !important;
+  .MuiButtonBase-root {
+    top: 81px;
+    right: 86px;
+    position: absolute;
+   @media(max-width: 540px){
+      top: 0px;
+      right: 0px;
+    },
+  }
+`;

@@ -1,6 +1,7 @@
 // import { makeStyles } from "@material-ui/styles";
 // import { Theme } from "@material-ui/core/styles";
 import React, { useState } from "react";
+import { styled } from "frontity";
 import TextField from "../../common/textFiled";
 // import {
 // 	Dropdown,
@@ -357,6 +358,23 @@ export function SignupSection(props) {
 		</>
 	);
 }
+
+const Paper = styled.div`
+  background-color: #fff;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+  padding: 16px 32px 24px;
+  width: 100% !important;
+  height: 100vh !important;
+  .MuiButtonBase-root {
+    top: 81px;
+    right: 86px;
+    position: absolute;
+   @media(max-width: 540px){
+      top: 0px;
+      right: 0px;
+    },
+  }
+`;
 
 // const drawerWidth = 240;
 // const useStyles = makeStyles((theme) => ({
