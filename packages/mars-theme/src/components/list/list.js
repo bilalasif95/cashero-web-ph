@@ -65,10 +65,10 @@ const List = ({ state }) => {
   };
 
   return (
-    <Content>
+    <>
       <div className="header" id="header">
         <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light customNav">
+          <nav className="navbar navbar-expand-lg navbar-light customNav">
             <Link link="/">
               <a className="navbar-brand" href="/">
                 <img className="Logo" alt="Logo" src={Logo} />
@@ -470,7 +470,7 @@ const List = ({ state }) => {
           ""
         )}
       {/* <Footer props={props} /> */}
-    </Content>
+    </>
     // <Container>
     //   {/* If the list is a taxonomy, we render a title. */}
     //   {data.isTaxonomy && (

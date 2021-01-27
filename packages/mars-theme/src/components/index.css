@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.navbar{
+  padding: 0px !important;
+}
 .banner {
   margin-top: 100px;
   padding: 37px 0px 37px 0px; }
@@ -248,16 +255,17 @@ h4 {
   z-index: 5; }
 
 .customNav {
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
+  border: none !important;
   box-shadow: inherit;
   padding: 0px 0px; }
 
 .Appbtn {
-  border-radius: 24px;
-  padding: 12.5px 30.5px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #0667eb;
+  border-radius: 24px !important;
+  padding: 12.5px 30.5px !important;
+  font-size: 16px !important;
+  color: #fff !important;
+  background-color: #0667eb !important;
   margin-left: 30px;
   box-shadow: inherit;
   text-transform: capitalize !important; }
@@ -481,7 +489,9 @@ h4 {
     border-radius: 0px !important;
     border-bottom: 1px solid #dadee7; }
   .GetAppEmail .GetEarlyBtn {
-    margin-left: 15px; }
+    margin-left: 15px;
+    text-align: center;
+  }
     .GetAppEmail .GetEarlyBtn .btn-default {
       background-color: #4285f4 !important;
       box-shadow: inherit;
@@ -492,6 +502,9 @@ h4 {
       .GetAppEmail .GetEarlyBtn .btn-default:active {
         background-color: #0667eb !important;
         box-shadow: inherit; }
+        .GetAppEmail .GetEarlyBtn .btn-default:hover{
+          color: #FFFFFF !important;
+        }
 
 @media (min-width: 767px) {
   .MoreBlogs {
@@ -509,7 +522,7 @@ h4 {
     background-color: #ffffff;
     padding: 59px 0px 51px 50px;
     border: none;
-    margin-top: -17px; }
+    margin-top: -25px; }
   .customNav .ListTitle {
     position: relative;
     padding-left: 45px;
@@ -791,8 +804,8 @@ p {
 
 #header.active {
   box-shadow: 0 0 10px #82808066;
-  -webkit-box-shadow: 0 0 10px #82808066; }
-
+  -webkit-box-shadow: 0 0 10px #82808066;
+ }
 a.disabled {
   /* Make the disabled links grayish*/
   color: gray !important;
@@ -2200,7 +2213,8 @@ b {
   margin-top: 27px; }
 
 .slick-slider {
-  outline: none !important; }
+  outline: none !important;
+ }
 
 .MuiAutocomplete-endAdornment {
   top: -25px !important; }
@@ -2249,8 +2263,8 @@ b {
   padding: 0px;
   text-align: left;
   position: absolute;
-  top: 4rem;
-  left: 12.85rem; }
+  top: -15rem;
+    left: 10.5rem;}
   .loader1 span {
     width: 90px;
     height: 90px;
@@ -2263,8 +2277,9 @@ b {
   padding: 0px;
   text-align: left;
   position: absolute;
-  bottom: 10.5rem;
-  left: 4.3rem; }
+  top: -8rem;
+  left: 2rem;
+}
   .loader2 span {
     width: 130px;
     height: 130px;
@@ -2276,8 +2291,8 @@ b {
   display: none;
   padding: 0px;
   text-align: left;
-  bottom: 8rem;
-  left: 0;
+  bottom: -12.5rem;
+  left: -16px;
   right: 0;
   margin: 0 auto; }
   .loader3 span {
@@ -2291,8 +2306,8 @@ b {
   display: none;
   padding: 0px;
   text-align: left;
-  top: 7rem;
-  right: 3rem; }
+  top: -3rem;
+    right: 4rem; }
   .loader4 span {
     width: 90px;
     height: 90px;
@@ -2304,8 +2319,9 @@ b {
   display: none;
   padding: 0px;
   text-align: left;
-  bottom: 6rem;
-  right: 5.2rem; }
+  bottom: 14.5rem;
+  position: absolute;
+  right: 1.8rem; }
   .loader5 span {
     width: 90px;
     height: 90px;
@@ -3117,7 +3133,37 @@ button:focus {
     margin-bottom: 0px !important; }
   .personalEmail input:focus {
     box-shadow: inherit;
-    outline: none; }
+    outline: none;
+    background: transparent !important;
+    color: #fff;
+  }
+  /* input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active  {
+      -webkit-box-shadow: 0 0 0 30px #0667eb inset !important;
+
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
   .personalEmail input::placeholder {
     color: #ffffff9c; }
   .personalEmail .form-control {
@@ -3136,6 +3182,9 @@ button:focus {
       font-size: 16px;
       text-transform: capitalize;
       padding: 7.5px 30.5px; }
+      .personalEmail .GetEarlyBtn .btn-default:hover{
+        color: inherit !important;
+      }
       .personalEmail .GetEarlyBtn .btn-default:active {
         background-color: #4285f4 !important;
         box-shadow: inherit; }
@@ -3829,13 +3878,6 @@ button:focus {
   .CurrencyConversionCont {
     padding-bottom: 30px; } }
 
-.PesonalBanner {
-  background-image: url("../assets/PersonalBg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  padding: 98px 0px 98px 0px;
-  margin-top: 98px; }
   .PesonalBanner .PersonalCont h1 {
     font-size: 56px;
     margin-bottom: 40px;
@@ -4098,7 +4140,7 @@ button:focus {
     height: 100%; }
 
 .PesonalBanner {
-  background-image: url("../assets/PersonalBg.png");
+  background-image: url("https://i.imgur.com/1OhH9GF.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4300,7 +4342,7 @@ button:focus {
       text-align: center; } }
 
 .ExchangeBanner {
-  background-image: url("../assets/PersonalBg.png");
+  background-image: url("./../assets/PersonalBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4843,13 +4885,6 @@ button:focus {
     width: 100%;
     height: 100%; }
 
-.PesonalBanner {
-  background-image: url("../assets/PersonalBg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  padding: 98px 0px 98px 0px;
-  margin-top: 98px; }
   .PesonalBanner .PersonalCont h1 {
     font-size: 56px;
     margin-bottom: 40px;
@@ -5093,13 +5128,6 @@ button:focus {
         margin: 0;
         width: 100%; } }
 
-.PesonalBanner {
-  background-image: url("../assets/PersonalBg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  padding: 98px 0px 98px 0px;
-  margin-top: 98px; }
   .PesonalBanner .PersonalCont h1 {
     font-size: 56px;
     margin-bottom: 40px;
@@ -5324,6 +5352,7 @@ button:focus {
   color: #363636; }
 
 .yearDropdown .dropdown-menu {
+  background-color: #fff;
   top: 2.5rem !important; }
   .yearDropdown .dropdown-menu .dropdown-item {
     padding: .75rem 1.5rem;
@@ -5344,7 +5373,9 @@ button:focus {
   color: #fff !important;
   box-shadow: none !important;
   border-radius: none !important;
-  cursor: pointer; }
+  cursor: pointer; 
+  border: none;
+}
   .yearDropdown .btn h1:focus {
     outline: none !important; }
   .yearDropdown .btn:after {
@@ -5356,13 +5387,6 @@ button:focus {
   .yearDropdown .btn:active {
     background-color: transparent !important; }
 
-.PesonalBanner {
-  background-image: url("../assets/PersonalBg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  padding: 98px 0px 98px 0px;
-  margin-top: 98px; }
   .PesonalBanner .PersonalCont h1 {
     font-size: 56px;
     margin-bottom: 40px;
@@ -5526,13 +5550,6 @@ button:focus {
       margin-bottom: 50px;
       height: 45px; } }
 
-.PesonalBanner {
-  background-image: url("../assets/PersonalBg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  padding: 98px 0px 98px 0px;
-  margin-top: 98px; }
   .PesonalBanner .PersonalCont h1 {
     font-size: 56px;
     margin-bottom: 40px;
@@ -5756,10 +5773,10 @@ button:focus {
       .Thankyou .ThankyouCont .InboxImg {
         width: 70%; } }
 
-        body > #root > div {
+        /* body > #root > div {
           height: 100%;
           background-color: #fff !important;
-      }
+      } */
       
       body {
           font-family: "Roboto";
@@ -15415,3 +15432,326 @@ button:focus {
   .closeButton:hover {
       background-color: rgba(0, 0, 0, 0.04) !important;
   }
+  
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
