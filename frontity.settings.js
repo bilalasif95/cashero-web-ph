@@ -22,6 +22,38 @@ const settings = {
               "/personal"
             ],
             [
+              "Company",
+              "/company"
+            ],
+            [
+              "ContactUs",
+              "/contactus"
+            ],
+            [
+              "Donation",
+              "/donation"
+            ],
+            [
+              "ListedCharity",
+              "/listedcharity"
+            ],
+            [
+              "CurrencyAccounts",
+              "/currencyaccounts"
+            ],
+            [
+              "ExchangeRates",
+              "/exchangerates"
+            ],
+            [
+              "ReceivePayments",
+              "/receivepayments"
+            ],
+            [
+              "Remittance",
+              "/remittance"
+            ],
+            [
               "Nature",
               "/category/nature/"
             ],

@@ -422,23 +422,23 @@ export function HomePage(props) {
 			</div>
 			<HighInterest />
 			<div className="container">
-				{/* <MoneyRequest /> */}
-				{/* <GlobalMoney /> */}
-				{/* <MultiCurrency /> */}
-				{/* <CurrencyConversion /> */}
+				<MoneyRequest />
+				<GlobalMoney />
+				<MultiCurrency />
+				<CurrencyConversion />
 			</div>
-			{/* <Enhance /> */}
+			<Enhance />
 			<div className="container">
-				{/* <CharitySection /> */}
+				<CharitySection />
 				<GetStarted />
 			</div>
-			{/* <PeoplesSection /> */}
+			<PeoplesSection />
 			<div className="container">
 				<Companies />
 				<QuestionTabs activeTab={0} />
 			</div>
 
-			{/* <SignupSection /> */}
+			<SignupSection />
 			{/* banner */}
 		</>
 	);

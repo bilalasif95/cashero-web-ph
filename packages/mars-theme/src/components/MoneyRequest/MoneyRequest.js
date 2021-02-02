@@ -104,17 +104,17 @@ export function MoneyRequest(props) {
 				<div className="row">
 					<div className="col-md-5">
 						<div className="MoneyRequestCont">
-							<Fade triggerOnce direction="up" delay={100}>
+							{/* <Fade triggerOnce direction="up" delay={100}> */}
 								<h1 className="oneAppTitle">
 									Instant Money
 									<span className="br-block"></span>
 								 Transfer
 							</h1>
-							</Fade>
+							{/* </Fade> */}
 							<p>
-								<Fade triggerOnce direction="up" delay={300}>
+								{/* <Fade triggerOnce direction="up" delay={300}> */}
 									Cashero makes your payments simple. Tap a button and start sending, requesting and receiving payments worldwide. It’s fast, secure, convenient, and simple.
-								</Fade>
+								{/* </Fade> */}
 							</p>
 							{/* <p>
 								<Fade triggerOnce direction="up" delay={300}>

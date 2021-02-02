@@ -2,6 +2,9 @@
 body{
   font-family: 'Roboto', sans-serif;
 }
+.container {
+  max-width: 1240px !important;
+}
 .navbar{
   padding: 0px !important;
 }
@@ -290,6 +293,9 @@ h4 {
   font-size: 16px;
   color: #9ea0a5 !important;
   font-weight: 400; }
+  .customNav ul li a:after{
+    display: none !important;
+  }
 
 .customNav ul li:not(:last-child) {
   margin-right: 40px; }
@@ -385,6 +391,9 @@ h4 {
   display: none; }
 
 @media (max-width: 540px) {
+  .customNav ul li a:after{
+    display: block !important;
+  }
   .MuiTabs-fixed {
     width: inherit !important; }
   .SocialText {
@@ -522,7 +531,7 @@ h4 {
     background-color: #ffffff;
     padding: 59px 0px 51px 50px;
     border: none;
-    margin-top: -25px; }
+    margin-top: -30px; }
   .customNav .ListTitle {
     position: relative;
     padding-left: 45px;
@@ -1933,7 +1942,7 @@ b {
         left: -15px; } }
 
 .SavingAccount {
-  background-image: url("../../assets/ShapeBg.svg");
+  background-image: url("../assets/shapepBg.svg");
   background-repeat: no-repeat;
   background-position: left; }
 
@@ -2920,6 +2929,7 @@ b {
     width: 90% !important;
     margin: 0px auto;
     margin-bottom: 40px !important; }
+   
   .Globe .HighInterestTitle, .Globe .HighInterestText {
     color: #363636 !important;
     text-align: center; }
@@ -3144,26 +3154,6 @@ button:focus {
       -webkit-box-shadow: 0 0 0 30px #0667eb inset !important;
 
   } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  }
-
   .personalEmail input::placeholder {
     color: #ffffff9c; }
   .personalEmail .form-control {
@@ -4342,7 +4332,7 @@ button:focus {
       text-align: center; } }
 
 .ExchangeBanner {
-  background-image: url("./../assets/PersonalBg.png");
+  background-image: url("https://i.imgur.com/1OhH9GF.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4611,7 +4601,9 @@ button:focus {
   box-shadow: none !important;
   border-radius: none !important;
   cursor: pointer;
-  margin-left: 0px; }
+  margin-left: 0px;
+  border: none;
+}
 
 .Converter .MuiInput-underline:after, .Converter .MuiInput-underline:before {
   border-bottom: 1px dashed #d8dce6 !important; }
@@ -6709,11 +6701,11 @@ button:focus {
       max-width: 960px;
       }
       }
-      @media (min-width: 1200px) {
+      /* @media (min-width: 1200px) {
       .container {
       max-width: 1140px;
       }
-      }
+      } */
       .container-fluid {
       width: 100%;
       padding-right: 15px;
@@ -15754,4 +15746,13 @@ button:focus {
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+.Graph .btn{
+  border: none !important;
+}
+.Graph .btn:focus{
+  box-shadow: inherit !important;
+}
+.Graph .dropdown-menu {
+  background-color: #fff !important;
 }

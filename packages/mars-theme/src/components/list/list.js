@@ -139,14 +139,14 @@ const List = ({ state }) => {
                               </Link>
                             </li>
                             <li>
-                              <Link link="/currency-accounts">
+                              <Link link="/currencyaccounts">
                                 Multi-Currency
                                 Savings
                                 Account
                               </Link>
                             </li>
                             <li>
-                              <Link link="/exchange-rates">
+                              <Link link="/exchangerates">
                                 Online
                                 Currency
                                 Exchange
@@ -166,7 +166,7 @@ const List = ({ state }) => {
 													</p>
                           <ul className="HeaderList list-unstyled">
                             <li>
-                              <Link link="/receive-payments">
+                              <Link link="/receivepayments">
                                 Instant
                                 Money
                                 Transfer
@@ -218,7 +218,7 @@ const List = ({ state }) => {
                               </Link>
                             </li>
                             <li>
-                              <Link link="/currency-accounts">
+                              <Link link="/currencyaccounts">
                                 Multi-Currency Savings Account
                               </Link>
                             </li>
@@ -290,7 +290,7 @@ const List = ({ state }) => {
                               </Link>
                             </li>
                             <li>
-                              <Link link="/listed-charity">
+                              <Link link="/ListedCharity">
                                 Become a
                                 Listed
                                 Charity
@@ -310,10 +310,10 @@ const List = ({ state }) => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link link="/contact-us">
+                  <Link link="/ContactUs">
                     <a
                       className="nav-link"
-                      href="/contact-us"
+                      href="/ContactUs"
                     >
                       Help
 										</a>

@@ -12,7 +12,14 @@ import externalCss from "./index.css";
 import { Personal } from "./Personal/Personal";
 import { Footer } from "./footer/Footer";
 import { HomePage } from "./HomePage/HomePage";
-
+import {Company} from "./Company/Company";
+import {ContactUs} from "./ContactUs/ContactUs";
+import {Donation} from "./Donation/Donation";
+import {ListedCharity} from "./ListedCharity/ListedCharity";
+import {CurrencyAccounts} from "./CurrencyAccounts/CurrencyAccounts";
+import {ExchangeRates} from "./ExchangeRates/ExchangeRates";
+import {ReceivePayments} from "./ReceivePayments/ReceivePayments";
+import {Remittance} from "./Remittance/Remittance";
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -45,6 +52,14 @@ const Theme = ({ state }) => {
       <Switch>
         <Hello when={data.isSignUp} />
         <Personal when={data.isPersonal} />
+        <Company when={data.isCompany} />
+        <ContactUs when={data.isContactUs} />
+        <Donation when={data.isDonation} />
+        <ListedCharity when={data.isListedCharity} />
+        <CurrencyAccounts when={data.isCurrencyAccounts} />
+        <ExchangeRates when={data.isExchangeRates} />
+        <ReceivePayments when={data.isReceivePayments} />
+        <Remittance when={data.isRemittance} />
         <Loading when={data.isFetching} />
         <HomePage when={data.isArchive} />
         <Post when={data.isPostType} />

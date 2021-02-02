@@ -80,7 +80,7 @@ export function Footer(props) {
 									<p className="NavTitle">Features</p>
 									<ul className="list-unstyled FooterList">
 										<li><Link link="/personal">Savings</Link></li>
-										<li><Link link="/currency-accounts">Wallet</Link></li>
+										<li><Link link="/currencyaccounts">Wallet</Link></li>
 										<li><Link link="/exchange-rates">Exchange</Link></li>
 										<li><Link link="/receive-payments">Payments</Link></li>
 										<li><Link link="/remittance">Transfers</Link></li>

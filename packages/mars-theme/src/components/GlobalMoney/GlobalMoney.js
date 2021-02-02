@@ -140,9 +140,9 @@ export function GlobalMoney(props) {
 								</h3>
 							</Fade>
 							<p>
-								<Fade triggerOnce direction="up" delay={300}>
+								{/* <Fade triggerOnce direction="up" delay={300}> */}
 									Send money to back home. Stretch your hard earned money even further with low exchange fees. Cashero helps you send money globally with no hassle.
-								</Fade>
+								{/* </Fade> */}
 							</p>
 							{/* <p>
 							<Fade triggerOnce direction="up" delay={300}>
