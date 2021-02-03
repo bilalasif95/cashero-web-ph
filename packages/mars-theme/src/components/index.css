@@ -1477,7 +1477,7 @@ b {
   margin-top: 15px; }
 
 .Enhance {
-  background-image: url("../../assets/bg-1.svg");
+  background-image: url("https://i.imgur.com/SfRVlGI.png ");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px 0px 0px;
@@ -4751,7 +4751,7 @@ button:focus {
   font-size: 14px; }
 
 .SavingAccount {
-  background-image: url("../../assets/ShapeBg.svg");
+  background-image: url("https://i.imgur.com/UQVk2iI.png");
   background-repeat: no-repeat;
   background-position: left; }
 
@@ -4826,7 +4826,7 @@ button:focus {
   box-shadow: 0 0 10px #82808066;
   -webkit-box-shadow: 0 0 10px #82808066;
   border-radius: 10px;
-  width: 80%;
+  width: 64%;
   position: relative;
   height: 375px;
   display: flex;

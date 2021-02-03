@@ -81,8 +81,8 @@ export function Footer(props) {
 									<ul className="list-unstyled FooterList">
 										<li><Link link="/personal">Savings</Link></li>
 										<li><Link link="/currencyaccounts">Wallet</Link></li>
-										<li><Link link="/exchange-rates">Exchange</Link></li>
-										<li><Link link="/receive-payments">Payments</Link></li>
+										<li><Link link="/exchangerates">Exchange</Link></li>
+										<li><Link link="/receivepayments">Payments</Link></li>
 										<li><Link link="/remittance">Transfers</Link></li>
 										{/* <li><a href="">Security</a></li>
 										<li><a href="">Add money</a></li> */}

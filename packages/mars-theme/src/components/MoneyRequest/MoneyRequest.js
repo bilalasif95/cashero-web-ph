@@ -102,7 +102,7 @@ export function MoneyRequest(props) {
 			{/* Money Request */}
 			<div className="MoneyRequest sm-mt-30">
 				<div className="row">
-					<div className="col-md-5">
+					<div className="col-md-6">
 						<div className="MoneyRequestCont">
 							{/* <Fade triggerOnce direction="up" delay={100}> */}
 								<h1 className="oneAppTitle">

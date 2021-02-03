@@ -51,7 +51,7 @@ export function CurrencyConversion(props) {
 								</Zoom>
 							</div>
 							<img
-								className="img-fluid charity-mob"
+								className="charity-mob"
 								alt=""
 								src={currExchange}
 							/>
