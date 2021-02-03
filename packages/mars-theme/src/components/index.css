@@ -2,9 +2,18 @@
 body{
   font-family: 'Roboto', sans-serif;
 }
-.container {
-  max-width: 1240px !important;
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1240px !important;
+  }
 }
+
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
+
 .navbar{
   padding: 0px !important;
 }
@@ -245,9 +254,6 @@ h3,
 h4 {
   font-weight: 700; }
 
-.container {
-  max-width: 1240px; }
-
 .header {
   padding: 26px 0px;
   position: fixed;
@@ -314,7 +320,7 @@ h4 {
   border-bottom: 1px solid #d8dce6 !important; }
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
   background-color: #f5f5f5;
   border-radius: 10px; }
 
@@ -2012,7 +2018,8 @@ b {
   height: auto;
   color: #9ea0a5;
   display: block;
-  vertical-align: middle; }
+  /* vertical-align: middle;  */
+}
 
 .Graph {
   background-color: #fff;
@@ -2272,27 +2279,30 @@ b {
   padding: 0px;
   text-align: left;
   position: absolute;
-  top: -15rem;
-    left: 10.5rem;}
+  top: 4.6rem;
+  left: 12rem;
+  }
   .loader1 span {
     width: 90px;
     height: 90px;
-    animation-delay: 1s; }
+    animation-delay: 1s; 
+  }
 
 .loader2 {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   display: inline-block;
   padding: 0px;
   text-align: left;
   position: absolute;
-  top: -8rem;
-  left: 2rem;
+  left: 3rem;
+  top: 9rem;
 }
   .loader2 span {
-    width: 130px;
-    height: 130px;
-    animation-delay: 3s; }
+    width: 150px;
+    height: 150px;
+    animation-delay: 3s; 
+  }
 
 .loader3 {
   width: 70px;
@@ -2300,14 +2310,15 @@ b {
   display: none;
   padding: 0px;
   text-align: left;
-  bottom: -12.5rem;
+  bottom: 7.5rem;
   left: -16px;
   right: 0;
   margin: 0 auto; }
   .loader3 span {
     width: 70px;
     height: 70px;
-    animation-delay: 5s; }
+    animation-delay: 5s; 
+  }
 
 .loader4 {
   width: 90px;
@@ -2315,12 +2326,14 @@ b {
   display: none;
   padding: 0px;
   text-align: left;
-  top: -3rem;
-    right: 4rem; }
+  top: 7.7rem;
+  right: 3.6rem; 
+}
   .loader4 span {
     width: 90px;
     height: 90px;
-    animation-delay: 7s; }
+    animation-delay: 7s; 
+  }
 
 .loader5 {
   width: 90px;
@@ -2328,13 +2341,14 @@ b {
   display: none;
   padding: 0px;
   text-align: left;
-  bottom: 14.5rem;
+  bottom: 5.7rem;
   position: absolute;
-  right: 1.8rem; }
+  right: 5.7rem; }
   .loader5 span {
     width: 90px;
     height: 90px;
-    animation-delay: 9s; }
+    animation-delay: 9s; 
+  }
 
 .loader {
   display: inline-block;
@@ -2347,7 +2361,8 @@ b {
     border-radius: 100%;
     background: #fff;
     -webkit-animation: loader 1.5s linear infinite;
-    animation: loader 1.5s linear infinite; }
+    animation: loader 1.5s linear infinite; 
+  }
 
 .loader span:last-child {
   animation-delay: -0.9s;
@@ -2380,7 +2395,7 @@ b {
 .peoples-container {
   position: absolute; }
 
-@media (max-width: 1230px) {
+/* @media (max-width: 1230px) {
   .loader1 {
     left: 12rem; }
   .loader2 {
@@ -2388,9 +2403,10 @@ b {
   .loader4 {
     right: 2.5rem; }
   .loader5 {
-    right: 4.5rem; } }
+    right: 4.5rem; } 
+  } */
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .loader1 {
     left: 11.3rem; }
   .loader2 {
@@ -2398,12 +2414,12 @@ b {
   .loader4 {
     right: 1.7rem; }
   .loader5 {
-    right: 3.7rem; } }
+    right: 3.7rem; } } */
 
 .dB {
   display: none; }
 
-@media (max-width: 1140px) {
+@media (max-width: 1280px) {
   .dB {
     display: block; }
   .dN {
@@ -2962,7 +2978,8 @@ b {
   height: auto;
   color: #9ea0a5;
   display: block;
-  vertical-align: middle; }
+  /* vertical-align: middle; */
+ }
 
 .Graph {
   background-color: #fff;
@@ -3500,7 +3517,10 @@ button:focus {
   background-color: #ffffff;
   padding: 53px 73px; }
   .InputBox .MuiInputBase-input {
-    padding: 0px 0px 4px; }
+    padding: 0px 0px 4px;
+    border: none;
+    width: 100%;
+  }
 
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
@@ -4818,7 +4838,8 @@ button:focus {
   height: auto;
   color: #9ea0a5;
   display: block;
-  vertical-align: middle; }
+  /* vertical-align: middle;  */
+}
 
 .Graph {
   background-color: #fff;
@@ -6111,7 +6132,7 @@ button:focus {
           width: 100%;
       }
       .loader {
-          height: 100vh;
+          /* height: 100vh; */
           display: flex;
           align-items: center;
       }
@@ -6294,7 +6315,7 @@ button:focus {
       cursor: help;
       border-bottom: 0;
       -webkit-text-decoration-skip-ink: none;
-      text-decoration-skip-ink: none;
+      /* text-decoration-skip-ink: none; */
       }
       address {
       margin-bottom: 1rem;
@@ -9729,7 +9750,7 @@ button:focus {
       border-radius: 0.25rem;
       -webkit-appearance: none;
       -moz-appearance: none;
-      appearance: none;
+      /* appearance: none; */
       }
       .custom-select:focus {
       border-color: #80bdff;
@@ -9833,7 +9854,7 @@ button:focus {
       background-color: transparent;
       -webkit-appearance: none;
       -moz-appearance: none;
-      appearance: none;
+      /* appearance: none; */
       }
       .custom-range:focus {
       outline: 0;
@@ -9860,7 +9881,7 @@ button:focus {
       transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
       box-shadow 0.15s ease-in-out;
       -webkit-appearance: none;
-      appearance: none;
+      /* appearance: none; */
       }
       @media (prefers-reduced-motion: reduce) {
       .custom-range::-webkit-slider-thumb {
@@ -9888,7 +9909,7 @@ button:focus {
       transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
       box-shadow 0.15s ease-in-out;
       -moz-appearance: none;
-      appearance: none;
+      /* appearance: none; */
       }
       @media (prefers-reduced-motion: reduce) {
       .custom-range::-moz-range-thumb {
@@ -9918,7 +9939,7 @@ button:focus {
       border-radius: 1rem;
       transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
       box-shadow 0.15s ease-in-out;
-      appearance: none;
+      /* appearance: none; */
       }
       @media (prefers-reduced-motion: reduce) {
       .custom-range::-ms-thumb {
@@ -11389,7 +11410,7 @@ button:focus {
       border: 0;
       -webkit-appearance: none;
       -moz-appearance: none;
-      appearance: none;
+      /* appearance: none; */
       }
       a.close.disabled {
       pointer-events: none;
@@ -11403,7 +11424,7 @@ button:focus {
       border: 1px solid rgba(0, 0, 0, 0.1);
       box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
       -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      /* backdrop-filter: blur(10px); */
       opacity: 0;
       border-radius: 0.25rem;
       }
