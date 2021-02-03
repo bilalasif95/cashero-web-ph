@@ -35,6 +35,7 @@ const Theme = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+       
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 

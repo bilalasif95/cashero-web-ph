@@ -112,7 +112,7 @@ export function PeoplesSection(props) {
 
 
 			{/* Peoples */}
-			<div className="peoples sm-mb-30">
+			<div className="peoples">
 				<div className="PeoplesCont">
 					<div className="container">
 						<h3 className="PeoplesTitle">Our Customers Say We're Great</h3>

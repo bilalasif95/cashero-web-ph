@@ -64,7 +64,7 @@ export function CurrencyConversion(props) {
 									<h1 className="oneAppTitle">
 										Online Currency
 										<span className="br-block"></span>
-									 Exchange
+										Exchange
 									</h1>
 								{/* </Fade> */}
 

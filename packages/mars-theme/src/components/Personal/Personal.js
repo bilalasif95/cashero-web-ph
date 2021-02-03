@@ -484,8 +484,9 @@ export function Personal() {
 			</div>
 
 			<NoEffort />
+			
 			<div className="container">
-				{/* <Savings /> */}
+				<Savings />
 				<Simple />
 
 

@@ -392,9 +392,9 @@ export function ExchangeRates() {
 							<div className="PersonalCont">
 								<h1>
 									{/* Instantly Exchange Currencies,  */}
-									Online Currency
+									Online Currency 
 										<span className="br-block"></span>
-									 Exchange
+									Exchange
 								</h1>
 								<p className="White">
 									Currency conversion with no hidden fees
