@@ -2708,10 +2708,10 @@ color: #fff;
 transition: none;
 }
 }
-.btn:hover {
+/* .btn:hover {
 color: #212529;
 text-decoration: none;
-}
+} */
 .btn.focus,
 .btn:focus {
 outline: 0;

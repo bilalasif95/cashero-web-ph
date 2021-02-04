@@ -20,6 +20,7 @@ import {CurrencyAccounts} from "./CurrencyAccounts/CurrencyAccounts";
 import {ExchangeRates} from "./ExchangeRates/ExchangeRates";
 import {ReceivePayments} from "./ReceivePayments/ReceivePayments";
 import {Remittance} from "./Remittance/Remittance";
+
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -27,7 +28,7 @@ import {Remittance} from "./Remittance/Remittance";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-
+  
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -35,7 +36,6 @@ const Theme = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
-       
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 

@@ -332,7 +332,7 @@ export function HighInterest(props) {
 							<div className="oneAppCont">
 								<Fade triggerOnce direction="up">
 									<h3 className="HighInterestTitle">
-										High Yield{" "}
+										High Yield
 										<span className="br-block"></span>{" "}
 										Savings Account
 									</h3>

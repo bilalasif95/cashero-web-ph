@@ -15,7 +15,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 // import usdflag from "../../assets/usdflag.png";
 import BitCircle from "../../assets/BitCircle.svg";
 // import eurflag from "../../assets/eurflag.png";
-// import { Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 
 export function Savings(props) {
@@ -113,42 +113,29 @@ export function Savings(props) {
 			<div className="MultiCurrency sm-mt-40">
 				<div className="row">
 					<div className="col-md-6">
+					<Fade triggerOnce direction="up">
 						<div className="MoneyRequestCont">
-							{/* <Fade triggerOnce direction="up" delay={100}> */}
+							
 								<h1 className="oneAppTitle">
 
 									How Does Cashero’s <span className="br-block"></span> High Yield Savings Work?
 
 
 							</h1>
-							{/* </Fade> */}
+							
 							<p>
-								{/* <Fade triggerOnce direction="up" delay={400}> */}
+								
 									We use blockchain technology to get you the best savings account interest rates between 2%-5% annually in our intelligent portfolio. Let us optimise your finances and take the work out of making money.
-								{/* </Fade> */}
+							
 							</p>
-							{/* <p>
-								<Fade triggerOnce direction="up" delay={400}>
-									Multiple currencies, one wallet.
-								</Fade>
-								<span className="br-block"></span>
-								<Fade triggerOnce direction="up" delay={600}>
-									Convert your local currency into USD, GBP or
-									EUR. Hold one, hold all.
-								</Fade>
-								<span className="br-block"></span>
-								<Fade triggerOnce direction="up" delay={800}>
-									Reduce currency fluctuation risk because you
-									worked hard for your money.
-								</Fade>
-							</p> */}
-							{/* <Fade triggerOnce direction="up" delay={1000}> */}
+							
 								<button onClick={appModalOpen} className="LinkBtn">
 									Save More <img alt="" className="ArrowBtn" src={Arrow} />
 								</button>
-							{/* </Fade> */}
+							
 							{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 						</div>
+						</Fade>
 					</div>
 
 					<div className="col-md-6">

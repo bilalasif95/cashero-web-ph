@@ -132,13 +132,13 @@ export function GlobalMoney(props) {
 					</div>
 					<div className="col-md-6">
 						<div className="MoneyRequestCont">
-							<Fade triggerOnce direction="up" delay={100}>
+							<Fade triggerOnce direction="up">
 								<h3 className="oneAppTitle">
 									Transfer Money
 									<span className="br-block"></span>
 									Abroad
 								</h3>
-							</Fade>
+							
 							<p>
 								{/* <Fade triggerOnce direction="up" delay={300}> */}
 									Send money to back home. Stretch your hard earned money even further with low exchange fees. Cashero helps you send money globally with no hassle.
@@ -157,7 +157,7 @@ export function GlobalMoney(props) {
 								Cashero helps you send money globally with no hassle.
 								</Fade>
 								</p> */}
-							<Fade triggerOnce direction="up" delay={700}>
+							
 								<Link link="/remittance"><a className="Link" href="/remittance">
 
 									Learn more about Transfers  <img className="ArrowBtn" alt="" src={Arrow} />

@@ -104,17 +104,17 @@ export function MoneyRequest(props) {
 				<div className="row">
 					<div className="col-md-6">
 						<div className="MoneyRequestCont">
-							{/* <Fade triggerOnce direction="up" delay={100}> */}
+						<Fade triggerOnce direction="up">
 								<h1 className="oneAppTitle">
 									Instant Money
 									<span className="br-block"></span>
 								 Transfer
 							</h1>
-							{/* </Fade> */}
+							
 							<p>
-								{/* <Fade triggerOnce direction="up" delay={300}> */}
+								
 									Cashero makes your payments simple. Tap a button and start sending, requesting and receiving payments worldwide. It’s fast, secure, convenient, and simple.
-								{/* </Fade> */}
+								
 							</p>
 							{/* <p>
 								<Fade triggerOnce direction="up" delay={300}>
@@ -129,7 +129,7 @@ export function MoneyRequest(props) {
 								It’s fast, secure, convenient, and simple.
 								</Fade>
 							</p> */}
-							<Fade triggerOnce direction="up" delay={700}>
+							
 								<Link link="/receive-payments"><a className="Link" href="/receive-payments">
 
 									Learn more about Payments <img className="ArrowBtn" alt="" src={Arrow} />

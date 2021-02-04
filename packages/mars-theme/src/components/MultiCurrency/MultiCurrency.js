@@ -104,7 +104,7 @@ export function MultiCurrency(props) {
 				<div className="row">
 					<div className="col-md-6">
 						<div className="MoneyRequestCont">
-						{/* <Fade triggerOnce direction="up" delay={100}> */}
+						<Fade triggerOnce direction="up">
 							<h1 className="oneAppTitle">
 								
 									Multi-Currency
@@ -113,11 +113,11 @@ export function MultiCurrency(props) {
 								Savings Accounts
 								
 							</h1>
-							{/* </Fade> */}
+							
 							<p>
-								{/* <Fade triggerOnce direction="up" delay={400}> */}
+								
 									Multiple currencies, one wallet. Convert your local currency into USD, GBP or EUR. Hold one, hold all. Reduce currency fluctuation risk because you worked hard for your money.
-								{/* </Fade> */}
+								
 							</p>
 							{/* <p>
 								<Fade triggerOnce direction="up" delay={400}>
@@ -134,12 +134,11 @@ export function MultiCurrency(props) {
 									worked hard for your money.
 								</Fade>
 							</p> */}
-							{/* <Fade triggerOnce direction="up" delay={1000}> */}
-							<Link link="/currencyaccounts"><a className="Link" href="/currencyaccounts">
-							Learn more about Accounts<img className="ArrowBtn" alt="" src={Arrow} />
-							</a>
-							</Link>
-							{/* </Fade> */}
+							
+									<Link link="/currencyaccounts"><a className="Link" href="/currencyaccounts">
+									Learn more about Accounts<img className="ArrowBtn" alt="" src={Arrow} />
+									</a></Link>
+							</Fade>
 					</div>
 				</div>
 

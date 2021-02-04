@@ -207,6 +207,7 @@ export function SignupSection(props) {
 							<div className="SignInEmail">
 								<TextField
 									placeholder="Enter Email Address"
+									autocomplete="off"
 									type="email"
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}

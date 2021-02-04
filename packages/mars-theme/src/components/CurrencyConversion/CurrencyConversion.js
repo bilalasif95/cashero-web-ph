@@ -60,18 +60,18 @@ export function CurrencyConversion(props) {
 					<div className="col-md-6">
 						<div className="CurrencyConversionCont">
 							<div>
-								{/* <Fade triggerOnce direction="up" delay={0}> */}
+								<Fade triggerOnce direction="up">
 									<h1 className="oneAppTitle">
 										Online Currency
 										<span className="br-block"></span>
 										Exchange
 									</h1>
-								{/* </Fade> */}
+								
 
 								<p>
-									{/* <Fade triggerOnce direction="up" delay={100}> */}
+									
 										Instantly exchange between USD, EUR, and GBP. Cashero gives you free currency conversions at transparent bank-beating exchange rates. Beat that.
-									{/* </Fade> */}
+									
 								</p>
 								{/* <p>
 									<Fade triggerOnce direction="up" delay={100}>
@@ -89,7 +89,7 @@ export function CurrencyConversion(props) {
 									Learn more currency conversion
 								</a> */}
 								{/* </Fade> */}
-								<Fade triggerOnce direction="up" delay={700}>
+								
 									<Link link="/exchange-rates"><a className="Link sm-mb-30" href="/exchange-rates">
 
 										Learn more about Exchange <img className="ArrowBtn" alt="" src={Arrow} />

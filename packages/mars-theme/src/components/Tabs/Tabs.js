@@ -386,7 +386,6 @@ export function QuestionTabs(props) {
 								</Accordion>
 							</div>
 						</TabPanel>
-
 						<TabPanel value={value} index={1}>
 							<div className="CollapseToggle">
 								<Accordion
@@ -1942,7 +1941,6 @@ export function QuestionTabs(props) {
 								{/* } */}
 							</div>
 						</TabPanel>
-
 						<TabPanel value={value} index={4}>
 							<div className="CollapseToggle">
 								<Accordion
@@ -2189,7 +2187,6 @@ export function QuestionTabs(props) {
 								{/* } */}
 							</div>
 						</TabPanel>
-
 						<TabPanel value={value} index={5}>
 							<div className="CollapseToggle">
 								<Accordion
@@ -2450,7 +2447,6 @@ export function QuestionTabs(props) {
 
 							</div>
 						</TabPanel>
-
 						<TabPanel value={value} index={6}>
 							<div className="CollapseToggle">
 								<Accordion
@@ -2622,7 +2618,7 @@ export function QuestionTabs(props) {
 					</div>
 				</div>
 			</div>
-			{/* Questions  */}
+			{/* Questions */}
 		</>
 	);
 }

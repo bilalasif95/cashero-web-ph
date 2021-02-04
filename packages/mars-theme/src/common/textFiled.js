@@ -89,7 +89,7 @@ const TextFiledComponent = props => {
       fullWidth
     /> */}
       <FormGroup fullWidth className="formGroup" >
-        <Input value={value} min={min} multiline={multiline} type={type} onChange={onChange} name={name} id="exampleEmail" placeholder={placeholder} rows={rows} rowsMax={rowsMax} fullWidth className="inputField" />
+        <Input value={value} min={min} multiline={multiline} type={type} onChange={onChange} name={name} id="exampleEmail" placeholder={placeholder} rows={rows} rowsMax={rowsMax} fullWidth className="inputField" autocomplete="off" />
       </FormGroup>
     </>
   );
