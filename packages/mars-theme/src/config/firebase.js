@@ -1,4 +1,4 @@
-import firebase from "firebase";
+// import firebase from "firebase";
 // import "firebase/auth";
 
 // const config = {
@@ -12,17 +12,17 @@ import firebase from "firebase";
 // 	measurementId: "G-J80DTPLL4N",
 // };
 
-const config = {
-	apiKey: "AIzaSyD5gY0ADVpG6hMBkDAbwQBgB4Eysv1W7PY",
-	authDomain: "cashero-828.firebaseapp.com",
-	databaseURL: "https://cashero-828.firebaseio.com",
-	projectId: "cashero-828",
-	// storageBucket: "cashero-828.appspot.com",
-	messagingSenderId: "906680386983",
-	appId: "1:906680386983:web:da4be5c8c8f814d7602282",
-	measurementId: "G-XCWW4R23HE",
-	storageBucket: "gs://cashero-828.appspot.com/",
-};
+// const config = {
+// 	apiKey: "AIzaSyD5gY0ADVpG6hMBkDAbwQBgB4Eysv1W7PY",
+// 	authDomain: "cashero-828.firebaseapp.com",
+// 	databaseURL: "https://cashero-828.firebaseio.com",
+// 	projectId: "cashero-828",
+// 	// storageBucket: "cashero-828.appspot.com",
+// 	messagingSenderId: "906680386983",
+// 	appId: "1:906680386983:web:da4be5c8c8f814d7602282",
+// 	measurementId: "G-XCWW4R23HE",
+// 	storageBucket: "gs://cashero-828.appspot.com/",
+// };
 
 // const prodConfig = {
 //     apiKey: process.env.REACT_APP_PROD_API_KEY,
@@ -74,7 +74,8 @@ const config = {
 export const table = {
 	Blogs: "Blogs",
 	BlogsCategories: "BlogsCategories",
+	ExchangeRates: "ExchageRates",
 }
 // export default Firebase;
-firebase.initializeApp(config);
-export default firebase;
+// firebase.initializeApp(config);
+// export default firebase;

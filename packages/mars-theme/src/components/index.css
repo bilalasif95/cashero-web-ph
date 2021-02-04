@@ -2880,7 +2880,11 @@ b {
 
 @media (max-width: 1024px) {
   .SignUp .selectCountry {
-    width: 11% !important; } }
+    width: 11% !important; }
+    .BlogTabs .MuiTab-root{
+      max-width: 165px;
+    }
+  }
 
 @media (max-width: 992px) {
   .SignUp .selectCountry {
@@ -8502,7 +8506,7 @@ button:focus {
       }
       }
       .btn:hover {
-      color: #212529;
+      /* color: #212529; */
       text-decoration: none;
       }
       .btn.focus,
@@ -15784,4 +15788,20 @@ button:focus {
 .Converter .GbpRow .MuiInputBase-input{
   border: none;
   width: 100%;
+}
+.toggleButtonShow {
+  display: block !important;
+}
+
+.customNav .navbar-nav li>a{
+   padding: 8px 0px;
+   display: block;
+}
+
+.backList a{
+  color: #9ea0a5 !important;
+}
+
+.customNav .navbar-toggler{
+  border: none;
 }

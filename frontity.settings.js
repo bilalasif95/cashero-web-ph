@@ -1,10 +1,10 @@
 const settings = {
-  "name": "my-app",
+  "name": "cashero-web",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
+      "url": "https://test.cashero.com",
       "title": "Cashero",
-      "description": "WordPress installation for Frontity development"
+      "description": "Cashero"
     }
   },
   "packages": [
@@ -18,6 +18,10 @@ const settings = {
               "/"
             ],
             [
+              "Blogs",
+              "/blog"
+            ],
+            [
               "Personal",
               "/personal"
             ],
@@ -27,7 +31,7 @@ const settings = {
             ],
             [
               "ContactUs",
-              "/contactus"
+              "/contact-us"
             ],
             [
               "Donation",
@@ -35,48 +39,28 @@ const settings = {
             ],
             [
               "ListedCharity",
-              "/listedcharity"
+              "/listed-charity"
             ],
             [
               "CurrencyAccounts",
-              "/currencyaccounts"
+              "/currency-accounts"
             ],
             [
               "ExchangeRates",
-              "/exchangerates"
+              "/exchange-rates"
             ],
             [
               "ReceivePayments",
-              "/receivepayments"
+              "/receive-payments"
             ],
             [
               "Remittance",
               "/remittance"
             ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ],
-            [
-              "Sign Up",
-              "/sign-up/"
-            ]
           ],
           "featured": {
-            "showOnList": false,
-            "showOnPost": false
+            "showOnList": true,
+            "showOnPost": true
           }
         }
       }
@@ -85,7 +69,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": "https://test.cashero.com"
         }
       }
     },

@@ -1,45 +1,28 @@
-// import { makeStyles } from "@material-ui/styles";
 import React, { useState, useEffect } from "react";
-// import TextField from "@material-ui/core/TextField";
-// import { Theme } from "@material-ui/core/styles";
 import Clock from "./../../assets/clockImg.svg";
 import { styled } from "frontity";
 import { TextfieldBanner } from "../../components/TextfieldBanner/TextfieldBanner";
-// import Arrow from "../../assets/arrow.svg";
-// import listGraph from "../../assets/listGraph.svg";
-// import listClock from "../../assets/listClock.svg";
-// import Dollarlist from "../../assets/Dollarlist.svg";
-// import listGraph from "../../assets/listGraph.svg";
 import oneWallet from "./../../assets/onewallet.svg";
 import WalletCoins from "./../../assets/WalletCoins.png";
 import Draw from "./../../assets/draw.svg";
 import ListPhone from "./../../assets/ListPhone.svg";
-// import listClock from "../../assets/listClock.svg";
-// import Dollarlist from "../../assets/Dollarlist.svg";
-// import listHome from "../../assets/listHome.svg";
-// import { callApi } from "../../config/call-api";
-// import { EndPoints } from "../../config/config/config";
+import { callApi } from "../../config/call-api";
+import { FirebaseEndPoints } from "../../config/config";
 import { SingleAccount } from "../SingleAccount/SingleAccount";
 import { Protect } from "../Protect/Protect";
 import { Simple } from "..//Simple/Simple";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
 import { Companies } from "../Companies/Companies";
-// import { GetStarted } from "../../components/GetStarted/GetStarted";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { Fade } from "react-awesome-reveal";
 import Fav from "./../../assets/favImg.svg";
 import CounterIcon from "./../../assets/counterIcon.svg";
-// import Country from "../../assets/Country.svg";
 import Earning from "../../assets/earning.svg";
 import SearchIcon from "@material-ui/icons/Search";
-// import Vector from "../../assets/vector.svg";
-// import Done from "../../assets/done.svg";
 import MovingCoins from "./../../assets/movingCoins.png";
-// import counrtrylist from "../../config/config/countrylist";
 import Arrow1 from "./../../assets/arrowLink.svg";
 import Wait2 from "./../../assets/wait.svg";
-// import Chart from "../../assets/Chart.svg";
 import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
@@ -51,33 +34,18 @@ import {
 	DropdownItem,
 } from "reactstrap";
 import currencieslist from "../../config/currenciesList";
-// import Firebase from "../../components/Firebase/firebase";
-
-// import { Input } from '@material-ui/core';
-// import envelope from "../../assets/envelope.jpg";
-// import { RootState } from "../reducers";
 
 var bigDecimal = require('js-big-decimal');
 
 export function CurrencyAccounts() {
-	// const [mobileNum, setMobileNumber] = useState<string>();
-	// const [country, setCountry] = useState<CountryType>({
-	// 	phone: "",
-	// 	label: "",
-	// 	code: "",
-	// });
 	const appModalOpen = () => {
 		setAppModal(true)
-	}
-
+	};
 	const appModalClose = () => {
 		setAppModal(false)
 
-	}
-
+	};
 	const [appModal, setAppModal] = useState(false)
-
-	// const classes = useStyles();
 	// const [searchTerm, setSearchTerm] = useState<any>("");
 	// const [searchResults, setSearchResults] = useState<any>(counrtrylist);
 	// const [searchResults2, setSearchResults2] = useState<any>([]);
@@ -95,12 +63,10 @@ export function CurrencyAccounts() {
 	const [openSuccessModal, setSuccessModal] = useState(false);
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
-	// const [open, setOpen] = useState(false);
 	const [searchResults2gbp, setSearchResults2gbp] = useState([]);
 	const [searchResultsgbp, setSearchResultsgbp] = useState(
 		currencieslist
 	);
-	// const [loading, setLoading] = useState(false);
 	const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
 	const [baseCurrencyGBPValue, setBaseCurrencyGBPValue] = useState("1");
 	const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
@@ -113,7 +79,6 @@ export function CurrencyAccounts() {
 	// 				.includes(searchTerm.toLocaleLowerCase()) ||
 	// 			country.dial_code.includes(searchTerm.toLocaleLowerCase())
 	// 	);
-
 	// 	setSearchResults2(results);
 	// };
 	// const selectCountry = (country) => {
@@ -122,7 +87,6 @@ export function CurrencyAccounts() {
 	// 	setSearchTerm("");
 	// 	setSearchResults2(counrtrylist);
 	// };
-
 	// const getStarted = () => {
 	// 	let finalPhoneNumb = code + newPhone;
 	// 	callApi(EndPoints.preregistration, "post", "", {
@@ -142,34 +106,19 @@ export function CurrencyAccounts() {
 	// 			// setError("Invalid phone number.");
 	// 		});
 	// };
-
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
-
-	// const [mobileNum, setMobileNumber] = useState<string>("");
-
-	// const handleOpen = () => {
-	// 	setOpen(true);
-	// };
-
-	// const handleClose = () => {
-	// 	setOpen(false);
-	// };
-
 	const closeBothModal = () => {
 		// setCode("+1")
 		// setNewPhoneNumber("");
 		setSuccessModal(false)
 		setAppModal(false)
-		// setOpen(false)
-	}
-
+	};
 	const togglegbp = () => {
 		setSearchTermgbp("");
 		setDropdownOpengbp((prevState) => !prevState);
 	};
-
 	const handleChangegbp = (e) => {
 		setSearchTermgbp(e.target.value);
 		const results = searchResultsgbp.filter(
@@ -181,31 +130,22 @@ export function CurrencyAccounts() {
 		);
 		setSearchResults2gbp(results);
 	};
-
 	const selectCountrygbp = (country) => {
 		setSearchTermgbp("");
 		setSearchResults2gbp(currencieslist);
 		setflaggbp(country.flag);
 		setflagcurrencygbp(country.name)
 	};
-
 	useEffect(() => {
 		setSearchResultsgbp(currencieslist)
-		// setLoading(true)
-		// Firebase.firestore()
-		// 	.collection("ExchageRates")
-		// 	.doc("BR")
-		// 	.get()
-		// 	.then((doc) => {
-		// 		// setBaseCurrency(doc?.data()?.currencyCode);
-		// 		setBaseCurrencyEURValue(doc?.data()?.eur);
-		// 		setBaseCurrencyGBPValue(doc?.data()?.gbp);
-		// 		setBaseCurrencyUSDValue(doc?.data()?.usd);
-		// 		// setLoading(false)
-		// 	})
-			// .catch((error) => { });
+		callApi(FirebaseEndPoints.ExchangeRates, "get", "")
+			.then((doc) => {
+				setBaseCurrencyEURValue(doc.fields.eur.stringValue)
+				setBaseCurrencyGBPValue(doc.fields.gbp.stringValue)
+				setBaseCurrencyUSDValue(doc.fields.usd.stringValue)
+			})
+			.catch((error) => { });
 	}, [])
-
 	const limit = (bal) => {
 		let temp = bal ? bal.toString() : "0";
 		if (temp) {
@@ -216,11 +156,8 @@ export function CurrencyAccounts() {
 		}
 		let n = temp[1] ? "" + temp[1] : "0";
 		let x = n && (n + "00").substring(0, 2);
-
-		// let t = "0";
 		return x ? temp[0] + "." + x : "0.00";
-	}
-
+	};
 	const calculateBRL = (value, label) => {
 		if (label === "US Dollar - USD") {
 			const multi = bigDecimal.multiply(50.00, value)
@@ -237,8 +174,7 @@ export function CurrencyAccounts() {
 			const final = limit(multi)
 			return final
 		}
-	}
-
+	};
 	return (
 		<>
 			{
@@ -249,12 +185,7 @@ export function CurrencyAccounts() {
 					open={openSuccessModal}
 					onClose={() => setSuccessModal(false)}
 					closeAfterTransition
-				// BackdropComponent={Backdrop}
-				// BackdropProps={{
-				// 	timeout: 500,
-				// }}
 				>
-
 					<Paper>
 						<IconButton
 							aria-label="Close"
@@ -263,7 +194,6 @@ export function CurrencyAccounts() {
 						>
 							<CloseIcon />
 						</IconButton>
-
 						<div className="Waitlist">
 							<div className="container">
 								<div className="row waitlistRow">
@@ -297,21 +227,16 @@ export function CurrencyAccounts() {
 						</div>
 					</Paper>
 				</Modal>
-
 			}
-			{/* MOdal */}
-
 			<div className="PesonalBanner InterestBanner">
 				<div className="container">
 					<div className="row align-items-center">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-							 
-							<h1>Multi-Currency <span className="br-block"></span> Savings Account.</h1>
-								{/* <h1> Go From Zero To Hero. <span className="br-block"></span> Make Your Money Borderless.</h1> */}
+
+								<h1>Multi-Currency <span className="br-block"></span> Savings Account.</h1>
 								<p className="bannerPara">Keep your money safe from currency fluctuations.</p>
 								<TextfieldBanner />
-								{/* Phone-Number */}
 								{/* <div className="numberSelection">
 									<div className="selectCountry">
 										<Dropdown
@@ -415,7 +340,6 @@ export function CurrencyAccounts() {
 											onChange={(e) => handleOnChange(e)}
 										/>
 									</div>
-
 									<button
 										onClick={() => getStarted()}
 										className={
@@ -428,17 +352,13 @@ export function CurrencyAccounts() {
 										Get Started
 								</button>
 								</div> */}
-
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
 								</ul>
-
 							</div>
 						</div>
-						{/* <div className="col-md-5"> */}
 						<div className="col-md-5">
 							<div className="Graph">
-
 								<img
 									className="CounterIcon"
 									alt="CounterIcon"
@@ -476,7 +396,6 @@ export function CurrencyAccounts() {
 													<SearchIcon />
 													<input
 														type="text"
-														// placeholder="Country"
 														value={
 															searchTermgbp
 														}
@@ -516,11 +435,6 @@ export function CurrencyAccounts() {
 																		item.name
 																	}
 																</div>
-																{/* <div className="code">
-																					{
-																						item.dial_code
-																					}
-																				</div> */}
 															</DropdownItem>
 														)
 													)
@@ -551,105 +465,18 @@ export function CurrencyAccounts() {
 																		item.name
 																	}
 																</div>
-																{/* <div className="code">
-																					{
-																						item.dial_code
-																					}
-																				</div> */}
 															</DropdownItem>
 														)
 													)}
 											</div>
 										</DropdownMenu>
 									</Dropdown>
-									{/* <img
-										className="mx-fluid countryFlag"
-										src={Country}
-									/> */}
 								</div>
 							</div>
-							{/* </div> */}
-
-							{/* <img className="img-fluid" src={Chart} /> */}
-
-							{/* <div className="InputBox">
-								<div className="row">
-
-									<div className="col-12">
-										<div className="row inputRow">
-											<div className="col-4">
-												<div>
-													<p className="customText">Deposit</p>
-													<TextField
-														fullWidth
-														// label="Deposit"
-														type="tel"
-														variant="standard"
-														className="PersonalBoxField"
-													/>
-												</div>
-											</div>
-											<div className="col-2">
-												<img src={Arrow} />
-											</div>
-											<div className="col-6">
-												<div className="InterestBox mt-0 TotalText">
-													<p>Total Interest</p>
-													<h1>$0.00</h1>
-												</div>
-
-											</div>
-										</div>
-									</div>
-								</div>
-
-
-
-								<div className="row">
-
-									<div className="col-12">
-										<div className="row">
-											<div className="col-6">
-												<div className="InterestBox TotalText">
-													<p>Interest Rate</p>
-													<h1>8% APY</h1>
-												</div>
-											</div>
-
-											<div className="col-6">
-												<div className="InterestBox TotalText">
-													<p>Term</p>
-													<h1>1 year</h1>
-												</div>
-
-											</div>
-										</div>
-									</div>
-								</div>
-
-
-							</div>
-
-							<div className="InputBox mt-4 FinalTextBox">
-								<div className="row">
-
-									<div className="col-12">
-
-										<div className="FinalText text-center">
-											<p>Final balance is</p>
-
-											<h1>$</h1>
-										</div>
-									</div>
-
-								</div>
-							</div> */}
-
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<div className="container">
 				<div className="row">
 					<div className="col-md -12">
@@ -660,21 +487,18 @@ export function CurrencyAccounts() {
 							<li><img alt="Draw" src={Draw} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
-
 				</div>
 			</div>
-
 			<SingleAccount />
 			<div className="container">
 				<Protect />
 				<Simple />
-				{/* Money Request */}
 				<div className="getStarted">
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
-						</h3>
+							</h3>
 							<div className="row">
 								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
 									<Fade triggerOnce direction="left">
@@ -684,9 +508,7 @@ export function CurrencyAccounts() {
 										</div>
 									</Fade>
 								</div>
-
 								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									{/* <Fade triggerOnce direction="up"> */}
 									<div className="GetStartedBox2 w-100">
 										<img
 											className="img-fluid"
@@ -699,9 +521,7 @@ export function CurrencyAccounts() {
 											your Multi-Currency Account.{" "}
 										</h3>
 									</div>
-									{/* </Fade> */}
 								</div>
-
 								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
 									<Fade triggerOnce direction="right">
 										<div className="GetStartedBox3 w-100">
@@ -727,20 +547,14 @@ export function CurrencyAccounts() {
 						</div>
 					</div>
 				</div>
-				{/* Money Request */}
 			</div>
-
 			< PeoplesSection />
 			<div className="container">
 				<Companies />
 				<QuestionTabs activeTab={2} />
 			</div>
-
 			<SignupSection />
-
-
 		</>
-
 	);
 }
 
@@ -760,86 +574,3 @@ const Paper = styled.div`
     },
   }
 `;
-
-// const useStyles = makeStyles((theme: Theme) => ({
-// 	root: {
-// 		width: "100%",
-// 		height: "100%",
-// 		zIndex: 1,
-// 		overflow: "hidden",
-// 	},
-
-// 	appFrame: {
-// 		position: "relative",
-// 		display: "flex",
-// 		width: "100%",
-// 		height: "100%",
-// 	},
-// 	modal: {
-// 		display: "flex",
-// 		alignItems: "center",
-// 		justifyContent: "center",
-// 	},
-// 	paper: {
-// 		backgroundColor: theme.palette.background.paper,
-// 		// border: "2px solid #000",
-// 		boxShadow: theme.shadows[5],
-// 		padding: theme.spacing(2, 4, 3),
-// 		width: "100% !important",
-// 		height: "100vh !important",
-// 	},
-// 	menuButton: {
-// 		marginRight: theme.spacing(2),
-// 	},
-// 	title: {
-// 		flexGrow: 1,
-// 	},
-// 	appBar: {
-// 		zIndex: theme.zIndex.drawer + 1,
-// 		position: "absolute",
-// 	},
-// 	navIconHide: {
-// 		[theme.breakpoints.up("md")]: {
-// 			display: "none",
-// 		},
-// 	},
-// 	drawerHeader: { ...theme.mixins.toolbar },
-// 	drawerPaper: {
-// 		width: 250,
-// 		backgroundColor: theme.palette.background.default,
-// 		[theme.breakpoints.up("md")]: {
-// 			width: drawerWidth,
-// 			position: "relative",
-// 			height: "100%",
-// 		},
-// 	},
-// 	closeButton: {
-// 		position: "absolute",
-// 		// right: theme.spacing.unit / 2,
-// 		// top: theme.spacing.unit / 2,
-// 		right: 0,
-// 		color: theme.palette.grey[500],
-// 	},
-// 	content: {
-// 		backgroundColor: theme.palette.background.default,
-// 		width: "100%",
-// 		height: "100vh",
-
-// 		// [theme.breakpoints.up("sm")]: {
-// 		// 	height: "calc(100% - 64px)",
-// 		// },
-// 	},
-// 	container: {
-// 		width: "100%",
-// 		maxWidth: "1140px",
-// 		margin: "0 auto",
-// 		background: "#fff",
-// 		position: "relative",
-// 		padding: "0px 10px",
-// 	},
-// 	CustomHeader: {
-// 		background: "#fff",
-// 		color: "#0667EB",
-// 		boxShadow: "inherit",
-// 	},
-// }));

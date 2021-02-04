@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect, styled } from "frontity";
 import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
@@ -20,19 +20,47 @@ import { EndPoints } from "../../config/config";
 
 const List = ({ state }) => {
   // Get the data of the current list.
-  const data = state.source.get(state.router.link);
+  // const data = state.source.get(state.router.link);
   const [toggleBotton, setToggleBotton] = useState(false);
+  const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
+  const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
+  const [donationsToggleBotton, setDonationsToggleBotton] = useState(false);
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [openSuccessModal, setSuccessModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [openDiv, setOpenDiv] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
 
   const onToggleButtonClicked = () => {
     if (toggleBotton) {
       return setToggleBotton(false);
     }
     setToggleBotton(true);
+  };
+  const onPersonalToggleButtonClicked = () => {
+    if (personalToggleBotton) {
+      return setPersonalToggleBotton(false);
+    }
+    setPersonalToggleBotton(true);
+    setBusinessToggleBotton(false);
+    setDonationsToggleBotton(false);
+  };
+  const onBusinessToggleButtonClicked = () => {
+    if (businessToggleBotton) {
+      return setBusinessToggleBotton(false);
+    }
+    setBusinessToggleBotton(true);
+    setPersonalToggleBotton(false);
+    setDonationsToggleBotton(false);
+  };
+  const onDonationsToggleButtonClicked = () => {
+    if (donationsToggleBotton) {
+      return setDonationsToggleBotton(false);
+    }
+    setDonationsToggleBotton(true);
+    setBusinessToggleBotton(false);
+    setPersonalToggleBotton(false);
   };
   const handleOpen = () => {
     setOpen(true);
@@ -48,12 +76,6 @@ const List = ({ state }) => {
 
   const onSubmit = () => {
     setLoading(true);
-    // setError("");
-    // if (!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(email)) {
-    // 	setError("Email is incorrect.");
-    // 	setLoading(false);
-    // }
-    // else {
     callApi(EndPoints.preregistration, "post", "", {
       Phone: email,
     }).then(() => {
@@ -61,18 +83,28 @@ const List = ({ state }) => {
       setLoading(false);
       setEmail("");
     });
-    // }
   };
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+  }, []);
 
   return (
     <>
-      <div className="header" id="header">
+      <div className={`${scrolled ? "active header" : "header"}`} id="header">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light customNav">
-            <Link link="/">
-              <a className="navbar-brand" href="/">
-                <img className="Logo" alt="Logo" src={Logo} />
-              </a>
+            <Link link="/" className="navbar-brand">
+              <img className="Logo" alt="Logo" src={Logo} />
             </Link>
             <button
               className="navbar-toggler"
@@ -100,14 +132,14 @@ const List = ({ state }) => {
             </button>
 
             <div
-              className="collapse navbar-collapse"
+              className={toggleBotton ? "collapse navbar-collapse toggleButtonShow" : "collapse navbar-collapse"}
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown" onClick={onPersonalToggleButtonClicked}>
                   <a
                     className="nav-link dropdown-toggle"
-                    href="/personal"
+                    // href="/personal"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -117,7 +149,7 @@ const List = ({ state }) => {
                     Personal
 									</a>
                   <div
-                    className="dropdown-menu"
+                    className={personalToggleBotton ? "dropdown-menu toggleButtonShow" : "dropdown-menu"}
                     aria-labelledby="navbarDropdown"
                   >
                     <div className="row">
@@ -139,14 +171,14 @@ const List = ({ state }) => {
                               </Link>
                             </li>
                             <li>
-                              <Link link="/currencyaccounts">
+                              <Link link="/currency-accounts">
                                 Multi-Currency
                                 Savings
                                 Account
                               </Link>
                             </li>
                             <li>
-                              <Link link="/exchangerates">
+                              <Link link="/exchange-rates">
                                 Online
                                 Currency
                                 Exchange
@@ -166,7 +198,7 @@ const List = ({ state }) => {
 													</p>
                           <ul className="HeaderList list-unstyled">
                             <li>
-                              <Link link="/receivepayments">
+                              <Link link="/receive-payments">
                                 Instant
                                 Money
                                 Transfer
@@ -184,10 +216,10 @@ const List = ({ state }) => {
                     </div>
                   </div>
                 </li>
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown" onClick={onBusinessToggleButtonClicked}>
                   <a
                     className="nav-link dropdown-toggle"
-                    href="/business"
+                    // href="/business"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -198,7 +230,7 @@ const List = ({ state }) => {
 									</a>
 
                   <div
-                    className="dropdown-menu BusinessDropdown"
+                    className={businessToggleBotton ? "dropdown-menu toggleButtonShow BusinessDropdown" : "dropdown-menu BusinessDropdown"}
                     aria-labelledby="navbarDropdown"
                   >
                     <div className="row">
@@ -218,7 +250,7 @@ const List = ({ state }) => {
                               </Link>
                             </li>
                             <li>
-                              <Link link="/currencyaccounts">
+                              <Link link="/currency-accounts">
                                 Multi-Currency Savings Account
                               </Link>
                             </li>
@@ -257,10 +289,10 @@ const List = ({ state }) => {
                   </div>
                 </li>
 
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown" onClick={onDonationsToggleButtonClicked}>
                   <a
                     className="nav-link dropdown-toggle"
-                    href="/#"
+                    // href="/#"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -270,7 +302,7 @@ const List = ({ state }) => {
                     Donations
 									</a>
                   <div
-                    className="dropdown-menu CharityDropdown"
+                    className={donationsToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
                     aria-labelledby="navbarDropdown"
                   >
                     <div className="row">
@@ -290,7 +322,7 @@ const List = ({ state }) => {
                               </Link>
                             </li>
                             <li>
-                              <Link link="/ListedCharity">
+                              <Link link="/listed-charity">
                                 Become a
                                 Listed
                                 Charity
@@ -303,20 +335,13 @@ const List = ({ state }) => {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <Link link="/company">
-                    <a className="nav-link" href="/company">
-                      Company
-										</a>
+                  <Link link="/company" className="nav-link">
+                    Company
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link link="/ContactUs">
-                    <a
-                      className="nav-link"
-                      href="/ContactUs"
-                    >
-                      Help
-										</a>
+                  <Link link="/contact-Us" className="nav-link">
+                    Help
                   </Link>
                 </li>
               </ul>

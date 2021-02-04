@@ -3,16 +3,6 @@ import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
-const signUpHandler = {
-  pattern: "/sign-up/",
-  func: ({ route, state }) => {
-    Object.assign(state.source.data[route], {
-      type: "page",
-      isSignUp: true,
-    })
-  }
-}
-
 const personalHandler = {
   pattern: "/personal/",
   func: ({ route, state }) => {
@@ -34,7 +24,7 @@ const companyHandler = {
 }
 
 const contactusHandler = {
-  pattern: "/contactus/",
+  pattern: "/contact-us/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -54,7 +44,7 @@ const donationHandler = {
 }
 
 const listedcharityHandler = {
-  pattern: "/listedcharity/",
+  pattern: "/listed-charity/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -64,7 +54,7 @@ const listedcharityHandler = {
 }
 
 const currencyaccountsHandler = {
-  pattern: "/currencyaccounts/",
+  pattern: "/currency-accounts/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -74,7 +64,7 @@ const currencyaccountsHandler = {
 }
 
 const exchangeratesHandler = {
-  pattern: "/exchangerates/",
+  pattern: "/exchange-rates/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -84,7 +74,7 @@ const exchangeratesHandler = {
 }
 
 const receivepaymentsHandler = {
-  pattern: "/receivepayments/",
+  pattern: "/receive-payments/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -99,6 +89,16 @@ const remittanceHandler = {
     Object.assign(state.source.data[route], {
       type: "page",
       isRemittance: true,
+    })
+  }
+}
+
+const blogsHandler = {
+  pattern: "/blog/",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isBlog: true,
     })
   }
 }
@@ -135,7 +135,6 @@ const marsTheme = {
   actions: {
     theme: {
       init: ({ libraries }) => {
-        libraries.source.handlers.push(signUpHandler);
         libraries.source.handlers.push(personalHandler);
         libraries.source.handlers.push(companyHandler);
         libraries.source.handlers.push(contactusHandler);
@@ -145,6 +144,7 @@ const marsTheme = {
         libraries.source.handlers.push(remittanceHandler);
         libraries.source.handlers.push(exchangeratesHandler);
         libraries.source.handlers.push(receivepaymentsHandler);
+        libraries.source.handlers.push(blogsHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

@@ -2709,7 +2709,7 @@ transition: none;
 }
 }
 .btn:hover {
-color: #212529;
+/* color: #212529; */
 text-decoration: none;
 }
 .btn.focus,
@@ -9655,4 +9655,5 @@ border-color: #dee2e6;
 }
 .closeButton:hover {
     background-color: rgba(0, 0, 0, 0.04) !important;
+}
 }

@@ -1,4 +1,4 @@
-# my-app
+# cashero-web
 
 This project was bootstrapped with [Frontity](https://frontity.org/).
 

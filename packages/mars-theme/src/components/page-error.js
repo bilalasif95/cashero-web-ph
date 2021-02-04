@@ -13,7 +13,7 @@ const description404 = (
 const description = (
   <>
     Don&apos;t panic! Seems like you encountered an error. If this persists,
-    <a href="https://community.frontity.org"> let us know </a> or try refreshing
+    let us know or try refreshing
     your browser.
   </>
 );
@@ -36,10 +36,11 @@ const Page404 = ({ state }) => {
 export default connect(Page404);
 
 const Container = styled.div`
-  width: 800px;
+  // width: 800px;
   margin: 0;
   padding: 24px;
   text-align: center;
+  margin-top: 100px;
 `;
 
 const Title = styled.h1`

@@ -21,13 +21,13 @@ const FeaturedMedia = ({ state, id }) => {
       ) || null;
 
   return (
-    <Container>
-      <StyledImage
-        alt={media.title.rendered}
-        src={media.source_url}
-        srcSet={srcset}
-      />
-    </Container>
+    // <Container>
+    <StyledImage
+      alt={media.title.rendered}
+      src={media.source_url}
+      srcSet={srcset}
+    />
+    // </Container>
   );
 };
 
