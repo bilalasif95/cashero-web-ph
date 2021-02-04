@@ -10,15 +10,11 @@ export function Enhance() {
 				<div className="row">
 					<div className="col-md-7">
 						<div className="EnhanceCont">
-							<Fade triggerOnce direction="up" delay={100}>
+							<Fade triggerOnce direction="up">
 								<h3 className="EnhanceTitle">Business</h3>
-							</Fade>
-							<Fade triggerOnce direction="up" delay={200}>
 								<p>
 									Make money while you make money with our high yield savings. <span className="br-block"></span>  Send, request and receive money from customers worldwide. <span className="br-block"></span>  Your first $50K in payments is absolutely free, there's only 1% <span className="br-block"></span> fee after that.
 								</p>
-							</Fade>
-							<Fade triggerOnce direction="up" delay={700}>
 								<a className="Link" href="/#">
 									Learn more about Business Payments  <img alt="" className="ArrowBtn" src={ArrowWhite} />
 								</a>

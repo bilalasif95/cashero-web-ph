@@ -25,7 +25,8 @@ body{
     color: #9ea0a5;
     font-weight: 400;
     line-height: 1.4; }
-
+    .PesonalBanner .MuiInputBase-input {
+      color: #fff !important; }
 @keyframes bannerText-up {
   from {
     padding-top: 100px;
@@ -1360,6 +1361,24 @@ b {
 .CompaniesList {
   padding: 90px 0px; }
 
+  @media (max-width: 991px) {
+    .CompaniesList {
+      flex-wrap: wrap;
+    }
+    .CompaniesList .CompaniesListBox {
+      display: flex;
+      justify-content: center;
+      width: 33%;
+      margin: 0 0 1rem;
+    }
+  }
+  
+  @media (max-width: 414px) {
+    .CompaniesList .CompaniesListBox {
+      width: 50%;
+    }
+  }
+
 @media (max-width: 540px) {
   .CompaniesList {
     box-sizing: border-box;
@@ -1586,33 +1605,51 @@ b {
   .getStarted .smBox3 {
     display: flex;
     justify-content: flex-start; }
-  @media (max-width: 767px) {
-    .getStarted .smBox1 {
-      justify-content: center;
-      margin: 0 0 2rem; }
-    .getStarted .smBox2 {
-      margin: 0 0 2rem; }
-    .getStarted .smBox3 {
-      justify-content: center; } }
-
-@media (max-width: 540px) {
-  .MultistepsCont {
-    padding: 30px 20px 0px 20px !important; }
-  .getStarted .GetStartedBox1,
-  .getStarted .GetStartedBox2,
-  .getStarted .GetStartedBox3 {
-    margin: 0px auto; }
-  .getStartedTitle {
-    font-size: 32px !important;
-    text-align: center !important;
-    margin-bottom: 40px !important; }
-  .getStarted {
-    padding: 30px 0px 40px 0px; }
-    .getStarted div:not(:last-child) {
-      margin-bottom: 30px; }
-  .smBox {
-    justify-content: center;
-    padding: 0; } }
+    @media (max-width: 991px) {
+ 
+      .getStarted .GetStartedBox1,
+      .getStarted .GetStartedBox2,
+      .getStarted .GetStartedBox3 {
+        margin: 0 0 1.5rem;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .MultistepsCont {
+        padding: 30px 20px 0px 20px !important;
+      }
+      .getStarted .smBox1 {
+        justify-content: center;
+        margin: 0 0 2rem;
+      }
+      
+      .getStarted .smBox3 {
+        justify-content: center;
+      }
+      .getStarted .GetStartedBox1,
+      .getStarted .GetStartedBox2,
+      .getStarted .GetStartedBox3 {
+        margin: 0px auto;
+      }
+      .getStartedTitle {
+        font-size: 32px !important;
+        text-align: center !important;
+        margin-bottom: 40px !important;
+      }
+      .getStarted {
+        padding: 30px 0px 40px 0px;
+      }
+      .getStarted .smBox2 {
+        margin: 0 0 2rem;
+      }
+      .getStarted div:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      .smBox {
+        justify-content: center;
+        padding: 0;
+      }
+    }
 
 .Link {
   font-size: 16px;
@@ -1661,6 +1698,11 @@ b {
     position: absolute;
     z-index: 2; }
 
+@media (max-width: 767px){
+  .map-pic {
+    height: 450px;
+  }
+}
 .oneApp, .CurrencyConversion, .MoneyRequest, .SavingAccount, .Charity {
   padding: 100px 0px; }
 
@@ -2533,7 +2575,7 @@ b {
     justify-content: center; }
     .flags .flags-containerBox .flagBar {
       justify-content: center;
-      height: 60px; }
+      height: unset; }
       .flags .flags-containerBox .flagBar img {
         margin: 0;
         width: 100%; }
@@ -3671,9 +3713,6 @@ button:focus {
 .numberSelection .MuiInput-underline:after {
   border-bottom: 1px solid #fff !important; }
 
-.PesonalBanner .MuiInputBase-input {
-  color: #fff !important; }
-
 .PesonalBanner .numberSelection {
   display: flex;
   width: 100%;
@@ -3899,8 +3938,6 @@ button:focus {
     font-size: 56px;
     margin-bottom: 40px;
     font-weight: 400; }
-  .PesonalBanner .MuiInputBase-input {
-    color: #fff !important; }
 
 .PesonalBanner .numberSelection {
   display: flex;
@@ -3912,9 +3949,6 @@ button:focus {
 
 .numberSelection .MuiInput-underline:after {
   border-bottom: 1px solid #fff !important; }
-
-.PesonalBanner .MuiInputBase-input {
-  color: #fff !important; }
 
 .PesonalBanner .MuiFormLabel-root {
   color: #FFFFFF !important; }
@@ -4167,8 +4201,6 @@ button:focus {
     font-size: 56px;
     margin-bottom: 40px;
     font-weight: 400; }
-  .PesonalBanner .MuiInputBase-input {
-    color: #fff !important; }
 
 .PesonalBanner .numberSelection {
   display: flex;
@@ -4181,8 +4213,6 @@ button:focus {
 .numberSelection .MuiInput-underline:after {
   border-bottom: 1px solid #fff !important; }
 
-.PesonalBanner .MuiInputBase-input {
-  color: #fff !important; }
 
 .PesonalBanner .MuiFormLabel-root {
   color: #FFFFFF !important; }
@@ -4543,7 +4573,9 @@ button:focus {
   width: 100%; }
 
 .GbpRow .selectCountry .dropdown-menu, .EuroRow .selectCountry .dropdown-menu {
-  width: 290px !important; }
+  width: 290px !important;
+  background-color: #fff;
+}
 
 @media (max-width: 540px) {
   .SwapGbpRow {
@@ -4614,7 +4646,10 @@ button:focus {
 
 .Converter .EuroRow .MuiInputBase-input {
   color: #000 !important;
-  font-size: 40px; }
+  font-size: 40px;
+  border: none;
+  width: 100%;
+}
 
 .MuiInput-underline:hover:not(.Mui-disabled):before {
   border-bottom: 1px dashed #d8dce6 !important; }
@@ -4669,7 +4704,9 @@ button:focus {
   width: 35%; }
 
 .GbpRow, .EuroRow {
-  display: flex; }
+  display: flex;
+  align-items: center;
+}
 
 .EuroRow {
   margin-top: 49px; }
@@ -4910,8 +4947,6 @@ button:focus {
     font-size: 56px;
     margin-bottom: 40px;
     font-weight: 400; }
-  .PesonalBanner .MuiInputBase-input {
-    color: #fff !important; }
 
 .PesonalBanner .numberSelection {
   display: flex;
@@ -5153,8 +5188,6 @@ button:focus {
     font-size: 56px;
     margin-bottom: 40px;
     font-weight: 400; }
-  .PesonalBanner .MuiInputBase-input {
-    color: #fff !important; }
 
 .PesonalBanner .numberSelection {
   display: flex;
@@ -5412,14 +5445,10 @@ button:focus {
     font-size: 56px;
     margin-bottom: 40px;
     font-weight: 400; }
-  .PesonalBanner .MuiInputBase-input {
-    color: #fff !important; }
 
 .numberSelection .MuiInput-underline:after {
   border-bottom: 1px solid #fff !important; }
 
-.PesonalBanner .MuiInputBase-input {
-  color: #fff !important; }
 
 .numberSelection .numberSelection {
   display: flex;
@@ -5575,14 +5604,10 @@ button:focus {
     font-size: 56px;
     margin-bottom: 40px;
     font-weight: 400; }
-  .PesonalBanner .MuiInputBase-input {
-    color: #fff !important; }
 
 .numberSelection .MuiInput-underline:after {
   border-bottom: 1px solid #fff !important; }
 
-.PesonalBanner .MuiInputBase-input {
-  color: #fff !important; }
 
 .numberSelection .numberSelection {
   display: flex;
@@ -7993,11 +8018,12 @@ button:focus {
       border: 0;
       }
       .form-control:focus {
-      color: #495057;
-      background-color: #fff;
+      color: #fff;
+      /* background-color: #fff; */
       border-color: #80bdff;
       outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      border-bottom: 1px solid #dadee7;
       }
       .form-control::-webkit-input-placeholder {
       color: #6c757d;
@@ -8505,10 +8531,10 @@ button:focus {
       transition: none;
       }
       }
-      .btn:hover {
-      /* color: #212529; */
+      /* .btn:hover {
+      color: #212529;
       text-decoration: none;
-      }
+      } */
       .btn.focus,
       .btn:focus {
       outline: 0;
@@ -15804,4 +15830,24 @@ button:focus {
 
 .customNav .navbar-toggler{
   border: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: green;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+::-webkit-input-placeholder { color: #666;} 
+
+.bannerEmail .form-control:focus{
+  color: #9ea0a5;
+  border-bottom: 1px solid #dadee7;
 }
