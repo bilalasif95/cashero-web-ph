@@ -362,56 +362,56 @@ export function ReceivePayments() {
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
 						</h3>
-							<div className="row">
-								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
-									<Fade triggerOnce direction="left">
-										<div className="GetStartedBox1 w-100">
-											<img className="img-fluid" alt="Fav" src={Fav} />
-											<h3>Sign up for Cashero.</h3>
-										</div>
-									</Fade>
-								</div>
-
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									{/* <Fade triggerOnce direction="up"> */}
-									<div className="GetStartedBox2 w-100">
-										<img
-											className="img-fluid"
-											alt="Dollar"
-											src={Dollar}
-										/>
-										<h3>
-											Add funds to your account.
-									</h3>
-									</div>
-									{/* </Fade> */}
-								</div>
-
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
-									<Fade triggerOnce direction="right">
-										<div className="GetStartedBox3 w-100">
-											<img className="img-fluid" alt="Path" src={Path} />
-											<h3>
-												Send, request and receive payments in an instant.
-										</h3>
-										</div>
-									</Fade>
-								</div>
-							</div>
-							<div className="row">
-								<div className="offset-md-1 col-md-10">
-									<div className="MultistepsCont">
-										<p>Ready to remove the awkwardness out of paying for bills or asking for money? Cashero’s got you.</p>
-										<button onClick={appModalOpen} className="LinkBtn">
-											Start paying & getting Paid  <img alt="arrow" className="ArrowBtn" src={Arrow1} />
-										</button>
-									</div>
-								</div>
-							</div>
-							{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
-
 						</div>
 					</div>
+					<div className="row justify-content-center">
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
+							<Fade triggerOnce direction="left">
+								<div className="GetStartedBox1 w-100">
+									<img className="img-fluid" alt="Fav" src={Fav} />
+									<h3>Sign up for Cashero.</h3>
+								</div>
+							</Fade>
+						</div>
+
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
+							{/* <Fade triggerOnce direction="up"> */}
+							<div className="GetStartedBox2 w-100">
+								<img
+									className="img-fluid"
+									alt="Dollar"
+									src={Dollar}
+								/>
+								<h3>
+									Add funds to your account.
+									</h3>
+							</div>
+							{/* </Fade> */}
+						</div>
+
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
+							<Fade triggerOnce direction="right">
+								<div className="GetStartedBox3 w-100">
+									<img className="img-fluid" alt="Path" src={Path} />
+									<h3>
+										Send, request and receive payments in an instant.
+										</h3>
+								</div>
+							</Fade>
+						</div>
+					</div>
+					<div className="row">
+						<div className="offset-md-1 col-md-10">
+							<div className="MultistepsCont">
+								<p>Ready to remove the awkwardness out of paying for bills or asking for money? Cashero’s got you.</p>
+								<button onClick={appModalOpen} className="LinkBtn">
+									Start paying & getting Paid  <img alt="arrow" className="ArrowBtn" src={Arrow1} />
+								</button>
+							</div>
+						</div>
+					</div>
+					{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
+
 				</div>
 				{/* Money Request */}
 

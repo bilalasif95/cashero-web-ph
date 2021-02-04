@@ -360,60 +360,59 @@ export function Remittance() {
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
 						</h3>
-							<div className="row">
-								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
-									<Fade triggerOnce direction="left">
-										<div className="GetStartedBox1 w-100">
-											<img alt="" className="img-fluid" src={Fav} />
-											<h3>Sign up for Cashero.</h3>
-										</div>
-									</Fade>
-								</div>
-
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									{/* <Fade triggerOnce direction="up"> */}
-									<div className="GetStartedBox2 w-100">
-										<img
-											className="img-fluid"
-											alt=""
-											src={StepsDollar}
-										/>
-										<h3>
-											Add funds to your account.
-									</h3>
-									</div>
-									{/* </Fade> */}
-								</div>
-
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
-									<Fade triggerOnce direction="right">
-										<div className="GetStartedBox3 w-100">
-											<img className="img-fluid" alt="" src={Done} />
-											<h3>
-												Send money directly to another Cashero account or deposit to a bank account.
-
-										</h3>
-										</div>
-									</Fade>
-								</div>
-							</div>
-							<div className="row">
-								<div className="offset-md-1 col-md-10">
-									<div className="MultistepsCont">
-										<p>Ready to send money hassle-free? Cashero’s global payment solution is here for you and for what matters most.</p>
-										<button className="LinkBtn" onClick={appModalOpen}>
-											Start Sending   <img alt="" className="ArrowBtn" src={Arrow1} />
-										</button>
-									</div>
-								</div>
-							</div>
-
-							{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 						</div>
 					</div>
+					<div className="row justify-content-center">
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
+							<Fade triggerOnce direction="left">
+								<div className="GetStartedBox1 w-100">
+									<img alt="" className="img-fluid" src={Fav} />
+									<h3>Sign up for Cashero.</h3>
+								</div>
+							</Fade>
+						</div>
+
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
+							{/* <Fade triggerOnce direction="up"> */}
+							<div className="GetStartedBox2 w-100">
+								<img
+									className="img-fluid"
+									alt=""
+									src={StepsDollar}
+								/>
+								<h3>
+									Add funds to your account.
+									</h3>
+							</div>
+							{/* </Fade> */}
+						</div>
+
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
+							<Fade triggerOnce direction="right">
+								<div className="GetStartedBox3 w-100">
+									<img className="img-fluid" alt="" src={Done} />
+									<h3>
+										Send money directly to another Cashero account or deposit to a bank account.
+
+										</h3>
+								</div>
+							</Fade>
+						</div>
+					</div>
+					<div className="row">
+						<div className="offset-md-1 col-md-10">
+							<div className="MultistepsCont">
+								<p>Ready to send money hassle-free? Cashero’s global payment solution is here for you and for what matters most.</p>
+								<button className="LinkBtn" onClick={appModalOpen}>
+									Start Sending   <img alt="" className="ArrowBtn" src={Arrow1} />
+								</button>
+							</div>
+						</div>
+					</div>
+
+					{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 				</div>
 				{/* Money Request */}
-
 			</div>
 			< PeoplesSection />
 			<div className="container">

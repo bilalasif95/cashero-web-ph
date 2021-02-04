@@ -341,55 +341,55 @@ export function ListedCharity() {
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
 						</h3>
-							<div className="row">
-								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
-									<Fade triggerOnce direction="left">
-										<div className="GetStartedBox1 w-100">
-											<img className="img-fluid" alt="Fav" src={Fav} />
-											<h3>Sign up for Cashero.</h3>
-										</div>
-									</Fade>
-								</div>
-
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									{/* <Fade triggerOnce direction="up"> */}
-									<div className="GetStartedBox2 w-100">
-										<img
-											className="img-fluid"
-											alt="listImg"
-											src={listImg}
-										/>
-										<h3>
-											Fill out an application to become a listed charity.
-										</h3>
-									</div>
-									{/* </Fade> */}
-								</div>
-
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
-									<Fade triggerOnce direction="right">
-										<div className="GetStartedBox3 w-100">
-											<img className="img-fluid" alt="StepsWallet" src={StepsWallet} />
-											<h3>
-												Receive donations and make a difference!
-										</h3>
-										</div>
-									</Fade>
-								</div>
-							</div>
-							<div className="row">
-								<div className="offset-md-1 col-md-10">
-									<div className="MultistepsCont">
-										<p>Ready to grow your charity to the next level? Fill out our application to become a listed charity.</p>
-										<button onClick={appModalOpen} className="LinkBtn">
-											Apply <img className="ArrowBtn" alt="arrow" src={Arrow1} />
-										</button>
-									</div>
-								</div>
-							</div>
-							{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 						</div>
 					</div>
+					<div className="row justify-content-center">
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
+							<Fade triggerOnce direction="left">
+								<div className="GetStartedBox1 w-100">
+									<img className="img-fluid" alt="Fav" src={Fav} />
+									<h3>Sign up for Cashero.</h3>
+								</div>
+							</Fade>
+						</div>
+
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
+							{/* <Fade triggerOnce direction="up"> */}
+							<div className="GetStartedBox2 w-100">
+								<img
+									className="img-fluid"
+									alt="listImg"
+									src={listImg}
+								/>
+								<h3>
+									Fill out an application to become a listed charity.
+										</h3>
+							</div>
+							{/* </Fade> */}
+						</div>
+
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
+							<Fade triggerOnce direction="right">
+								<div className="GetStartedBox3 w-100">
+									<img className="img-fluid" alt="StepsWallet" src={StepsWallet} />
+									<h3>
+										Receive donations and make a difference!
+										</h3>
+								</div>
+							</Fade>
+						</div>
+					</div>
+					<div className="row">
+						<div className="offset-md-1 col-md-10">
+							<div className="MultistepsCont">
+								<p>Ready to grow your charity to the next level? Fill out our application to become a listed charity.</p>
+								<button onClick={appModalOpen} className="LinkBtn">
+									Apply <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+								</button>
+							</div>
+						</div>
+					</div>
+					{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 				</div>
 				{/* Money Request */}
 

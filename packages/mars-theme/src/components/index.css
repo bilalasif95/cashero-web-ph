@@ -5128,6 +5128,23 @@ button:focus {
   left: 0;
 }
 
+@media (max-width: 991px) {
+  .PersonalCompanyList2 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .PersonalCompanyList2 li:first-child,
+  .PersonalCompanyList2 li:nth-child(2),
+  .PersonalCompanyList2 li:nth-child(3),
+  .PersonalCompanyList2 li:nth-child(4) {
+    margin: 0 0 1rem;
+    width: 48%;
+  }
+  .PersonalCompanyList2 li:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
 .PersonalCont .numberSelection {
   display: flex;
   align-items: center;
@@ -5460,6 +5477,23 @@ button:focus {
   left: 0;
 }
 
+@media (max-width: 991px) {
+  .PersonalCompanyList3 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .PersonalCompanyList3 li:first-child,
+  .PersonalCompanyList3 li:nth-child(2),
+  .PersonalCompanyList3 li:nth-child(3),
+  .PersonalCompanyList3 li:nth-child(4) {
+    margin: 0 0 1rem;
+    width: 48% !important;
+  }
+  .PersonalCompanyList3 li:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 540px) {
   .PesonalBanner {
     padding: 45px 0px 45px 0px;
@@ -5765,6 +5799,24 @@ button:focus {
 .PersonalCompanyList li img {
   position: absolute;
   left: 0;
+}
+
+@media (max-width: 991px) {
+  .PersonalCompanyList {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .PersonalCompanyList li:first-child,
+  .PersonalCompanyList li:nth-child(2),
+  .PersonalCompanyList li:nth-child(3),
+  .PersonalCompanyList li:nth-child(4),
+  .PersonalCompanyList li:nth-child(5) {
+    margin: 0 0 1rem;
+    width: 48% !important;
+  }
+  .PersonalCompanyList li:not(:last-child) {
+    margin-right: 0;
+  }
 }
 
 .charityImg {
