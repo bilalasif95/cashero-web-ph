@@ -4,6 +4,7 @@ import Vector from "../../assets/vector.svg";
 import Done from "../../assets/done.svg";
 import { Fade } from "react-awesome-reveal";
 
+
 export function GetStarted() {
 	return (
 		<div className="getStarted">
@@ -15,6 +16,7 @@ export function GetStarted() {
 					</h3>
 
 				</div>
+
 
 			</div>
 			<div className="row justify-content-center">
@@ -53,6 +55,7 @@ export function GetStarted() {
 						</div>
 
 					</Fade>
+
 				</div>
 			</div>
 		</div>

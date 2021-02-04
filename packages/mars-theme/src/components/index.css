@@ -1698,6 +1698,11 @@ b {
     position: absolute;
     z-index: 2; }
 
+@media (max-width: 767px){
+  .map-pic {
+    height: 450px;
+  }
+}
 .oneApp, .CurrencyConversion, .MoneyRequest, .SavingAccount, .Charity {
   padding: 100px 0px; }
 
@@ -2570,7 +2575,7 @@ b {
     justify-content: center; }
     .flags .flags-containerBox .flagBar {
       justify-content: center;
-      height: 60px; }
+      height: unset; }
       .flags .flags-containerBox .flagBar img {
         margin: 0;
         width: 100%; }
@@ -15825,40 +15830,4 @@ select:-webkit-autofill:focus {
 .bannerEmail .form-control:focus{
   color: #9ea0a5;
   border-bottom: 1px solid #dadee7;
-}
-.texto {margin: 5px 30px;}
-
-.center {
-  width:100%;
-  max-width: 600px;
-  margin: auto;
-  background-color: grey;
-  padding: 100px 0;
-    border-radius: 15px;
-}
-
-.animateMe {
- width: 250px;
- position: relative;
- min-height: 250px;
- margin: 120px auto;
- display:block;
- background-color: darkgray;
-  border-radius: 15px;
-}
-
-.animateMe:nth-child(even) {
- background-color: lightgray;
-}
-
-
-
-/* Copy the CSS below to your project */
-
-.animateMe{
-  opacity: 0;
-}
- 
-.animateMe .animated{
-    opacity: 1;
 }
