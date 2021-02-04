@@ -11,8 +11,11 @@ export function GetStarted() {
 				<div className="col-md-12">
 					<h3 className="getStartedTitle">
 						Get started in minutes
+
 					</h3>
+
 				</div>
+
 			</div>
 			<div className="row justify-content-center">
 				<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
@@ -32,8 +35,11 @@ export function GetStarted() {
 						/>
 						<h3>
 							Sign up and verify your identity
+
 						</h3>
+
 					</div>
+
 				</div>
 				<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 					<Fade triggerOnce direction="right">
@@ -41,8 +47,11 @@ export function GetStarted() {
 							<img className="img-fluid" alt="Done" src={Done} />
 							<h3>
 								Add or receive funds and start benefiting
+
 							</h3>
+
 						</div>
+
 					</Fade>
 				</div>
 			</div>
