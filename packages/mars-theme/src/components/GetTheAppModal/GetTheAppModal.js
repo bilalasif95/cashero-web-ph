@@ -255,9 +255,11 @@ export default function GetTheAppModal(props) {
                                 <div className="GetAppEmail">
                                     <TextField
                                         placeholder="Enter Email Address"
+                                        autoComplete='off'
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
+                                        
                                     />
                                     <div className="GetEarlyBtn">
                                         <button disabled={loading || !email || !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(email)} onClick={onSubmit} className="btn btn-default">Get Early Access</button>

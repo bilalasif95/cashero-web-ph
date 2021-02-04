@@ -27,6 +27,10 @@ body{
     line-height: 1.4; }
     .PesonalBanner .MuiInputBase-input {
       color: #fff !important; }
+      .bannerEmail .form-control:focus, .GetAppEmail .form-control:focus {
+        color: #9ea0a5;
+        border-bottom: 1px solid #dadee7;
+    }
 @keyframes bannerText-up {
   from {
     padding-top: 100px;
@@ -281,6 +285,9 @@ h4 {
   text-transform: capitalize !important; }
   .Appbtn:hover {
     transition: 0.5s all ease; }
+    .Appbtn:focus{
+      box-shadow: inherit !important;
+    }
 
 .disabled {
   cursor: not-allowed; }
@@ -538,7 +545,7 @@ h4 {
     background-color: #ffffff;
     padding: 59px 0px 51px 50px;
     border: none;
-    margin-top: -30px; }
+    margin-top: -20px; }
   .customNav .ListTitle {
     position: relative;
     padding-left: 45px;
@@ -935,8 +942,8 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
   .BlogCont .BlogBox h1 {
     font-size: 25px; } }
 
-.sideBlogs div:last-child {
-  margin-bottom: 0px !important; }
+/* .sideBlogs div:last-child {
+  margin-bottom: 0px !important; } */
 
 @media (max-width: 768px) {
   .blogDetailImg {
@@ -8535,11 +8542,11 @@ button:focus {
       color: #212529;
       text-decoration: none;
       } */
-      .btn.focus,
+      /* .btn.focus,
       .btn:focus {
       outline: 0;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-      }
+      } */
       .btn.disabled,
       .btn:disabled {
       opacity: 0.65;
@@ -8558,10 +8565,10 @@ button:focus {
       background-color: #0069d9;
       border-color: #0062cc;
       }
-      .btn-primary.focus,
+      /* .btn-primary.focus,
       .btn-primary:focus {
       box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-      }
+      } */
       .btn-primary.disabled,
       .btn-primary:disabled {
       color: #fff;
@@ -15840,10 +15847,11 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 1px solid green;
-  -webkit-text-fill-color: green;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  /* border: 1px solid green; */
+  /* -webkit-text-fill-color: green; */
+  /* -webkit-box-shadow: 0 0 0px 1000px #fff0 inset; */
   transition: background-color 5000s ease-in-out 0s;
+  /* color: #fff; */
 }
 ::-webkit-input-placeholder { color: #666;} 
 
@@ -15851,3 +15859,39 @@ select:-webkit-autofill:focus {
   color: #9ea0a5;
   border-bottom: 1px solid #dadee7;
 }
+.BlogCont .BlogSideBox h1, .MoreBlogsCont h1 {
+    color: #363636;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .BlogSideBox h1, .MoreBlogsCont h1 {
+    color: #363636;
+    font-weight: 400;
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .BlogTabs .dropdown .btn {
+    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+    -webkit-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+    -moz-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+    border: none;
+  }
+  .btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show > .btn-secondary.dropdown-toggle:focus{
+    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+    -webkit-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+    -moz-box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+  }
+  .BlogTabs .dropdown-menu {
+    background: #FFFFFF;
+  }
+  .BlogTabs .dropdown-menu button{
+    padding: 10px 0px;
+  } 
+ .ContactUsBanner .MuiCircularProgress-root{
+    margin: 0px auto;
+    margin-bottom: 30px;
+    display: block;
+    }
