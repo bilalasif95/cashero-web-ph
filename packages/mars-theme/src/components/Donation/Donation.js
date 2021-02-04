@@ -300,54 +300,55 @@ export function Donation() {
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
 							</h3>
-							<div className="row">
-								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
-									<Fade triggerOnce direction="left">
-										<div className="GetStartedBox1 w-100">
-											<img className="img-fluid" alt="fav" src={Fav} />
-											<h3>Sign up for Cashero.</h3>
-										</div>
-									</Fade>
-								</div>
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									<div className="GetStartedBox2 w-100">
-										<img
-											className="img-fluid"
-											alt="DonateBox"
-											src={DonateBox}
-										/>
-										<h3>
-											Tap Giving and select a charity
-										</h3>
-									</div>
-								</div>
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
-									<Fade triggerOnce direction="right">
-										<div className="GetStartedBox3 w-100">
-											<img className="img-fluid" alt="" src={pricewallet} />
-											<h3>
-												Make donations and make a difference!
-										</h3>
-										</div>
-									</Fade>
-								</div>
-							</div>
-							<div className="row">
-								<div className="offset-md-1 col-md-10">
-									<div className="MultistepsCont">
-										<p>Ready to protect your currencies in one wallet? Maintain your wealth in Cashero’s multi-currency account.</p>
-										<button onClick={appModalOpen} className="LinkBtn">
-											Donate <img className="ArrowBtn" alt="arrow" src={Arrow1} />
-										</button>
-									</div>
-								</div>
-							</div>
-							{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 						</div>
 					</div>
+					<div className="row justify-content-center">
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
+							<Fade triggerOnce direction="left">
+								<div className="GetStartedBox1 w-100">
+									<img className="img-fluid" alt="fav" src={Fav} />
+									<h3>Sign up for Cashero.</h3>
+								</div>
+							</Fade>
+						</div>
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
+							<div className="GetStartedBox2 w-100">
+								<img
+									className="img-fluid"
+									alt="DonateBox"
+									src={DonateBox}
+								/>
+								<h3>
+									Tap Giving and select a charity
+								</h3>
+							</div>
+						</div>
+
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
+							<Fade triggerOnce direction="right">
+								<div className="GetStartedBox3 w-100">
+									<img className="img-fluid" alt="" src={pricewallet} />
+									<h3>
+										Make donations and make a difference!
+									</h3>
+								</div>
+							</Fade>
+						</div>
+					</div>
+					<div className="row">
+						<div className="offset-md-1 col-md-10">
+							<div className="MultistepsCont">
+								<p>Ready to protect your currencies in one wallet? Maintain your wealth in Cashero’s multi-currency account.</p>
+								<button onClick={appModalOpen} className="LinkBtn">
+									Donate <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+								</button>
+							</div>
+						</div>
+					</div>
+					{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 				</div>
 			</div>
-			< PeoplesSection />
+			<PeoplesSection />
 			<div className="container">
 				<Companies />
 				<QuestionTabs activeTab={6} />

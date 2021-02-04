@@ -436,6 +436,7 @@ const List = ({ state }) => {
                       <TextField
                         placeholder="Enter Email Address"
                         type="email"
+                        autoComplete='off'
                         value={email}
                         onChange={(e) =>
                           setEmail(e.target.value)

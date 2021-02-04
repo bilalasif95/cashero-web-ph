@@ -429,56 +429,56 @@ export function Personal() {
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
 							</h3>
-							<div className="row">
-								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
-									<Fade triggerOnce direction="left">
-										<div className="GetStartedBox1 w-100">
-											<img alt="" className="img-fluid" src={Fav} />
-											<h3>Sign up for Cashero.</h3>
-										</div>
-									</Fade>
+						</div>
+					</div>
+					<div className="row justify-content-center">
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
+							<Fade triggerOnce direction="left">
+								<div className="GetStartedBox1 w-100">
+									<img alt="" className="img-fluid" src={Fav} />
+									<h3>Sign up for Cashero.</h3>
 								</div>
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									<div className="GetStartedBox2 w-100">
-										<img
-											className="img-fluid"
-											src={WalletCoins}
-											alt=""
-										/>
-										<h3>
-											Add funds into your High {" "}
-											<span className="br-block"></span>{" "}
+							</Fade>
+						</div>
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
+							<div className="GetStartedBox2 w-100">
+								<img
+									className="img-fluid"
+									src={WalletCoins}
+									alt=""
+								/>
+								<h3>
+									Add funds into your High {" "}
+									<span className="br-block"></span>{" "}
 										Yield Savings Account.{" "}
-										</h3>
-									</div>
-								</div>
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
-									<Fade triggerOnce direction="right">
-										<div className="GetStartedBox3 w-100">
-											<img className="img-fluid" alt="" src={ArrowUp} />
-											<h3>
-												Earn up to 5% APY and redeem whenever you want.
-											</h3>
-										</div>
-									</Fade>
-								</div>
+								</h3>
 							</div>
-							<div className="row">
-								<div className="offset-md-1 col-md-10">
-									<div className="MultistepsCont">
-										<p>Ready to earn more? Growing your wealth is easy with Cashero's high-yield savings account.</p>
-										<button onClick={appModalOpen} className="LinkBtn" >
-											Start Earning   <img alt="" className="ArrowBtn" src={Arrow1} />
-										</button>
-									</div>
+						</div>
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
+							<Fade triggerOnce direction="right">
+								<div className="GetStartedBox3 w-100">
+									<img className="img-fluid" alt="" src={ArrowUp} />
+									<h3>
+										Earn up to 5% APY and redeem whenever you want.
+									</h3>
 								</div>
+							</Fade>
+						</div>
+					</div>
+					<div className="row">
+						<div className="offset-md-1 col-md-10">
+							<div className="MultistepsCont">
+								<p>Ready to earn more? Growing your wealth is easy with Cashero's high-yield savings account.</p>
+								<button onClick={appModalOpen} className="LinkBtn" >
+									Start Earning   <img alt="" className="ArrowBtn" src={Arrow1} />
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
-			< PeoplesSection />
+			<PeoplesSection />
 			<div className="container">
 				<Companies />
 				<QuestionTabs activeTab={1} />
