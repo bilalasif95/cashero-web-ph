@@ -233,26 +233,26 @@ export function PeoplesSection(props) {
 								<div className="people-map">
 									<div className="loads-container dN">
 										<div className="in-container">
-											<div className="loader loader1">
-												<span></span>
-												<span></span>
-											</div>
-											<div className="loader loader2">
-												<span></span>
-												<span></span>
-											</div>
-											<div className="loader loader3">
-												<span></span>
-												<span></span>
-											</div>
-											<div className="loader loader4">
-												<span></span>
-												<span></span>
-											</div>
-											<div className="loader loader5">
-												<span></span>
-												<span></span>
-											</div>
+										<div className={`${loadercondtion === 1 ? 'loader' : ""} loader1`} >
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div className={`${loadercondtion === 2 ? 'loader' : ""} loader2`}>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div className={`${loadercondtion === 3 ? 'loader' : ""} loader3`}>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div className={`${loadercondtion === 4 ? 'loader' : ""} loader4`}>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div className={`${loadercondtion === 5 ? 'loader' : ""} loader5`}>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
 										</div>
 									</div>
 									<img alt="" className="img-fluid dB" src={People} />
