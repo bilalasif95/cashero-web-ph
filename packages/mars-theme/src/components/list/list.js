@@ -19,7 +19,6 @@ import { callApi } from "../../config/call-api";
 import { EndPoints } from "../../config/config";
 
 const List = ({ state }) => {
-  // Get the data of the current list.
   // const data = state.source.get(state.router.link);
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
@@ -31,7 +30,6 @@ const List = ({ state }) => {
   const [loading, setLoading] = useState(false);
   const [openDiv, setOpenDiv] = useState(true);
   const [scrolled, setScrolled] = useState(false);
-
   const onToggleButtonClicked = () => {
     if (toggleBotton) {
       return setToggleBotton(false);
@@ -73,7 +71,6 @@ const List = ({ state }) => {
     setSuccessModal(false);
     setOpen(false);
   };
-
   const onSubmit = () => {
     setLoading(true);
     callApi(EndPoints.preregistration, "post", "", {
@@ -84,7 +81,6 @@ const List = ({ state }) => {
       setEmail("");
     });
   };
-
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 0) {
@@ -93,11 +89,9 @@ const List = ({ state }) => {
       setScrolled(false);
     }
   };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
   }, []);
-
   return (
     <>
       <div className={`${scrolled ? "active header" : "header"}`} id="header">
@@ -130,7 +124,6 @@ const List = ({ state }) => {
                   </>
                 )}
             </button>
-
             <div
               className={toggleBotton ? "collapse navbar-collapse toggleButtonShow" : "collapse navbar-collapse"}
               id="navbarSupportedContent"
@@ -228,7 +221,6 @@ const List = ({ state }) => {
                   >
                     Business
 									</a>
-
                   <div
                     className={businessToggleBotton ? "dropdown-menu toggleButtonShow BusinessDropdown" : "dropdown-menu BusinessDropdown"}
                     aria-labelledby="navbarDropdown"
@@ -288,7 +280,6 @@ const List = ({ state }) => {
                     </div>
                   </div>
                 </li>
-
                 <li className="nav-item dropdown" onClick={onDonationsToggleButtonClicked}>
                   <a
                     className="nav-link dropdown-toggle"
@@ -374,7 +365,6 @@ const List = ({ state }) => {
             >
               <CloseIcon />
             </IconButton>
-
             <div className="Waitlist">
               <div className="container">
                 <div className="row waitlistRow">
@@ -409,8 +399,6 @@ const List = ({ state }) => {
           </Paper>
         </Modal>
       )}
-      {/* MOdal */}
-
       {open &&
         <div className="GetAppModal">
           <Modal
@@ -494,7 +482,6 @@ const List = ({ state }) => {
       ) : (
           ""
         )}
-      {/* <Footer props={props} /> */}
     </>
     // <Container>
     //   {/* If the list is a taxonomy, we render a title. */}
@@ -525,12 +512,12 @@ const List = ({ state }) => {
 
 export default connect(List);
 
-const Container = styled.section`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
-  list-style: none;
-`;
+// const Container = styled.section`
+//   width: 800px;
+//   margin: 0;
+//   padding: 24px;
+//   list-style: none;
+// `;
 
 const Paper = styled.div`
   background-color: #fff;
@@ -549,14 +536,14 @@ const Paper = styled.div`
   }
 `;
 
-const Content = styled.div`
-  background-color: #fff;
-  width: 100%;
-  height: 100vh;
-`;
+// const Content = styled.div`
+//   background-color: #fff;
+//   width: 100%;
+//   height: 100vh;
+// `;
 
-const Header = styled.h3`
-  font-weight: 300;
-  text-transform: capitalize;
-  color: rgba(12, 17, 43, 0.9);
-`;
+// const Header = styled.h3`
+//   font-weight: 300;
+//   text-transform: capitalize;
+//   color: rgba(12, 17, 43, 0.9);
+// `;

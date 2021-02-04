@@ -122,8 +122,8 @@ const marsTheme = {
       menu: [],
       isMobileMenuOpen: false,
       featured: {
-        showOnList: false,
-        showOnPost: false,
+        showOnList: true,
+        showOnPost: true,
       },
     },
   },

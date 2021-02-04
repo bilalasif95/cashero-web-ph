@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { styled } from "frontity";
-// import TextField from "@material-ui/core/TextField";
-// import CountrySelect from "../../components/CountrySelect/CountrySelect";
 import { TextfieldBanner } from "../../components/TextfieldBanner/TextfieldBanner";
-import Clock from "../../assets/clockImg.svg"
-// import Arrow from "../../assets/arrow.svg"
-import Instant from "./../../assets/instant.svg"
-// import listGraph from "../../assets/listGraph.svg"
+import Clock from "../../assets/clockImg.svg";
+import Instant from "./../../assets/instant.svg";
 import walletDown from "./../../assets/walletDown.svg";
 import listPhone from "./../../assets/ListPhone.svg";
 import Draw from "./../../assets/draw.svg";
@@ -28,47 +24,27 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
 
-// import {
-// 	Dropdown,
-// 	DropdownToggle,
-// 	DropdownMenu,
-// 	DropdownItem,
-// } from "reactstrap";
-
-
-// import { Input } from '@material-ui/core';
-// import envelope from "../../assets/envelope.jpg";
-// import { RootState } from "../reducers";
-
 export function ReceivePayments() {
+	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
-	}
-
+	};
 	const appModalClose = () => {
 		setAppModal(false)
-
-	}
-
-	const [appModal, setAppModal] = useState(false)
-
-	// const classes = useStyles();
-	// const [searchTerm, setSearchTerm] = React.useState<any>("");
-	// const [searchResults, setSearchResults] = React.useState<any>(counrtrylist);
-	// const [searchResults2, setSearchResults2] = React.useState<any>([]);
-	// const [code, setCode] = React.useState("+1");
+	};
+	// const [searchTerm, setSearchTerm] = useState<any>("");
+	// const [searchResults, setSearchResults] = useState<any>(counrtrylist);
+	// const [searchResults2, setSearchResults2] = useState<any>([]);
+	// const [code, setCode] = useState("+1");
 	// const [dropdownOpen, setDropdownOpen] = useState(false);
-	// const [phonenoLength, setPhoneNoLength] = React.useState(10);
+	// const [phonenoLength, setPhoneNoLength] = useState(10);
 	// const toggle = () => {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
-
-	const [openSuccessModal, setSuccessModal] = React.useState(false);
-	// const [Error, setError] = React.useState<string>("");
+	const [openSuccessModal, setSuccessModal] = useState(false);
+	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
-	// const [open, setOpen] = React.useState(false);
-
 	// const handleChange = (e) => {
 	// 	setSearchTerm(e.target.value);
 	// 	const results = searchResults.filter(
@@ -78,7 +54,6 @@ export function ReceivePayments() {
 	// 				.includes(searchTerm.toLocaleLowerCase()) ||
 	// 			country.dial_code.includes(searchTerm.toLocaleLowerCase())
 	// 	);
-
 	// 	setSearchResults2(results);
 	// };
 	// const selectCountry = (country) => {
@@ -87,7 +62,6 @@ export function ReceivePayments() {
 	// 	setSearchTerm("");
 	// 	setSearchResults2(counrtrylist);
 	// };
-
 	// const getStarted = () => {
 	// 	let finalPhoneNumb = code + newPhone;
 	// 	callApi(EndPoints.preregistration, "post", "", {
@@ -103,36 +77,19 @@ export function ReceivePayments() {
 	// 				setSuccessModal(true);
 	// 			}
 	// 		})
-	// 		.catch((error) => {
+	// 		.catch(() => {
 	// 			// setError("Invalid phone number.");
 	// 		});
 	// };
-
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
-
-	// const [mobileNum, setMobileNumber] = React.useState<string>("");
-
-	// const handleOpen = () => {
-	// 	setOpen(true);
-	// };
-
-
-	// const handleClose = () => {
-	// 	setOpen(false);
-	// };
-
-
 	const closeBothModal = () => {
 		// setCode("+1")
 		// setNewPhoneNumber("");
 		setSuccessModal(false)
 		setAppModal(false)
-		// setOpen(false)
-	}
-
-
+	};
 	return (
 		<>
 			{
@@ -143,10 +100,6 @@ export function ReceivePayments() {
 					open={openSuccessModal}
 					onClose={() => setSuccessModal(false)}
 					closeAfterTransition
-				// BackdropComponent={Backdrop}
-				// BackdropProps={{
-				// 	timeout: 500,
-				// }}
 				>
 					<Paper>
 						<IconButton
@@ -156,7 +109,6 @@ export function ReceivePayments() {
 						>
 							<CloseIcon />
 						</IconButton>
-
 						<div className="Waitlist">
 							<div className="container">
 								<div className="row waitlistRow">
@@ -190,20 +142,15 @@ export function ReceivePayments() {
 						</div>
 					</Paper>
 				</Modal>
-
 			}
-			{/* MOdal */}
-
 			<div className="PesonalBanner">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-6">
 							<div className="PersonalCont">
-								{/* <h1>Send, Request And Receive Payments In An Instant</h1> */}
 								<h1>Instant Money Transfer - Send, Request And Receive Payments In A Flash</h1>
 								<p className="bannerPara">Pay and get paid, we make it way less awkward</p>
 								<TextfieldBanner />
-								{/* Phone-Number */}
 								{/* <div className="numberSelection">
 									<div className="selectCountry">
 										<Dropdown
@@ -307,7 +254,6 @@ export function ReceivePayments() {
 											onChange={(e) => handleOnChange(e)}
 										/>
 									</div>
-
 									<button
 										onClick={() => getStarted()}
 										className={
@@ -318,13 +264,11 @@ export function ReceivePayments() {
 										type="submit"
 									>
 										Get Started
-								</button>
+									</button>
 								</div> */}
-
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
 								</ul>
-
 							</div>
 						</div>
 						<div className="col-md-6">
@@ -333,7 +277,6 @@ export function ReceivePayments() {
 					</div>
 				</div>
 			</div>
-
 			<div className="container">
 				<div className="row">
 					<div className="col-md -12">
@@ -345,23 +288,16 @@ export function ReceivePayments() {
 							<li><img alt="listHome" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
-
 				</div>
-
 			</div>
-
-
 			<div className="container">
 				<LocalPayments />
-				{/* <MultiCurrency /> */}
-
-				{/* Money Request */}
 				<div className="getStarted">
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
-						</h3>
+							</h3>
 							<div className="row">
 								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
 									<Fade triggerOnce direction="left">
@@ -371,9 +307,7 @@ export function ReceivePayments() {
 										</div>
 									</Fade>
 								</div>
-
 								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									{/* <Fade triggerOnce direction="up"> */}
 									<div className="GetStartedBox2 w-100">
 										<img
 											className="img-fluid"
@@ -382,18 +316,16 @@ export function ReceivePayments() {
 										/>
 										<h3>
 											Add funds to your account.
-									</h3>
+										</h3>
 									</div>
-									{/* </Fade> */}
 								</div>
-
 								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
 									<Fade triggerOnce direction="right">
 										<div className="GetStartedBox3 w-100">
 											<img className="img-fluid" alt="Path" src={Path} />
 											<h3>
 												Send, request and receive payments in an instant.
-										</h3>
+											</h3>
 										</div>
 									</Fade>
 								</div>
@@ -409,27 +341,19 @@ export function ReceivePayments() {
 								</div>
 							</div>
 							{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
-
 						</div>
 					</div>
 				</div>
-				{/* Money Request */}
-
 			</div>
 			< PeoplesSection />
 			<div className="container">
 				<Companies />
 				<QuestionTabs activeTab={4} />
 			</div>
-
 			<SignupSection />
-
-
 		</>
-
 	);
 }
-
 
 const Paper = styled.div`
   background-color: #fff;
@@ -447,93 +371,3 @@ const Paper = styled.div`
     },
   }
 `;
-
-
-// const useStyles = makeStyles((theme: Theme) => ({
-// 	root: {
-// 		width: "100%",
-// 		height: "100%",
-// 		zIndex: 1,
-// 		overflow: "hidden",
-// 	},
-
-// 	appFrame: {
-// 		position: "relative",
-// 		display: "flex",
-// 		width: "100%",
-// 		height: "100%",
-// 	},
-// 	modal: {
-// 		display: "flex",
-// 		alignItems: "center",
-// 		justifyContent: "center",
-// 	},
-// 	paper: {
-// 		backgroundColor: theme.palette.background.paper,
-// 		// border: "2px solid #000",
-// 		boxShadow: theme.shadows[5],
-// 		padding: theme.spacing(2, 4, 3),
-// 		width: "100% !important",
-// 		height: "100vh !important",
-// 	},
-// 	menuButton: {
-// 		marginRight: theme.spacing(2),
-// 	},
-// 	title: {
-// 		flexGrow: 1,
-// 	},
-// 	appBar: {
-// 		zIndex: theme.zIndex.drawer + 1,
-// 		position: "absolute",
-// 	},
-// 	navIconHide: {
-// 		[theme.breakpoints.up("md")]: {
-// 			display: "none",
-// 		},
-// 	},
-// 	drawerHeader: { ...theme.mixins.toolbar },
-// 	drawerPaper: {
-// 		width: 250,
-// 		backgroundColor: theme.palette.background.default,
-// 		[theme.breakpoints.up("md")]: {
-// 			width: drawerWidth,
-// 			position: "relative",
-// 			height: "100%",
-// 		},
-// 	},
-// 	closeButton: {
-// 		position: "absolute",
-// 		// right: theme.spacing.unit / 2,
-// 		// top: theme.spacing.unit / 2,
-// 		right: 0,
-// 		color: theme.palette.grey[500],
-// 	},
-// 	content: {
-// 		backgroundColor: theme.palette.background.default,
-// 		width: "100%",
-// 		height: "100vh",
-
-// 		// [theme.breakpoints.up("sm")]: {
-// 		// 	height: "calc(100% - 64px)",
-// 		// },
-// 	},
-// 	container: {
-// 		width: "100%",
-// 		maxWidth: "1140px",
-// 		margin: "0 auto",
-// 		background: "#fff",
-// 		position: "relative",
-// 		padding: "0px 10px",
-// 	},
-// 	CustomHeader: {
-// 		background: "#fff",
-// 		color: "#0667EB",
-// 		boxShadow: "inherit",
-// 	},
-// }));
-// const drawerWidth = 240;
-// interface CountryType {
-// 	code: string;
-// 	label: string;
-// 	phone: string;
-// }

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "frontity";
-// import Item from "../list/list-item";
-// import Pagination from "../list/pagination";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Paper from "@material-ui/core/Paper";
 import TabList from "@material-ui/lab/TabList";
@@ -30,8 +28,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 		setDropdownOpengbp((prevState) => !prevState);
 	};
 	const getPostsFromCategory = ({ post }, categoryId) => Object.keys(post).map(postId => post[postId])
-		.filter(({ categories }) => categories.includes(parseInt(categoryId)))
-
+		.filter(({ categories }) => categories.includes(parseInt(categoryId)));
 	const handleChange = (event, newValue, id) => {
 		setTabLoading(true);
 		if (newValue === "All") {
@@ -57,13 +54,11 @@ const BlogPage = ({ state, blogsCategories }) => {
 			})
 		}
 	};
-
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false)
 		}, 2000)
 	}, [])
-
 	return (
 		<div className="ContactUsBanner">
 			<div className="container">

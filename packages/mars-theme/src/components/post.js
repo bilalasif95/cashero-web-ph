@@ -144,34 +144,34 @@ const Post = ({ state, actions, libraries }) => {
 
 export default connect(Post);
 
-const Container = styled.div`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
-`;
+// const Container = styled.div`
+//   width: 800px;
+//   margin: 0;
+//   padding: 24px;
+// `;
 
-const Title = styled.h1`
-  margin: 0;
-  margin-top: 24px;
-  margin-bottom: 8px;
-  color: rgba(12, 17, 43);
-`;
+// const Title = styled.h1`
+//   margin: 0;
+//   margin-top: 24px;
+//   margin-bottom: 8px;
+//   color: rgba(12, 17, 43);
+// `;
 
-const StyledLink = styled(Link)`
-  padding: 15px 0;
-`;
+// const StyledLink = styled(Link)`
+//   padding: 15px 0;
+// `;
 
-const Author = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-  display: inline;
-`;
+// const Author = styled.p`
+//   color: rgba(12, 17, 43, 0.9);
+//   font-size: 0.9em;
+//   display: inline;
+// `;
 
-const DateWrapper = styled.p`
-  color: rgba(12, 17, 43, 0.9);
-  font-size: 0.9em;
-  display: inline;
-`;
+// const DateWrapper = styled.p`
+//   color: rgba(12, 17, 43, 0.9);
+//   font-size: 0.9em;
+//   display: inline;
+// `;
 
 /**
  * This component is the parent of the `content.rendered` HTML. We can use nested

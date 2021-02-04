@@ -1,29 +1,18 @@
-import { makeStyles } from "@material-ui/styles";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
-// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
 import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import ControlPointIcon from "@material-ui/icons/ControlPoint";
-// import {
-// 	// withRouter,
-// 	Redirect,
-// } from "react-router-dom";
-// import { useSelector } from "react-redux";
-// import firebase from "../../config/firebase";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Box from "@material-ui/core/Box";
 import Tab from "@material-ui/core/Tab";
-// import CircularProgress from "@material-ui/core/CircularProgress";
 import PropTypes from 'prop-types';
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
-
 	return (
 		<div
 			role="tabpanel"
@@ -55,507 +44,445 @@ function a11yProps(index) {
 }
 
 export function QuestionTabs(props) {
-	// const classes = useStyles();
-	// const passcode = localStorage.getItem("passcodeInput");
 	const [value, setValue] = useState(props.activeTab);
-	// const [loading, setLoading] = useState(false);
-	// const [amount, setAmount] = useState("");
-	// const [apy, setApy] = useState("");
+	const [path, setPath] = useState("");
 	const handleChange = (event, newValue) => {
 		event.preventDefault();
 		setValue(newValue);
 	};
 	const [expanded, setExpanded] = useState("panel1");
-
 	const accordionhandleChange = (panel) => (
 		event,
 		newExpanded
 	) => {
 		setExpanded(newExpanded ? panel : false);
 	};
-
-	// const auth = useSelector((state) => state.authList.auth);
-
-	// useEffect(() => {
-	// 	// firebase.firestore()
-	// 	// 	.collection("LiveEarnings")
-	// 	// 	.doc("usdc")
-	// 	// 	.get()
-	// 	// 	.then((doc) => {
-	// 	// 		setAmount(doc?.data()?.amount);
-	// 	// 		setApy(doc?.data()?.apy);
-	// 	// 	})
-	// 	// 	.catch((error) => { });
-	// 	firebase.auth().onAuthStateChanged((user) => {
-	// 		if (user) {
-	// 			firebase.firestore()
-	// 				.collection("Users")
-	// 				.doc(user.uid)
-	// 				.get()
-	// 				.then((doc) => {
-	// 					if (doc.exists) {
-	// 						// localStorage.setItem(
-	// 						// 	"passcodeInput",
-	// 						// 	doc?.data()?.passCode
-	// 						// );
-	// 						// localStorage.setItem("passcode", "true");
-	// 						setLoading(false);
-	// 					} else {
-	// 						setLoading(false);
-	// 					}
-	// 				})
-	// 				.catch((error) => {
-	// 					setLoading(false);
-	// 				});
-	// 		} else {
-	// 			setLoading(false);
-	// 		}
-	// 	});
-	// });
-	// if (loading) {
-	// 	return (
-	// 		<div className={classes.pageContainer}>
-	// 			<div className={classes.centerContainer}>
-	// 				<CircularProgress />
-	// 			</div>
-	// 		</div>
-	// 	);
-	// }
-	// if (passcode && !auth) {
-	// 	return <Redirect to="/signin" />;
-	// }
-
-	// var userId = localStorage.getItem("user");
-
+	useEffect(() => {
+		setPath(window.location.pathname)
+	}, [])
 	return (
-		<>
-			{/* Questions */}
-			<div className="Questions">
-				<div className="row">
-					<div className="col-md-4">
-						{/* tabs */}
-
-						<h4 className="TabsTitle">
-							Frequently asked <span className="br-block"></span>{" "}
+		<div className="Questions">
+			<div className="row">
+				<div className="col-md-4">
+					<h4 className="TabsTitle">
+						Frequently asked <span className="br-block"></span>{" "}
 							questions
 						</h4>
-						<AppBar position="static" className="custom-Tabs">
-							<Tabs
-								value={value}
-								onChange={handleChange}
-								// indicatorColor="primary"
-								textColor="primary"
-								variant="scrollable"
-								scrollButtons="auto"
-								aria-label="scrollable auto tabs example"
-							// TabIndicatorProps={{ style: { background: "#f4a222" } }}
+					<AppBar position="static" className="custom-Tabs">
+						<Tabs
+							value={value}
+							onChange={handleChange}
+							textColor="primary"
+							variant="scrollable"
+							scrollButtons="auto"
+							aria-label="scrollable auto tabs example"
+						>
+							<Tab
+								className="customTabs"
+								label="General"
+								{...a11yProps(0)}
+							/>
+							<Tab
+								className="customTabs"
+								label="Savings"
+								{...a11yProps(1)}
+							/>
+							<Tab
+								className="customTabs"
+								label="Wallet"
+								{...a11yProps(2)}
+							/>
+							<Tab
+								className="customTabs"
+								label="Exchange"
+								{...a11yProps(3)}
+							/>
+							<Tab
+								className="customTabs"
+								label="Payments"
+								{...a11yProps(4)}
+							/>
+							<Tab
+								className="customTabs"
+								label="Remittance"
+								{...a11yProps(5)}
+							/>
+							<Tab
+								className="customTabs"
+								label="Charity"
+								{...a11yProps(6)}
+							/>
+						</Tabs>
+					</AppBar>
+				</div>
+				<div className="col-md-8">
+					<TabPanel value={value} index={0}>
+						<div className="CollapseToggle">
+							<Accordion
+								expanded={expanded === "panel1"}
+								onChange={accordionhandleChange("panel1")}
 							>
-								<Tab
-									className="customTabs"
-									label="General"
-									{...a11yProps(0)}
-								/>
-								<Tab
-									className="customTabs"
-									label="Savings"
-									{...a11yProps(1)}
-								/>
-								<Tab
-									className="customTabs"
-									label="Wallet"
-									{...a11yProps(2)}
-								/>
-								<Tab
-									className="customTabs"
-									label="Exchange"
-									{...a11yProps(3)}
-								/>
-								<Tab
-									className="customTabs"
-									label="Payments"
-									{...a11yProps(4)}
-								/>
-								<Tab
-									className="customTabs"
-									label="Remittance"
-									{...a11yProps(5)}
-								/>
-								<Tab
-									className="customTabs"
-									label="Charity"
-									{...a11yProps(6)}
-								/>
-							</Tabs>
-						</AppBar>
-					</div>
-					<div className="col-md-8">
-						<TabPanel value={value} index={0}>
-							<div className="CollapseToggle">
-								<Accordion
-									expanded={expanded === "panel1"}
-									onChange={accordionhandleChange("panel1")}
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel1" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel1a-content"
+									id="panel1a-header"
+									className="iconSet"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel1" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel1a-content"
-										id="panel1a-header"
-										className="iconSet"
-									>
-										<h4 className="heading">
-											What is Cashero?
+									<h4 className="heading">
+										What is Cashero?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero is a blockchain-based
-												wallet payment ecosystem.
-												Cashero provides a secure
-												platform for high-yield savings,
-												multi-currency wallets and
-												instant, fee-free internal and
-												cross border payments. Cashero
-												is available in 130 including
-												all of the G20 countries except
-												Russia.
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero is a blockchain-based
+											wallet payment ecosystem.
+											Cashero provides a secure
+											platform for high-yield savings,
+											multi-currency wallets and
+											instant, fee-free internal and
+											cross border payments. Cashero
+											is available in 130 including
+											all of the G20 countries except
+											Russia.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel2"}
-									onChange={accordionhandleChange("panel2")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel2"}
+								onChange={accordionhandleChange("panel2")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel2" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel2a-content"
+									id="panel2a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel2" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel2a-content"
-										id="panel2a-header"
-									>
-										<h4 className="heading">
-											What are Cashero’s main features?
+									<h4 className="heading">
+										What are Cashero’s main features?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												HIGH YIELD SAVINGS: Cashero
-												users receive inflation beating
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											HIGH YIELD SAVINGS: Cashero
+											users receive inflation beating
 												interest rates of 2%-5% APY.{" "}
-											</h4>
-											<h4 className="FaqText">
-												MULTI CURRENCY WALLETS: No
-												minimum balance or maintenance
-												fees. Cashero users can reduce
-												currency fluctuation risk by
-												holding balances in USD, GBP and
+										</h4>
+										<h4 className="FaqText">
+											MULTI CURRENCY WALLETS: No
+											minimum balance or maintenance
+											fees. Cashero users can reduce
+											currency fluctuation risk by
+											holding balances in USD, GBP and
 												EUR.{" "}
-											</h4>
-											<h4 className="FaqText">
-												CURRENCY CONVERSION: Users can
-												instantly exchange between USD,
+										</h4>
+										<h4 className="FaqText">
+											CURRENCY CONVERSION: Users can
+											instantly exchange between USD,
 												EUR and GBP.{" "}
-											</h4>
-											<h4 className="FaqText">
-												INSTANT PAYMENTS: Users can
-												send, request and instantly
-												receive money from users
+										</h4>
+										<h4 className="FaqText">
+											INSTANT PAYMENTS: Users can
+											send, request and instantly
+											receive money from users
 												worldwide.{" "}
-											</h4>
-											<h4 className="FaqText">
-												BUSINESS: Businesses can send,
-												request and receive money from
+										</h4>
+										<h4 className="FaqText">
+											BUSINESS: Businesses can send,
+											request and receive money from
 												customers worldwide.{" "}
-											</h4>
-											<h4 className="FaqText">
-												CHARITY: Charities can sign up
-												to Cashero to receive donations.
-												Charities can use their Cashero
-												link to request donations via
+										</h4>
+										<h4 className="FaqText">
+											CHARITY: Charities can sign up
+											to Cashero to receive donations.
+											Charities can use their Cashero
+											link to request donations via
 												Cashero.{" "}
-											</h4>
-											<h4 className="FaqText">
-												REWARDS: Users earn rewards for
-												referring people to Cashero.
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel3"}
-									onChange={accordionhandleChange("panel3")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel3" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel3a-content"
-										id="panel3a-header"
-									>
-										<h4 className="heading">
-											When will Cashero officially launch?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero will be released after
-												the application undergoes a
-												thorough security audit by Trail
+										<h4 className="FaqText">
+											REWARDS: Users earn rewards for
+											referring people to Cashero.
+											</h4>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel3"}
+								onChange={accordionhandleChange("panel3")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel3" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel3a-content"
+									id="panel3a-header"
+								>
+									<h4 className="heading">
+										When will Cashero officially launch?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero will be released after
+											the application undergoes a
+											thorough security audit by Trail
 												of Bits in February 2021.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel4"}
-									onChange={accordionhandleChange("panel4")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel4" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel4a-content"
-										id="panel4a-header"
-									>
-										<h4 className="heading">
-											How is Cashero regulated?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero has partnered with Wyre
-												and Circle, regulated money
-												services businesses with strict
-												KYC and AML procedures. Cashero
-												is in the process of becoming an
-												EU regulated financial
-												institution with a
-												cryptocurrency license.
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel5"}
-									onChange={accordionhandleChange("panel5")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel4"}
+								onChange={accordionhandleChange("panel4")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel4" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel4a-content"
+									id="panel4a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel5" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel5a-content"
-										id="panel5a-header"
-									>
-										<h4 className="heading">
-											Where can I learn more?
+									<h4 className="heading">
+										How is Cashero regulated?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												To learn more about Cashero
-												contact info@cashero.com.
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero has partnered with Wyre
+											and Circle, regulated money
+											services businesses with strict
+											KYC and AML procedures. Cashero
+											is in the process of becoming an
+											EU regulated financial
+											institution with a
+											cryptocurrency license.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-							</div>
-						</TabPanel>
-						<TabPanel value={value} index={1}>
-							<div className="CollapseToggle">
-								<Accordion
-									expanded={expanded === "panel1"}
-									onChange={accordionhandleChange("panel1")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel5"}
+								onChange={accordionhandleChange("panel5")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel5" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel5a-content"
+									id="panel5a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel1" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel1a-content"
-										id="panel1a-header"
-										className="iconSet"
-									>
-										<h4 className="heading">
-											How do I open a high-interest
-											savings account?
+									<h4 className="heading">
+										Where can I learn more?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												To open a savings account with
-												Cashero, simply download the app
-												to your smartphone, add money to
-												your account and you will
-												automatically start receiving
-												inflation beating interest rates
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											To learn more about Cashero
+											contact info@cashero.com.
+											</h4>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+						</div>
+					</TabPanel>
+					<TabPanel value={value} index={1}>
+						<div className="CollapseToggle">
+							<Accordion
+								expanded={expanded === "panel1"}
+								onChange={accordionhandleChange("panel1")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel1" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel1a-content"
+									id="panel1a-header"
+									className="iconSet"
+								>
+									<h4 className="heading">
+										How do I open a high-interest
+										savings account?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											To open a savings account with
+											Cashero, simply download the app
+											to your smartphone, add money to
+											your account and you will
+											automatically start receiving
+											inflation beating interest rates
 												of 2%-5% APY.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel2"}
-									onChange={accordionhandleChange("panel2")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel2" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel2a-content"
-										id="panel2a-header"
-									>
-										<h4 className="heading">
-											How can I see how much interest I’ve
-											earned?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												On the main Wallet screen within
-												the Cashero app, click Chart
-												View and you will be able to see
-												how much you’ve invested and
-												your earnings over different
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel2"}
+								onChange={accordionhandleChange("panel2")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel2" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel2a-content"
+									id="panel2a-header"
+								>
+									<h4 className="heading">
+										How can I see how much interest I’ve
+										earned?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											On the main Wallet screen within
+											the Cashero app, click Chart
+											View and you will be able to see
+											how much you’ve invested and
+											your earnings over different
 												periods of time.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel3"}
-									onChange={accordionhandleChange("panel3")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel3" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel3a-content"
-										id="panel3a-header"
-									>
-										<h4 className="heading">
-											What is APY?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												APY stands for annual percentage
-												yield. It measures your interest
-												rate over a year, including the
-												effects of compounding. It
-												represents how much you will
-												earn from your investment in one
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel3"}
+								onChange={accordionhandleChange("panel3")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel3" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel3a-content"
+									id="panel3a-header"
+								>
+									<h4 className="heading">
+										What is APY?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											APY stands for annual percentage
+											yield. It measures your interest
+											rate over a year, including the
+											effects of compounding. It
+											represents how much you will
+											earn from your investment in one
 												year.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel4"}
-									onChange={accordionhandleChange("panel4")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel4" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel4a-content"
-										id="panel4a-header"
-									>
-										<h4 className="heading">
-											Are there fees associated with
-											Cashero’s savings account?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												The short answer is no. The long
-												answer is also no. Rest at ease
-												knowing your money can accrue
-												interest without fees eating
-												away at your earnings.
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel5"}
-									onChange={accordionhandleChange("panel5")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel4"}
+								onChange={accordionhandleChange("panel4")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel4" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel4a-content"
+									id="panel4a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel5" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel5a-content"
-										id="panel5a-header"
-									>
-										<h4 className="heading">
-											Is my money safe?
+									<h4 className="heading">
+										Are there fees associated with
+										Cashero’s savings account?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Yes. Your money is protected
-												using multi-party computation
-												(MPC) and hardware isolation
-												with Intel SGX enclaves. It
-												sounds complex and it is, on
-												purpose. These security layers
-												ensure your money is safe and
-												protected.
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											The short answer is no. The long
+											answer is also no. Rest at ease
+											knowing your money can accrue
+											interest without fees eating
+											away at your earnings.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								{/* {window.location.pathname === "/personal" && */}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel5"}
+								onChange={accordionhandleChange("panel5")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel5" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel5a-content"
+									id="panel5a-header"
+								>
+									<h4 className="heading">
+										Is my money safe?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Yes. Your money is protected
+											using multi-party computation
+											(MPC) and hardware isolation
+											with Intel SGX enclaves. It
+											sounds complex and it is, on
+											purpose. These security layers
+											ensure your money is safe and
+											protected.
+											</h4>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							{path === "/personal/" &&
 								<Accordion expanded={expanded === 'panel6'} onChange={accordionhandleChange('panel6')}>
 									<AccordionSummary
 										expandIcon={expanded === 'panel6' ? <RemoveCircleOutlineIcon /> : <ControlPointIcon />}
@@ -568,41 +495,24 @@ export function QuestionTabs(props) {
 										<Typography>
 											<div className="expandTypo">
 												<h2 className="blackhead">Our Guide to High Yield Savings Accounts</h2>
-
 												<p>The term “high interest” may intrigue a lot of people interested in being financially savvy. But is it that attractive of an option, and can it be possibly used to mislead consumers? Truth be told, it's quite challenging to keep your fact straight when shopping for the best rate.</p>
-
 												<p>For that reason, we've put together this guide to help you know what to expect from a high-interest savings account, whether it's a good fit for you, your funds, and your future.</p>
-
 												<h3 className="blackhead">What is a high-yield savings account?</h3>
-
 												<p>Also referred to as a “high-yield” savings account, a high-interest savings account is a savings account offering higher interest rates. These rates are better than the national average ones on offer and are usually tied with specific conditions, such as maintenance fees and minimum balance requirements. A key term here is “APY” (annual percentage yield). </p>
-
 												<p><b className="blackhead">APY & high-yield savings accounts – An example</b> In most cases, a high-yield savings account enables you to earn around 0.50% APY. In simple terms, APY is the number that tells you what your money could earn within a fiscal year. So the higher the APY, the more savings for you, because the faster your balance will grow without any extra efforts on your behalf. Therefore, a high-interest savings account offering 0.50% APY is way more rewarding than a traditional savings account. Just consider that the national savings average ranges in the 0.05% APY neighborhood to get a more accurate idea. </p>
-
 												<p>Let’s use an example to help you understand the magnitude of what is being discussed here. Assume that you have $10,000 in a high-interest savings account. With a 0.50% APY, you will earn slightly over $50 after 12 months. This may not sound like a major deal, but it is significantly better than the $5 you would gain with a 0.05% APY. </p>
-
 												<p><b>Important notes:</b></p>
-
 												<div className="inner-div">
 													<p>Some high yieldsavings accounts offer high interest rates only initially. After a certain time period, the proposed rate drops significantly. More than often, it can even result in a lower-than-average interest rate. </p>
-
 													<p>You may even find savings accounts that are not even termed “high interest”, which do give impressively competitive rates. </p>
 												</div>
-
 												<h2 className="blackhead">Why consider the highest APY savings account </h2>
-
 												<p>A high-yield savings account is good for money you wish to access regularly or fast, especially if you're setting up an online savings account. With online banking, you have 24/7 (and secure) access to your funds. Plus, you may be called to pay fewer fees than traditional banks if you choose a credit union, non-bank provider, or an online bank.</p>
-
 												<p>These financial institutions will probably also offer the best savings rates on the market compared to brick and mortar banks. This is because they do not need to pass the costs brick-and-mortar institutions have on to customers. Lacking these expenses, online banks pass those savings on to their customers in the form of higher interest. </p>
-
 												<p>Besides, many of them even feature mobile apps and websites that allow their customers to pay bills and deposit checks. </p>
-
 												<p>Last but not least, high APY savings accounts are a good place to put your money if you would rather avoid taking risks. See below for more information.</p>
-
 												<h3 className="blackhead">How safe are high-yield savings accounts?</h3>
-
 												<p>High-yield savings accounts are safe because FDIC (Federal Deposit Insurance Corporation)-member banks are insured by the FDIC up to a max sum allowed by law — $250,000 per depositor at the time of this article. As for credit union accounts, these are backed by the National Credit Union Administration. Also, many non-bank providers choose to join hands with banks for insurance. So what does this mean and how do you benefit from it? Let’s put it simply and say that the government ensures your funds are accessible and safe even if the financial institution fails. All these combined make high yield savings accounts appealing to individuals wishing to keep funds for things like:</p>
-
 												<div className="inner-div">
 													<ul>
 														<li>Short-term savings goals</li>
@@ -610,11 +520,8 @@ export function QuestionTabs(props) {
 														<li>Emergencies</li>
 													</ul>
 												</div>
-
 												<h2 className="blackhead">Best uses of a high-yield savings account </h2>
-
 												<p>One of the best ways to use a high-yield savings account is for big-ticket items, as they offer accelerated growth of your funds due to the high interest rate. That's why you may consider having one for:</p>
-
 												<div className="inner-div">
 													<p><b>Down payment on your 1st or 2nd home –</b> A Federal Housing Administration (FHA) loan requires a down payment of 3.5% or more. Traditional conforming loans, 5% or more. This climbs to 20% if you want to skip mortgage insurance. So on a $200,000 home, you will need to save $7,000, $10,000, and $40,000 respectively. Having a high-interest savings account paying 0.5% APY, you will need 6 months, 12 months, and 36 months respectively, to save the kind of money required for the down payment (with an initial deposit of $1,000 and around $750-$1100 each month). It might take a while, but it will get you faster to your goal than a typical savings account. </p>
 													<p><b>College savings –</b> If yo've not started your child’s college savings early, you can use a high-yield savings account for last-minute college savings. Although a college saving plan (i.e., a 529 plan) is an excellent option as the funds grow tax-free (even if you take the money out to pay for college), a high-interest savings account is definitely a solid alternative. Everybody knows that college tuitions can become overwhelming at some point. To successfully use a high-APY savings account for college tuition, you need to calculate the monthly sums required to hit your savings goal. You may use any of the online savings goal calculators (i.e., <a href="https://www.bankrate.com/calculators/savings/saving-goals-calculator.aspx" target="_blank" rel="noopener noreferrer">Bankrate’s tool</a>) to create your savings goals’ timeline.</p>
@@ -622,21 +529,16 @@ export function QuestionTabs(props) {
 													<p><b>Emergency funds –</b> These funds usually cover 3-6 months of living expenses if something goes south with, say, the air conditioning unit (i.e., it breaks down in the heart of summer) or you're unexpectedly laid off. </p>
 													<p><b>A wedding or other expenses with a short timeline – </b> According to the <a href="https://www.theknot.com/content/average-wedding-cost" target="_blank" rel="noopener noreferrer">2019 Real Wedding Study</a> published by The Knot, the average wedding cost (not including the honeymoon) is nearly $34,000. With a high-interest savings account offering, say, 0.5% APY, you can save that kind of money for the big day in a year or so. You can do the same for other expenses with a short timeline, such as to buy furniture, a vehicle, or even to have money aside for estimated taxes.</p>
 												</div>
-
 												<h2 className="blackhead">Things to consider when choosing a high-yield savings account</h2>
 												<p>First and foremost, it's paramount to weigh the APY against the set requirements to earn the interest. For example, one bank may offer a slightly higher APY than a second one. However, the second bank may give a higher minimum balance and deposit requirement. So it all depends on whether you can meet the requirements of the first or the second bank. That aside, other things to factor in before deciding to open a high-yield savings account are:</p>
-
 												<div className="inner-div">
 													<p><b>How often interest rates change –</b> Check how often the credit union or bank you want to do business with adjusts its interest rates. Unlike other financial products, the interest rate of savings accounts tends to be variable rather than locked in a yield for a period of time. A temporary promotional rate, for example, may increase your savings account rate. Economic factors may also cause credit unions and banks to lower their APY (i.e., the coronavirus-related emergency rate cuts from the Federal Reserve in 2019). Therefore, if you can find a savings account with a guaranteed rate for 6-12 months, you will ensure more peace of mind. </p>
 													<p><b>Opening deposit (aka minimum deposit) required – </b> That amount varies across banks, with some of them requiring an initial deposit of at least $10,000 to open an account while others require nothing. Most of them, however, will probably ask for a minimum deposit of $100 or less. Determining how much you can invest (realistically), always considering your budget, will help compare high-interest savings products and decide which one best suits your needs. </p>
 													<p><b>Minimum balance required –</b> Failing to meet the minimum balance requirements some high-interest savings accounts have can result in fees or failure to earn the high APY. This balance often ranges between $0-$10,000+. A monthly maintenance fee is just one of the charges you may need to pay if you do not maintain a minimum balance in your account.</p>
 													<p><b>Withdrawal options – </b> As a saver, you may be limited to six withdrawals per month from your savings account due to <a href="https://www.forbes.com/consent/?toURL=https://www.forbes.com/advisor/banking/regulation-d-has-changed-what-this-means-to-savers/"> Reg D or Regulation D. </a> The only exception is when you withdraw in-person at a bank or from an ATM. Nevertheless, the Federal Reserve Board has introduced an interim final lately that freed this withdrawal limit. So some banks have a higher monthly limit at this point, such as the American Express National Bank, which enables up to nine such transactions every month. </p>
-
 												</div>
-
 												<h2 className="blackhead">How to open a high-yield savings account?</h2>
 												<p>You may be able to open an account in person or online, depending on the type of financial institution. Most of the time, you will need to fill out an application and provide:</p>
-
 												<div className="inner-div">
 													<ul>
 														<li>One form of ID (i.e., passport or driver’s license)</li>
@@ -646,222 +548,214 @@ export function QuestionTabs(props) {
 												</div>
 												<p>In some cases, you may also have to deposit money into your new account on the same day you open it via wire transfer, check, or cash. </p>
 												<p><b>Important Notes:</b></p>
-
 												<div className="inner-div">
 													<ol>
 														<li>When shopping around, try to think beyond APY. It's suggested to look into the offered services and also compare fees and rates before you make up your mind. </li>
 														<li>Remember that high-interest accounts could decrease or increase. Nevertheless, they have been declining as a trend since around July 2019. What the future holds, however, is yet to be seen. </li>
 													</ol>
 												</div>
-
-
-
-
 											</div>
 										</Typography>
 									</AccordionDetails>
-								</Accordion>
-								{/* } */}
-							</div>
-						</TabPanel>
-						<TabPanel value={value} index={2}>
-							<div className="CollapseToggle">
-								<Accordion
-									expanded={expanded === "panel1"}
-									onChange={accordionhandleChange("panel1")}
+								</Accordion>}
+						</div>
+					</TabPanel>
+					<TabPanel value={value} index={2}>
+						<div className="CollapseToggle">
+							<Accordion
+								expanded={expanded === "panel1"}
+								onChange={accordionhandleChange("panel1")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel1" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel1a-content"
+									id="panel1a-header"
+									className="iconSet"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel1" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel1a-content"
-										id="panel1a-header"
-										className="iconSet"
-									>
-										<h4 className="heading">
-											How does the multi-currency account
-											work?
+									<h4 className="heading">
+										How does the multi-currency account
+										work?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												All Cashero accounts are built
-												with the option to hold money in
-												United States dollars (USD),
-												British pounds (GBP) or Euros
-												(EUR). All you have to do is
-												download the app to your
-												smartphone, choose which
-												currency you want to hold (USD,
-												GBP, or EUR) and add money in
-												your local currency. Your funds
-												will be automatically converted
-												into the currency of your
-												choice, and voilà, your
-												multi-currency account is
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											All Cashero accounts are built
+											with the option to hold money in
+											United States dollars (USD),
+											British pounds (GBP) or Euros
+											(EUR). All you have to do is
+											download the app to your
+											smartphone, choose which
+											currency you want to hold (USD,
+											GBP, or EUR) and add money in
+											your local currency. Your funds
+											will be automatically converted
+											into the currency of your
+											choice, and voilà, your
+											multi-currency account is
 												loaded.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel2"}
-									onChange={accordionhandleChange("panel2")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel2" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel2a-content"
-										id="panel2a-header"
-									>
-										<h4 className="heading">
-											Can I open a multi-currency account
-											in my country?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero is available in all
-												countries except: Afghanistan,
-												Angola,Belarus, Bosnia &
-												Herzegovina, Central African
-												Republic, Congo (DRC), Cote
-												d’Ivoire (Ivory Coast), Cuba,
-												Ecuador, Eritrea, Ethiopia,
-												Guinea-Bissau, Guyana, Haiti,
-												Iran, Iraq, Kosovo, Laos,
-												Lebanon, Liberia, Libya,
-												Macedonia, Myanmar, Nigeria,
-												North-Korea, Papua NG, Russia,
-												Serbia, Somalia, Sudan, Syria,
-												Turkmenistan, Ukraine,
-												Uzbekistan, Vanuatu, Venezuela,
-												Yemen, Zimbabwe and Connecticut,
-												Hawaii, New York, New Hampshire,
-												Texas, Vermont, Virginia in the
-												United States.
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel3"}
-									onChange={accordionhandleChange("panel3")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel2"}
+								onChange={accordionhandleChange("panel2")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel2" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel2a-content"
+									id="panel2a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel3" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel3a-content"
-										id="panel3a-header"
-									>
-										<h4 className="heading">
-											How much does it cost to get a
-											Cashero multi-currency account?
+									<h4 className="heading">
+										Can I open a multi-currency account
+										in my country?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Nothing, it’s free! No minimum
-												balance is needed and there are
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero is available in all
+											countries except: Afghanistan,
+											Angola,Belarus, Bosnia &
+											Herzegovina, Central African
+											Republic, Congo (DRC), Cote
+											d’Ivoire (Ivory Coast), Cuba,
+											Ecuador, Eritrea, Ethiopia,
+											Guinea-Bissau, Guyana, Haiti,
+											Iran, Iraq, Kosovo, Laos,
+											Lebanon, Liberia, Libya,
+											Macedonia, Myanmar, Nigeria,
+											North-Korea, Papua NG, Russia,
+											Serbia, Somalia, Sudan, Syria,
+											Turkmenistan, Ukraine,
+											Uzbekistan, Vanuatu, Venezuela,
+											Yemen, Zimbabwe and Connecticut,
+											Hawaii, New York, New Hampshire,
+											Texas, Vermont, Virginia in the
+											United States.
+											</h4>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel3"}
+								onChange={accordionhandleChange("panel3")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel3" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel3a-content"
+									id="panel3a-header"
+								>
+									<h4 className="heading">
+										How much does it cost to get a
+										Cashero multi-currency account?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Nothing, it’s free! No minimum
+											balance is needed and there are
 												no maintenance fees.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel4"}
-									onChange={accordionhandleChange("panel4")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel4" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel4a-content"
-										id="panel4a-header"
-									>
-										<h4 className="heading">
-											How can I protect my money against
-											currency fluctuations?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero takes pride in giving
-												its users the ability to protect
-												their money from currency
-												volatility. You can load your
-												Cashero account with your local
-												currency and convert it to
-												either USD, GBP or EUR. Doing
-												this can give you the
-												opportunity to potentially
-												decrease the risk of your money
-												losing purchasing power as it is
-												being secured a more stable
-												currency.
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel5"}
-									onChange={accordionhandleChange("panel5")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel4"}
+								onChange={accordionhandleChange("panel4")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel4" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel4a-content"
+									id="panel4a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel5" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel5a-content"
-										id="panel5a-header"
-									>
-										<h4 className="heading">
-											Is my money safe?
+									<h4 className="heading">
+										How can I protect my money against
+										currency fluctuations?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Yes. Your money is protected
-												using multi-party computation
-												(MPC) and hardware isolation
-												with Intel SGX enclaves. It
-												sounds complex and it is, on
-												purpose. These security layers
-												ensure your money is safe and
-												protected.
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero takes pride in giving
+											its users the ability to protect
+											their money from currency
+											volatility. You can load your
+											Cashero account with your local
+											currency and convert it to
+											either USD, GBP or EUR. Doing
+											this can give you the
+											opportunity to potentially
+											decrease the risk of your money
+											losing purchasing power as it is
+											being secured a more stable
+											currency.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								{/* {window.location.pathname === "/currency-accounts" && */}
-
-
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel5"}
+								onChange={accordionhandleChange("panel5")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel5" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel5a-content"
+									id="panel5a-header"
+								>
+									<h4 className="heading">
+										Is my money safe?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Yes. Your money is protected
+											using multi-party computation
+											(MPC) and hardware isolation
+											with Intel SGX enclaves. It
+											sounds complex and it is, on
+											purpose. These security layers
+											ensure your money is safe and
+											protected.
+											</h4>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							{path === "/currency-accounts/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -1344,188 +1238,183 @@ export function QuestionTabs(props) {
 												mind!{" "}
 												</p>
 											</div>
-
-											{/* <Typography>
-											<h4 className="FaqText">Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.</h4>
-										</Typography> */}
 										</div>
 									</AccordionDetails>
-								</Accordion>
-								{/* } */}
-							</div>
-						</TabPanel>
-						<TabPanel value={value} index={3}>
-							<div className="CollapseToggle">
-								<Accordion
-									expanded={expanded === "panel1"}
-									onChange={accordionhandleChange("panel1")}
+								</Accordion>}
+						</div>
+					</TabPanel>
+					<TabPanel value={value} index={3}>
+						<div className="CollapseToggle">
+							<Accordion
+								expanded={expanded === "panel1"}
+								onChange={accordionhandleChange("panel1")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel1" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel1a-content"
+									id="panel1a-header"
+									className="iconSet"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel1" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel1a-content"
-										id="panel1a-header"
-										className="iconSet"
-									>
-										<h4 className="heading">
-											How can I exchange funds from one
-											currency to another?
+									<h4 className="heading">
+										How can I exchange funds from one
+										currency to another?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												On the Wallet screen of your
-												Cashero app, hit the exchange
-												button. The Exchange screen will
-												show you the live exchange rate
-												at that moment. Select the
-												currency and the amount you wish
-												to exchange and hit the Exchange
-												button. Your funds will be
-												converted instantly and you can
-												confirm your transaction by
-												verifying with your new balance
-												on the Wallet screen.
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											On the Wallet screen of your
+											Cashero app, hit the exchange
+											button. The Exchange screen will
+											show you the live exchange rate
+											at that moment. Select the
+											currency and the amount you wish
+											to exchange and hit the Exchange
+											button. Your funds will be
+											converted instantly and you can
+											confirm your transaction by
+											verifying with your new balance
+											on the Wallet screen.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel2"}
-									onChange={accordionhandleChange("panel2")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel2"}
+								onChange={accordionhandleChange("panel2")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel2" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel2a-content"
+									id="panel2a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel2" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel2a-content"
-										id="panel2a-header"
-									>
-										<h4 className="heading">
-											What currencies can I exchange?
+									<h4 className="heading">
+										What currencies can I exchange?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero allows you to instantly
-												convert between United States
-												dollars (USD), British pounds
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero allows you to instantly
+											convert between United States
+											dollars (USD), British pounds
 												(GBP) or Euros (EUR).{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel3"}
-									onChange={accordionhandleChange("panel3")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel3" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel3a-content"
-										id="panel3a-header"
-									>
-										<h4 className="heading">
-											How much does it cost to convert
-											between currencies?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero doesn’t charge a fee to
-												convert money between currencies
-												in your account and you can do
-												so in seconds. Cashero also
-												doesn’t include a spread in the
-												exchange rate provided to you.
-												You will always get the
-												mid-market rate, nothing hidden
-												on top. If this changes, you’ll
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel3"}
+								onChange={accordionhandleChange("panel3")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel3" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel3a-content"
+									id="panel3a-header"
+								>
+									<h4 className="heading">
+										How much does it cost to convert
+										between currencies?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero doesn’t charge a fee to
+											convert money between currencies
+											in your account and you can do
+											so in seconds. Cashero also
+											doesn’t include a spread in the
+											exchange rate provided to you.
+											You will always get the
+											mid-market rate, nothing hidden
+											on top. If this changes, you’ll
 												be the first to know.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel4"}
-									onChange={accordionhandleChange("panel4")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel4" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel4a-content"
-										id="panel4a-header"
-									>
-										<h4 className="heading">
-											How does Cashero compare to
-											converting currency with the bank?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Unlike most banks, Cashero uses
-												the real exchange rate to
-												convert money from one currency
-												to another. Cashero has no
-												hidden fees and the whole
-												transaction is transparent.
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel5"}
-									onChange={accordionhandleChange("panel5")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel4"}
+								onChange={accordionhandleChange("panel4")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel4" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel4a-content"
+									id="panel4a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel5" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel5a-content"
-										id="panel5a-header"
-									>
-										<h4 className="heading">
-											How long does it take to convert
-											currencies?
+									<h4 className="heading">
+										How does Cashero compare to
+										converting currency with the bank?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Exchanging currencies with
-												Cashero is instant.
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Unlike most banks, Cashero uses
+											the real exchange rate to
+											convert money from one currency
+											to another. Cashero has no
+											hidden fees and the whole
+											transaction is transparent.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								{/* {window.location.pathname === "/exchange-rates" && */}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel5"}
+								onChange={accordionhandleChange("panel5")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel5" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel5a-content"
+									id="panel5a-header"
+								>
+									<h4 className="heading">
+										How long does it take to convert
+										currencies?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Exchanging currencies with
+											Cashero is instant.
+											</h4>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							{path === "/exchange-rates/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -1929,190 +1818,183 @@ export function QuestionTabs(props) {
 												</ul>
 											</div>
 											<p>Using Cashero allows you to transfer money online, hold different currencies in one place, and save on currency exchange fees. Indeed, we give you the exact same currency exchange rate you see on Google while enabling nearly instant currency conversions with a small fee. No small letters. No hidden charges. </p>
-											{/* <Typography>
-											<h4 className="FaqText">
-												Exchanging currencies with
-												Cashero is instant.
-											</h4>
-										</Typography> */}
 										</div>
 									</AccordionDetails>
-								</Accordion>
-								{/* } */}
-							</div>
-						</TabPanel>
-						<TabPanel value={value} index={4}>
-							<div className="CollapseToggle">
-								<Accordion
-									expanded={expanded === "panel1"}
-									onChange={accordionhandleChange("panel1")}
+								</Accordion>}
+						</div>
+					</TabPanel>
+					<TabPanel value={value} index={4}>
+						<div className="CollapseToggle">
+							<Accordion
+								expanded={expanded === "panel1"}
+								onChange={accordionhandleChange("panel1")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel1" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel1a-content"
+									id="panel1a-header"
+									className="iconSet"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel1" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel1a-content"
-										id="panel1a-header"
-										className="iconSet"
-									>
-										<h4 className="heading">
-											What kind of payments can I make
-											with Cashero?
+									<h4 className="heading">
+										What kind of payments can I make
+										with Cashero?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero allows you to send,
-												request and receive payments. Go
-												to the Payments tab, and select
-												the contact you would like to
-												transfer money to and add the
-												amount you would like to send.
-												You can search for contacts and
-												even businesses and either send
-												or request money. If your
-												contact or business is not a
-												registered user or business you
-												can invite them to use Cashero
-												(and earn rewards!).
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero allows you to send,
+											request and receive payments. Go
+											to the Payments tab, and select
+											the contact you would like to
+											transfer money to and add the
+											amount you would like to send.
+											You can search for contacts and
+											even businesses and either send
+											or request money. If your
+											contact or business is not a
+											registered user or business you
+											can invite them to use Cashero
+											(and earn rewards!).
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel2"}
-									onChange={accordionhandleChange("panel2")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel2"}
+								onChange={accordionhandleChange("panel2")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel2" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel2a-content"
+									id="panel2a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel2" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel2a-content"
-										id="panel2a-header"
-									>
-										<h4 className="heading">
-											What are the fees to make payments?
+									<h4 className="heading">
+										What are the fees to make payments?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												For users with personal
-												accounts, users can send,
-												request and instantly receive
-												money from users worldwide.
-												Businesses can send, request and
-												receive money to customers
-												worldwide for a nominal fee of
-												1% after their first $50,000
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											For users with personal
+											accounts, users can send,
+											request and instantly receive
+											money from users worldwide.
+											Businesses can send, request and
+											receive money to customers
+											worldwide for a nominal fee of
+											1% after their first $50,000
 												USD.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel3"}
-									onChange={accordionhandleChange("panel3")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel3" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel3a-content"
-										id="panel3a-header"
-									>
-										<h4 className="heading">
-											How long do payments take to send
-											and receive?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Payments between registered
-												users and businesses are sent
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel3"}
+								onChange={accordionhandleChange("panel3")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel3" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel3a-content"
+									id="panel3a-header"
+								>
+									<h4 className="heading">
+										How long do payments take to send
+										and receive?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Payments between registered
+											users and businesses are sent
 												and received instantly.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel4"}
-									onChange={accordionhandleChange("panel4")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel4" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel4a-content"
-										id="panel4a-header"
-									>
-										<h4 className="heading">
-											Can I send, request and receive
-											payments in different currencies?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Yes! You can choose between USD,
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel4"}
+								onChange={accordionhandleChange("panel4")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel4" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel4a-content"
+									id="panel4a-header"
+								>
+									<h4 className="heading">
+										Can I send, request and receive
+										payments in different currencies?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Yes! You can choose between USD,
 												GBP or EUR.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel5"}
-									onChange={accordionhandleChange("panel5")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel5" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel5a-content"
-										id="panel5a-header"
-									>
-										<h4 className="heading">
-											Is my money safe?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Yes. Your money is protected
-												using multi-party computation
-												(MPC) and hardware isolation
-												with Intel SGX enclaves. It
-												sounds complex and it is, on
-												purpose. These security layers
-												ensure your money is safe and
-												protected.
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel5"}
+								onChange={accordionhandleChange("panel5")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel5" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel5a-content"
+									id="panel5a-header"
+								>
+									<h4 className="heading">
+										Is my money safe?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Yes. Your money is protected
+											using multi-party computation
+											(MPC) and hardware isolation
+											with Intel SGX enclaves. It
+											sounds complex and it is, on
+											purpose. These security layers
+											ensure your money is safe and
+											protected.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								{/* {window.location.pathname === "/receive-payments" && */}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							{path === "/receive-payments/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -2183,196 +2065,195 @@ export function QuestionTabs(props) {
 											<p>Making instant money transfers does not need to be a tedious or drawn-out process. With Cashero, you can make fast, reliable, and secure fund transfers to most locations around the world. No small letters, no fine print, and no hidden fees.</p>
 										</div>
 									</AccordionDetails>
-								</Accordion>
-								{/* } */}
-							</div>
-						</TabPanel>
-						<TabPanel value={value} index={5}>
-							<div className="CollapseToggle">
-								<Accordion
-									expanded={expanded === "panel1"}
-									onChange={accordionhandleChange("panel1")}
+								</Accordion>}
+						</div>
+					</TabPanel>
+					<TabPanel value={value} index={5}>
+						<div className="CollapseToggle">
+							<Accordion
+								expanded={expanded === "panel1"}
+								onChange={accordionhandleChange("panel1")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel1" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel1a-content"
+									id="panel1a-header"
+									className="iconSet"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel1" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel1a-content"
-										id="panel1a-header"
-										className="iconSet"
-									>
-										<h4 className="heading">
-											What kind of transfers can I make
-											with Cashero?
+									<h4 className="heading">
+										What kind of transfers can I make
+										with Cashero?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero allows you to send money
-												across the globe. Go to the
-												Payments tab, and select the
-												contact you would like to
-												transfer money to and add the
-												amount you would like to send.
-												The user will receive your funds
-												and then can withdraw the money
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero allows you to send money
+											across the globe. Go to the
+											Payments tab, and select the
+											contact you would like to
+											transfer money to and add the
+											amount you would like to send.
+											The user will receive your funds
+											and then can withdraw the money
 												to their bank account.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel2"}
-									onChange={accordionhandleChange("panel2")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel2" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel2a-content"
-										id="panel2a-header"
-									>
-										<h4 className="heading">
-											What countries does Cashero support?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero is available in all
-												countries except: Afghanistan,
-												Angola,Belarus, Bosnia &
-												Herzegovina, Central African
-												Republic, Congo (DRC), Cote
-												d’Ivoire (Ivory Coast), Cuba,
-												Ecuador, Eritrea, Ethiopia,
-												Guinea-Bissau, Guyana, Haiti,
-												Iran, Iraq, Kosovo, Laos,
-												Lebanon, Liberia, Libya,
-												Macedonia, Myanmar, Nigeria,
-												North-Korea, Papua NG, Russia,
-												Serbia, Somalia, Sudan, Syria,
-												Turkmenistan, Ukraine,
-												Uzbekistan, Vanuatu, Venezuela,
-												Yemen, Zimbabwe and Connecticut,
-												Hawaii, New York, New Hampshire,
-												Texas, Vermont, Virginia in the
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel2"}
+								onChange={accordionhandleChange("panel2")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel2" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel2a-content"
+									id="panel2a-header"
+								>
+									<h4 className="heading">
+										What countries does Cashero support?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero is available in all
+											countries except: Afghanistan,
+											Angola,Belarus, Bosnia &
+											Herzegovina, Central African
+											Republic, Congo (DRC), Cote
+											d’Ivoire (Ivory Coast), Cuba,
+											Ecuador, Eritrea, Ethiopia,
+											Guinea-Bissau, Guyana, Haiti,
+											Iran, Iraq, Kosovo, Laos,
+											Lebanon, Liberia, Libya,
+											Macedonia, Myanmar, Nigeria,
+											North-Korea, Papua NG, Russia,
+											Serbia, Somalia, Sudan, Syria,
+											Turkmenistan, Ukraine,
+											Uzbekistan, Vanuatu, Venezuela,
+											Yemen, Zimbabwe and Connecticut,
+											Hawaii, New York, New Hampshire,
+											Texas, Vermont, Virginia in the
 												United States.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel3"}
-									onChange={accordionhandleChange("panel3")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel3" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel3a-content"
-										id="panel3a-header"
-									>
-										<h4 className="heading">
-											What are the fees to transfer money?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												There are no fees to send money
-												for personal accounts and you
-												can do so in seconds. Businesses
-												can send money to customers
-												worldwide for a nominal fee of
-												1% after their first $50,000
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel3"}
+								onChange={accordionhandleChange("panel3")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel3" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel3a-content"
+									id="panel3a-header"
+								>
+									<h4 className="heading">
+										What are the fees to transfer money?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											There are no fees to send money
+											for personal accounts and you
+											can do so in seconds. Businesses
+											can send money to customers
+											worldwide for a nominal fee of
+											1% after their first $50,000
 												USD.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel4"}
-									onChange={accordionhandleChange("panel4")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel4" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel4a-content"
-										id="panel4a-header"
-									>
-										<h4 className="heading">
-											How long does it take the transfer
-											money with Cashero?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Transferring money from your
-												Cashero account to another user
-												is done in an instant. When the
-												user withdraws these funds to
-												the bank account, this can take
-												anywhere from 1-3 days to
-												appear.
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel5"}
-									onChange={accordionhandleChange("panel5")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel4"}
+								onChange={accordionhandleChange("panel4")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel4" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel4a-content"
+									id="panel4a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel5" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel5a-content"
-										id="panel5a-header"
-									>
-										<h4 className="heading">
-											Is my money safe?
+									<h4 className="heading">
+										How long does it take the transfer
+										money with Cashero?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Yes. Your money is protected
-												using multi-party computation
-												(MPC) and hardware isolation
-												with Intel SGX enclaves. It
-												sounds complex and it is, on
-												purpose. These security layers
-												ensure your money is safe and
-												protected
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Transferring money from your
+											Cashero account to another user
+											is done in an instant. When the
+											user withdraws these funds to
+											the bank account, this can take
+											anywhere from 1-3 days to
+											appear.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								{/* {window.location.pathname === "/remittance" && */}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel5"}
+								onChange={accordionhandleChange("panel5")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel5" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel5a-content"
+									id="panel5a-header"
+								>
+									<h4 className="heading">
+										Is my money safe?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Yes. Your money is protected
+											using multi-party computation
+											(MPC) and hardware isolation
+											with Intel SGX enclaves. It
+											sounds complex and it is, on
+											purpose. These security layers
+											ensure your money is safe and
+											protected
+											</h4>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							{path === "/remittance/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -2422,7 +2303,6 @@ export function QuestionTabs(props) {
 													<p><b>Tracking – </b> Depending on the provider you choose, you might be provided with the ability to track your transfer. Using the confirmation number, the provider will give you, you could see where your funds are at any given moment until receipt. </p>
 													<p><b>Fraud prevention – </b> Fraud prevention tactics may be triggered by activities such as sending funds to a suspicious recipient, sending an unusually large number of transfers, and logging in from a different device than the one you created your account with. When that happens, you might be asked to verify your identity with the money transfer provider, provide a confirmation number sent to your phone or email, or answer security questions. </p>
 												</div>
-
 												<h2 className="blackhead">Transfer money overseas – The costs </h2>
 												<p>When you're sending funds abroad, it 's essential that you're aware of the costs involved — and that you know exactly what you're paying for. These charges are usually calculated in the following two ways:</p>
 												<div className="inner-div">
@@ -2438,202 +2318,182 @@ export function QuestionTabs(props) {
 													<p><b>Access and ease – </b> The new-generation fintech-style money apps make sending money abroad feel like a walk in the park. In the majority of cases, you simply download a user-friendly and easy-to-navigate app, register, and verify your account. Then, you're free to send funds internationally within minutes using your debit card. Some providers also enable you to send funds that the recipient can pick up as cash either directly onto a credit card, their home, in person at a bank or an office, or as mobile phone credit. </p>
 													<p><b>Laws and regulations – </b> Sending money abroad is not illegal. However, it's paramount to be in line with the local and international laws so that your transaction is not regarded as an act of money laundering. Always check details like the maximum sum you can transfer without having to file a report. Failure to abide by the laws or even miscommunication and not filling out the required details can lead to serious punishment.</p>
 												</div>
-
 											</div>
 										</Typography>
 									</AccordionDetails>
-								</Accordion>
-								{/* } */}
-
-							</div>
-						</TabPanel>
-						<TabPanel value={value} index={6}>
-							<div className="CollapseToggle">
-								<Accordion
-									expanded={expanded === "panel1"}
-									onChange={accordionhandleChange("panel1")}
+								</Accordion>}
+						</div>
+					</TabPanel>
+					<TabPanel value={value} index={6}>
+						<div className="CollapseToggle">
+							<Accordion
+								expanded={expanded === "panel1"}
+								onChange={accordionhandleChange("panel1")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel1" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel1a-content"
+									id="panel1a-header"
+									className="iconSet"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel1" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel1a-content"
-										id="panel1a-header"
-										className="iconSet"
-									>
-										<h4 className="heading">
-											How do donations work on Cashero?
+									<h4 className="heading">
+										How do donations work on Cashero?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Cashero has selected a list of
-												approved charities. Users can
-												donate by selecting Giving on
-												their Cashero app, searching for
-												a charity of their choice, and
-												donating directly with a click
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Cashero has selected a list of
+											approved charities. Users can
+											donate by selecting Giving on
+											their Cashero app, searching for
+											a charity of their choice, and
+											donating directly with a click
 												of a button.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel2"}
-									onChange={accordionhandleChange("panel2")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel2" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel2a-content"
-										id="panel2a-header"
-									>
-										<h4 className="heading">
-											How much money goes to charity?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												100% of donations made through
-												the Cashero app will go to
-												charity. There are no hidden
-												fees.
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel3"}
-									onChange={accordionhandleChange("panel3")}
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel2"}
+								onChange={accordionhandleChange("panel2")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel2" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel2a-content"
+									id="panel2a-header"
 								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel3" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel3a-content"
-										id="panel3a-header"
-									>
-										<h4 className="heading">
-											Which charities are listed on
-											Cashero?
+									<h4 className="heading">
+										How much money goes to charity?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Charities that meet Cashero’s
-												internal approval process of
-												making a significant impact in
-												our world can be listed on
-												Cashero. By selecting on any
-												charity in the Cashero app, you
-												can discover more about the
-												difference that charity is
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											100% of donations made through
+											the Cashero app will go to
+											charity. There are no hidden
+											fees.
+											</h4>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel3"}
+								onChange={accordionhandleChange("panel3")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel3" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel3a-content"
+									id="panel3a-header"
+								>
+									<h4 className="heading">
+										Which charities are listed on
+										Cashero?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Charities that meet Cashero’s
+											internal approval process of
+											making a significant impact in
+											our world can be listed on
+											Cashero. By selecting on any
+											charity in the Cashero app, you
+											can discover more about the
+											difference that charity is
 												making.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel4"}
-									onChange={accordionhandleChange("panel4")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel4" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel4a-content"
-										id="panel4a-header"
-									>
-										<h4 className="heading">
-											Can recurring donations be made?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												At this point, donations can
-												only be made as one-off
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel4"}
+								onChange={accordionhandleChange("panel4")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel4" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel4a-content"
+									id="panel4a-header"
+								>
+									<h4 className="heading">
+										Can recurring donations be made?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											At this point, donations can
+											only be made as one-off
 												donations.{" "}
-											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-								<Accordion
-									expanded={expanded === "panel5"}
-									onChange={accordionhandleChange("panel5")}
-								>
-									<AccordionSummary
-										expandIcon={
-											expanded === "panel5" ? (
-												<RemoveCircleOutlineIcon />
-											) : (
-													<ControlPointIcon />
-												)
-										}
-										aria-controls="panel5a-content"
-										id="panel5a-header"
-									>
-										<h4 className="heading">
-											Are my donations safe?
 										</h4>
-									</AccordionSummary>
-									<AccordionDetails>
-										<Typography>
-											<h4 className="FaqText">
-												Yes. Your donations are
-												protected using multi-party
-												computation (MPC) and hardware
-												isolation with Intel SGX
-												enclaves. It sounds complex and
-												it is, on purpose. These
-												security layers ensure your
-												donations are safe and
-												protected.
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+							<Accordion
+								expanded={expanded === "panel5"}
+								onChange={accordionhandleChange("panel5")}
+							>
+								<AccordionSummary
+									expandIcon={
+										expanded === "panel5" ? (
+											<RemoveCircleOutlineIcon />
+										) : (
+												<ControlPointIcon />
+											)
+									}
+									aria-controls="panel5a-content"
+									id="panel5a-header"
+								>
+									<h4 className="heading">
+										Are my donations safe?
+										</h4>
+								</AccordionSummary>
+								<AccordionDetails>
+									<Typography>
+										<h4 className="FaqText">
+											Yes. Your donations are
+											protected using multi-party
+											computation (MPC) and hardware
+											isolation with Intel SGX
+											enclaves. It sounds complex and
+											it is, on purpose. These
+											security layers ensure your
+											donations are safe and
+											protected.
 											</h4>
-										</Typography>
-									</AccordionDetails>
-								</Accordion>
-							</div>
-						</TabPanel>
-					</div>
+									</Typography>
+								</AccordionDetails>
+							</Accordion>
+						</div>
+					</TabPanel>
 				</div>
 			</div>
-			{/* Questions */}
-		</>
+		</div>
 	);
 }
-
-// const useStyles = makeStyles((theme) => ({
-// 	pageContainer: {
-// 		minHeight: "99vh",
-// 	},
-// 	centerContainer: {
-// 		flex: 1,
-// 		width: "100%",
-// 		height: "100%",
-// 		display: "flex",
-// 		alignItems: "center",
-// 		justifyContent: "center",
-// 		flexDirection: "column",
-// 	},
-// }));

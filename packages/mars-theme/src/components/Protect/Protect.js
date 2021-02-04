@@ -20,7 +20,7 @@ export function Protect() {
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
 								Use Cashero To Protect <span className="br-block"></span> Your Money From <span className="br-block"></span> Currency Ups-and-Downs
-								</h1>
+							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={400}>
 							<p>Add your local currency in your Cashero wallet and convert the funds into either USD, GBP or EUR, you choose. Hold your money in some of the strongest currencies on the block. </p>

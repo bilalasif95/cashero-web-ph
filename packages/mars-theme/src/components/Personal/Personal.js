@@ -1,7 +1,6 @@
 import React, { useState } from "react";
+import { styled } from "frontity";
 import TextField from "@material-ui/core/TextField";
-// import { Theme } from "@material-ui/core/styles";
-import { makeStyles } from "@material-ui/styles";
 import NumericLabel from 'react-pretty-numbers';
 import Clock from "../../assets/clockImg.svg"
 import Arrow from "../../assets/arrow.svg";
@@ -48,13 +47,11 @@ export function Personal() {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
-
 	const [openSuccessModal, setSuccessModal] = useState(false);
 	const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
 	const [selectedYear, setSelectedYear] = useState("5");
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
-	// const [open, setOpen] = useState(false);
 	const [value, setValue] = useState("5000");
 	const [appModal, setAppModal] = useState(false)
 	// const handleChange = (e) => {
@@ -66,7 +63,6 @@ export function Personal() {
 	// 				.includes(searchTerm.toLocaleLowerCase()) ||
 	// 			country.dial_code.includes(searchTerm.toLocaleLowerCase())
 	// 	);
-
 	// 	setSearchResults2(results);
 	// };
 	// const selectCountry = (country) => {
@@ -75,7 +71,6 @@ export function Personal() {
 	// 	setSearchTerm("");
 	// 	setSearchResults2(counrtrylist);
 	// };
-
 	// const getStarted = () => {
 	// 	let finalPhoneNumb = code + newPhone;
 	// 	callApi(EndPoints.preregistration, "post", "", {
@@ -91,11 +86,10 @@ export function Personal() {
 	// 				setSuccessModal(true);
 	// 			}
 	// 		})
-	// 		.catch((error) => {
+	// 		.catch(() => {
 	// 			// setError("Invalid phone number.");
 	// 		});
 	// };
-
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
@@ -104,41 +98,26 @@ export function Personal() {
 			return
 		}
 		setValue(e.target.value)
-	}
-
-	// const [mobileNum, setMobileNumber] = useState<string>("");
-
-	// const handleOpen = () => {
-	// 	setOpen(true);
-	// };
-
+	};
 	const appModalOpen = () => {
 		setAppModal(true)
-	}
-
+	};
 	const appModalClose = () => {
 		setAppModal(false)
-	}
-	// const handleClose = () => {
-	// 	setOpen(false);
-	// };
-
+	};
 	const closeBothModal = () => {
 		// setCode("+1")
 		// setNewPhoneNumber("");
 		setSuccessModal(false)
 		setAppModal(false)
-		// setOpen(false)
-	}
-
+	};
 	const finalBalance = () => {
 		const multi = bigDecimal.multiply(value, 0.05)
 		const multi2 = bigDecimal.multiply(multi, selectedYear)
 		const add = bigDecimal.add(multi2, value)
 		const final = limit(add)
 		return final
-	}
-
+	};
 	const limit = (bal) => {
 		let temp = bal ? bal.toString() : "0";
 		if (temp) {
@@ -149,43 +128,32 @@ export function Personal() {
 		}
 		let n = temp[1] ? "" + temp[1] : "0";
 		let x = n && (n + "00").substring(0, 2);
-
-		// let t = "0";
 		return x ? temp[0] + "." + x : "0.00";
-	}
-
+	};
 	const totalInterest = () => {
 		const multi = bigDecimal.multiply(value, 0.05)
 		const multi2 = bigDecimal.multiply(multi, selectedYear)
 		const final = limit(multi2)
 		return final
-	}
-
-	const classes = useStyles();
-
+	};
 	const togglegbp = () => {
 		setDropdownOpengbp((prevState) => !prevState);
 	};
-
 	return (
 		<>
 			{
 				openSuccessModal && <Modal
 					aria-labelledby="transition-modal-title"
 					aria-describedby="transition-modal-description"
-					className={classes.modal}
+					className="modal"
 					open={openSuccessModal}
 					onClose={() => setSuccessModal(false)}
 					closeAfterTransition
-				// BackdropComponent={Backdrop}
-				// BackdropProps={{
-				// 	timeout: 500,
-				// }}
 				>
-					<div className={classes.paper}>
+					<Paper>
 						<IconButton
 							aria-label="Close"
-							className={classes.closeButton}
+							className="closeButton"
 							onClick={() => { closeBothModal() }}
 						>
 							<CloseIcon />
@@ -221,13 +189,9 @@ export function Personal() {
 								</div>
 							</div>
 						</div>
-					</div>
+					</Paper>
 				</Modal>
-
 			}
-			{/* MOdal */}
-
-
 			<div className="PesonalBanner InterestBanner">
 				<div className="container">
 					<div className="row">
@@ -235,10 +199,7 @@ export function Personal() {
 							<div className="PersonalCont">
 								<h1> High-Yield Savings Account: Make Your <span className="br-block"></span> Money Make More Money</h1>
 								<p className="bannerPara">Do that thing rich people do, earn money while you <span className="br-block"></span> sleep. Earn up to 5% APY on your money. Inflation <span className="br-block"></span> beating interest paid out daily.</p>
-
-
 								<TextfieldBanner />
-								{/* Phone-Number */}
 								{/* <div className="numberSelection">
 									<div className="selectCountry">
 										<Dropdown
@@ -353,22 +314,16 @@ export function Personal() {
 										type="submit"
 									>
 										Get Started
-								</button>
+									</button>
 								</div> */}
-
 								<ul className="PersonalList list-unstyled">
 									<li><img src={Clock} alt="" />Open an account in minutes</li>
 								</ul>
-
 							</div>
 						</div>
 						<div className="col-md-5">
-
-							{/* <img className="img-fluid" src={Converter} /> */}
-
 							<div className={`${value.length === 5 ? "InputBox1" : value.length === 6 ? "InputBox2" : "InputBox"}`}>
 								<div className="row">
-
 									<div className="col-12">
 										<div className="row inputRow">
 											<div className="col-4">
@@ -376,7 +331,6 @@ export function Personal() {
 													<p className="customText">Deposit</p>
 													<TextField
 														fullWidth
-														// label="Deposit"
 														value={value}
 														onChange={(e) => onChange(e)}
 														type="number"
@@ -397,16 +351,11 @@ export function Personal() {
 														'shortFormatMinValue': 1000000000000
 													}}>{totalInterest()}</NumericLabel></h1>
 												</div>
-
 											</div>
 										</div>
 									</div>
 								</div>
-
-
-
 								<div className="row">
-
 									<div className="col-12">
 										<div className="row">
 											<div className="col-6">
@@ -415,7 +364,6 @@ export function Personal() {
 													<h1>5% APY</h1>
 												</div>
 											</div>
-
 											<div className="col-6">
 												<div className="InterestBox TotalText">
 													<p>Term</p>
@@ -435,23 +383,16 @@ export function Personal() {
 														</Dropdown>
 													</div>
 												</div>
-
 											</div>
 										</div>
 									</div>
 								</div>
-
-
 							</div>
-
 							<div className="InputBox mt-4 FinalTextBox">
 								<div className="row">
-
 									<div className="col-12">
-
 										<div className="FinalText text-center">
 											<p>Final balance is</p>
-
 											<h1>$<NumericLabel params={{
 												'shortFormat': true,
 												'justification': 'C',
@@ -459,15 +400,12 @@ export function Personal() {
 											}}>{finalBalance()}</NumericLabel></h1>
 										</div>
 									</div>
-
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<div className="container">
 				<div className="row">
 					<div className="col-md -12">
@@ -479,24 +417,18 @@ export function Personal() {
 							<li><img alt="" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
-
 				</div>
 			</div>
-
 			<NoEffort />
-			
 			<div className="container">
 				<Savings />
 				<Simple />
-
-
-				{/* Money Request */}
 				<div className="getStarted">
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
-						</h3>
+							</h3>
 							<div className="row">
 								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
 									<Fade triggerOnce direction="left">
@@ -506,9 +438,7 @@ export function Personal() {
 										</div>
 									</Fade>
 								</div>
-
 								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									{/* <Fade triggerOnce direction="up"> */}
 									<div className="GetStartedBox2 w-100">
 										<img
 											className="img-fluid"
@@ -521,16 +451,14 @@ export function Personal() {
 										Yield Savings Account.{" "}
 										</h3>
 									</div>
-									{/* </Fade> */}
 								</div>
-
 								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
 									<Fade triggerOnce direction="right">
 										<div className="GetStartedBox3 w-100">
 											<img className="img-fluid" alt="" src={ArrowUp} />
 											<h3>
 												Earn up to 5% APY and redeem whenever you want.
-										</h3>
+											</h3>
 										</div>
 									</Fade>
 								</div>
@@ -548,7 +476,6 @@ export function Personal() {
 						</div>
 					</div>
 				</div>
-				{/* Money Request */}
 			</div>
 			{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 			< PeoplesSection />
@@ -556,97 +483,24 @@ export function Personal() {
 				<Companies />
 				<QuestionTabs activeTab={1} />
 			</div>
-
 			<SignupSection />
-
-
 		</>
-
 	);
 }
 
-const useStyles = makeStyles((theme) => ({
-	root: {
-		width: "100%",
-		height: "100%",
-		zIndex: 1,
-		overflow: "hidden",
-	},
-
-	appFrame: {
-		position: "relative",
-		display: "flex",
-		width: "100%",
-		height: "100%",
-	},
-	modal: {
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-	paper: {
-		// backgroundColor: theme.palette.background.paper,
-		// border: "2px solid #000",
-		// boxShadow: theme.shadows[5],
-		// padding: theme.spacing(2, 4, 3),
-		width: "100% !important",
-		height: "100vh !important",
-	},
-	menuButton: {
-		// marginRight: theme.spacing(2),
-	},
-	title: {
-		flexGrow: 1,
-	},
-	appBar: {
-		// zIndex: theme.zIndex.drawer + 1,
-		position: "absolute",
-	},
-	navIconHide: {
-		// [theme.breakpoints.up("md")]: {
-		// 	display: "none",
-		// },
-	},
-	drawerHeader: {
-		// ...theme.mixins.toolbar 
-	},
-	drawerPaper: {
-		width: 250,
-		// backgroundColor: theme.palette.background.default,
-		// [theme.breakpoints.up("md")]: {
-		// 	width: drawerWidth,
-		// 	position: "relative",
-		// 	height: "100%",
-		// },
-	},
-	closeButton: {
-		position: "absolute",
-		// right: theme.spacing.unit / 2,
-		// top: theme.spacing.unit / 2,
-		right: 0,
-		// color: theme.palette.grey[500],
-	},
-	content: {
-		// backgroundColor: theme.palette.background.default,
-		width: "100%",
-		height: "100vh",
-
-		// [theme.breakpoints.up("sm")]: {
-		// 	height: "calc(100% - 64px)",
-		// },
-	},
-	container: {
-		width: "100%",
-		maxWidth: "1140px",
-		margin: "0 auto",
-		background: "#fff",
-		position: "relative",
-		padding: "0px 10px",
-	},
-	CustomHeader: {
-		background: "#fff",
-		color: "#0667EB",
-		boxShadow: "inherit",
-	},
-}));
-const drawerWidth = 240;
+const Paper = styled.div`
+  background-color: #fff;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+  padding: 16px 32px 24px;
+  width: 100% !important;
+  height: 100vh !important;
+  .MuiButtonBase-root {
+    top: 81px;
+    right: 86px;
+    position: absolute;
+   @media(max-width: 540px){
+      top: 0px;
+      right: 0px;
+    },
+  }
+`;

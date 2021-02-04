@@ -43,7 +43,6 @@ export function CurrencyAccounts() {
 	};
 	const appModalClose = () => {
 		setAppModal(false)
-
 	};
 	const [appModal, setAppModal] = useState(false)
 	// const [searchTerm, setSearchTerm] = useState<any>("");
@@ -102,7 +101,7 @@ export function CurrencyAccounts() {
 	// 				setSuccessModal(true);
 	// 			}
 	// 		})
-	// 		.catch((error) => {
+	// 		.catch(() => {
 	// 			// setError("Invalid phone number.");
 	// 		});
 	// };
@@ -144,7 +143,7 @@ export function CurrencyAccounts() {
 				setBaseCurrencyGBPValue(doc.fields.gbp.stringValue)
 				setBaseCurrencyUSDValue(doc.fields.usd.stringValue)
 			})
-			.catch((error) => { });
+			.catch(() => { });
 	}, [])
 	const limit = (bal) => {
 		let temp = bal ? bal.toString() : "0";

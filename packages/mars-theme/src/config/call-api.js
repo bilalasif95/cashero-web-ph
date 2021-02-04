@@ -1,5 +1,4 @@
-import axios from "axios"
-// import config from "./config/config"
+import axios from "axios";
 
 export const callApi = (endpoint, method, token, payload) => {
     const authHeaders = token
@@ -7,18 +6,15 @@ export const callApi = (endpoint, method, token, payload) => {
             Authorization: `Bearer ${token}`,
         }
         : {};
-
     const configaxios = {
         method,
         url: endpoint,
         data: payload,
         headers: {
-            // Accept: 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded',
             ...authHeaders,
         }
     }
-
     return new Promise((resolve, reject) => {
         axios(configaxios).then((res) => {
             resolve(res.data);
@@ -26,5 +22,4 @@ export const callApi = (endpoint, method, token, payload) => {
             reject(error);
         })
     })
-
 }
