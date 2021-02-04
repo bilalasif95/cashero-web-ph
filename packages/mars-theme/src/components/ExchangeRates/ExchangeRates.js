@@ -458,60 +458,60 @@ export function ExchangeRates() {
 																				item,
 																				index
 																			) => (
-																				<DropdownItem
-																					key={
-																						index +
-																						1
-																					}
-																					onClick={() =>
-																						selectCountrygbp(
-																							item
-																						)
-																					}
-																					className="country-item"
-																				>
-																					<div className="flag-name">
-																						<span>
-																							{
-																								item.flag
-																							}
-																						</span>
-																						{
-																							item.name
+																					<DropdownItem
+																						key={
+																							index +
+																							1
 																						}
-																					</div>
-																				</DropdownItem>
-																			)
+																						onClick={() =>
+																							selectCountrygbp(
+																								item
+																							)
+																						}
+																						className="country-item"
+																					>
+																						<div className="flag-name">
+																							<span>
+																								{
+																									item.flag
+																								}
+																							</span>
+																							{
+																								item.name
+																							}
+																						</div>
+																					</DropdownItem>
+																				)
 																		)
 																		: searchResultseuro.map(
 																			(
 																				item,
 																				index
 																			) => (
-																				<DropdownItem
-																					key={
-																						index +
-																						1
-																					}
-																					onClick={() =>
-																						selectCountrygbp(
-																							item
-																						)
-																					}
-																					className="country-item"
-																				>
-																					<div className="flag-name">
-																						<span>
-																							{
-																								item.flag
-																							}
-																						</span>
-																						{
-																							item.name
+																					<DropdownItem
+																						key={
+																							index +
+																							1
 																						}
-																					</div>
-																				</DropdownItem>
-																			)
+																						onClick={() =>
+																							selectCountrygbp(
+																								item
+																							)
+																						}
+																						className="country-item"
+																					>
+																						<div className="flag-name">
+																							<span>
+																								{
+																									item.flag
+																								}
+																							</span>
+																							{
+																								item.name
+																							}
+																						</div>
+																					</DropdownItem>
+																				)
 																		)}
 																</div>
 															</DropdownMenu>
@@ -571,60 +571,60 @@ export function ExchangeRates() {
 																				item,
 																				index
 																			) => (
-																				<DropdownItem
-																					key={
-																						index +
-																						1
-																					}
-																					onClick={() =>
-																						selectCountrygbp(
-																							item
-																						)
-																					}
-																					className="country-item"
-																				>
-																					<div className="flag-name">
-																						<span>
-																							{
-																								item.flag
-																							}
-																						</span>
-																						{
-																							item.name
+																					<DropdownItem
+																						key={
+																							index +
+																							1
 																						}
-																					</div>
-																				</DropdownItem>
-																			)
+																						onClick={() =>
+																							selectCountrygbp(
+																								item
+																							)
+																						}
+																						className="country-item"
+																					>
+																						<div className="flag-name">
+																							<span>
+																								{
+																									item.flag
+																								}
+																							</span>
+																							{
+																								item.name
+																							}
+																						</div>
+																					</DropdownItem>
+																				)
 																		)
 																		: searchResultsgbp.map(
 																			(
 																				item,
 																				index
 																			) => (
-																				<DropdownItem
-																					key={
-																						index +
-																						1
-																					}
-																					onClick={() =>
-																						selectCountrygbp(
-																							item
-																						)
-																					}
-																					className="country-item"
-																				>
-																					<div className="flag-name">
-																						<span>
-																							{
-																								item.flag
-																							}
-																						</span>
-																						{
-																							item.name
+																					<DropdownItem
+																						key={
+																							index +
+																							1
 																						}
-																					</div>
-																				</DropdownItem>
-																			)
+																						onClick={() =>
+																							selectCountrygbp(
+																								item
+																							)
+																						}
+																						className="country-item"
+																					>
+																						<div className="flag-name">
+																							<span>
+																								{
+																									item.flag
+																								}
+																							</span>
+																							{
+																								item.name
+																							}
+																						</div>
+																					</DropdownItem>
+																				)
 																		)}
 																</div>
 															</DropdownMenu>
@@ -707,60 +707,60 @@ export function ExchangeRates() {
 																				item,
 																				index
 																			) => (
-																				<DropdownItem
-																					key={
-																						index +
-																						1
-																					}
-																					onClick={() =>
-																						selectCountrygbp(
-																							item
-																						)
-																					}
-																					className="country-item"
-																				>
-																					<div className="flag-name">
-																						<span>
-																							{
-																								item.flag
-																							}
-																						</span>
-																						{
-																							item.name
+																					<DropdownItem
+																						key={
+																							index +
+																							1
 																						}
-																					</div>
-																				</DropdownItem>
-																			)
+																						onClick={() =>
+																							selectCountrygbp(
+																								item
+																							)
+																						}
+																						className="country-item"
+																					>
+																						<div className="flag-name">
+																							<span>
+																								{
+																									item.flag
+																								}
+																							</span>
+																							{
+																								item.name
+																							}
+																						</div>
+																					</DropdownItem>
+																				)
 																		)
 																		: searchResultsgbp.map(
 																			(
 																				item,
 																				index
 																			) => (
-																				<DropdownItem
-																					key={
-																						index +
-																						1
-																					}
-																					onClick={() =>
-																						selectCountrygbp(
-																							item
-																						)
-																					}
-																					className="country-item"
-																				>
-																					<div className="flag-name">
-																						<span>
-																							{
-																								item.flag
-																							}
-																						</span>
-																						{
-																							item.name
+																					<DropdownItem
+																						key={
+																							index +
+																							1
 																						}
-																					</div>
-																				</DropdownItem>
-																			)
+																						onClick={() =>
+																							selectCountrygbp(
+																								item
+																							)
+																						}
+																						className="country-item"
+																					>
+																						<div className="flag-name">
+																							<span>
+																								{
+																									item.flag
+																								}
+																							</span>
+																							{
+																								item.name
+																							}
+																						</div>
+																					</DropdownItem>
+																				)
 																		)}
 																</div>
 															</DropdownMenu>
@@ -820,60 +820,60 @@ export function ExchangeRates() {
 																				item,
 																				index
 																			) => (
-																				<DropdownItem
-																					key={
-																						index +
-																						1
-																					}
-																					onClick={() =>
-																						selectCountryeuro(
-																							item
-																						)
-																					}
-																					className="country-item"
-																				>
-																					<div className="flag-name">
-																						<span>
-																							{
-																								item.flag
-																							}
-																						</span>
-																						{
-																							item.name
+																					<DropdownItem
+																						key={
+																							index +
+																							1
 																						}
-																					</div>
-																				</DropdownItem>
-																			)
+																						onClick={() =>
+																							selectCountryeuro(
+																								item
+																							)
+																						}
+																						className="country-item"
+																					>
+																						<div className="flag-name">
+																							<span>
+																								{
+																									item.flag
+																								}
+																							</span>
+																							{
+																								item.name
+																							}
+																						</div>
+																					</DropdownItem>
+																				)
 																		)
 																		: searchResultseuro.map(
 																			(
 																				item,
 																				index
 																			) => (
-																				<DropdownItem
-																					key={
-																						index +
-																						1
-																					}
-																					onClick={() =>
-																						selectCountryeuro(
-																							item
-																						)
-																					}
-																					className="country-item"
-																				>
-																					<div className="flag-name">
-																						<span>
-																							{
-																								item.flag
-																							}
-																						</span>
-																						{
-																							item.name
+																					<DropdownItem
+																						key={
+																							index +
+																							1
 																						}
-																					</div>
-																				</DropdownItem>
-																			)
+																						onClick={() =>
+																							selectCountryeuro(
+																								item
+																							)
+																						}
+																						className="country-item"
+																					>
+																						<div className="flag-name">
+																							<span>
+																								{
+																									item.flag
+																								}
+																							</span>
+																							{
+																								item.name
+																							}
+																						</div>
+																					</DropdownItem>
+																				)
 																		)}
 																</div>
 															</DropdownMenu>
@@ -949,81 +949,81 @@ export function ExchangeRates() {
 							<h3 className="getStartedTitle">
 								How It Works. It’s Simple.
 							</h3>
-							<div className="row">
-								<div className="col-md-4 col-sm-12 col-xs-12 smBox1">
-									<Fade triggerOnce direction="left">
-										<div className="GetStartedBox1 w-100">
-											<img
-												className="img-fluid"
-												alt="fav"
-												src={Fav}
-											/>
-											<h3>Sign up for Cashero.</h3>
-										</div>
-									</Fade>
-								</div>
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox2">
-									<div className="GetStartedBox2 w-100">
-										<img
-											className="img-fluid"
-											alt="Currencies"
-											src={Currencies}
-										/>
-										<h3>
-											Add funds into your account and
-											choose to hold your money in USD,
-											GPB or EUR.
-										</h3>
-									</div>
-								</div>
-								<div className="col-md-4 col-sm-12 col-xs-12  smBox3">
-									<Fade triggerOnce direction="right">
-										<div className="GetStartedBox3 w-100">
-											<img className="img-fluid" alt="MovingCoins" src={MovingCoins} />
-											<h3>
-												Hold and switch between USD, GPB
-												or EUR in seconds.
-											</h3>
-										</div>
-									</Fade>
-								</div>
-							</div>
-							<div className="row">
-								<div className="offset-md-1 col-md-10">
-									<div className="MultistepsCont">
-										<p>
-											Ready for foreign exchange with no
-											surprises? Seamlessly transfer
-											between currencies using Cashero.
-										</p>
-										<button
-											onClick={appModalOpen}
-											className="LinkBtn"
-										>
-											Start Converting{" "}
-											<img
-												className="ArrowBtn"
-												alt="arrow"
-												src={Arrow1}
-											/>
-										</button>
-									</div>
-								</div>
-							</div>
-							{appModal && (
-								<GetTheAppModal
-									open={appModal}
-									handleClose={appModalClose}
-								/>
-							)}
-							{openSuccessModal && (
-								<ThanksModal
-									open={openSuccessModal}
-									handleClose={thanksModalClose}
-								/>
-							)}
 						</div>
 					</div>
+					<div className="row justify-content-center">
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
+							<Fade triggerOnce direction="left">
+								<div className="GetStartedBox1 w-100">
+									<img
+										className="img-fluid"
+										alt="fav"
+										src={Fav}
+									/>
+									<h3>Sign up for Cashero.</h3>
+								</div>
+							</Fade>
+						</div>
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
+							<div className="GetStartedBox2 w-100">
+								<img
+									className="img-fluid"
+									alt="Currencies"
+									src={Currencies}
+								/>
+								<h3>
+									Add funds into your account and
+									choose to hold your money in USD,
+									GPB or EUR.
+										</h3>
+							</div>
+						</div>
+						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
+							<Fade triggerOnce direction="right">
+								<div className="GetStartedBox3 w-100">
+									<img className="img-fluid" alt="MovingCoins" src={MovingCoins} />
+									<h3>
+										Hold and switch between USD, GPB
+										or EUR in seconds.
+											</h3>
+								</div>
+							</Fade>
+						</div>
+					</div>
+					<div className="row">
+						<div className="offset-md-1 col-md-10">
+							<div className="MultistepsCont">
+								<p>
+									Ready for foreign exchange with no
+									surprises? Seamlessly transfer
+									between currencies using Cashero.
+										</p>
+								<button
+									onClick={appModalOpen}
+									className="LinkBtn"
+								>
+									Start Converting{" "}
+									<img
+										className="ArrowBtn"
+										alt="arrow"
+										src={Arrow1}
+									/>
+								</button>
+							</div>
+						</div>
+					</div>
+					{appModal && (
+						<GetTheAppModal
+							open={appModal}
+							handleClose={appModalClose}
+						/>
+					)}
+					{openSuccessModal && (
+						<ThanksModal
+							open={openSuccessModal}
+							handleClose={thanksModalClose}
+						/>
+					)}
 				</div>
 			</div>
 			<PeoplesSection />
