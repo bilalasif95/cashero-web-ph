@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Clock from "./../../assets/clockImg.svg";
 import { styled } from "frontity";
 import { TextfieldBanner } from "../../components/TextfieldBanner/TextfieldBanner";
@@ -44,7 +44,8 @@ export function CurrencyAccounts() {
 	const appModalClose = () => {
 		setAppModal(false)
 	};
-	const [appModal, setAppModal] = useState(false)
+	const [appModal, setAppModal] = useState(false);
+	const ref = useRef(null)
 	// const [searchTerm, setSearchTerm] = useState<any>("");
 	// const [searchResults, setSearchResults] = useState<any>(counrtrylist);
 	// const [searchResults2, setSearchResults2] = useState<any>([]);
@@ -138,13 +139,13 @@ export function CurrencyAccounts() {
 	useEffect(() => {
 		var start = 1000;
 		var speed = 0;
-		if (document.getElementById("counter")) {
-			document.getElementById("counter").innerHTML = start.toFixed(0);
+		if (ref.current) {
+			ref.current.innerHTML = start.toFixed(0);
 			start += 1;
 		}
-		setInterval(function () {
-			if (document.getElementById("counter")) {
-				document.getElementById("counter").innerHTML = start.toFixed(0);
+		setInterval(() => {
+			if (ref.current) {
+				ref.current.innerHTML = start.toFixed(0);
 				start += 1;
 			}
 		}, speed);
@@ -389,7 +390,7 @@ export function CurrencyAccounts() {
 												flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" ? "50.00" :
 													flagcurrencygbp === "EU Euro - EUR" ? "60.00" : "70.00"}
 										</span>
-										<span id="counter"></span>
+										<span ref={ref} id="counter"></span>
 									</div>
 									<Dropdown
 										isOpen={dropdownOpengbp}
