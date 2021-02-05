@@ -923,7 +923,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     overflow: hidden;
     width: 100%; } }
 
-@media (min-width: 1080px) {
+@media (min-width: 767px) {
   .br-block {
     display: block; } }
 
@@ -1613,11 +1613,16 @@ b {
     display: flex;
     justify-content: flex-start; }
     @media (max-width: 991px) {
- 
+      .getStarted .smBox2 {
+        display: flex;
+        justify-content: flex-end; }
+        .getStarted .smBox3 {
+          justify-content: center;
+          display: flex; }
       .getStarted .GetStartedBox1,
       .getStarted .GetStartedBox2,
       .getStarted .GetStartedBox3 {
-        margin: 0 0 1.5rem;
+        margin: 0 0 2.5rem;
       }
     }
     
@@ -1713,14 +1718,6 @@ b {
 .oneApp, .CurrencyConversion, .MoneyRequest, .SavingAccount, .Charity {
   padding: 100px 0px; }
 
-.oneAppTitle {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -.03em;
-  color: #363636;
-  margin-bottom: 25px; }
 
 .PeoplesTitle {
   font-style: normal;
@@ -1844,12 +1841,6 @@ b {
   bottom: 0;
   left: 0;
   right: 0; }
-  .circle-cont .blue-circle {
-    background-color: #136eeb;
-    width: 400px;
-    height: 400px;
-    margin: -3rem auto 0;
-    border-radius: 100%; }
     @media (max-width: 575px) {
       .circle-cont .blue-circle {
         width: 180px;
@@ -1940,12 +1931,6 @@ b {
   bottom: 0;
   left: 0;
   right: 0; }
-  .circle-cont .blue-circle {
-    background-color: #136eeb;
-    width: 400px;
-    height: 400px;
-    margin: -3rem auto 0;
-    border-radius: 100%; }
     @media (max-width: 575px) {
       .circle-cont .blue-circle {
         width: 180px;
@@ -2010,16 +1995,6 @@ b {
   display: inline-block;
   margin-top: 15px; }
 
-.HighInterestTitle {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -.03em;
-  margin-bottom: 25px;
-  color: #363636;
-  animation: bannerText-up 1.5s; }
-
 @keyframes bannerText-up {
   from {
     padding-top: 100px;
@@ -2072,18 +2047,6 @@ b {
   display: block;
   /* vertical-align: middle;  */
 }
-
-.Graph {
-  background-color: #fff;
-  padding: 50px 20px;
-  box-shadow: 0 0 10px #82808066;
-  -webkit-box-shadow: 0 0 10px #82808066;
-  border-radius: 10px;
-  width: 64%;
-  position: relative;
-  height: 375px;
-  display: flex;
-  align-items: center; }
   .Graph .CounterIcon {
     position: absolute;
     top: -35px;
@@ -2114,14 +2077,6 @@ b {
 .oneApp, .CurrencyConversion, .MoneyRequest, .SavingAccount, .Charity {
   padding: 100px 0px; }
 
-.oneAppTitle {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -.03em;
-  color: #363636;
-  margin-bottom: 25px; }
 
 .Link {
   font-size: 16px;
@@ -2562,12 +2517,6 @@ b {
     height: 100%;
     width: 100%;
     flex-wrap: wrap; }
-    .flags .flags-containerBox .flagBar {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      height: 100px; }
       .flags .flags-containerBox .flagBar img {
         display: block;
         margin: 0 0 0 -4rem; }
@@ -2655,13 +2604,24 @@ b {
       .flags .flags-containerBox .flagBar:nth-of-type(2) img {
         display: block;
         margin: 0 -6rem 0 0; }
-
-@media (max-width: 575px) {
+        @media (max-width: 991px) {
+          .flags .flags-containerBox .flagBar {
+            height: 70px;
+          }
+          .flags .flags-containerBox .flagBar img {
+            width: 100%;
+          }
+          .flags .flags-containerBox .flagBar:first-of-type img,
+          .flags .flags-containerBox .flagBar:nth-of-type(3) img {
+            margin: 0 ; }
+        }
+@media (max-width:767px) {
   .flags {
+    height: 350px;
     justify-content: center; }
     .flags .flags-containerBox .flagBar {
       justify-content: center;
-      height: 60px; }
+      height: 100px; }
       .flags .flags-containerBox .flagBar img {
         margin: 0;
         width: 100%; }
@@ -2930,9 +2890,6 @@ b {
 @media (max-width: 1024px) {
   .SignUp .selectCountry {
     width: 11% !important; }
-    .BlogTabs .MuiTab-root{
-      max-width: 165px;
-    }
   }
 
 @media (max-width: 992px) {
@@ -2959,15 +2916,6 @@ b {
   display: inline-block;
   margin-top: 15px; }
 
-.HighInterestTitle {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -.03em;
-  margin-bottom: 25px;
-  color: #363636;
-  animation: bannerText-up 1.5s; }
 
 @keyframes bannerText-up {
   from {
@@ -3274,13 +3222,13 @@ button:focus {
     font-size: 16px;
     color: #9ea0a5 !important; }
   .BlogTabs .MuiTab-root {
-    padding: 6px 15px 6px 15px !important;
+    padding: 6px 10px 6px 10px !important;
     border-left: 0 !important;
     margin-left: 0px;
     font-weight: 400;
     text-transform: capitalize;
     border-bottom: 1px solid #e4e4e4;
-    max-width: 250px; }
+    max-width: 270px; }
   .BlogTabs .MuiTabs-flexContainer .MuiTab-textColorPrimary.Mui-selected {
     color: #9ea0a5 !important; }
   .BlogTabs .MuiPaper-elevation1 {
@@ -3312,6 +3260,13 @@ button:focus {
       font-size: 16px !important;
       font-weight: 400;
       margin: 0 !important; }
+      @media (max-width: 1199px) {
+        .BlogTabs .MuiTab-root {
+          padding: 6px !important;}
+          .BlogTabs .MuiTab-wrapper {
+            font-size: 12px;
+        }
+        }
   @media (max-width: 991px) {
     .BlogTabs .dropdown {
       display: block; }
@@ -3566,12 +3521,6 @@ button:focus {
     .PersonalList li img {
       position: absolute;
       left: 0; }
-
-.InputBox {
-  box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 53px 73px; }
   .InputBox .MuiInputBase-input {
     padding: 0px 0px 4px;
     border: none;
@@ -3596,15 +3545,6 @@ button:focus {
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px; }
-  .InterestBox h1 {
-    color: #363636;
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 30px;
-    margin-bottom: 0px;
-    text-transform: uppercase; }
 
 .customText {
   color: #9ea0a5 !important;
@@ -3744,20 +3684,9 @@ button:focus {
       position: absolute;
       left: 0; }
 
-.InputBox {
-  box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 53px 73px; }
-  .InputBox .MuiInputBase-input {
-    padding: 0px 0px 4px; }
-
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
 
-.InputBox .MuiInputBase-input {
-  color: #0667eb !important;
-  font-size: 36px !important; }
 
 .InterestBox {
   margin-top: 41px; }
@@ -3770,15 +3699,6 @@ button:focus {
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px; }
-  .InterestBox h1 {
-    color: #363636;
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 30px;
-    margin-bottom: 0px;
-    text-transform: uppercase; }
 
 .customText {
   color: #9ea0a5 !important;
@@ -3941,11 +3861,6 @@ button:focus {
   .CurrencyConversionCont {
     padding-bottom: 30px; } }
 
-  .PesonalBanner .PersonalCont h1 {
-    font-size: 56px;
-    margin-bottom: 40px;
-    font-weight: 400; }
-
 .PesonalBanner .numberSelection {
   display: flex;
   width: 100%;
@@ -3973,20 +3888,15 @@ button:focus {
       position: absolute;
       left: 0; }
 
-.InputBox {
+.InputBox, .InputBox1, .InputBox2  {
   box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #ffffff;
   padding: 53px 73px; }
-  .InputBox .MuiInputBase-input {
-    padding: 0px 0px 4px; }
 
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
 
-.InputBox .MuiInputBase-input {
-  color: #0667eb !important;
-  font-size: 36px !important; }
 
 .InterestBox {
   margin-top: 41px; }
@@ -3999,15 +3909,6 @@ button:focus {
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px; }
-  .InterestBox h1 {
-    color: #363636;
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 30px;
-    margin-bottom: 0px;
-    text-transform: uppercase; }
 
 .customText {
   color: #9ea0a5 !important;
@@ -4068,6 +3969,103 @@ button:focus {
       left: 0; }
 
       @media (max-width: 991px) {
+        .ContactSection .ContactBox h1 {
+          font-size: 32px;
+          margin-bottom: 15px;
+      }
+        .WhoSection .WhoSectionCont h1 {
+          font-size: 28px;
+          margin-bottom: 10px;
+      }
+        .Countup {
+          padding: 30px 0px;
+      }
+      .ContactUsBanner .ContactUsCont h1 {
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+      .Countup .CountupCont h1 {
+        font-size: 40px;
+      }
+      
+        .CharityList li {
+          font-size: 14px;
+        }
+        p, .Countup .CountupCont p {
+          font-size: 14px;
+        }
+        .Converter .GbpRow .MuiInputBase-input, .Converter .EuroRow .MuiInputBase-input, .SwapRow .MuiInputBase-input, .SwapGbpRow .MuiInputBase-input {
+          font-size: 28px !important;
+      }
+        .currencySymbol {
+          font-size: 24px !important;
+      }
+        .ConverterFlags, .ConverterInput {
+          width: 50% !important;
+      }
+      .ConBox {
+        padding: 30px 15px 76px 15px !important;
+    }
+    .ExchangeBox {
+      padding: 30px 15px 40px 15px !important;
+  }
+  .swapBox {
+    padding: 30px 15px 40px 15px  !important;
+}
+      
+        .ExchangeBanner .PersonalCont h1 {
+          font-size: 40px !important;
+          margin-bottom: 10px !important;
+      }
+        .InterestBox h1 {
+          font-size: 22px !important;}
+        .InputBox, .InputBox1, .InputBox2 {
+          padding: 30px 20px !important;
+      }
+        .personalEmail .GetEarlyBtn .btn-default{
+          font-size: 12px;
+          padding: 7.5px 12.5px;
+          width: 120px;
+        }
+        .PesonalBanner .PersonalCont h1 {
+          font-size: 40px !important;
+          margin-bottom: 10px !important;}
+        .CrouselCard{
+          width: 265px;
+        }
+        .EnhanceTitle {
+          font-size: 36px;
+          margin-bottom: 10px;
+      }
+        .circle-container .bluecircle1 {
+          width: 170px;
+          height: 180px;
+          margin: -4.5rem auto 0 10px;
+      }
+        .circle-cont .blue-circle{
+          width: 330px;
+          height: 330px;
+        }
+        .Graph{
+          width: 90% !important;
+          height: 300px !important;
+        }
+        .HighInterestTitle, .oneAppTitle {
+          font-size: 28px !important;
+          line-height: 32px !important;
+          margin-bottom: 15px;
+      }
+        .banner .bannerCont .bannerText {
+          font-size: 18px;
+      }
+        .banner .bannerCont .bannerTitle {
+          font-size: 40px;
+          margin-bottom: 10px;
+      }
+        .customNav .dropdown-menu {
+           box-shadow: inherit;
+            margin-top: 0px;
+           }
         .PersonalCompanyList,
         .PersonalCompanyList2,
         .PersonalCompanyList3  {
@@ -4235,10 +4233,6 @@ button:focus {
   color: #fff;
   padding: 98px 0px 98px 0px;
   margin-top: 98px; }
-  .PesonalBanner .PersonalCont h1 {
-    font-size: 56px;
-    margin-bottom: 40px;
-    font-weight: 400; }
 
 .PesonalBanner .numberSelection {
   display: flex;
@@ -4268,20 +4262,9 @@ button:focus {
       position: absolute;
       left: 0; }
 
-.InputBox {
-  box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 53px 73px; }
-  .InputBox .MuiInputBase-input {
-    padding: 0px 0px 4px; }
-
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
 
-.InputBox .MuiInputBase-input {
-  color: #0667eb !important;
-  font-size: 36px !important; }
 
 .InterestBox {
   margin-top: 41px; }
@@ -4294,16 +4277,6 @@ button:focus {
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px; }
-  .InterestBox h1 {
-    color: #363636;
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 30px;
-    margin-bottom: 0px;
-    text-transform: uppercase; }
-
 .customText {
   color: #9ea0a5 !important;
   font-family: "Roboto";
@@ -4520,9 +4493,6 @@ button:focus {
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
 
-.InputBox .MuiInputBase-input {
-  color: #0667eb !important;
-  font-size: 36px !important; }
 
 .InterestBox {
   margin-top: 41px; }
@@ -4535,15 +4505,6 @@ button:focus {
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px; }
-  .InterestBox h1 {
-    color: #363636;
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 30px;
-    margin-bottom: 0px;
-    text-transform: uppercase; }
 
 .customText {
   color: #9ea0a5 !important;
@@ -4981,11 +4942,6 @@ button:focus {
     width: 100%;
     height: 100%; }
 
-  .PesonalBanner .PersonalCont h1 {
-    font-size: 56px;
-    margin-bottom: 40px;
-    font-weight: 400; }
-
 .PesonalBanner .numberSelection {
   display: flex;
   width: 100%;
@@ -5015,21 +4971,11 @@ button:focus {
     .PersonalList li img {
       position: absolute;
       left: 0; }
-
-.InputBox {
-  box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 53px 73px; }
   .InputBox .MuiInputBase-input {
     padding: 0px 0px 4px; }
 
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
-
-.InputBox .MuiInputBase-input {
-  color: #0667eb !important;
-  font-size: 36px !important; }
 
 .InterestBox {
   margin-top: 41px; }
@@ -5042,15 +4988,6 @@ button:focus {
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px; }
-  .InterestBox h1 {
-    color: #363636;
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 30px;
-    margin-bottom: 0px;
-    text-transform: uppercase; }
 
 .customText {
   color: #9ea0a5 !important;
@@ -5192,12 +5129,6 @@ button:focus {
     height: 100%;
     width: 100%;
     flex-wrap: wrap; }
-    .flags .flags-containerBox .flagBar {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      height: 100px; }
       .flags .flags-containerBox .flagBar img {
         display: block;
         margin: 0 0 0 -4rem; }
@@ -5212,7 +5143,8 @@ button:focus {
     justify-content: center; }
     .flags .flags-containerBox .flagBar {
       justify-content: center;
-      height: 60px; }
+      height: 85px;
+     }
       .flags .flags-containerBox .flagBar img {
         margin: 0;
         width: 100%; }
@@ -5221,11 +5153,6 @@ button:focus {
       .flags .flags-containerBox .flagBar:nth-of-type(2) img {
         margin: 0;
         width: 100%; } }
-
-  .PesonalBanner .PersonalCont h1 {
-    font-size: 56px;
-    margin-bottom: 40px;
-    font-weight: 400; }
 
 .PesonalBanner .numberSelection {
   display: flex;
@@ -5254,19 +5181,6 @@ button:focus {
       position: absolute;
       left: 0; }
 
-.InputBox {
-  box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 53px 73px; }
-  .InputBox .MuiInputBase-input {
-    padding: 0px 0px 4px; }
-
-.InputBox1 {
-  box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 53px 73px; }
   .InputBox1 .MuiInputBase-input {
     padding: 0px 0px 4px; }
 
@@ -5479,11 +5393,6 @@ button:focus {
   .yearDropdown .btn:active {
     background-color: transparent !important; }
 
-  .PesonalBanner .PersonalCont h1 {
-    font-size: 56px;
-    margin-bottom: 40px;
-    font-weight: 400; }
-
 .numberSelection .MuiInput-underline:after {
   border-bottom: 1px solid #fff !important; }
 
@@ -5512,20 +5421,8 @@ button:focus {
       position: absolute;
       left: 0; }
 
-.InputBox {
-  box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 53px 73px; }
-  .InputBox .MuiInputBase-input {
-    padding: 0px 0px 4px; }
-
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
-
-.InputBox .MuiInputBase-input {
-  color: #0667eb !important;
-  font-size: 36px !important; }
 
 .InterestBox {
   margin-top: 41px; }
@@ -5538,15 +5435,6 @@ button:focus {
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px; }
-  .InterestBox h1 {
-    color: #363636;
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 30px;
-    margin-bottom: 0px;
-    text-transform: uppercase; }
 
 .customText {
   color: #9ea0a5 !important;
@@ -5671,20 +5559,8 @@ button:focus {
       position: absolute;
       left: 0; }
 
-.InputBox {
-  box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 53px 73px; }
-  .InputBox .MuiInputBase-input {
-    padding: 0px 0px 4px; }
-
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
-
-.InputBox .MuiInputBase-input {
-  color: #0667eb !important;
-  font-size: 36px !important; }
 
 .InterestBox {
   margin-top: 41px; }
@@ -5697,15 +5573,6 @@ button:focus {
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px; }
-  .InterestBox h1 {
-    color: #363636;
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 30px;
-    margin-bottom: 0px;
-    text-transform: uppercase; }
 
 .customText {
   color: #9ea0a5 !important;
