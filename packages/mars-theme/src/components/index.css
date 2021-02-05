@@ -3035,9 +3035,12 @@ b {
     padding: 0 3rem 0 0; }
 
 .MuiButtonBase-root {
-  /* display: block !important; */
+  display: block !important;
   z-index: 1 !important; }
 
+  .BlogTabs .MuiButtonBase-root {
+    display: flex !important;
+  }
 .MuiAppBar-root,
 .MuiTabs-root,
 .MuiTabs-flexContainer {
