@@ -115,6 +115,8 @@ const BlogPage = ({ state, blogsCategories }) => {
 											indicatorColor="primary"
 											textColor="primary"
 											onChange={handleChange}
+											variant="scrollable"
+											scrollButtons="auto"
 											aria-label="disabled tabs example"
 										>
 											<Tab label="All" value="All" />
@@ -146,7 +148,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 											) : (
 													<>
 														<div className="col-md-6">
-															{data
+															{data.reverse()
 																.slice(0, 1)
 																.map(
 																	({ type, id }
@@ -290,7 +292,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 														) : (
 																<>
 																	<div className="col-md-6">
-																		{categoryData
+																		{categoryData.reverse()
 																			.slice(0, 1)
 																			.map(
 																				({ type, id }
@@ -433,7 +435,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 														) : (
 																<>
 																	<div className="col-md-6">
-																		{categoryData
+																		{categoryData.reverse()
 																			.slice(0, 1)
 																			.map(
 																				({ type, id }

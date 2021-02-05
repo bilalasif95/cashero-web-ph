@@ -3035,7 +3035,7 @@ b {
     padding: 0 3rem 0 0; }
 
 .MuiButtonBase-root {
-  display: block !important;
+  /* display: block !important; */
   z-index: 1 !important; }
 
 .MuiAppBar-root,
@@ -3214,7 +3214,7 @@ button:focus {
   .BlogTabs .MuiTabs-root,
   .BlogTabs .MuiTabs-flexContainer {
     display: flex !important;
-    justify-content: center; }
+    justify-content: flex-start; }
   .BlogTabs .MuiTabs-flexContainer .MuiTab-textColorPrimary.Mui-selected {
     border-bottom: 1px solid #0667eb;
     border-left: 0px !important; }
@@ -3969,6 +3969,9 @@ button:focus {
       left: 0; }
 
       @media (max-width: 991px) {
+        .Enhance {
+          padding: 30px 0px 0px 0px;
+      }
         .ContactSection .ContactBox h1 {
           font-size: 32px;
           margin-bottom: 15px;
@@ -15792,4 +15795,12 @@ select:-webkit-autofill:focus {
     margin: 0px auto;
     margin-bottom: 30px;
     display: block;
+    }
+    .swapBox .dropdown-menu, .ExchangeBox .dropdown-menu{
+      background-color: #fff;
+    }
+    .active {
+      cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
     }
