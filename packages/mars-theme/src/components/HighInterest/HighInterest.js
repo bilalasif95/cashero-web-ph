@@ -34,6 +34,18 @@ export function HighInterest() {
 		setDropdownOpengbp((prevState) => !prevState);
 	};
 	useEffect(() => {
+		var start = 1000;
+		var speed = 0;
+		if (document.getElementById("counter")) {
+			document.getElementById("counter").innerHTML = start.toFixed(0);
+			start += 1;
+		}
+		setInterval(function () {
+			if (document.getElementById("counter")) {
+				document.getElementById("counter").innerHTML = start.toFixed(0);
+				start += 1;
+			}
+		}, speed);
 		setInnerWidth(window.innerWidth)
 		setSearchResultsgbp(currencieslist)
 		callApi(FirebaseEndPoints.ExchangeRates, "get", "")

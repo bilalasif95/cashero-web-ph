@@ -26,6 +26,7 @@ const List = ({ state }) => {
   const [donationsToggleBotton, setDonationsToggleBotton] = useState(false);
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
+  const [innerWidth, setInnerWidth] = useState(0);
   const [openSuccessModal, setSuccessModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [openDiv, setOpenDiv] = useState(true);
@@ -90,6 +91,7 @@ const List = ({ state }) => {
     }
   };
   useEffect(() => {
+    setInnerWidth(window.innerWidth)
     window.addEventListener("scroll", handleScroll)
   }, []);
   return (
@@ -129,7 +131,7 @@ const List = ({ state }) => {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item dropdown" onClick={onPersonalToggleButtonClicked}>
+                <li className="nav-item dropdown" onClick={innerWidth < 992 ? onPersonalToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
                     // href="/personal"
@@ -209,7 +211,7 @@ const List = ({ state }) => {
                     </div>
                   </div>
                 </li>
-                <li className="nav-item dropdown" onClick={onBusinessToggleButtonClicked}>
+                <li className="nav-item dropdown" onClick={innerWidth < 992 ? onBusinessToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
                     // href="/business"
@@ -280,7 +282,7 @@ const List = ({ state }) => {
                     </div>
                   </div>
                 </li>
-                <li className="nav-item dropdown" onClick={onDonationsToggleButtonClicked}>
+                <li className="nav-item dropdown" onClick={innerWidth < 992 ? onDonationsToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
                     // href="/#"

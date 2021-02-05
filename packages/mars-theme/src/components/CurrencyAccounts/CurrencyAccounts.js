@@ -136,6 +136,18 @@ export function CurrencyAccounts() {
 		setflagcurrencygbp(country.name)
 	};
 	useEffect(() => {
+		var start = 1000;
+		var speed = 0;
+		if (document.getElementById("counter")) {
+			document.getElementById("counter").innerHTML = start.toFixed(0);
+			start += 1;
+		}
+		setInterval(function () {
+			if (document.getElementById("counter")) {
+				document.getElementById("counter").innerHTML = start.toFixed(0);
+				start += 1;
+			}
+		}, speed);
 		setSearchResultsgbp(currencieslist)
 		callApi(FirebaseEndPoints.ExchangeRates, "get", "")
 			.then((doc) => {

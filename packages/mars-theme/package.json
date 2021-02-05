@@ -1,12 +1,11 @@
 {
   "name": "@frontity/mars-theme",
   "version": "1.4.4",
-  "description": "A starter theme for Frontity",
+  "description": "Cashero",
   "keywords": [
-    "frontity",
-    "frontity-theme"
+    "cashero"
   ],
-  "homepage": "https://frontity.org",
+  "homepage": "https://cashero.com",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
