@@ -4119,12 +4119,31 @@ button:focus {
         .PersonalCompanyList3 li:nth-of-type(4),
         .PersonalCompanyList3 li:nth-of-type(5) {
           margin: 0 0 1rem;
-          width: 48% !important;
         }
         .PersonalCompanyList li:not(:last-child)
         .PersonalCompanyList2 li:not(:last-child)
         .PersonalCompanyList3 li:not(:last-child) {
           margin-right: 0 !important;
+        }
+      }
+
+
+      @media(min-width: 767px) and (max-width: 992px){
+        .PersonalCompanyList li:first-of-type,
+        .PersonalCompanyList li:nth-of-type(2),
+        .PersonalCompanyList li:nth-of-type(3),
+        .PersonalCompanyList li:nth-of-type(4),
+        .PersonalCompanyList li:nth-of-type(5),
+        .PersonalCompanyList2 li:first-of-type,
+        .PersonalCompanyList2 li:nth-of-type(2),
+        .PersonalCompanyList2 li:nth-of-type(3),
+        .PersonalCompanyList2 li:nth-of-type(4),
+        .PersonalCompanyList3 li:first-of-type,
+        .PersonalCompanyList3 li:nth-of-type(2),
+        .PersonalCompanyList3 li:nth-of-type(3),
+        .PersonalCompanyList3 li:nth-of-type(4),
+        .PersonalCompanyList3 li:nth-of-type(5) {
+          width: 48% !important;
         }
       }
 
