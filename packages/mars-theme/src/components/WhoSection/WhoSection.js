@@ -1,5 +1,5 @@
 import React from "react";
-import WhoImg from "./../../assets/WhoImg.svg";
+import WhoImg from "../../assets/WhoImg.svg";
 
 export function WhoSection() {
 	return (

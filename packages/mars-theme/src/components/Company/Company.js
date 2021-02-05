@@ -2,8 +2,8 @@ import React from "react";
 import { SignupSection } from "../signupSection/signupSection";
 import { Countup } from "../Countup/Countup";
 import { WhoSection } from "../WhoSection/WhoSection";
-import CasheroImg from "./../../assets/CasheroImg.svg";
-import YearsImg from "./../../assets/YearsImg.svg";
+import CasheroImg from "../../assets/CasheroImg.svg";
+import YearsImg from "../../assets/YearsImg.svg";
 
 export function Company() {
 	return (

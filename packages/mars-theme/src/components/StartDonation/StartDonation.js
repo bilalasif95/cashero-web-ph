@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Place from "./../../assets/place.svg";
-import Arrow from "./../../assets/arrowLink.svg";
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
+import Place from "../../assets/place.svg";
+import Arrow from "../../assets/arrowLink.svg";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 
 export function StartDonation() {
 	const [appModal, setAppModal] = useState(false);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ExchangeCoins from "./../../assets/exchangeCoin.svg";
+import ExchangeCoins from "../../assets/exchangeCoin.svg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";

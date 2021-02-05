@@ -1,5 +1,5 @@
 import React from "react";
-import Chat from "./../../assets/Chat.svg";
+import Chat from "../../assets/Chat.svg";
 
 export function Contact() {
 	return (

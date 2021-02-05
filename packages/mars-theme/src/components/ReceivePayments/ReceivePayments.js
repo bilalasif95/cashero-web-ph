@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { styled } from "frontity";
-import { TextfieldBanner } from "../../components/TextfieldBanner/TextfieldBanner";
+import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Clock from "../../assets/clockImg.svg";
-import Instant from "./../../assets/instant.svg";
-import walletDown from "./../../assets/walletDown.svg";
-import listPhone from "./../../assets/ListPhone.svg";
-import Draw from "./../../assets/draw.svg";
-import Dollar from "././../../assets/Dollar.png";
-import Path from "./../../assets/path.png";
+import Instant from "../../assets/instant.svg";
+import walletDown from "../../assets/walletDown.svg";
+import listPhone from "../../assets/ListPhone.svg";
+import Draw from "../../assets/draw.svg";
+import Dollar from "./../../assets/Dollar.png";
+import Path from "../../assets/path.png";
 import listHome from "../../assets/listHome.svg"
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
 import { Companies } from "../Companies/Companies";
@@ -17,12 +17,12 @@ import { LocalPayments } from "../LocalPayments/LocalPayments";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
-import KuWu from "./../../assets/KuWu.svg";
+import KuWu from "../../assets/KuWu.svg";
 import Wait2 from "../../assets/wait.svg";
 import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 
 export function ReceivePayments() {
 	const [appModal, setAppModal] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
-import Mobile from "./../../assets/CasheroMobile.svg";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import Mobile from "../../assets/CasheroMobile.svg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 

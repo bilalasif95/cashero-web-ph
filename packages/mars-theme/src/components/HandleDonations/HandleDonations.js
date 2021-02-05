@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import heartmap from "./../../assets/heartmap.svg"
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
+import heartmap from "../../assets/heartmap.svg"
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 
 export function HandleDonations() {
 	const appModalClose = () => {

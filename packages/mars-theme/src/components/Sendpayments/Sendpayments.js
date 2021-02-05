@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
-import WorldMap from "./../../assets/Worldmap.svg";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import WorldMap from "../../assets/Worldmap.svg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 

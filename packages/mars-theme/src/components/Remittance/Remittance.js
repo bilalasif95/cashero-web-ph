@@ -11,10 +11,10 @@ import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { Sendpayments } from "../Sendpayments/Sendpayments";
-import GlobeDollar from "./../../assets/GlobeDollar.svg";
+import GlobeDollar from "../../assets/GlobeDollar.svg";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
-import Casher0map from "./../../assets/Casher0map.svg";
+import Casher0map from "../../assets/Casher0map.svg";
 import Done from "../../assets/done.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import Wait2 from "../../assets/wait.svg";
@@ -22,7 +22,7 @@ import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import StepsDollar from "./../../assets/StepsDollar.svg";
+import StepsDollar from "../../assets/StepsDollar.svg";
 
 export function Remittance() {
 	const [appModal, setAppModal] = useState(false);

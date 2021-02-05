@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import Clock from "./../../assets/clockImg.svg";
+import Clock from "../../assets/clockImg.svg";
 import donateDollar from "../../assets/donateDollar.svg";
-import { TextfieldBanner } from "../../components/TextfieldBanner/TextfieldBanner";
-import heart from "./../../assets/heart.svg";
-import Draw from "./../../assets/draw.svg"
-import listImg from "./../../assets/list.png"
-import StepsWallet from "./../../assets/stepsWallet.png"
-import heartDollar from "./../../assets/heartDollar.svg";
-import listHome from "./../../assets/listHome.svg"
-import freeFund from "./../../assets/freeFund.svg";
+import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
+import heart from "../../assets/heart.svg";
+import Draw from "../../assets/draw.svg"
+import listImg from "../../assets/list.png"
+import StepsWallet from "../../assets/stepsWallet.png"
+import heartDollar from "../../assets/heartDollar.svg";
+import listHome from "../../assets/listHome.svg"
+import freeFund from "../../assets/freeFund.svg";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
 import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
@@ -18,7 +18,7 @@ import { HandleDonations } from "../HandleDonations/HandleDonations";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import IconButton from "@material-ui/core/IconButton";
 import Modal from "@material-ui/core/Modal";
 import CloseIcon from "@material-ui/icons/Close";

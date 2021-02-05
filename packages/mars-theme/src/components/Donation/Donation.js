@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import { styled } from "frontity";
 import Clock from "../../assets/clockImg.svg"
-import SlideGroup from "./../../assets/SlideGroup.svg";
-import { TextfieldBanner } from "../../components/TextfieldBanner/TextfieldBanner";
+import SlideGroup from "../../assets/SlideGroup.svg";
+import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Draw from "../../assets/draw.svg"
-import donateDollar from "./../../assets/donateDollar.svg";
-import heart from "./../../assets/heart.svg";
-import listHome from "./../../assets/listHome.svg";
-import DonateBox from "./../../assets/DonateBox.png";
-import { GlobalMoney } from "../GlobalMoney/GlobalMoney";
-import { PeoplesSection } from "../../components/PeoplesSection/PeoplesSection";
-import { Companies } from "../../components/Companies/Companies";
-import { QuestionTabs } from "../../components/Tabs/Tabs";
+import donateDollar from "../../assets/donateDollar.svg";
+import heart from "../../assets/heart.svg";
+import listHome from "../../assets/listHome.svg";
+import DonateBox from "../../assets/DonateBox.png";
+import { FindCharity } from "../FindCharity/FindCharity";
+import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
+import { Companies } from "../Companies/Companies";
+import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "./../signupSection/signupSection";
 import { StartDonation } from "../StartDonation/StartDonation";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
-import pricewallet from "./../../assets/pricewallet.png";
-import heartDollar from "./../../assets/heartDollar.svg";
-import Arrow1 from "./../../assets/arrowLink.svg";
-import GetTheAppModal from "../../components/GetTheAppModal/GetTheAppModal";
+import pricewallet from "../../assets/pricewallet.png";
+import heartDollar from "../../assets/heartDollar.svg";
+import Arrow1 from "../../assets/arrowLink.svg";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import IconButton from "@material-ui/core/IconButton";
 import Modal from "@material-ui/core/Modal";
 import CloseIcon from "@material-ui/icons/Close";
@@ -293,7 +293,7 @@ export function Donation() {
 					</div>
 				</div>
 				<StartDonation />
-				<GlobalMoney />
+				<FindCharity />
 				<div className="getStarted">
 					<div className="row">
 						<div className="col-md-12">

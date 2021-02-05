@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Fade } from "react-awesome-reveal";
-import Arrow from "./../../assets/arrowLink.svg";
-import Globe from "./../../assets/Globe.svg";
+import Arrow from "../../assets/arrowLink.svg";
+import Globe from "../../assets/Globe.svg";
 
 export function SingleAccount() {
 	const [appModal, setAppModal] = useState(false);
