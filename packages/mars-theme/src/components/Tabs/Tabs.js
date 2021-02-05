@@ -67,7 +67,7 @@ export function QuestionTabs(props) {
 					<h4 className="TabsTitle">
 						Frequently asked <span className="br-block"></span>{" "}
 							questions
-						</h4>
+					</h4>
 					<AppBar position="static" className="custom-Tabs">
 						<Tabs
 							value={value}
@@ -136,7 +136,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										What is Cashero?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -151,7 +151,7 @@ export function QuestionTabs(props) {
 											is available in 130 including
 											all of the G20 countries except
 											Russia.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -172,7 +172,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										What are Cashero’s main features?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -236,7 +236,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										When will Cashero officially launch?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -266,7 +266,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										How is Cashero regulated?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -279,7 +279,7 @@ export function QuestionTabs(props) {
 											EU regulated financial
 											institution with a
 											cryptocurrency license.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -300,14 +300,14 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										Where can I learn more?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
 											To learn more about Cashero
 											contact info@cashero.com.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -334,7 +334,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How do I open a high-interest
 										savings account?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -368,7 +368,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How can I see how much interest I’ve
 										earned?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -400,7 +400,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										What is APY?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -434,7 +434,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										Are there fees associated with
 										Cashero’s savings account?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -444,7 +444,7 @@ export function QuestionTabs(props) {
 											knowing your money can accrue
 											interest without fees eating
 											away at your earnings.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -465,7 +465,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										Is my money safe?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -478,7 +478,7 @@ export function QuestionTabs(props) {
 											purpose. These security layers
 											ensure your money is safe and
 											protected.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -581,7 +581,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How does the multi-currency account
 										work?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -600,7 +600,7 @@ export function QuestionTabs(props) {
 											into the currency of your
 											choice, and voilà, your
 											multi-currency account is
-												loaded.{" "}
+											loaded.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -623,7 +623,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										Can I open a multi-currency account
 										in my country?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -647,7 +647,7 @@ export function QuestionTabs(props) {
 											Hawaii, New York, New Hampshire,
 											Texas, Vermont, Virginia in the
 											United States.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -669,14 +669,14 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How much does it cost to get a
 										Cashero multi-currency account?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
 											Nothing, it’s free! No minimum
 											balance is needed and there are
-												no maintenance fees.{" "}
+											no maintenance fees.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -699,7 +699,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How can I protect my money against
 										currency fluctuations?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -717,7 +717,7 @@ export function QuestionTabs(props) {
 											losing purchasing power as it is
 											being secured a more stable
 											currency.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -738,7 +738,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										Is my money safe?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -751,7 +751,7 @@ export function QuestionTabs(props) {
 											purpose. These security layers
 											ensure your money is safe and
 											protected.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -796,7 +796,7 @@ export function QuestionTabs(props) {
 											<h2 className="blackhead">
 												What is a multi-currency savings
 												account?
-										</h2>
+											</h2>
 											<p>
 												A multi-currency savings account is
 												a relatively new type of a savings
@@ -811,12 +811,12 @@ export function QuestionTabs(props) {
 												but pay in Euros using the funds
 												available in a single account. Most
 												of the time, this is done via:
-										</p>
+											</p>
 											<p>(1) Wire transfer</p>
 											<p>
 												(2) ACH (Automated Clearing House)
 												or electronic bank-to-bank payments
-										</p>
+											</p>
 											<p>(3) Debit card</p>
 											<p>
 												Multi-currency savings accounts come
@@ -838,11 +838,11 @@ export function QuestionTabs(props) {
 												international clients. Some
 												exceptions do apply, which are
 												highlighted below.
-										</p>
+											</p>
 											<h2 className="blackhead">
 												How many currencies can you hold in
 												one account?
-										</h2>
+											</h2>
 											<p>
 												This depends on the financial
 												institution with which you decide to
@@ -860,7 +860,7 @@ export function QuestionTabs(props) {
 											<h3 className="blackhead">
 												What do I need to know about a
 												multi-currency account?
-										</h3>
+											</h3>
 											<p>
 												Multi-currency savings accounts
 												enjoy interest rates above the ones
@@ -885,7 +885,7 @@ export function QuestionTabs(props) {
 											<h2 className="blackhead">
 												Advantages of multi-currency
 												accounts
-										</h2>
+											</h2>
 											<p>
 												Besides potentially favorable
 												foreign exchange rates, opening a
@@ -918,7 +918,7 @@ export function QuestionTabs(props) {
 											<h3 className="blackhead">
 												When to consider multi-currency
 												accounts for business
-										</h3>
+											</h3>
 											<p>
 												If you do business in different
 												currencies, opening a multi-currency
@@ -934,24 +934,24 @@ export function QuestionTabs(props) {
 											<p>
 												Multi-currency accounts might be
 												useful for you if:
-										</p>
+											</p>
 											<div className="inner-div">
 												<ul>
 													<li>
 														Your company trades
 														internationally (import,
 														export, or both).
-												</li>
+													</li>
 													<li>
 														You operate an e-commerce
 														store and sell services
 														and/or goods to multiple
 														currencies.
-												</li>
+													</li>
 													<li>
 														You work with freelancers
 														overseas.
-												</li>
+													</li>
 													<li>
 														You employ staff abroad.{" "}
 													</li>
@@ -960,7 +960,7 @@ export function QuestionTabs(props) {
 														independent contractor
 														working with international
 														clients.
-												</li>
+													</li>
 													<li>
 														You are an online seller
 														across multiple
@@ -976,7 +976,7 @@ export function QuestionTabs(props) {
 											<h3 className="blackhead">
 												What to look for from a business
 												multi-currency account
-										</h3>
+											</h3>
 											<p>
 												Flexibility is the key here. It's
 												paramount to find a flexible enough
@@ -985,7 +985,7 @@ export function QuestionTabs(props) {
 												achieved by comparing your available
 												options and weighing factors, such
 												as:
-										</p>
+											</p>
 											<div className="inner-div">
 												<p>
 													<b>Currency conversion fees</b>{" "}
@@ -1006,7 +1006,7 @@ export function QuestionTabs(props) {
 												business’ typical payment sums
 												(minimum and maximum amounts
 												included).
-											</p>
+												</p>
 												<p>
 													<b>
 														Minimum monthly account
@@ -1036,7 +1036,7 @@ export function QuestionTabs(props) {
 												well as processing charges. Ask
 												for a complete list of fees to
 												be on the safe side.
-											</p>
+												</p>
 												<p>
 													<b>Turnaround speed</b>– It's
 												critical for your business to
@@ -1059,7 +1059,7 @@ export function QuestionTabs(props) {
 												<h3 className="blackhead">
 													Where to get a multi-currency
 													account from?
-											</h3>
+												</h3>
 												<p>
 													Without a doubt, there are a lot
 													of new players offering
@@ -1072,7 +1072,7 @@ export function QuestionTabs(props) {
 													decision and why preferring your
 													local bank might be a better
 													option for you.
-											</p>
+												</p>
 												<div className="inner-div">
 													<p>
 														<b>Exchange rates</b>– With
@@ -1110,14 +1110,14 @@ export function QuestionTabs(props) {
 												<h2 className="blackhead">
 													How does a multi-currency
 													account work?
-											</h2>
+												</h2>
 												<p>
 													In most cases, a standard bank
 													currency account and a
 													multi-currency account do not
 													differ much. This means that you
 													can:
-											</p>
+												</p>
 												<div className="inner-div">
 													<ul>
 														<li>Receive payments</li>
@@ -1129,7 +1129,7 @@ export function QuestionTabs(props) {
 															payments, wire
 															transfers, and debit
 															card
-													</li>
+														</li>
 													</ul>
 												</div>
 												<p>
@@ -1143,12 +1143,12 @@ export function QuestionTabs(props) {
 													account fee. Finally, you might
 													be asked to pay charges for
 													sending funds to another bank.
-											</p>
+												</p>
 												<h3 className="blackhead">
 													Is reporting on international
 													assets easier with
 													multi-currency accounts?
-											</h3>
+												</h3>
 												<p>
 													Considering that you can hold
 													multiple assets (currencies) in
@@ -1165,12 +1165,12 @@ export function QuestionTabs(props) {
 													software tools available online.
 													This can make managing your
 													foreign liabilities and assets
-												even easier.{" "}
+													even easier.{" "}
 												</p>
 												<h2 className="blackhead">
 													How to find the right
 													multi-currency savings account?
-											</h2>
+												</h2>
 												<p>
 													With such an overwhelming number
 													of providers offering
@@ -1192,7 +1192,7 @@ export function QuestionTabs(props) {
 													prerequisites should be on your
 													mind when choosing a
 													multi-currency account to ensure
-												that your needs are met.{" "}
+													that your needs are met.{" "}
 												</p>
 												<p>
 													If you're a business owner, you
@@ -1209,7 +1209,7 @@ export function QuestionTabs(props) {
 													you will also be able to
 													calculate how much a typical
 													transaction will cost you and
-												see if it is beneficial for you.{" "}
+													see if it is beneficial for you.{" "}
 												</p>
 												<p>
 													Once you have narrowed down your
@@ -1221,7 +1221,7 @@ export function QuestionTabs(props) {
 													say, it's extremely important
 													that the bank is properly
 													regulated and licensed by
-												credible bodies and agencies.{" "}
+													credible bodies and agencies.{" "}
 												</p>
 												<p>
 													Note that some financial
@@ -1235,7 +1235,7 @@ export function QuestionTabs(props) {
 													So it's definitely worth doing
 													some modern-day “window
 													shopping” before making up your
-												mind!{" "}
+													mind!{" "}
 												</p>
 											</div>
 										</div>
@@ -1264,7 +1264,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How can I exchange funds from one
 										currency to another?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -1281,7 +1281,7 @@ export function QuestionTabs(props) {
 											confirm your transaction by
 											verifying with your new balance
 											on the Wallet screen.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1302,7 +1302,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										What currencies can I exchange?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -1310,7 +1310,7 @@ export function QuestionTabs(props) {
 											Cashero allows you to instantly
 											convert between United States
 											dollars (USD), British pounds
-												(GBP) or Euros (EUR).{" "}
+											(GBP) or Euros (EUR).{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1333,7 +1333,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How much does it cost to convert
 										between currencies?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -1347,7 +1347,7 @@ export function QuestionTabs(props) {
 											You will always get the
 											mid-market rate, nothing hidden
 											on top. If this changes, you’ll
-												be the first to know.{" "}
+											be the first to know.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1370,7 +1370,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How does Cashero compare to
 										converting currency with the bank?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -1381,7 +1381,7 @@ export function QuestionTabs(props) {
 											to another. Cashero has no
 											hidden fees and the whole
 											transaction is transparent.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1403,14 +1403,14 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How long does it take to convert
 										currencies?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
 											Exchanging currencies with
 											Cashero is instant.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1439,7 +1439,7 @@ export function QuestionTabs(props) {
 											<h2 className="blackhead">
 												Everything You Need To Know About
 												Online Currency Exchanges
-										</h2>
+											</h2>
 											<p>
 												Online currency exchanges are
 												becoming more common every day. This
@@ -1455,7 +1455,7 @@ export function QuestionTabs(props) {
 												banks, and other brick and mortar
 												financial institutions saw huge
 												potential in providing currency
-											exchange services years ago.{" "}
+												exchange services years ago.{" "}
 											</p>
 											<p>
 												Whether you're a traveler, a company
@@ -1468,11 +1468,11 @@ export function QuestionTabs(props) {
 												Internet, you can now do so online
 												using currency exchange sites. But
 												what exactly are online currency
-											exchanges and how do they work?{" "}
+												exchanges and how do they work?{" "}
 											</p>
 											<h2 className="blackhead">
 												What is currency exchange trading?
-										</h2>
+											</h2>
 											<p>
 												Also known as forex (foreign
 												exchange), currency exchange trading
@@ -1489,12 +1489,12 @@ export function QuestionTabs(props) {
 												especially when the amount of
 												currency transferred daily can bring
 												a greater chance of high profit (aka
-											currency volatility).{" "}
+												currency volatility).{" "}
 											</p>
 											<h2 className="blackhead">
 												What are currency exchange
 												platforms?
-										</h2>
+											</h2>
 											<p>
 												These refer to online-based websites
 												that enable people and corporations
@@ -1511,12 +1511,12 @@ export function QuestionTabs(props) {
 												converter. This is an application
 												that you can use to help convert
 												currency values based on the
-											exchange rates of the day.{" "}
+												exchange rates of the day.{" "}
 											</p>
 											<h3 className="blackhead">
 												When is the best time to use a
 												currency exchange
-										</h3>
+											</h3>
 											<p>
 												To begin with, you will most likely
 												need the services of an online
@@ -1531,12 +1531,12 @@ export function QuestionTabs(props) {
 												other companies or individuals
 												easier. This is particularly true
 												when engaging in international trade
-											or business.{" "}
+												or business.{" "}
 											</p>
 											<h2 className="blackhead">
 												What about Forex trades? Do they
 												take place on an exchange?
-										</h2>
+											</h2>
 											<p>
 												In a nutshell, no. Unlike
 												commodities and shares that require
@@ -1549,12 +1549,12 @@ export function QuestionTabs(props) {
 												spread across Tokyo, Sydney, New
 												York, and London – the big four
 												Forex trading centers. This enables
-											Forex trading on a 24/7 basis.{" "}
+												Forex trading on a 24/7 basis.{" "}
 											</p>
 											<p>
 												As of now, there are three primary
 												types of Forex market:
-										</p>
+											</p>
 											<div className="inner-div">
 												<ol>
 													<li>
@@ -1566,7 +1566,7 @@ export function QuestionTabs(props) {
 													and forces the trader to
 													trade the specified currency
 													at an agreed price and date.
-												</li>
+													</li>
 													<li>
 														<b>Forward Forex market –</b>
 													The trader agrees to a
@@ -1578,7 +1578,7 @@ export function QuestionTabs(props) {
 													settled either within a
 													range of future dates or a
 													specific date in the future.
-												</li>
+													</li>
 													<li>
 														<b>Spot Forex market – </b>
 													The trader physically
@@ -1613,7 +1613,7 @@ export function QuestionTabs(props) {
 												growth of online trading enables
 												traders to benefit from price
 												movements using CFD trading and
-											other derivatives.{" "}
+												other derivatives.{" "}
 											</p>
 											<p>
 												CFDs are products (leveraged) that
@@ -1629,12 +1629,12 @@ export function QuestionTabs(props) {
 												boost your profits, but they can
 												also lead to major losses. This is
 												the same with all leveraged
-											products.{" "}
+												products.{" "}
 											</p>
 											<h2 className="blackhead">
 												What affects currency exchange
 												rates?
-										</h2>
+											</h2>
 											<p>
 												Global supply and demand is one of
 												the most critical factors that
@@ -1644,22 +1644,22 @@ export function QuestionTabs(props) {
 												increased value. Of the factors that
 												influence a currency's supply and
 												demand, the most common ones are:
-										</p>
+											</p>
 											<div className="inner-div">
 												<ul>
 													<li>
 														Countries’ political and
 														economic stability
-												</li>
+													</li>
 													<li>
 														Businesses (and governments)
 														trading internationally
-												</li>
+													</li>
 													<li>Natural disasters</li>
 													<li>
 														Trading of currencies on the
 														stock market
-												</li>
+													</li>
 													<li>Tourism and travel</li>
 													<li>Interest rates</li>
 													<li>
@@ -1681,11 +1681,11 @@ export function QuestionTabs(props) {
 												purchase of, say, your dream home.
 												That is if you are transferring
 												money to buy property.
-										</p>
+											</p>
 											<h3 className="blackhead">
 												Calculating online currency exchange
 												rates
-										</h3>
+											</h3>
 											<p>
 												The foreign exchange rate can be
 												affected by the volume of the
@@ -1699,7 +1699,7 @@ export function QuestionTabs(props) {
 												that specific currency. This will,
 												in turn, increase its value (or
 												price).
-										</p>
+											</p>
 											<p>
 												That aside, the foreign exchange
 												rate is also affected by government
@@ -1707,16 +1707,16 @@ export function QuestionTabs(props) {
 												set a currency at a constant price
 												that will determine its value over
 												another currency (aka the pegging
-											method).{" "}
+												method).{" "}
 											</p>
 											<h2 className="blackhead">
 												Must-know online currency exchange
 												terms
-										</h2>
+											</h2>
 											<p>
 												When it comes to Forex trading, it's
 												good to know basic terminology:
-										</p>
+											</p>
 											<div className="inner-div">
 												<ul>
 													<li>
@@ -1784,7 +1784,7 @@ export function QuestionTabs(props) {
 													$100.000 (or another
 													currency) to place on every
 													trade.
-												</li>
+													</li>
 													<li>
 														<b>Pip</b>– We use pips to
 													measure a Forex pair’s
@@ -1803,13 +1803,13 @@ export function QuestionTabs(props) {
 													yen, a single pip is a
 													movement in the 2nd decimal
 													place.
-												</li>
+													</li>
 													<li>
 														<b>Base currency</b>– This
 													is the first currency listed
 													in an online currency
 													exchange pair.
-												</li>
+													</li>
 													<li>
 														<b>Quote currency</b>– This
 													is the second currency in a
@@ -1844,7 +1844,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										What kind of payments can I make
 										with Cashero?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -1862,7 +1862,7 @@ export function QuestionTabs(props) {
 											registered user or business you
 											can invite them to use Cashero
 											(and earn rewards!).
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1883,7 +1883,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										What are the fees to make payments?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -1896,7 +1896,7 @@ export function QuestionTabs(props) {
 											receive money to customers
 											worldwide for a nominal fee of
 											1% after their first $50,000
-												USD.{" "}
+											USD.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1919,14 +1919,14 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How long do payments take to send
 										and receive?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
 											Payments between registered
 											users and businesses are sent
-												and received instantly.{" "}
+											and received instantly.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1949,13 +1949,13 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										Can I send, request and receive
 										payments in different currencies?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
 											Yes! You can choose between USD,
-												GBP or EUR.{" "}
+											GBP or EUR.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1977,7 +1977,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										Is my money safe?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -1990,7 +1990,7 @@ export function QuestionTabs(props) {
 											purpose. These security layers
 											ensure your money is safe and
 											protected.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -2089,7 +2089,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										What kind of transfers can I make
 										with Cashero?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2102,7 +2102,7 @@ export function QuestionTabs(props) {
 											amount you would like to send.
 											The user will receive your funds
 											and then can withdraw the money
-												to their bank account.{" "}
+											to their bank account.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2124,7 +2124,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										What countries does Cashero support?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2147,7 +2147,7 @@ export function QuestionTabs(props) {
 											Yemen, Zimbabwe and Connecticut,
 											Hawaii, New York, New Hampshire,
 											Texas, Vermont, Virginia in the
-												United States.{" "}
+											United States.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2169,7 +2169,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										What are the fees to transfer money?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2180,7 +2180,7 @@ export function QuestionTabs(props) {
 											can send money to customers
 											worldwide for a nominal fee of
 											1% after their first $50,000
-												USD.{" "}
+											USD.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2203,7 +2203,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										How long does it take the transfer
 										money with Cashero?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2215,7 +2215,7 @@ export function QuestionTabs(props) {
 											the bank account, this can take
 											anywhere from 1-3 days to
 											appear.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -2236,7 +2236,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										Is my money safe?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2249,7 +2249,7 @@ export function QuestionTabs(props) {
 											purpose. These security layers
 											ensure your money is safe and
 											protected
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -2344,7 +2344,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										How do donations work on Cashero?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2355,7 +2355,7 @@ export function QuestionTabs(props) {
 											their Cashero app, searching for
 											a charity of their choice, and
 											donating directly with a click
-												of a button.{" "}
+											of a button.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2377,7 +2377,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										How much money goes to charity?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2386,7 +2386,7 @@ export function QuestionTabs(props) {
 											the Cashero app will go to
 											charity. There are no hidden
 											fees.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -2408,7 +2408,7 @@ export function QuestionTabs(props) {
 									<h4 className="heading">
 										Which charities are listed on
 										Cashero?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2421,7 +2421,7 @@ export function QuestionTabs(props) {
 											charity in the Cashero app, you
 											can discover more about the
 											difference that charity is
-												making.{" "}
+											making.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2443,14 +2443,14 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										Can recurring donations be made?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
 											At this point, donations can
 											only be made as one-off
-												donations.{" "}
+											donations.{" "}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2472,7 +2472,7 @@ export function QuestionTabs(props) {
 								>
 									<h4 className="heading">
 										Are my donations safe?
-										</h4>
+									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
@@ -2486,7 +2486,7 @@ export function QuestionTabs(props) {
 											security layers ensure your
 											donations are safe and
 											protected.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>

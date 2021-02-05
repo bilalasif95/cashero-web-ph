@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "../link";
 import Earning from "../../assets/earning.svg";
 import Arrow from "../../assets/arrowLink.svg";
@@ -26,6 +26,7 @@ export function HighInterest() {
 	const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
 	const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
 	const [searchTermgbp, setSearchTermgbp] = useState("");
+	const ref = useRef(null)
 	const [innerWidth, setInnerWidth] = useState(0);
 	const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslist);
 	const [searchResults2gbp, setSearchResults2gbp] = useState([]);
@@ -34,6 +35,18 @@ export function HighInterest() {
 		setDropdownOpengbp((prevState) => !prevState);
 	};
 	useEffect(() => {
+		var start = 1000;
+		var speed = 0;
+		if (ref.current) {
+			ref.current.innerHTML = start.toFixed(0);
+			start += 1;
+		}
+		setInterval(() => {
+			if (ref.current) {
+				ref.current.innerHTML = start.toFixed(0);
+				start += 1;
+			}
+		}, speed);
 		setInnerWidth(window.innerWidth)
 		setSearchResultsgbp(currencieslist)
 		callApi(FirebaseEndPoints.ExchangeRates, "get", "")
@@ -115,7 +128,7 @@ export function HighInterest() {
 											flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" ? "50.00" :
 												flagcurrencygbp === "EU Euro - EUR" ? "60.00" : "70.00"}
 									</span>
-									<span id="counter"></span>
+									<span ref={ref} id="counter"></span>
 								</div>
 								<Dropdown
 									isOpen={dropdownOpengbp}
