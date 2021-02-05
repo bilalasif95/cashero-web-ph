@@ -3051,9 +3051,12 @@ b {
     padding: 0 3rem 0 0; }
 
 .MuiButtonBase-root {
-  /* display: block !important; */
+  display: block !important;
   z-index: 1 !important; }
 
+  .BlogTabs .MuiButtonBase-root {
+    display: flex !important;
+  }
 .MuiAppBar-root,
 .MuiTabs-root,
 .MuiTabs-flexContainer {
@@ -15814,9 +15817,12 @@ select:-webkit-autofill:focus {
     }
     .swapBox .dropdown-menu, .ExchangeBox .dropdown-menu{
       background-color: #fff;
+<<<<<<< HEAD
     }
     .active {
       cursor: grabbing;
       cursor: -webkit-grabbing;
       transform: scale(1);
+=======
+>>>>>>> cf86f106182e56fb888f1f2ddff03c0fc5fb8543
     }

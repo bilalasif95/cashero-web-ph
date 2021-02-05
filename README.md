@@ -41,6 +41,7 @@ Builds the app for production to the `build` folder.
 
 This will create a `/build` folder with a `server.js` (a [serverless function](https://vercel.com/docs/v2/serverless-functions/introduction)) file and a `/static` folder with all your javascript files and other assets.
 
+
 Your app is ready to be deployed.
 
 > Get more info about [Frontity's architecture](https://docs.frontity.org/architecture)
