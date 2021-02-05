@@ -11,10 +11,9 @@ const TextFiledComponent = props => {
     multiline,
     rows,
     min,
-    rowsMax
   } = props;
   return (
-    <FormGroup className="formGroup" >
+    <FormGroup className="formGroup">
       <Input value={value} min={min} multiline={multiline} type={type} onChange={onChange} name={name} id="exampleEmail" placeholder={placeholder} rows={rows} className="inputField" autoComplete="off" />
     </FormGroup>
   );
