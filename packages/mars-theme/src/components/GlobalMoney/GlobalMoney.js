@@ -9,7 +9,7 @@ import Arrow from "../../assets/arrowLink.svg";
 
 export function GlobalMoney() {
 	return (
-		<div className="MoneyRequest sm-pt-0">
+		<div className="MoneyRequest sm-pt-0 sm-mt-30">
 			<div className="row flex-column-reverse flex-sm-row">
 				<div className="col-md-6">
 					<div className="map-pic">
@@ -40,7 +40,7 @@ export function GlobalMoney() {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h3 className="oneAppTitle">
+							<h3 className="oneAppTitle sm-mt-30">
 								Transfer Money
 									<span className="br-block"></span>
 									Abroad

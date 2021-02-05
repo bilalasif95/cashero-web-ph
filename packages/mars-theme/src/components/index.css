@@ -398,13 +398,26 @@ h4 {
     min-height: 140px !important; } }
 
 @media (max-width: 320px) {
+  .CurrencyConversion{
+    margin-top: 80px;
+  }
+  .circle-cont{
+    margin-top: 30px;
+  }
   .customNav ul li:not(:last-child) {
-    margin-right: 5px !important; } }
+    margin-right: 5px !important; }
+    .map-pic {
+      height: 250px !important;
+  }
+  }
 
 .MobileGetAppBtn {
   display: none; }
 
 @media (max-width: 540px) {
+  .CrouselCard {
+    width: 240px !important;
+}
   .customNav ul li a:after{
     display: block !important;
   }
@@ -444,8 +457,8 @@ h4 {
       cursor: pointer; }
   .MobileGetAppBtn .GetAppBtn {
     margin: 0; }
-  .PhoneHand {
-    bottom: -41px; }
+  /* .PhoneHand {
+    bottom: -41px; } */
   .customNav .ListTitle {
     position: relative;
     padding-left: 45px; }
@@ -1018,6 +1031,9 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
       width: 100%; } }
 
 @media (max-width: 540px) {
+  .map-pic {
+    height: 320px;
+}
   .br-block {
     width: 5px;
   }
@@ -15801,6 +15817,6 @@ select:-webkit-autofill:focus {
     }
     .active {
       cursor: grabbing;
-    cursor: -webkit-grabbing;
-    transform: scale(1);
+      cursor: -webkit-grabbing;
+      transform: scale(1);
     }
