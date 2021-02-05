@@ -398,6 +398,13 @@ h4 {
     min-height: 140px !important; } }
 
 @media (max-width: 320px) {
+  .circle-cont .blue-circle {
+    width: 275px;
+    height: 290px;
+}
+.circle-cont .blue-circle {
+  margin: -6rem auto 0px;
+}
   .CurrencyConversion{
     margin-top: 80px;
   }
@@ -1031,6 +1038,9 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
       width: 100%; } }
 
 @media (max-width: 540px) {
+  .PhoneHand{
+    margin-top: 30px;
+  }
   .map-pic {
     height: 320px;
 }
@@ -5790,6 +5800,13 @@ button:focus {
       }
       
       @media (max-width: 375px) {
+        .circle-cont .blue-circle {
+          width: 275px;
+          height: 290px;
+      }
+      .circle-cont .blue-circle {
+        margin: -3rem auto 0px;
+      }
           .menuLink span {
               font-size: 12px;
           }

@@ -40,7 +40,7 @@ export function GlobalMoney() {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h3 className="oneAppTitle sm-mt-30">
+							<h3 className="oneAppTitle">
 								Transfer Money
 									<span className="br-block"></span>
 									Abroad
