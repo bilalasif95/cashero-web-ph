@@ -280,7 +280,7 @@ export function Remittance() {
 			<div className="container">
 				<div className="row">
 					<div className="col-md -12">
-						<ul className="PersonalCompanyList list-unstyled sm-mb-40">
+						<ul className="PersonalCompanyList list-unstyled">
 							<li><img alt="" src={GlobeDollar} />Send money worldwide</li>
 							<li><img alt="" src={Dollarlist} />No hidden fees</li>
 							<li><img alt="" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>

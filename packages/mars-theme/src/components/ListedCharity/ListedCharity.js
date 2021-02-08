@@ -281,7 +281,7 @@ export function ListedCharity() {
 			<div className="container">
 				<div className="row">
 					<div className="col-md -12">
-						<ul className="PersonalCompanyList3 list-unstyled sm-mb-40">
+						<ul className="PersonalCompanyList3 list-unstyled">
 							<li><img alt="heartDollar" src={heartDollar} />Discover new charities</li>
 							<li><img alt="donateDollar" src={donateDollar} />Donate directly</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>

@@ -280,7 +280,7 @@ export function ReceivePayments() {
 			<div className="container">
 				<div className="row">
 					<div className="col-md -12">
-						<ul className="PersonalCompanyList list-unstyled sm-mb-40">
+						<ul className="PersonalCompanyList list-unstyled">
 							<li><img alt="walletDown" src={walletDown} />Second, Request,</li>
 							<li><img alt="Instant" src={Instant} />Instant payments</li>
 							<li><img alt="listPhone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
