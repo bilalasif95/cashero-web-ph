@@ -11,6 +11,9 @@ const settings = {
     {
       "name": "@frontity/mars-theme",
       "state": {
+        "googleTagManagerAnalytics": {
+          "containerId": "GTM-PVNSSZR",
+        },
         "theme": {
           "menu": [
             [
