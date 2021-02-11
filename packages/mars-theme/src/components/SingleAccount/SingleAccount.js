@@ -26,7 +26,7 @@ export function SingleAccount() {
 						</div>
 					</div>
 					<div className="col-md-6">
-						<div className="oneAppCont">
+						<div className="oneAppCont sm-mt-0">
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle">
 									Your Money From <span className="br-block"></span> Around The World In <span className="br-block"></span> One Single Account.{" "}

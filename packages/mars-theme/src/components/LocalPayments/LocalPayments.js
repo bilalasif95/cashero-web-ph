@@ -13,7 +13,7 @@ export function LocalPayments() {
 		setAppModal(false)
 	};
 	return (
-		<div className="MoneyRequest">
+		<div className="MoneyRequest sm-mt-40">
 			<div className="row align-items-center">
 				<div className="col-md-6 sm-mb-30">
 					<img className="img-fluid mx-auto d-block" alt="" src={Mobile} />
