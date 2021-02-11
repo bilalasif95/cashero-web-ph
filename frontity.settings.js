@@ -11,9 +11,6 @@ const settings = {
     {
       "name": "@frontity/mars-theme",
       "state": {
-        "googleTagManagerAnalytics": {
-          "containerId": "GTM-KKSRK7H",
-        },
         "theme": {
           "menu": [
             [
@@ -66,6 +63,14 @@ const settings = {
             "showOnPost": true
           }
         }
+      }
+    },
+    {
+      "name": "@frontity/google-tag-manager-analytics",
+      "state": {
+        "googleTagManagerAnalytics": {
+          "containerId": "GTM-KKSRK7H",
+        },
       }
     },
     {
