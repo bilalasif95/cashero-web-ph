@@ -35,6 +35,7 @@ const Theme = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <meta name="google-site-verification" content="ULLpQHl1XeVHE2H-ZSPLosCUY10CBkttCwbNrfMBVsc" />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
