@@ -90,9 +90,9 @@ export function Footer() {
 						<p>United States - English</p>
 						<ul className="SocialIcons list-unstyled">
 							<li><a href="/#"><img alt="" src={LinkedIn} /> </a></li>
-							<li><a href="/#"><img alt="" src={Facebook} /> </a></li>
-							<li><a href="/#"><img alt="" src={Twitter} /> </a></li>
-							<li><a href="/#"><img alt="" src={Youtube} /> </a></li>
+							<li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="" src={Facebook} /> </a></li>
+							<li><a href="https://twitter.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="" src={Twitter} /> </a></li>
+							<li><a href="https://www.youtube.com/channel/UCnFJebay3pAJBu-DpbYWjCQ" target="_blank" rel="noopener noreferrer"><img alt="" src={Youtube} /> </a></li>
 						</ul>
 					</div>
 				</div>

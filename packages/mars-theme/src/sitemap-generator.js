@@ -4,11 +4,13 @@ require("babel-register")({
 
 const router = require("./routes-sitemap.js").default;
 const Sitemap = require("react-router-sitemap").default;
+const websiteLink = require("./config/config.js").websiteLink;
 
 function generateSitemap() {
   return new Sitemap(router)
-    .build("https://staging.cashero.com/")
-    .save("./sitemap.xml");
+    .build(websiteLink)
+    .save("./build/sitemap.xml")
+    .save("./sitemap.xml")
 }
 
 generateSitemap();

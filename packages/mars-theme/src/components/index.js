@@ -20,6 +20,7 @@ import { CurrencyAccounts } from "./CurrencyAccounts/CurrencyAccounts";
 import { ExchangeRates } from "./ExchangeRates/ExchangeRates";
 import { ReceivePayments } from "./ReceivePayments/ReceivePayments";
 import { Remittance } from "./Remittance/Remittance";
+import { websiteLink } from "../config/config";
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -36,6 +37,13 @@ const Theme = ({ state }) => {
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
         <meta name="google-site-verification" content="ULLpQHl1XeVHE2H-ZSPLosCUY10CBkttCwbNrfMBVsc" />
+        <meta name="robots" content="noodp, noydir, index, follow, archive" />
+        <meta name="robots" content="max-snippet:50, max-image-preview:large" />
+        <link rel="canonical" href={websiteLink} />
+        <meta property="og:title" content={state.frontity.title} />
+        <meta property="og:description" content={state.frontity.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={websiteLink} />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 

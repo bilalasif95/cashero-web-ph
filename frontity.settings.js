@@ -1,8 +1,10 @@
+import { gtmId, wordPressLink } from "./packages/mars-theme/src/config/config";
+
 const settings = {
   "name": "cashero-web",
   "state": {
     "frontity": {
-      "url": "https://test.cashero.com",
+      "url": wordPressLink,
       "title": "Cashero",
       "description": "Cashero"
     }
@@ -69,7 +71,7 @@ const settings = {
       "name": "@frontity/google-tag-manager-analytics",
       "state": {
         "googleTagManagerAnalytics": {
-          "containerId": "GTM-KKSRK7H",
+          "containerId": gtmId,
         },
       }
     },
@@ -77,7 +79,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.cashero.com"
+          "url": wordPressLink
         }
       }
     },
