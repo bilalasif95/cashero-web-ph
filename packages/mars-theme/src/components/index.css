@@ -15820,3 +15820,7 @@ select:-webkit-autofill:focus {
       cursor: -webkit-grabbing;
       transform: scale(1);
     }
+
+    .underline {
+      text-decoration: underline;
+    }

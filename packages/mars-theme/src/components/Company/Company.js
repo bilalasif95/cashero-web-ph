@@ -12,7 +12,7 @@ export function Company() {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">
-							<img className="img-fluid mx-auto d-block CasheroImg" alt="CasheroImg" src={CasheroImg} />
+							<img className="img-fluid mx-auto d-block CasheroImg" alt="Cashero Image" src={CasheroImg} />
 						</div>
 					</div>
 				</div>
@@ -23,7 +23,7 @@ export function Company() {
 				<div className="YearsSec">
 					<div className="row">
 						<div className="col-md-12">
-							<img className="img-fluid mx-auto d-block" alt="YearsImg" src={YearsImg} />
+							<img className="img-fluid mx-auto d-block" alt="Years Image" src={YearsImg} />
 						</div>
 					</div>
 				</div>

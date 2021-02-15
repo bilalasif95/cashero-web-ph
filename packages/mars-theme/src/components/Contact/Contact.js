@@ -12,7 +12,7 @@ export function Contact() {
 							</div>
 							<div className="col-md-12 d-flex">
 								<div className="ContactBox w-100">
-									<img className="img-fluid" alt="" src={Chat} />
+									<img className="img-fluid" alt="Chat" src={Chat} />
 									<h1>In-App Chat</h1>
 									<p>Monday—Sunday: &nbsp; 24 hours</p>
 								</div>

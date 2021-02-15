@@ -114,7 +114,7 @@ export function SignupSection() {
 									</div>
 								</div>
 								<div className="col-md-6">
-									<img alt="" className="img-fluid" src={Wait2} />
+									<img alt="Wait" className="img-fluid" src={Wait2} />
 								</div>
 							</div>
 						</div>

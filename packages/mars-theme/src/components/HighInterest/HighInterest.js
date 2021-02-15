@@ -112,13 +112,13 @@ export function HighInterest() {
 							<img
 								className="CounterIcon"
 								src={CounterIcon}
-								alt=""
+								alt="Counter Icon"
 							/>
 							<div className="GraphCont">
 								<img
 									className="mx-fluid countryFlag mb-3"
 									src={Earning}
-									alt=""
+									alt="Earning"
 								/>
 								<p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
 									flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : calculateBRL(baseCurrencyGBPValue, "")}</p>
@@ -237,9 +237,9 @@ export function HighInterest() {
 									</p>
 								<Link link="/personal" className="Link">Learn more about Savings
 									{innerWidth >= 540 ?
-										<img alt="" className="ArrowBtn" src={Arrow} />
+										<img alt="Arrow" className="ArrowBtn" src={Arrow} />
 										:
-										<img alt="" className="ArrowBtn" src={ArrowWhite} />
+										<img alt="Arrow White" className="ArrowBtn" src={ArrowWhite} />
 									}</Link>
 							</Fade>
 						</div>

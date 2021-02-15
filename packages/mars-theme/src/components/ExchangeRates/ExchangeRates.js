@@ -650,7 +650,7 @@ export function ExchangeRates() {
 										"" :
 										<div className="exchangeAmount">
 											<div className="ExchangeImg">
-												<img alt="ConImg" onClick={onSwap} src={ConImg} />
+												<img alt="Coin Image" onClick={onSwap} src={ConImg} />
 											</div>
 											<div className="ExchangeNum">
 												{loading ? <p>Fetching Rates...</p> :
@@ -910,17 +910,17 @@ export function ExchangeRates() {
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
 							<li>
-								<img src={ExArrow} alt="ExArrow" />
+								<img src={ExArrow} alt="Exchange Arrow" />
 								Exchange in
 								an instant
 							</li>
 							<li>
-								<img src={ExDollar} alt="ExDollar" />
+								<img src={ExDollar} alt="Exchange Dollar" />
 								Switch between{" "}
 								 USD, GBP, EUR
 							</li>
 							<li>
-								<img src={Dollarlist} alt="Dollarlist" />
+								<img src={Dollarlist} alt="Dollar list" />
 								No hidden fees,
 							 full
 								transparency
@@ -932,7 +932,7 @@ export function ExchangeRates() {
 								time
 							</li>
 							<li>
-								<img src={listHome} alt="listHome" />
+								<img src={listHome} alt="list Home" />
 								EU licensed & regulated{" "}
 							 financial
 								institution
@@ -957,7 +957,7 @@ export function ExchangeRates() {
 								<div className="GetStartedBox1 w-100">
 									<img
 										className="img-fluid"
-										alt="fav"
+										alt="Favourite"
 										src={Fav}
 									/>
 									<h3>Sign up for Cashero.</h3>
@@ -981,7 +981,7 @@ export function ExchangeRates() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="MovingCoins" src={MovingCoins} />
+									<img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
 									<h3>
 										Hold and switch between USD, GPB
 										or EUR in seconds.

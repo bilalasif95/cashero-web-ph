@@ -373,7 +373,7 @@ export function CurrencyAccounts() {
 							<div className="Graph">
 								<img
 									className="CounterIcon"
-									alt="CounterIcon"
+									alt="Counter Icon"
 									src={CounterIcon}
 								/>
 								<div className="GraphCont">
@@ -493,8 +493,8 @@ export function CurrencyAccounts() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList2 list-unstyled">
-							<li><img alt="oneWallet" src={oneWallet} />One wallet, multiple currencies</li>
-							<li><img alt="ListPhone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="one Wallet" src={oneWallet} />One wallet, multiple currencies</li>
+							<li><img alt="List Phone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
 							<li><img alt="Draw" src={Draw} />EU licensed & regulated financial institution</li>
 						</ul>
@@ -517,7 +517,7 @@ export function CurrencyAccounts() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img className="img-fluid" alt="Fav" src={Fav} />
+									<img className="img-fluid" alt="Favourite" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -526,7 +526,7 @@ export function CurrencyAccounts() {
 							<div className="GetStartedBox2 w-100">
 								<img
 									className="img-fluid"
-									alt="WalletCoins"
+									alt="Wallet Coins"
 									src={WalletCoins}
 								/>
 								<h3>
@@ -539,7 +539,7 @@ export function CurrencyAccounts() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="MovingCoins" src={MovingCoins} />
+									<img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
 									<h3>
 										Hold and switch between USD, GBP or EUR in seconds.
 										</h3>

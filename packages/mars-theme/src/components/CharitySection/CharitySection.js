@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../link";
-import Charity from "../../assets/Charity.svg";
+import Charity from "../../assets/Charity.jpg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 
@@ -12,7 +12,7 @@ export function CharitySection() {
 					<div className="charity">
 						<img
 							className="sm-center img-fluid"
-							alt=""
+							alt="Charity"
 							src={Charity}
 						/>
 					</div>
@@ -29,7 +29,7 @@ export function CharitySection() {
 								Sign up to Cashero and continue to make a difference by receiving donations.
 								Receive donations directly in the app or by creating a donation request link. You receive 100% of the funds and your donations earn interest.
 								</p>
-							<Link link="/donation" className="Link">Learn more about Charity<img className="ArrowBtn" alt="" src={Arrow} /></Link>
+							<Link link="/donation" className="Link">Learn more about Charity<img className="ArrowBtn" alt="arrow" src={Arrow} /></Link>
 						</Fade>
 					</div>
 				</div>

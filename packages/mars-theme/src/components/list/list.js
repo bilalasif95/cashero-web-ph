@@ -114,7 +114,7 @@ const List = ({ state }) => {
             >
               {toggleBotton ? (
                 <div>
-                  <img src={Close} alt="" />
+                  <img src={Close} alt="Close" />
                 </div>
               ) : (
                   <>
@@ -152,7 +152,7 @@ const List = ({ state }) => {
                         <div className="HeaderListCont">
                           <p className="ListTitle">
                             <img
-                              alt=""
+                              alt="Dropdown Graph"
                               src={DropdownGraph}
                             />
 														Wealth
@@ -187,7 +187,7 @@ const List = ({ state }) => {
                           <p className="ListTitle">
                             <img
                               src={DropdownArrow}
-                              alt=""
+                              alt="Dropdown Arrow"
                             />
 														Payments
 													</p>
@@ -233,7 +233,7 @@ const List = ({ state }) => {
                           <p className="ListTitle">
                             <img
                               src={DropdownGraph}
-                              alt=""
+                              alt="Dropdown Graph"
                             />
 														Wealth
 													</p>
@@ -261,7 +261,7 @@ const List = ({ state }) => {
                           <p className="ListTitle">
                             <img
                               src={DropdownArrow}
-                              alt=""
+                              alt="Dropdown Arrow"
                             />
 														Payments
 													</p>
@@ -304,7 +304,7 @@ const List = ({ state }) => {
                           <p className="ListTitle CharityTitle">
                             <img
                               src={CharityImg}
-                              alt=""
+                              alt="Charity"
                             />
 														Charities
 													</p>
@@ -391,7 +391,7 @@ const List = ({ state }) => {
                   <div className="col-md-6">
                     <img
                       className="img-fluid"
-                      alt=""
+                      alt="Wait"
                       src={Wait2}
                     />
                   </div>
@@ -477,7 +477,7 @@ const List = ({ state }) => {
 					</button>
           <img
             className="GetAppClose"
-            alt=""
+            alt="close"
             src={close}
             onClick={() => setOpenDiv(false)}
           />

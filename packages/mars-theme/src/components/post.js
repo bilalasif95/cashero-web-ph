@@ -44,15 +44,15 @@ const Post = ({ state, actions, libraries }) => {
         <div className="BlogHeader">
           <div className="BackIcon">
             <ul className="list-unstyled backList">
-              <Link link="/blog"><li><img alt="" src={backicon} /> Back</li></Link>
+              <Link link="/blog"><li><img alt="back icon" src={backicon} /> Back</li></Link>
             </ul>
           </div>
           <div>
             <ul className="list-unstyled BlogSocialList">
-              <li><a href="/#"><img alt="" src={FB} /><span className="SocialText">Share</span></a></li>
-              <li><a href="/#"><img alt="" src={twitter} /><span className="SocialText">Tweet</span></a></li>
-              <li><a href="/#"><img alt="" src={linkedIn} /><span className="SocialText">Post</span></a></li>
-              <li><a href="/#"><img alt="" src={URL} /><span className="SocialText">URL</span></a></li>
+              <li><a href="/#"><img alt="facebook icon" src={FB} /><span className="SocialText">Share</span></a></li>
+              <li><a href="/#"><img alt="twitter icon" src={twitter} /><span className="SocialText">Tweet</span></a></li>
+              <li><a href="/#"><img alt="linkedIn icon" src={linkedIn} /><span className="SocialText">Post</span></a></li>
+              <li><a href="/#"><img alt="URL icon" src={URL} /><span className="SocialText">URL</span></a></li>
             </ul>
           </div>
         </div>

@@ -275,7 +275,7 @@ export function Donation() {
 							</div>
 						</div>
 						<div className="col-md-6">
-							<img alt="SlideGroup" className="img-fluid mx-auto d-block" src={SlideGroup} />
+							<img alt="Slide Group" className="img-fluid mx-auto d-block" src={SlideGroup} />
 						</div>
 					</div>
 				</div>
@@ -284,11 +284,11 @@ export function Donation() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList3 list-unstyled">
-							<li><img alt="heartDollar" src={heartDollar} />Discover new charities</li>
-							<li><img alt="donateDollar" src={donateDollar} />Donate directly</li>
+							<li><img alt="heart Dollar" src={heartDollar} />Discover new charities</li>
+							<li><img alt="donate Dollar" src={donateDollar} />Donate directly</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
 							<li><img alt="Draw" src={Draw} />Donate your money at any time</li>
-							<li><img alt="listHome" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -306,7 +306,7 @@ export function Donation() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img className="img-fluid" alt="fav" src={Fav} />
+									<img className="img-fluid" alt="Favourite" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -315,7 +315,7 @@ export function Donation() {
 							<div className="GetStartedBox2 w-100">
 								<img
 									className="img-fluid"
-									alt="DonateBox"
+									alt="Donate Box"
 									src={DonateBox}
 								/>
 								<h3>
@@ -327,7 +327,7 @@ export function Donation() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="" src={pricewallet} />
+									<img className="img-fluid" alt="price wallet" src={pricewallet} />
 									<h3>
 										Make donations and make a difference!
 									</h3>

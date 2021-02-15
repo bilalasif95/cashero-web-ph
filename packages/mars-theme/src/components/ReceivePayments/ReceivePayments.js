@@ -281,11 +281,11 @@ export function ReceivePayments() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="walletDown" src={walletDown} />Second, Request,</li>
+							<li><img alt="wallet Down" src={walletDown} />Second, Request,</li>
 							<li><img alt="Instant" src={Instant} />Instant payments</li>
-							<li><img alt="listPhone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="list Phone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
-							<li><img alt="listHome" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -304,7 +304,7 @@ export function ReceivePayments() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img className="img-fluid" alt="Fav" src={Fav} />
+									<img className="img-fluid" alt="Favourite" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>

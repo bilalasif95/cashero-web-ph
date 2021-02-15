@@ -132,7 +132,7 @@ export function HomePage() {
 									<img
 										className="img-fluid"
 										src={Wait2}
-										alt=""
+										alt="Wait"
 									/>
 								</div>
 							</div>
@@ -299,7 +299,7 @@ export function HomePage() {
 								</label> */}
 								<ul className="HomepagelList list-unstyled">
 									<li>
-										<img src={Clock} alt="" />
+										<img src={Clock} alt="Clock" />
 										Open an account in minutes
 									</li>
 								</ul>
@@ -307,7 +307,7 @@ export function HomePage() {
 						</div>
 						<div className="col-md-4">
 							<div className="bannerImg">
-								<img className="img-fluid " alt="" src={Banner} />
+								<img className="img-fluid " alt="Banner" src={Banner} />
 							</div>
 						</div>
 					</div>

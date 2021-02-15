@@ -21,18 +21,18 @@ export function GlobalMoney() {
 						>
 							<img
 								className="img-fluid mx-auto d-block"
-								alt=""
+								alt="Locations"
 								src={Locations}
 							/>
 						</Zoom>
 						<img
 							className="img-fluid mx-auto d-block c-map"
-							alt=""
+							alt="CMap"
 							src={CMap}
 						/>
 						<img
 							className="img-fluid mx-auto d-block cashero-c"
-							alt=""
+							alt="Cashero"
 							src={CasheroC}
 						/>
 					</div>
@@ -49,7 +49,7 @@ export function GlobalMoney() {
 								Send money to back home. Stretch your hard earned money even further with low exchange fees. Cashero helps you send money globally with no hassle.
 							</p>
 							<Link link="/remittance" className="Link">
-								Learn more about Transfers  <img className="ArrowBtn" alt="" src={Arrow} />
+								Learn more about Transfers  <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>

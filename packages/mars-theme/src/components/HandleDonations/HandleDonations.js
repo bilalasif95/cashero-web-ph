@@ -27,7 +27,7 @@ export function HandleDonations() {
 						</div>
 					</div>
 					<div className="col-md-6">
-						<img className="img-fluid mx-auto d-block sm-center" alt="" src={heartmap} />
+						<img className="img-fluid mx-auto d-block sm-center" alt="heart map" src={heartmap} />
 					</div>
 				</div>
 			</div>

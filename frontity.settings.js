@@ -5,8 +5,8 @@ const settings = {
   "state": {
     "frontity": {
       "url": wordPressLink,
-      "title": "Cashero",
-      "description": "Cashero"
+      "title": "Cashero App",
+      "description": "Cashero is a limited company registered in England and Wales with the registered company number 12783127"
     }
   },
   "packages": [

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "../link";
 import SendMoney from "../../assets/SendMoney.svg";
 import Send from "../../assets/send.svg";
-import Request from "../../assets/request.svg";
+import Request from "../../assets/request.jpg";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 
@@ -20,7 +20,7 @@ export function MoneyRequest() {
 							</h1>
 							<p>Cashero makes your payments simple. Tap a button and start sending, requesting and receiving payments worldwide. It’s fast, secure, convenient, and simple.</p>
 							<Link link="/receive-payments" className="Link">
-								Learn more about Payments <img className="ArrowBtn" alt="" src={Arrow} />
+								Learn more about Payments <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -42,7 +42,7 @@ export function MoneyRequest() {
 											<img
 												className="img-fluid mx-auto d-block"
 												src={Request}
-												alt=""
+												alt="Request"
 											/>
 										</Slide>
 									</div>
@@ -57,7 +57,7 @@ export function MoneyRequest() {
 											<img
 												className="img-fluid mx-auto d-block"
 												src={Send}
-												alt=""
+												alt="Send"
 											/>
 										</Slide>
 									</div>
@@ -67,7 +67,7 @@ export function MoneyRequest() {
 						<img
 							className="img-fluid mx-auto d-block send-money"
 							src={SendMoney}
-							alt=""
+							alt="Send Money"
 						/>
 					</div>
 				</div>

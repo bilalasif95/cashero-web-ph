@@ -133,7 +133,7 @@ export function Remittance() {
 									<div className="col-md-6">
 										<img
 											className="img-fluid"
-											alt=""
+											alt="Wait"
 											src={Wait2}
 										/>
 									</div>
@@ -267,12 +267,12 @@ export function Remittance() {
 									</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="" src={Clock} />Open an account in minutes</li>
+									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
 								</ul>
 							</div>
 						</div>
 						<div className="col-md-6">
-							<img alt="" className="img-fluid mx-auto d-block" src={Casher0map} />
+							<img alt="Cashero map" className="img-fluid mx-auto d-block" src={Casher0map} />
 						</div>
 					</div>
 				</div>
@@ -281,11 +281,11 @@ export function Remittance() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="" src={GlobeDollar} />Send money worldwide</li>
-							<li><img alt="" src={Dollarlist} />No hidden fees</li>
-							<li><img alt="" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
-							<li><img alt="" src={Draw} />Add or withdraw your money at any time</li>
-							<li><img alt="" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="Globe Dollar" src={GlobeDollar} />Send money worldwide</li>
+							<li><img alt="Dollar list" src={Dollarlist} />No hidden fees</li>
+							<li><img alt="list Phone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -304,7 +304,7 @@ export function Remittance() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img alt="" className="img-fluid" src={Fav} />
+									<img alt="Favourite" className="img-fluid" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -313,7 +313,7 @@ export function Remittance() {
 							<div className="GetStartedBox2 w-100">
 								<img
 									className="img-fluid"
-									alt=""
+									alt="Steps Dollar"
 									src={StepsDollar}
 								/>
 								<h3>
@@ -324,7 +324,7 @@ export function Remittance() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="" src={Done} />
+									<img className="img-fluid" alt="Done" src={Done} />
 									<h3>
 										Send money directly to another Cashero account or deposit to a bank account.
 									</h3>
@@ -337,7 +337,7 @@ export function Remittance() {
 							<div className="MultistepsCont">
 								<p>Ready to send money hassle-free? Cashero’s global payment solution is here for you and for what matters most.</p>
 								<button className="LinkBtn" onClick={appModalOpen}>
-									Start Sending   <img alt="" className="ArrowBtn" src={Arrow1} />
+									Start Sending   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

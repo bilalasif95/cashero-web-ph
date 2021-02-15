@@ -183,7 +183,7 @@ export function Personal() {
 										<img
 											className="img-fluid"
 											src={Wait2}
-											alt=""
+											alt="Wait"
 										/>
 									</div>
 								</div>
@@ -317,7 +317,7 @@ export function Personal() {
 									</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img src={Clock} alt="" />Open an account in minutes</li>
+									<li><img src={Clock} alt="Clock" />Open an account in minutes</li>
 								</ul>
 							</div>
 						</div>
@@ -340,7 +340,7 @@ export function Personal() {
 												</div>
 											</div>
 											<div className="col-2">
-												<img src={Arrow} alt="" />
+												<img src={Arrow} alt="Arrow" />
 											</div>
 											<div className="col-6">
 												<div className="InterestBox mt-0 TotalText">
@@ -410,11 +410,11 @@ export function Personal() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="" src={HighDollar} />Inflation beating, 5% APY</li>
-							<li><img alt="" src={listGraph} />Interest paid out daily</li>
-							<li><img alt="" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
-							<li><img alt="" src={Draw} />Add or withdraw your  money at any time</li>
-							<li><img alt="" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="High Dollar" src={HighDollar} />Inflation beating, 5% APY</li>
+							<li><img alt="list Graph" src={listGraph} />Interest paid out daily</li>
+							<li><img alt="List Phone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="Draw" src={Draw} />Add or withdraw your  money at any time</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -435,7 +435,7 @@ export function Personal() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img alt="" className="img-fluid" src={Fav} />
+									<img alt="Favourite" className="img-fluid" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -445,7 +445,7 @@ export function Personal() {
 								<img
 									className="img-fluid"
 									src={WalletCoins}
-									alt=""
+									alt="Wallet Coins"
 								/>
 								<h3>
 									Add funds into your High {" "}
@@ -457,7 +457,7 @@ export function Personal() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="" src={ArrowUp} />
+									<img className="img-fluid" alt="Arrow Up" src={ArrowUp} />
 									<h3>
 										Earn up to 5% APY and redeem whenever you want.
 									</h3>
@@ -470,7 +470,7 @@ export function Personal() {
 							<div className="MultistepsCont">
 								<p>Ready to earn more? Growing your wealth is easy with Cashero's high-yield savings account.</p>
 								<button onClick={appModalOpen} className="LinkBtn" >
-									Start Earning   <img alt="" className="ArrowBtn" src={Arrow1} />
+									Start Earning   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

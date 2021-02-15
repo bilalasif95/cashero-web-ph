@@ -18,7 +18,7 @@ export function CurrencyConversion() {
 						</div>
 						<img
 							className="charity-mob"
-							alt=""
+							alt="currency exchange"
 							src={currExchange}
 						/>
 					</div>
@@ -36,7 +36,7 @@ export function CurrencyConversion() {
 									Instantly exchange between USD, EUR, and GBP. Cashero gives you free currency conversions at transparent bank-beating exchange rates. Beat that.
 								</p>
 								<Link link="/exchange-rates" className="Link sm-mb-30">
-									Learn more about Exchange <img className="ArrowBtn" alt="" src={Arrow} />
+									Learn more about Exchange <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 								</Link>
 							</Fade>
 						</div>

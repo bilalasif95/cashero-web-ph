@@ -18,7 +18,7 @@ export function Sendpayments() {
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block"
-						alt="WorldMap"
+						alt="World Map"
 						src={WorldMap}
 					/>
 				</div>
