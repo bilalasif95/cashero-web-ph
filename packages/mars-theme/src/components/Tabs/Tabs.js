@@ -306,7 +306,7 @@ export function QuestionTabs(props) {
 									<Typography>
 										<h4 className="FaqText">
 											To learn more about Cashero
-											contact info@cashero.com.
+											contact <a href="mailto:info@cashero.com">info@cashero.com</a>.
 										</h4>
 									</Typography>
 								</AccordionDetails>
