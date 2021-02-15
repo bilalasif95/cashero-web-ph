@@ -44,6 +44,7 @@ const Theme = ({ state }) => {
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={websiteLink} />
+        <meta property="og:image" content="https://i.imgur.com/as9Mj8G.png" />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
@@ -69,7 +70,7 @@ const Theme = ({ state }) => {
         <ReceivePayments when={data.isReceivePayments} />
         <Remittance when={data.isRemittance} />
         <Loading when={data.isFetching} />
-        <HomePage when={data.isArchive} />
+        <HomePage when={data.isArchive} state={state} />
         <Post when={data.isPostType} />
         <BlogPage blogsCategories={categories} when={data.isBlog} />
         <PageError when={data.isError} />

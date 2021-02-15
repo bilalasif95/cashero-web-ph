@@ -22,8 +22,9 @@ import CloseIcon from "@material-ui/icons/Close";
 import Wait2 from "../../assets/wait.svg";
 import { callApi } from "../../config/call-api";
 import { EndPoints } from "../../config/config";
+import { structuredData } from "../../config/SEO/Homepage/structuredData";
 
-export function HomePage() {
+export function HomePage(props) {
 	// const [searchTerm, setSearchTerm] = useState<any>("");
 	// const [searchResults, setSearchResults] = useState<any>(counrtrylist);
 	// const [searchResults2, setSearchResults2] = useState<any>([]);
@@ -91,6 +92,9 @@ export function HomePage() {
 	// };
 	return (
 		<>
+			<script className="structured-data-list" type="application/ld+json">
+				{structuredData(props.state)}
+			</script>
 			<Modal
 				aria-labelledby="transition-modal-title"
 				aria-describedby="transition-modal-description"
