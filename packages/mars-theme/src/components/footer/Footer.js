@@ -10,6 +10,7 @@ import LinkedIn from "../../assets/linkedin.svg";
 import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg";
 import Youtube from "../../assets/youtube.svg";
+import Instagram from "../../assets/instagram.svg";
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -92,6 +93,7 @@ export function Footer() {
 							<li><a href="https://www.linkedin.com/company/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" src={LinkedIn} /> </a></li>
 							<li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
 							<li><a href="https://twitter.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Twitter" src={Twitter} /> </a></li>
+							<li><a href="https://www.instagram.com/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="Instagram" src={Instagram} /> </a></li>
 							<li><a href="https://www.youtube.com/channel/UCnFJebay3pAJBu-DpbYWjCQ" target="_blank" rel="noopener noreferrer"><img alt="Youtube" src={Youtube} /> </a></li>
 						</ul>
 					</div>
