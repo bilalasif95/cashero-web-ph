@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TextField from "../../common/textFiled";
-import { styled } from "frontity";
 import Banner from "../../assets/photoshop.gif";
 import { GlobalMoney } from "../GlobalMoney/GlobalMoney";
 import { HighInterest } from "../HighInterest/HighInterest";
@@ -16,13 +15,10 @@ import { GetStarted } from "../GetStarted/GetStarted";
 import Clock from "../../assets/clock.svg";
 import { MultiCurrency } from "../MultiCurrency/MultiCurrency";
 import { Fade } from "react-awesome-reveal";
-import Modal from "@material-ui/core/Modal";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
-import Wait2 from "../../assets/wait.svg";
 import { callApi } from "../../config/call-api";
 import { EndPoints } from "../../config/config";
 import { structuredData } from "../../config/SEO/Homepage/structuredData";
+import ThanksModal from "../ThanksModal/ThanksModal";
 
 export function HomePage(props) {
 	// const [searchTerm, setSearchTerm] = useState<any>("");
@@ -48,6 +44,9 @@ export function HomePage(props) {
 				setLoading(false);
 				setEmail("");
 			})
+	};
+	const thanksModalClose = () => {
+		setSuccessModal(false);
 	};
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	// const [phonenoLength, setPhoneNoLength] = useState(10);
@@ -95,55 +94,12 @@ export function HomePage(props) {
 			<script className="structured-data-list" type="application/ld+json">
 				{structuredData(props.state)}
 			</script>
-			<Modal
-				aria-labelledby="transition-modal-title"
-				aria-describedby="transition-modal-description"
-				className="modal"
-				open={openSuccessModal}
-				onClose={() => setSuccessModal(false)}
-				closeAfterTransition
-			>
-				<Paper>
-					<IconButton
-						aria-label="Close"
-						className="closeButton"
-						onClick={() => setSuccessModal(false)}
-					>
-						<CloseIcon />
-					</IconButton>
-					<div className="Waitlist">
-						<div className="container">
-							<div className="row waitlistRow">
-								<div className="col-md-6">
-									<div className="waitlistcont">
-										<h3
-											className=""
-											id="transition-modal-title"
-										>
-											Thank you for joining{" "}
-											<span className="br-block"></span>{" "}
-											Cashero's waitlist{" "}
-										</h3>
-										<p>
-											Cashero's revolutionary approach
-												to making{" "}
-											<span className="br-block"></span>{" "}
-												your money go further.{" "}
-										</p>
-									</div>
-								</div>
-								<div className="col-md-6">
-									<img
-										className="img-fluid"
-										src={Wait2}
-										alt="Wait"
-									/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</Paper>
-			</Modal>
+			{openSuccessModal && (
+				<ThanksModal
+					open={openSuccessModal}
+					handleClose={thanksModalClose}
+				/>
+			)}
 			<div className="container">
 				<div className="banner">
 					<div className="row">
@@ -338,20 +294,3 @@ export function HomePage(props) {
 		</>
 	);
 }
-
-const Paper = styled.div`
-  background-color: #fff;
-  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
-  padding: 16px 32px 24px;
-  width: 100% !important;
-  height: 100vh !important;
-  .MuiButtonBase-root {
-    top: 81px;
-    right: 86px;
-    position: absolute;
-   @media(max-width: 540px){
-      top: 0px;
-      right: 0px;
-    },
-  }
-`;

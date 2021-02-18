@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { connect, styled } from "frontity";
-import Modal from "@material-ui/core/Modal";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
+import { connect } from "frontity";
 // import { connect, styled, decode } from "frontity";
 // import Item from "./list-item";
 // import Pagination from "./pagination";
@@ -13,10 +10,8 @@ import close from "../../assets/close.svg";
 import DropdownGraph from "../../assets/DropdownGraph.svg";
 import DropdownArrow from "../../assets/DropdownArrow.svg";
 import CharityImg from "../../assets/charityImg.svg";
-import Wait2 from "../../assets/wait.svg";
-import TextField from "../../common/textFiled";
-import { callApi } from "../../config/call-api";
-import { EndPoints } from "../../config/config";
+import ThanksModal from "../ThanksModal/ThanksModal";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 
 const List = ({ state }) => {
   // const data = state.source.get(state.router.link);
@@ -25,10 +20,8 @@ const List = ({ state }) => {
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
   const [donationsToggleBotton, setDonationsToggleBotton] = useState(false);
   const [open, setOpen] = useState(false);
-  const [email, setEmail] = useState("");
   const [innerWidth, setInnerWidth] = useState(0);
   const [openSuccessModal, setSuccessModal] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [openDiv, setOpenDiv] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const onToggleButtonClicked = () => {
@@ -67,20 +60,6 @@ const List = ({ state }) => {
   const handleClose = () => {
     setOpen(false);
     setSuccessModal(false);
-  };
-  const closeBothModal = () => {
-    setSuccessModal(false);
-    setOpen(false);
-  };
-  const onSubmit = () => {
-    setLoading(true);
-    callApi(EndPoints.preregistration, "post", "", {
-      Phone: email,
-    }).then(() => {
-      setSuccessModal(true);
-      setLoading(false);
-      setEmail("");
-    });
   };
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -349,124 +328,17 @@ const List = ({ state }) => {
         </div>
       </div>
       {openSuccessModal && (
-        <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          className="modal"
+        <ThanksModal
           open={openSuccessModal}
-          onClose={handleClose}
-          closeAfterTransition
-        >
-          <Paper>
-            <IconButton
-              aria-label="Close"
-              className="closeButton"
-              onClick={() => {
-                closeBothModal();
-              }}
-            >
-              <CloseIcon />
-            </IconButton>
-            <div className="Waitlist">
-              <div className="container">
-                <div className="row waitlistRow">
-                  <div className="col-md-6">
-                    <div className="waitlistcont">
-                      <h3
-                        className=""
-                        id="transition-modal-title"
-                      >
-                        Thank you for joining{" "}
-                        <span className="br-block"></span>{" "}
-												Cashero's waitlist{" "}
-                      </h3>
-                      <p>
-                        Cashero's revolutionary approach
-												to making{" "}
-                        <span className="br-block"></span>{" "}
-												your money go further.{" "}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <img
-                      className="img-fluid"
-                      alt="Wait"
-                      src={Wait2}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Paper>
-        </Modal>
+          handleClose={handleClose}
+        />
       )}
-      {open &&
-        <div className="GetAppModal">
-          <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            className="modal"
-            open={open}
-            onClose={handleClose}
-            closeAfterTransition
-          >
-            <Paper>
-              <IconButton
-                aria-label="Close"
-                className="closeButton"
-                onClick={() => handleClose()}
-              >
-                <CloseIcon />
-              </IconButton>
-              <div className="joinApp">
-                <div className="inner-content">
-                  <h2
-                    className="ModalTitle"
-                    id="transition-modal-title"
-                  >
-                    Your Hero awaits.{" "}
-                    <span className="br-block"></span> Start
-									saving, earning and sending in seconds.
-								</h2>
-                  <p id="transition-modal-description">
-                    Enter your number below and we’ll send you a
-                    message to download the Cashero app.
-								</p>
-                  <div className="ModalPhone">
-                    <div className="GetAppEmail">
-                      <TextField
-                        placeholder="Enter Email Address"
-                        type="email"
-                        autoComplete='off'
-                        value={email}
-                        onChange={(e) =>
-                          setEmail(e.target.value)
-                        }
-                      />
-                      <div className="GetEarlyBtn">
-                        <button
-                          disabled={
-                            loading ||
-                            !email ||
-                            !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(
-                              email
-                            )
-                          }
-                          onClick={onSubmit}
-                          className="btn btn-default"
-                        >
-                          Get Early Access
-											</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Paper>
-          </Modal>
-        </div>
-      }
+      {open && (
+        <GetTheAppModal
+          open={open}
+          handleClose={handleClose}
+        />
+      )}
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <button
@@ -490,7 +362,7 @@ const List = ({ state }) => {
     //   {/* If the list is a taxonomy, we render a title. */}
     //   {data.isTaxonomy && (
     //     <Header>
-    //       {data.taxonomy}:{" "}
+    //       {data.taxonomy}:
     //       <b>{decode(state.source[data.taxonomy][data.id].name)}</b>
     //     </Header>
     //   )}
@@ -521,23 +393,6 @@ export default connect(List);
 //   padding: 24px;
 //   list-style: none;
 // `;
-
-const Paper = styled.div`
-  background-color: #fff;
-  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
-  padding: 16px 32px 24px;
-  width: 100% !important;
-  height: 100vh !important;
-  .MuiButtonBase-root {
-    top: 81px;
-    right: 86px;
-    position: absolute;
-   @media(max-width: 540px){
-      top: 0px;
-      right: 0px;
-    },
-  }
-`;
 
 // const Content = styled.div`
 //   background-color: #fff;

@@ -25,6 +25,7 @@ export default function GetTheAppModal(props) {
     // }, [])
     const thanksModalClose = () => {
         setSuccessModal(false);
+        props.handleClose();
     };
     // const toggle = () => {
     //     setSearchTerm("");

@@ -3,11 +3,11 @@ import Clock from "../../assets/clockImg.svg";
 import donateDollar from "../../assets/donateDollar.svg";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import heart from "../../assets/heart.svg";
-import Draw from "../../assets/draw.svg"
-import listImg from "../../assets/list.png"
+import Draw from "../../assets/draw.svg";
+import listImg from "../../assets/list.png";
 import StepsWallet from "../../assets/stepsWallet.png"
 import heartDollar from "../../assets/heartDollar.svg";
-import listHome from "../../assets/listHome.svg"
+import listHome from "../../assets/listHome.svg";
 import freeFund from "../../assets/freeFund.svg";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
 import { Companies } from "../Companies/Companies";
@@ -19,10 +19,6 @@ import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import IconButton from "@material-ui/core/IconButton";
-import Modal from "@material-ui/core/Modal";
-import CloseIcon from "@material-ui/icons/Close";
-import Wait2 from "../../assets/wait.svg";
 
 export function ListedCharity() {
 	// const [searchTerm, setSearchTerm] = useState<any>("");
@@ -35,7 +31,6 @@ export function ListedCharity() {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
-	const [openSuccessModal, setSuccessModal] = useState(false);
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	const [appModal, setAppModal] = useState(false);
@@ -68,7 +63,6 @@ export function ListedCharity() {
 	// 			} else {
 	// 				setCode("+1")
 	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
 	// 			}
 	// 		})
 	// 		.catch(() => {
@@ -78,12 +72,6 @@ export function ListedCharity() {
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
-	const closeBothModal = () => {
-		// setCode("+1")
-		// setNewPhoneNumber("");
-		setSuccessModal(false)
-		setAppModal(false)
-	};
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -92,65 +80,13 @@ export function ListedCharity() {
 	}
 	return (
 		<>
-			{
-				openSuccessModal && <Modal
-					aria-labelledby="transition-modal-title"
-					aria-describedby="transition-modal-description"
-					className="modal"
-					open={openSuccessModal}
-					onClose={() => setSuccessModal(false)}
-					closeAfterTransition
-				>
-					<Paper>
-						<IconButton
-							aria-label="Close"
-							className="closeButton"
-							onClick={() => { closeBothModal() }}
-						>
-							<CloseIcon />
-						</IconButton>
-						<div className="Waitlist">
-							<div className="container">
-								<div className="row waitlistRow">
-									<div className="col-md-6">
-										<div className="waitlistcont">
-											<h3
-												className=""
-												id="transition-modal-title"
-											>
-												Thank you for joining{" "}
-												<span className="br-block"></span>{" "}
-												Cashero's waitlist{" "}
-											</h3>
-											<p>
-												Cashero's revolutionary approach
-												to making{" "}
-												<span className="br-block"></span>{" "}
-												your money go further.{" "}
-											</p>
-										</div>
-									</div>
-									<div className="col-md-6">
-										<img
-											className="img-fluid"
-											alt="wait"
-											src={Wait2}
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</Paper>
-				</Modal>
-			}
 			<div className="PesonalBanner">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-6">
 							<div className="PersonalCont">
 								<h1>Harness The Power Of Free Fundraising</h1>
-								<p className="bannerPara">We spread your story, you receive 100% of the donations, and we all benefit
-								</p>
+								<p className="bannerPara">We spread your story, you receive 100% of the donations, and we all benefit</p>
 								<TextfieldBanner />
 								{/* <div className="numberSelection">
 									<div className="selectCountry">

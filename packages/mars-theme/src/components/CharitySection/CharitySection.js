@@ -20,11 +20,7 @@ export function CharitySection() {
 				<div className="col-md-6">
 					<div className="CharityCont">
 						<Fade triggerOnce direction="up">
-							<h1 className="oneAppTitle">
-								{" "}
-									Charity and
-									 Donations
-								</h1>
+							<h1 className="oneAppTitle">Charity and Donations</h1>
 							<p>
 								Sign up to Cashero and continue to make a difference by receiving donations.
 								Receive donations directly in the app or by creating a donation request link. You receive 100% of the funds and your donations earn interest.

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Clock from "../../assets/clockImg.svg";
-import { styled } from "frontity";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import oneWallet from "../../assets/onewallet.svg";
 import WalletCoins from "../../assets/WalletCoins.png";
@@ -22,17 +21,8 @@ import Earning from "../../assets/earning.svg";
 import SearchIcon from "@material-ui/icons/Search";
 import MovingCoins from "../../assets/movingCoins.png";
 import Arrow1 from "../../assets/arrowLink.svg";
-import Wait2 from "../../assets/wait.svg";
-import Modal from "@material-ui/core/Modal";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import {
-	Dropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-} from "reactstrap";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import currencieslist from "../../config/currenciesList";
 
 var bigDecimal = require('js-big-decimal');
@@ -60,13 +50,10 @@ export function CurrencyAccounts() {
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
 	const [searchTermgbp, setSearchTermgbp] = useState("");
-	const [openSuccessModal, setSuccessModal] = useState(false);
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	const [searchResults2gbp, setSearchResults2gbp] = useState([]);
-	const [searchResultsgbp, setSearchResultsgbp] = useState(
-		currencieslist
-	);
+	const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslist);
 	const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
 	const [baseCurrencyGBPValue, setBaseCurrencyGBPValue] = useState("1");
 	const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
@@ -99,7 +86,6 @@ export function CurrencyAccounts() {
 	// 			} else {
 	// 				setCode("+1")
 	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
 	// 			}
 	// 		})
 	// 		.catch(() => {
@@ -109,12 +95,6 @@ export function CurrencyAccounts() {
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
-	const closeBothModal = () => {
-		// setCode("+1")
-		// setNewPhoneNumber("");
-		setSuccessModal(false)
-		setAppModal(false)
-	};
 	const togglegbp = () => {
 		setSearchTermgbp("");
 		setDropdownOpengbp((prevState) => !prevState);
@@ -189,64 +169,12 @@ export function CurrencyAccounts() {
 	};
 	return (
 		<>
-			{
-				openSuccessModal && <Modal
-					aria-labelledby="transition-modal-title"
-					aria-describedby="transition-modal-description"
-					className="modal"
-					open={openSuccessModal}
-					onClose={() => setSuccessModal(false)}
-					closeAfterTransition
-				>
-					<Paper>
-						<IconButton
-							aria-label="Close"
-							className="closeButton"
-							onClick={() => { closeBothModal() }}
-						>
-							<CloseIcon />
-						</IconButton>
-						<div className="Waitlist">
-							<div className="container">
-								<div className="row waitlistRow">
-									<div className="col-md-6">
-										<div className="waitlistcont">
-											<h3
-												className=""
-												id="transition-modal-title"
-											>
-												Thank you for joining{" "}
-												<span className="br-block"></span>{" "}
-												Cashero's waitlist{" "}
-											</h3>
-											<p>
-												Cashero's revolutionary approach
-												to making{" "}
-												<span className="br-block"></span>{" "}
-												your money go further.{" "}
-											</p>
-										</div>
-									</div>
-									<div className="col-md-6">
-										<img
-											className="img-fluid"
-											alt="wait"
-											src={Wait2}
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</Paper>
-				</Modal>
-			}
 			<div className="PesonalBanner InterestBanner">
 				<div className="container">
 					<div className="row align-items-center">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-
-								<h1>Multi-Currency <span className="br-block"></span> Savings Account.</h1>
+								<h1>With a Multi-Currency <span className="br-block"></span> Savings Account.</h1>
 								<p className="bannerPara">Keep your money safe from currency fluctuations.</p>
 								<TextfieldBanner />
 								{/* <div className="numberSelection">
@@ -529,11 +457,7 @@ export function CurrencyAccounts() {
 									alt="Wallet Coins"
 									src={WalletCoins}
 								/>
-								<h3>
-									Add funds or get paid into  {" "}
-									<span className="br-block"></span>{" "}
-											your Multi-Currency Account.{" "}
-								</h3>
+								<h3>Add funds or get paid into<span className="br-block"></span>your Multi-Currency Account.</h3>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
@@ -560,7 +484,7 @@ export function CurrencyAccounts() {
 					{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 				</div>
 			</div>
-			< PeoplesSection />
+			<PeoplesSection />
 			<div className="container">
 				<Companies />
 				<QuestionTabs activeTab={2} />
@@ -569,20 +493,3 @@ export function CurrencyAccounts() {
 		</>
 	);
 }
-
-const Paper = styled.div`
-  background-color: #fff;
-  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
-  padding: 16px 32px 24px;
-  width: 100% !important;
-  height: 100vh !important;
-  .MuiButtonBase-root {
-    top: 81px;
-    right: 86px;
-    position: absolute;
-   @media(max-width: 540px){
-      top: 0px;
-      right: 0px;
-    },
-  }
-`;

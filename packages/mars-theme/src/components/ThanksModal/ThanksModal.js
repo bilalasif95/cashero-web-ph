@@ -29,20 +29,8 @@ export default function ThanksModal(props) {
                         <div className="row waitlistRow">
                             <div className="col-md-6">
                                 <div className="waitlistcont">
-                                    <h3
-                                        className=""
-                                        id="transition-modal-title"
-                                    >
-                                        Thank you for joining{" "}
-                                        <span className="br-block"></span>{" "}
-                                        Cashero's waitlist{" "}
-                                    </h3>
-                                    <p>
-                                        Cashero's revolutionary approach
-												to making{" "}
-                                        <span className="br-block"></span>{" "}
-												your money go further.{" "}
-                                    </p>
+                                    <h3 id="transition-modal-title">Thank you for joining<span className="br-block"></span>Cashero's waitlist</h3>
+                                    <p>Cashero's revolutionary approach to making<span className="br-block"></span>your money go further.</p>
                                 </div>
                             </div>
                             <div className="col-md-6">

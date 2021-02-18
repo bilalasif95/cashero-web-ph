@@ -8,7 +8,6 @@ import FB from "../assets/blogfb.svg";
 import linkedIn from "../assets/bloglinked.svg";
 import URL from "../assets/url.svg";
 import twitter from "../assets/blogtwitter.svg";
-import moment from "moment";
 import { SignupSection } from "./signupSection/signupSection";
 import { structuredData } from "../config/SEO/Blog/structuredData";
 
@@ -23,8 +22,7 @@ const Post = ({ state, actions, libraries }) => {
   // Get the data of the author.
   // const author = state.source.author[post.author];
   // Get a human readable date.
-  const date = new Date(post.date);
-
+  const date = new Date(post.date).toLocaleDateString();
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
 
@@ -71,7 +69,7 @@ const Post = ({ state, actions, libraries }) => {
                   {/* <img alt={props.location.state.alt} className="img-fluid" src={props.location.state.imageUrl} /> */}
                 </div>
                 <h1><div dangerouslySetInnerHTML={{ __html: post.title.rendered }}></div></h1>
-                <p className="date">{moment(date).format("DD-MM-YYYY")}</p>
+                <p className="date">{date}</p>
                 {/* <p>{props.location.state.description}</p> */}
                 <p><div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div></p>
                 <Content>
@@ -88,6 +86,7 @@ const Post = ({ state, actions, libraries }) => {
             <div className="row">
               {popularBlogs.slice(0, 3).map(({ type, id }) => {
                 const item = state.source[type][id];
+                const itemDate = new Date(item.date).toLocaleDateString();
                 return (
                   <div className="col-md-4">
                     <div className="MoreBlogsCont">
@@ -98,7 +97,7 @@ const Post = ({ state, actions, libraries }) => {
                           )}
                           {/* <img alt={res.data.alt} className="img-fluid" src={res.data.imageUrl} /> */}
                         </div>
-                        <span className="date">{moment(new Date(item.date)).format("DD-MM-YYYY")}</span>
+                        <span className="date">{itemDate}</span>
                         <h4><div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div></h4>
                         <p><div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div></p>
                       </Link>
@@ -127,7 +126,6 @@ const Post = ({ state, actions, libraries }) => {
     //           </StyledLink>
     //         )}
     //         <DateWrapper>
-    //           {" "}
     //           on <b>{date.toDateString()}</b>
     //         </DateWrapper>
     //       </div>

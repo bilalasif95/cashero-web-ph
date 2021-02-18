@@ -17,7 +17,7 @@ export function MultiCurrency() {
 							<h1 className="oneAppTitle">
 								Multi-Currency
 								<span className="br-block"></span>
-								Savings Accounts
+								Savings Account
 							</h1>
 							<p>Multiple currencies, one wallet. Convert your local currency into USD, GBP or EUR. Hold one, hold all. Reduce currency fluctuation risk because you worked hard for your money.</p>
 							<Link link="/currency-accounts" className="Link">
