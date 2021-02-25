@@ -17,11 +17,11 @@ export function MultiCurrency() {
 							<h1 className="oneAppTitle">
 								Multi-Currency
 								<span className="br-block"></span>
-								Savings Accounts
+								Savings Account
 							</h1>
 							<p>Multiple currencies, one wallet. Convert your local currency into USD, GBP, or EUR to reduce currency fluctuation risk. </p>
 							<Link link="/currency-accounts" className="Link">
-								Learn more about Accounts<img className="ArrowBtn" alt="" src={Arrow} />
+								Learn more about Accounts<img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -35,7 +35,7 @@ export function MultiCurrency() {
 										<img
 											className="d-block"
 											src={usdflag}
-											alt=""
+											alt="american flag"
 										/>
 									</Fade>
 								</div>
@@ -44,7 +44,7 @@ export function MultiCurrency() {
 										<img
 											className="d-block"
 											src={gbpflag}
-											alt=""
+											alt="uk flag"
 										/>
 									</Fade>
 								</div>
@@ -53,7 +53,7 @@ export function MultiCurrency() {
 										<img
 											className="d-block"
 											src={eurflag}
-											alt=""
+											alt="europe flag"
 										/>
 									</Fade>
 								</div>
@@ -63,7 +63,7 @@ export function MultiCurrency() {
 					<img
 						className="img-fluid mx-auto main-flags"
 						src={Flags}
-						alt=""
+						alt="Flags"
 					/>
 				</div>
 			</div>

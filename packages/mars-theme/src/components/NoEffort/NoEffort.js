@@ -17,7 +17,7 @@ export function NoEffort() {
 			<div className="container">
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
-						<img className="img-fluid" alt="coinsUp" src={coinsUp} />
+						<img className="img-fluid" alt="coins Up" src={coinsUp} />
 					</div>
 					<div className="col-md-6">
 						<div className="oneAppCont">

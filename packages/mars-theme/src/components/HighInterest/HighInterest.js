@@ -112,13 +112,13 @@ export function HighInterest() {
 							<img
 								className="CounterIcon"
 								src={CounterIcon}
-								alt=""
+								alt="Counter Icon"
 							/>
 							<div className="GraphCont">
 								<img
 									className="mx-fluid countryFlag mb-3"
 									src={Earning}
-									alt=""
+									alt="Earning"
 								/>
 								<p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
 									flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : calculateBRL(baseCurrencyGBPValue, "")}</p>
@@ -227,19 +227,13 @@ export function HighInterest() {
 					<div className="col-md-6">
 						<div className="oneAppCont">
 							<Fade triggerOnce direction="up">
-								<h3 className="HighInterestTitle">
-									High Yield{" "}
-									<span className="br-block"></span>{" "}
-										Savings Account
-									</h3>
-								<p className="HighInterestText">
-								Receive inflation-beating interest rates of 2%-5% APY. Yes, you read that correctly. Flexibility, no minimum balance required monthly fees or penalties for withdrawals. Do that thing that rich people do, make money while you sleep.
-									</p>
+								<h3 className="HighInterestTitle">High Yield<span className="br-block"></span>Savings Account</h3>
+								<p className="HighInterestText">Receive inflation-beating interest rates of 2%-5% APY. Yes, you read that correctly. Flexibility, no minimum balance required monthly fees or penalties for withdrawals. Do that thing that rich people do, make money while you sleep.</p>
 								<Link link="/personal" className="Link">Learn more about Savings
 									{innerWidth >= 540 ?
-										<img alt="" className="ArrowBtn" src={Arrow} />
+										<img alt="Arrow" className="ArrowBtn" src={Arrow} />
 										:
-										<img alt="" className="ArrowBtn" src={ArrowWhite} />
+										<img alt="Arrow White" className="ArrowBtn" src={ArrowWhite} />
 									}</Link>
 							</Fade>
 						</div>

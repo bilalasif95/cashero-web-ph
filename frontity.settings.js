@@ -1,10 +1,12 @@
+import { gtmId, wordPressLink } from "./packages/mars-theme/src/config/config";
+
 const settings = {
   "name": "cashero-web",
   "state": {
     "frontity": {
-      "url": "https://test.cashero.com",
-      "title": "Cashero",
-      "description": "Cashero"
+      "url": wordPressLink,
+      "title": "Cashero App",
+      "description": "Cashero is a limited company registered in England and Wales with the registered company number 12783127"
     }
   },
   "packages": [
@@ -66,10 +68,18 @@ const settings = {
       }
     },
     {
+      "name": "@frontity/google-tag-manager-analytics",
+      "state": {
+        "googleTagManagerAnalytics": {
+          "containerId": gtmId,
+        },
+      }
+    },
+    {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.cashero.com"
+          "url": wordPressLink
         }
       }
     },

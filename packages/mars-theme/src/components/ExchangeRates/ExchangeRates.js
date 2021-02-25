@@ -21,15 +21,9 @@ import Arrow1 from "../../assets/arrowLink.svg";
 import SearchIcon from "@material-ui/icons/Search";
 import currencieslist from "../../config/currenciesList";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import ThanksModal from "../ThanksModal/ThanksModal";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
-import {
-	Dropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-} from "reactstrap";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 
 var bigDecimal = require('js-big-decimal');
 
@@ -40,9 +34,6 @@ export function ExchangeRates() {
 	const appModalClose = () => {
 		setAppModal(false);
 	};
-	const thanksModalClose = () => {
-		setSuccessModal(false);
-	};
 	const [appModal, setAppModal] = useState(false);
 	// const [searchTerm, setSearchTerm] = useState<any>("");
 	// const [searchResults, setSearchResults] = useState<any>(countrylist);
@@ -51,15 +42,11 @@ export function ExchangeRates() {
 	// const [dropdownOpen, setDropdownOpen] = useState(false);
 	// const [phonenoLength, setPhoneNoLength] = useState(10);
 	const [searchTermgbp, setSearchTermgbp] = useState("");
-	const [searchResultsgbp, setSearchResultsgbp] = useState(
-		currencieslist
-	);
+	const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslist);
 	const [searchResults2gbp, setSearchResults2gbp] = useState([]);
 	const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
 	const [searchTermeuro, setSearchTermeuro] = useState("");
-	const [searchResultseuro, setSearchResultseuro] = useState(
-		currencieslist
-	);
+	const [searchResultseuro, setSearchResultseuro] = useState(currencieslist);
 	const [searchResults2euro, setSearchResults2euro] = useState([]);
 	const [dropdownOpeneuro, setDropdownOpeneuro] = useState(false);
 	const [flaggbp, setflaggbp] = useState("🇬🇧");
@@ -105,7 +92,6 @@ export function ExchangeRates() {
 		setSearchTermeuro("");
 		setDropdownOpeneuro((prevState) => !prevState);
 	};
-	const [openSuccessModal, setSuccessModal] = useState(false);
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	// const handleChange = (e) => {
@@ -207,7 +193,6 @@ export function ExchangeRates() {
 	// 			} else {
 	// 				setCode("+1");
 	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
 	// 			}
 	// 		})
 	// 		.catch((error) => {
@@ -274,11 +259,7 @@ export function ExchangeRates() {
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>
-									Online Currency
-										<span className="br-block"></span>
-									Exchange
-								</h1>
+								<h1>Currency Exchange</h1>
 								<p className="White">
 									Currency conversion with no hidden fees
 								</p>
@@ -650,7 +631,7 @@ export function ExchangeRates() {
 										"" :
 										<div className="exchangeAmount">
 											<div className="ExchangeImg">
-												<img alt="ConImg" onClick={onSwap} src={ConImg} />
+												<img alt="Coin Image" onClick={onSwap} src={ConImg} />
 											</div>
 											<div className="ExchangeNum">
 												{loading ? <p>Fetching Rates...</p> :
@@ -910,32 +891,24 @@ export function ExchangeRates() {
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
 							<li>
-								<img src={ExArrow} alt="ExArrow" />
-								Exchange in
-								an instant
+								<img src={ExArrow} alt="Exchange Arrow" />
+								Exchange in an instant
 							</li>
 							<li>
-								<img src={ExDollar} alt="ExDollar" />
-								Switch between{" "}
-								 USD, GBP, EUR
+								<img src={ExDollar} alt="Exchange Dollar" />
+								Switch between USD, GBP, EUR
 							</li>
 							<li>
-								<img src={Dollarlist} alt="Dollarlist" />
-								No hidden fees,
-							 full
-								transparency
+								<img src={Dollarlist} alt="Dollar list" />
+								No hidden fees, full transparency
 							</li>
 							<li>
 								<img src={Draw} alt="Draw" />
-								Add or withdraw your{" "}
-								 money at any
-								time
+								Add or withdraw your money at any time
 							</li>
 							<li>
-								<img src={listHome} alt="listHome" />
-								EU licensed & regulated{" "}
-							 financial
-								institution
+								<img src={listHome} alt="list Home" />
+								EU licensed & regulated financial institution
 							</li>
 						</ul>
 					</div>
@@ -957,7 +930,7 @@ export function ExchangeRates() {
 								<div className="GetStartedBox1 w-100">
 									<img
 										className="img-fluid"
-										alt="fav"
+										alt="Favourite"
 										src={Fav}
 									/>
 									<h3>Sign up for Cashero.</h3>
@@ -981,7 +954,7 @@ export function ExchangeRates() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="MovingCoins" src={MovingCoins} />
+									<img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
 									<h3>
 										Hold and switch between USD, GPB
 										or EUR in seconds.
@@ -1002,7 +975,7 @@ export function ExchangeRates() {
 									onClick={appModalOpen}
 									className="LinkBtn"
 								>
-									Start Converting{" "}
+									Start Converting
 									<img
 										className="ArrowBtn"
 										alt="arrow"
@@ -1016,12 +989,6 @@ export function ExchangeRates() {
 						<GetTheAppModal
 							open={appModal}
 							handleClose={appModalClose}
-						/>
-					)}
-					{openSuccessModal && (
-						<ThanksModal
-							open={openSuccessModal}
-							handleClose={thanksModalClose}
 						/>
 					)}
 				</div>

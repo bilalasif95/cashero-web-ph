@@ -16,13 +16,13 @@ export function StartDonation() {
 			<div className="MoneyRequest">
 				<div className="row align-items-center">
 					<div className="col-md-6">
-						<img className="img-fluid mx-auto d-block" alt="" src={Place} />
+						<img className="img-fluid mx-auto d-block" alt="Place" src={Place} />
 					</div>
 					<div className="col-md-6">
 						<div className="MoneyRequestCont">
 							<h1 className="oneAppTitle"> Your Generosity Makes <span className="br-block"></span> Our World A Better Place </h1>
 							<p>Give to charities around the world with ease. Cashero makes donating simple, with no hidden fees. Rest assured knowing one hundred percent of your donation is going to your chosen charity.</p>
-							<button onClick={appModalOpen} className="LinkBtn">Get Early Access  <img alt="" className="ArrowBtn" src={Arrow} /> </button>
+							<button onClick={appModalOpen} className="LinkBtn">Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</div>
 					</div>
 				</div>

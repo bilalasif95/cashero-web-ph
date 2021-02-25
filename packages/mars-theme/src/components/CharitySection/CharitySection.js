@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../link";
-import Charity from "../../assets/Charity.svg";
+import Charity from "../../assets/Charity.jpg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 
@@ -12,7 +12,7 @@ export function CharitySection() {
 					<div className="charity">
 						<img
 							className="sm-center img-fluid"
-							alt=""
+							alt="Charity"
 							src={Charity}
 						/>
 					</div>
@@ -20,14 +20,9 @@ export function CharitySection() {
 				<div className="col-md-6">
 					<div className="CharityCont">
 						<Fade triggerOnce direction="up">
-							<h1 className="oneAppTitle">
-								{" "}
-								Fee-Free Donations
-								</h1>
-							<p>
-							Heroes deserve special treatment. When you receive donations in-app or via a donation request link, you receive 100% of the funds and your donations earn interest.
-								</p>
-							<Link link="/donation" className="Link">Learn more about Charity<img className="ArrowBtn" alt="" src={Arrow} /></Link>
+							<h1 className="oneAppTitle">Fee-Free Donations</h1>
+							<p>Heroes deserve special treatment. When you receive donations in-app or via a donation request link, you receive 100% of the funds and your donations earn interest.</p>
+							<Link link="/donation" className="Link">Learn more about Charity<img className="ArrowBtn" alt="arrow" src={Arrow} /></Link>
 						</Fade>
 					</div>
 				</div>

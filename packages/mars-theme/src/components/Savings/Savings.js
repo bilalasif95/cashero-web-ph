@@ -25,7 +25,7 @@ export function Savings() {
 								We use blockchain technology to get you the best savings account interest rates between 2%-5% annually in our intelligent portfolio. Let us optimise your finances and take the work out of making money.
 							</p>
 							<button onClick={appModalOpen} className="LinkBtn">
-								Save More <img alt="" className="ArrowBtn" src={Arrow} />
+								Save More <img alt="Arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -34,7 +34,7 @@ export function Savings() {
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block"
-						alt=""
+						alt="Bit Circle"
 						src={BitCircle} />
 				</div>
 			</div>

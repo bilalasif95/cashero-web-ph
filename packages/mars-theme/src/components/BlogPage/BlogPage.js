@@ -7,13 +7,7 @@ import TabContext from "@material-ui/lab/TabContext";
 import Tab from "@material-ui/core/Tab";
 import TabPanel from "@material-ui/lab/TabPanel";
 import { SignupSection } from "../signupSection/signupSection";
-import moment from "moment";
-import {
-	Dropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-} from "reactstrap";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import FeaturedMedia from "../featured-media";
 import Link from "../link";
 
@@ -154,6 +148,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																	({ type, id }
 																	) => {
 																		const item = state.source[type][id];
+																		const date = new Date(item.date).toLocaleDateString();
 																		return (
 																			<Link link={item.link}>
 																				<div className="BlogBox">
@@ -164,13 +159,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																					</div>
 																					<div>
 																						<span className="date">
-																							{moment(
-																								new Date(
-																									item.date
-																								)
-																							).format(
-																								"DD-MM-YYYY"
-																							)}
+																							{date}
 																						</span>
 																						<h1>
 																							<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
@@ -193,6 +182,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																		({ type, id }
 																		) => {
 																			const item = state.source[type][id];
+																			const date = new Date(item.date).toLocaleDateString();
 																			return (
 																				<Link link={item.link}>
 																					<div className="BlogSideBox">
@@ -207,11 +197,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																							<div className="col-md-6 col-12">
 																								<div className="blogCont">
 																									<span className="date mt-0">
-																										{moment(
-																											new Date(item.date)
-																										).format(
-																											"DD-MM-YYYY"
-																										)}
+																										{date}
 																									</span>
 																									<h1>
 																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
@@ -240,6 +226,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 														({ type, id }
 														) => {
 															const item = state.source[type][id];
+															const date = new Date(item.date).toLocaleDateString();
 															return (
 																<div className="col-md-4">
 																	<Link link={item.link}>
@@ -252,11 +239,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																				</div>
 																				<div>
 																					<span className="date">
-																						{moment(
-																							new Date(item.date)
-																						).format(
-																							"DD-MM-YYYY"
-																						)}
+																						{date}
 																					</span>
 																					<h1>
 																						<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
@@ -298,6 +281,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																				({ type, id }
 																				) => {
 																					const item = state.source[type][id];
+																					const date = new Date(item.date).toLocaleDateString();
 																					return (
 																						<Link link={item.link}>
 																							<div className="BlogBox">
@@ -308,11 +292,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																								</div>
 																								<div>
 																									<span className="date">
-																										{moment(
-																											new Date(item.date)
-																										).format(
-																											"DD-MM-YYYY"
-																										)}
+																										{date}
 																									</span>
 																									<h1>
 																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
@@ -337,6 +317,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																		({ type, id }
 																		) => {
 																			const item = state.source[type][id];
+																			const date = new Date(item.date).toLocaleDateString();
 																			return (
 																				<Link link={item.link}>
 																					<div className="BlogSideBox">
@@ -351,11 +332,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																							<div className="col-md-6 col-12">
 																								<div className="blogCont">
 																									<span className="date mt-0">
-																										{moment(
-																											new Date(item.date)
-																										).format(
-																											"DD-MM-YYYY"
-																										)}
+																										{date}
 																									</span>
 																									<h4>
 																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
@@ -382,6 +359,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																	({ type, id }
 																	) => {
 																		const item = state.source[type][id];
+																		const date = new Date(item.date).toLocaleDateString();
 																		return (
 																			<div className="col-md-4">
 																				<Link link={item.link}>
@@ -394,11 +372,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																							</div>
 																							<div>
 																								<span className="date">
-																									{moment(
-																										new Date(item.date)
-																									).format(
-																										"DD-MM-YYYY"
-																									)}
+																									{date}
 																								</span>
 																								<h4>
 																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
@@ -441,6 +415,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																				({ type, id }
 																				) => {
 																					const item = state.source[type][id];
+																					const date = new Date(item.date).toLocaleDateString();
 																					return (
 																						<Link link={item.link}>
 																							<div className="BlogBox">
@@ -451,11 +426,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																								</div>
 																								<div>
 																									<span className="date">
-																										{moment(
-																											new Date(item.date)
-																										).format(
-																											"DD-MM-YYYY"
-																										)}
+																										{date}
 																									</span>
 																									<h1>
 																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
@@ -480,6 +451,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																		({ type, id }
 																		) => {
 																			const item = state.source[type][id];
+																			const date = new Date(item.date).toLocaleDateString();
 																			return (
 																				<Link link={item.link}>
 																					<div className="BlogSideBox">
@@ -494,11 +466,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																							<div className="col-md-6 col-12">
 																								<div className="blogCont">
 																									<span className="date mt-0">
-																										{moment(
-																											new Date(item.date)
-																										).format(
-																											"DD-MM-YYYY"
-																										)}
+																										{date}
 																									</span>
 																									<h4>
 																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
@@ -526,6 +494,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																		({ type, id }
 																		) => {
 																			const item = state.source[type][id];
+																			const date = new Date(item.date).toLocaleDateString();
 																			return (
 																				<Link link={item.link}>
 																					<div className="blogCont">
@@ -537,11 +506,7 @@ const BlogPage = ({ state, blogsCategories }) => {
 																							</div>
 																							<div>
 																								<span className="date">
-																									{moment(
-																										new Date(item.date)
-																									).format(
-																										"DD-MM-YYYY"
-																									)}
+																									{date}
 																								</span>
 																								<h4>
 																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>

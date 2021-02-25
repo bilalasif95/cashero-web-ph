@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { styled } from "frontity";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Clock from "../../assets/clockImg.svg";
 import Instant from "../../assets/instant.svg";
@@ -18,10 +17,6 @@ import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import KuWu from "../../assets/KuWu.svg";
-import Wait2 from "../../assets/wait.svg";
-import Modal from "@material-ui/core/Modal";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 
 export function ReceivePayments() {
@@ -42,7 +37,6 @@ export function ReceivePayments() {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
-	const [openSuccessModal, setSuccessModal] = useState(false);
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	// const handleChange = (e) => {
@@ -74,7 +68,6 @@ export function ReceivePayments() {
 	// 			} else {
 	// 				setCode("+1")
 	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
 	// 			}
 	// 		})
 	// 		.catch(() => {
@@ -84,65 +77,8 @@ export function ReceivePayments() {
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
-	const closeBothModal = () => {
-		// setCode("+1")
-		// setNewPhoneNumber("");
-		setSuccessModal(false)
-		setAppModal(false)
-	};
 	return (
 		<>
-			{
-				openSuccessModal && <Modal
-					aria-labelledby="transition-modal-title"
-					aria-describedby="transition-modal-description"
-					className="modal"
-					open={openSuccessModal}
-					onClose={() => setSuccessModal(false)}
-					closeAfterTransition
-				>
-					<Paper>
-						<IconButton
-							aria-label="Close"
-							className={classes.closeButton}
-							onClick={() => { closeBothModal() }}
-						>
-							<CloseIcon />
-						</IconButton>
-						<div className="Waitlist">
-							<div className="container">
-								<div className="row waitlistRow">
-									<div className="col-md-6">
-										<div className="waitlistcont">
-											<h3
-												className=""
-												id="transition-modal-title"
-											>
-												Thank you for joining{" "}
-												<span className="br-block"></span>{" "}
-												Cashero's waitlist{" "}
-											</h3>
-											<p>
-												Cashero's revolutionary approach
-												to making{" "}
-												<span className="br-block"></span>{" "}
-												your money go further.{" "}
-											</p>
-										</div>
-									</div>
-									<div className="col-md-6">
-										<img
-											className="img-fluid"
-											alt="wait"
-											src={Wait2}
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</Paper>
-				</Modal>
-			}
 			<div className="PesonalBanner">
 				<div className="container">
 					<div className="row">
@@ -282,11 +218,11 @@ export function ReceivePayments() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="walletDown" src={walletDown} />Send, request and receive payments instantly</li>
+							<li><img alt="wallet Down" src={walletDown} />Send, request and receive payments instantly</li>
 							<li><img alt="Instant" src={Instant} />No monthly fees. No minimum balance required</li>
-							{/* <li><img alt="listPhone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
+							{/* <li><img alt="list Phone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
-							<li><img alt="listHome" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -305,7 +241,7 @@ export function ReceivePayments() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img className="img-fluid" alt="Fav" src={Fav} />
+									<img className="img-fluid" alt="Favourite" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -327,7 +263,7 @@ export function ReceivePayments() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Path" src={Path} />
 									<h3>
-									Send, request and receive payments in an instant.
+										Send, request and receive payments in an instant.
 									</h3>
 								</div>
 							</Fade>
@@ -338,7 +274,7 @@ export function ReceivePayments() {
 							<div className="MultistepsCont">
 								<p>Ready to make an instant money transfer? Cashero’s got you.</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow1} />
+									Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>
@@ -355,20 +291,3 @@ export function ReceivePayments() {
 		</>
 	);
 }
-
-const Paper = styled.div`
-  background-color: #fff;
-  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
-  padding: 16px 32px 24px;
-  width: 100% !important;
-  height: 100vh !important;
-  .MuiButtonBase-root {
-    top: 81px;
-    right: 86px;
-    position: absolute;
-   @media(max-width: 540px){
-      top: 0px;
-      right: 0px;
-    },
-  }
-`;

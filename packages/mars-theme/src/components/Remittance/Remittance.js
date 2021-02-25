@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { styled } from "frontity";
 import Clock from "../../assets/clockImg.svg";
 import listPhone from "../../assets/ListPhone.svg";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
@@ -17,10 +16,6 @@ import Fav from "../../assets/favImg.svg";
 import Casher0map from "../../assets/Casher0map.svg";
 import Done from "../../assets/done.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
-import Wait2 from "../../assets/wait.svg";
-import Modal from "@material-ui/core/Modal";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import StepsDollar from "../../assets/StepsDollar.svg";
 
@@ -42,7 +37,6 @@ export function Remittance() {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
-	const [openSuccessModal, setSuccessModal] = useState(false);
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	// const handleChange = (e) => {
@@ -74,7 +68,6 @@ export function Remittance() {
 	// 			} else {
 	// 				setCode("+1")
 	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
 	// 			}
 	// 		})
 	// 		.catch(() => {
@@ -84,65 +77,8 @@ export function Remittance() {
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
-	const closeBothModal = () => {
-		// setCode("+1")
-		// setNewPhoneNumber("");
-		setSuccessModal(false)
-		setAppModal(false)
-	};
 	return (
 		<>
-			{
-				openSuccessModal && <Modal
-					aria-labelledby="transition-modal-title"
-					aria-describedby="transition-modal-description"
-					className="modal"
-					open={openSuccessModal}
-					onClose={() => setSuccessModal(false)}
-					closeAfterTransition
-				>
-					<Paper>
-						<IconButton
-							aria-label="Close"
-							className={classes.closeButton}
-							onClick={() => { closeBothModal() }}
-						>
-							<CloseIcon />
-						</IconButton>
-						<div className="Waitlist">
-							<div className="container">
-								<div className="row waitlistRow">
-									<div className="col-md-6">
-										<div className="waitlistcont">
-											<h3
-												className=""
-												id="transition-modal-title"
-											>
-												Thank you for joining{" "}
-												<span className="br-block"></span>{" "}
-												Cashero's waitlist{" "}
-											</h3>
-											<p>
-												Cashero's revolutionary approach
-												to making{" "}
-												<span className="br-block"></span>{" "}
-												your money go further.{" "}
-											</p>
-										</div>
-									</div>
-									<div className="col-md-6">
-										<img
-											className="img-fluid"
-											alt=""
-											src={Wait2}
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</Paper>
-				</Modal>
-			}
 			<div className="PesonalBanner">
 				<div className="container">
 					<div className="row">
@@ -267,12 +203,12 @@ export function Remittance() {
 									</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="" src={Clock} />Open an account in minutes</li>
+									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
 								</ul>
 							</div>
 						</div>
 						<div className="col-md-6">
-							<img alt="" className="img-fluid mx-auto d-block" src={Casher0map} />
+							<img alt="Cashero map" className="img-fluid mx-auto d-block" src={Casher0map} />
 						</div>
 					</div>
 				</div>
@@ -281,11 +217,11 @@ export function Remittance() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="" src={GlobeDollar} />Send money worldwide</li>
-							<li><img alt="" src={Dollarlist} />No hidden fees</li>
-							<li><img alt="" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
-							<li><img alt="" src={Draw} />Add or withdraw your money at any time</li>
-							<li><img alt="" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="Globe Dollar" src={GlobeDollar} />Send money worldwide</li>
+							<li><img alt="Dollar list" src={Dollarlist} />No hidden fees</li>
+							<li><img alt="list Phone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -304,7 +240,7 @@ export function Remittance() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img alt="" className="img-fluid" src={Fav} />
+									<img alt="Favourite" className="img-fluid" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -313,7 +249,7 @@ export function Remittance() {
 							<div className="GetStartedBox2 w-100">
 								<img
 									className="img-fluid"
-									alt=""
+									alt="Steps Dollar"
 									src={StepsDollar}
 								/>
 								<h3>
@@ -324,7 +260,7 @@ export function Remittance() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="" src={Done} />
+									<img className="img-fluid" alt="Done" src={Done} />
 									<h3>
 										Send money directly to another Cashero account or deposit to a bank account.
 									</h3>
@@ -337,7 +273,7 @@ export function Remittance() {
 							<div className="MultistepsCont">
 								<p>Ready to send money hassle-free? Cashero’s global payment solution is here for you and for what matters most.</p>
 								<button className="LinkBtn" onClick={appModalOpen}>
-									Start Sending   <img alt="" className="ArrowBtn" src={Arrow1} />
+									Start Sending   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>
@@ -354,20 +290,3 @@ export function Remittance() {
 		</>
 	);
 }
-
-const Paper = styled.div`
-  background-color: #fff;
-  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
-  padding: 16px 32px 24px;
-  width: 100% !important;
-  height: 100vh !important;
-  .MuiButtonBase-root {
-    top: 81px;
-    right: 86px;
-    position: absolute;
-   @media(max-width: 540px){
-      top: 0px;
-      right: 0px;
-    },
-  }
-`;

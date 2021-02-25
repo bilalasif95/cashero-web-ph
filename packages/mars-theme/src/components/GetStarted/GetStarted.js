@@ -18,7 +18,7 @@ export function GetStarted() {
 				<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 					<Fade triggerOnce direction="left">
 						<div className="GetStartedBox1 w-100">
-							<img className="img-fluid" alt="fav" src={Fav} />
+							<img className="img-fluid" alt="Favourite" src={Fav} />
 							<h3>Download the Cashero app</h3>
 						</div>
 					</Fade>

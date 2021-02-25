@@ -8,7 +8,7 @@ export function ContactUs() {
 				<div className="row">
 					<div className="col-md-12">
 						<div className="ContactUsCont">
-							<h1> Want To Get A Hold Of Us?  </h1>
+							<h1> Want to Get a Hold Of Us?  </h1>
 							<p className="mb-0">Sign into the Cashero App on your mobile and simply send us <span className="br-block"></span> a message via our in-app chat support.</p>
 						</div>
 					</div>

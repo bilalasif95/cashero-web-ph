@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { styled } from "frontity";
 import TextField from "@material-ui/core/TextField";
 import NumericLabel from 'react-pretty-numbers';
 import Clock from "../../assets/clockImg.svg"
@@ -23,16 +22,7 @@ import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import Wait2 from "../../assets/wait.svg";
-import Modal from "@material-ui/core/Modal";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
-import {
-	Dropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-} from "reactstrap";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 
 var bigDecimal = require('js-big-decimal');
 
@@ -47,7 +37,6 @@ export function Personal() {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
-	const [openSuccessModal, setSuccessModal] = useState(false);
 	const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
 	const [selectedYear, setSelectedYear] = useState("5");
 	// const [Error, setError] = useState<string>("");
@@ -83,7 +72,6 @@ export function Personal() {
 	// 			} else {
 	// 				setCode("+1")
 	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
 	// 			}
 	// 		})
 	// 		.catch(() => {
@@ -103,12 +91,6 @@ export function Personal() {
 		setAppModal(true)
 	};
 	const appModalClose = () => {
-		setAppModal(false)
-	};
-	const closeBothModal = () => {
-		// setCode("+1")
-		// setNewPhoneNumber("");
-		setSuccessModal(false)
 		setAppModal(false)
 	};
 	const finalBalance = () => {
@@ -141,63 +123,12 @@ export function Personal() {
 	};
 	return (
 		<>
-			{
-				openSuccessModal && <Modal
-					aria-labelledby="transition-modal-title"
-					aria-describedby="transition-modal-description"
-					className="modal"
-					open={openSuccessModal}
-					onClose={() => setSuccessModal(false)}
-					closeAfterTransition
-				>
-					<Paper>
-						<IconButton
-							aria-label="Close"
-							className="closeButton"
-							onClick={() => { closeBothModal() }}
-						>
-							<CloseIcon />
-						</IconButton>
-						<div className="Waitlist">
-							<div className="container">
-								<div className="row waitlistRow">
-									<div className="col-md-6">
-										<div className="waitlistcont">
-											<h3
-												className=""
-												id="transition-modal-title"
-											>
-												Thank you for joining{" "}
-												<span className="br-block"></span>{" "}
-												Cashero's waitlist{" "}
-											</h3>
-											<p>
-												Cashero's revolutionary approach
-												to making{" "}
-												<span className="br-block"></span>{" "}
-												your money go further.{" "}
-											</p>
-										</div>
-									</div>
-									<div className="col-md-6">
-										<img
-											className="img-fluid"
-											src={Wait2}
-											alt=""
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</Paper>
-				</Modal>
-			}
 			<div className="PesonalBanner InterestBanner">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1> High-Yield Savings Account: Make Your <span className="br-block"></span> Money Make More Money</h1>
+								<h1>High-Yield Savings Account: Make Your <span className="br-block"></span> Money Make More Money</h1>
 								<p className="bannerPara">Do that thing rich people do, earn money while you <span className="br-block"></span> sleep. Earn up to 5% APY on your money. Inflation <span className="br-block"></span> beating interest paid out daily.</p>
 								<TextfieldBanner />
 								{/* <div className="numberSelection">
@@ -317,7 +248,7 @@ export function Personal() {
 									</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img src={Clock} alt="" />Open an account in minutes</li>
+									<li><img src={Clock} alt="Clock" />Open an account in minutes</li>
 								</ul>
 							</div>
 						</div>
@@ -340,7 +271,7 @@ export function Personal() {
 												</div>
 											</div>
 											<div className="col-2">
-												<img src={Arrow} alt="" />
+												<img src={Arrow} alt="Arrow" />
 											</div>
 											<div className="col-6">
 												<div className="InterestBox mt-0 TotalText">
@@ -410,11 +341,11 @@ export function Personal() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="" src={HighDollar} />Inflation beating, 5% APY</li>
-							<li><img alt="" src={listGraph} />Interest paid out daily</li>
-							<li><img alt="" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
-							<li><img alt="" src={Draw} />Add or withdraw your  money at any time</li>
-							<li><img alt="" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="High Dollar" src={HighDollar} />Inflation beating, 5% APY</li>
+							<li><img alt="list Graph" src={listGraph} />Interest paid out daily</li>
+							<li><img alt="List Phone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="Draw" src={Draw} />Add or withdraw your  money at any time</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -435,7 +366,7 @@ export function Personal() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img alt="" className="img-fluid" src={Fav} />
+									<img alt="Favourite" className="img-fluid" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -445,19 +376,15 @@ export function Personal() {
 								<img
 									className="img-fluid"
 									src={WalletCoins}
-									alt=""
+									alt="Wallet Coins"
 								/>
-								<h3>
-									Add funds into your High {" "}
-									<span className="br-block"></span>{" "}
-										Yield Savings Account.{" "}
-								</h3>
+								<h3>Add funds into your High <span className="br-block"></span>Yield Savings Account.</h3>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="" src={ArrowUp} />
+									<img className="img-fluid" alt="Arrow Up" src={ArrowUp} />
 									<h3>
 										Earn up to 5% APY and redeem whenever you want.
 									</h3>
@@ -470,7 +397,7 @@ export function Personal() {
 							<div className="MultistepsCont">
 								<p>Ready to earn more? Growing your wealth is easy with Cashero's high-yield savings account.</p>
 								<button onClick={appModalOpen} className="LinkBtn" >
-									Start Earning   <img alt="" className="ArrowBtn" src={Arrow1} />
+									Start Earning   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>
@@ -487,20 +414,3 @@ export function Personal() {
 		</>
 	);
 }
-
-const Paper = styled.div`
-  background-color: #fff;
-  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
-  padding: 16px 32px 24px;
-  width: 100% !important;
-  height: 100vh !important;
-  .MuiButtonBase-root {
-    top: 81px;
-    right: 86px;
-    position: absolute;
-   @media(max-width: 540px){
-      top: 0px;
-      right: 0px;
-    },
-  }
-`;

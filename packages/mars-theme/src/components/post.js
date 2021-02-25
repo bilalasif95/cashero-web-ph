@@ -8,8 +8,8 @@ import FB from "../assets/blogfb.svg";
 import linkedIn from "../assets/bloglinked.svg";
 import URL from "../assets/url.svg";
 import twitter from "../assets/blogtwitter.svg";
-import moment from "moment";
 import { SignupSection } from "./signupSection/signupSection";
+import { structuredData } from "../config/SEO/Blog/structuredData";
 
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
@@ -22,8 +22,7 @@ const Post = ({ state, actions, libraries }) => {
   // Get the data of the author.
   // const author = state.source.author[post.author];
   // Get a human readable date.
-  const date = new Date(post.date);
-
+  const date = new Date(post.date).toLocaleDateString();
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
 
@@ -39,73 +38,79 @@ const Post = ({ state, actions, libraries }) => {
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <div className="ContactUsBanner">
-      <div className="container">
-        <div className="BlogHeader">
-          <div className="BackIcon">
-            <ul className="list-unstyled backList">
-              <Link link="/blog"><li><img alt="" src={backicon} /> Back</li></Link>
-            </ul>
+    <>
+      <script className="structured-data-list" type="application/ld+json">
+        {structuredData(state)}
+      </script>
+      <div className="ContactUsBanner">
+        <div className="container">
+          <div className="BlogHeader">
+            <div className="BackIcon">
+              <ul className="list-unstyled backList">
+                <Link link="/blog"><li><img alt="back icon" src={backicon} /> Back</li></Link>
+              </ul>
+            </div>
+            <div>
+              <ul className="list-unstyled BlogSocialList">
+                <li><a href="/#"><img alt="facebook icon" src={FB} /><span className="SocialText">Share</span></a></li>
+                <li><a href="/#"><img alt="twitter icon" src={twitter} /><span className="SocialText">Tweet</span></a></li>
+                <li><a href="/#"><img alt="linkedIn icon" src={linkedIn} /><span className="SocialText">Post</span></a></li>
+                <li><a href="/#"><img alt="URL icon" src={URL} /><span className="SocialText">URL</span></a></li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <ul className="list-unstyled BlogSocialList">
-              <li><a href="/#"><img alt="" src={FB} /><span className="SocialText">Share</span></a></li>
-              <li><a href="/#"><img alt="" src={twitter} /><span className="SocialText">Tweet</span></a></li>
-              <li><a href="/#"><img alt="" src={linkedIn} /><span className="SocialText">Post</span></a></li>
-              <li><a href="/#"><img alt="" src={URL} /><span className="SocialText">URL</span></a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="BlogDetailBanner">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="blogDetailImg">
-                {state.theme.featured.showOnPost && (
-                  <FeaturedMedia id={post.featured_media} />
-                )}
-                {/* <img alt={props.location.state.alt} className="img-fluid" src={props.location.state.imageUrl} /> */}
-              </div>
-              <h1><div dangerouslySetInnerHTML={{ __html: post.title.rendered }}></div></h1>
-              <p className="date">{moment(date).format("DD-MM-YYYY")}</p>
-              {/* <p>{props.location.state.description}</p> */}
-              <p><div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div></p>
-              <Content>
-                <Html2React html={post.content.rendered} />
-              </Content>
-              {/* {props.location.state.content ? <Editor initialContentState={typeof props.location.state.content === "string" ? JSON.parse(props.location.state.content) : props.location.state.content} readOnly={true} toolbarHidden
+          <div className="BlogDetailBanner">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="blogDetailImg">
+                  {state.theme.featured.showOnPost && (
+                    <FeaturedMedia id={post.featured_media} />
+                  )}
+                  {/* <img alt={props.location.state.alt} className="img-fluid" src={props.location.state.imageUrl} /> */}
+                </div>
+                <h1><div dangerouslySetInnerHTML={{ __html: post.title.rendered }}></div></h1>
+                <p className="date">{date}</p>
+                {/* <p>{props.location.state.description}</p> */}
+                <p><div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div></p>
+                <Content>
+                  <Html2React html={post.content.rendered} />
+                </Content>
+                {/* {props.location.state.content ? <Editor initialContentState={typeof props.location.state.content === "string" ? JSON.parse(props.location.state.content) : props.location.state.content} readOnly={true} toolbarHidden
                 editorClassName="demo-editor" /> : ""} */}
+              </div>
+            </div>
+          </div>
+          <div className="customHr">
+          </div>
+          <div className="MoreBlogs">
+            <div className="row">
+              {popularBlogs.slice(0, 3).map(({ type, id }) => {
+                const item = state.source[type][id];
+                const itemDate = new Date(item.date).toLocaleDateString();
+                return (
+                  <div className="col-md-4">
+                    <div className="MoreBlogsCont">
+                      <Link link={item.link}>
+                        <div className="moreblogImg">
+                          {state.theme.featured.showOnPost && (
+                            <FeaturedMedia id={item.featured_media} />
+                          )}
+                          {/* <img alt={res.data.alt} className="img-fluid" src={res.data.imageUrl} /> */}
+                        </div>
+                        <span className="date">{itemDate}</span>
+                        <h4><div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div></h4>
+                        <p><div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div></p>
+                      </Link>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
-        <div className="customHr">
-        </div>
-        <div className="MoreBlogs">
-          <div className="row">
-            {popularBlogs.slice(0, 3).map(({ type, id }) => {
-              const item = state.source[type][id];
-              return (
-                <div className="col-md-4">
-                  <div className="MoreBlogsCont">
-                    <Link link={item.link}>
-                      <div className="moreblogImg">
-                        {state.theme.featured.showOnPost && (
-                          <FeaturedMedia id={item.featured_media} />
-                        )}
-                        {/* <img alt={res.data.alt} className="img-fluid" src={res.data.imageUrl} /> */}
-                      </div>
-                      <span className="date">{moment(new Date(item.date)).format("DD-MM-YYYY")}</span>
-                      <h4><div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div></h4>
-                      <p><div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div></p>
-                    </Link>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
+        <SignupSection />
       </div>
-      <SignupSection />
-    </div>
+    </>
     // <Container>
     //   <div>
     //     <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
@@ -121,7 +126,6 @@ const Post = ({ state, actions, libraries }) => {
     //           </StyledLink>
     //         )}
     //         <DateWrapper>
-    //           {" "}
     //           on <b>{date.toDateString()}</b>
     //         </DateWrapper>
     //       </div>

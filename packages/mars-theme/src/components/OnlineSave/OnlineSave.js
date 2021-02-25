@@ -16,7 +16,7 @@ export function OnlineSave() {
 		<div className="CurrencyConversion">
 			<div className="row flex-column-reverse flex-sm-row">
 				<div className="col-md-6">
-					<img className="img-fluid" alt="ExchangeCoins" src={ExchangeCoins} />
+					<img className="img-fluid" alt="Exchange Coins" src={ExchangeCoins} />
 				</div>
 				<div className="col-md-6 sm-mb-30">
 					<div className="CurrencyConversionCont">

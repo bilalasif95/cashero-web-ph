@@ -3,10 +3,7 @@ import { styled } from "frontity";
 import TextField from "../../common/textFiled";
 import { callApi } from "../../config/call-api";
 import { EndPoints } from "../../config/config";
-import Modal from "@material-ui/core/Modal";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
-import Wait2 from "../../assets/wait.svg";
+import ThanksModal from "../ThanksModal/ThanksModal";
 
 export function SignupSection() {
 	// const [searchTerm, setSearchTerm] = useState<any>("");
@@ -23,6 +20,9 @@ export function SignupSection() {
 	const [email, setEmail] = useState("");
 	// const [error, setError] = useState<string>("");
 	const [loading, setLoading] = useState(false);
+	const handleClose = () => {
+		setSuccessModal(false);
+	};
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	// const handleChange = (e) => {
 	// 	setSearchTerm(e.target.value);
@@ -76,58 +76,19 @@ export function SignupSection() {
 	};
 	return (
 		<>
-			<Modal
-				aria-labelledby="transition-modal-title"
-				aria-describedby="transition-modal-description"
-				className="modal"
-				open={openSuccessModal}
-				onClose={() => setSuccessModal(false)}
-				closeAfterTransition
-			>
-				<Paper>
-					<IconButton
-						aria-label="Close"
-						className="closeButton"
-						onClick={() => setSuccessModal(false)}
-					>
-						<CloseIcon />
-					</IconButton>
-					<div className="Waitlist">
-						<div className="container">
-							<div className="row waitlistRow">
-								<div className="col-md-6">
-									<div className="waitlistcont">
-										<h3
-											className=""
-											id="transition-modal-title"
-										>
-											Thank you for joining{" "}
-											<span className="br-block"></span>{" "}
-											Cashero's waitlist{" "}
-										</h3>
-										<p>
-											Cashero's revolutionary approach to
-											making{" "}
-											<span className="br-block"></span>{" "}
-											your money go further.{" "}
-										</p>
-									</div>
-								</div>
-								<div className="col-md-6">
-									<img alt="" className="img-fluid" src={Wait2} />
-								</div>
-							</div>
-						</div>
-					</div>
-				</Paper>
-			</Modal>
+			{openSuccessModal && (
+				<ThanksModal
+					open={openSuccessModal}
+					handleClose={handleClose}
+				/>
+			)}
 			<div className="SignUp">
 				<div className="container">
 					<div className="row">
 						<div className="col-12">
 							<h1 className="SignUpTitle">Join Cashero</h1>
 							<h3 className="SignUpText mb-0">
-							Ready to make your money go further? Join Cashero and get early access.
+								Ready to make your money go further? Join Cashero and get early access.
 							</h3>
 							<div className="SignInEmail">
 								<TextField

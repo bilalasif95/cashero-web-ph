@@ -2,8 +2,8 @@ import React from "react";
 import { SignupSection } from "../signupSection/signupSection";
 import { Countup } from "../Countup/Countup";
 import { WhoSection } from "../WhoSection/WhoSection";
-import CasheroImg from "../../assets/CasheroImg.svg";
-import YearsImg from "../../assets/YearsImg.svg";
+import CasheroImg from "../../assets/CasheroImg.jpg";
+import YearsImg from "../../assets/YearsImg.jpg";
 
 export function Company() {
 	return (
@@ -12,7 +12,7 @@ export function Company() {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">
-							<img className="img-fluid mx-auto d-block CasheroImg" alt="CasheroImg" src={CasheroImg} />
+							<img className="img-fluid d-block CasheroImg w-100" alt="Cashero Image" src={CasheroImg} />
 						</div>
 					</div>
 				</div>
@@ -23,7 +23,7 @@ export function Company() {
 				<div className="YearsSec">
 					<div className="row">
 						<div className="col-md-12">
-							<img className="img-fluid mx-auto d-block" alt="YearsImg" src={YearsImg} />
+							<img className="img-fluid mx-auto d-block" alt="Years Image" src={YearsImg} />
 						</div>
 					</div>
 				</div>

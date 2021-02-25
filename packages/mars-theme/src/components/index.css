@@ -1525,7 +1525,7 @@ b {
   margin-top: 15px; }
 
 .Enhance {
-  background-image: url("https://i.imgur.com/SfRVlGI.png ");
+  background-image: url("https://i.imgur.com/SfRVlGI.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px 0px 0px;
@@ -15733,4 +15733,8 @@ select:-webkit-autofill:focus {
     .bold-text{
       color: #000;
       font-weight: 600;  
+    }
+
+    .underline {
+      text-decoration: underline;
     }

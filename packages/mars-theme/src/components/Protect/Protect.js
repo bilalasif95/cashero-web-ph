@@ -28,7 +28,7 @@ export function Protect() {
 						</Fade>
 						<Fade triggerOnce direction="up" delay={1000}>
 							<button onClick={appModalOpen} className="LinkBtn" >
-								Add Money <img alt="" className="ArrowBtn" src={Arrow} />
+								Add Money <img alt="Arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -38,7 +38,7 @@ export function Protect() {
 					<img
 						className="img-fluid mx-auto d-block"
 						src={Lock}
-						alt=""
+						alt="Lock"
 					/>
 				</div>
 			</div>

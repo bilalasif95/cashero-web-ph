@@ -25,6 +25,7 @@ export default function GetTheAppModal(props) {
     // }, [])
     const thanksModalClose = () => {
         setSuccessModal(false);
+        props.handleClose();
     };
     // const toggle = () => {
     //     setSearchTerm("");
@@ -105,7 +106,7 @@ export default function GetTheAppModal(props) {
                                 Your Hero awaits. <span className="br-block"></span> Start saving, earning and sending in seconds.
                             </h2>
                             <p id="transition-modal-description">
-                            We’ll send you a message with a link to download the app. 
+                                We’ll send you a message with a link to download the app.
                             </p>
                             <p id="transition-modal-description">You’ll also earn a chance to win $1,000 every 3 days! Terms and conditions apply. </p>
                             <div className="ModalPhone">

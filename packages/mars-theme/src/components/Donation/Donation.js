@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { styled } from "frontity";
 import Clock from "../../assets/clockImg.svg"
 import SlideGroup from "../../assets/SlideGroup.svg";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
@@ -20,10 +19,6 @@ import pricewallet from "../../assets/pricewallet.png";
 import heartDollar from "../../assets/heartDollar.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import IconButton from "@material-ui/core/IconButton";
-import Modal from "@material-ui/core/Modal";
-import CloseIcon from "@material-ui/icons/Close";
-import Wait2 from "../../assets/wait.svg";
 
 export function Donation() {
 	// const [searchTerm, setSearchTerm] = useState<any>("");
@@ -36,7 +31,6 @@ export function Donation() {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
-	const [openSuccessModal, setSuccessModal] = useState(false);
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	const [appModal, setAppModal] = useState(false)
@@ -69,7 +63,6 @@ export function Donation() {
 	// 			} else {
 	// 				setCode("+1")
 	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
 	// 			}
 	// 		})
 	// 		.catch(() => {
@@ -79,12 +72,6 @@ export function Donation() {
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
-	const closeBothModal = () => {
-		// setCode("+1")
-		// setNewPhoneNumber("");
-		setSuccessModal(false)
-		setAppModal(false)
-	};
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -93,57 +80,6 @@ export function Donation() {
 	};
 	return (
 		<>
-			{
-				openSuccessModal && <Modal
-					aria-labelledby="transition-modal-title"
-					aria-describedby="transition-modal-description"
-					className="modal"
-					open={openSuccessModal}
-					onClose={() => setSuccessModal(false)}
-					closeAfterTransition
-				>
-					<Paper>
-						<IconButton
-							aria-label="Close"
-							className="closeButton"
-							onClick={() => { closeBothModal() }}
-						>
-							<CloseIcon />
-						</IconButton>
-						<div className="Waitlist">
-							<div className="container">
-								<div className="row waitlistRow">
-									<div className="col-md-6">
-										<div className="waitlistcont">
-											<h3
-												className=""
-												id="transition-modal-title"
-											>
-												Thank you for joining{" "}
-												<span className="br-block"></span>{" "}
-												Cashero's waitlist{" "}
-											</h3>
-											<p>
-												Cashero's revolutionary approach
-												to making{" "}
-												<span className="br-block"></span>{" "}
-												your money go further.{" "}
-											</p>
-										</div>
-									</div>
-									<div className="col-md-6">
-										<img
-											className="img-fluid"
-											alt="wait"
-											src={Wait2}
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</Paper>
-				</Modal>
-			}
 			<div className="PesonalBanner">
 				<div className="container">
 					<div className="row">
@@ -276,7 +212,7 @@ export function Donation() {
 							</div>
 						</div>
 						<div className="col-md-6">
-							<img alt="SlideGroup" className="img-fluid mx-auto d-block" src={SlideGroup} />
+							<img alt="Slide Group" className="img-fluid mx-auto d-block" src={SlideGroup} />
 						</div>
 					</div>
 				</div>
@@ -285,11 +221,11 @@ export function Donation() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList3 list-unstyled">
-							<li><img alt="heartDollar" src={heartDollar} />Discover new charities</li>
-							<li><img alt="donateDollar" src={donateDollar} />Donate directly at any time</li>
+							<li><img alt="heart Dollar" src={heartDollar} />Discover new charities</li>
+							<li><img alt="donate Dollar" src={donateDollar} />Donate directly at any time</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
 							<li><img alt="Draw" src={Draw} />Donate your money at any time</li>
-							<li><img alt="listHome" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -307,7 +243,7 @@ export function Donation() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img className="img-fluid" alt="fav" src={Fav} />
+									<img className="img-fluid" alt="Favourite" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -316,11 +252,11 @@ export function Donation() {
 							<div className="GetStartedBox2 w-100">
 								<img
 									className="img-fluid"
-									alt="DonateBox"
+									alt="Donate Box"
 									src={DonateBox}
 								/>
 								<h3>
-								Tap Donate and select a charity
+									Tap Donate and select a charity
 								</h3>
 							</div>
 						</div>
@@ -328,9 +264,9 @@ export function Donation() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="" src={pricewallet} />
+									<img className="img-fluid" alt="price wallet" src={pricewallet} />
 									<h3>
-									Make donations to make a difference!
+										Make donations to make a difference!
 									</h3>
 								</div>
 							</Fade>
@@ -341,7 +277,7 @@ export function Donation() {
 							<div className="MultistepsCont">
 								<p>Ready to donate? Head over to the Cashero app, the rest is simple.</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+									Get Early Access <img className="ArrowBtn" alt="arrow" src={Arrow1} />
 								</button>
 							</div>
 						</div>
@@ -358,20 +294,3 @@ export function Donation() {
 		</>
 	);
 }
-
-const Paper = styled.div`
-  background-color: #fff;
-  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
-  padding: 16px 32px 24px;
-  width: 100% !important;
-  height: 100vh !important;
-  .MuiButtonBase-root {
-    top: 81px;
-    right: 86px;
-    position: absolute;
-   @media(max-width: 540px){
-      top: 0px;
-      right: 0px;
-    },
-  }
-`;

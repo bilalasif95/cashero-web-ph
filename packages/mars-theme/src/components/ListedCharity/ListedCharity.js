@@ -3,11 +3,11 @@ import Clock from "../../assets/clockImg.svg";
 import donateDollar from "../../assets/donateDollar.svg";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import heart from "../../assets/heart.svg";
-import Draw from "../../assets/draw.svg"
-import listImg from "../../assets/list.png"
+import Draw from "../../assets/draw.svg";
+import listImg from "../../assets/list.png";
 import StepsWallet from "../../assets/stepsWallet.png"
 import heartDollar from "../../assets/heartDollar.svg";
-import listHome from "../../assets/listHome.svg"
+import listHome from "../../assets/listHome.svg";
 import freeFund from "../../assets/freeFund.svg";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
 import { Companies } from "../Companies/Companies";
@@ -19,10 +19,6 @@ import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import IconButton from "@material-ui/core/IconButton";
-import Modal from "@material-ui/core/Modal";
-import CloseIcon from "@material-ui/icons/Close";
-import Wait2 from "../../assets/wait.svg";
 
 export function ListedCharity() {
 	// const [searchTerm, setSearchTerm] = useState<any>("");
@@ -35,7 +31,6 @@ export function ListedCharity() {
 	// 	setSearchTerm("");
 	// 	setDropdownOpen((prevState) => !prevState);
 	// };
-	const [openSuccessModal, setSuccessModal] = useState(false);
 	// const [Error, setError] = useState<string>("");
 	// const [newPhone, setNewPhoneNumber] = useState("");
 	const [appModal, setAppModal] = useState(false);
@@ -68,7 +63,6 @@ export function ListedCharity() {
 	// 			} else {
 	// 				setCode("+1")
 	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
 	// 			}
 	// 		})
 	// 		.catch(() => {
@@ -78,12 +72,6 @@ export function ListedCharity() {
 	// const handleOnChange = (e: any) => {
 	// 	setNewPhoneNumber(e.target.value);
 	// };
-	const closeBothModal = () => {
-		// setCode("+1")
-		// setNewPhoneNumber("");
-		setSuccessModal(false)
-		setAppModal(false)
-	};
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -92,57 +80,6 @@ export function ListedCharity() {
 	}
 	return (
 		<>
-			{
-				openSuccessModal && <Modal
-					aria-labelledby="transition-modal-title"
-					aria-describedby="transition-modal-description"
-					className="modal"
-					open={openSuccessModal}
-					onClose={() => setSuccessModal(false)}
-					closeAfterTransition
-				>
-					<Paper>
-						<IconButton
-							aria-label="Close"
-							className="closeButton"
-							onClick={() => { closeBothModal() }}
-						>
-							<CloseIcon />
-						</IconButton>
-						<div className="Waitlist">
-							<div className="container">
-								<div className="row waitlistRow">
-									<div className="col-md-6">
-										<div className="waitlistcont">
-											<h3
-												className=""
-												id="transition-modal-title"
-											>
-												Thank you for joining{" "}
-												<span className="br-block"></span>{" "}
-												Cashero's waitlist{" "}
-											</h3>
-											<p>
-												Cashero's revolutionary approach
-												to making{" "}
-												<span className="br-block"></span>{" "}
-												your money go further.{" "}
-											</p>
-										</div>
-									</div>
-									<div className="col-md-6">
-										<img
-											className="img-fluid"
-											alt="wait"
-											src={Wait2}
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</Paper>
-				</Modal>
-			}
 			<div className="PesonalBanner">
 				<div className="container">
 					<div className="row">
@@ -273,7 +210,7 @@ export function ListedCharity() {
 							</div>
 						</div>
 						<div className="col-md-6">
-							<img alt="freeFund" className="img-fluid mx-auto d-block" src={freeFund} />
+							<img alt="free Fund" className="img-fluid mx-auto d-block" src={freeFund} />
 						</div>
 					</div>
 				</div>
@@ -282,11 +219,11 @@ export function ListedCharity() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList3 list-unstyled">
-							<li><img alt="heartDollar" src={heartDollar} />Discover new charities</li>
-							<li><img alt="donateDollar" src={donateDollar} />Donate directly</li>
+							<li><img alt="heart Dollar" src={heartDollar} />Discover new charities</li>
+							<li><img alt="donate Dollar" src={donateDollar} />Donate directly</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
 							<li><img alt="Draw" src={Draw} />Donate your money at any time</li>
-							<li><img alt="listHome" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
@@ -304,7 +241,7 @@ export function ListedCharity() {
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
-									<img className="img-fluid" alt="Fav" src={Fav} />
+									<img className="img-fluid" alt="Favourite" src={Fav} />
 									<h3>Sign up for Cashero.</h3>
 								</div>
 							</Fade>
@@ -313,20 +250,20 @@ export function ListedCharity() {
 							<div className="GetStartedBox2 w-100">
 								<img
 									className="img-fluid"
-									alt="listImg"
+									alt="list Image"
 									src={listImg}
 								/>
 								<h3>
-								Apply to become a listed charity.
+									Apply to become a listed charity.
 								</h3>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 							<Fade triggerOnce direction="right">
 								<div className="GetStartedBox3 w-100">
-									<img className="img-fluid" alt="StepsWallet" src={StepsWallet} />
+									<img className="img-fluid" alt="Steps Wallet" src={StepsWallet} />
 									<h3>
-									Receive donations and make a difference!
+										Receive donations and make a difference!
 									</h3>
 								</div>
 							</Fade>
@@ -337,7 +274,7 @@ export function ListedCharity() {
 							<div className="MultistepsCont">
 								<p>Ready to increase your charity’s donations? Let’s do it.</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+									Get Early Access <img className="ArrowBtn" alt="arrow" src={Arrow1} />
 								</button>
 							</div>
 						</div>

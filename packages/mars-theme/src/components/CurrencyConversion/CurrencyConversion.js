@@ -18,7 +18,7 @@ export function CurrencyConversion() {
 						</div>
 						<img
 							className="charity-mob"
-							alt=""
+							alt="currency exchange"
 							src={currExchange}
 						/>
 					</div>
@@ -27,16 +27,10 @@ export function CurrencyConversion() {
 					<div className="CurrencyConversionCont">
 						<div>
 							<Fade triggerOnce direction="up">
-								<h1 className="oneAppTitle">
-									Online Currency
-										<span className="br-block"></span>
-										Exchange
-								</h1>
-								<p>
-								Instantly exchange between USD, EUR, and GBP at rates so good that you’ll never exchange currency with a bank again. Beat that.
-								</p>
+								<h1 className="oneAppTitle">Online Currency<span className="br-block"></span>Exchange</h1>
+								<p>Instantly exchange between USD, EUR, and GBP at rates so good that you’ll never exchange currency with a bank again. Beat that.</p>
 								<Link link="/exchange-rates" className="Link sm-mb-30">
-									Learn more about Exchange <img className="ArrowBtn" alt="" src={Arrow} />
+									Learn more about Exchange <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 								</Link>
 							</Fade>
 						</div>

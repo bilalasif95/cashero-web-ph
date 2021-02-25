@@ -10,6 +10,7 @@ import LinkedIn from "../../assets/linkedin.svg";
 import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg";
 import Youtube from "../../assets/youtube.svg";
+import Instagram from "../../assets/instagram.svg";
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -47,8 +48,8 @@ export function Footer() {
 						</Link>
 						<p className="HelpText">Need help? We’re always <span className="br-block"></span> here when you need us</p>
 						<ul className="list-unstyled AppList">
-							<li><a href="/#"><img alt="" src={Android} /></a></li>
-							<li><a href="/#"><img alt="" src={IOS} /></a></li>
+							<li><a href="/#"><img alt="Android" src={Android} /></a></li>
+							<li><a href="/#"><img alt="IOS" src={IOS} /></a></li>
 						</ul>
 					</div>
 					<div className="col-md-6">
@@ -89,10 +90,11 @@ export function Footer() {
 					<div className="SocialCont">
 						<p>United States - English</p>
 						<ul className="SocialIcons list-unstyled">
-							<li><a href="/#"><img alt="" src={LinkedIn} /> </a></li>
-							<li><a href="/#"><img alt="" src={Facebook} /> </a></li>
-							<li><a href="/#"><img alt="" src={Twitter} /> </a></li>
-							<li><a href="/#"><img alt="" src={Youtube} /> </a></li>
+							<li><a href="https://www.linkedin.com/company/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" src={LinkedIn} /> </a></li>
+							<li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
+							<li><a href="https://twitter.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Twitter" src={Twitter} /> </a></li>
+							<li><a href="https://www.instagram.com/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="Instagram" src={Instagram} /> </a></li>
+							<li><a href="https://www.youtube.com/channel/UCnFJebay3pAJBu-DpbYWjCQ" target="_blank" rel="noopener noreferrer"><img alt="Youtube" src={Youtube} /> </a></li>
 						</ul>
 					</div>
 				</div>

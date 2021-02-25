@@ -3,7 +3,7 @@ import { styled, connect } from "frontity";
 
 const description404 = (
   <>
-    That page can’t be found{" "}
+    That page can’t be found
     <span role="img" aria-label="confused face">
       😕
     </span>
