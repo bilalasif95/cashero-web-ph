@@ -18,7 +18,7 @@ export function MoneyRequest() {
 									<span className="br-block"></span>
 								 Transfer
 							</h1>
-							<p>Cashero makes your payments simple. Tap a button and start sending, requesting and receiving payments worldwide. It’s fast, secure, convenient, and simple.</p>
+							<p>Tap a button and start sending, requesting, and receiving payments worldwide. It’s fast, secure, and easy.</p>
 							<Link link="/receive-payments" className="Link">
 								Learn more about Payments <img className="ArrowBtn" alt="" src={Arrow} />
 							</Link>

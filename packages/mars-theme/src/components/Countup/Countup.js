@@ -6,25 +6,31 @@ export function Countup() {
 			<div className="row">
 				<div className="col-md-3">
 					<div className="CountupCont">
-						<h1>12M+</h1>
-						<p>Personal customers</p>
+						<h1>5%</h1>
+						<p>APY</p>
 					</div>
 				</div>
-				<div className="col-md-3">
+				{/* <div className="col-md-3">
 					<div className="CountupCont">
 						<h1>500K</h1>
 						<p>Business customers</p>
 					</div>
+				</div> */}
+				<div className="col-md-3">
+					<div className="CountupCont">
+						<h1>1</h1>
+						<p>Only 1 Cashero</p>
+					</div>
 				</div>
 				<div className="col-md-3">
 					<div className="CountupCont">
-						<h1>140</h1>
+						<h1>120</h1>
 						<p>Countries supported</p>
 					</div>
 				</div>
 				<div className="col-md-3">
 					<div className="CountupCont">
-						<h1>3+</h1>
+						<h1>3</h1>
 						<p>In-app currencies</p>
 					</div>
 				</div>

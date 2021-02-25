@@ -22,12 +22,10 @@ export function CharitySection() {
 						<Fade triggerOnce direction="up">
 							<h1 className="oneAppTitle">
 								{" "}
-									Charity and
-									 Donations
+								Fee-Free Donations
 								</h1>
 							<p>
-								Sign up to Cashero and continue to make a difference by receiving donations.
-								Receive donations directly in the app or by creating a donation request link. You receive 100% of the funds and your donations earn interest.
+							Heroes deserve special treatment. When you receive donations in-app or via a donation request link, you receive 100% of the funds and your donations earn interest.
 								</p>
 							<Link link="/donation" className="Link">Learn more about Charity<img className="ArrowBtn" alt="" src={Arrow} /></Link>
 						</Fade>

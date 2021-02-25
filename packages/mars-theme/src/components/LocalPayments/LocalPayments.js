@@ -26,15 +26,13 @@ export function LocalPayments() {
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
-							<p>Whether you’re paying your electricity bill, splitting takeout with friends, or you simply lost a bet, Cashero is here for you. Monthly expenses are such a pain, worrying about them each month also doesn’t help. Let us make the whole process easy for you. </p>
-							<p>With Cashero, you can send money instantly and set reminders to pay your bills.
-							If someone owes you money, well, we also make that simple too. Send a request through Cashero and your friend will be reminded that she owes you for the burrito. Exchanging bank details are not needed.
-							Receiving payments is a breeze and your account will be updated automatically. Let Cashero do all the work for you while you carry on eating your burrito.
+							<p>
+							Whether you’re paying for shoes, a meal, or tickets to that event you've been waiting all year for, Cashero has your back.
 							</p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								Join for Free <img className="ArrowBtn" alt="" src={Arrow} />
+							Get Early Access <img className="ArrowBtn" alt="" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}

@@ -150,7 +150,7 @@ export function Donation() {
 						<div className="col-md-6">
 							<div className="PersonalCont">
 								<h1>Make An Impact, <span className="br-block"></span> Watch Your Money <span className="br-block"></span> Go Further </h1>
-								<p className="bannerPara">Select a charity, they receive 100% of the donations, and we all benefit
+								<p className="bannerPara">Select a charity, donate, and they’ll receive every penny of your donations.
 								</p>
 								<TextfieldBanner />
 								{/* <div className="numberSelection">
@@ -270,8 +270,9 @@ export function Donation() {
 								</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
+									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in May.</li>
 								</ul>
+								<p className="bannerPara">Get early access to the Cashero app and earn a chance <span className="br-block"></span> to win $1,000 every 3 days! Terms and conditions apply. </p>
 							</div>
 						</div>
 						<div className="col-md-6">
@@ -285,7 +286,7 @@ export function Donation() {
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList3 list-unstyled">
 							<li><img alt="heartDollar" src={heartDollar} />Discover new charities</li>
-							<li><img alt="donateDollar" src={donateDollar} />Donate directly</li>
+							<li><img alt="donateDollar" src={donateDollar} />Donate directly at any time</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
 							<li><img alt="Draw" src={Draw} />Donate your money at any time</li>
 							<li><img alt="listHome" src={listHome} />EU licensed & regulated financial institution</li>
@@ -319,7 +320,7 @@ export function Donation() {
 									src={DonateBox}
 								/>
 								<h3>
-									Tap Giving and select a charity
+								Tap Donate and select a charity
 								</h3>
 							</div>
 						</div>
@@ -329,7 +330,7 @@ export function Donation() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="" src={pricewallet} />
 									<h3>
-										Make donations and make a difference!
+									Make donations to make a difference!
 									</h3>
 								</div>
 							</Fade>
@@ -338,9 +339,9 @@ export function Donation() {
 					<div className="row">
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
-								<p>Ready to protect your currencies in one wallet? Maintain your wealth in Cashero’s multi-currency account.</p>
+								<p>Ready to donate? Head over to the Cashero app, the rest is simple.</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-									Donate <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+								Get Early Access <img className="ArrowBtn" alt="arrow" src={Arrow1} />
 								</button>
 							</div>
 						</div>

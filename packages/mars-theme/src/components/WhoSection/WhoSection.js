@@ -11,10 +11,8 @@ export function WhoSection() {
 				<div className="col-md-6 sm-mt-30">
 					<div className="WhoSectionCont">
 						<h1>Who we are</h1>
-						<p>Cashero uses blockchain technology to provide a secure platform for high yield savings, multi-curency wallets and instant, fee-free internal and cross border payments.</p>
-						<p>We're designed to help you make money, and save money. The Hero your money has been waiting for.
-						I recommend Cashero to everyone. I can see that I’m earning money every minute
-						</p>
+						<p>Cashero is an all-in-one platform for multi-currency high-yield savings, instant, fee-free internal and cross-border payments.</p>
+						<p>The Hero your money has been waiting for, Cashero is designed to help you make and save money. </p>
 					</div>
 				</div>
 			</div>

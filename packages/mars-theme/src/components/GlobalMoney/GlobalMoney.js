@@ -43,13 +43,13 @@ export function GlobalMoney() {
 							<h3 className="oneAppTitle">
 								Transfer Money
 									<span className="br-block"></span>
-									Abroad
-								</h3>
+								Abroad
+							</h3>
 							<p>
-								Send money to back home. Stretch your hard earned money even further with low exchange fees. Cashero helps you send money globally with no hassle.
+							Send money back home. Stretch your hard-earned money even further with low exchange fees. Cashero helps you send money internationally with no hassle.
 							</p>
 							<Link link="/remittance" className="Link">
-								Learn more about Transfers  <img className="ArrowBtn" alt="" src={Arrow} />
+							Learn more about Transfers  <img className="ArrowBtn" alt="" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>

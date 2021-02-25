@@ -430,9 +430,9 @@ const List = ({ state }) => {
 									saving, earning and sending in seconds.
 								</h2>
                   <p id="transition-modal-description">
-                    Enter your number below and we’ll send you a
-                    message to download the Cashero app.
+                  We’ll send you a message with a link to download the app. 
 								</p>
+                <p id="transition-modal-description">You’ll also earn a chance to win $1,000 every 3 days! Terms and conditions apply. </p>
                   <div className="ModalPhone">
                     <div className="GetAppEmail">
                       <TextField

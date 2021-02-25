@@ -127,7 +127,7 @@ export function SignupSection() {
 						<div className="col-12">
 							<h1 className="SignUpTitle">Join Cashero</h1>
 							<h3 className="SignUpText mb-0">
-								Get access to Cashero’s revolutionary approach to making your money go further.
+							Ready to make your money go further? Join Cashero and get early access.
 							</h3>
 							<div className="SignInEmail">
 								<TextField

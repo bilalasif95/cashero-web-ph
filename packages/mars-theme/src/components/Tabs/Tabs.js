@@ -177,44 +177,25 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											HIGH YIELD SAVINGS: Cashero
-											users receive inflation beating
-												interest rates of 2%-5% APY.{" "}
+											<span className="bold-text">High yield savings: </span>  Cashero users receive inflation-beating, bank-beating, almost-too-good-to-be true interest rates of 2%-5% APY. 
 										</h4>
 										<h4 className="FaqText">
-											MULTI CURRENCY WALLETS: No
-											minimum balance or maintenance
-											fees. Cashero users can reduce
-											currency fluctuation risk by
-											holding balances in USD, GBP and
-												EUR.{" "}
+										<span className="bold-text">Multi-currency wallet:</span> no minimum balance or maintenance fees.  Cashero users can reduce currency fluctuation risk by holding balances in USD, GBP, and EUR.
 										</h4>
 										<h4 className="FaqText">
-											CURRENCY CONVERSION: Users can
-											instantly exchange between USD,
-												EUR and GBP.{" "}
+										<span className="bold-text">Currency conversion:</span> users can instantly exchange between USD, EUR, and GBP. 
 										</h4>
 										<h4 className="FaqText">
-											INSTANT PAYMENTS: Users can
-											send, request and instantly
-											receive money from users
-												worldwide.{" "}
+										<span className="bold-text">Instant payments:</span> users can send, request, and receive money from users worldwide faster than you can say Cashero.
 										</h4>
 										<h4 className="FaqText">
-											BUSINESS: Businesses can send,
-											request and receive money from
-												customers worldwide.{" "}
+										<span className="bold-text">Business:</span> businesses can send, request, and receive money from customers worldwide.
 										</h4>
 										<h4 className="FaqText">
-											CHARITY: Charities can sign up
-											to Cashero to receive donations.
-											Charities can use their Cashero
-											link to request donations via
-												Cashero.{" "}
+										<span className="bold-text">Fee-free charity donations:</span> charities can sign up to Cashero to receive donations. Charities can use their Cashero link to request donations via Cashero.
 										</h4>
 										<h4 className="FaqText">
-											REWARDS: Users earn rewards for
-											referring people to Cashero.
+										<span className="bold-text">Rewards:</span> users earn rewards for referring people to Cashero.
 											</h4>
 									</Typography>
 								</AccordionDetails>
@@ -241,10 +222,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero will be released after
-											the application undergoes a
-											thorough security audit by Trail
-												of Bits in February 2021.{" "}
+										May 2021.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -271,14 +249,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero has partnered with Wyre
-											and Circle, regulated money
-											services businesses with strict
-											KYC and AML procedures. Cashero
-											is in the process of becoming an
-											EU regulated financial
-											institution with a
-											cryptocurrency license.
+										Cashero is in the process of becoming an EU-regulated financial institution.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -305,8 +276,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											To learn more about Cashero
-											contact info@cashero.com.
+										To learn more about Cashero contact info@cashero.com. 
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1849,19 +1819,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero allows you to send,
-											request and receive payments. Go
-											to the Payments tab, and select
-											the contact you would like to
-											transfer money to and add the
-											amount you would like to send.
-											You can search for contacts and
-											even businesses and either send
-											or request money. If your
-											contact or business is not a
-											registered user or business you
-											can invite them to use Cashero
-											(and earn rewards!).
+										Cashero allows you to send, request and receive payments. Simply go to the Payments tab, and select the contact you would like to transfer money to and add the amount you would like to send. You can search for your contacts and even businesses. If your contact or a business is not a registered Cashero user, you can invite them and earn rewards for it too.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1888,15 +1846,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											For users with personal
-											accounts, users can send,
-											request and instantly receive
-											money from users worldwide.
-											Businesses can send, request and
-											receive money to customers
-											worldwide for a nominal fee of
-											1% after their first $50,000
-											USD.{" "}
+										For users with personal accounts, users can send, request and instantly receive money from users worldwide. Businesses can send, request and receive money from customers worldwide for a nominal fee of 1% after their first $50,000 USD.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1917,16 +1867,13 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										How long do payments take to send
-										and receive?
+									How long do payments take to send and receive?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Payments between registered
-											users and businesses are sent
-											and received instantly.{" "}
+										Payments between registered users, charities and businesses are sent and received instantly.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1954,8 +1901,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes! You can choose between USD,
-											GBP or EUR.{" "}
+										Yes! You can choose between USD, GBP or EUR. 
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1982,14 +1928,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected
-											using multi-party computation
-											(MPC) and hardware isolation
-											with Intel SGX enclaves. It
-											sounds complex and it is, on
-											purpose. These security layers
-											ensure your money is safe and
-											protected.
+										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These extra security layers ensure your money is safe and protected.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2011,7 +1950,7 @@ export function QuestionTabs(props) {
 										id="panel6a-header"
 									>
 										<h4 className="heading">
-											Expand your knowledge
+										Learn more about Instant Money Transfers
 										</h4>
 									</AccordionSummary>
 									<AccordionDetails>
@@ -2019,37 +1958,37 @@ export function QuestionTabs(props) {
 											<h2 className="blackhead">Choosing The Right Platform To Transfer Your Money Fast</h2>
 											<p>Financial emergencies happen. Overdue bills, unforeseen medical expenses, family crises, and even car breakdowns are all a part of life that may require a fast transfer of money. In these scenarios, you want to make sure you find the right provider to meet your particular needs. But, how do you choose the right one? What do you need to know about instant money transfers to make sure nothing goes awry and the money gets where it needs to go? </p>
 											<h2 className="blackhead">How “instant” are instant money transfers?</h2>
-											<p>It depends on the selected money transfer company. In most cases, “instant” means “within a few seconds or minutes”. Although many companies claim instant money transfer services, their transactions may take a little while before they eventually clear. This is because the transfer speed is affected by several factors. </p>
+											<p>It depends on the selected money transfer company. In most cases, “instant” means “within a few seconds or minutes”. Although many companies claim instant money transfer services, their transactions may take a little while before they eventually clear. This is because the transfer speed is affected by several factors.</p>
 											<h3 className="blackhead">What factors affect the speed of money transfers?</h3>
 											<p>The four major factors affecting transfer speed are:</p>
 											<p><b>1. The countries between which you are transferring money</b></p>
-											<p>If you're transferring funds between countries where foreign money transfers are more commonplace or occur more frequently, the transaction is usually fast. For example, if you're transferring funds from the USA to the UK, you can expect near-instant transfer services. Less common transfers (i.e., from the USA to Honduras) will take a bit longer.</p>
+											<p>If you're transferring funds between countries where foreign money transfers are more commonplace or occur more frequently, the transaction is usually fast. For example, if you're transferring funds from the USA to the UK, you can expect near-instant transfer services. Less common transfers (i.e., from the USA to Honduras) will take a bit longer. But with advances in financial technology, and the rising of online payment providers like Cashero, global transfers are happening faster than ever. </p>
 											<p><b>2. The way the money is received </b></p>
 											<p>When funds are transferred, there are different ways they can be received by the beneficiary. Some methods of receipt are faster than others. Here are the most common:</p>
 											<div className="inner-div">
-												<p><b>Cash transfers</b> – Most providers offering instant money transfers do so in the form of cash pickups. This means that the person receiving that money can collect it from a designated agent location the moment you deposit the funds. Cash transfers are typically the fastest way to send money overseas. Requiring the recipient to go to a physical location for a money transfer enables the company to verify the transaction immediately and payout the funds. So, funds are transferred instantly.</p>
-												<p><b>E-wallet transfers</b> – Some providers allow you to transfer money instantly to electronic or mobile wallets. Although possible, this is not a common option, particularly in some less developed countries. </p>
-												<p><b>Bank & debit card transfers</b> – These types of transfers save you from having to visit a physical location to send money. The tradeoff for convenience is that bank account or debit card transfers usually come with extra fees and may take between 1- 5 business days to clear (though in many cases the transfer is instant). The reason for this delay is that the bank needs to verify the transaction first before it allows the transfer. If both banks involved are on a network (i.e., SEPA), the money transfer process might be faster than regular international bank transfers.</p>
-												<p><b>Directly to the recipient’s account</b> – This is a bank-related option to send money to another individual overseas. This type of transfer may not be instantaneous, but usually takes only a few hours to process. </p>
+												<p><b>Cash transfers</b> – Most providers offering instant money transfers do so in the form of cash pickups. This means that the person receiving that money can collect it from a designated agent location the moment you deposit the funds. Cash transfers are typically the fastest way to send money overseas. Requiring the recipient to go to a physical location for a money transfer enables the company to verify the transaction immediately and payout the funds. So, funds are transferred instantly. However cash transfers can come with high fees and potentially poor exchange rates.</p>
+												<p><b>E-wallet transfers</b> – Some providers allow you to transfer money instantly to electronic or mobile wallets. With these kinds of transfers we enter the world of FinTech - Financial Technology. FinTech Payment Providers, like Cashero, now lead the industry in terms of transfer speed, costs of fees, and ease of use. </p>
+												<p><b>Bank & debit card transfers</b> – These types of transfers save you from having to visit a physical location to send money. The tradeoff for convenience is that bank account or debit card transfers usually come with extra fees and may take between 1- 5 business days to clear (though in many cases the transfer is instant). The reason for this delay is that the bank needs to verify the transaction first before it allows the transfer. If both banks involved are on a network (i.e., SEPA), the money transfer process might be faster than regular international bank transfers. </p>
+												<p><b>Directly to the recipient’s account</b> – This is a bank-related option to send money to another individual overseas. This type of transfer may not be instantaneous, but usually takes only a few hours to process. However if the bank uses SWIFT for their transfer network, the sender may incur a fee for making the transfer “instantaneous”, sometimes upwards of $25. </p>
 											</div>
 											<p><b>3. The money transfer company</b></p>
 											<p>The money transfer process can vary depending on the transfer company you choose to do business with. The efficacy of the selected company’s sending, exchanging, and receiving funds procedures will determine the speed of transfer. </p>
-											<p><b>4. Having an account with a payment provider s</b></p>
-											<p>If you'll be opening an account with a money transfer company that offers money instant transfer services now, the provider will need to verify your account. This may take some time, though usually not more than a few hours, depending on the selected provider’s processes.</p>
+											<p><b>4. Having an account with a payment provider </b></p>
+											<p>If you'll be opening an account with a money transfer company that offers money instant transfer services now, the provider will need to verify your account. With Cashero our KYC process is simple and efficient, so you can be signed up and ready to make any transfer you need, almost immediately. This may take some time, though usually not more than a few hours, depending on the selected provider’s processes.</p>
 											<p>If you already have an active account with a provider, you can deposit your money and the recipient/beneficiary will receive it almost instantly. It's vital to ensure that the chosen provider is equipped to send money to and from the necessary countries. Some providers, for example, specialize in money transfers between the USA and the UK, while others offer faster European international transfers.</p>
 											<h2 className="blackhead">Sending an instant money transfer – How does it work?</h2>
-											<p>The process is pretty straightforward. You send money by supplying the required amount to a transfer company agent or online platform. Once the transfer is complete the recipient has access to the funds either in person or electronically. Although the exact fund transfer procedure may differ among providers, the basic steps are as follows:</p>
+											<p> The process is pretty straightforward. You send money by supplying the required amount to a transfer company agent or online platform. Once the transfer is complete the recipient has access to the funds either in person or electronically. Although the exact fund transfer procedure may differ among providers, the basic steps are as follows:</p>
 											<div className="inner-div">
 												<p><b>Register </b> – You will most likely be asked to provide some personal details (i.e., name, email address, etc.). Some providers also request evidence of where you got the money you are sending. For online platforms, you will need to create an account.</p>
-												<p><b>Initiate the money transfer </b> – For those sending funds through an online platform, use your login credentials to access your account. Sending funds can also be achieved by visiting a provider’s nearest physical location. </p>
-												<p><b>Provide the recipient’s information</b> – ThPay for the transfer e provider will ask you to provide the recipient’s personal details (i.e., name, currency in which they will collect the money, and account details). Note that you should enter the correct information (i.e., the recipient’s name should match the one on their ID and bank account precisely). </p>
-												<p><b>Pay for the transfer</b> – This step involves funding your transfer. Different providers will accept different payment methods, including cash, check, or bank withdrawal. </p>
+												<p><b>Initiate the money transfer </b> – For those sending funds through an online platform, use your login credentials to access your account. Sending funds can also be achieved by visiting a provider’s nearest physical location.  </p>
+												<p><b>Provide the recipient’s information</b> – The provider will ask you to provide the recipient’s personal details (i.e., name, currency in which they will collect the money, and account details). Note that you should enter the correct information (i.e., the recipient’s name should match the one on their ID and account precisely).  </p>
+												<p><b>Pay for the transfer</b> – This step involves funding your transfer, if applicable. Different providers will accept different payment methods, including cash, check, or bank withdrawal.  </p>
 											</div>
-											<p><b>Note</b>: If the transfer recipient is making a cash collection, you will most likely need to provide them with the transaction number or PIN. The agent in the recipient’s country will ask for that number or PIN to verify the transaction. Without it, the recipient will probably not be able to collect their money. </p>
+											<p><b>Note</b>:  If the transfer recipient is making a cash collection, you will most likely need to provide them with the transaction number or PIN. The agent in the recipient’s country will ask for that number or PIN to verify the transaction. Without it, the recipient will probably not be able to collect their money.  </p>
 											<h3 className="blackhead">Is sending an instant transfer anywhere in the world possible?</h3>
-											<p>In most cases, yes. But the answer to this question largely depends on the selected provider. Some major companies, Cashero included, have agent networks across the globe. This allows for instant money transfers to nearly any location. Nevertheless, sending funds to less-commonly used countries or routes can be more difficult and may take more time. </p>
+											<p>In most cases, yes. But the answer to this question largely depends on the selected provider. This allows for instant money transfers to nearly any location. Nevertheless, sending funds to less-commonly used countries or routes can be more difficult and may take more time. </p>
 											<h3>Sending large amounts of money via instant money transfers</h3>
-											<p>Again, this depends on the transfer company you choose to send money with. Each one has its own limit on how much you can send via an instant money transfer service. </p>
+											<p>Again, this depends on the transfer company you choose to send money with. Each one has its own limit on how much you can send via an instant money transfer service. Depending on the service, you won’t be able to send very large amounts using an instant money transfer. However, your definition of “large” will determine the answer to this question. Most transfer companies have both daily and weekly limits in place on the amount of money you can send. So be sure to learn what their limit is before signing up. For many providers, handling five-figure sums is quite challenging. </p>
 											<p>Generally speaking, you won’t be able to send very large amounts using an instant money transfer. However, your definition of “large” will determine the answer to this question. For example, PayPal allows you to send up to $5,000 at one time instantly. This is also their weekly instant transfer limit. For many providers, handling five-figure sums is quite challenging. </p>
 											<h3 className="blackhead">Reversing instant money transfers </h3>
 											<p>Unfortunately in the majority of cases, cancelling or reversing a transfer is not possible. Once you initiate the instant funds transfer process, little can be done to reverse it. In fact, as soon as you deposit the money, there is usually no turning back. The procedure will automatically end when the money is delivered to the intended recipient. Given this, it is important to carefully check all details before starting an instant money transfer. </p>
@@ -2057,12 +1996,12 @@ export function QuestionTabs(props) {
 											<p>To avoid inconvenient delays and logistical problems, there are some things you can do before you initiate a transfer:</p>
 											<div className="inner-div">
 												<p><b>Be prepared – </b> Creating an account with a money transfer company and verifying it beforehand will most likely boost your instant money transfer experience. The same applies to having the recipient’s details early on. Furthermore, entering the right details (both yours and the beneficiary's) will also prevent slowdowns in the procedure.</p>
-												<p><b>Check the supported currencies – </b> Does your selected provider support the currencies you need? For example, Cashero allows you to send money in USD, EUR, and GBP. This means that your recipient can also receive funds in these currencies.</p>
-												<p><b>Ensure the safety of your transfer – </b> First of all, it's advised not to rush sending large sums to help avoid making a mistake that may delay the process. It's also worth inquiring how the provider protects your money. Cashero, for instance, uses complex security layers, including MPC (multi-party computation) and hardware isolation, to ensure safe transactions. </p>
-												<p><b>Compare providers –</b> It's paramount to find the provider that offers the fastest and most reliable money transfer services. If you can also find a trusted provider offering fast and 24/7 customer service, even better. </p>
-												<p><b>Check the cost involved – </b> Costly fees can inflate the overall cost of the transaction. That's why you should check the exchange rate margins and transfer fees offered by various providers. Some providers charge a mark-up exchange rate (usually around 1%-2%), others charge a fixed fee (normally, between $1.99-$24.99), and there are even providers that charge both. Note that higher exchange rates can affect the transfer cost dramatically, especially if you're sending large sums. Cashero, as an example, charges only a nominal fee of  1% on businesses that use its money transfer services after their first $50,000 USD. </p>
+												<p><b>Check the supported currencies – </b> Does your selected provider support the currencies you need? For example, Cashero allows you to send money in USD, EUR, and GBP. This means that your recipient can also receive funds in these currencies.  You can withdraw money from Cashero in your local currency.</p>
+												<p><b>Ensure the safety of your transfer – </b>  First of all, it's advised not to rush sending large sums to help avoid making a mistake that may delay the process. It's also worth inquiring how the provider protects your money. Cashero, for instance, uses complex security layers, including MPC (multi-party computation) and hardware isolation, to ensure safe transactions. </p>
+												<p><b>Compare providers –</b> It's paramount to find the provider that offers the fastest and most reliable money transfer services. If you can also find a trusted provider offering fast and 24/7 customer service, even better.  </p>
+												<p><b>Check the cost involved – </b> Costly fees can inflate the overall cost of the transaction. That's why you should check the exchange rate margins and transfer fees offered by various providers. Some providers charge a mark-up exchange rate (usually around 1%-2%), others charge a fixed fee (normally, between $1.99-$24.99), and there are even providers that charge both. Note that higher exchange rates can affect the transfer cost dramatically, especially if you're sending large sums.  </p>
 											</div>
-											<p>Making instant money transfers does not need to be a tedious or drawn-out process. With Cashero, you can make fast, reliable, and secure fund transfers to most locations around the world. No small letters, no fine print, and no hidden fees.</p>
+											<p>Making instant money transfers does not need to be a tedious or drawn-out process. With Cashero, you can make fast, reliable, and secure fund transfers to many users around the world. No small letters, no fine print, and no hidden fees.</p>
 										</div>
 									</AccordionDetails>
 								</Accordion>}
@@ -2349,13 +2288,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero has selected a list of
-											approved charities. Users can
-											donate by selecting Giving on
-											their Cashero app, searching for
-											a charity of their choice, and
-											donating directly with a click
-											of a button.{" "}
+										Cashero has selected a list of approved charities. Users can donate by selecting Donate on their Cashero app, searching for a charity of their choice, and donating directly with a click of a button. 
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2382,10 +2315,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											100% of donations made through
-											the Cashero app will go to
-											charity. There are no hidden
-											fees.
+										100% of donations made through the Cashero app will go to charity. There are no hidden fees.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2406,22 +2336,13 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										Which charities are listed on
-										Cashero?
+									Which charities are listed on Cashero?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Charities that meet Cashero’s
-											internal approval process of
-											making a significant impact in
-											our world can be listed on
-											Cashero. By selecting on any
-											charity in the Cashero app, you
-											can discover more about the
-											difference that charity is
-											making.{" "}
+										Charities that meet Cashero’s internal approval process of making a significant impact in our world can be listed on Cashero. By selecting any charity in the Cashero app, you can discover more about the difference that charity is making. 
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2442,15 +2363,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										Can recurring donations be made?
+									Can recurring donations be made?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											At this point, donations can
-											only be made as one-off
-											donations.{" "}
+										At this point, donations can only be made as one-off donations. 
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -2471,21 +2390,13 @@ export function QuestionTabs(props) {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										Are my donations safe?
+									Are my donations safe?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your donations are
-											protected using multi-party
-											computation (MPC) and hardware
-											isolation with Intel SGX
-											enclaves. It sounds complex and
-											it is, on purpose. These
-											security layers ensure your
-											donations are safe and
-											protected.
+										Yes. Your donations are protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your donations are safe and protected.
 										</h4>
 									</Typography>
 								</AccordionDetails>

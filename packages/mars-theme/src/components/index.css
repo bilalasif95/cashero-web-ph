@@ -191,7 +191,7 @@ body{
       margin: 0 auto; } }
 
 .HomepagelList {
-  margin-top: 44px; }
+  margin: 44px 0px;}
   .HomepagelList li {
     position: relative;
     padding-left: 40px;
@@ -1307,7 +1307,6 @@ b {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.01em; }
-
 .Link {
   font-size: 16px;
   color: #0667EB !important;
@@ -3521,7 +3520,7 @@ button:focus {
   width: 15%; }
 
 .PersonalList {
-  margin-top: 30px; }
+  margin: 44px 0px; }
   .PersonalList li {
     position: relative;
     padding-left: 40px;
@@ -3602,7 +3601,7 @@ button:focus {
     display: flex;
     align-items: center; }
     .PersonalCompanyList li:first-of-type, .PersonalCompanyList li:nth-of-type(2) {
-      width: 15%; }
+      width: 20%; }
     .PersonalCompanyList li:nth-of-type(3) {
       width: 28%; }
     .PersonalCompanyList li:nth-of-type(4) {
@@ -3682,8 +3681,6 @@ button:focus {
 .PesonalBanner .selectCountry {
   width: 11.5%; }
 
-.PersonalList {
-  margin-top: 30px; }
   .PersonalList li {
     position: relative;
     padding-left: 40px;
@@ -3752,19 +3749,6 @@ button:focus {
     padding-left: 60px;
     display: flex;
     align-items: center; }
-    .PersonalCompanyList li:first-of-type, .PersonalCompanyList li:nth-of-type(2) {
-      width: 15%; }
-    .PersonalCompanyList li:nth-of-type(3) {
-      width: 28%; }
-    .PersonalCompanyList li:nth-of-type(4) {
-      width: 20%; }
-    .PersonalCompanyList li:nth-of-type(5) {
-      width: 20%; }
-    .PersonalCompanyList li:not(:last-child) {
-      margin-right: 10px; }
-    .PersonalCompanyList li img {
-      position: absolute;
-      left: 0; }
 
 @media (max-width: 540px) {
   .YearsSec {
@@ -3886,8 +3870,6 @@ button:focus {
 .InterestBanner .selectCountry {
   width: 11.5%; }
 
-.PersonalList {
-  margin-top: 30px; }
   .PersonalList li {
     position: relative;
     padding-left: 40px;
@@ -4279,8 +4261,6 @@ button:focus {
 .PesonalBanner .selectCountry {
   width: 11.5%; }
 
-.PersonalList {
-  margin-top: 30px; }
   .PersonalList li {
     position: relative;
     padding-left: 40px;
@@ -4453,8 +4433,6 @@ button:focus {
 .ExchangeBanner .selectCountry {
   width: 10%; }
 
-.PersonalList {
-  margin-top: 30px; }
   .PersonalList li {
     position: relative;
     padding-left: 30px;
@@ -4574,19 +4552,6 @@ button:focus {
     padding-left: 60px;
     display: flex;
     align-items: center; }
-    .PersonalCompanyList li:first-of-type, .PersonalCompanyList li:nth-of-type(2) {
-      width: 15%; }
-    .PersonalCompanyList li:nth-of-type(3) {
-      width: 28%; }
-    .PersonalCompanyList li:nth-of-type(4) {
-      width: 20%; }
-    .PersonalCompanyList li:nth-of-type(5) {
-      width: 20%; }
-    .PersonalCompanyList li:not(:last-child) {
-      margin-right: 10px; }
-    .PersonalCompanyList li img {
-      position: absolute;
-      left: 0; }
 
 .charityImg {
   z-index: 1;
@@ -4985,9 +4950,6 @@ button:focus {
 
 .PesonalBanner .selectCountry {
   width: 11.5%; }
-
-.PersonalList {
-  margin-top: 30px; }
   .PersonalList li {
     position: relative;
     padding-left: 40px;
@@ -5057,19 +5019,6 @@ button:focus {
     padding-left: 60px;
     display: flex;
     align-items: center; }
-    .PersonalCompanyList li:first-of-type, .PersonalCompanyList li:nth-of-type(2) {
-      width: 15%; }
-    .PersonalCompanyList li:nth-of-type(3) {
-      width: 28%; }
-    .PersonalCompanyList li:nth-of-type(4) {
-      width: 20%; }
-    .PersonalCompanyList li:nth-of-type(5) {
-      width: 20%; }
-    .PersonalCompanyList li:not(:last-child) {
-      margin-right: 10px; }
-    .PersonalCompanyList li img {
-      position: absolute;
-      left: 0; }
 
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
@@ -5192,8 +5141,6 @@ button:focus {
 .InterestBanner .selectCountry {
   width: 10% !important; }
 
-.PersonalList {
-  margin-top: 30px; }
   .PersonalList li {
     position: relative;
     padding-left: 40px;
@@ -5318,19 +5265,6 @@ button:focus {
     padding-left: 60px;
     display: flex;
     align-items: center; }
-    .PersonalCompanyList li:first-of-type, .PersonalCompanyList li:nth-of-type(2) {
-      width: 15%; }
-    .PersonalCompanyList li:nth-of-type(3) {
-      width: 28%; }
-    .PersonalCompanyList li:nth-of-type(4) {
-      width: 20%; }
-    .PersonalCompanyList li:nth-of-type(5) {
-      width: 20%; }
-    .PersonalCompanyList li:not(:last-child) {
-      margin-right: 10px; }
-    .PersonalCompanyList li img {
-      position: absolute;
-      left: 0; }
 
 .PersonalCompanyList4 {
   display: flex;
@@ -5429,8 +5363,6 @@ button:focus {
 .PesonalBanner .selectCountry {
   width: 11.5%; }
 
-.PersonalList {
-  margin-top: 30px; }
   .PersonalList li {
     position: relative;
     padding-left: 40px;
@@ -5497,19 +5429,6 @@ button:focus {
     padding-left: 60px;
     display: flex;
     align-items: center; }
-    .PersonalCompanyList li:first-of-type, .PersonalCompanyList li:nth-of-type(2) {
-      width: 15%; }
-    .PersonalCompanyList li:nth-of-type(3) {
-      width: 28%; }
-    .PersonalCompanyList li:nth-of-type(4) {
-      width: 20%; }
-    .PersonalCompanyList li:nth-of-type(5) {
-      width: 20%; }
-    .PersonalCompanyList li:not(:last-child) {
-      margin-right: 10px; }
-    .PersonalCompanyList li img {
-      position: absolute;
-      left: 0; }
 
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
@@ -5563,9 +5482,7 @@ button:focus {
 
 .PesonalBanner .selectCountry {
   width: 11.5%; }
-
-.PersonalList {
-  margin-top: 30px; }
+  
   .PersonalList li {
     position: relative;
     padding-left: 40px;
@@ -5633,19 +5550,6 @@ button:focus {
     padding-left: 60px;
     display: flex;
     align-items: center; }
-    .PersonalCompanyList li:first-of-type, .PersonalCompanyList li:nth-of-type(2) {
-      width: 15%; }
-    .PersonalCompanyList li:nth-of-type(3) {
-      width: 28%; }
-    .PersonalCompanyList li:nth-of-type(4) {
-      width: 20%; }
-    .PersonalCompanyList li:nth-of-type(5) {
-      width: 20%; }
-    .PersonalCompanyList li:not(:last-child) {
-      margin-right: 10px; }
-    .PersonalCompanyList li img {
-      position: absolute;
-      left: 0; }
 
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
@@ -15814,12 +15718,19 @@ select:-webkit-autofill:focus {
     }
     .swapBox .dropdown-menu, .ExchangeBox .dropdown-menu{
       background-color: #fff;
-<<<<<<< HEAD
     }
     .active {
       cursor: grabbing;
       cursor: -webkit-grabbing;
       transform: scale(1);
-=======
->>>>>>> cf86f106182e56fb888f1f2ddff03c0fc5fb8543
+    }
+    .customerDetailtext{
+      color: #fff;
+      font-weight: 400;
+      text-align: center;
+      margin: 20px 0px 50px 0px;
+    }
+    .bold-text{
+      color: #000;
+      font-weight: 600;  
     }

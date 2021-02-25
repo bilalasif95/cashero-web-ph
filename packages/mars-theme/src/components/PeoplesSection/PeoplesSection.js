@@ -31,14 +31,15 @@ export function PeoplesSection() {
 		<div className="peoples">
 			<div className="PeoplesCont">
 				<div className="container">
-					<h3 className="PeoplesTitle">Our Customers Say We're Great</h3>
+					<h3 className="PeoplesTitle mb-0">Too good to be true?</h3>
+					<h4 className="customerDetailtext">Here’s what our users have to say about us</h4>
 					<div className="row">
 						<div className="col-md-5">
 							<Slider {...settings}>
 								<div className="CarouselOuter">
 									<div className="CrouselCard">
 										<ul className="list-unstyled cardList">
-											<li><img src={CardImg} alt="" /> <span>Miyah Silva</span> </li>
+											<li><img src={CardImg} alt="" /> <span>Miyah Chan</span> </li>
 										</ul>
 										<h3 className="comment">I recommend Cashero to everyone. I can see that I’m earning money every minute!</h3>
 										<div className="Rating">
@@ -58,7 +59,7 @@ export function PeoplesSection() {
 										<ul className="list-unstyled cardList">
 											<li><img src={Henri} alt="" /> <span>Henrique Cassam</span> </li>
 										</ul>
-										<h3 className="comment">Sending money to friends has never been easier with Cashero</h3>
+										<h3 className="comment">Sending money to friends has never been easier with Cashero.</h3>
 										<div className="Rating">
 											<ul className="list-unstyled RatingList">
 												<li className="list-inline-item"><img alt="" src={Star} /></li>

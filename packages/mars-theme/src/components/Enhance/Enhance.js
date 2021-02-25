@@ -13,7 +13,7 @@ export function Enhance() {
 							<Fade triggerOnce direction="up">
 								<h3 className="EnhanceTitle">Business</h3>
 								<p>
-									Make money while you make money with our high yield savings. <span className="br-block"></span>  Send, request and receive money from customers worldwide. <span className="br-block"></span>  Your first $50K in payments is absolutely free, there's only 1% <span className="br-block"></span> fee after that.
+								Make profit on your profit with our high yield savings. <span className="br-block"></span> Send, request, and receive money from customers worldwide.
 								</p>
 								<a className="Link" href="/#">
 									Learn more about Business Payments  <img alt="" className="ArrowBtn" src={ArrowWhite} />

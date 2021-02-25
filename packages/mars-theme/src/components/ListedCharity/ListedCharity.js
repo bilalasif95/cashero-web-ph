@@ -149,7 +149,7 @@ export function ListedCharity() {
 						<div className="col-md-6">
 							<div className="PersonalCont">
 								<h1>Harness The Power Of Free Fundraising</h1>
-								<p className="bannerPara">We spread your story, you receive 100% of the donations, and we all benefit
+								<p className="bannerPara">We spread your story, you receive 100% of the donations, the world benefits.
 								</p>
 								<TextfieldBanner />
 								{/* <div className="numberSelection">
@@ -268,7 +268,7 @@ export function ListedCharity() {
 									</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
+									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in May.</li>
 								</ul>
 							</div>
 						</div>
@@ -317,7 +317,7 @@ export function ListedCharity() {
 									src={listImg}
 								/>
 								<h3>
-									Fill out an application to become a listed charity.
+								Apply to become a listed charity.
 								</h3>
 							</div>
 						</div>
@@ -326,7 +326,7 @@ export function ListedCharity() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="StepsWallet" src={StepsWallet} />
 									<h3>
-										Receive donations and make a difference!
+									Receive donations and make a difference!
 									</h3>
 								</div>
 							</Fade>
@@ -335,9 +335,9 @@ export function ListedCharity() {
 					<div className="row">
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
-								<p>Ready to grow your charity to the next level? Fill out our application to become a listed charity.</p>
+								<p>Ready to increase your charity’s donations? Let’s do it.</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-									Apply <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+								Get Early Access <img className="ArrowBtn" alt="arrow" src={Arrow1} />
 								</button>
 							</div>
 						</div>

@@ -147,7 +147,7 @@ export function HomePage() {
 							<div className="bannerCont">
 								<Fade triggerOnce direction="up" delay={100}>
 									<h1 className="bannerTitle">
-										Your Money's Superhero
+									Your Money's Superhero <span className="br-block"></span> is Almost Here
 									</h1>
 								</Fade>
 								<Fade
@@ -300,9 +300,10 @@ export function HomePage() {
 								<ul className="HomepagelList list-unstyled">
 									<li>
 										<img src={Clock} alt="" />
-										Open an account in minutes
+										Open an account in minutes. Launching in May.
 									</li>
 								</ul>
+								<p>Get early access to the Cashero app and earn a chance <span className="br-block"></span> to win $1,000 every 3 days! Terms and conditions apply. </p>
 							</div>
 						</div>
 						<div className="col-md-4">

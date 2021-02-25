@@ -149,7 +149,7 @@ export function ReceivePayments() {
 						<div className="col-md-6">
 							<div className="PersonalCont">
 								<h1>Instant Money Transfer - Send, Request And Receive Payments In A Flash</h1>
-								<p className="bannerPara">Pay and get paid, we make it way less awkward</p>
+								<p className="bannerPara">Pay and get paid, we make it way easier.</p>
 								<TextfieldBanner />
 								{/* <div className="numberSelection">
 									<div className="selectCountry">
@@ -267,8 +267,9 @@ export function ReceivePayments() {
 									</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
+									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in May.</li>
 								</ul>
+								<p>Get early access to the Cashero app and earn a chance <span className="br-block"></span> to win $1,000 every 3 days! Terms and conditions apply. </p>
 							</div>
 						</div>
 						<div className="col-md-6">
@@ -281,9 +282,9 @@ export function ReceivePayments() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="walletDown" src={walletDown} />Second, Request,</li>
-							<li><img alt="Instant" src={Instant} />Instant payments</li>
-							<li><img alt="listPhone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="walletDown" src={walletDown} />Send, request and receive payments instantly</li>
+							<li><img alt="Instant" src={Instant} />No monthly fees. No minimum balance required</li>
+							{/* <li><img alt="listPhone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
 							<li><img alt="listHome" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
@@ -326,7 +327,7 @@ export function ReceivePayments() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Path" src={Path} />
 									<h3>
-										Send, request and receive payments in an instant.
+									Send, request and receive payments in an instant.
 									</h3>
 								</div>
 							</Fade>
@@ -335,9 +336,9 @@ export function ReceivePayments() {
 					<div className="row">
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
-								<p>Ready to remove the awkwardness out of paying for bills or asking for money? Cashero’s got you.</p>
+								<p>Ready to make an instant money transfer? Cashero’s got you.</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-									Start paying & getting Paid  <img alt="arrow" className="ArrowBtn" src={Arrow1} />
+								Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

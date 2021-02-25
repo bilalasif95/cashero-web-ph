@@ -33,7 +33,7 @@ export function CurrencyConversion() {
 										Exchange
 								</h1>
 								<p>
-									Instantly exchange between USD, EUR, and GBP. Cashero gives you free currency conversions at transparent bank-beating exchange rates. Beat that.
+								Instantly exchange between USD, EUR, and GBP at rates so good that you’ll never exchange currency with a bank again. Beat that.
 								</p>
 								<Link link="/exchange-rates" className="Link sm-mb-30">
 									Learn more about Exchange <img className="ArrowBtn" alt="" src={Arrow} />
