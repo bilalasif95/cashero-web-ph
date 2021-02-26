@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import TextField from "../../common/textFiled";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
+import SearchIcon from "@material-ui/icons/Search";
 import Banner from "../../assets/photoshop.gif";
 import { GlobalMoney } from "../GlobalMoney/GlobalMoney";
 import { HighInterest } from "../HighInterest/HighInterest";
@@ -21,105 +28,100 @@ import { structuredData } from "../../config/SEO/Homepage/structuredData";
 import ThanksModal from "../ThanksModal/ThanksModal";
 
 export function HomePage(props) {
-	// const [searchTerm, setSearchTerm] = useState<any>("");
-	// const [searchResults, setSearchResults] = useState<any>(counrtrylist);
-	// const [searchResults2, setSearchResults2] = useState<any>([]);
-	// const [code, setCode] = useState("+1");
-	// const [dropdownOpen, setDropdownOpen] = useState(false);
-	// const toggle = () => {
-	// 	setSearchTerm("");
-	// 	setDropdownOpen((prevState) => !prevState)
-	// };
-	const [email, setEmail] = useState("");
-	// const [error, setError] = useState<string>("");
-	const [loading, setLoading] = useState(false);
-	const [openSuccessModal, setSuccessModal] = useState(false);
-	const onSubmit = () => {
-		setLoading(true)
-		callApi(EndPoints.preregistration, "post", "", {
-			Phone: email,
-		})
-			.then(() => {
-				setSuccessModal(true);
-				setLoading(false);
-				setEmail("");
-			})
-	};
-	const thanksModalClose = () => {
-		setSuccessModal(false);
-	};
-	// const [newPhone, setNewPhoneNumber] = useState("");
-	// const [phonenoLength, setPhoneNoLength] = useState(10);
-	// const handleChange = (e) => {
-	// 	setSearchTerm(e.target.value);
-	// 	const results = searchResults.filter(
-	// 		(country) =>
-	// 			country.name
-	// 				.toLowerCase()
-	// 				.includes(searchTerm.toLocaleLowerCase()) ||
-	// 			country.dial_code.includes(searchTerm.toLocaleLowerCase())
-	// 	);
-	// 	setSearchResults2(results);
-	// };
-	// const selectCountry = (country) => {
-	// 	setCode(country.dial_code);
-	// 	setPhoneNoLength(country.phone_length)
-	// 	setSearchTerm("")
-	// 	setSearchResults2(counrtrylist)
-	// };
-	// const getStarted = () => {
-	// 	let finalPhoneNumb = code + newPhone;
-	// 	callApi(EndPoints.preregistration, "post", "", {
-	// 		Phone: finalPhoneNumb,
-	// 		// CountryCode: updatecode,
-	// 	})
-	// 		.then((res: any) => {
-	// 			if (res.code === 400) {
-	// 				// setError(res.message);
-	// 			} else {
-	// 				setCode("+1")
-	// 				setNewPhoneNumber("");
-	// 				setSuccessModal(true);
-	// 			}
-	// 		})
-	// 		.catch(() => {
-	// 			// setError("Invalid phone number.");
-	// 		});
-	// };
-	// const handleOnChange = (e: any) => {
-	// 	setNewPhoneNumber(e.target.value);
-	// };
-	return (
-		<>
-			<script className="structured-data-list" type="application/ld+json">
-				{structuredData(props.state)}
-			</script>
-			{openSuccessModal && (
-				<ThanksModal
-					open={openSuccessModal}
-					handleClose={thanksModalClose}
-				/>
-			)}
-			<div className="container">
-				<div className="banner">
-					<div className="row">
-						<div className="col-md-8">
-							<div className="bannerCont">
-								<Fade triggerOnce direction="up" delay={100}>
-									<h1 className="bannerTitle">
-										Your Money's Superhero <span className="br-block"></span> is Almost Here
-									</h1>
-								</Fade>
-								<Fade
-									triggerOnce
-									direction="up"
-									delay={500}
-								>
-									<h2 className="bannerText slide-up">
-										Deposit money to earn up to 5% APY. <span className="br-block"></span> Exchange currencies, send money abroad, <span className="br-block"></span> make instant payments. <span className="br-block"></span> No hidden fees, no minimum deposits, no stress.
-									</h2>
-								</Fade>
-								<div className="bannerEmail">
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState(counrtrylist);
+  const [searchResults2, setSearchResults2] = useState([]);
+  const [code, setCode] = useState("+1");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggle = () => {
+    setSearchTerm("");
+    setDropdownOpen((prevState) => !prevState);
+  };
+  const [email, setEmail] = useState("");
+  // const [error, setError] = useState<string>("");
+  const [loading, setLoading] = useState(false);
+  const [openSuccessModal, setSuccessModal] = useState(false);
+  const onSubmit = () => {
+    setLoading(true);
+    callApi(EndPoints.preregistration, "post", "", {
+      Phone: email,
+    }).then(() => {
+      setSuccessModal(true);
+      setLoading(false);
+      setEmail("");
+    });
+  };
+  const thanksModalClose = () => {
+    setSuccessModal(false);
+  };
+  const [newPhone, setNewPhoneNumber] = useState("");
+  const [phonenoLength, setPhoneNoLength] = useState(10);
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+    const results = searchResults.filter(
+      (country) =>
+        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.dial_code.includes(searchTerm.toLocaleLowerCase())
+    );
+    setSearchResults2(results);
+  };
+  const selectCountry = (country) => {
+    setCode(country.dial_code);
+    setPhoneNoLength(country.phone_length);
+    setSearchTerm("");
+    setSearchResults2(counrtrylist);
+  };
+  const getStarted = () => {
+    let finalPhoneNumb = code + newPhone;
+    callApi(EndPoints.preregistration, "post", "", {
+      Phone: finalPhoneNumb,
+      // CountryCode: updatecode,
+    })
+      .then((res) => {
+        if (res.code === 400) {
+          // setError(res.message);
+        } else {
+          setCode("+1");
+          setNewPhoneNumber("");
+          setSuccessModal(true);
+        }
+      })
+      .catch(() => {
+        // setError("Invalid phone number.");
+      });
+  };
+  const handleOnChange = (e) => {
+    setNewPhoneNumber(e.target.value);
+  };
+  return (
+    <>
+      <script className="structured-data-list" type="application/ld+json">
+        {structuredData(props.state)}
+      </script>
+      {openSuccessModal && (
+        <ThanksModal open={openSuccessModal} handleClose={thanksModalClose} />
+      )}
+      <div className="container">
+        <div className="banner">
+          <div className="row">
+            <div className="col-md-8">
+              <div className="bannerCont">
+                <Fade triggerOnce direction="up" delay={100}>
+                  <h1 className="bannerTitle">
+                    Your Money's Superhero <span className="br-block"></span> is
+                    Almost Here
+                  </h1>
+                </Fade>
+                <Fade triggerOnce direction="up" delay={500}>
+                  <h2 className="bannerText slide-up">
+                    Deposit money to earn up to 5% APY.{" "}
+                    <span className="br-block"></span> Exchange currencies, send
+                    money abroad, <span className="br-block"></span> make
+                    instant payments. <span className="br-block"></span> No
+                    hidden fees, no minimum deposits, no stress.
+                  </h2>
+                </Fade>
+                {/* <div className="bannerEmail">
 									<TextField
 										placeholder="Enter Email Address"
 										type="email"
@@ -129,169 +131,2098 @@ export function HomePage(props) {
 									<div className="GetEarlyBtn">
 										<button disabled={loading || !email || !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(email)} onClick={onSubmit} className="btn btn-default">Get Early Access</button>
 									</div>
-								</div>
-								{/* <div className="numberSelection">
-									<div className="selectCountry">
-										<Dropdown
-											isOpen={dropdownOpen}
-											toggle={toggle}
-										>
-											<DropdownToggle caret>
-												<input
-													type="text"
-													placeholder="Code"
-													value={code}
-												/>
-											</DropdownToggle>
-											<DropdownMenu>
-												<DropdownItem header>
-													<>
-														<SearchIcon />
-														<input
-															type="text"
-															placeholder="Country"
-															value={searchTerm}
-															onChange={
-																handleChange
-															}
-														/>
-													</>
-												</DropdownItem>
-												<div className="country-list">
-													{searchResults2.length > 0
-														? searchResults2.map(
-															(
-																item,
-																index
-															) => (
-																<DropdownItem
-																	key={
-																		index +
-																		1
-																	}
-																	onClick={() =>
-																		selectCountry(
-																			item
-																		)
-																	}
-																	className="country-item"
-																>
-																	<div className="flag-name">
-																		<span>
-																			{
-																				item.flag
-																			}
-																		</span>
-																		{
-																			item.name
-																		}
-																	</div>
-																	<div className="code">
-																		{
-																			item.dial_code
-																		}
-																	</div>
-																</DropdownItem>
-															)
-														)
-														: searchResults.map(
-															(
-																item,
-																index
-															) => (
-																<DropdownItem
-																	key={
-																		index +
-																		1
-																	}
-																	onClick={() =>
-																		selectCountry(
-																			item
-																		)
-																	}
-																	className="country-item"
-																>
-																	<div className="flag-name">
-																		<span>
-																			{
-																				item.flag
-																			}
-																		</span>
-																		{
-																			item.name
-																		}
-																	</div>
-																	<div className="code">
-																		{
-																			item.dial_code
-																		}
-																	</div>
-																</DropdownItem>
-															)
-														)}
-												</div>
-											</DropdownMenu>
-										</Dropdown>
-									</div>
-									<div className="inputNum">
-										<input
-											type="number"
-											placeholder="Phone number"
-											value={newPhone}
-											onChange={(e) => handleOnChange(e)}
-										/>
-									</div>
-									<button
-										onClick={() => getStarted()}
-										className={
-											newPhone.length === phonenoLength
-												? "btn btn-primary my-2 my-sm-0 Appbtn "
-												: "btn btn-primary my-2 my-sm-0 Appbtn disabled"
-
-										}
-										type="submit"
-									>
-										Get Started
-									</button>
 								</div> */}
-								{/* <label style={{ color: "red", width: "100%", textAlign: "left", paddingTop: "0.5rem" }}>
+                <div className="numberSelection">
+                  <div className="selectCountry">
+                    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                      <DropdownToggle caret>
+                        <input type="text" placeholder="Code" value={code} />
+                      </DropdownToggle>
+                      <DropdownMenu>
+                        <DropdownItem header>
+                          <>
+                            <SearchIcon />
+                            <input
+                              type="text"
+                              placeholder="Country"
+                              value={searchTerm}
+                              onChange={handleChange}
+                            />
+                          </>
+                        </DropdownItem>
+                        <div className="country-list">
+                          {searchResults2.length > 0
+                            ? searchResults2.map((item, index) => (
+                                <DropdownItem
+                                  key={index + 1}
+                                  onClick={() => selectCountry(item)}
+                                  className="country-item"
+                                >
+                                  <div className="flag-name">
+                                    <span>{item.flag}</span>
+                                    {item.name}
+                                  </div>
+                                  <div className="code">{item.dial_code}</div>
+                                </DropdownItem>
+                              ))
+                            : searchResults.map((item, index) => (
+                                <DropdownItem
+                                  key={index + 1}
+                                  onClick={() => selectCountry(item)}
+                                  className="country-item"
+                                >
+                                  <div className="flag-name">
+                                    <span>{item.flag}</span>
+                                    {item.name}
+                                  </div>
+                                  <div className="code">{item.dial_code}</div>
+                                </DropdownItem>
+                              ))}
+                        </div>
+                      </DropdownMenu>
+                    </Dropdown>
+                  </div>
+                  <div className="inputNum">
+                    <input
+                      type="number"
+                      placeholder="Phone number"
+                      value={newPhone}
+                      onChange={(e) => handleOnChange(e)}
+                    />
+                  </div>
+                  <button
+                    onClick={() => getStarted()}
+                    className={
+                      newPhone.length === phonenoLength
+                        ? "btn btn-primary my-2 my-sm-0 Appbtn "
+                        : "btn btn-primary my-2 my-sm-0 Appbtn disabled"
+                    }
+                    type="submit"
+                  >
+                    Get Early Access
+                  </button>
+                </div>
+                {/* <label style={{ color: "red", width: "100%", textAlign: "left", paddingTop: "0.5rem" }}>
 									{error}
 								</label> */}
-								<ul className="HomepagelList list-unstyled">
-									<li>
-										<img src={Clock} alt="Clock" />
-										Open an account in minutes. Launching in May.
-									</li>
-								</ul>
-								<p>Get early access to the Cashero app and earn a chance <span className="br-block"></span> to win $1,000 every 3 days! Terms and conditions apply. </p>
-							</div>
-						</div>
-						<div className="col-md-4">
-							<div className="bannerImg">
-								<img className="img-fluid " alt="Banner" src={Banner} />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<HighInterest />
-			<div className="container">
-				<MoneyRequest />
-				<GlobalMoney />
-				<MultiCurrency />
-				<CurrencyConversion />
-			</div>
-			<Enhance />
-			<div className="container">
-				<CharitySection />
-				<GetStarted />
-			</div>
-			<PeoplesSection />
-			<div className="container">
-				<Companies />
-				<QuestionTabs activeTab={0} />
-			</div>
-			<SignupSection />
-		</>
-	);
+                <ul className="HomepagelList list-unstyled">
+                  <li>
+                    <img src={Clock} alt="Clock" />
+                    Open an account in minutes. Launching in May.
+                  </li>
+                </ul>
+                <p>
+                  Get early access to the Cashero app and earn a chance{" "}
+                  <span className="br-block"></span> to win $1,000 every 3 days!
+                  Terms and conditions apply.{" "}
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="bannerImg">
+                <img className="img-fluid " alt="Banner" src={Banner} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <HighInterest />
+      <div className="container">
+        <MoneyRequest />
+        <GlobalMoney />
+        <MultiCurrency />
+        <CurrencyConversion />
+      </div>
+      <Enhance />
+      <div className="container">
+        <CharitySection />
+        <GetStarted />
+      </div>
+      <PeoplesSection />
+      <div className="container">
+        <Companies />
+        <QuestionTabs activeTab={0} />
+      </div>
+      <SignupSection />
+    </>
+  );
 }
+
+const counrtrylist = [
+  {
+    name: "Afghanistan",
+    flag: "🇦🇫",
+    code: "AF",
+    dial_code: "+93",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Åland Islands",
+    flag: "🇦🇽",
+    code: "AX",
+    dial_code: "+358",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Albania",
+    flag: "🇦🇱",
+    code: "AL",
+    dial_code: "+355",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Algeria",
+    flag: "🇩🇿",
+    code: "DZ",
+    dial_code: "+213",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "American Samoa",
+    flag: "🇦🇸",
+    code: "AS",
+    dial_code: "+1684",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Andorra",
+    flag: "🇦🇩",
+    code: "AD",
+    dial_code: "+376",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Angola",
+    flag: "🇦🇴",
+    code: "AO",
+    dial_code: "+244",
+    phone_length: 11,
+    white_listed: true,
+  },
+  {
+    name: "Anguilla",
+    flag: "🇦🇮",
+    code: "AI",
+    dial_code: "+1264",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Antarctica",
+    flag: "🇦🇶",
+    code: "AQ",
+    dial_code: "+672",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Antigua and Barbuda",
+    flag: "🇦🇬",
+    code: "AG",
+    dial_code: "+1268",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Argentina",
+    flag: "🇦🇷",
+    code: "AR",
+    dial_code: "+54",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Armenia",
+    flag: "🇦🇲",
+    code: "AM",
+    dial_code: "+374",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Aruba",
+    flag: "🇦🇼",
+    code: "AW",
+    dial_code: "+297",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Australia",
+    flag: "🇦🇺",
+    code: "AU",
+    dial_code: "+61",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Austria",
+    flag: "🇦🇹",
+    code: "AT",
+    dial_code: "+43",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Azerbaijan",
+    flag: "🇦🇿",
+    code: "AZ",
+    dial_code: "+994",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Bahamas",
+    flag: "🇧🇸",
+    code: "BS",
+    dial_code: "+1242",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Bahrain",
+    flag: "🇧🇭",
+    code: "BH",
+    dial_code: "+973",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Bangladesh",
+    flag: "🇧🇩",
+    code: "BD",
+    dial_code: "+880",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Barbados",
+    flag: "🇧🇧",
+    code: "BB",
+    dial_code: "+1246",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Belarus",
+    flag: "🇧🇾",
+    code: "BY",
+    dial_code: "+375",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Belgium",
+    flag: "🇧🇪",
+    code: "BE",
+    dial_code: "+32",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Belize",
+    flag: "🇧🇿",
+    code: "BZ",
+    dial_code: "+501",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Benin",
+    flag: "🇧🇯",
+    code: "BJ",
+    dial_code: "+229",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Bermuda",
+    flag: "🇧🇲",
+    code: "BM",
+    dial_code: "+1441",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Bhutan",
+    flag: "🇧🇹",
+    code: "BT",
+    dial_code: "+975",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Bolivia, Plurinational State of bolivia",
+    flag: "🇧🇴",
+    code: "BO",
+    dial_code: "+591",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Bosnia and Herzegovina",
+    flag: "🇧🇦",
+    code: "BA",
+    dial_code: "+387",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Botswana",
+    flag: "🇧🇼",
+    code: "BW",
+    dial_code: "+267",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Bouvet Island",
+    flag: "🇧🇻",
+    code: "BV",
+    dial_code: "+47",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Brazil",
+    flag: "🇧🇷",
+    code: "BR",
+    dial_code: "+55",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "British Indian Ocean Territory",
+    flag: "🇮🇴",
+    code: "IO",
+    dial_code: "+246",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Brunei Darussalam",
+    flag: "🇧🇳",
+    code: "BN",
+    dial_code: "+673",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Bulgaria",
+    flag: "🇧🇬",
+    code: "BG",
+    dial_code: "+359",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Burkina Faso",
+    flag: "🇧🇫",
+    code: "BF",
+    dial_code: "+226",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Burundi",
+    flag: "🇧🇮",
+    code: "BI",
+    dial_code: "+257",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Cambodia",
+    flag: "🇰🇭",
+    code: "KH",
+    dial_code: "+855",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Cameroon",
+    flag: "🇨🇲",
+    code: "CM",
+    dial_code: "+237",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Canada",
+    flag: "🇨🇦",
+    code: "CA",
+    dial_code: "+1",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Cape Verde",
+    flag: "🇨🇻",
+    code: "CV",
+    dial_code: "+238",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Cayman Islands",
+    flag: "🇰🇾",
+    code: "KY",
+    dial_code: "+345",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Central African Republic",
+    flag: "🇨🇫",
+    code: "CF",
+    dial_code: "+236",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Chad",
+    flag: "🇹🇩",
+    code: "TD",
+    dial_code: "+235",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Chile",
+    flag: "🇨🇱",
+    code: "CL",
+    dial_code: "+56",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "China",
+    flag: "🇨🇳",
+    code: "CN",
+    dial_code: "+86",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Christmas Island",
+    flag: "🇨🇽",
+    code: "CX",
+    dial_code: "+61",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Cocos (Keeling) Islands",
+    flag: "🇨🇨",
+    code: "CC",
+    dial_code: "+61",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Colombia",
+    flag: "🇨🇴",
+    code: "CO",
+    dial_code: "+57",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Comoros",
+    flag: "🇰🇲",
+    code: "KM",
+    dial_code: "+269",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Congo",
+    flag: "🇨🇬",
+    code: "CG",
+    dial_code: "+242",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Congo, The Democratic Republic of the Congo",
+    flag: "🇨🇩",
+    code: "CD",
+    dial_code: "+243",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Cook Islands",
+    flag: "🇨🇰",
+    code: "CK",
+    dial_code: "+682",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Costa Rica",
+    flag: "🇨🇷",
+    code: "CR",
+    dial_code: "+506",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Cote d'Ivoire",
+    flag: "🇨🇮",
+    code: "CI",
+    dial_code: "+225",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Croatia",
+    flag: "🇭🇷",
+    code: "HR",
+    dial_code: "+385",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Cuba",
+    flag: "🇨🇺",
+    code: "CU",
+    dial_code: "+53",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Cyprus",
+    flag: "🇨🇾",
+    code: "CY",
+    dial_code: "+357",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Czech Republic",
+    flag: "🇨🇿",
+    code: "CZ",
+    dial_code: "+420",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Denmark",
+    flag: "🇩🇰",
+    code: "DK",
+    dial_code: "+45",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Djibouti",
+    flag: "🇩🇯",
+    code: "DJ",
+    dial_code: "+253",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Dominica",
+    flag: "🇩🇲",
+    code: "DM",
+    dial_code: "+1767",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Dominican Republic",
+    flag: "🇩🇴",
+    code: "DO",
+    dial_code: "+1849",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Ecuador",
+    flag: "🇪🇨",
+    code: "EC",
+    dial_code: "+593",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Egypt",
+    flag: "🇪🇬",
+    code: "EG",
+    dial_code: "+20",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "El Salvador",
+    flag: "🇸🇻",
+    code: "SV",
+    dial_code: "+503",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Equatorial Guinea",
+    flag: "🇬🇶",
+    code: "GQ",
+    dial_code: "+240",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Eritrea",
+    flag: "🇪🇷",
+    code: "ER",
+    dial_code: "+291",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Estonia",
+    flag: "🇪🇪",
+    code: "EE",
+    dial_code: "+372",
+    phone_length: 7,
+    white_listed: true,
+  },
+  {
+    name: "Ethiopia",
+    flag: "🇪🇹",
+    code: "ET",
+    dial_code: "+251",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Falkland Islands (Malvinas)",
+    flag: "🇫🇰",
+    code: "FK",
+    dial_code: "+500",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Faroe Islands",
+    flag: "🇫🇴",
+    code: "FO",
+    dial_code: "+298",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Fiji",
+    flag: "🇫🇯",
+    code: "FJ",
+    dial_code: "+679",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Finland",
+    flag: "🇫🇮",
+    code: "FI",
+    dial_code: "+358",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "France",
+    flag: "🇫🇷",
+    code: "FR",
+    dial_code: "+33",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "French Guiana",
+    flag: "🇬🇫",
+    code: "GF",
+    dial_code: "+594",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "French Polynesia",
+    flag: "🇵🇫",
+    code: "PF",
+    dial_code: "+689",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "French Southern Territories",
+    flag: "🇹🇫",
+    code: "TF",
+    dial_code: "+262",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Gabon",
+    flag: "🇬🇦",
+    code: "GA",
+    dial_code: "+241",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Gambia",
+    flag: "🇬🇲",
+    code: "GM",
+    dial_code: "+220",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Georgia",
+    flag: "🇬🇪",
+    code: "GE",
+    dial_code: "+995",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Germany",
+    flag: "🇩🇪",
+    code: "DE",
+    dial_code: "+49",
+    phone_length: 11,
+    white_listed: true,
+  },
+  {
+    name: "Ghana",
+    flag: "🇬🇭",
+    code: "GH",
+    dial_code: "+233",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Gibraltar",
+    flag: "🇬🇮",
+    code: "GI",
+    dial_code: "+350",
+    phone_length: 5,
+    white_listed: true,
+  },
+  {
+    name: "Greece",
+    flag: "🇬🇷",
+    code: "GR",
+    dial_code: "+30",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Greenland",
+    flag: "🇬🇱",
+    code: "GL",
+    dial_code: "+299",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Grenada",
+    flag: "🇬🇩",
+    code: "GD",
+    dial_code: "+1473",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Guadeloupe",
+    flag: "🇬🇵",
+    code: "GP",
+    dial_code: "+590",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Guam",
+    flag: "🇬🇺",
+    code: "GU",
+    dial_code: "+1671",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Guatemala",
+    flag: "🇬🇹",
+    code: "GT",
+    dial_code: "+502",
+    phone_length: 7,
+    white_listed: true,
+  },
+  {
+    name: "Guernsey",
+    flag: "🇬🇬",
+    code: "GG",
+    dial_code: "+44",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Guinea",
+    flag: "🇬🇳",
+    code: "GN",
+    dial_code: "+224",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Guinea-Bissau",
+    flag: "🇬🇼",
+    code: "GW",
+    dial_code: "+245",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Guyana",
+    flag: "🇬🇾",
+    code: "GY",
+    dial_code: "+592",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Haiti",
+    flag: "🇭🇹",
+    code: "HT",
+    dial_code: "+509",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Heard Island and Mcdonald Islands",
+    flag: "🇭🇲",
+    code: "HM",
+    dial_code: "+672",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Holy See (Vatican City State)",
+    flag: "🇻🇦",
+    code: "VA",
+    dial_code: "+379",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Honduras",
+    flag: "🇭🇳",
+    code: "HN",
+    dial_code: "+504",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Hong Kong",
+    flag: "🇭🇰",
+    code: "HK",
+    dial_code: "+852",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Hungary",
+    flag: "🇭🇺",
+    code: "HU",
+    dial_code: "+36",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Iceland",
+    flag: "🇮🇸",
+    code: "IS",
+    dial_code: "+354",
+    phone_length: 7,
+    white_listed: true,
+  },
+  {
+    name: "India",
+    flag: "🇮🇳",
+    code: "IN",
+    dial_code: "+91",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Indonesia",
+    flag: "🇮🇩",
+    code: "ID",
+    dial_code: "+62",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Iran, Islamic Republic of Persian Gulf",
+    flag: "🇮🇷",
+    code: "IR",
+    dial_code: "+98",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Iraq",
+    flag: "🇮🇶",
+    code: "IQ",
+    dial_code: "+964",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Ireland",
+    flag: "🇮🇪",
+    code: "IE",
+    dial_code: "+353",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Isle of Man",
+    flag: "🇮🇲",
+    code: "IM",
+    dial_code: "+44",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Israel",
+    flag: "🇮🇱",
+    code: "IL",
+    dial_code: "+972",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Italy",
+    flag: "🇮🇹",
+    code: "IT",
+    dial_code: "+39",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Jamaica",
+    flag: "🇯🇲",
+    code: "JM",
+    dial_code: "+1876",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Japan",
+    flag: "🇯🇵",
+    code: "JP",
+    dial_code: "+81",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Jersey",
+    flag: "🇯🇪",
+    code: "JE",
+    dial_code: "+44",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Jordan",
+    flag: "🇯🇴",
+    code: "JO",
+    dial_code: "+962",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Kazakhstan",
+    flag: "🇰🇿",
+    code: "KZ",
+    dial_code: "+7",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Kenya",
+    flag: "🇰🇪",
+    code: "KE",
+    dial_code: "+254",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Kiribati",
+    flag: "🇰🇮",
+    code: "KI",
+    dial_code: "+686",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Korea, Democratic People's Republic of Korea",
+    flag: "🇰🇵",
+    code: "KP",
+    dial_code: "+850",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Korea, Republic of South Korea",
+    flag: "🇰🇷",
+    code: "KR",
+    dial_code: "+82",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Kosovo",
+    flag: "🇽🇰",
+    code: "XK",
+    dial_code: "+383",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Kuwait",
+    flag: "🇰🇼",
+    code: "KW",
+    dial_code: "+965",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Kyrgyzstan",
+    flag: "🇰🇬",
+    code: "KG",
+    dial_code: "+996",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Laos",
+    flag: "🇱🇦",
+    code: "LA",
+    dial_code: "+856",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Latvia",
+    flag: "🇱🇻",
+    code: "LV",
+    dial_code: "+371",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Lebanon",
+    flag: "🇱🇧",
+    code: "LB",
+    dial_code: "+961",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Lesotho",
+    flag: "🇱🇸",
+    code: "LS",
+    dial_code: "+266",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Liberia",
+    flag: "🇱🇷",
+    code: "LR",
+    dial_code: "+231",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Libyan Arab Jamahiriya",
+    flag: "🇱🇾",
+    code: "LY",
+    dial_code: "+218",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Liechtenstein",
+    flag: "🇱🇮",
+    code: "LI",
+    dial_code: "+423",
+    phone_length: 7,
+    white_listed: true,
+  },
+  {
+    name: "Lithuania",
+    flag: "🇱🇹",
+    code: "LT",
+    dial_code: "+370",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Luxembourg",
+    flag: "🇱🇺",
+    code: "LU",
+    dial_code: "+352",
+    phone_length: 6,
+    white_listed: true,
+  },
+  {
+    name: "Macao",
+    flag: "🇲🇴",
+    code: "MO",
+    dial_code: "+853",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Macedonia",
+    flag: "🇲🇰",
+    code: "MK",
+    dial_code: "+389",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Madagascar",
+    flag: "🇲🇬",
+    code: "MG",
+    dial_code: "+261",
+    phone_length: 7,
+    white_listed: true,
+  },
+  {
+    name: "Malawi",
+    flag: "🇲🇼",
+    code: "MW",
+    dial_code: "+265",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Malaysia",
+    flag: "🇲🇾",
+    code: "MY",
+    dial_code: "+60",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Maldives",
+    flag: "🇲🇻",
+    code: "MV",
+    dial_code: "+960",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Mali",
+    flag: "🇲🇱",
+    code: "ML",
+    dial_code: "+223",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Malta",
+    flag: "🇲🇹",
+    code: "MT",
+    dial_code: "+356",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Marshall Islands",
+    flag: "🇲🇭",
+    code: "MH",
+    dial_code: "+692",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Martinique",
+    flag: "🇲🇶",
+    code: "MQ",
+    dial_code: "+596",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Mauritania",
+    flag: "🇲🇷",
+    code: "MR",
+    dial_code: "+222",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Mauritius",
+    flag: "🇲🇺",
+    code: "MU",
+    dial_code: "+230",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Mayotte",
+    flag: "🇾🇹",
+    code: "YT",
+    dial_code: "+262",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Mexico",
+    flag: "🇲🇽",
+    code: "MX",
+    dial_code: "+52",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Micronesia, Federated States of Micronesia",
+    flag: "🇫🇲",
+    code: "FM",
+    dial_code: "+691",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Moldova",
+    flag: "🇲🇩",
+    code: "MD",
+    dial_code: "+373",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Monaco",
+    flag: "🇲🇨",
+    code: "MC",
+    dial_code: "+377",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Mongolia",
+    flag: "🇲🇳",
+    code: "MN",
+    dial_code: "+976",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Montenegro",
+    flag: "🇲🇪",
+    code: "ME",
+    dial_code: "+382",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Montserrat",
+    flag: "🇲🇸",
+    code: "MS",
+    dial_code: "+1664",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Morocco",
+    flag: "🇲🇦",
+    code: "MA",
+    dial_code: "+212",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Mozambique",
+    flag: "🇲🇿",
+    code: "MZ",
+    dial_code: "+258",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Myanmar",
+    flag: "🇲🇲",
+    code: "MM",
+    dial_code: "+95",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Namibia",
+    flag: "🇳🇦",
+    code: "NA",
+    dial_code: "+264",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Nauru",
+    flag: "🇳🇷",
+    code: "NR",
+    dial_code: "+674",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Nepal",
+    flag: "🇳🇵",
+    code: "NP",
+    dial_code: "+977",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Netherlands",
+    flag: "🇳🇱",
+    code: "NL",
+    dial_code: "+31",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Netherlands Antilles",
+    flag: "",
+    code: "AN",
+    dial_code: "+599",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "New Caledonia",
+    flag: "🇳🇨",
+    code: "NC",
+    dial_code: "+687",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "New Zealand",
+    flag: "🇳🇿",
+    code: "NZ",
+    dial_code: "+64",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Nicaragua",
+    flag: "🇳🇮",
+    code: "NI",
+    dial_code: "+505",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Niger",
+    flag: "🇳🇪",
+    code: "NE",
+    dial_code: "+227",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Nigeria",
+    flag: "🇳🇬",
+    code: "NG",
+    dial_code: "+234",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Niue",
+    flag: "🇳🇺",
+    code: "NU",
+    dial_code: "+683",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Norfolk Island",
+    flag: "🇳🇫",
+    code: "NF",
+    dial_code: "+672",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Northern Mariana Islands",
+    flag: "🇲🇵",
+    code: "MP",
+    dial_code: "+1670",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Norway",
+    flag: "🇳🇴",
+    code: "NO",
+    dial_code: "+47",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Oman",
+    flag: "🇴🇲",
+    code: "OM",
+    dial_code: "+968",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Pakistan",
+    flag: "🇵🇰",
+    code: "PK",
+    dial_code: "+92",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Palau",
+    flag: "🇵🇼",
+    code: "PW",
+    dial_code: "+680",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Palestinian Territory, Occupied",
+    flag: "🇵🇸",
+    code: "PS",
+    dial_code: "+970",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Panama",
+    flag: "🇵🇦",
+    code: "PA",
+    dial_code: "+507",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Papua New Guinea",
+    flag: "🇵🇬",
+    code: "PG",
+    dial_code: "+675",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Paraguay",
+    flag: "🇵🇾",
+    code: "PY",
+    dial_code: "+595",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Peru",
+    flag: "🇵🇪",
+    code: "PE",
+    dial_code: "+51",
+    phone_length: 11,
+    white_listed: true,
+  },
+  {
+    name: "Philippines",
+    flag: "🇵🇭",
+    code: "PH",
+    dial_code: "+63",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Pitcairn",
+    flag: "🇵🇳",
+    code: "PN",
+    dial_code: "+64",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Poland",
+    flag: "🇵🇱",
+    code: "PL",
+    dial_code: "+48",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Portugal",
+    flag: "🇵🇹",
+    code: "PT",
+    dial_code: "+351",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Puerto Rico",
+    flag: "🇵🇷",
+    code: "PR",
+    dial_code: "+1939",
+    phone_length: 7,
+    white_listed: true,
+  },
+  {
+    name: "Qatar",
+    flag: "🇶🇦",
+    code: "QA",
+    dial_code: "+974",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Romania",
+    flag: "🇷🇴",
+    code: "RO",
+    dial_code: "+40",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Russia",
+    flag: "🇷🇺",
+    code: "RU",
+    dial_code: "+7",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Rwanda",
+    flag: "🇷🇼",
+    code: "RW",
+    dial_code: "+250",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Reunion",
+    flag: "🇷🇪",
+    code: "RE",
+    dial_code: "+262",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Saint Barthelemy",
+    flag: "🇧🇱",
+    code: "BL",
+    dial_code: "+590",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Saint Helena, Ascension and Tristan Da Cunha",
+    flag: "🇸🇭",
+    code: "SH",
+    dial_code: "+290",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Saint Kitts and Nevis",
+    flag: "🇰🇳",
+    code: "KN",
+    dial_code: "+1869",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Saint Lucia",
+    flag: "🇱🇨",
+    code: "LC",
+    dial_code: "+1758",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Saint Martin",
+    flag: "🇲🇫",
+    code: "MF",
+    dial_code: "+590",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Saint Pierre and Miquelon",
+    flag: "🇵🇲",
+    code: "PM",
+    dial_code: "+508",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Saint Vincent and the Grenadines",
+    flag: "🇻🇨",
+    code: "VC",
+    dial_code: "+1784",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Samoa",
+    flag: "🇼🇸",
+    code: "WS",
+    dial_code: "+685",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "San Marino",
+    flag: "🇸🇲",
+    code: "SM",
+    dial_code: "+378",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Sao Tome and Principe",
+    flag: "🇸🇹",
+    code: "ST",
+    dial_code: "+239",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Saudi Arabia",
+    flag: "🇸🇦",
+    code: "SA",
+    dial_code: "+966",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Senegal",
+    flag: "🇸🇳",
+    code: "SN",
+    dial_code: "+221",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Serbia",
+    flag: "🇷🇸",
+    code: "RS",
+    dial_code: "+381",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Seychelles",
+    flag: "🇸🇨",
+    code: "SC",
+    dial_code: "+248",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Sierra Leone",
+    flag: "🇸🇱",
+    code: "SL",
+    dial_code: "+232",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Singapore",
+    flag: "🇸🇬",
+    code: "SG",
+    dial_code: "+65",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Slovakia",
+    flag: "🇸🇰",
+    code: "SK",
+    dial_code: "+421",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Slovenia",
+    flag: "🇸🇮",
+    code: "SI",
+    dial_code: "+386",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Solomon Islands",
+    flag: "🇸🇧",
+    code: "SB",
+    dial_code: "+677",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Somalia",
+    flag: "🇸🇴",
+    code: "SO",
+    dial_code: "+252",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "South Africa",
+    flag: "🇿🇦",
+    code: "ZA",
+    dial_code: "+27",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "South Sudan",
+    flag: "🇸🇸",
+    code: "SS",
+    dial_code: "+211",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "South Georgia and the South Sandwich Islands",
+    flag: "🇬🇸",
+    code: "GS",
+    dial_code: "+500",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Spain",
+    flag: "🇪🇸",
+    code: "ES",
+    dial_code: "+34",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Sri Lanka",
+    flag: "🇱🇰",
+    code: "LK",
+    dial_code: "+94",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Sudan",
+    flag: "🇸🇩",
+    code: "SD",
+    dial_code: "+249",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Suriname",
+    flag: "🇸🇷",
+    code: "SR",
+    dial_code: "+597",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Svalbard and Jan Mayen",
+    flag: "🇸🇯",
+    code: "SJ",
+    dial_code: "+47",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Swaziland",
+    flag: "🇸🇿",
+    code: "SZ",
+    dial_code: "+268",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Sweden",
+    flag: "🇸🇪",
+    code: "SE",
+    dial_code: "+46",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Switzerland",
+    flag: "🇨🇭",
+    code: "CH",
+    dial_code: "+41",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Syrian Arab Republic",
+    flag: "🇸🇾",
+    code: "SY",
+    dial_code: "+963",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Taiwan",
+    flag: "🇹🇼",
+    code: "TW",
+    dial_code: "+886",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Tajikistan",
+    flag: "🇹🇯",
+    code: "TJ",
+    dial_code: "+992",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Tanzania, United Republic of Tanzania",
+    flag: "🇹🇿",
+    code: "TZ",
+    dial_code: "+255",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Thailand",
+    flag: "🇹🇭",
+    code: "TH",
+    dial_code: "+66",
+    phone_length: 8,
+    white_listed: true,
+  },
+  {
+    name: "Timor-Leste",
+    flag: "🇹🇱",
+    code: "TL",
+    dial_code: "+670",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Togo",
+    flag: "🇹🇬",
+    code: "TG",
+    dial_code: "+228",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Tokelau",
+    flag: "🇹🇰",
+    code: "TK",
+    dial_code: "+690",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Tonga",
+    flag: "🇹🇴",
+    code: "TO",
+    dial_code: "+676",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Trinidad and Tobago",
+    flag: "🇹🇹",
+    code: "TT",
+    dial_code: "+1868",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Tunisia",
+    flag: "🇹🇳",
+    code: "TN",
+    dial_code: "+216",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Turkey",
+    flag: "🇹🇷",
+    code: "TR",
+    dial_code: "+90",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Turkmenistan",
+    flag: "🇹🇲",
+    code: "TM",
+    dial_code: "+993",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Turks and Caicos Islands",
+    flag: "🇹🇨",
+    code: "TC",
+    dial_code: "+1649",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Tuvalu",
+    flag: "🇹🇻",
+    code: "TV",
+    dial_code: "+688",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Uganda",
+    flag: "🇺🇬",
+    code: "UG",
+    dial_code: "+256",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Ukraine",
+    flag: "🇺🇦",
+    code: "UA",
+    dial_code: "+380",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "United Arab Emirates",
+    flag: "🇦🇪",
+    code: "AE",
+    dial_code: "+971",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "United Kingdom",
+    flag: "🇬🇧",
+    code: "GB",
+    dial_code: "+44",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "United States",
+    flag: "🇺🇸",
+    code: "US",
+    dial_code: "+1",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "United States Outlying Islands",
+    flag: "🇺🇸",
+    code: "US",
+    dial_code: "+246",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Uruguay",
+    flag: "🇺🇾",
+    code: "UY",
+    dial_code: "+598",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Uzbekistan",
+    flag: "🇺🇿",
+    code: "UZ",
+    dial_code: "+998",
+    phone_length: 9,
+    white_listed: true,
+  },
+  {
+    name: "Vanuatu",
+    flag: "🇻🇺",
+    code: "VU",
+    dial_code: "+678",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Venezuela, Bolivarian Republic of Venezuela",
+    flag: "🇻🇪",
+    code: "VE",
+    dial_code: "+58",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Vietnam",
+    flag: "🇻🇳",
+    code: "VN",
+    dial_code: "+84",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Virgin Islands, British",
+    flag: "🇻🇬",
+    code: "VG",
+    dial_code: "+1284",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Virgin Islands, U.S.",
+    flag: "🇻🇮",
+    code: "VI",
+    dial_code: "+1340",
+    phone_length: 10,
+    white_listed: true,
+  },
+  {
+    name: "Wallis and Futuna",
+    flag: "🇼🇫",
+    code: "WF",
+    dial_code: "+681",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Yemen",
+    flag: "🇾🇪",
+    code: "YE",
+    dial_code: "+967",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Zambia",
+    flag: "🇿🇲",
+    code: "ZM",
+    dial_code: "+260",
+    phone_length: 10,
+    white_listed: false,
+  },
+  {
+    name: "Zimbabwe",
+    flag: "🇿🇼",
+    code: "ZW",
+    dial_code: "+263",
+    phone_length: 10,
+    white_listed: false,
+  },
+];
