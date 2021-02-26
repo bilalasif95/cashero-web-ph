@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextField from "../../common/textFiled";
 import Banner from "../../assets/photoshop.gif";
+import Check from "../../assets/check-mark.svg";
 import { GlobalMoney } from "../GlobalMoney/GlobalMoney";
 import { HighInterest } from "../HighInterest/HighInterest";
 import { CurrencyConversion } from "../CurrencyConversion/CurrencyConversion";
@@ -19,6 +20,7 @@ import { callApi } from "../../config/call-api";
 import { EndPoints } from "../../config/config";
 import { structuredData } from "../../config/SEO/Homepage/structuredData";
 import ThanksModal from "../ThanksModal/ThanksModal";
+import Link from "../link";
 
 export function HomePage(props) {
 	// const [searchTerm, setSearchTerm] = useState<any>("");
@@ -115,9 +117,20 @@ export function HomePage(props) {
 									direction="up"
 									delay={500}
 								>
+								<div className="Banner-list">
 									<h2 className="bannerText slide-up">
-										Deposit money to earn up to 5% APY. <span className="br-block"></span> Exchange currencies, send money abroad, <span className="br-block"></span> make instant payments. <span className="br-block"></span> No hidden fees, no minimum deposits, no stress.
+										<img src={Check} alt="check" />
+										Deposit money to earn up to 5% APY.
 									</h2>
+									<h2 className="bannerText slide-up">
+									<img src={Check} alt="check" />
+										Exchange currencies, send money abroad, make instant payments.
+									</h2>
+									<h2 className="bannerText slide-up">
+									<img src={Check} alt="check" />
+									 No hidden fees, no minimum deposits, no stress.
+									</h2>
+								</div>
 								</Fade>
 								<div className="bannerEmail">
 									<TextField
@@ -263,7 +276,7 @@ export function HomePage(props) {
 										Open an account in minutes. Launching in May.
 									</li>
 								</ul>
-								<p>Get early access to the Cashero app and earn a chance <span className="br-block"></span> to win $1,000 every 3 days! Terms and conditions apply. </p>
+								<p className="draw-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-4">

@@ -148,8 +148,7 @@ body{
   .sm-mt-40 {
     margin-top: 40px !important; }
   .bannerText {
-    font-size: 16px !important;
-    text-align: center; }
+    font-size: 16px !important; }
   .HomepagelList {
     display: none; }
   .bannerCont {
@@ -191,7 +190,7 @@ body{
       margin: 0 auto; } }
 
 .HomepagelList {
-  margin: 44px 0px;}
+  margin: 35px 0px;}
   .HomepagelList li {
     position: relative;
     padding-left: 40px;
@@ -15737,4 +15736,31 @@ select:-webkit-autofill:focus {
 
     .underline {
       text-decoration: underline;
+    }
+
+    /* banner-list-style */
+    .Banner-list h2{
+      padding-left: 40px;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .Banner-list h2 img{
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+    .Banner-list h2:nth-child(2){
+      width: 488px;
+    }
+    .draw-text{
+      color: #000 !important;
+      font-size: 14px;
+    }
+    @media(max-width: 475px){
+      .Banner-list h2:nth-child(2){
+        width: inherit;
+      }
     }
