@@ -259,7 +259,7 @@ export function ExchangeRates() {
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>Currency Exchange</h1>
+								<h1>Fair, Fast Currency Exchange</h1>
 								<p className="White">
 									Currency conversion with no hidden fees
 								</p>
