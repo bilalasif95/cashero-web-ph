@@ -26,16 +26,15 @@ export function Sendpayments() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								The Cashero Promise: Send Money Online to Around the World
+							The Cashero Way: Quickly Send Money Around the World Online 
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
-							<p>You are the true heroes, working hard to take care of those you love. We’re by your side each step of the way to ensure your hard-earned money goes into the right pockets. Cashero’s fast global money transfer service gives you a quick, easy, and secure way to send money abroad. </p>
-							<p>Cashero’s fast global money transfer service gives you a quick, easy, and secure way to send money abroad. We make sending money online instantly easy peasy with no hidden fees. Your people on the other side of the world will thank you, but no need to thank us, that’s why Cashero is here</p>
+							<p>Not all heroes wear capes, some go to work every day to take care of their loved ones. We know this. We’re by your side each step of the way ensuring your hard-earned money arrives safely and quickly.</p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								Join for Free <img alt="arrow" className="ArrowBtn" src={Arrow} />
+							Get Early Access <img alt="arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}

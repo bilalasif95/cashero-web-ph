@@ -1212,25 +1212,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero is available in all
-											countries except: Afghanistan,
-											Angola,Belarus, Bosnia &
-											Herzegovina, Central African
-											Republic, Congo (DRC), Cote
-											d’Ivoire (Ivory Coast), Cuba,
-											Ecuador, Eritrea, Ethiopia,
-											Guinea-Bissau, Guyana, Haiti,
-											Iran, Iraq, Kosovo, Laos,
-											Lebanon, Liberia, Libya,
-											Macedonia, Myanmar, Nigeria,
-											North-Korea, Papua NG, Russia,
-											Serbia, Somalia, Sudan, Syria,
-											Turkmenistan, Ukraine,
-											Uzbekistan, Vanuatu, Venezuela,
-											Yemen, Zimbabwe and Connecticut,
-											Hawaii, New York, New Hampshire,
-											Texas, Vermont, Virginia in the
-											United States.
+										Cashero will be available in all countries except Afghanistan, Albania, Angola, The Bahamas, Barbados, Belarus, Bosnia & Herzegovina, Botswana, Cambodia, Central African Republic, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Ecuador, Eritrea, Ethiopia, Ghana, Guinea-Bissau, Guyana, Haiti, Iceland, Iran, Iraq, Jamaica, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Mauritius, Mongolia, Myanmar, Nicaragua, Nigeria, North-Korea, Pakistan, Panama, Papua NG, Russia, Serbia, Somalia, Sudan, Syria, Turkmenistan, Uganda, Ukraine, Uzbekistan, Vanuatu, Venezuela, Yemen, and Zimbabwe.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1251,19 +1233,13 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										What are the fees to transfer money?
+									What are the fees to transfer money? 
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											There are no fees to send money
-											for personal accounts and you
-											can do so in seconds. Businesses
-											can send money to customers
-											worldwide for a nominal fee of
-											1% after their first $50,000
-											USD.
+										There are different fees for individual users, charities, and businesses. All fees are laid out in the app, completely transparent so you always know what they are.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1284,20 +1260,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										How long does it take the transfer
-										money with Cashero?
+									How long does it take the transfer money with Cashero?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Transferring money from your
-											Cashero account to another user
-											is done in an instant. When the
-											user withdraws these funds to
-											the bank account, this can take
-											anywhere from 1-3 days to
-											appear.
+										Transferring money from your Cashero account to another user is done in an instant. When the user withdraws these funds to the bank account, this can take anywhere from 1-3 days to appear.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1324,14 +1293,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected
-											using multi-party computation
-											(MPC) and hardware isolation
-											with Intel SGX enclaves. It
-											sounds complex and it is, on
-											purpose. These security layers
-											ensure your money is safe and
-											protected
+										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected
 										</h4>
 									</Typography>
 								</AccordionDetails>

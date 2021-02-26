@@ -164,7 +164,7 @@ export function TextfieldBanner() {
           }
           type="submit"
         >
-          Get Started
+          Get Early Access
         </button>
       </div>
       {openSuccessModal && (

@@ -2752,7 +2752,9 @@ b {
     padding-bottom: 30px; } }
 
 .SignUp {
-  background-color: #0667EB;
+  background-image: url("https://i.imgur.com/9NfMzN2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 134px 191px 134px 191px;
   text-align: center; }
 
@@ -15726,7 +15728,7 @@ select:-webkit-autofill:focus {
       left: 0;
       top: 4px;
     }
-    .Banner-list h2:nth-child(2){
+    .Banner-list h2:nth-of-type(2){
       width: 488px;
     }
     .draw-text{
@@ -15750,7 +15752,7 @@ select:-webkit-autofill:focus {
       background-color: #4285f4 !important
     }
     @media(max-width: 475px){
-      .Banner-list h2:nth-child(2){
+      .Banner-list h2:nth-of-type(2){
         width: inherit;
       }
     }

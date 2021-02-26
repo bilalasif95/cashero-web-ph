@@ -18,6 +18,7 @@ import Done from "../../assets/done.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import StepsDollar from "../../assets/StepsDollar.svg";
+import Link from "../link";
 
 export function Remittance() {
 	const [appModal, setAppModal] = useState(false);
@@ -203,8 +204,9 @@ export function Remittance() {
 									</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
+									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in May.</li>
 								</ul>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-6">
@@ -218,8 +220,8 @@ export function Remittance() {
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
 							<li><img alt="Globe Dollar" src={GlobeDollar} />Send money worldwide</li>
-							<li><img alt="Dollar list" src={Dollarlist} />No hidden fees</li>
-							<li><img alt="list Phone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="Dollar list" src={Dollarlist} />No hidden fees. No minimum balance required</li>
+							{/* <li><img alt="list Phone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
