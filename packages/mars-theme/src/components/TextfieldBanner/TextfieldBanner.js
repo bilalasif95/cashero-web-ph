@@ -1,30 +1,92 @@
 import React, { useState } from "react";
 import TextField from "../../common/textFiled";
 import { callApi } from "../../config/call-api";
-import { EndPoints } from "../../config/config";
+import { EndPoints, counrtrylist } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
+import SearchIcon from "@material-ui/icons/Search";
 
 export function TextfieldBanner() {
-	const [email, setEmail] = useState("");
-	const [loading, setLoading] = useState(false);
-	const [openSuccessModal, setSuccessModal] = useState(false);
-	const onSubmit = () => {
-		setLoading(true)
-		callApi(EndPoints.preregistration, "post", "", {
-			Phone: email,
-		})
-			.then(() => {
-				setSuccessModal(true);
-				setLoading(false);
-				setEmail("");
-			})
-	};
-	const thanksModalClose = () => {
-		setSuccessModal(false);
-	};
-	return (
-		<div>
-			<div className="personalEmail">
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [openSuccessModal, setSuccessModal] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState(counrtrylist);
+  const [searchResults2, setSearchResults2] = useState([]);
+  const [code, setCode] = useState("+1");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [phonenoLength, setPhoneNoLength] = useState(10);
+  const toggle = () => {
+    setSearchTerm("");
+    setDropdownOpen((prevState) => !prevState);
+  };
+
+  const handleClose = () => {
+    setSuccessModal(false);
+  };
+
+  const [newPhone, setNewPhoneNumber] = useState("");
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+    const results = searchResults.filter(
+      (country) =>
+        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.dial_code.includes(searchTerm.toLocaleLowerCase())
+    );
+    setSearchResults2(results);
+  };
+
+  const selectCountry = (country) => {
+    setCode(country.dial_code);
+    setPhoneNoLength(country.phone_length);
+    setSearchTerm("");
+    setSearchResults2(counrtrylist);
+  };
+
+  const getStarted = () => {
+    let finalPhoneNumb = code + newPhone;
+    callApi(EndPoints.preregistration, "post", "", {
+      Phone: finalPhoneNumb,
+      // CountryCode: updatecode,
+    })
+      .then((res) => {
+        if (res.code === 400) {
+          // setError(res.message);
+        } else {
+          setCode("+1");
+          setNewPhoneNumber("");
+          setSuccessModal(true);
+        }
+      })
+      .catch(() => {
+        // setError("Invalid phone number.");
+      });
+  };
+  const handleOnChange = (e) => {
+    setNewPhoneNumber(e.target.value);
+  };
+
+  const onSubmit = () => {
+    setLoading(true);
+    callApi(EndPoints.preregistration, "post", "", {
+      Phone: email,
+    }).then(() => {
+      setSuccessModal(true);
+      setLoading(false);
+      setEmail("");
+    });
+  };
+  const thanksModalClose = () => {
+    setSuccessModal(false);
+  };
+  return (
+    <div>
+      {/* <div className="personalEmail">
 				<TextField
 					placeholder="Enter Email Address"
 					type="email"
@@ -34,13 +96,80 @@ export function TextfieldBanner() {
 				<div className="GetEarlyBtn">
 					<button disabled={loading || !email || !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(email)} onClick={onSubmit} className="btn btn-default">Get Early Access</button>
 				</div>
-			</div>
-			{openSuccessModal && (
-				<ThanksModal
-					open={openSuccessModal}
-					handleClose={thanksModalClose}
-				/>
-			)}
-		</div>
-	);
+			</div> */}
+      <div className="numberSelection">
+        <div className="selectCountry">
+          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+            <DropdownToggle caret>
+              <input type="text" placeholder="Code" value={code} />
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem header>
+                <>
+                  <SearchIcon />
+                  <input
+                    type="text"
+                    placeholder="Country"
+                    value={searchTerm}
+                    onChange={handleChange}
+                  />
+                </>
+              </DropdownItem>
+              <div className="country-list">
+                {searchResults2.length > 0
+                  ? searchResults2.map((item, index) => (
+                      <DropdownItem
+                        key={index + 1}
+                        onClick={() => selectCountry(item)}
+                        className="country-item"
+                      >
+                        <div className="flag-name">
+                          <span>{item.flag}</span>
+                          {item.name}
+                        </div>
+                        <div className="code">{item.dial_code}</div>
+                      </DropdownItem>
+                    ))
+                  : searchResults.map((item, index) => (
+                      <DropdownItem
+                        key={index + 1}
+                        onClick={() => selectCountry(item)}
+                        className="country-item"
+                      >
+                        <div className="flag-name">
+                          <span>{item.flag}</span>
+                          {item.name}
+                        </div>
+                        <div className="code">{item.dial_code}</div>
+                      </DropdownItem>
+                    ))}
+              </div>
+            </DropdownMenu>
+          </Dropdown>
+        </div>
+        <div className="inputNum">
+          <input
+            type="number"
+            placeholder="Phone number"
+            value={newPhone}
+            onChange={(e) => handleOnChange(e)}
+          />
+        </div>
+        <button
+          onClick={() => getStarted()}
+          className={
+            newPhone.length === phonenoLength
+              ? "btn btn-primary my-2 my-sm-0 Appbtn "
+              : "btn btn-primary my-2 my-sm-0 Appbtn disabled"
+          }
+          type="submit"
+        >
+          Get Started
+        </button>
+      </div>
+      {openSuccessModal && (
+        <ThanksModal open={openSuccessModal} handleClose={thanksModalClose} />
+      )}
+    </div>
+  );
 }
