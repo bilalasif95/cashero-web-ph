@@ -2787,10 +2787,12 @@ b {
     align-items: center !important;
     background: transparent !important;
     color: #fff !important;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff !important;
+    border: inherit;
     box-shadow: none !important;
     border-radius: none !important;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 0px !important; }
     .SignUp .numberSelection .selectCountry .btn:focus {
       background: #000; }
     .SignUp .numberSelection .selectCountry .btn input {
@@ -3539,7 +3541,7 @@ button:focus {
 
 .InputBox .MuiInputBase-input {
   color: #0667eb !important;
-  font-size: 36px !important; }
+  font-size: 34px !important; }
 
 .InterestBox {
   margin-top: 41px; }
@@ -3564,7 +3566,7 @@ button:focus {
   margin-bottom: 0px; }
 
 .TotalText p {
-  margin-bottom: 18px;
+  margin-bottom: 3px;
   text-align: left !important; }
 
 .FinalText p {
@@ -3714,10 +3716,6 @@ button:focus {
   letter-spacing: normal;
   line-height: 30px;
   margin-bottom: 0px; }
-
-.TotalText p {
-  margin-bottom: 18px;
-  text-align: left !important; }
 
 .FinalText p {
   font-size: 16px;
@@ -3909,10 +3907,6 @@ button:focus {
   letter-spacing: normal;
   line-height: 30px;
   margin-bottom: 0px; }
-
-.TotalText p {
-  margin-bottom: 18px;
-  text-align: left !important; }
 
 .FinalText p {
   font-size: 16px;
@@ -4120,10 +4114,12 @@ button:focus {
     align-items: center !important;
     background: transparent !important;
     color: #fff !important;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff !important;
+    border: inherit;
     box-shadow: none !important;
     border-radius: none !important;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 0px !important; }
     .PersonalCont .numberSelection .selectCountry .btn:focus {
       background: #000; }
     .PersonalCont .numberSelection .selectCountry .btn input {
@@ -4293,10 +4289,6 @@ button:focus {
   letter-spacing: normal;
   line-height: 30px;
   margin-bottom: 0px; }
-
-.TotalText p {
-  margin-bottom: 18px;
-  text-align: left !important; }
 
 .FinalText p {
   font-size: 16px;
@@ -4517,10 +4509,6 @@ button:focus {
   letter-spacing: normal;
   line-height: 30px;
   margin-bottom: 0px; }
-
-.TotalText p {
-  margin-bottom: 18px;
-  text-align: left !important; }
 
 .FinalText p {
   font-size: 16px;
@@ -4985,10 +4973,6 @@ button:focus {
   line-height: 30px;
   margin-bottom: 0px; }
 
-.TotalText p {
-  margin-bottom: 18px;
-  text-align: left !important; }
-
 .FinalText p {
   font-size: 16px;
   color: #9ea0a5 !important; }
@@ -5197,14 +5181,15 @@ button:focus {
     line-height: 30px; }
   .InterestBox h1 {
     color: #363636;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 500;
     font-style: normal;
     letter-spacing: normal;
     line-height: 30px;
     margin-bottom: 0px;
     text-transform: uppercase;
-    display: flex; }
+    display: flex;
+    height: 44px; }
     .InterestBox h1 div {
       max-width: 200px;
       justify-content: center;
@@ -5221,10 +5206,6 @@ button:focus {
   letter-spacing: normal;
   line-height: 30px;
   margin-bottom: 0px; }
-
-.TotalText p {
-  margin-bottom: 18px;
-  text-align: left !important; }
 
 .FinalText p {
   font-size: 16px;
@@ -5395,10 +5376,6 @@ button:focus {
   line-height: 30px;
   margin-bottom: 0px; }
 
-.TotalText p {
-  margin-bottom: 18px;
-  text-align: left !important; }
-
 .FinalText p {
   font-size: 16px;
   color: #9ea0a5 !important; }
@@ -5515,10 +5492,6 @@ button:focus {
   letter-spacing: normal;
   line-height: 30px;
   margin-bottom: 0px; }
-
-.TotalText p {
-  margin-bottom: 18px;
-  text-align: left !important; }
 
 .FinalText p {
   font-size: 16px;
@@ -15766,6 +15739,15 @@ select:-webkit-autofill:focus {
     }
     .draw-banner-text a{
       color: #fff !important;
+    }
+    .numberSelection .selectCountry .dropdown-menu.show{
+      background-color: #fff !important;
+    }
+    .Appbtn.disabled{
+      background-color: #4285f4 !important;
+    }
+    .Appbtn{
+      background-color: #4285f4 !important
     }
     @media(max-width: 475px){
       .Banner-list h2:nth-child(2){
