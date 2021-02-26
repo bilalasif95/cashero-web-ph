@@ -283,7 +283,7 @@ export function Remittance() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				<Companies />
+				{/* <Companies /> */}
 				<QuestionTabs activeTab={5} />
 			</div>
 			<SignupSection />

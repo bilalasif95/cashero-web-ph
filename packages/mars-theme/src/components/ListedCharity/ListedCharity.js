@@ -284,7 +284,7 @@ export function ListedCharity() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				<Companies />
+				{/* <Companies /> */}
 				<QuestionTabs activeTab={6} />
 			</div>
 			<SignupSection />

@@ -31,10 +31,11 @@ export function PeoplesSection() {
 		<div className="peoples">
 			<div className="PeoplesCont">
 				<div className="container">
-					<h3 className="PeoplesTitle mb-0">Too good to be true?</h3>
+					{/* <h3 className="PeoplesTitle mb-0">Too good to be true?</h3> */}
+					<h3 className="PeoplesTitle mb-0">Cashero Globalization</h3>
 					<h4 className="customerDetailtext">Here’s what our users have to say about us</h4>
 					<div className="row">
-						<div className="col-md-5">
+						{/* <div className="col-md-5">
 							<Slider {...settings}>
 								<div className="CarouselOuter">
 									<div className="CrouselCard">
@@ -130,10 +131,11 @@ export function PeoplesSection() {
 							<div className="ReviewText">
 								<p>Rated 4.9 out of 5 based on <span className="br-block"></span> <span className="underline">16,632</span> on <span className="TrustText"><img src={Star} alt="Star" />  Trustpilot</span></p>
 							</div>
-						</div>
-						<div className="col-md-7">
+						</div> */}
+						<div className="col-md-2"/>
+						<div className="col-md-8">
 							<div className="people-map">
-								<div className="loads-container dN">
+								{/* <div className="loads-container dN">
 									<div className="in-container">
 										<div className={`${loadercondtion === 1 ? 'loader' : ""} loader1`} >
 											<span></span>
@@ -156,7 +158,7 @@ export function PeoplesSection() {
 											<span></span>
 										</div>
 									</div>
-								</div>
+								</div> */}
 								<img alt="People" className="img-fluid dB" src={People} />
 								<img alt="Map dot" className="img-fluid dN" src={Map_dot} />
 								<img
@@ -166,6 +168,7 @@ export function PeoplesSection() {
 								/>
 							</div>
 						</div>
+						<div className="col-md-2"/>
 					</div>
 				</div>
 			</div >

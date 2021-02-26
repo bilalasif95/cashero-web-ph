@@ -250,7 +250,7 @@ export function HomePage(props) {
       </div>
       <PeoplesSection />
       <div className="container">
-        <Companies />
+        {/* <Companies /> */}
         <QuestionTabs activeTab={0} />
       </div>
       <SignupSection />

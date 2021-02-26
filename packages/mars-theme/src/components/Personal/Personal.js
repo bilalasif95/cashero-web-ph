@@ -410,7 +410,7 @@ export function Personal() {
 			{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 			<PeoplesSection />
 			<div className="container">
-				<Companies />
+				{/* <Companies /> */}
 				<QuestionTabs activeTab={1} />
 			</div>
 			<SignupSection />

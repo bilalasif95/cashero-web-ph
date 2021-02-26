@@ -3030,7 +3030,7 @@ b {
     height: 100%; }
 
 .Questions {
-  padding-bottom: 100px; }
+  padding: 100px 0px; }
   .Questions .MuiTypography-root .FaqText {
     font-size: 16px;
     font-weight: 400;
@@ -4470,8 +4470,6 @@ button:focus {
   box-shadow: 15px 0 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #ffffff; }
-  .Converter .MuiInputBase-input {
-    padding: 0px 0px 4px; }
 
 .ExchangeBox {
   background: #f8f8f8;
@@ -4618,11 +4616,11 @@ button:focus {
 
 .Converter .GbpRow .MuiInputBase-input {
   color: #0667eb !important;
-  font-size: 40px; }
+  font-size: 33px; }
 
 .Converter .EuroRow .MuiInputBase-input {
   color: #000 !important;
-  font-size: 40px;
+  font-size: 33px;
   border: none;
   width: 100%;
 }
@@ -4660,7 +4658,7 @@ button:focus {
 .NofeeList {
   margin-top: 50px; }
   .NofeeList li {
-    color: #363636;
+    color: #9ea0a5;
     position: relative;
     padding-left: 20px; }
     .NofeeList li:before {
@@ -4668,7 +4666,7 @@ button:focus {
       content: '';
       height: 5px;
       width: 5px;
-      background-color: #363636;
+      background-color: #9ea0a5;
       border-radius: 50px;
       top: 7px;
       left: 0; }
@@ -4703,7 +4701,7 @@ button:focus {
   margin-bottom: 36px; }
   .SwapRow .MuiInputBase-input {
     color: #0667eb !important;
-    font-size: 40px; }
+    font-size: 33px; }
   .SwapRow .ConverterInput {
     width: 100%;
     display: flex; }
@@ -4723,13 +4721,15 @@ button:focus {
   margin-top: 49px; }
   .SwapGbpRow .MuiInputBase-input {
     color: #000 !important;
-    font-size: 40px; }
+    font-size: 33px; }
   .SwapGbpRow .ConverterInput {
     width: 100%;
     display: flex; }
 
 .ConverterInput {
-  display: flex; }
+  display: flex;
+  margin-left: 10px;
+  align-items: center; }
 
 .currencySymbol {
   color: black;
@@ -5713,7 +5713,7 @@ button:focus {
       }
       
       ::placeholder {
-          color: #c7c7cc;
+        color: #a58c8c !important;
       }
       
       .inxform-control {

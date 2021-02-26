@@ -768,18 +768,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											On the Wallet screen of your
-											Cashero app, hit the exchange
-											button. The Exchange screen will
-											show you the live exchange rate
-											at that moment. Select the
-											currency and the amount you wish
-											to exchange and hit the Exchange
-											button. Your funds will be
-											converted instantly and you can
-											confirm your transaction by
-											verifying with your new balance
-											on the Wallet screen.
+										Once you’ve downloaded the app, hit the exchange button on the main Wallet screen. The Exchange screen will show you the live exchange rate at that moment. Select the currency and the amount you wish to exchange and hit the Exchange button. Your funds will be converted instantly and you can confirm your transaction by verifying with your new balance on the Wallet screen.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -800,12 +789,12 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										What currencies can I exchange?
+									What currencies can I exchange?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Cashero allows you to instantly convert between United States dollars (USD), British pounds (GBP) or Euros (EUR).</h4>
+										<h4 className="FaqText">Cashero allows you to instantly convert between United States dollars (USD), British pounds (GBP), or Euros (EUR).</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -825,13 +814,12 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										How much does it cost to convert
-										between currencies?
+									How much does it cost to convert between currencies?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Cashero doesn’t charge a fee to convert money between currencies in your account and you can do so in seconds. Cashero also doesn’t include a spread in the exchange rate provided to you. You will always get the mid-market rate, nothing hidden on top. If this changes, you’ll be the first to know.</h4>
+										<h4 className="FaqText">Cashero may charge a small fee to convert money between currencies in your account and you can do so in seconds. Everything will be displayed in the app, with no hidden fees ever.</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -851,19 +839,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										How does Cashero compare to
-										converting currency with the bank?
+									How does Cashero compare to converting currency with the bank?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Unlike most banks, Cashero uses
-											the real exchange rate to
-											convert money from one currency
-											to another. Cashero has no
-											hidden fees and the whole
-											transaction is transparent.
+										Cashero uses a transparent exchange rate to convert money from one currency to another. Cashero has no hidden fees and the whole transaction is transparent.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -884,15 +866,13 @@ export function QuestionTabs(props) {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										How long does it take to convert
-										currencies?
+									How long does it take to convert currencies?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Exchanging currencies with
-											Cashero is instant.
+										Exchanging currencies with Cashero is instant.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -918,10 +898,10 @@ export function QuestionTabs(props) {
 									<AccordionDetails>
 										<div className="expandTypo">
 											<h2 className="blackhead">Everything You Need To Know About Online Currency Exchanges</h2>
-											<p>Online currency exchanges are becoming more common every day. This makes a lot of sense in today's world, given that there are over 180 different currencies already recognized as legal tender worldwide. In fact, online currency exchanges are pretty much a necessity for global trade and commerce. It’s no wonder, then, that currency traders, brokerage firms, banks, and other brick and mortar financial institutions saw huge potential in providing currency exchange services years ago.</p>
+											<p>Online currency exchanges are becoming more common every day. This makes a lot of sense in today's world, given that there are over 180 different currencies already recognized as legal tender worldwide. Online currency exchanges are pretty much a necessity for global trade and commerce. It’s no wonder, then, that currency traders, brokerage firms, banks, and other brick and mortar financial institutions saw huge potential in providing currency exchange services years ago.</p>
 											<p>Whether you're a traveler, a company doing business with an international clientele, or an individual wanting to pay for services or goods across the globe, you will most likely need to convert currencies from one form to another. And, thanks to the Internet, you can now do so online using currency exchange sites. But what exactly are online currency exchanges and how do they work? And what options might be available for personal use if you want to keep multiple currencies at once?</p>
 											<h2 className="blackhead">What is currency exchange trading?</h2>
-											<p>Also known as forex (foreign exchange), currency exchange trading refers to a network of traders (buyers and sellers) that wish to convert one currency into another at a prearranged price. The majority of forex transactions are done for practical reasons (i.e., to travel abroad). Many people, though, choose to convert currency to earn a profit. Foreign exchanges can be particularly attractive to traders, especially when the amount of currency transferred daily can bring a greater chance of high profit (aka currency volatility). But now more than ever, everyday people are wanting the ability to hold multiple currencies at once, along with the ability to change in and out of them at will. Currency exchange platforms like Cashero, were built with them in mind.</p>
+											<p>Also known as forex (foreign exchange), currency exchange trading refers to a network of traders (buyers and sellers) that wish to convert one currency into another at a prearranged price. The majority of forex transactions are done for practical reasons (i.e., to travel abroad). Many people, though, choose to convert currency to earn a profit. Foreign exchanges can be particularly attractive to traders, especially when the amount of currency transferred daily can bring a greater chance of high profit (aka currency volatility). But now more than ever, everyday people are wanting the ability to hold multiple currencies at once, along with the ability to change in and out of them at will. Currency exchange platforms like Cashero were built with them in mind.</p>
 											<h2 className="blackhead">What are currency exchange platforms?</h2>
 											<p>These refer to online-based websites that enable people and corporations to convert currencies, irrespective of where they are in the world. Most of the time, these platforms allow involved parties to explore the exchange currencies and financial market conditions safely. Bringing immediate transparency into play, they feature a centralized and secure setting that usually provides tools like a universal currency converter. This is an application that you can use to help convert currency values based on the exchange rates of the day.</p>
 											<h3 className="blackhead">When is the best time to use a currency exchange</h3>

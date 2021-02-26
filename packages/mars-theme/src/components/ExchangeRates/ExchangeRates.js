@@ -24,6 +24,7 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import Link from "../link";
 
 var bigDecimal = require('js-big-decimal');
 
@@ -394,6 +395,7 @@ export function ExchangeRates() {
 										Open an account in minutes. Launching in May.
 									</li>
 								</ul>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -892,20 +894,20 @@ export function ExchangeRates() {
 						<ul className="PersonalCompanyList list-unstyled">
 							<li>
 								<img src={ExArrow} alt="Exchange Arrow" />
-								Exchange in an instant
+								Exchange currencies in an instant
 							</li>
 							<li>
 								<img src={ExDollar} alt="Exchange Dollar" />
-								Switch between USD, GBP, EUR
+								Switch between USD, GBP, and EUR
 							</li>
 							<li>
 								<img src={Dollarlist} alt="Dollar list" />
 								No hidden fees, full transparency
 							</li>
-							<li>
+							{/* <li>
 								<img src={Draw} alt="Draw" />
 								Add or withdraw your money at any time
-							</li>
+							</li> */}
 							<li>
 								<img src={listHome} alt="list Home" />
 								EU licensed & regulated financial institution
@@ -945,9 +947,7 @@ export function ExchangeRates() {
 									src={Currencies}
 								/>
 								<h3>
-									Add funds into your account and
-									choose to hold your money in USD,
-									GPB or EUR.
+								Add funds into your account and choose to hold your money in USD, GBP, or EUR.
 								</h3>
 							</div>
 						</div>
@@ -956,8 +956,7 @@ export function ExchangeRates() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
 									<h3>
-										Hold and switch between USD, GPB
-										or EUR in seconds.
+									Hold and switch between USD, GBP, or EUR in seconds.
 									</h3>
 								</div>
 							</Fade>
@@ -967,9 +966,7 @@ export function ExchangeRates() {
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
 								<p>
-									Ready for foreign exchange with no
-									surprises? Seamlessly transfer
-									between currencies using Cashero.
+								Ready for currency exchange with no surprises? Seamlessly transfer between currencies using Cashero.
 								</p>
 								<button
 									onClick={appModalOpen}
@@ -995,7 +992,7 @@ export function ExchangeRates() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				<Companies />
+				{/* <Companies /> */}
 				<QuestionTabs activeTab={3} />
 			</div>
 			<SignupSection />

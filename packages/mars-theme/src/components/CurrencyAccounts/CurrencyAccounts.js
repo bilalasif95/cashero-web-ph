@@ -486,7 +486,7 @@ export function CurrencyAccounts() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				<Companies />
+				{/* <Companies /> */}
 				<QuestionTabs activeTab={2} />
 			</div>
 			<SignupSection />

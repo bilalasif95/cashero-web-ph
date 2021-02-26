@@ -23,16 +23,15 @@ export function OnlineSave() {
 						<div>
 							<Fade triggerOnce direction="up" delay={0}>
 								<h1 className="oneAppTitle">
-									Transfer Money Online <span className="br-block"></span> And
-										Save On Exchange <span className="br-block"></span> Fees.
+								Transfer Money Instantly <span className="br-block"></span> and Save on Exchange Fees
 									</h1>
 							</Fade>
 							<Fade triggerOnce direction="up" delay={300}>
-								<p>You know the currency exchange rate you see on Google? Ya, that’s the one we give you too. Convert currency almost at the speed of light with a small, transparent fee. By using Cashero, you can hold your money in one place, transfer money online and save on exchange fees. We give you the best possible rate, forget about those excessive bank fees.</p>
+								<p>You know those great currency exchange rates you see advertised everywhere? That’s the rate Cashero actually uses to exchange your money.  Most banks use a lower rate.  No bait and switch. Convert currency almost at the speed of light with a small, transparent fee.</p>
 							</Fade>
 							<Fade triggerOnce direction="up" delay={700}>
 								<button onClick={appModalOpen} className="LinkBtn">
-									Start Exchanging  <img alt="arrow" className="ArrowBtn" src={Arrow} />
+								Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow} />
 								</button>
 							</Fade>
 						</div>

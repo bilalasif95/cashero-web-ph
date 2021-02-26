@@ -285,7 +285,7 @@ export function ReceivePayments() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				<Companies />
+				{/* <Companies /> */}
 				<QuestionTabs activeTab={4} />
 			</div>
 			<SignupSection />
