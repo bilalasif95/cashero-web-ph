@@ -63,7 +63,7 @@ body{
     align-items: center;
     justify-content: inherit !important;
     width: 100%;
-    margin: 60px 0 0;
+    margin: 30px 0 0;
     position: relative; }
     .banner .numberSelection .selectCountry {
       width: 8.5%; }
@@ -73,7 +73,8 @@ body{
         align-items: center !important;
         background: transparent !important;
         color: #363636 !important;
-        border-bottom: 1px solid #dadee7;
+        border-bottom: 1px solid #dadee7 !important;
+        border: inherit;
         box-shadow: none !important;
         border-radius: none !important;
         cursor: pointer; }
@@ -15758,6 +15759,13 @@ select:-webkit-autofill:focus {
     .draw-text{
       color: #000 !important;
       font-size: 14px;
+    }
+    .draw-banner-text{
+      color: #fff !important;
+      font-size: 14px;
+    }
+    .draw-banner-text a{
+      color: #fff !important;
     }
     @media(max-width: 475px){
       .Banner-list h2:nth-child(2){

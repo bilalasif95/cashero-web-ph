@@ -23,13 +23,13 @@ export function NoEffort() {
 						<div className="oneAppCont">
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle">
-									What Cashero <span className="br-block"></span> Can Guarantee
+									Earn the <span className="br-block"></span> Cashero Way
 									</h3>
-								<p className="HighInterestText">You want to earn interest on your money, right? Passive income, dinero, moolah, Cashero. We understand. You've come to the right place. You worked hard for your money, so hard for it honey, you worked for your money so it better treat you right.
+								<p className="HighInterestText">You want to earn interest on your money, right? Passive income, dinero, or Cashero. We understand. You've come to the right place.
 									</p>
-								<p className="HighInterestText">If your money is sitting in a bank account, chances are you’re losing money daily. The best high yield savings account interest rates should beat inflation and earn you money. Most banks and online savings accounts do neither.
-									Introducing a first-of-its-kind approach to high yield savings, the Cashero savings account. The superhero your hard earned money has been waiting for.</p>
-								<button onClick={appModalOpen} className="LinkBtn" >Join for Free <img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<p className="HighInterestText">If your money is sitting in a bank account, chances are you’re losing money. High yield savings account interest rates should beat inflation and make you money. Unfortunately, most don’t.</p>
+								<p className="HighInterestText">Introducing a first-of-its-kind approach to high yield savings. Cashero, the superhero your hard-earned money has been waiting for. </p>
+								<button onClick={appModalOpen} className="LinkBtn" >Get Early Access<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 						</div>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}

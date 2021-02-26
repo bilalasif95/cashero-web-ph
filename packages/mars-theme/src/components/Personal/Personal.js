@@ -23,6 +23,7 @@ import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import Link from "../link";
 
 var bigDecimal = require('js-big-decimal');
 
@@ -128,8 +129,8 @@ export function Personal() {
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>High-Yield Savings Account: Make Your <span className="br-block"></span> Money Make More Money</h1>
-								<p className="bannerPara">Do that thing rich people do, earn money while you <span className="br-block"></span> sleep. Earn up to 5% APY on your money. Inflation <span className="br-block"></span> beating interest paid out daily.</p>
+								<h1>High-Yield Savings Account: Make Your <span className="br-block"></span> Money do the Work</h1>
+								<p className="bannerPara">Earn up to 5% APY on your money, paid out daily.</p>
 								<TextfieldBanner />
 								{/* <div className="numberSelection">
 									<div className="selectCountry">
@@ -248,8 +249,9 @@ export function Personal() {
 									</button>
 								</div> */}
 								<ul className="PersonalList list-unstyled">
-									<li><img src={Clock} alt="Clock" />Open an account in minutes</li>
+									<li><img src={Clock} alt="Clock" />Open an account in minutes. Launching in May.</li>
 								</ul>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -343,8 +345,8 @@ export function Personal() {
 						<ul className="PersonalCompanyList list-unstyled">
 							<li><img alt="High Dollar" src={HighDollar} />Inflation beating, 5% APY</li>
 							<li><img alt="list Graph" src={listGraph} />Interest paid out daily</li>
-							<li><img alt="List Phone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
-							<li><img alt="Draw" src={Draw} />Add or withdraw your  money at any time</li>
+							{/* <li><img alt="List Phone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
+							<li><img alt="Draw" src={Draw} />Deposit or withdraw your money at any time</li>
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
@@ -378,7 +380,7 @@ export function Personal() {
 									src={WalletCoins}
 									alt="Wallet Coins"
 								/>
-								<h3>Add funds into your High <span className="br-block"></span>Yield Savings Account.</h3>
+								<h3>Add funds into your Account.</h3>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
@@ -386,7 +388,8 @@ export function Personal() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Arrow Up" src={ArrowUp} />
 									<h3>
-										Earn up to 5% APY and redeem whenever you want.
+									Earn up to 5% APY. Yep, that simple.
+
 									</h3>
 								</div>
 							</Fade>
@@ -397,7 +400,7 @@ export function Personal() {
 							<div className="MultistepsCont">
 								<p>Ready to earn more? Growing your wealth is easy with Cashero's high-yield savings account.</p>
 								<button onClick={appModalOpen} className="LinkBtn" >
-									Start Earning   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+								Get Early Access    <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

@@ -300,13 +300,12 @@ export function QuestionTabs(props) {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										How do I open a high-interest
-										savings account?
+									How do I open a high-yield savings account?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">To open a savings account with Cashero, simply download the app to your smartphone, add money to your account and you will automatically start receiving inflation beating interest rates of 2%-5% APY.</h4>
+										<h4 className="FaqText">To open an account with Cashero, simply download the app to your smartphone, add money to your account and you will automatically start earning inflation-beating interest rates of 2%-5% APY. </h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -326,13 +325,12 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										How can I see how much interest I’ve
-										earned?
+									How can I see how much interest I’ve earned?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">On the main Wallet screen within the Cashero app, click Chart View and you will be able to see how much you’ve invested and your earnings over different periods of time.</h4>
+										<h4 className="FaqText">On the main Wallet screen within the Cashero app, you’ll be able to click on Chart View. Here you can see how much you’ve invested and your earnings over different periods of time.</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -357,7 +355,7 @@ export function QuestionTabs(props) {
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">APY stands for annual percentage yield. It measures your interest rate over a year, including the effects of compounding. It represents how much you will earn from your investment in one year.</h4>
+										<h4 className="FaqText">APY stands for annual percentage yield. It measures your interest rate over a year, including the effects of compounding. It represents how much you will earn from your investment in one year. </h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -377,18 +375,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										Are there fees associated with
-										Cashero’s savings account?
+									Are there fees associated with Cashero’s savings account?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											The short answer is no. The long
-											answer is also no. Rest at ease
-											knowing your money can accrue
-											interest without fees eating
-											away at your earnings.
+										The short answer is no. The long answer is also no. Rest at ease knowing your money can grow without fees eating away at your earnings.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -415,14 +408,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected
-											using multi-party computation
-											(MPC) and hardware isolation
-											with Intel SGX enclaves. It
-											sounds complex and it is, on
-											purpose. These security layers
-											ensure your money is safe and
-											protected.
+										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -443,8 +429,7 @@ export function QuestionTabs(props) {
 												<p>The term “high yield” may intrigue a lot of people interested in being financially savvy. But is it that attractive of an option, and can it be possibly used to mislead consumers?</p>
 												<p>We've put together this guide to help you know what to expect from a high-yield savings account, whether it's a good fit for you, your funds, and your future.</p>
 												<h3 className="blackhead">What is a high-yield savings account?</h3>
-												<p>A high-yield savings account is a savings account offering higher rates of return on the amount deposited. These rates are better than the national average and are usually tied to specific conditions, such as maintenance fees and minimum balance requirements. A key term here is “APY” (annual percentage yield). </p>
-												<p><b className="blackhead">APY & high-yield savings accounts – An example</b> In most cases, a high-yield savings account enables you to earn around 0.50% APY. In simple terms, APY is the number that tells you what your money could earn within a fiscal year. So the higher the APY, the more savings for you, because the faster your balance will grow without any extra efforts on your behalf. Therefore, a high-yield savings account offering 5% APY is way more rewarding than a traditional savings account. Just consider that the national average savings rate is in the 0.05% APY region. Not so great... </p>
+												<p>A high-yield savings account is a savings account offering higher rates of return on the amount deposited. These rates are better than the national average and are usually tied to specific conditions, such as maintenance fees and minimum balance requirements. A key term here is “APY” (annual percentage yield).</p>
 												<p>Let’s use an example to help you understand the magnitude of what we’re talking about. Assume that you have $10,000 in a high-yield savings account. With a 5% APY you would earn slightly over $500 after 12 months. Compare that to a 0.05% APY and you’d only earn a humble $5. </p>
 												<p><b>Important notes:</b></p>
 												<div className="inner-div">

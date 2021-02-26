@@ -19,6 +19,7 @@ import pricewallet from "../../assets/pricewallet.png";
 import heartDollar from "../../assets/heartDollar.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import Link from "../link";
 
 export function Donation() {
 	// const [searchTerm, setSearchTerm] = useState<any>("");
@@ -208,7 +209,7 @@ export function Donation() {
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in May.</li>
 								</ul>
-								<p className="bannerPara">Get early access to the Cashero app and earn a chance <span className="br-block"></span> to win $1,000 every 3 days! Terms and conditions apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-6">
