@@ -2787,10 +2787,12 @@ b {
     align-items: center !important;
     background: transparent !important;
     color: #fff !important;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff !important;
+    border: inherit;
     box-shadow: none !important;
     border-radius: none !important;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 0px !important; }
     .SignUp .numberSelection .selectCountry .btn:focus {
       background: #000; }
     .SignUp .numberSelection .selectCountry .btn input {
@@ -4112,10 +4114,12 @@ button:focus {
     align-items: center !important;
     background: transparent !important;
     color: #fff !important;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff !important;
+    border: inherit;
     box-shadow: none !important;
     border-radius: none !important;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 0px !important; }
     .PersonalCont .numberSelection .selectCountry .btn:focus {
       background: #000; }
     .PersonalCont .numberSelection .selectCountry .btn input {
@@ -15738,6 +15742,12 @@ select:-webkit-autofill:focus {
     }
     .numberSelection .selectCountry .dropdown-menu.show{
       background-color: #fff !important;
+    }
+    .Appbtn.disabled{
+      background-color: #4285f4 !important;
+    }
+    .Appbtn{
+      background-color: #4285f4 !important
     }
     @media(max-width: 475px){
       .Banner-list h2:nth-child(2){

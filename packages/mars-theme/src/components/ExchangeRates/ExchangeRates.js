@@ -391,7 +391,7 @@ export function ExchangeRates() {
 								<ul className="PersonalList list-unstyled">
 									<li>
 										<img alt="Clock" src={Clock} />
-										Open an account in minutes
+										Open an account in minutes. Launching in May.
 									</li>
 								</ul>
 							</div>

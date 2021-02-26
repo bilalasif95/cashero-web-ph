@@ -171,7 +171,7 @@ export function SignupSection() {
                   }
                   type="submit"
                 >
-                  Get Started
+                  Get Early Access
                 </button>
               </div>
             </div>
