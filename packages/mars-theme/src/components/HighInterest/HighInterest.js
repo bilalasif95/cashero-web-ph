@@ -7,12 +7,7 @@ import CounterIcon from "../../assets/counterIcon.svg";
 import { Fade } from "react-awesome-reveal";
 import SearchIcon from "@material-ui/icons/Search";
 import currencieslist from "../../config/currenciesList";
-import {
-	Dropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-} from "reactstrap";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
 
@@ -26,7 +21,7 @@ export function HighInterest() {
 	const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
 	const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
 	const [searchTermgbp, setSearchTermgbp] = useState("");
-	const ref = useRef(null)
+	const ref = useRef(null);
 	const [innerWidth, setInnerWidth] = useState(0);
 	const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslist);
 	const [searchResults2gbp, setSearchResults2gbp] = useState([]);

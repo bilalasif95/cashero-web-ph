@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { styled } from "frontity";
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import SearchIcon from "@material-ui/icons/Search";
 import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-import TextField from "../../common/textFiled";
+// import TextField from "../../common/textFiled";
 import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
+import Link from "../link";
 
 export default function GetTheAppModal(props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -23,8 +19,8 @@ export default function GetTheAppModal(props) {
   const [searchResults2, setSearchResults2] = useState([]);
   const [phonenoLength, setPhoneNoLength] = useState(10);
   const [newPhone, setNewPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  // const [error, setError] = useState("");
+  // const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [openSuccessModal, setSuccessModal] = useState(false);
   useEffect(() => {
@@ -57,14 +53,15 @@ export default function GetTheAppModal(props) {
     setNewPhoneNumber(e.target.value);
   };
   const getStarted = () => {
+    setLoading(true);
     let finalPhoneNumb = code + newPhone;
     callApi(EndPoints.preregistration, "post", "", {
       Phone: finalPhoneNumb,
-      // CountryCode: updatecode,
     })
       .then((res) => {
+        setLoading(false);
         if (res.code === 400) {
-          // setError(res.message);
+          setError(res.message);
         } else {
           setCode("+1");
           setNewPhoneNumber("");
@@ -72,19 +69,20 @@ export default function GetTheAppModal(props) {
         }
       })
       .catch(() => {
-        // setError("Invalid phone number.");
+        setLoading(false);
+        setError("Invalid phone number.");
       });
   };
-  const onSubmit = () => {
-    setLoading(true);
-    callApi(EndPoints.preregistration, "post", "", {
-      Phone: email,
-    }).then(() => {
-      setSuccessModal(true);
-      setLoading(false);
-      setEmail("");
-    });
-  };
+  // const onSubmit = () => {
+  //   setLoading(true);
+  //   callApi(EndPoints.preregistration, "post", "", {
+  //     Phone: email,
+  //   }).then(() => {
+  //     setSuccessModal(true);
+  //     setLoading(false);
+  //     setEmail("");
+  //   });
+  // };
   const { open, handleClose } = props;
   return (
     <div className="GetAppModal">
@@ -114,8 +112,8 @@ export default function GetTheAppModal(props) {
                 We’ll send you a message with a link to download the app.
               </p>
               <p id="transition-modal-description">
-                You’ll also earn a chance to win $1,000 every 3 days! Terms and
-                conditions apply.{" "}
+                You’ll also earn a chance to win $1,000 every 3 days! <Link link="/#">Terms and
+                conditions</Link> apply.
               </p>
               <div className="ModalPhone">
                 {/* <div className="GetAppEmail">
@@ -135,7 +133,7 @@ export default function GetTheAppModal(props) {
                   <div className="selectCountry">
                     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                       <DropdownToggle caret>
-                        <input type="text" placeholder="Code" value={code} />
+                        <input type="text" placeholder="Code" readOnly value={code} />
                       </DropdownToggle>
                       <DropdownMenu>
                         <DropdownItem header>
@@ -152,31 +150,31 @@ export default function GetTheAppModal(props) {
                         <div className="country-list">
                           {searchResults2.length > 0
                             ? searchResults2.map((item, index) => (
-                                <DropdownItem
-                                  key={index + 1}
-                                  onClick={() => selectCountry(item)}
-                                  className="country-item"
-                                >
-                                  <div className="flag-name">
-                                    <span>{item.flag}</span>
-                                    {item.name}
-                                  </div>
-                                  <div className="code">{item.dial_code}</div>
-                                </DropdownItem>
-                              ))
+                              <DropdownItem
+                                key={index + 1}
+                                onClick={() => selectCountry(item)}
+                                className="country-item"
+                              >
+                                <div className="flag-name">
+                                  <span>{item.flag}</span>
+                                  {item.name}
+                                </div>
+                                <div className="code">{item.dial_code}</div>
+                              </DropdownItem>
+                            ))
                             : searchResults.map((item, index) => (
-                                <DropdownItem
-                                  key={index + 1}
-                                  onClick={() => selectCountry(item)}
-                                  className="country-item"
-                                >
-                                  <div className="flag-name">
-                                    <span>{item.flag}</span>
-                                    {item.name}
-                                  </div>
-                                  <div className="code">{item.dial_code}</div>
-                                </DropdownItem>
-                              ))}
+                              <DropdownItem
+                                key={index + 1}
+                                onClick={() => selectCountry(item)}
+                                className="country-item"
+                              >
+                                <div className="flag-name">
+                                  <span>{item.flag}</span>
+                                  {item.name}
+                                </div>
+                                <div className="code">{item.dial_code}</div>
+                              </DropdownItem>
+                            ))}
                         </div>
                       </DropdownMenu>
                     </Dropdown>
@@ -191,6 +189,7 @@ export default function GetTheAppModal(props) {
                   </div>
                   <button
                     onClick={() => getStarted()}
+                    disabled={loading}
                     className={
                       newPhone.length === phonenoLength
                         ? "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block"
@@ -200,9 +199,13 @@ export default function GetTheAppModal(props) {
                   >
                     Get Early Access
                   </button>
+                  <label style={{ color: "red" }}>
+                    {error}
+                  </label>
                 </div>
                 <button
                   onClick={() => getStarted()}
+                  disabled={loading}
                   className={
                     newPhone.length === phonenoLength
                       ? "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn"
@@ -212,9 +215,9 @@ export default function GetTheAppModal(props) {
                 >
                   Get Early Access
                 </button>
-                {/* <label style={{ color: "red" }}>
-                                        {error}
-                                    </label> */}
+                <label style={{ color: "red" }}>
+                  {error}
+                </label>
               </div>
             </div>
           </div>

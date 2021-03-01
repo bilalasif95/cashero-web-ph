@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import TextField from "../../common/textFiled";
+// import TextField from "../../common/textFiled";
 import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import SearchIcon from "@material-ui/icons/Search";
 
 export function TextfieldBanner() {
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [openSuccessModal, setSuccessModal] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(counrtrylist);
@@ -25,11 +21,6 @@ export function TextfieldBanner() {
     setSearchTerm("");
     setDropdownOpen((prevState) => !prevState);
   };
-
-  const handleClose = () => {
-    setSuccessModal(false);
-  };
-
   const [newPhone, setNewPhoneNumber] = useState("");
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
@@ -40,23 +31,22 @@ export function TextfieldBanner() {
     );
     setSearchResults2(results);
   };
-
   const selectCountry = (country) => {
     setCode(country.dial_code);
     setPhoneNoLength(country.phone_length);
     setSearchTerm("");
     setSearchResults2(counrtrylist);
   };
-
   const getStarted = () => {
+    setLoading(true);
     let finalPhoneNumb = code + newPhone;
     callApi(EndPoints.preregistration, "post", "", {
       Phone: finalPhoneNumb,
-      // CountryCode: updatecode,
     })
       .then((res) => {
+        setLoading(false);
         if (res.code === 400) {
-          // setError(res.message);
+          setError(res.message);
         } else {
           setCode("+1");
           setNewPhoneNumber("");
@@ -64,23 +54,23 @@ export function TextfieldBanner() {
         }
       })
       .catch(() => {
-        // setError("Invalid phone number.");
+        setLoading(false);
+        setError("Invalid phone number.");
       });
   };
   const handleOnChange = (e) => {
     setNewPhoneNumber(e.target.value);
   };
-
-  const onSubmit = () => {
-    setLoading(true);
-    callApi(EndPoints.preregistration, "post", "", {
-      Phone: email,
-    }).then(() => {
-      setSuccessModal(true);
-      setLoading(false);
-      setEmail("");
-    });
-  };
+  // const onSubmit = () => {
+  //   setLoading(true);
+  //   callApi(EndPoints.preregistration, "post", "", {
+  //     Phone: email,
+  //   }).then(() => {
+  //     setSuccessModal(true);
+  //     setLoading(false);
+  //     setEmail("");
+  //   });
+  // };
   const thanksModalClose = () => {
     setSuccessModal(false);
   };
@@ -101,7 +91,7 @@ export function TextfieldBanner() {
         <div className="selectCountry">
           <Dropdown isOpen={dropdownOpen} toggle={toggle}>
             <DropdownToggle caret>
-              <input type="text" placeholder="Code" value={code} />
+              <input type="text" placeholder="Code" readOnly value={code} />
             </DropdownToggle>
             <DropdownMenu>
               <DropdownItem header>
@@ -118,31 +108,31 @@ export function TextfieldBanner() {
               <div className="country-list">
                 {searchResults2.length > 0
                   ? searchResults2.map((item, index) => (
-                      <DropdownItem
-                        key={index + 1}
-                        onClick={() => selectCountry(item)}
-                        className="country-item"
-                      >
-                        <div className="flag-name">
-                          <span>{item.flag}</span>
-                          {item.name}
-                        </div>
-                        <div className="code">{item.dial_code}</div>
-                      </DropdownItem>
-                    ))
+                    <DropdownItem
+                      key={index + 1}
+                      onClick={() => selectCountry(item)}
+                      className="country-item"
+                    >
+                      <div className="flag-name">
+                        <span>{item.flag}</span>
+                        {item.name}
+                      </div>
+                      <div className="code">{item.dial_code}</div>
+                    </DropdownItem>
+                  ))
                   : searchResults.map((item, index) => (
-                      <DropdownItem
-                        key={index + 1}
-                        onClick={() => selectCountry(item)}
-                        className="country-item"
-                      >
-                        <div className="flag-name">
-                          <span>{item.flag}</span>
-                          {item.name}
-                        </div>
-                        <div className="code">{item.dial_code}</div>
-                      </DropdownItem>
-                    ))}
+                    <DropdownItem
+                      key={index + 1}
+                      onClick={() => selectCountry(item)}
+                      className="country-item"
+                    >
+                      <div className="flag-name">
+                        <span>{item.flag}</span>
+                        {item.name}
+                      </div>
+                      <div className="code">{item.dial_code}</div>
+                    </DropdownItem>
+                  ))}
               </div>
             </DropdownMenu>
           </Dropdown>
@@ -157,6 +147,7 @@ export function TextfieldBanner() {
         </div>
         <button
           onClick={() => getStarted()}
+          disabled={loading}
           className={
             newPhone.length === phonenoLength
               ? "btn btn-primary my-2 my-sm-0 Appbtn "
@@ -167,6 +158,9 @@ export function TextfieldBanner() {
           Get Early Access
         </button>
       </div>
+      <label style={{ color: "red", width: "100%", textAlign: "left", paddingTop: "0.5rem" }}>
+        {error}
+      </label>
       {openSuccessModal && (
         <ThanksModal open={openSuccessModal} handleClose={thanksModalClose} />
       )}

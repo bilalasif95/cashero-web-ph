@@ -5,7 +5,7 @@ import Clock from "../../assets/clockImg.svg"
 import Arrow from "../../assets/arrow.svg";
 import listGraph from "../../assets/listGraph.svg";
 import HighDollar from "../../assets/HighDollar.svg";
-import ListPhone from "../../assets/ListPhone.svg";
+// import ListPhone from "../../assets/ListPhone.svg";
 import Draw from "../../assets/draw.svg";
 import listHome from "../../assets/listHome.svg";
 import { NoEffort } from "../NoEffort/NoEffort";
@@ -17,7 +17,7 @@ import WalletCoins from "../../assets/WalletCoins.png";
 import ArrowUp from "../../assets/Arrowup.png";
 import Arrow1 from "../../assets/arrowLink.svg";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-import { Companies } from "../Companies/Companies";
+// import { Companies } from "../Companies/Companies";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
@@ -28,60 +28,10 @@ import Link from "../link";
 var bigDecimal = require('js-big-decimal');
 
 export function Personal() {
-	// const [searchTerm, setSearchTerm] = useState<any>("");
-	// const [searchResults, setSearchResults] = useState<any>(counrtrylist);
-	// const [searchResults2, setSearchResults2] = useState<any>([]);
-	// const [code, setCode] = useState("+1");
-	// const [dropdownOpen, setDropdownOpen] = useState(false);
-	// const [phonenoLength, setPhoneNoLength] = useState(10);
-	// const toggle = () => {
-	// 	setSearchTerm("");
-	// 	setDropdownOpen((prevState) => !prevState);
-	// };
 	const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
 	const [selectedYear, setSelectedYear] = useState("5");
-	// const [Error, setError] = useState<string>("");
-	// const [newPhone, setNewPhoneNumber] = useState("");
 	const [value, setValue] = useState("5000");
-	const [appModal, setAppModal] = useState(false)
-	// const handleChange = (e) => {
-	// 	setSearchTerm(e.target.value);
-	// 	const results = searchResults.filter(
-	// 		(country) =>
-	// 			country.name
-	// 				.toLowerCase()
-	// 				.includes(searchTerm.toLocaleLowerCase()) ||
-	// 			country.dial_code.includes(searchTerm.toLocaleLowerCase())
-	// 	);
-	// 	setSearchResults2(results);
-	// };
-	// const selectCountry = (country) => {
-	// 	setCode(country.dial_code);
-	// 	setPhoneNoLength(country.phone_length);
-	// 	setSearchTerm("");
-	// 	setSearchResults2(counrtrylist);
-	// };
-	// const getStarted = () => {
-	// 	let finalPhoneNumb = code + newPhone;
-	// 	callApi(EndPoints.preregistration, "post", "", {
-	// 		Phone: finalPhoneNumb,
-	// 		// CountryCode: updatecode,
-	// 	})
-	// 		.then((res: any) => {
-	// 			if (res.code === 400) {
-	// 				// setError(res.message);
-	// 			} else {
-	// 				setCode("+1")
-	// 				setNewPhoneNumber("");
-	// 			}
-	// 		})
-	// 		.catch(() => {
-	// 			// setError("Invalid phone number.");
-	// 		});
-	// };
-	// const handleOnChange = (e: any) => {
-	// 	setNewPhoneNumber(e.target.value);
-	// };
+	const [appModal, setAppModal] = useState(false);
 	const onChange = (e) => {
 		if (e.target.value.length > 6) {
 			return
@@ -132,126 +82,10 @@ export function Personal() {
 								<h1>High-Yield Savings Account: Make Your <span className="br-block"></span> Money do the Work</h1>
 								<p className="bannerPara">Earn up to 5% APY on your money, paid out daily.</p>
 								<TextfieldBanner />
-								{/* <div className="numberSelection">
-									<div className="selectCountry">
-										<Dropdown
-											isOpen={dropdownOpen}
-											toggle={toggle}
-										>
-											<DropdownToggle caret>
-												<input
-													type="text"
-													placeholder="Code"
-													value={code}
-												/>
-											</DropdownToggle>
-											<DropdownMenu>
-												<DropdownItem header>
-													<>
-														<SearchIcon />
-														<input
-															type="text"
-															placeholder="Country"
-															value={searchTerm}
-															onChange={handleChange}
-														/>
-													</>
-												</DropdownItem>
-												<div className="country-list">
-													{searchResults2.length > 0
-														? searchResults2.map(
-															(item, index) => (
-																<DropdownItem
-																	key={
-																		index +
-																		1
-																	}
-																	onClick={() =>
-																		selectCountry(
-																			item
-																		)
-																	}
-																	className="country-item"
-																>
-																	<div className="flag-name">
-																		<span>
-																			{
-																				item.flag
-																			}
-																		</span>
-																		{
-																			item.name
-																		}
-																	</div>
-																	<div className="code">
-																		{
-																			item.dial_code
-																		}
-																	</div>
-																</DropdownItem>
-															)
-														)
-														: searchResults.map(
-															(item, index) => (
-																<DropdownItem
-																	key={
-																		index +
-																		1
-																	}
-																	onClick={() =>
-																		selectCountry(
-																			item
-																		)
-																	}
-																	className="country-item"
-																>
-																	<div className="flag-name">
-																		<span>
-																			{
-																				item.flag
-																			}
-																		</span>
-																		{
-																			item.name
-																		}
-																	</div>
-																	<div className="code">
-																		{
-																			item.dial_code
-																		}
-																	</div>
-																</DropdownItem>
-															)
-														)}
-												</div>
-											</DropdownMenu>
-										</Dropdown>
-									</div>
-									<div className="inputNum">
-										<input
-											type="number"
-											placeholder="Phone number"
-											value={newPhone}
-											onChange={(e) => handleOnChange(e)}
-										/>
-									</div>
-
-									<button
-										onClick={() => getStarted()}
-										className={
-											newPhone.length === phonenoLength
-												? "btn btn-primary my-2 my-sm-0 Appbtn "
-												: "btn btn-primary my-2 my-sm-0 Appbtn disabled"
-										}
-										type="submit"
-									>
-										Get Started
-									</button>
-								</div> */}
 								<ul className="PersonalList list-unstyled">
 									<li><img src={Clock} alt="Clock" />Open an account in minutes. Launching in May.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link> Terms and conditions </Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link link="/#"> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -388,7 +222,7 @@ export function Personal() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Arrow Up" src={ArrowUp} />
 									<h3>
-									Earn up to 5% APY. Yep, that simple.
+										Earn up to 5% APY. Yep, that simple.
 
 									</h3>
 								</div>
@@ -400,7 +234,7 @@ export function Personal() {
 							<div className="MultistepsCont">
 								<p>Ready to earn more? Growing your wealth is easy with Cashero's high-yield savings account.</p>
 								<button onClick={appModalOpen} className="LinkBtn" >
-								Get Early Access    <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+									Get Early Access    <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>
