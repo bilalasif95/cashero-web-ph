@@ -981,7 +981,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero allows you to send, request and receive payments. Simply go to the Payments tab, and select the contact you would like to transfer money to and add the amount you would like to send. You can search for your contacts and even businesses. If your contact or a business is not a registered Cashero user, you can invite them and earn rewards for it too.
+										Cashero allows you to send, request and receive payments. Simply go to the Payments tab, and select the contact you would like to transfer money to and add the amount you would like to send. You can search for your contacts and even businesses. If your contact or a business is not a registered Cashero user, you can invite them and earn rewards for it too.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1002,12 +1002,12 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										What are the fees to make payments?
+									What are the fees to make payments?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">For users with personal accounts, users can send, request and instantly receive money from users worldwide. Businesses can send, request and receive money to customers worldwide for a nominal fee of 1% after their first $50,000 USD.</h4>
+										<h4 className="FaqText">For users with personal accounts, users can send, request and instantly receive money from users worldwide. Businesses can send, request and receive money from customers worldwide for a nominal fee of 1% after their first $50,000 USD.</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1027,12 +1027,12 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										How long do payments take to send and receive?
+									How long do payments take to send and receive?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Payments between registered users and businesses are sent and received instantly.</h4>
+										<h4 className="FaqText">Payments between registered users, charities and businesses are sent and received instantly. </h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1052,13 +1052,12 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										Can I send, request and receive
-										payments in different currencies?
+										Can I send, request and receive payments in different currencies?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Yes! You can choose between USD, GBP or EUR.</h4>
+										<h4 className="FaqText">Yes! You can choose between USD, GBP or EUR. </h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1084,7 +1083,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These extra security layers ensure your money is safe and protected.
+										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These extra security layers ensure your money is safe and protected.
 										</h4>
 									</Typography>
 								</AccordionDetails>

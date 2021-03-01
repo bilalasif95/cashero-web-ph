@@ -147,7 +147,7 @@ export function TextfieldBanner() {
         </div>
         <button
           onClick={() => getStarted()}
-          disabled={loading}
+          disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
           className={
             newPhone.length === phonenoLength
               ? "btn btn-primary my-2 my-sm-0 Appbtn "

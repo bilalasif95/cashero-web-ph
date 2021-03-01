@@ -189,7 +189,7 @@ export default function GetTheAppModal(props) {
                   </div>
                   <button
                     onClick={() => getStarted()}
-                    disabled={loading}
+                    disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
                     className={
                       newPhone.length === phonenoLength
                         ? "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block"
@@ -205,7 +205,7 @@ export default function GetTheAppModal(props) {
                 </div>
                 <button
                   onClick={() => getStarted()}
-                  disabled={loading}
+                  disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
                   className={
                     newPhone.length === phonenoLength
                       ? "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn"

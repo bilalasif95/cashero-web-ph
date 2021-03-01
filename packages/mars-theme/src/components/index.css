@@ -1195,7 +1195,8 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
       align-items: center !important;
       background: transparent !important;
       color: #363636 !important;
-      border-bottom: 1px solid #dadee7;
+      border-bottom: 1px solid #dadee7 !important;
+      border: inherit;
       box-shadow: none !important;
       border-radius: none !important;
       cursor: pointer; }
@@ -5715,7 +5716,7 @@ button:focus {
       }
       
       ::placeholder {
-        color: #a58c8c !important;
+        color: #9ea0a5 !important;
       }
       
       .inxform-control {

@@ -1,58 +1,40 @@
-import React from "react";
-import Link from "../link";
-import Locations from "../../assets/Locations.png";
-import CMap from "../../assets/CMap.png";
-import CasheroC from "../../assets/CasheroC.png";
+import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import { Zoom } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import Paid from "../../assets/paid.png";
+import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 
-export function Getpaid() {
+export function GetPaid() {
+	const [appModal, setAppModal] = useState(false);
+	const appModalOpen = () => {
+		setAppModal(true)
+	};
+	const appModalClose = () => {
+		setAppModal(false)
+	};
 	return (
 		<div className="MoneyRequest sm-pt-0 sm-mt-30">
-			<div className="row flex-column-reverse flex-sm-row">
-				<div className="col-md-6">
-					<div className="map-pic">
-						<Zoom
-							triggerOnce
-							delay={300}
-							duration={3000}
-							className="animate-img"
-						>
-							<img
-								className="img-fluid mx-auto d-block"
-								alt="Locations"
-								src={Locations}
-							/>
-						</Zoom>
-						<img
-							className="img-fluid mx-auto d-block c-map"
-							alt="CMap"
-							src={CMap}
-						/>
-						<img
-							className="img-fluid mx-auto d-block cashero-c"
-							alt="Cashero"
-							src={CasheroC}
-						/>
-					</div>
-				</div>
+			<div className="row flex-column-reverse flex-sm-row align-items-center">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h3 className="oneAppTitle">
-								Transfer Money
+								Get Paid the
 									<span className="br-block"></span>
-								Abroad
+								Cashero Way- Fast
 							</h3>
 							<p>
-								Send money back home. Stretch your hard-earned money even further with low exchange fees. Cashero helps you send money internationally with no hassle.
+								If someone owes you money, well, we’ve made that simple too. Send them a request through Cashero and a notification will be delivered to their phone. No bank details, no IOU notes, just instant money transfers the way they’re supposed to be - easy.
 							</p>
-							<Link link="/remittance" className="Link">
-								Learn more about Transfers  <img className="ArrowBtn" alt="Arrow" src={Arrow} />
-							</Link>
+							<button onClick={appModalOpen} className="LinkBtn">
+								Get Early Access  <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+							</button>
 						</Fade>
+						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 					</div>
+				</div>
+				<div className="col-md-6">
+					<img className="img-fluid" src={Paid} />
 				</div>
 			</div>
 		</div>
