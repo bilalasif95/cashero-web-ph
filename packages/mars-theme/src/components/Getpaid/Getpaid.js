@@ -34,7 +34,7 @@ export function GetPaid() {
 					</div>
 				</div>
 				<div className="col-md-6">
-					<img className="img-fluid" src={Paid} />
+					<img className="img-fluid sm-mb-30" src={Paid} />
 				</div>
 			</div>
 		</div>
