@@ -13,7 +13,7 @@ import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { LocalPayments } from "../LocalPayments/LocalPayments";
-// import { GetPaid } from "../Getpaid/Getpaid";
+import { GetPaid } from "../Getpaid/Getpaid";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
@@ -229,8 +229,10 @@ export function ReceivePayments() {
 					</div>
 				</div>
 			</div>
+		
 			<div className="container">
 				<LocalPayments />
+				<GetPaid />
 				<div className="getStarted">
 					<div className="row">
 						<div className="col-md-12">
@@ -265,7 +267,7 @@ export function ReceivePayments() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Path" src={Path} />
 									<h3>
-									Send money to a Cashero user and have them withdraw the funds.
+									Send, request and receive payments in an instant.
 									</h3>
 								</div>
 							</Fade>
@@ -274,7 +276,7 @@ export function ReceivePayments() {
 					<div className="row">
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
-								<p>Ready to send money hassle-free? Cashero’s global payment solution is here for you when it matters most. </p>
+								<p>Ready to make an instant money transfer? Cashero’s got you. </p>
 								<button onClick={appModalOpen} className="LinkBtn">
 								Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
@@ -285,7 +287,7 @@ export function ReceivePayments() {
 				</div>
 			</div>
 			<PeoplesSection />
-			{/* <GetPaid /> */}
+			
 			<div className="container">
 				{/* <Companies /> */}
 				<QuestionTabs activeTab={4} />

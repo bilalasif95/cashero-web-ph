@@ -30,7 +30,7 @@ export default function ThanksModal(props) {
                             <div className="col-md-6">
                                 <div className="waitlistcont">
                                     <h3 id="transition-modal-title">Thank you for joining<span className="br-block"></span>Cashero's waitlist</h3>
-                                    <p>Cashero's revolutionary approach to making<span className="br-block"></span>your money go further.</p>
+                                    <p>We’ve sent you an SMS with a link to download the app.</p>
                                 </div>
                             </div>
                             <div className="col-md-6">
