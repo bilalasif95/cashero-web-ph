@@ -273,9 +273,8 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											To learn more about Cashero contact info@cashero.com.
+											To learn more about Cashero contact info@cashero.com
 										</h4>
-										<span>info@cashero.com</span>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -300,7 +299,7 @@ export function QuestionTabs(props) {
 									className="iconSet"
 								>
 									<h4 className="heading">
-									How do I open a high-yield savings account?
+										How do I open a high-yield savings account?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -325,7 +324,7 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-									How can I see how much interest I’ve earned?
+										How can I see how much interest I’ve earned?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -375,13 +374,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-									Are there fees associated with Cashero’s savings account?
+										Are there fees associated with Cashero’s savings account?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										The short answer is no. The long answer is also no. Rest at ease knowing your money can grow without fees eating away at your earnings.
+											The short answer is no. The long answer is also no. Rest at ease knowing your money can grow without fees eating away at your earnings.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -408,7 +407,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.
+											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -768,7 +767,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Once you’ve downloaded the app, hit the exchange button on the main Wallet screen. The Exchange screen will show you the live exchange rate at that moment. Select the currency and the amount you wish to exchange and hit the Exchange button. Your funds will be converted instantly and you can confirm your transaction by verifying with your new balance on the Wallet screen.
+											Once you’ve downloaded the app, hit the exchange button on the main Wallet screen. The Exchange screen will show you the live exchange rate at that moment. Select the currency and the amount you wish to exchange and hit the Exchange button. Your funds will be converted instantly and you can confirm your transaction by verifying with your new balance on the Wallet screen.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -789,7 +788,7 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-									What currencies can I exchange?
+										What currencies can I exchange?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -814,7 +813,7 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-									How much does it cost to convert between currencies?
+										How much does it cost to convert between currencies?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -839,13 +838,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-									How does Cashero compare to converting currency with the bank?
+										How does Cashero compare to converting currency with the bank?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Cashero uses a transparent exchange rate to convert money from one currency to another. Cashero has no hidden fees and the whole transaction is transparent.
+											Cashero uses a transparent exchange rate to convert money from one currency to another. Cashero has no hidden fees and the whole transaction is transparent.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -866,13 +865,13 @@ export function QuestionTabs(props) {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-									How long does it take to convert currencies?
+										How long does it take to convert currencies?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Exchanging currencies with Cashero is instant.
+											Exchanging currencies with Cashero is instant.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -981,7 +980,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Cashero allows you to send, request and receive payments. Simply go to the Payments tab, and select the contact you would like to transfer money to and add the amount you would like to send. You can search for your contacts and even businesses. If your contact or a business is not a registered Cashero user, you can invite them and earn rewards for it too.
+											Cashero allows you to send, request and receive payments. Simply go to the Payments tab, and select the contact you would like to transfer money to and add the amount you would like to send. You can search for your contacts and even businesses. If your contact or a business is not a registered Cashero user, you can invite them and earn rewards for it too.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1002,7 +1001,7 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-									What are the fees to make payments?
+										What are the fees to make payments?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -1027,7 +1026,7 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-									How long do payments take to send and receive?
+										How long do payments take to send and receive?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -1083,7 +1082,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These extra security layers ensure your money is safe and protected.
+											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These extra security layers ensure your money is safe and protected.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1211,7 +1210,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Cashero will be available in all countries except Afghanistan, Albania, Angola, The Bahamas, Barbados, Belarus, Bosnia & Herzegovina, Botswana, Cambodia, Central African Republic, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Ecuador, Eritrea, Ethiopia, Ghana, Guinea-Bissau, Guyana, Haiti, Iceland, Iran, Iraq, Jamaica, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Mauritius, Mongolia, Myanmar, Nicaragua, Nigeria, North-Korea, Pakistan, Panama, Papua NG, Russia, Serbia, Somalia, Sudan, Syria, Turkmenistan, Uganda, Ukraine, Uzbekistan, Vanuatu, Venezuela, Yemen, and Zimbabwe.
+											Cashero will be available in all countries except Afghanistan, Albania, Angola, The Bahamas, Barbados, Belarus, Bosnia & Herzegovina, Botswana, Cambodia, Central African Republic, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Ecuador, Eritrea, Ethiopia, Ghana, Guinea-Bissau, Guyana, Haiti, Iceland, Iran, Iraq, Jamaica, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Mauritius, Mongolia, Myanmar, Nicaragua, Nigeria, North-Korea, Pakistan, Panama, Papua NG, Russia, Serbia, Somalia, Sudan, Syria, Turkmenistan, Uganda, Ukraine, Uzbekistan, Vanuatu, Venezuela, Yemen, and Zimbabwe.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1232,13 +1231,13 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-									What are the fees to transfer money? 
+										What are the fees to transfer money?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										There are different fees for individual users, charities, and businesses. All fees are laid out in the app, completely transparent so you always know what they are.
+											There are different fees for individual users, charities, and businesses. All fees are laid out in the app, completely transparent so you always know what they are.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1259,13 +1258,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-									How long does it take the transfer money with Cashero?
+										How long does it take the transfer money with Cashero?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Transferring money from your Cashero account to another user is done in an instant. When the user withdraws these funds to the bank account, this can take anywhere from 1-3 days to appear.
+											Transferring money from your Cashero account to another user is done in an instant. When the user withdraws these funds to the bank account, this can take anywhere from 1-3 days to appear.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1292,7 +1291,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected
+											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected
 										</h4>
 									</Typography>
 								</AccordionDetails>
