@@ -13,7 +13,7 @@ export const structuredData = blog => {
     datePublished: new Date(post.date).toLocaleString(),
     // description: post.excerpt.rendered,
     headline: post.title.rendered,
-    image: media.source_url,
+    image: media && media.source_url,
     mainEntityOfPage: websiteLink + blog.router.link,
     name: post.title.rendered,
     publisher: {
