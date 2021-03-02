@@ -8,7 +8,7 @@ import Ali from "../../assets/ali.svg";
 import Gen from "../../assets/gen.svg";
 import CardImg from "../../assets/CardImg.jpg";
 import Star from "../../assets/star.svg";
-import People from "../../assets/People.jpg";
+import Map from "../../assets/map.png";
 
 export function PeoplesSection() {
 	const [loadercondtion, setloadercondtion] = useState(1);
@@ -159,13 +159,13 @@ export function PeoplesSection() {
 										</div>
 									</div>
 								</div> */}
-								<img alt="People" className="img-fluid dB" src={People} />
-								<img alt="Map dot" className="img-fluid dN" src={Map_dot} />
+								<img alt="map" className="img-fluid" src={Map} />
+								{/* <img alt="Map dot" className="img-fluid dN" src={Map_dot} />
 								<img
 									className="img-fluid peoples-container dN"
 									src={Peoples}
 									alt="Peoples"
-								/>
+								/> */}
 							</div>
 						</div>
 						<div className="col-md-2"/>
