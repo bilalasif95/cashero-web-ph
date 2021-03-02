@@ -36,7 +36,7 @@ export function ReceivePayments() {
 					<div className="row">
 						<div className="col-md-6">
 							<div className="PersonalCont">
-								<h1>Instant Money Transfer - Send, Request And Receive Payments In A Flash</h1>
+								<h1>Instant Money Transfer - Send, Request and Receive Payments in a Flash</h1>
 								<p className="bannerPara">Pay and get paid, we make it way easier.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
@@ -72,7 +72,7 @@ export function ReceivePayments() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-								How It Works. It’s Simple.
+							How it Works. It’s Simple. 
 							</h3>
 						</div>
 					</div>

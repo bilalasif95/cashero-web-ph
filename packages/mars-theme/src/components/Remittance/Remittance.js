@@ -69,7 +69,7 @@ export function Remittance() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-								How It Works. It’s Simple.
+							How it Works. It’s Simple. 
 							</h3>
 						</div>
 					</div>

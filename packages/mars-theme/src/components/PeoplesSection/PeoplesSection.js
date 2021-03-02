@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Map_dot from "../../assets/Map_dot.svg";
-import Peoples from "../../assets/Peoples.svg";
+import Peoples from "../../assets/People.jpg";
 import Renee from "../../assets/renee.jpg";
 import Henri from "../../assets/henri.jpg";
 import Ali from "../../assets/ali.svg";
 import Gen from "../../assets/gen.svg";
 import CardImg from "../../assets/CardImg.jpg";
 import Star from "../../assets/star.svg";
-import People from "../../assets/People.png";
+import People from "../../assets/People.jpg";
 
 export function PeoplesSection() {
 	const [loadercondtion, setloadercondtion] = useState(1);
@@ -32,7 +32,7 @@ export function PeoplesSection() {
 			<div className="PeoplesCont">
 				<div className="container">
 					{/* <h3 className="PeoplesTitle mb-0">Too good to be true?</h3> */}
-					<h3 className="PeoplesTitle mb-0">Cashero Globalization</h3>
+					<h3 className="PeoplesTitle mb-0">Cashero Works Across the Globe</h3>
 					<h4 className="customerDetailtext">Here’s what our users have to say about us</h4>
 					<div className="row">
 						{/* <div className="col-md-5">

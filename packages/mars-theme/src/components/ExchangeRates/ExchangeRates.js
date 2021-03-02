@@ -620,11 +620,11 @@ export function ExchangeRates() {
             <ul className="PersonalCompanyList list-unstyled">
               <li>
                 <img src={ExArrow} alt="Exchange Arrow" />
-                Exchange in an instant
+                Exchange currencies in an instant
               </li>
               <li>
                 <img src={ExDollar} alt="Exchange Dollar" />
-                Switch between USD, GBP, EUR
+                Switch between USD, GBP, and EUR
               </li>
               {/* <li>
                 <img src={Dollarlist} alt="Dollar list" />
@@ -647,7 +647,7 @@ export function ExchangeRates() {
         <div className="getStarted">
           <div className="row">
             <div className="col-md-12">
-              <h3 className="getStartedTitle">How It Works. It’s Simple.</h3>
+              <h3 className="getStartedTitle">How it Works. It’s Simple.</h3>
             </div>
           </div>
           <div className="row justify-content-center">

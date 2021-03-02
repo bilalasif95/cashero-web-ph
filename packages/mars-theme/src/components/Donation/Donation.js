@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg"
-import SlideGroup from "../../assets/SlideGroup.svg";
+import SlideGroup from "../../assets/SlideGroup.png";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Draw from "../../assets/draw.svg"
 import donateDollar from "../../assets/donateDollar.svg";
@@ -36,7 +36,7 @@ export function Donation() {
 					<div className="row">
 						<div className="col-md-6">
 							<div className="PersonalCont">
-								<h1>Make An Impact, <span className="br-block"></span> Watch Your Money <span className="br-block"></span> Go Further </h1>
+								<h1>Make an Impact, <span className="br-block"></span> Watch Your Money <span className="br-block"></span> Go Further </h1>
 								<p className="bannerPara">Select a charity, donate, and they’ll receive every penny of your donations.
 								</p>
 								<TextfieldBanner />
@@ -59,7 +59,7 @@ export function Donation() {
 							<li><img alt="heart Dollar" src={heartDollar} />Discover new charities</li>
 							<li><img alt="donate Dollar" src={donateDollar} />Donate directly at any time</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
-							<li><img alt="Draw" src={Draw} />Donate your money at any time</li>
+							{/* <li><img alt="Draw" src={Draw} />Donate your money at any time</li> */}
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
@@ -70,7 +70,7 @@ export function Donation() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-								How It Works. It’s Simple.
+							How it Works. It’s Simple. 
 							</h3>
 						</div>
 					</div>

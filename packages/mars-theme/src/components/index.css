@@ -1586,7 +1586,8 @@ b {
     font-weight: 400;
     color: #363636;
     margin-bottom: 56px;
-    text-transform: capitalize; }
+    /* text-transform: capitalize; */
+  }
   .getStarted .GetStartedBox1:before {
     content: "1";
     position: absolute;
@@ -15662,7 +15663,7 @@ select:-webkit-autofill:focus {
     }
     .draw-text{
       color: #000 !important;
-      font-size: 14px;
+      font-size: 16px;
     }
     .draw-banner-text{
       color: #fff !important;

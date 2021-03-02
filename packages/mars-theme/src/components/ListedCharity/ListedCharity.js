@@ -57,7 +57,7 @@ export function ListedCharity() {
 							<li><img alt="heart Dollar" src={heartDollar} />Discover new charities</li>
 							<li><img alt="donate Dollar" src={donateDollar} />Donate directly</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
-							<li><img alt="Draw" src={Draw} />Donate your money at any time</li>
+							{/* <li><img alt="Draw" src={Draw} />Donate your money at any time</li> */}
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
@@ -68,7 +68,7 @@ export function ListedCharity() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-								How It Works. It’s Simple.
+							How it Works. It’s Simple. 
 							</h3>
 						</div>
 					</div>
