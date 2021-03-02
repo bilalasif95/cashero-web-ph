@@ -248,7 +248,7 @@ export function ExchangeRates() {
                 <ul className="PersonalList list-unstyled">
                   <li>
                     <img alt="Clock" src={Clock} />
-                    Open an account in minutes. Launching in May.
+                    Open an account in minutes. Launching in June.
                   </li>
                 </ul>
                 <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link link="/Giveaway"> Terms and conditions </Link> apply. </p>

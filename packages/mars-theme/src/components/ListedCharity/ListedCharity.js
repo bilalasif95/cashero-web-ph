@@ -40,7 +40,7 @@ export function ListedCharity() {
 								</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in May.</li>
+									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
 								</ul>
 							</div>
 						</div>

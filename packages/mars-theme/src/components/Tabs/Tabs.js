@@ -219,7 +219,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											May 2021.
+										June 2021.
 										</h4>
 									</Typography>
 								</AccordionDetails>

@@ -47,7 +47,7 @@ export function Giveaway() {
 
 							<div className="terms_titles">
 								<h3>WHEN DOES THE GIVEAWAY END?</h3>
-								<p>The Golden Ticket campaign is a prize draw that takes place every 3 days over the next 2 months, from the beginning of April 2021 to the end of May 2021. The first prize draw will be held on April 3rd and the last prize draw will be held on May 31st.</p>
+								<p>The Golden Ticket campaign is a prize draw that takes place every 3 days over the next 2 months, from the beginning of April 2021 to the end of June 2021. The first prize draw will be held on April 3rd and the last prize draw will be held on May 31st.</p>
 							</div>
 
 							<div className="terms_titles">
