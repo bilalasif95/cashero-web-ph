@@ -20,6 +20,7 @@ import { CurrencyAccounts } from "./CurrencyAccounts/CurrencyAccounts";
 import { ExchangeRates } from "./ExchangeRates/ExchangeRates";
 import { ReceivePayments } from "./ReceivePayments/ReceivePayments";
 import { Remittance } from "./Remittance/Remittance";
+import { Giveaway } from "./Giveaway/Giveaway";
 import { websiteLink } from "../config/config";
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -69,6 +70,7 @@ const Theme = ({ state }) => {
         <ExchangeRates when={data.isExchangeRates} />
         <ReceivePayments when={data.isReceivePayments} />
         <Remittance when={data.isRemittance} />
+        <Giveaway when={data.isGiveaway} />
         <Loading when={data.isFetching} />
         <HomePage when={data.isArchive} state={state} />
         <Post when={data.isPostType} />

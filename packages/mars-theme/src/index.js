@@ -103,6 +103,16 @@ const blogsHandler = {
   }
 }
 
+const giveawayHandler = {
+  pattern: "/giveaway/",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isGiveaway: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -144,6 +154,7 @@ const marsTheme = {
         libraries.source.handlers.push(remittanceHandler);
         libraries.source.handlers.push(exchangeratesHandler);
         libraries.source.handlers.push(receivepaymentsHandler);
+        libraries.source.handlers.push(giveawayHandler);
         libraries.source.handlers.push(blogsHandler);
       },
       toggleMobileMenu: ({ state }) => {

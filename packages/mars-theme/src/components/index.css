@@ -15622,6 +15622,50 @@ select:-webkit-autofill:focus {
     .Appbtn{
       background-color: #4285f4 !important
     }
+    /* Giveaway css */
+    .conditions-cont {
+      margin-top: 100px;
+    }
+    .conditions-cont p {
+      font-size: 16px;
+    }
+    .conditions-cont h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .conditions-cont h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 600;  }
+    .terms_titles {
+      margin: 40px 0px;
+  }
+  .condition-list {
+    padding-left: 40px;
+  }
+  .condition-list li {
+    color: #9ea0a5!important;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    margin-bottom: 1rem;
+  }
+  .custom-border{
+    border-bottom: 1px solid #d2d2d7;
+    margin: 50px 0px 0px 0px
+  }
+  @media (max-width: 540px) {
+    .conditions-cont h1 {
+      font-size: 27px;
+  }
+  .terms_titles {
+    margin: 20px 0px;
+}
+.conditions-cont h3 {
+  font-size: 18px;
+}
+  }
     @media(max-width: 475px){
       .Banner-list h2:nth-of-type(2){
         width: inherit;

@@ -63,7 +63,7 @@ export function HomePage(props) {
                 <p className="draw-text">
                   Get early access to the Cashero app and earn a chance to win
                   $1,000 every 3 days! <span className="br-block"></span>
-                  <Link link="/#"> Terms and conditions </Link> apply.
+                  <Link link="/Giveaway"> Terms and conditions </Link> apply.
                 </p>
               </div>
             </div>
