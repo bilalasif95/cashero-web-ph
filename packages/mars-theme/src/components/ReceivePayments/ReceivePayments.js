@@ -34,7 +34,7 @@ export function ReceivePayments() {
 			<div className="PesonalBanner">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-6">
+						<div className="col-md-7">
 							<div className="PersonalCont">
 								<h1>Instant Money Transfer - Send, Request and Receive Payments in a Flash</h1>
 								<p className="bannerPara">Pay and get paid, we make it way easier.</p>
@@ -45,7 +45,7 @@ export function ReceivePayments() {
 								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link link="/#"> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
-						<div className="col-md-6">
+						<div className="col-md-5">
 							<img alt="KuWu" className="img-fluid mx-auto d-block" src={KuWu} />
 						</div>
 					</div>

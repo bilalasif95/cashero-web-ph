@@ -3527,13 +3527,6 @@ button:focus {
 
 .PersonalList {
   margin: 44px 0px; }
-  .PersonalList li {
-    position: relative;
-    padding-left: 40px;
-    color: #fff !important; }
-    .PersonalList li img {
-      position: absolute;
-      left: 0; }
   .InputBox .MuiInputBase-input {
     padding: 0px 0px 4px;
     border: none;
@@ -3686,14 +3679,6 @@ button:focus {
 
 .PesonalBanner .selectCountry {
   width: 11.5%; }
-
-  .PersonalList li {
-    position: relative;
-    padding-left: 40px;
-    color: #fff !important; }
-    .PersonalList li img {
-      position: absolute;
-      left: 0; }
 
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
@@ -3862,14 +3847,6 @@ button:focus {
 
 .InterestBanner .selectCountry {
   width: 11.5%; }
-
-  .PersonalList li {
-    position: relative;
-    padding-left: 40px;
-    color: #fff !important; }
-    .PersonalList li img {
-      position: absolute;
-      left: 0; }
 
 .InputBox, .InputBox1, .InputBox2  {
   box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
@@ -4243,13 +4220,6 @@ button:focus {
 .PesonalBanner .selectCountry {
   width: 11.5%; }
 
-  .PersonalList li {
-    position: relative;
-    padding-left: 40px;
-    color: #fff !important; }
-    .PersonalList li img {
-      position: absolute;
-      left: 0; }
 
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
@@ -4906,13 +4876,7 @@ button:focus {
 
 .PesonalBanner .selectCountry {
   width: 11.5%; }
-  .PersonalList li {
-    position: relative;
-    padding-left: 40px;
-    color: #fff !important; }
-    .PersonalList li img {
-      position: absolute;
-      left: 0; }
+
   .InputBox .MuiInputBase-input {
     padding: 0px 0px 4px; }
 
@@ -5083,14 +5047,6 @@ button:focus {
 
 .InterestBanner .selectCountry {
   width: 10% !important; }
-
-  .PersonalList li {
-    position: relative;
-    padding-left: 40px;
-    color: #fff !important; }
-    .PersonalList li img {
-      position: absolute;
-      left: 0; }
 
   .InputBox1 .MuiInputBase-input {
     padding: 0px 0px 4px; }
@@ -5294,14 +5250,6 @@ button:focus {
 .PesonalBanner .selectCountry {
   width: 11.5%; }
 
-  .PersonalList li {
-    position: relative;
-    padding-left: 40px;
-    color: #fff !important; }
-    .PersonalList li img {
-      position: absolute;
-      left: 0; }
-
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }
 
@@ -5400,14 +5348,7 @@ button:focus {
 
 .PesonalBanner .selectCountry {
   width: 11.5%; }
-  
-  .PersonalList li {
-    position: relative;
-    padding-left: 40px;
-    color: #fff !important; }
-    .PersonalList li img {
-      position: absolute;
-      left: 0; }
+
 
 .InputBox .MuiFormLabel-root {
   color: #9ea0a5 !important; }

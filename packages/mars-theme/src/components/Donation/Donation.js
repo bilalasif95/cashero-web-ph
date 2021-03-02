@@ -34,7 +34,7 @@ export function Donation() {
 			<div className="PesonalBanner">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-6">
+						<div className="col-md-7">
 							<div className="PersonalCont">
 								<h1>Make an Impact, <span className="br-block"></span> Watch Your Money <span className="br-block"></span> Go Further </h1>
 								<p className="bannerPara">Select a charity, donate, and they’ll receive every penny of your donations.
@@ -46,7 +46,7 @@ export function Donation() {
 								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link link="/#"> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
-						<div className="col-md-6">
+						<div className="col-md-5">
 							<img alt="Slide Group" className="img-fluid mx-auto d-block" src={SlideGroup} />
 						</div>
 					</div>
