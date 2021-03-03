@@ -15,6 +15,7 @@ import { Companies } from "../Companies/Companies";
 import { OnlineSave } from "../OnlineSave/OnlineSave";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
+import { EasyCurrencyExchange } from "../EasyCurrencyExchange/EasyCurrencyExchange";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
@@ -642,6 +643,7 @@ export function ExchangeRates() {
           </div>
         </div>
         <OnlineSave />
+        <EasyCurrencyExchange />
       </div>
       <div className="container">
         <div className="getStarted">

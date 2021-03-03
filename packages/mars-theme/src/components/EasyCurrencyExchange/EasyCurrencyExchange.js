@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import WorldMap from "../../assets/Worldmap.svg";
+import Exchange from "../../assets/exchange.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 
-export function Sendpayments() {
+export function EasyCurrencyExchange() {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -13,24 +13,17 @@ export function Sendpayments() {
 		setAppModal(false)
 	};
 	return (
-		<div className="MoneyRequest sm-mt-30">
+		<div className="MoneyRequest">
 			<div className="row align-items-center">
 				<div className="col-md-6">
-					<img
-						className="img-fluid mx-auto d-block"
-						alt="World Map"
-						src={WorldMap}
-					/>
-				</div>
-				<div className="col-md-5 sm-mt-30">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								The Cashero Way: Quickly Send Money Around the World Online
+							Your One Tap Hub for <span className="br-block"></span> Easy Currency Exchange
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
-							<p>Not all heroes wear capes, some go to work every day to take care of their loved ones. We know this. We’re by your side each step of the way ensuring your hard-earned money arrives safely and quickly.</p>
+							<p>By using Cashero, you can hold your money in one place, transfer money instantly and save on exchange fees. We give you the best possible rate so you can say goodbye to those excessive bank fees. </p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
@@ -39,6 +32,13 @@ export function Sendpayments() {
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 					</div>
+				</div>
+				<div className="col-md-6">
+					<img
+						className="img-fluid mx-auto d-block"
+						alt="exchange"
+						src={Exchange}
+					/>
 				</div>
 			</div>
 		</div>

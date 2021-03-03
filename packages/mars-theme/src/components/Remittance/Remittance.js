@@ -13,12 +13,13 @@ import { Sendpayments } from "../Sendpayments/Sendpayments";
 import GlobeDollar from "../../assets/GlobeDollar.svg";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
-import Casher0map from "../../assets/Casher0map.svg";
+import Casher0map from "../../assets/Casher0map.png";
 import Done from "../../assets/done.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import StepsDollar from "../../assets/StepsDollar.svg";
 import Link from "../link";
+import {Securepayments} from "../Securepayments/Securepayments";
 
 export function Remittance() {
 	const [appModal, setAppModal] = useState(false);
@@ -35,7 +36,7 @@ export function Remittance() {
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>Transfer Money Abroad, Stress Free with Cashero</h1>
+								<h1>Transfer Money <span className="br-block"></span> Abroad, Stress Free <span className="br-block"></span> with Cashero</h1>
 								<p className="bannerPara">Global transfers that stretch your money further</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
@@ -65,6 +66,7 @@ export function Remittance() {
 			</div>
 			<div className="container">
 				<Sendpayments />
+				<Securepayments />
 				<div className="getStarted">
 					<div className="row">
 						<div className="col-md-12">

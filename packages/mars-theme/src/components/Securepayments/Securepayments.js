@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import WorldMap from "../../assets/Worldmap.svg";
+import Globe from "../../assets/globe.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 
-export function Sendpayments() {
+export function Securepayments() {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -13,24 +13,18 @@ export function Sendpayments() {
 		setAppModal(false)
 	};
 	return (
-		<div className="MoneyRequest sm-mt-30">
+		<div className="MoneyRequest">
 			<div className="row align-items-center">
 				<div className="col-md-6">
-					<img
-						className="img-fluid mx-auto d-block"
-						alt="World Map"
-						src={WorldMap}
-					/>
-				</div>
-				<div className="col-md-5 sm-mt-30">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								The Cashero Way: Quickly Send Money Around the World Online
+							Secure Global Money Transfers
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
-							<p>Not all heroes wear capes, some go to work every day to take care of their loved ones. We know this. We’re by your side each step of the way ensuring your hard-earned money arrives safely and quickly.</p>
+							<p>Cashero’s global money transfer service gives you a quick and secure way to send money abroad. We make sending money easy-peasy with no hidden fees. </p>
+							<p>Your friends and family across the world will thank you, but no need to thank us, that’s what we’re here for.</p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
@@ -39,6 +33,13 @@ export function Sendpayments() {
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 					</div>
+				</div>
+				<div className="col-md-6">
+					<img
+						className="img-fluid mx-auto d-block"
+						alt="Globe"
+						src={Globe}
+					/>
 				</div>
 			</div>
 		</div>

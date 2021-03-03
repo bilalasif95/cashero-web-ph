@@ -47,7 +47,7 @@ export function Donation() {
 							</div>
 						</div>
 						<div className="col-md-5">
-							<img alt="Slide Group" className="img-fluid mx-auto d-block" src={SlideGroup} />
+							<img alt="Slide Group" className="img-fluid mx-auto d-block sm-mt-30" src={SlideGroup} />
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@ export function Donation() {
 				</div>
 				<StartDonation />
 				<FindCharity />
-				<div className="getStarted">
+				<div className="getStarted sm-pt-0">
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">

@@ -230,12 +230,6 @@ body{
   font-weight: 400;
   margin-bottom: 25px; }
 
-@media (max-width: 540px) {
-  .CurrencyConversion {
-    padding: 40px 0px !important; }
-  .CurrencyConversionCont {
-    padding-bottom: 30px;
-    margin-bottom: 30px; } }
 
 body {
   background-color: #fff !important;
@@ -406,7 +400,7 @@ h4 {
   margin: -6rem auto 0px;
 }
   .CurrencyConversion{
-    margin-top: 80px;
+    margin-top: 40px;
   }
   .circle-cont{
     margin-top: 30px;
@@ -1038,6 +1032,8 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
       width: 100%; } }
 
 @media (max-width: 540px) {
+  .sm-mb-0 {
+    margin-bottom: 0px !important; }
   .PhoneHand{
     margin-top: 30px;
   }
@@ -1328,9 +1324,7 @@ b {
 
 @media (max-width: 540px) {
   .MoneyRequest {
-    padding: 40px 0px; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; } }
+    padding: 40px 0px; }}
 
 .Charity .row {
   align-items: center; }
@@ -1475,9 +1469,7 @@ b {
 
 @media (max-width: 540px) {
   .CurrencyConversion {
-    padding: 0px 0px 10px !important; }
-  .CurrencyConversionCont {
-    padding-bottom: 30px; }
+    padding: 40px 0px 10px !important; }
     .CurrencyConversionCont p {
       text-align: center; } }
 
@@ -1703,10 +1695,6 @@ b {
     padding-top: 0px !important; }
   .MoneyRequest {
     padding: 0px !important; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; }
-    .MoneyRequestCont p {
-      text-align: center; }
   .map-pic {
     position: relative; }
     .map-pic div {
@@ -1841,11 +1829,7 @@ b {
 
 @media (max-width: 540px) {
   .MoneyRequest {
-    padding: 40px 0px; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; }
-    .MoneyRequestCont p {
-      text-align: center; } }
+    padding: 40px 0px; }}
 
 .circle-cont {
   width: 100%;
@@ -1928,14 +1912,6 @@ b {
 .cardText {
   font-size: 16px;
   margin-top: 27px; }
-
-@media (max-width: 540px) {
-  .MoneyRequest {
-    padding: 40px 0px; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; }
-    .MoneyRequestCont p {
-      text-align: center; } }
 
 .circle-cont {
   width: 100%;
@@ -2129,10 +2105,6 @@ b {
   margin-top: 15px; }
 
 @media (max-width: 540px) {
-  .CurrencyConversion {
-    padding: 0px 0px 10px !important; }
-  .CurrencyConversionCont {
-    padding-bottom: 30px; }
     .CurrencyConversionCont p {
       text-align: center; } }
 
@@ -2177,11 +2149,7 @@ b {
   .OpeningSection {
     padding: 40px 0px; }
   .OpeningSectionCont {
-    margin-top: 40px; }
-  .CurrencyConversion {
-    padding: 40px 0px; }
-  .CurrencyConversionCont {
-    padding-bottom: 30px; } }
+    margin-top: 40px; }}
 
 .cardList li {
   display: flex;
@@ -2502,9 +2470,7 @@ b {
   .MultiCurrency {
     padding: 0px 0px 0px 0px; }
   .MoneyRequest {
-    padding: 40px 0px; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; } }
+    padding: 40px 0px; } }
 
 .main-flags {
   visibility: hidden; }
@@ -2575,9 +2541,7 @@ b {
   .MultiCurrency {
     padding: 0px 0px 0px 0px; }
   .MoneyRequest {
-    padding: 40px 0px; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; } }
+    padding: 40px 0px; }}
 
 .main-flags {
   visibility: hidden; }
@@ -2658,8 +2622,6 @@ b {
 @media (max-width: 540px) {
   .MoneyRequest {
     padding: 40px 0px; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; }
     .MoneyRequestCont p {
       text-align: center; } }
 
@@ -2747,11 +2709,7 @@ b {
   .CasheroSignup {
     padding: 0px 0px 40px 0px; }
   .CasheroSignupCont {
-    margin-top: 40px; }
-  .CurrencyConversion {
-    padding: 40px 0px; }
-  .CurrencyConversionCont {
-    padding-bottom: 30px; } }
+    margin-top: 40px; } }
 
 .SignUp {
   background-image: url("https://i.imgur.com/9NfMzN2.jpg");
@@ -3825,11 +3783,7 @@ button:focus {
     .WhoSectionCont h1 {
       font-size: 46px !important;
       text-align: center;
-      line-height: 56px; }
-  .CurrencyConversion {
-    padding: 40px 0px; }
-  .CurrencyConversionCont {
-    padding-bottom: 30px; } }
+      line-height: 56px; }}
 
 .PesonalBanner .numberSelection {
   display: flex;
@@ -3893,7 +3847,7 @@ button:focus {
 .PersonalCompanyList2 {
   display: flex;
   justify-content: space-between;
-  padding: 45px 0px; }
+  padding: 40px 0px; }
   .PersonalCompanyList2 li {
     font-size: 16px;
     color: #9ea0a5 !important;
@@ -4985,9 +4939,7 @@ button:focus {
   .MultiCurrency {
     padding: 0px 0px 0px 0px; }
   .MoneyRequest {
-    padding: 40px 0px; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; } }
+    padding: 40px 0px; }}
 
 .main-flags {
   visibility: hidden; }
@@ -5449,9 +5401,7 @@ button:focus {
 
 @media (max-width: 540px) {
   .MoneyRequest {
-    padding: 40px 0px; }
-  .MoneyRequestCont {
-    margin-bottom: 40px; } }
+    padding: 40px 0px; } }
 
 .Thankyou {
   margin-top: 100px; }

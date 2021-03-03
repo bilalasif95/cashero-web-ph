@@ -68,7 +68,7 @@ export function ReceivePayments() {
 			<div className="container">
 				<LocalPayments />
 				<GetPaid />
-				<div className="getStarted">
+				<div className="getStarted mt-0">
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">

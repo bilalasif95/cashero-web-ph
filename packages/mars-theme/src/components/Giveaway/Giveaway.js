@@ -16,7 +16,7 @@ export function Giveaway() {
 								<p>Welcome to Cashero’s Golden Ticket Giveaway! This isn’t another t-shirt or water bottle giveaway gimmick. We’re giving you early access to Cashero and the chance to win actual cash. All you have to do is spread the word about Cashero and you will have the chance to win $1000 every 3 days! How, you ask? Well let’s go through the rules.</p>
 							</div>
 
-							
+
 
 							<div className="terms_titles">
 								<h3>HOW CAN I JOIN THE GIVEAWAY?</h3>

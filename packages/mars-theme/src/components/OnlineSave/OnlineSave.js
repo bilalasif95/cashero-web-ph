@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ExchangeCoins from "../../assets/exchangeCoin.svg";
+import ExchangeCoins from "../../assets/exchangeCoin.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
@@ -23,7 +23,7 @@ export function OnlineSave() {
 						<div>
 							<Fade triggerOnce direction="up" delay={0}>
 								<h1 className="oneAppTitle">
-								Transfer Money Instantly <span className="br-block"></span> and Save on Exchange Fees
+								Transfer Money Instantly <span className="br-block"></span> and Save on Exchange <span className="br-block"></span> Fees
 									</h1>
 							</Fade>
 							<Fade triggerOnce direction="up" delay={300}>
