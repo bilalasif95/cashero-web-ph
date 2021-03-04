@@ -3591,8 +3591,6 @@ button:focus {
       padding: 20px 20px; }
     .BusinessBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
   .customText {
     margin-bottom: -7px; }
   .FinalTextBox {
@@ -3708,8 +3706,6 @@ button:focus {
       padding: 20px 20px; }
     .PesonalBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
   .customText {
     margin-bottom: -7px; }
   .FinalTextBox {
@@ -4068,8 +4064,6 @@ button:focus {
       margin-top: 0px;
       text-align: center;
       line-height: 45px; }
-    .PesonalBanner p {
-      text-align: center; }
     .PesonalBanner .numberSelection {
       display: none; }
     .PesonalBanner .PersonalList {
@@ -4078,8 +4072,6 @@ button:focus {
       padding: 20px 20px; }
     .PesonalBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
   .customText {
     margin-bottom: -7px; }
   .FinalTextBox {
@@ -4243,8 +4235,6 @@ button:focus {
       margin-top: 0px;
       text-align: center;
       line-height: 45px; }
-    .PesonalBanner p {
-      text-align: center; }
     .PesonalBanner .numberSelection {
       display: none; }
     .PesonalBanner .PersonalList {
@@ -4253,8 +4243,6 @@ button:focus {
       padding: 20px 20px; }
     .PesonalBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
   .customText {
     margin-bottom: -7px; }
   .FinalTextBox {
@@ -4391,6 +4379,9 @@ button:focus {
 
 .InterestBox {
   margin-top: 41px; }
+  .interest-box-cont{
+    border-bottom: 1px dashed #9ea0a5!important;
+  }
 
 .customText {
   color: #9ea0a5 !important;
@@ -4479,8 +4470,6 @@ button:focus {
       padding: 20px 20px; }
     .ExchangeBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
   .customText {
     margin-bottom: -7px; }
   .FinalTextBox {
@@ -4890,8 +4879,6 @@ button:focus {
       margin-top: 0px;
       text-align: center;
       line-height: 45px; }
-    .PesonalBanner p {
-      text-align: center; }
     .PesonalBanner .numberSelection {
       display: none; }
     .PesonalBanner .PersonalList {
@@ -4900,10 +4887,8 @@ button:focus {
       padding: 20px 20px; }
     .PesonalBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
   .customText {
-    margin-bottom: -7px; }
+    text-align: left !important; }
   .FinalTextBox {
     padding: 20px 0px; }
   .PersonalCompanyList {
@@ -5041,11 +5026,11 @@ button:focus {
   margin-top: 41px; }
   .InterestBox h1 {
     color: #363636;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 500;
     font-style: normal;
     letter-spacing: normal;
-    line-height: 30px;
+    line-height: 35px;
     margin-bottom: 0px;
     text-transform: uppercase;
     display: flex;
@@ -5056,6 +5041,13 @@ button:focus {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
+      .interest-arrow {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        right: 50%;
+        left: 31%;
+      }
 
 .customText {
   color: #9ea0a5 !important;
@@ -5119,8 +5111,6 @@ button:focus {
       margin-top: 0px;
       text-align: center;
       line-height: 45px; }
-    .PesonalBanner p {
-      text-align: center; }
     .PesonalBanner .numberSelection {
       display: none; }
     .PesonalBanner .PersonalList {
@@ -5133,10 +5123,6 @@ button:focus {
       padding: 20px 20px; }
     .PesonalBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
-  .customText {
-    margin-bottom: -7px; }
   .FinalTextBox {
     padding: 20px 0px; }
   .PersonalCompanyList {
@@ -5257,8 +5243,6 @@ button:focus {
       margin-top: 0px;
       text-align: center;
       line-height: 45px; }
-    .PesonalBanner p {
-      text-align: center; }
     .PesonalBanner .numberSelection {
       display: none; }
     .PesonalBanner .PersonalList {
@@ -5267,10 +5251,6 @@ button:focus {
       padding: 20px 20px; }
     .PesonalBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
-  .customText {
-    margin-bottom: -7px; }
   .FinalTextBox {
     padding: 20px 0px; }
   .PersonalCompanyList {
@@ -5358,8 +5338,6 @@ button:focus {
       margin-top: 0px;
       text-align: center;
       line-height: 45px; }
-    .PesonalBanner p {
-      text-align: center; }
     .PesonalBanner .numberSelection {
       display: none; }
     .PesonalBanner .PersonalList {
@@ -5368,10 +5346,6 @@ button:focus {
       padding: 20px 20px; }
     .PesonalBanner .InterestBox h1 {
       font-size: 17px; }
-  .TotalText p {
-    margin-bottom: 10px; }
-  .customText {
-    margin-bottom: -7px; }
   .FinalTextBox {
     padding: 20px 0px; }
   .PersonalCompanyList {

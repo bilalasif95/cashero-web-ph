@@ -107,10 +107,10 @@ export function Personal() {
 												</div>
 											</div>
 											<div className="col-2">
-												<img src={Arrow} alt="Arrow" />
+												<img className="interest-arrow" src={Arrow} alt="Arrow" />
 											</div>
 											<div className="col-6">
-												<div className="InterestBox mt-0 TotalText">
+												<div className="InterestBox mt-0 TotalText interest-box-cont">
 													<p>Total Interest</p>
 													<h1>$<NumericLabel params={{
 														'shortFormat': true,
