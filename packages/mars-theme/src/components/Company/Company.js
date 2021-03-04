@@ -3,7 +3,7 @@ import { SignupSection } from "../signupSection/signupSection";
 import { Countup } from "../Countup/Countup";
 import { WhoSection } from "../WhoSection/WhoSection";
 import CasheroImg from "../../assets/CasheroImg.jpg";
-import YearsImg from "../../assets/YearsImg.jpg";
+import YearsImg from "../../assets/YearsImg.png";
 
 export function Company() {
 	return (
