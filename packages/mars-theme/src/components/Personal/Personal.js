@@ -177,7 +177,7 @@ export function Personal() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="High Dollar" src={HighDollar} />Inflation beating, 5% APY</li>
+							<li><img alt="High Dollar" src={HighDollar} />Inflation-beating 5% APY</li>
 							<li><img alt="list Graph" src={listGraph} />Interest paid out daily</li>
 							{/* <li><img alt="List Phone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
 							<li><img alt="Draw" src={Draw} />Deposit or withdraw your money at any time</li>
