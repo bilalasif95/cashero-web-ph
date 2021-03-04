@@ -4345,14 +4345,14 @@ button:focus {
       left: 0; }
 
 .exchangeAmount {
-  position: relative;
+  position: absolute;
   background: #f8f8f8;
   border-radius: 50px;
   -webkit-box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.19);
   box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, 0.19);
-  width: 100%;
-  margin: -55px 0px 25px;
+  width: 75%;
+  margin: -53px auto 0;
   text-align: center;
   padding: 10px; }
   .exchangeAmount p {

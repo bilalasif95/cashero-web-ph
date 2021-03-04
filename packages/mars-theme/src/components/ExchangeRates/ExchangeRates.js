@@ -703,7 +703,7 @@ export function ExchangeRates() {
       </div>
       <PeoplesSection />
       <div className="container">
-        <Companies />
+        {/* <Companies /> */}
         <QuestionTabs activeTab={3} />
       </div>
       <SignupSection />
