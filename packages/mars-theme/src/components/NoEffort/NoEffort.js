@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import coinsUp from "../../assets/coinsUp.png";
+import CoinsUp from "../../assets/coinsUp.png";
 import Arrow from "../../assets/arrowLink.svg";
 import { Fade } from "react-awesome-reveal";
 
@@ -17,14 +17,14 @@ export function NoEffort() {
 			<div className="container">
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
-						<img className="img-fluid mx-auto d-block" alt="coins Up" src={coinsUp} />
+						<img className="img-fluid mx-auto d-block" alt="coins Up" src={CoinsUp} />
 					</div>
 					<div className="col-md-6">
 						<div className="oneAppCont">
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle">
 									Earn the Cashero Way
-									</h3>
+								</h3>
 								<p className="HighInterestText">You want to earn interest on your money, right? Passive income, dinero, or Cashero. We understand. You've come to the right place.
 									</p>
 								<p className="HighInterestText">If your money is sitting in a bank account, chances are you’re losing money. High yield savings account interest rates should beat inflation and make you money. Unfortunately, most don’t.</p>
