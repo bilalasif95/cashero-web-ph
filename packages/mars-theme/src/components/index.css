@@ -21,7 +21,7 @@ body{
   margin-top: 100px;
   padding: 37px 0px 37px 0px; }
   .banner .bannerCont .bannerText {
-    font-size: 24px;
+    font-size: 18px;
     color: #9ea0a5;
     font-weight: 400;
     line-height: 1.4; }
@@ -89,9 +89,13 @@ body{
             outline: none; }
     .banner .numberSelection .inputNum {
       margin: 0 0 0 1rem;
-      border-bottom: 1px solid #dadee7; }
+       }
       .banner .numberSelection .inputNum input {
         border: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #dadee7;
         font-size: 16px;
         height: 46px;
         color: #363636; }
@@ -798,7 +802,7 @@ p {
     .ModalPhone .numberSelection .selectCountry {
       width: 6%; }
     .ModalPhone .numberSelection .inputNum {
-      width: 28%; }
+      width: 20%; }
 
 .HeaderList li a {
   padding: 0px !important; }
@@ -1243,7 +1247,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     .dropdown-menu input:focus {
       outline: none; }
   .dropdown-menu .country-list {
-    height: 285px;
+    height: 180px;
     overflow-x: hidden;
     overflow-y: auto; }
     .dropdown-menu .country-list .country-item {
@@ -1782,14 +1786,29 @@ b {
 .oneApp .row {
   align-items: center; }
 
-.CharityList li {
-  color: #9ea0a5 !important;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.01em;
-  margin-bottom: 1rem; }
+  .CharityList li {
+    color: #9ea0a5!important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 35px;
+} 
+.CharityList li img{
+  position: absolute;
+  left: 0;
+}
+.giveaway-link {
+  color: #0667eb !important;
+  border-bottom: 1px solid #0667eb;
+}
+.giveaway-link1 {
+  color: #00D2FF !important;
+  border-bottom: 1px solid #00D2FF;
+}
 
 @media (max-width: 540px) {
   .CharityList {
@@ -4539,11 +4558,13 @@ button:focus {
     outline: none; }
 
 .NofeeList {
-  margin-top: 50px; }
+  margin-top: 30px; }
   .NofeeList li {
     color: #9ea0a5;
     position: relative;
-    padding-left: 20px; }
+    display: flex;
+    align-items: center;
+    padding-left: 15px; }
     .NofeeList li:before {
       position: absolute;
       content: '';
@@ -4570,7 +4591,7 @@ button:focus {
 
 .ConvertBtn {
   background: #0667eb !important;
-  margin: 37px 0px 0px;
+  margin: 20px 0px 0px;
   border-radius: 50px !important;
   padding: 12px 30px;
   width: 100%; }
@@ -15518,35 +15539,35 @@ select:-webkit-autofill:focus {
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     .Banner-list h2 img{
       position: absolute;
       left: 0;
-      top: 4px;
+      top: 0px;
     }
     .Banner-list h2:nth-of-type(2){
       width: 488px;
     }
     .draw-text{
-      color: #000 !important;
+      color: #9ea0a5 !important;
       font-size: 16px;
     }
     .draw-banner-text{
       color: #fff !important;
       font-size: 16px;
     }
-    .draw-banner-text a{
+    /* .draw-banner-text a{
       color: #fff !important;
-    }
+    } */
     .numberSelection .selectCountry .dropdown-menu.show{
       background-color: #fff !important;
     }
     .Appbtn.disabled{
-      background-color: #4285f4 !important;
+      background-color: #0667eb !important;
     }
     .Appbtn{
-      background-color: #4285f4 !important
+      background-color: #0667eb !important
     }
     /* Giveaway css */
     .conditions-cont {
@@ -15580,6 +15601,20 @@ select:-webkit-autofill:focus {
   .custom-border{
     border-bottom: 1px solid #d2d2d7;
     margin: 50px 0px 0px 0px
+  }
+  .bannerCont .dropdown-toggle:after{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #a0a2a7;
+  }
+  .SignUp input::placeholder, .PersonalCont input::placeholder  {
+    color: #fff !important;
+  }
+  .PersonalCont .Appbtn, .SignUp .Appbtn {
+    background-color: #fff !important;
+    color: #0667eb !important;
   }
   @media (max-width: 540px) {
     .customerDetailtext {

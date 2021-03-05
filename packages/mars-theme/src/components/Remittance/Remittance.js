@@ -36,13 +36,13 @@ export function Remittance() {
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>Transfer Money <span className="br-block"></span> Abroad, Stress Free <span className="br-block"></span> with Cashero</h1>
-								<p className="bannerPara">Global transfers that stretch your money further</p>
+								<h1>Transfer Money <span className="br-block"></span> Abroad </h1>
+								<p className="bannerPara">Stress Free with Cashero.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link link="/Giveaway"> Terms and conditions </Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -112,7 +112,7 @@ export function Remittance() {
 							<div className="MultistepsCont">
 								<p>Ready to send money hassle-free? Cashero’s global payment solution is here for you and for what matters most.</p>
 								<button className="LinkBtn" onClick={appModalOpen}>
-									Start Sending   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+								Get Early Access   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

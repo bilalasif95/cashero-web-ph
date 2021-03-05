@@ -4,7 +4,7 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
 const personalHandler = {
-  pattern: "/personal/",
+  pattern: "/high-yield-savings-account/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -44,7 +44,7 @@ const donationHandler = {
 }
 
 const listedcharityHandler = {
-  pattern: "/listed-charity/",
+  pattern: "/become-listed-charity/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -54,7 +54,7 @@ const listedcharityHandler = {
 }
 
 const currencyaccountsHandler = {
-  pattern: "/currency-accounts/",
+  pattern: "/multi-currency-savings-account/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -64,7 +64,7 @@ const currencyaccountsHandler = {
 }
 
 const exchangeratesHandler = {
-  pattern: "/exchange-rates/",
+  pattern: "/online-currency-exchange/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -74,7 +74,7 @@ const exchangeratesHandler = {
 }
 
 const receivepaymentsHandler = {
-  pattern: "/receive-payments/",
+  pattern: "/instant-money-transfer/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -84,7 +84,7 @@ const receivepaymentsHandler = {
 }
 
 const remittanceHandler = {
-  pattern: "/remittance/",
+  pattern: "/transfer-money-abroad/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",

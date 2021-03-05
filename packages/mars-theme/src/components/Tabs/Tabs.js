@@ -138,16 +138,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero is a blockchain-based
-											wallet payment ecosystem.
-											Cashero provides a secure
-											platform for high-yield savings,
-											multi-currency wallets and
-											instant, fee-free internal and
-											cross border payments. Cashero
-											is available in 130 including
-											all of the G20 countries except
-											Russia.
+										Cashero is an all-in-one platform for high-yield savings, multi-currency wallets, and instant, fee-free internal and cross-border payments. 
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -412,7 +403,7 @@ export function QuestionTabs(props) {
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/personal/" &&
+							{path === "/high-yield-savings-account/" &&
 								<Accordion expanded={expanded === 'panel6'} onChange={accordionhandleChange('panel6')}>
 									<AccordionSummary
 										expandIcon={expanded === 'panel6' ? <RemoveCircleOutlineIcon /> : <ControlPointIcon />}
@@ -491,13 +482,12 @@ export function QuestionTabs(props) {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										How does the multi-currency account
-										work?
+									How does the multi-currency account work?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">All Cashero accounts are built with the option to hold money in United States dollars (USD), British pounds (GBP) or Euros (EUR). All you have to do is download the app to your smartphone, choose which currency you want to hold (USD, GBP, or EUR) and add money in your local currency. Your funds will be automatically converted into the currency of your choice, and voilà, your multi-currency account is loaded.</h4>
+										<h4 className="FaqText">All Cashero accounts are built with the option to hold money in United States dollars (USD), British pound sterling (GBP), or Euros (EUR). All you have to do is download the app to your smartphone, choose which currency you want to hold (USD, GBP, or EUR), and add money in your local currency. Your funds will be automatically converted into the currency of your choice, and voilà, your multi-currency account is loaded. </h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -517,32 +507,13 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										Can I open a multi-currency account
-										in my country?
+									Can I open a multi-currency account in my country?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero is available in all
-											countries except: Afghanistan,
-											Angola,Belarus, Bosnia &
-											Herzegovina, Central African
-											Republic, Congo (DRC), Cote
-											d’Ivoire (Ivory Coast), Cuba,
-											Ecuador, Eritrea, Ethiopia,
-											Guinea-Bissau, Guyana, Haiti,
-											Iran, Iraq, Kosovo, Laos,
-											Lebanon, Liberia, Libya,
-											Macedonia, Myanmar, Nigeria,
-											North-Korea, Papua NG, Russia,
-											Serbia, Somalia, Sudan, Syria,
-											Turkmenistan, Ukraine,
-											Uzbekistan, Vanuatu, Venezuela,
-											Yemen, Zimbabwe and Connecticut,
-											Hawaii, New York, New Hampshire,
-											Texas, Vermont, Virginia in the
-											United States.
+										Cashero is available in all countries except Afghanistan, Albania, Angola, The Bahamas, Barbados, Belarus, Bosnia & Herzegovina, Botswana, Cambodia, Central African Republic, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Ecuador, Eritrea, Ethiopia, Ghana, Guinea-Bissau, Guyana, Haiti, Iceland, Iran, Iraq, Jamaica, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Mauritius, Mongolia, Myanmar, Nicaragua, Nigeria, North-Korea, Pakistan, Panama, Papua NG, Russia, Serbia, Somalia, Sudan, Syria, Turkmenistan, Uganda, Ukraine, Uzbekistan, Vanuatu, Venezuela, Yemen, and Zimbabwe. 
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -563,8 +534,7 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										How much does it cost to get a
-										Cashero multi-currency account?
+									How much does it cost to get a Cashero multi-currency account?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -589,26 +559,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										How can I protect my money against
-										currency fluctuations?
+									How can I protect my money against currency fluctuations?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero takes pride in giving
-											its users the ability to protect
-											their money from currency
-											volatility. You can load your
-											Cashero account with your local
-											currency and convert it to
-											either USD, GBP or EUR. Doing
-											this can give you the
-											opportunity to potentially
-											decrease the risk of your money
-											losing purchasing power as it is
-											being secured a more stable
-											currency.
+										Cashero takes pride in giving its users the ability to protect their money from currency volatility. You can load your Cashero account with your local currency and convert it to either USD, GBP, or EUR. Doing this can give you the opportunity to potentially decrease the risk of your money-losing purchasing power as it is being secured a more stable currency.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -629,25 +586,18 @@ export function QuestionTabs(props) {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										Is my money safe?
+									Is my money safe?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected
-											using multi-party computation
-											(MPC) and hardware isolation
-											with Intel SGX enclaves. It
-											sounds complex and it is, on
-											purpose. These security layers
-											ensure your money is safe and
-											protected.
+										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.
 										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/currency-accounts/" &&
+							{path === "/multi-currency-savings-account/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -669,18 +619,18 @@ export function QuestionTabs(props) {
 									</AccordionSummary>
 									<AccordionDetails>
 										<div className="expandTypo">
-											<h2 className="blackhead">Multi Currency Savings Account – Must-Know Details</h2>
-											<p>There’s been a lot written lately about multi currency savings accounts and their benefits for individuals and businesses alike. But is it really an option worth considering? What are the advantages of creating a multi-currency savings account? What is there to look out for, and is there a catch? How can you make the most out of it? </p>
+											<h2 className="blackhead">Multi-Currency Savings Account – Must-Know Details </h2>
+											<p>There’s been a lot written lately about multi-currency savings accounts and their benefits for individuals and businesses alike. But is it really an option worth considering? What are the advantages of creating a multi-currency savings account? What is there to look out for, and is there a catch? How can you make the most out of it?  </p>
 											<h2 className="blackhead">What is a multi-currency savings account?</h2>
-											<p>A multi-currency savings account is a relatively new type of a savings account that enables you to hold multiple currencies in a single account. In other words, you can receive or send money in different currencies without having to go through an exchange process between the currencies involved. For example, you may receive US dollars, but pay in Euros using the funds available in a single account. Most of the time, this is done via:</p>
+											<p>A multi-currency savings account is a relatively new type of savings account that enables you to hold multiple currencies in a single account. In other words, you can receive or send money in different currencies without having to go through an exchange process between the currencies involved. For example, you may receive US dollars but pay in Euros using the funds available in a single account. Most of the time, this is done via:</p>
 											<p>(1) Wire transfer</p>
 											<p>ACH (Automated Clearing House) or electronic payments</p>
 											<p>(3) Debit card</p>
 											<p>Multi-currency savings accounts come in three distinct forms: (1) certificates of deposits (CD), (2) money market accounts (MMA), and direct deposit accounts (DDA). Depending on the multi-currency account you open, you may be allowed to save in a foreign currency or use it for your daily transactions. This means that you can use one to send and receive funds from abroad, skipping the tedious paperwork or currency conversions. That's why a multi-currency account is ideal for travelers that often cross borders, as well as businesses working with international clients. Some exceptions do apply, which are highlighted below.</p>
 											<h2 className="blackhead">How many currencies can you hold in one account?</h2>
-											<p>This depends on the financial institution with which you decide to open a multi-currency savings account. Some institutions, for example, enable you to hold up to 7 or even 10 major currencies in a single account, however it’s important to read the fine print. Cashero allows users to hold funds in EUR, USD and GBP all in one wallet, without any hidden fees or restrictions.</p>
+											<p>This depends on the financial institution with which you decide to open a multi-currency savings account. Some institutions, for example, enable you to hold up to 7 or even 10 major currencies in a single account, however, it’s important to read the fine print. Cashero allows users to hold funds in EUR, USD, and GBP all in one wallet, without any hidden fees or restrictions.</p>
 											<h3 className="blackhead">What do I need to know about a multi-currency account?</h3>
-											<p>Multi-currency savings accounts enjoy interest rates above the ones offered by the majority of financial institutions out there. However, details like minimum balance requirements should always be clarified beforehand. Furthermore, according to experts, multi-currency accounts charge higher fees than some other types of accounts. These may include fees on withdrawals from ATMs and transaction fees. Some banks charge account management fees, usually on a 12-month basis. As for the per annum interest rates, they are generally announced in advance for the quarter for each currency, so it's good to be prepared. With Cashero, there are no management fees, so you get to keep every cent of the money you make.</p>
+											<p>Multi-currency savings accounts enjoy interest rates above the ones offered by the majority of financial institutions out there. However, details like minimum balance requirements should always be clarified beforehand. Furthermore, according to experts, multi-currency accounts charge higher fees than some other types of accounts. These may include fees on withdrawals from ATMs and transaction fees. Some banks charge account management fees, usually on a 12-month basis. As for the per annum interest rates, they are generally announced in advance for the quarter for each currency, so it's good to be prepared. With Cashero, there are no management fees, so you get to keep every cent of the money you make. </p>
 											<h2 className="blackhead">Advantages of multi-currency accounts</h2>
 											<p>Besides potentially favorable foreign exchange rates, opening a multi-currency savings account can help protect your money from local disturbances to exchange rate fluctuations. This in turn, reduces the risk of potential threats to corporate or personal wealth from such fluctuations. Plus, you get to enjoy a better customer service experience, given that you will probably not need to contact foreign customer service centers. Remember that what you do with your money is up to you. That’s why Cashero makes it easy to switch between deposit, withdrawal, and switch between currencies, whenever you choose.</p>
 											<h3 className="blackhead">When to consider multi-currency accounts for business</h3>
@@ -876,7 +826,7 @@ export function QuestionTabs(props) {
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/exchange-rates/" &&
+							{path === "/online-currency-exchange/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -1087,7 +1037,7 @@ export function QuestionTabs(props) {
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/receive-payments/" &&
+							{path === "/instant-money-transfer/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -1296,7 +1246,7 @@ export function QuestionTabs(props) {
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/remittance/" &&
+							{path === "/transfer-money-abroad/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}

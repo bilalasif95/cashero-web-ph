@@ -29,7 +29,7 @@ export function CurrencyConversion() {
 							<Fade triggerOnce direction="up">
 								<h1 className="oneAppTitle">Online Currency<span className="br-block"></span>Exchange</h1>
 								<p>Instantly exchange between USD, EUR, and GBP at rates so good that you’ll never exchange currency with a bank again. Beat that.</p>
-								<Link link="/exchange-rates" className="Link sm-mb-30">
+								<Link link="/online-currency-exchange" className="Link sm-mb-30">
 									Learn more about Exchange <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 								</Link>
 							</Fade>

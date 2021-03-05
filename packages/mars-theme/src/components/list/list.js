@@ -138,21 +138,21 @@ const List = ({ state }) => {
 													</p>
                           <ul className="HeaderList list-unstyled">
                             <li>
-                              <Link link="/personal">
+                              <Link link="/high-yield-savings-account">
                                 High Yield
                                 Savings
                                 Account
                               </Link>
                             </li>
                             <li>
-                              <Link link="/currency-accounts">
+                              <Link link="/multi-currency-savings-account">
                                 Multi-Currency
                                 Savings
                                 Account
                               </Link>
                             </li>
                             <li>
-                              <Link link="/exchange-rates">
+                              <Link link="/online-currency-exchange">
                                 Online
                                 Currency
                                 Exchange
@@ -172,14 +172,14 @@ const List = ({ state }) => {
 													</p>
                           <ul className="HeaderList list-unstyled">
                             <li>
-                              <Link link="/receive-payments">
+                              <Link link="/instant-money-transfer">
                                 Instant
                                 Money
                                 Transfer
                               </Link>
                             </li>
                             <li>
-                              <Link link="/remittance">
+                              <Link link="/transfer-money-abroad">
                                 Transfer
                                 Money Abroad
                               </Link>
@@ -218,17 +218,17 @@ const List = ({ state }) => {
 													</p>
                           <ul className="HeaderList list-unstyled">
                             <li>
-                              <Link link="/personal">
+                              <Link link="/high-yield-savings-account">
                                 High Yield Savings Account
                               </Link>
                             </li>
                             <li>
-                              <Link link="/currency-accounts">
+                              <Link link="/multi-currency-savings-account">
                                 Multi-Currency Savings Account
                               </Link>
                             </li>
                             <li>
-                              <Link link="/exchange-rates">
+                              <Link link="/online-currency-exchange">
                                 Online Currency Exchange
                               </Link>
                             </li>
@@ -246,12 +246,12 @@ const List = ({ state }) => {
 													</p>
                           <ul className="HeaderList list-unstyled">
                             <li>
-                              <Link link="/receive-payments">
+                              <Link link="/instant-money-transfer">
                                 Instant Money Transfer
                               </Link>
                             </li>
                             <li>
-                              <Link link="/remittance">
+                              <Link link="/transfer-money-abroad">
                                 Transfer Money Abroad
                               </Link>
                             </li>
@@ -294,7 +294,7 @@ const List = ({ state }) => {
                               </Link>
                             </li>
                             <li>
-                              <Link link="/listed-charity">
+                              <Link link="/become-listed-charity">
                                 Become a
                                 Listed
                                 Charity

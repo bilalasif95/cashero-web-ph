@@ -112,8 +112,8 @@ export default function GetTheAppModal(props) {
                 We’ll send you a message with a link to download the app.
               </p>
               <p id="transition-modal-description">
-                You’ll also earn a chance to win $1,000 every 3 days! <Link link="/#">Terms and
-                conditions</Link> apply.
+                You’ll also earn a chance to win $1,000 every 3 days! <span onClick={() => handleClose()}><Link link="/giveaway">Terms and
+                conditions</Link></span> apply.
               </p>
               <div className="ModalPhone">
                 {/* <div className="GetAppEmail">

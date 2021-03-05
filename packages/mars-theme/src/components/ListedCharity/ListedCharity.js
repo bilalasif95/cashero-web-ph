@@ -19,6 +19,7 @@ import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import Link from "../link";
 
 export function ListedCharity() {
 	const [appModal, setAppModal] = useState(false);
@@ -35,13 +36,13 @@ export function ListedCharity() {
 					<div className="row">
 						<div className="col-md-6">
 							<div className="PersonalCont">
-								<h1>Harness The Power Of Free Fundraising</h1>
-								<p className="bannerPara">We spread your story, you receive 100% of the donations, the world benefits.
-								</p>
+								<h1>Harness the Power Of Free Fundraising</h1>
+								<p className="bannerPara">We spread your story, you receive 100% of the donations, the world benefits.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
 								</ul>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-6">

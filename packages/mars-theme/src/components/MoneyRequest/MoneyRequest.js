@@ -19,7 +19,7 @@ export function MoneyRequest() {
 								 Transfer
 							</h1>
 							<p>Tap a button and start sending, requesting, and receiving payments worldwide. It’s fast, secure, and easy.</p>
-							<Link link="/receive-payments" className="Link">
+							<Link link="/instant-money-transfer" className="Link">
 								Learn more about Payments <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>

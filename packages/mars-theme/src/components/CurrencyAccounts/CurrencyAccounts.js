@@ -24,6 +24,7 @@ import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import currencieslist from "../../config/currenciesList";
+import Link from "../link";
 
 var bigDecimal = require('js-big-decimal');
 
@@ -124,12 +125,13 @@ export function CurrencyAccounts() {
 					<div className="row align-items-center">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>With a Multi-Currency <span className="br-block"></span> Savings Account.</h1>
-								<p className="bannerPara">Keep your money safe from currency fluctuations.</p>
+								<h1>Multi-Currency <span className="br-block"></span> Savings Account.</h1>
+								<p className="bannerPara">keep your money safe from currency fluctuations.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
 								</ul>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -257,7 +259,7 @@ export function CurrencyAccounts() {
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList2 list-unstyled">
 							<li><img alt="one Wallet" src={oneWallet} />One wallet, multiple currencies</li>
-							<li><img alt="List Phone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li>
+							<li><img alt="List Phone" src={ListPhone} />No monthly fees. No minimum balance required</li>
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
 							<li><img alt="Draw" src={Draw} />EU licensed & regulated financial institution</li>
 						</ul>
@@ -292,7 +294,7 @@ export function CurrencyAccounts() {
 									alt="Wallet Coins"
 									src={WalletCoins}
 								/>
-								<h3>Add funds or get paid into<span className="br-block"></span>your Multi-Currency Account.</h3>
+								<h3>Add funds to your Multi-Currency Account and hold USD, GBP or EUR.</h3>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
@@ -300,7 +302,7 @@ export function CurrencyAccounts() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
 									<h3>
-										Hold and switch between USD, GBP or EUR in seconds.
+									Earn interest and safeguard your money from currency devaluation.
 										</h3>
 								</div>
 							</Fade>
@@ -309,9 +311,9 @@ export function CurrencyAccounts() {
 					<div className="row">
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
-								<p>Ready to protect your currencies in one wallet? Maintain your wealth in Cashero’s multi-currency account.</p>
+								<p>Maintain your wealth with Cashero’s multi-currency account.</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-									Open your Wallet   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+								Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

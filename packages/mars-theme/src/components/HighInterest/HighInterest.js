@@ -224,7 +224,7 @@ export function HighInterest() {
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle">High Yield<span className="br-block"></span>Savings Account</h3>
 								<p className="HighInterestText">Receive inflation-beating interest rates of 2%-5% APY. Yes, you read that correctly. Flexibility, no minimum balance required monthly fees or penalties for withdrawals. Do that thing that rich people do, make money while you sleep.</p>
-								<Link link="/personal" className="Link">Learn more about Savings
+								<Link link="/high-yield-savings-account" className="Link">Learn more about Savings
 									{innerWidth >= 540 ?
 										<img alt="Arrow" className="ArrowBtn" src={Arrow} />
 										:

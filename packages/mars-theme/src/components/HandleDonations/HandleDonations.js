@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import heartmap from "../../assets/heartmap.svg"
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import Check from "../../assets/check-mark.svg";
 
 export function HandleDonations() {
 	const appModalClose = () => {
@@ -17,12 +18,16 @@ export function HandleDonations() {
 							<p className="sm-center">Benefit from the following:</p>
 
 							<ul className="list-unstyled CharityList">
-								<li>✓ High-yield savings account  <span className="br-block"></span> Automatically earn 2%-5% interest annually on donations received. </li>
-								<li>✓ Multi-currency accounts</li>
+								<li>  <img src={Check} alt="check" /> High-yield savings account.</li>
+								<p>Automatically earn 2%-5% interest annually on donations received. </p>
+								<li>  <img src={Check} alt="check" />  Multi-currency accounts.</li>
 								<p>Receive donations in any currency, hold them in USD, GBP, or EUR. </p>
-								<li>✓ Currency conversion <span className="br-block"></span> Convert between USD, GBP, or EUR for free. We absorb the costs.</li>
-								<li>✓ Send, request, and receive payments <span className="br-block"></span> Manage your payments all through the Cashero app.</li>
-								<li>✓ Free global money transfers <span className="br-block"></span> Send your donations to where it’s needed around the world.</li>
+								<li>  <img src={Check} alt="check" /> Currency conversion</li>
+								<p>Convert between USD, GBP, or EUR for free. We absorb the costs.</p>
+								<li>  <img src={Check} alt="check" /> Send, request, and receive payments.</li>
+								<p>Manage your payments all through the Cashero app.</p>
+								<li>  <img src={Check} alt="check" /> Free global money transfers.</li>
+								<p>Send your donations to where it’s needed around the world.</p>
 							</ul>
 						</div>
 					</div>

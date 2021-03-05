@@ -48,7 +48,7 @@ export function GlobalMoney() {
 							<p>
 								Send money back home. Stretch your hard-earned money even further with low exchange fees. Cashero helps you send money internationally with no hassle.
 							</p>
-							<Link link="/remittance" className="Link">
+							<Link link="/transfer-money-abroad" className="Link">
 								Learn more about Transfers  <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>

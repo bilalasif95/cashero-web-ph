@@ -79,13 +79,13 @@ export function Personal() {
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>High-Yield Savings Account: Make Your <span className="br-block"></span> Money do the Work</h1>
-								<p className="bannerPara">Earn up to 5% APY on your money, paid out daily.</p>
+								<h1>High-Yield <span className="br-block"></span> Savings Account</h1>
+								<p className="bannerPara">Make Your Money do the Work.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
 									<li><img src={Clock} alt="Clock" />Open an account in minutes. Launching in June.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link link="/Giveaway"> Terms and conditions </Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">

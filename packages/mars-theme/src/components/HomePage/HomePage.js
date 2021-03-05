@@ -44,12 +44,12 @@ export function HomePage(props) {
                     </h2>
                     <h2 className="bannerText slide-up">
                       <img src={Check} alt="check" />
-                      Exchange currencies, send money abroad, make instant
+                      Exchange currencies, send money abroad, and make instant
                       payments.
                     </h2>
                     <h2 className="bannerText slide-up">
                       <img src={Check} alt="check" />
-                      No hidden fees, no minimum deposits, no stress.
+                      No hidden fees, no minimum deposits, and no stress.
                     </h2>
                   </div>
                 </Fade>
@@ -63,7 +63,7 @@ export function HomePage(props) {
                 <p className="draw-text">
                   Get early access to the Cashero app and earn a chance to win
                   $1,000 every 3 days! <span className="br-block"></span>
-                  <Link link="/Giveaway"> Terms and conditions </Link> apply.
+                  <Link className="giveaway-link" link="/Giveaway"> Terms and conditions </Link> apply.
                 </p>
               </div>
             </div>

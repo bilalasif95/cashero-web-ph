@@ -25,7 +25,7 @@ const settings = {
             ],
             [
               "Personal",
-              "/personal"
+              "/high-yield-savings-account"
             ],
             [
               "Company",
@@ -41,23 +41,23 @@ const settings = {
             ],
             [
               "ListedCharity",
-              "/listed-charity"
+              "/become-listed-charity"
             ],
             [
               "CurrencyAccounts",
-              "/currency-accounts"
+              "/multi-currency-savings-account"
             ],
             [
               "ExchangeRates",
-              "/exchange-rates"
+              "/online-currency-exchange"
             ],
             [
               "ReceivePayments",
-              "/receive-payments"
+              "/instant-money-transfer"
             ],
             [
               "Remittance",
-              "/remittance"
+              "/transfer-money-abroad"
             ],
           ],
           "featured": {

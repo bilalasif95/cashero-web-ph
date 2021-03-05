@@ -243,7 +243,7 @@ export function ExchangeRates() {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>Fair, Fast Currency Exchange</h1>
+                <h1>Online Currency <span className="br-block"></span> Exchange</h1>
                 <p className="White">Currency conversion with no hidden fees</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
@@ -252,7 +252,7 @@ export function ExchangeRates() {
                     Open an account in minutes. Launching in June.
                   </li>
                 </ul>
-                <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link link="/Giveaway"> Terms and conditions </Link> apply. </p>
+                <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
               </div>
             </div>
             <div className="col-md-5">

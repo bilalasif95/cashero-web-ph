@@ -29,10 +29,11 @@ export function SingleAccount() {
 						<div className="oneAppCont sm-mt-0">
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle">
-									Your Money From <span className="br-block"></span> Around The World In <span className="br-block"></span> One Single Account
+								Your Money From <span className="br-block"></span>  Around the World in <span className="br-block"></span> One Account
 								</h3>
-								<p className="HighInterestText">We take the headache out of managing money from different countries. Have your money in one place with no minimum balance or maintenance fees added! Receive funds internationally, hold balances in USD, GBP, and EUR and seamlessly transfer between currencies within seconds. Freedom, at last!  </p>
-								<button onClick={appModalOpen} className="LinkBtn">Join for Free  <img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<p>We take the headache out of managing money from different countries. Store your money in one place with no minimum balance or maintenance fees added! </p>
+								<p>Receive funds internationally, hold balances in USD, GBP, and EUR, and transfer between currencies within seconds. </p>
+								<button onClick={appModalOpen} className="LinkBtn">Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 							{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 						</div>

@@ -46,7 +46,7 @@ export function Footer() {
 						<Link link="/">
 							<img src={Logo} alt="logo" />
 						</Link>
-						<p className="HelpText">Need help? We’re always <span className="br-block"></span> here when you need us</p>
+						<p className="HelpText">Need help? We’re always here <span className="br-block"></span> when you need us. Download the <span className="br-block"></span> App and get started.</p>
 						<ul className="list-unstyled AppList">
 							<li><a href="/#"><img alt="Android" src={Android} /></a></li>
 							<li><a href="/#"><img alt="IOS" src={IOS} /></a></li>
@@ -54,17 +54,17 @@ export function Footer() {
 					</div>
 					<div className="col-md-6">
 						<div className="row">
-							<div className="col-md-4">
+							<div className="col-md-5">
 								<p className="NavTitle">Features</p>
 								<ul className="list-unstyled FooterList">
-									<li><Link link="/personal">Savings</Link></li>
-									<li><Link link="/currency-accounts">Wallet</Link></li>
-									<li><Link link="/exchange-rates">Exchange</Link></li>
-									<li><Link link="/receive-payments">Payments</Link></li>
-									<li><Link link="/remittance">Transfers</Link></li>
+									<li><Link link="/high-yield-savings-account">High Yield Savings</Link></li>
+									<li><Link link="/multi-currency-savings-account">Multi-Currency Account</Link></li>
+									<li><Link link="/online-currency-exchange">Currency Exchange</Link></li>
+									<li><Link link="/instant-money-transfer">Instant Payments</Link></li>
+									<li><Link link="/transfer-money-abroad">Global Transfers</Link></li>
 								</ul>
 							</div>
-							<div className="col-md-4">
+							<div className="col-md-3">
 								<p className="NavTitle">Company</p>
 								<ul className="list-unstyled FooterList">
 									<li><Link link="/company">About Us</Link></li>
@@ -85,7 +85,7 @@ export function Footer() {
 				<hr />
 				<div className="SocialBox">
 					<div className="CopyRight">
-						<p>&copy;2020 Cashero Limited&reg;</p>
+						<p>&copy;2021 Cashero Limited&reg;</p>
 					</div>
 					<div className="SocialCont">
 						<p>United States - English</p>

@@ -19,7 +19,7 @@ export function Savings() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
 							<h1 className="oneAppTitle">
-								How do Cashero’s <span className="br-block"></span> High Yield Savings Work?
+								How Does Cashero’s <span className="br-block"></span> High Yield Savings Work?
 							</h1>
 							<p>
 							We get you the best high-yield interest rates (between 2%-5% annually) by managing an intelligent portfolio for you.  Do that thing rich people do, earn money while you sleep.  Leave the hard work of optimizing your finances to Cashero and watch your money grow.
