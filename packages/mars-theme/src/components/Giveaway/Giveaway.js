@@ -12,7 +12,7 @@ export function Giveaway() {
 						<div className="col-md-8 offset-md-2">
 							<div className="terms_titles">
 								<h1>Cashero’s Golden Ticket Giveaway!</h1>
-								<div className="custom-border mb-5"></div>
+								<div className="custom-border"></div>
 								<p>Welcome to Cashero’s Golden Ticket Giveaway! This isn’t another t-shirt or water bottle giveaway gimmick. We’re giving you early access to Cashero and the chance to win actual cash. All you have to do is spread the word about Cashero and you will have the chance to win $1000 every 3 days! How, you ask? Well let’s go through the rules.</p>
 							</div>
 
@@ -54,6 +54,7 @@ export function Giveaway() {
 								<h3>WHAT ELSE SHOULD I KNOW?</h3>
 								<p>We’re all about transparency so let’s make sure we’re all on the same page. </p>
 							</div>
+							
 							<ul className="condition-list">
 								<li>We may, at our sole discretion, suspend, terminate or change the terms and requirements of the Cashero Golden Ticket Giveaway.</li>
 								<li>Details of how to enter form part of the terms and conditions. It is a condition of entry that all rules are accepted as final and that the entrant agrees to abide by these rules. The decision of Cashero as promotion administrator is final and no correspondence will be entered into.</li>
