@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect, styled } from "frontity";
 import Link from "./link";
 import List from "./list";
@@ -7,11 +7,15 @@ import backicon from "../assets/backicon.svg";
 import FB from "../assets/blogfb.svg";
 import linkedIn from "../assets/bloglinked.svg";
 import URL from "../assets/url.svg";
+import Tick from "../assets/tick.svg";
 import twitter from "../assets/blogtwitter.svg";
 import { SignupSection } from "./signupSection/signupSection";
 import { structuredData } from "../config/SEO/Blog/structuredData";
+import { websiteLink } from "../config/config";
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share";
 
 const Post = ({ state, actions, libraries }) => {
+  const [copied, setCopied] = useState(false);
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
   // Get the data of the post.
@@ -36,6 +40,16 @@ const Post = ({ state, actions, libraries }) => {
     List.preload();
   }, []);
 
+  const CopyText = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true)
+      setTimeout(() => {
+        setCopied(false)
+      }, 3000)
+    }).catch(() => {
+      setCopied(false)
+    })
+  }
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <>
@@ -52,10 +66,14 @@ const Post = ({ state, actions, libraries }) => {
             </div>
             <div>
               <ul className="list-unstyled BlogSocialList">
-                <li><a href="/#"><img alt="facebook icon" src={FB} /><span className="SocialText">Share</span></a></li>
-                <li><a href="/#"><img alt="twitter icon" src={twitter} /><span className="SocialText">Tweet</span></a></li>
-                <li><a href="/#"><img alt="linkedIn icon" src={linkedIn} /><span className="SocialText">Post</span></a></li>
-                <li><a href="/#"><img alt="URL icon" src={URL} /><span className="SocialText">URL</span></a></li>
+                <li><FacebookShareButton url={websiteLink + state.router.link}><img alt="facebook icon" src={FB} /><span className="SocialText">Share</span></FacebookShareButton></li>
+                <li><TwitterShareButton url={websiteLink + state.router.link}><img alt="twitter icon" src={twitter} /><span className="SocialText">Tweet</span></TwitterShareButton></li>
+                <li><LinkedinShareButton url={websiteLink + state.router.link}><img alt="linkedIn icon" src={linkedIn} /><span className="SocialText">Post</span></LinkedinShareButton></li>
+                {copied ?
+                  <li><button className="copiedButton"><img alt="Tick icon" src={Tick} /><span className="SocialText">Copied</span></button></li>
+                  :
+                  <li><button onClick={() => CopyText(websiteLink + state.router.link)}><img alt="URL icon" src={URL} /><span className="SocialText">URL</span></button></li>
+                }
               </ul>
             </div>
           </div>

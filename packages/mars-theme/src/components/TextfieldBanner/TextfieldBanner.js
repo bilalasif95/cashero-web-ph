@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import TextField from "../../common/textFiled";
 import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist } from "../../config/config";
@@ -48,7 +48,6 @@ export function TextfieldBanner() {
         if (res.code === 400) {
           setError(res.message);
         } else {
-          setCode("+1");
           setNewPhoneNumber("");
           setSuccessModal(true);
         }
@@ -74,6 +73,19 @@ export function TextfieldBanner() {
   const thanksModalClose = () => {
     setSuccessModal(false);
   };
+  useEffect(() => {
+    callApi("https://ipwhois.app/json/", "get")
+      .then((res) => {
+        if (res.success) {
+          setCode(res.country_phone);
+        }
+        else {
+          setCode("+1");
+        }
+      }).catch(() => {
+        setCode("+1");
+      })
+  }, [])
   return (
     <div>
       {/* <div className="personalEmail">
