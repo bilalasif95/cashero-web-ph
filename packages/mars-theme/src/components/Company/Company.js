@@ -2,7 +2,7 @@ import React from "react";
 import { SignupSection } from "../signupSection/signupSection";
 import { Countup } from "../Countup/Countup";
 import { WhoSection } from "../WhoSection/WhoSection";
-import CasheroImg from "../../assets/CasheroImg.jpg";
+import CasheroImg from "../../assets/CasheroImg.png";
 import YearsImg from "../../assets/YearsImg.png";
 
 export function Company() {

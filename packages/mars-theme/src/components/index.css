@@ -430,10 +430,10 @@ h4 {
     width: inherit !important; }
   .SocialText {
     display: none; }
-  .BlogSocialList li a {
+  .BlogSocialList li a,.BlogSocialList li button {
     width: auto !important;
     padding: 5px 5px !important; }
-    .BlogSocialList li a img {
+    .BlogSocialList li a img,.BlogSocialList li button img {
       margin-right: 0px !important; }
   .LinkBtn {
     font-size: 14px; }
@@ -3377,30 +3377,34 @@ button:focus {
 .BlogSocialList {
   display: flex;
   margin-bottom: 0px; }
-  .BlogSocialList li a {
+  .BlogSocialList li a,.BlogSocialList li:first-of-type button, .BlogSocialList li:nth-of-type(2) button, .BlogSocialList li:nth-of-type(3) button {
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 10px !important;
     display: inline-block;
     color: #fff !important; }
-    .BlogSocialList li a img {
+    .BlogSocialList li a img,.BlogSocialList li button img {
       margin-right: 10px;
       margin-top: -3px; }
-  .BlogSocialList li a {
-    font-weight: 600;
-    font-size: 12px;
+  .BlogSocialList li a,.BlogSocialList li button {
+    font-weight: 600 !important;
+    font-size: 12px !important;
     width: 80px;
     text-align: center; }
   .BlogSocialList li:not(:last-child) {
     margin-right: 10px; }
-  .BlogSocialList li:first-of-type a {
-    background-color: #4267b2; }
-  .BlogSocialList li:nth-of-type(2) a {
-    background-color: #1da1f2; }
-  .BlogSocialList li:nth-of-type(3) a {
-    background-color: #0077b5; }
-  .BlogSocialList li:last-child a {
+  .BlogSocialList li:first-of-type a,.BlogSocialList li:first-of-type button {
+    background-color: #4267b2 !important; }
+  .BlogSocialList li:nth-of-type(2) a,.BlogSocialList li:nth-of-type(2) button {
+    background-color: #1da1f2 !important; }
+  .BlogSocialList li:nth-of-type(3) a,.BlogSocialList li:nth-of-type(3) button {
+    background-color: #0077b5 !important; }
+  .BlogSocialList li:last-child a,.BlogSocialList li:last-child button {
     background-color: #f6f8fb;
-    color: #000 !important; }
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px !important;
+    display: inline-block; }
 
 .backList {
   font-size: 24px;
@@ -3764,7 +3768,7 @@ button:focus {
       font-size: 16px; } }
 
 .Countup {
-  padding: 136px 0px; }
+  padding: 80px 0px; }
   .Countup .CountupCont {
     text-align: center; }
     .Countup .CountupCont h1 {
@@ -15600,7 +15604,7 @@ select:-webkit-autofill:focus {
   }
   .custom-border{
     border-bottom: 1px solid #d2d2d7;
-    margin: 50px 0px 0px 0px
+    margin: 50px 0px 50px 0px
   }
   .bannerCont .dropdown-toggle:after{
     width: 0;
@@ -15648,6 +15652,9 @@ select:-webkit-autofill:focus {
   .Waitlist::-webkit-scrollbar {
     display: none;
   }
+    .custom-border{
+      margin: 20px 0px 20px 0px !important;
+    }
     .customerDetailtext {
       font-size: 18px;
     }
@@ -15665,4 +15672,17 @@ select:-webkit-autofill:focus {
       .Banner-list h2:nth-of-type(2){
         width: inherit;
       }
+    }
+
+    @media(max-width: 540px){
+      .copiedButton{
+        width: auto !important;
+      }
+    }
+
+    .copiedButton {
+      background-color: #4fb74f !important;
+      color: #fff !important;
+      display: flex !important;
+      align-items: center;
     }

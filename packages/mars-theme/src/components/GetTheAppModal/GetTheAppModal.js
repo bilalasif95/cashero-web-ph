@@ -63,7 +63,6 @@ export default function GetTheAppModal(props) {
         if (res.code === 400) {
           setError(res.message);
         } else {
-          setCode("+1");
           setNewPhoneNumber("");
           setSuccessModal(true);
         }
@@ -83,6 +82,19 @@ export default function GetTheAppModal(props) {
   //     setEmail("");
   //   });
   // };
+  useEffect(() => {
+    callApi("https://ipwhois.app/json/", "get")
+      .then((res) => {
+        if (res.success) {
+          setCode(res.country_phone);
+        }
+        else {
+          setCode("+1");
+        }
+      }).catch(() => {
+        setCode("+1");
+      })
+  }, [])
   const { open, handleClose } = props;
   return (
     <div className="GetAppModal">
