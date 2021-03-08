@@ -4,6 +4,9 @@ import { styled } from "frontity";
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Wait2 from "../../assets/wait.svg";
+import Facebook from "../../assets/facebook.svg";
+import Twitter from "../../assets/twitter.svg"; 
+// import Gmail from "../../assets/gmail.svg"; 
 
 export default function ThanksModal(props) {
     const { open, handleClose } = props
@@ -29,9 +32,22 @@ export default function ThanksModal(props) {
                         <div className="row waitlistRow">
                             <div className="col-md-6">
                                 <div className="waitlistcont">
-                                    <h3 id="transition-modal-title">Thank you for<span className="br-block"></span>joining Cashero!</h3>
+                                    <h3 id="transition-modal-title">Thank you for joining <span className="br-block"></span> Cashero!</h3>
                                     <p>We’ve sent you an SMS with a link to download the app.</p>
                                 </div>
+
+                                <div className="win-cont">
+                                    <h3 id="transition-modal-title">Want to win $1,000?</h3>
+                                    <p>We’re giving away $1,000 every 3 days. Download the app, refer your friends to Cashero and earn golden tickets. The more golden tickets you have, the higher your odds of winning!</p>
+
+                                    <ul className="Thankyou-modal-list list-unstyled">
+                                        <li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
+                                        <li><a href="https://twitter.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Twitter" src={Twitter} /> </a></li>
+                                        <li><a href="mailto:info@cashero.com" target="_blank" rel="noopener noreferrer"><img alt="gmail" src="https://i.imgur.com/4EWrUMB.png" /> </a></li>
+                                    </ul>
+
+                                </div>
+
                             </div>
                             <div className="col-md-6">
                                 <img
@@ -40,6 +56,7 @@ export default function ThanksModal(props) {
                                     src={Wait2}
                                 />
                             </div>
+                            <p className="join-text">Join Cashero to earn 5% interest on your money</p>
                         </div>
                     </div>
                 </div>

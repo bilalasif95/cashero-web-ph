@@ -15616,7 +15616,38 @@ select:-webkit-autofill:focus {
     background-color: #fff !important;
     color: #0667eb !important;
   }
+  .Thankyou-modal-list {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .Thankyou-modal-list li:nth-of-type(3) img{
+    height: 23px;
+    width: 18px;
+  }
+  .Thankyou-modal-list li:not(:last-child){
+    margin-right: 21px;
+  }
+  .join-text{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #3F4556 !important;
+  }
+  .win-cont {
+    margin-top: 30px;
+  }
   @media (max-width: 540px) {
+    .Thankyou-modal-list {
+      justify-content: center;
+    }
+    .Waitlist,
+.waitlistModal {
+  overflow: scroll;
+  display: inherit; }
+  .Waitlist::-webkit-scrollbar {
+    display: none;
+  }
     .customerDetailtext {
       font-size: 18px;
     }
