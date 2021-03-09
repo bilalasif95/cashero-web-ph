@@ -46,7 +46,7 @@ export function Remittance() {
 							</div>
 						</div>
 						<div className="col-md-5">
-							<img alt="Cashero map" className="img-fluid mx-auto d-block" src={Casher0map} />
+							<img alt="Cashero map" className="mx-auto d-block" src={Casher0map} />
 						</div>
 					</div>
 				</div>
