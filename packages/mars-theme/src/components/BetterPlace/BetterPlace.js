@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Place from "../../assets/place.svg";
+import Place from "../../assets/myPlace.png";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 

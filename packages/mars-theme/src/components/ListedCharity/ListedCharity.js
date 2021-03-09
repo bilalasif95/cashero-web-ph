@@ -8,7 +8,7 @@ import listImg from "../../assets/list.png";
 import StepsWallet from "../../assets/stepsWallet.png"
 import heartDollar from "../../assets/heartDollar.svg";
 import listHome from "../../assets/listHome.svg";
-import freeFund from "../../assets/freeFund.svg";
+import freeFund from "../../assets/freeFund.png";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
 // import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
