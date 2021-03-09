@@ -6,6 +6,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Wait2 from "../../assets/wait.svg";
 import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg"; 
+import Link from "../link";
 // import Gmail from "../../assets/gmail.svg"; 
 
 export default function ThanksModal(props) {
@@ -39,6 +40,8 @@ export default function ThanksModal(props) {
                                 <div className="win-cont">
                                     <h3 id="transition-modal-title">Want to win $1,000?</h3>
                                     <p>We’re giving away $1,000 every 3 days. Download the app, refer your friends to Cashero and earn golden tickets. The more golden tickets you have, the higher your odds of winning!</p>
+
+                                    <span onClick={() => handleClose()}><Link className="giveaway-link" link="/Giveaway"> Terms and conditions </Link></span>
 
                                     <ul className="Thankyou-modal-list list-unstyled">
                                         <li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
