@@ -7,7 +7,7 @@ import Wait2 from "../../assets/wait.svg";
 import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg"; 
 import Link from "../link";
-// import Gmail from "../../assets/gmail.svg"; 
+import Gmail from "../../assets/gmail.png"; 
 
 export default function ThanksModal(props) {
     const { open, handleClose } = props
@@ -46,7 +46,7 @@ export default function ThanksModal(props) {
                                     <ul className="Thankyou-modal-list list-unstyled">
                                         <li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
                                         <li><a href="https://twitter.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Twitter" src={Twitter} /> </a></li>
-                                        <li><a href="mailto:info@cashero.com" target="_blank" rel="noopener noreferrer"><img alt="gmail" src="https://i.imgur.com/4EWrUMB.png" /> </a></li>
+                                        <li><a href="mailto:info@cashero.com" target="_blank" rel="noopener noreferrer"><img alt="gmail" src={Gmail} /> </a></li>
                                     </ul>
 
                                 </div>
