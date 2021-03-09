@@ -26,7 +26,7 @@ export function Countup() {
 				<div className="col-md-3">
 					<div className="CountupCont">
 						<h1>5%</h1>
-						<p>APY</p>
+						<p>APY (up to)</p>
 					</div>
 				</div>
 				<div className="col-md-3">
