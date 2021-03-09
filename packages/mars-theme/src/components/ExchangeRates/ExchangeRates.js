@@ -244,7 +244,7 @@ export function ExchangeRates() {
             <div className="col-md-7">
               <div className="PersonalCont">
                 <h1>Online Currency <span className="br-block"></span> Exchange</h1>
-                <p className="White">Currency conversion with no hidden fees</p>
+                <p className="White">Fair, Fast Currency conversion with no hidden fees.</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
                   <li>

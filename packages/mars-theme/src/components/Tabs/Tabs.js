@@ -619,8 +619,8 @@ export function QuestionTabs(props) {
 									</AccordionSummary>
 									<AccordionDetails>
 										<div className="expandTypo">
-											<h2 className="blackhead">Multi-Currency Savings Account – Must-Know Details </h2>
-											<p>There’s been a lot written lately about multi-currency savings accounts and their benefits for individuals and businesses alike. But is it really an option worth considering? What are the advantages of creating a multi-currency savings account? What is there to look out for, and is there a catch? How can you make the most out of it?  </p>
+											<h2 className="blackhead">Multi-Currency Savings Account – Must-Know Details</h2>
+											<p>There’s been a lot written lately about multi-currency savings accounts and their benefits for individuals and businesses alike. But is it really an option worth considering? What are the advantages of creating a multi-currency savings account? What is there to look out for, and is there a catch? How can you make the most out of it? </p>
 											<h2 className="blackhead">What is a multi-currency savings account?</h2>
 											<p>A multi-currency savings account is a relatively new type of savings account that enables you to hold multiple currencies in a single account. In other words, you can receive or send money in different currencies without having to go through an exchange process between the currencies involved. For example, you may receive US dollars but pay in Euros using the funds available in a single account. Most of the time, this is done via:</p>
 											<p>(1) Wire transfer</p>

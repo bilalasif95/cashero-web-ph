@@ -15659,6 +15659,9 @@ select:-webkit-autofill:focus {
   .banner .numberSelection .inputNum input, .PersonalCont .numberSelection .inputNum input {
     padding-left: 5px;
   }
+  #transition-modal-title a{
+    color: #363636 !important;
+  }
   @media (max-width: 540px) {
     .Thankyou-modal-list {
       justify-content: center;

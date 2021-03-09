@@ -80,7 +80,7 @@ export function Personal() {
 						<div className="col-md-7">
 							<div className="PersonalCont">
 								<h1>High-Yield <span className="br-block"></span> Savings Account</h1>
-								<p className="bannerPara">Make Your Money do the Work.</p>
+								<p className="bannerPara">Make your money do the work. Earn up to 5% APY on your money, paid out daily.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
 									<li><img src={Clock} alt="Clock" />Open an account in minutes. Launching in June.</li>

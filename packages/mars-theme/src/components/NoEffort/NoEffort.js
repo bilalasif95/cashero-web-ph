@@ -25,7 +25,7 @@ export function NoEffort() {
 								<h3 className="HighInterestTitle">
 									Earn the Cashero Way
 								</h3>
-								<p className="HighInterestText">You want to earn interest on your money, right? Passive income, dinero, or Cashero. We understand. You've come to the right place.
+								<p className="HighInterestText">You want to earn interest on your money, right? We understand. You've come to the right place.
 									</p>
 								<p className="HighInterestText">If your money is sitting in a bank account, chances are you’re losing money. High yield savings account interest rates should beat inflation and make you money. Unfortunately, most don’t.</p>
 								<p className="HighInterestText">Introducing a first-of-its-kind approach to high yield savings. Cashero, the superhero your hard-earned money has been waiting for. </p>

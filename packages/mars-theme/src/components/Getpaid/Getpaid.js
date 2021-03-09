@@ -21,7 +21,7 @@ export function GetPaid() {
 							<h3 className="oneAppTitle">
 								Get Paid the
 									<span className="br-block"></span>
-								Cashero Way- Fast
+								Cashero Way-Fast
 							</h3>
 							<p>
 								If someone owes you money, well, we’ve made that simple too. Send them a request through Cashero and a notification will be delivered to their phone. No bank details, no IOU notes, just instant money transfers the way they’re supposed to be - easy.

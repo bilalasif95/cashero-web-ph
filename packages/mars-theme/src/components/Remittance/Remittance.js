@@ -37,7 +37,7 @@ export function Remittance() {
 						<div className="col-md-7">
 							<div className="PersonalCont">
 								<h1>Transfer Money <span className="br-block"></span> Abroad </h1>
-								<p className="bannerPara">Stress Free with Cashero.</p>
+								<p className="bannerPara">Global transfers that stretch your money further to where it needs to be</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
