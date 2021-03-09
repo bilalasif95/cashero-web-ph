@@ -15642,7 +15642,7 @@ select:-webkit-autofill:focus {
   }
   .Thankyou-modal-list li:nth-of-type(3) img{
     height: 23px;
-    width: 18px;
+    width: 24px;
   }
   .Thankyou-modal-list li:not(:last-child){
     margin-right: 21px;

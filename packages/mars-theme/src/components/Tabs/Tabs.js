@@ -242,7 +242,7 @@ export function QuestionTabs(props) {
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							<Accordion
+							{/* <Accordion
 								expanded={expanded === "panel5"}
 								onChange={accordionhandleChange("panel5")}
 							>
@@ -268,7 +268,7 @@ export function QuestionTabs(props) {
 										</h4>
 									</Typography>
 								</AccordionDetails>
-							</Accordion>
+							</Accordion> */}
 						</div>
 					</TabPanel>
 					<TabPanel value={value} index={1}>
