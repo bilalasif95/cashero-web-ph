@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
-import Lock from "../../assets/lock.svg";
+import Lock from "../../assets/lock.png";
 
 export function Protect() {
 	const [appModal, setAppModal] = useState(false);
