@@ -14,9 +14,9 @@ export function TextfieldBanner() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(counrtrylist);
   const [searchResults2, setSearchResults2] = useState([]);
-  const [code, setCode] = useState("+1");
+  const [code, setCode] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [phonenoLength, setPhoneNoLength] = useState(10);
+  const [phonenoLength, setPhoneNoLength] = useState(0);
   const toggle = () => {
     setSearchTerm("");
     setDropdownOpen((prevState) => !prevState);
@@ -78,12 +78,16 @@ export function TextfieldBanner() {
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
+          const countryCode = counrtrylist.filter(({ dial_code }) => dial_code === res.country_phone)
+          setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
           setCode("+1");
+          setPhoneNoLength(10);
         }
       }).catch(() => {
         setCode("+1");
+        setPhoneNoLength(10);
       })
   }, [])
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import Exchange from "../../assets/exchange.png";
+import Exchange from "../../assets/exchange.svg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 
@@ -19,7 +19,7 @@ export function EasyCurrencyExchange() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-							Your One Tap Hub for <span className="br-block"></span> Easy Currency Exchange
+								Your One Tap Hub for <span className="br-block"></span> Easy Currency Exchange
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>

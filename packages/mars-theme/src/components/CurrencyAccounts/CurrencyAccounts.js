@@ -125,13 +125,13 @@ export function CurrencyAccounts() {
 					<div className="row align-items-center">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>Multi-Currency <span className="br-block"></span> Savings Account.</h1>
-								<p className="bannerPara">keep your money safe from currency fluctuations.</p>
+								<h1>Multi-Currency <span className="br-block"></span> Savings Account</h1>
+								<p className="bannerPara">Go from zero to hero. Make your money borderless and keep it safe from currency fluctuations.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="Clock" src={Clock} />Open an account in minutes</li>
+									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions</Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -274,7 +274,7 @@ export function CurrencyAccounts() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-							How it Works. It’s Simple. 
+								How it Works. It’s Simple.
 							</h3>
 						</div>
 					</div>
@@ -302,7 +302,7 @@ export function CurrencyAccounts() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
 									<h3>
-									Earn interest and safeguard your money from currency devaluation.
+										Earn interest and safeguard your money from currency devaluation.
 										</h3>
 								</div>
 							</Fade>
@@ -313,7 +313,7 @@ export function CurrencyAccounts() {
 							<div className="MultistepsCont">
 								<p>Maintain your wealth with Cashero’s multi-currency account.</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+									Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

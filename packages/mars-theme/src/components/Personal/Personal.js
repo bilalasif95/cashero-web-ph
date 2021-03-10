@@ -85,7 +85,7 @@ export function Personal() {
 								<ul className="PersonalList list-unstyled">
 									<li><img src={Clock} alt="Clock" />Open an account in minutes. Launching in June.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions</Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -194,7 +194,7 @@ export function Personal() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-							How it Works. It’s Simple. 
+								How it Works. It’s Simple.
 							</h3>
 						</div>
 					</div>

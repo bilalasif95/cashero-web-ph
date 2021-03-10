@@ -124,8 +124,8 @@ export function QuestionTabs(props) {
 										expanded === "panel1" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel1a-content"
 									id="panel1a-header"
@@ -138,7 +138,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Cashero is an all-in-one platform for high-yield savings, multi-currency wallets, and instant, fee-free internal and cross-border payments. 
+											Cashero is an all-in-one platform for high-yield savings, multi-currency wallets, and instant, fee-free internal and cross-border payments.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -152,8 +152,8 @@ export function QuestionTabs(props) {
 										expanded === "panel2" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel2a-content"
 									id="panel2a-header"
@@ -197,8 +197,8 @@ export function QuestionTabs(props) {
 										expanded === "panel3" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel3a-content"
 									id="panel3a-header"
@@ -210,7 +210,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										June 2021.
+											June 2021.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -224,8 +224,8 @@ export function QuestionTabs(props) {
 										expanded === "panel4" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel4a-content"
 									id="panel4a-header"
@@ -282,8 +282,8 @@ export function QuestionTabs(props) {
 										expanded === "panel1" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel1a-content"
 									id="panel1a-header"
@@ -308,8 +308,8 @@ export function QuestionTabs(props) {
 										expanded === "panel2" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel2a-content"
 									id="panel2a-header"
@@ -333,8 +333,8 @@ export function QuestionTabs(props) {
 										expanded === "panel3" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel3a-content"
 									id="panel3a-header"
@@ -358,8 +358,8 @@ export function QuestionTabs(props) {
 										expanded === "panel4" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel4a-content"
 									id="panel4a-header"
@@ -385,8 +385,8 @@ export function QuestionTabs(props) {
 										expanded === "panel5" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel5a-content"
 									id="panel5a-header"
@@ -474,15 +474,15 @@ export function QuestionTabs(props) {
 										expanded === "panel1" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel1a-content"
 									id="panel1a-header"
 									className="iconSet"
 								>
 									<h4 className="heading">
-									How does the multi-currency account work?
+										How does the multi-currency account work?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -500,20 +500,20 @@ export function QuestionTabs(props) {
 										expanded === "panel2" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel2a-content"
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-									Can I open a multi-currency account in my country?
+										Can I open a multi-currency account in my country?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Cashero is available in all countries except Afghanistan, Albania, Angola, The Bahamas, Barbados, Belarus, Bosnia & Herzegovina, Botswana, Cambodia, Central African Republic, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Ecuador, Eritrea, Ethiopia, Ghana, Guinea-Bissau, Guyana, Haiti, Iceland, Iran, Iraq, Jamaica, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Mauritius, Mongolia, Myanmar, Nicaragua, Nigeria, North-Korea, Pakistan, Panama, Papua NG, Russia, Serbia, Somalia, Sudan, Syria, Turkmenistan, Uganda, Ukraine, Uzbekistan, Vanuatu, Venezuela, Yemen, and Zimbabwe. 
+											Cashero is available in all countries except Afghanistan, Albania, Angola, The Bahamas, Barbados, Belarus, Bosnia & Herzegovina, Botswana, Cambodia, Central African Republic, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Ecuador, Eritrea, Ethiopia, Ghana, Guinea-Bissau, Guyana, Haiti, Iceland, Iran, Iraq, Jamaica, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Mauritius, Mongolia, Myanmar, Nicaragua, Nigeria, North-Korea, Pakistan, Panama, Papua NG, Russia, Serbia, Somalia, Sudan, Syria, Turkmenistan, Uganda, Ukraine, Uzbekistan, Vanuatu, Venezuela, Yemen, and Zimbabwe.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -527,14 +527,14 @@ export function QuestionTabs(props) {
 										expanded === "panel3" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel3a-content"
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-									How much does it cost to get a Cashero multi-currency account?
+										How much does it cost to get a Cashero multi-currency account?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -552,20 +552,20 @@ export function QuestionTabs(props) {
 										expanded === "panel4" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel4a-content"
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-									How can I protect my money against currency fluctuations?
+										How can I protect my money against currency fluctuations?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Cashero takes pride in giving its users the ability to protect their money from currency volatility. You can load your Cashero account with your local currency and convert it to either USD, GBP, or EUR. Doing this can give you the opportunity to potentially decrease the risk of your money-losing purchasing power as it is being secured a more stable currency.
+											Cashero takes pride in giving its users the ability to protect their money from currency volatility. You can load your Cashero account with your local currency and convert it to either USD, GBP, or EUR. Doing this can give you the opportunity to potentially decrease the risk of your money-losing purchasing power as it is being secured a more stable currency.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -579,20 +579,20 @@ export function QuestionTabs(props) {
 										expanded === "panel5" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel5a-content"
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-									Is my money safe?
+										Is my money safe?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.
+											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -607,8 +607,8 @@ export function QuestionTabs(props) {
 											expanded === "panel6" ? (
 												<RemoveCircleOutlineIcon />
 											) : (
-													<ControlPointIcon />
-												)
+												<ControlPointIcon />
+											)
 										}
 										aria-controls="panel6a-content"
 										id="panel6a-header"
@@ -624,7 +624,7 @@ export function QuestionTabs(props) {
 											<h2 className="blackhead">What is a multi-currency savings account?</h2>
 											<p>A multi-currency savings account is a relatively new type of savings account that enables you to hold multiple currencies in a single account. In other words, you can receive or send money in different currencies without having to go through an exchange process between the currencies involved. For example, you may receive US dollars but pay in Euros using the funds available in a single account. Most of the time, this is done via:</p>
 											<p>(1) Wire transfer</p>
-											<p>ACH (Automated Clearing House) or electronic payments</p>
+											<p>(2) ACH (Automated Clearing House) or electronic payments</p>
 											<p>(3) Debit card</p>
 											<p>Multi-currency savings accounts come in three distinct forms: (1) certificates of deposits (CD), (2) money market accounts (MMA), and direct deposit accounts (DDA). Depending on the multi-currency account you open, you may be allowed to save in a foreign currency or use it for your daily transactions. This means that you can use one to send and receive funds from abroad, skipping the tedious paperwork or currency conversions. That's why a multi-currency account is ideal for travelers that often cross borders, as well as businesses working with international clients. Some exceptions do apply, which are highlighted below.</p>
 											<h2 className="blackhead">How many currencies can you hold in one account?</h2>
@@ -650,17 +650,17 @@ export function QuestionTabs(props) {
 											<h3 className="blackhead">What to look for from a business multi-currency account</h3>
 											<p>Flexibility is the key here. It's paramount to find a flexible enough multi-currency account that suits your needs the best. This can be achieved by comparing your available options and weighing factors, such as:</p>
 											<div className="inner-div">
-												<p><b>Currency conversion fees –</b> You may find that with multi currency accounts, a fee may apply whenever you convert money into another currency. That means you may need to consider both exchange rate differences and conversion charges. At Cashero we like to keep things simple, which means switching between currencies is free.</p>
-												<p><b>Transaction limitations –</b> The minimum and maximum amounts you can transfer vary per institution. Therefore, it's advised to ensure your multi-currency account can handle your business’ typical payment sums (minimum and maximum amounts included). Cashero business accounts have fee free transactions for the first $50,000. After that all future transactions have a small fee of only 1%.</p>
+												<p><b>Currency conversion fees –</b> You may find that with multi currency accounts, a fee may apply whenever you convert money into another currency. That means you may need to consider both exchange rate differences and conversion charges.</p>
+												<p><b>Transaction limitations –</b> The minimum and maximum amounts you can transfer vary per institution. Therefore, it's advised to ensure your multi-currency account can handle your business’ typical payment sums (minimum and maximum amounts included).</p>
 												<p><b>Minimum monthly account balance –</b> Some financial institutions require specific account minimums. Failing to meet this requirement may lead to paying penalties and fees.</p>
 												<p><b>Supported currencies –</b> Most institutions support a few major currencies. It's important that the currencies offered are the ones you most frequently need or use to conduct business.</p>
-												<p><b>Account fees –</b> Besides the costs mentioned above, you may also want to check other charges such as handling fees on specific transactions and currencies that may apply, as well as processing charges. Ask for a complete list of fees to be on the safe side. Hidden fees can creep up on you.</p>
+												<p><b>Account fees –</b> Besides the costs mentioned above, you may also want to check other charges such as handling fees on specific transactions and currencies that may apply, as well as processing charges. Ask for a complete list of fees to be on the safe side. Hidden fees can creep up on you, but this won’t happen to Cashero users.</p>
 												<p><b>Turnaround speed –</b> It's critical for your business to have fast transactions between your overseas accounts and your home bank. That's why you should check the typical transaction time required. The transaction speed with Cashero is instantaneous.</p>
 												<p><b>Account flexibility –</b> Research details like whether your multi-currency account allows withdrawals, deposits, and transfers online, over the phone, or at a branch. Also, if any of these options come with fees.</p>
 												<h3 className="blackhead">Where to get a multi-currency account from?</h3>
 												<p>Without a doubt, the growth of the FinTech sphere means there are new players offering multi-currency savings accounts with appealing terms. Here are some factors to consider before making your final decision and why preferring Cashero might be a better option for you.</p>
 												<div className="inner-div">
-													<p><b>Exchange Rates and Transaction Time –</b> With a foreign currency account, you may be allowed to keep your funds in the transaction’s currency. This means that you get to choose to convert your foreign currency at the most convenient time for you (if you need to convert your money at all). Cashero lets you access and exchange your funds 24/7 / 365. That means no waiting during weekends or holidays. And oh ya, your transfers are near instantaneous too.</p>
+													<p><b>Exchange Rates and Transaction Time –</b> With a foreign currency account, you may be allowed to keep your funds in the transaction’s currency. This means that you get to choose to convert your foreign currency at the most convenient time for you (if you need to convert your money at all). Cashero lets you access and exchange your funds 24/7 / 365. That means no waiting during weekends or holidays. And oh ya, your transfers are near-instantaneous too.</p>
 													<p><b>Interest –</b> Traditional savings accounts offer an average interest rate of 0.05%. So-called “high yield” accounts tend to give around 0.5%. But these rates often don’t beat inflation, so can it really be called saving?</p>
 													<p>With Cashero the average rate of return is 5%.</p>
 													<p>That’s 100 times higher than a traditional savings account.</p>
@@ -677,14 +677,12 @@ export function QuestionTabs(props) {
 													</ul>
 												</div>
 												<p>When it comes to fees, these vary per provider and usually include deposit/withdrawal charges for payments outside the set values. Also, fees for deposits/withdrawals of specific currencies, alongside a monthly account fee, may apply. Finally, you might be asked to pay charges for sending funds to another bank.</p>
-												<p>When you save with Cashero, you can be sure you’ll always be fee free when it comes to your personal account, and only a 1% fee for a business account, after the first $50,000.</p>
 												<h3 className="blackhead">Is reporting on international assets easier with multi-currency accounts?</h3>
 												<p>Considering that you can hold multiple assets (currencies) in a single location (account), keeping track of your deposits and withdrawals can be easier with a multi-currency account.</p>
 												<h2 className="blackhead">How to find the right multi-currency savings account?</h2>
 												<p>With such an overwhelming number of providers offering multi-currency accounts, you may become confused or overwhelmed. To decide which multi-currency account is right for you, start searching the latest offers and see what features are offered. For example, it might be critical for you to have access to your funds via an app, or to be able to contact a Customer Service agent on a 24/7 basis. You might even want to handle your money without ever stepping foot in a branch location for whatever reason, and keep things totally digital. These particular prerequisites should be on your mind when choosing a multi-currency account to ensure that your needs are met.</p>
 												<p>If you're a business owner, you will most likely be interested in locking in the most favorable rates for linked services, such as overseas travel services, overdrafts, and savings. Depending on your company’s transaction requirements and needs, it's paramount to see which multi-currency account will best suit them. That way, you will also be able to calculate how much a typical transaction will cost you and see if it is beneficial for you.</p>
-												<p>Once you have narrowed down your options, it's a good idea to look at customer reviews and see what other people think of the accounts. Not to toot our own horn, but our customers have great things to say about their Cashero experience.</p>
-												<p>Sign up today and see what it’s like when your money works for you - with industry leading return rates, zero-fees, and instant transactions - you’ll wonder why you didn’t join sooner.</p>
+												<p>Join Cashero today and see what it’s like when your money works for you - with some of the world’s strong currencies, industry-leading return rates, zero hidden fees, and instant transactions - you’ll wonder why you didn’t join sooner.</p>
 											</div>
 										</div>
 									</AccordionDetails>
@@ -702,8 +700,8 @@ export function QuestionTabs(props) {
 										expanded === "panel1" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel1a-content"
 									id="panel1a-header"
@@ -731,8 +729,8 @@ export function QuestionTabs(props) {
 										expanded === "panel2" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel2a-content"
 									id="panel2a-header"
@@ -756,8 +754,8 @@ export function QuestionTabs(props) {
 										expanded === "panel3" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel3a-content"
 									id="panel3a-header"
@@ -781,8 +779,8 @@ export function QuestionTabs(props) {
 										expanded === "panel4" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel4a-content"
 									id="panel4a-header"
@@ -808,8 +806,8 @@ export function QuestionTabs(props) {
 										expanded === "panel5" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel5a-content"
 									id="panel5a-header"
@@ -836,8 +834,8 @@ export function QuestionTabs(props) {
 											expanded === "panel6" ? (
 												<RemoveCircleOutlineIcon />
 											) : (
-													<ControlPointIcon />
-												)
+												<ControlPointIcon />
+											)
 										}
 										aria-controls="panel6a-content"
 										id="panel6a-header"
@@ -915,8 +913,8 @@ export function QuestionTabs(props) {
 										expanded === "panel1" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel1a-content"
 									id="panel1a-header"
@@ -944,8 +942,8 @@ export function QuestionTabs(props) {
 										expanded === "panel2" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel2a-content"
 									id="panel2a-header"
@@ -969,8 +967,8 @@ export function QuestionTabs(props) {
 										expanded === "panel3" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel3a-content"
 									id="panel3a-header"
@@ -994,8 +992,8 @@ export function QuestionTabs(props) {
 										expanded === "panel4" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel4a-content"
 									id="panel4a-header"
@@ -1019,8 +1017,8 @@ export function QuestionTabs(props) {
 										expanded === "panel5" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel5a-content"
 									id="panel5a-header"
@@ -1047,8 +1045,8 @@ export function QuestionTabs(props) {
 											expanded === "panel6" ? (
 												<RemoveCircleOutlineIcon />
 											) : (
-													<ControlPointIcon />
-												)
+												<ControlPointIcon />
+											)
 										}
 										aria-controls="panel6a-content"
 										id="panel6a-header"
@@ -1120,8 +1118,8 @@ export function QuestionTabs(props) {
 										expanded === "panel1" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel1a-content"
 									id="panel1a-header"
@@ -1147,8 +1145,8 @@ export function QuestionTabs(props) {
 										expanded === "panel2" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel2a-content"
 									id="panel2a-header"
@@ -1174,8 +1172,8 @@ export function QuestionTabs(props) {
 										expanded === "panel3" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel3a-content"
 									id="panel3a-header"
@@ -1201,8 +1199,8 @@ export function QuestionTabs(props) {
 										expanded === "panel4" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel4a-content"
 									id="panel4a-header"
@@ -1228,8 +1226,8 @@ export function QuestionTabs(props) {
 										expanded === "panel5" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel5a-content"
 									id="panel5a-header"
@@ -1256,8 +1254,8 @@ export function QuestionTabs(props) {
 											expanded === "panel6" ? (
 												<RemoveCircleOutlineIcon />
 											) : (
-													<ControlPointIcon />
-												)
+												<ControlPointIcon />
+											)
 										}
 										aria-controls="panel6a-content"
 										id="panel6a-header"
@@ -1330,8 +1328,8 @@ export function QuestionTabs(props) {
 										expanded === "panel1" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel1a-content"
 									id="panel1a-header"
@@ -1364,8 +1362,8 @@ export function QuestionTabs(props) {
 										expanded === "panel2" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel2a-content"
 									id="panel2a-header"
@@ -1391,8 +1389,8 @@ export function QuestionTabs(props) {
 										expanded === "panel3" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel3a-content"
 									id="panel3a-header"
@@ -1426,8 +1424,8 @@ export function QuestionTabs(props) {
 										expanded === "panel4" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel4a-content"
 									id="panel4a-header"
@@ -1455,8 +1453,8 @@ export function QuestionTabs(props) {
 										expanded === "panel5" ? (
 											<RemoveCircleOutlineIcon />
 										) : (
-												<ControlPointIcon />
-											)
+											<ControlPointIcon />
+										)
 									}
 									aria-controls="panel5a-content"
 									id="panel5a-header"

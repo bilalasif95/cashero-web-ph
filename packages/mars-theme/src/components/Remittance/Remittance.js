@@ -13,13 +13,13 @@ import { Sendpayments } from "../Sendpayments/Sendpayments";
 import GlobeDollar from "../../assets/GlobeDollar.svg";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
-import Casher0map from "../../assets/Casher0map.png";
+import Casher0map from "../../assets/Casher0map.svg";
 import Done from "../../assets/done.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import StepsDollar from "../../assets/StepsDollar.svg";
 import Link from "../link";
-import {Securepayments} from "../Securepayments/Securepayments";
+import { Securepayments } from "../Securepayments/Securepayments";
 
 export function Remittance() {
 	const [appModal, setAppModal] = useState(false);
@@ -42,7 +42,7 @@ export function Remittance() {
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions</Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -71,7 +71,7 @@ export function Remittance() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-							How it Works. It’s Simple. 
+								How it Works. It’s Simple.
 							</h3>
 						</div>
 					</div>
@@ -112,7 +112,7 @@ export function Remittance() {
 							<div className="MultistepsCont">
 								<p>Ready to send money hassle-free? Cashero’s global payment solution is here for you and for what matters most.</p>
 								<button className="LinkBtn" onClick={appModalOpen}>
-								Get Early Access   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+									Get Early Access   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

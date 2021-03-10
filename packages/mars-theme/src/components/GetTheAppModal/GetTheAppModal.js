@@ -13,11 +13,11 @@ import Link from "../link";
 
 export default function GetTheAppModal(props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [code, setCode] = useState("+1");
+  const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(counrtrylist);
   const [searchResults2, setSearchResults2] = useState([]);
-  const [phonenoLength, setPhoneNoLength] = useState(10);
+  const [phonenoLength, setPhoneNoLength] = useState(0);
   const [newPhone, setNewPhoneNumber] = useState("");
   // const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -87,12 +87,16 @@ export default function GetTheAppModal(props) {
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
+          const countryCode = counrtrylist.filter(({ dial_code }) => dial_code === res.country_phone)
+          setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
           setCode("+1");
+          setPhoneNoLength(10);
         }
       }).catch(() => {
         setCode("+1");
+        setPhoneNoLength(10);
       })
   }, [])
   const { open, handleClose } = props;
@@ -124,7 +128,7 @@ export default function GetTheAppModal(props) {
                 We’ll send you a message with a link to download the app.
               </p>
               <p id="transition-modal-description">
-                You’ll also earn a chance to win $1,000 every 3 days! <span onClick={() => handleClose()}><Link link="/giveaway">Terms and
+                You’ll also earn a chance to win $1,000 every 3 days! <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and
                 conditions</Link></span> apply.
               </p>
               <div className="ModalPhone">

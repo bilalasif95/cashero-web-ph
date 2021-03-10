@@ -252,7 +252,7 @@ export function ExchangeRates() {
                     Open an account in minutes. Launching in June.
                   </li>
                 </ul>
-                <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions </Link> apply. </p>
+                <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions</Link> apply. </p>
               </div>
             </div>
             <div className="col-md-5">
@@ -334,115 +334,115 @@ export function ExchangeRates() {
                     </div>
                   </div>
                 ) : (
-                    <div className="ConBox">
-                      <div className="GbpRow">
-                        <div className="ConverterFlags">
-                          <div className="numberSelection">
-                            <div className="selectCountry">
-                              <Dropdown
-                                isOpen={dropdownOpengbp}
-                                toggle={togglegbp}
-                              >
-                                <DropdownToggle caret>
-                                  <div className="CountryFlag">
-                                    <span className="FlagIcon">{flaggbp} </span>
-                                  </div>
-                                  <span className="FlagCode">
-                                    {flagcurrencygbp}
-                                  </span>
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                  <DropdownItem header>
-                                    <>
-                                      <SearchIcon />
-                                      <input
-                                        type="text"
-                                        value={searchTermgbp}
-                                        onChange={handleChangegbp}
-                                      />
-                                    </>
-                                  </DropdownItem>
-                                  <div className="country-list">
-                                    {searchResults2gbp.length > 0
-                                      ? searchResults2gbp.map((item, index) => (
-                                        <DropdownItem
-                                          key={index + 1}
-                                          onClick={() => selectCountrygbp(item)}
-                                          className="country-item"
-                                        >
-                                          <div className="flag-name">
-                                            <span>{item.flag}</span>
-                                            {item.name}
-                                          </div>
-                                        </DropdownItem>
-                                      ))
-                                      : searchResultsgbp.map((item, index) => (
-                                        <DropdownItem
-                                          key={index + 1}
-                                          onClick={() => selectCountrygbp(item)}
-                                          className="country-item"
-                                        >
-                                          <div className="flag-name">
-                                            <span>{item.flag}</span>
-                                            {item.name}
-                                          </div>
-                                        </DropdownItem>
-                                      ))}
-                                  </div>
-                                </DropdownMenu>
-                              </Dropdown>
-                            </div>
+                  <div className="ConBox">
+                    <div className="GbpRow">
+                      <div className="ConverterFlags">
+                        <div className="numberSelection">
+                          <div className="selectCountry">
+                            <Dropdown
+                              isOpen={dropdownOpengbp}
+                              toggle={togglegbp}
+                            >
+                              <DropdownToggle caret>
+                                <div className="CountryFlag">
+                                  <span className="FlagIcon">{flaggbp} </span>
+                                </div>
+                                <span className="FlagCode">
+                                  {flagcurrencygbp}
+                                </span>
+                              </DropdownToggle>
+                              <DropdownMenu>
+                                <DropdownItem header>
+                                  <>
+                                    <SearchIcon />
+                                    <input
+                                      type="text"
+                                      value={searchTermgbp}
+                                      onChange={handleChangegbp}
+                                    />
+                                  </>
+                                </DropdownItem>
+                                <div className="country-list">
+                                  {searchResults2gbp.length > 0
+                                    ? searchResults2gbp.map((item, index) => (
+                                      <DropdownItem
+                                        key={index + 1}
+                                        onClick={() => selectCountrygbp(item)}
+                                        className="country-item"
+                                      >
+                                        <div className="flag-name">
+                                          <span>{item.flag}</span>
+                                          {item.name}
+                                        </div>
+                                      </DropdownItem>
+                                    ))
+                                    : searchResultsgbp.map((item, index) => (
+                                      <DropdownItem
+                                        key={index + 1}
+                                        onClick={() => selectCountrygbp(item)}
+                                        className="country-item"
+                                      >
+                                        <div className="flag-name">
+                                          <span>{item.flag}</span>
+                                          {item.name}
+                                        </div>
+                                      </DropdownItem>
+                                    ))}
+                                </div>
+                              </DropdownMenu>
+                            </Dropdown>
                           </div>
                         </div>
-                        <div className="ConverterInput">
-                          <div className="currencySymbol">
-                            {baseCurrency}&nbsp;
+                      </div>
+                      <div className="ConverterInput">
+                        <div className="currencySymbol">
+                          {baseCurrency}&nbsp;
                         </div>
-                          <TextField
-                            value={baseCurrencyValue}
-                            onChange={onBaseCurrencyValueChange}
-                            fullWidth
-                            type="number"
-                            variant="standard"
-                            className="PersonalBoxFieldGet"
-                          />
-                        </div>
+                        <TextField
+                          value={baseCurrencyValue}
+                          onChange={onBaseCurrencyValueChange}
+                          fullWidth
+                          type="number"
+                          variant="standard"
+                          className="PersonalBoxFieldGet"
+                        />
                       </div>
                     </div>
-                  )}
+                  </div>
+                )}
                 <div className="ExchangeBox">
                   {flagcodeeuro === flagcodegbp ? (
                     ""
                   ) : (
-                      <div className="exchangeAmount">
-                        <div className="ExchangeImg">
-                          <img alt="Coin Image" onClick={onSwap} src={ConImg} />
-                        </div>
-                        <div className="ExchangeNum">
-                          {loading ? (
-                            <p>Fetching Rates...</p>
-                          ) : swap ? (
-                            <p>
-                              {quoteCurrency}1 = {baseCurrency}
-                              {flagcodegbp === "US"
-                                ? actualLimit(baseCurrencyUSDValue)
-                                : flagcodegbp === "GB"
-                                  ? actualLimit(baseCurrencyGBPValue)
-                                  : actualLimit(baseCurrencyEURValue)}
-                            </p>
-                          ) : (
-                                <p>
-                                  {baseCurrency}1 = {quoteCurrency}
-                                  {flagcodeeuro === "US"
-                                    ? actualLimit(baseCurrencyUSDValue)
-                                    : flagcodeeuro === "GB"
-                                      ? actualLimit(baseCurrencyGBPValue)
-                                      : actualLimit(baseCurrencyEURValue)}
-                                </p>
-                              )}
-                        </div>
+                    <div className="exchangeAmount">
+                      <div className="ExchangeImg">
+                        <img alt="Coin Image" onClick={onSwap} src={ConImg} />
                       </div>
-                    )}
+                      <div className="ExchangeNum">
+                        {loading ? (
+                          <p>Fetching Rates...</p>
+                        ) : swap ? (
+                          <p>
+                            {quoteCurrency}1 = {baseCurrency}
+                            {flagcodegbp === "US"
+                              ? actualLimit(baseCurrencyUSDValue)
+                              : flagcodegbp === "GB"
+                                ? actualLimit(baseCurrencyGBPValue)
+                                : actualLimit(baseCurrencyEURValue)}
+                          </p>
+                        ) : (
+                          <p>
+                            {baseCurrency}1 = {quoteCurrency}
+                            {flagcodeeuro === "US"
+                              ? actualLimit(baseCurrencyUSDValue)
+                              : flagcodeeuro === "GB"
+                                ? actualLimit(baseCurrencyGBPValue)
+                                : actualLimit(baseCurrencyEURValue)}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  )}
                   {swap ? (
                     <div className="SwapGbpRow">
                       <div className="ConverterFlags">
@@ -520,86 +520,86 @@ export function ExchangeRates() {
                       </div>
                     </div>
                   ) : (
-                      <div className="EuroRow">
-                        <div className="ConverterFlags">
-                          <div className="numberSelection">
-                            <div className="selectCountry">
-                              <Dropdown
-                                isOpen={dropdownOpeneuro}
-                                toggle={toggleeuro}
-                              >
-                                <DropdownToggle caret>
-                                  <div className="CountryFlag">
-                                    <span className="FlagIcon">{flageuro}</span>
-                                  </div>
-                                  <span className="FlagCode">
-                                    {flagcurrencyeuro}
-                                  </span>
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                  <DropdownItem header>
-                                    <>
-                                      <SearchIcon />
-                                      <input
-                                        type="text"
-                                        value={searchTermeuro}
-                                        onChange={handleChangeeuro}
-                                      />
-                                    </>
-                                  </DropdownItem>
-                                  <div className="country-list">
-                                    {searchResults2euro.length > 0
-                                      ? searchResults2euro.map((item, index) => (
-                                        <DropdownItem
-                                          key={index + 1}
-                                          onClick={() =>
-                                            selectCountryeuro(item)
-                                          }
-                                          className="country-item"
-                                        >
-                                          <div className="flag-name">
-                                            <span>{item.flag}</span>
-                                            {item.name}
-                                          </div>
-                                        </DropdownItem>
-                                      ))
-                                      : searchResultseuro.map((item, index) => (
-                                        <DropdownItem
-                                          key={index + 1}
-                                          onClick={() =>
-                                            selectCountryeuro(item)
-                                          }
-                                          className="country-item"
-                                        >
-                                          <div className="flag-name">
-                                            <span>{item.flag}</span>
-                                            {item.name}
-                                          </div>
-                                        </DropdownItem>
-                                      ))}
-                                  </div>
-                                </DropdownMenu>
-                              </Dropdown>
-                            </div>
+                    <div className="EuroRow">
+                      <div className="ConverterFlags">
+                        <div className="numberSelection">
+                          <div className="selectCountry">
+                            <Dropdown
+                              isOpen={dropdownOpeneuro}
+                              toggle={toggleeuro}
+                            >
+                              <DropdownToggle caret>
+                                <div className="CountryFlag">
+                                  <span className="FlagIcon">{flageuro}</span>
+                                </div>
+                                <span className="FlagCode">
+                                  {flagcurrencyeuro}
+                                </span>
+                              </DropdownToggle>
+                              <DropdownMenu>
+                                <DropdownItem header>
+                                  <>
+                                    <SearchIcon />
+                                    <input
+                                      type="text"
+                                      value={searchTermeuro}
+                                      onChange={handleChangeeuro}
+                                    />
+                                  </>
+                                </DropdownItem>
+                                <div className="country-list">
+                                  {searchResults2euro.length > 0
+                                    ? searchResults2euro.map((item, index) => (
+                                      <DropdownItem
+                                        key={index + 1}
+                                        onClick={() =>
+                                          selectCountryeuro(item)
+                                        }
+                                        className="country-item"
+                                      >
+                                        <div className="flag-name">
+                                          <span>{item.flag}</span>
+                                          {item.name}
+                                        </div>
+                                      </DropdownItem>
+                                    ))
+                                    : searchResultseuro.map((item, index) => (
+                                      <DropdownItem
+                                        key={index + 1}
+                                        onClick={() =>
+                                          selectCountryeuro(item)
+                                        }
+                                        className="country-item"
+                                      >
+                                        <div className="flag-name">
+                                          <span>{item.flag}</span>
+                                          {item.name}
+                                        </div>
+                                      </DropdownItem>
+                                    ))}
+                                </div>
+                              </DropdownMenu>
+                            </Dropdown>
                           </div>
                         </div>
-                        <div className="ConverterInput">
-                          <div className="currencySymbol">
-                            {quoteCurrency}&nbsp;
-                        </div>
-                          <TextField
-                            fullWidth
-                            value={limit(quoteCurrencyValue)}
-                            onChange={(e) =>
-                              setQuoteCurrencyValue(e.target.value)
-                            }
-                            type="number"
-                            variant="standard"
-                            className="PersonalBoxFieldGet"
-                          />
-                        </div>
                       </div>
-                    )}
+                      <div className="ConverterInput">
+                        <div className="currencySymbol">
+                          {quoteCurrency}&nbsp;
+                        </div>
+                        <TextField
+                          fullWidth
+                          value={limit(quoteCurrencyValue)}
+                          onChange={(e) =>
+                            setQuoteCurrencyValue(e.target.value)
+                          }
+                          type="number"
+                          variant="standard"
+                          className="PersonalBoxFieldGet"
+                        />
+                      </div>
+                    </div>
+                  )}
                   <ul className="NofeeList list-unstyled">
                     <li>No fee added by Cashero</li>
                   </ul>

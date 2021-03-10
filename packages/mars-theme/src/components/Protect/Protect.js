@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
-import Lock from "../../assets/lock.png";
+import Lock from "../../assets/lock.svg";
 
 export function Protect() {
 	const [appModal, setAppModal] = useState(false);
@@ -19,7 +19,7 @@ export function Protect() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-							Use Cashero to Protect  <span className="br-block"></span> Your Money from Currency <span className="br-block"></span>  Value Fluctuations
+								Use Cashero to Protect  <span className="br-block"></span> Your Money from Currency <span className="br-block"></span>  Value Fluctuations
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={400}>
@@ -28,7 +28,7 @@ export function Protect() {
 						</Fade>
 						<Fade triggerOnce direction="up" delay={1000}>
 							<button onClick={appModalOpen} className="LinkBtn" >
-							Get Early Access <img alt="Arrow" className="ArrowBtn" src={Arrow} />
+								Get Early Access <img alt="Arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}

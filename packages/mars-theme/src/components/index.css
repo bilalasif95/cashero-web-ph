@@ -1811,6 +1811,10 @@ b {
   color: #00D2FF !important;
   border-bottom: 1px solid #00D2FF;
 }
+.giveaway-link2 {
+  color: #9da0a5 !important;
+  border-bottom: 1px solid #9da0a5;
+}
 
 @media (max-width: 540px) {
   .CharityList {

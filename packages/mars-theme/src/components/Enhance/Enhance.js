@@ -16,7 +16,7 @@ export function Enhance() {
 									Make profit on your profit with our high yield savings. <span className="br-block"></span> Send, request, and receive money from customers worldwide.
 								</p>
 								<a className="Link" href="/#">
-									Learn more about Business Payments  <img alt="Arrow" className="ArrowBtn" src={ArrowWhite} />
+									Learn more about Business  <img alt="Arrow" className="ArrowBtn" src={ArrowWhite} />
 								</a>
 							</Fade>
 						</div>
