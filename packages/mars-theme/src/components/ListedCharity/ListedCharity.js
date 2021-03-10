@@ -55,8 +55,8 @@ export function ListedCharity() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList3 list-unstyled">
-							<li><img alt="heart Dollar" src={heartDollar} />Discover new charities</li>
-							<li><img alt="donate Dollar" src={donateDollar} />Donate directly</li>
+							<li><img alt="heart Dollar" src={heartDollar} />Become listed as a charity</li>
+							<li><img alt="donate Dollar" src={donateDollar} />Receive donations directly at any time</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
 							{/* <li><img alt="Draw" src={Draw} />Donate your money at any time</li> */}
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>

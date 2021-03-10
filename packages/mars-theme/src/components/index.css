@@ -15644,12 +15644,15 @@ select:-webkit-autofill:focus {
     align-items: center;
     margin-top: 25px;
   }
-  .Thankyou-modal-list li:nth-of-type(3) img{
+  .Thankyou-modal-list li:nth-of-type(4) img {
     height: 23px;
     width: 24px;
   }
   .Thankyou-modal-list li:not(:last-child){
     margin-right: 21px;
+  }
+  .Thankyou-modal-list li:first-of-type{
+    margin-top: 3px;
   }
   .join-text{
     text-align: center;

@@ -5,9 +5,11 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Wait2 from "../../assets/wait.svg";
 import Facebook from "../../assets/facebook.svg";
-import Twitter from "../../assets/twitter.svg"; 
+import Twitter from "../../assets/twitter.svg";
 import Link from "../link";
-import Gmail from "../../assets/gmail.png"; 
+import Gmail from "../../assets/gmail.png";
+import { websiteLink } from "../../config/config";
+import { FacebookShareButton, EmailShareButton, TwitterShareButton } from "react-share";
 
 export default function ThanksModal(props) {
     const { open, handleClose } = props
@@ -36,21 +38,17 @@ export default function ThanksModal(props) {
                                     <h3 id="transition-modal-title">Thank you for joining <span className="br-block"></span> Cashero!</h3>
                                     <p>We’ve sent you an SMS with a link to download the app.</p>
                                 </div>
-
                                 <div className="win-cont">
                                     <h3 id="transition-modal-title">Want to win $1,000?</h3>
                                     <p>We’re giving away $1,000 every 3 days. Download the app, refer your friends to Cashero and earn golden tickets. The more golden tickets you have, the higher your odds of winning!</p>
-
-                                    <span onClick={() => handleClose()}><Link className="giveaway-link" link="/Giveaway"> Terms and conditions</Link></span>
-
+                                    <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/Giveaway"> Terms and conditions</Link></span>
                                     <ul className="Thankyou-modal-list list-unstyled">
-                                        <li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
-                                        <li><a href="https://twitter.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Twitter" src={Twitter} /> </a></li>
-                                        <li><a href="mailto:info@cashero.com" target="_blank" rel="noopener noreferrer"><img alt="gmail" src={Gmail} /> </a></li>
+                                        <li>Click & Share:</li>
+                                        <li><FacebookShareButton quote="Join Cashero to earn 5% interest on your money: https://www.cashero.com" url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>
+                                        <li><TwitterShareButton title="Join Cashero to earn 5% interest on your money: " url={websiteLink}><img alt="Twitter" src={Twitter} /> </TwitterShareButton></li>
+                                        <li><EmailShareButton separator=" " subject="Join Cashero" body="Join Cashero to earn 5% interest on your money: " url={websiteLink}><img alt="gmail" src={Gmail} /> </EmailShareButton></li>
                                     </ul>
-
                                 </div>
-
                             </div>
                             <div className="col-md-6">
                                 <img
@@ -59,7 +57,7 @@ export default function ThanksModal(props) {
                                     src={Wait2}
                                 />
                             </div>
-                            <p className="join-text">Join Cashero to earn 5% interest on your money: <Link to="https://www.cashero.com">https://www.cashero.com</Link></p>
+                            {/* <p className="join-text">Join Cashero to earn 5% interest on your money: <Link to="https://www.cashero.com">https://www.cashero.com</Link></p> */}
                         </div>
                     </div>
                 </div>
