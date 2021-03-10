@@ -37,7 +37,7 @@ export function ReceivePayments() {
 						<div className="col-md-7">
 							<div className="PersonalCont">
 								<h1>Instant Money <span className="br-block"></span> Transfer </h1>
-								<p className="bannerPara">Send, Request and Receive Payments in a Flash.</p>
+								<p className="bannerPara">Send, request and receive payments in a flash. Pay and get paid, we make it easy.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>

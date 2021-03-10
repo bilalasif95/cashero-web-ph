@@ -1267,7 +1267,9 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
   margin-left: 10px; }
 
 .bannerPara {
-  color: #fff !important; }
+  color: #fff !important;
+  width: 85%;
+}
 
 .Graph .dropdown-menu {
   left: -45px !important;
