@@ -223,7 +223,7 @@ body{
     .numberSelection .selectCountry {
       width: 20% !important; }
     .numberSelection .inputNum {
-      width: 65%; }
+      width: 42%; }
     .numberSelection .Appbtn {
       margin-left: 0 !important;
       margin-top: 1.5rem !important; } }
@@ -1004,8 +1004,16 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     font-size: 14px;
     font-weight: 500; }
   .Appbtn {
-    margin: 0; } }
-
+    margin: 0;
+    padding: 12.5px 14.5px !important; } }
+@media (max-width: 768px) {
+  .PesonalBanner{
+    padding: 30px 0px !important;
+  }
+  .PesonalBanner .numberSelection {
+    margin: 30px 0 0 !important;
+  }
+}
 @media (max-width: 767px) {
   .MoreBlogs {
     margin-top: 0px !important; }
@@ -1268,7 +1276,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
 
 .bannerPara {
   color: #fff !important;
-  width: 85%;
+  width: 75%;
 }
 
 .Graph .dropdown-menu {
@@ -2882,7 +2890,11 @@ b {
 
 @media (max-width: 1140px) {
   .SignUp .selectCountry {
-    width: 10% !important; } }
+    width: 10% !important; }
+    .bannerPara {
+      width: 93%;
+    }
+  }
 
 @media (max-width: 1024px) {
   .SignUp .selectCountry {
@@ -2895,7 +2907,11 @@ b {
 
 @media (max-width: 767px) {
   .SignUp .selectCountry {
-    width: 9% !important; } }
+    width: 9% !important; }
+    .bannerPara {
+      width: 100%;
+  }
+ }
 
 .SignUp #country-select-demo {
   width: 100%;
@@ -2943,9 +2959,8 @@ b {
 
 @media (max-width: 540px) {
   .Graph {
-    width: 90% !important;
-    margin: 0px auto;
-    margin-bottom: 40px !important; }
+    width: 60% !important;
+    margin: 30px auto 0px !important; }
    
   .Globe .HighInterestTitle, .Globe .HighInterestText {
     color: #363636 !important;
@@ -3655,10 +3670,6 @@ button:focus {
 .numberSelection .MuiInput-underline:after {
   border-bottom: 1px solid #fff !important; }
 
-.PesonalBanner .numberSelection {
-  display: flex;
-  width: 100%;
-  margin: 75px 0 0; }
 
 .PesonalBanner .MuiIconButton-label svg path {
   fill: #fff; }
@@ -3814,11 +3825,6 @@ button:focus {
       text-align: center;
       line-height: 56px; }}
 
-.PesonalBanner .numberSelection {
-  display: flex;
-  width: 100%;
-  margin: 75px 0 0; }
-
 .PesonalBanner .MuiIconButton-label svg path {
   fill: #fff; }
 
@@ -3827,9 +3833,6 @@ button:focus {
 
 .PesonalBanner .MuiFormLabel-root {
   color: #FFFFFF !important; }
-
-.InterestBanner .selectCountry {
-  width: 11.5%; }
 
 .InputBox, .InputBox1, .InputBox2  {
   box-shadow: -20px 0 20px rgba(0, 0, 0, 0.3);
@@ -4180,11 +4183,6 @@ button:focus {
   color: #fff;
   padding: 98px 0px 98px 0px;
   margin-top: 98px; }
-
-.PesonalBanner .numberSelection {
-  display: flex;
-  width: 100%;
-  margin: 75px 0 0; }
 
 .PesonalBanner .MuiIconButton-label svg path {
   fill: #fff; }
@@ -4744,10 +4742,6 @@ button:focus {
   align-items: center; }
 
 @media (max-width: 540px) {
-  .Graph {
-    width: 90% !important;
-    margin: 0px auto;
-    margin-bottom: 0px !important; }
   .HighInterestTitle, .HighInterestText {
     color: #fff !important;
     text-align: center; }
@@ -5005,11 +4999,6 @@ button:focus {
         margin: 0;
         width: 100%; } }
 
-.PesonalBanner .numberSelection {
-  display: flex;
-  width: 100%;
-  margin: 75px 0 0; }
-
 .PesonalBanner .MuiIconButton-label svg path {
   fill: #fff; }
 
@@ -5020,7 +5009,7 @@ button:focus {
   color: #FFFFFF !important; }
 
 .InterestBanner .selectCountry {
-  width: 10% !important; }
+  width: 14% !important; }
 
   .InputBox1 .MuiInputBase-input {
     padding: 0px 0px 4px; }

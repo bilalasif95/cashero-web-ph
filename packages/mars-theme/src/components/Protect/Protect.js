@@ -34,7 +34,7 @@ export function Protect() {
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 					</div>
 				</div>
-				<div className="col-md-6">
+				<div className="col-md-6 sm-mt-30">
 					<img
 						className="img-fluid mx-auto d-block"
 						src={Lock}
