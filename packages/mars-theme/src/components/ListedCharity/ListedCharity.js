@@ -36,7 +36,7 @@ export function ListedCharity() {
 					<div className="row">
 						<div className="col-md-6">
 							<div className="PersonalCont">
-								<h1>Harness the Power Of Free Fundraising</h1>
+								<h1>Harness the Power of Free Fundraising</h1>
 								<p className="bannerPara">We spread your story, you receive 100% of the donations, the world benefits.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">

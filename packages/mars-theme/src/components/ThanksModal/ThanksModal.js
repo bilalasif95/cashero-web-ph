@@ -40,7 +40,7 @@ export default function ThanksModal(props) {
                                 </div>
                                 <div className="win-cont">
                                     <h3 id="transition-modal-title">Want to win $1,000?</h3>
-                                    <p>We’re giving away $1,000 every 3 days. Download the app, refer your friends to Cashero and earn golden tickets. The more golden tickets you have, the higher your odds of winning!</p>
+                                    <p>Download the app, refer your friends to Cashero, and earn Golden Tickets. The more Golden Tickets you have, the higher your odds of winning $1000! If your friend wins, you get $100 as a referral bonus.</p>
                                     <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/Giveaway"> Terms and conditions</Link></span>
                                     <ul className="Thankyou-modal-list list-unstyled">
                                         <li>Click & Share:</li>

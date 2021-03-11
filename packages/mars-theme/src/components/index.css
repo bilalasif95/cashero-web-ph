@@ -15660,7 +15660,13 @@ select:-webkit-autofill:focus {
   #transition-modal-title a{
     color: #363636 !important;
   }
+  .Globe {
+    padding: 100px 0px;
+  }
   @media (max-width: 540px) {
+    .Globe {
+      padding: 0px 0px 40px 0px;
+    }
     .Thankyou-modal-list {
       justify-content: center;
     }
