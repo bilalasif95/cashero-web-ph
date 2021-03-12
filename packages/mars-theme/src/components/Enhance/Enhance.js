@@ -1,5 +1,5 @@
 import React from "react";
-import Hand from "../../assets/handImg.png";
+import Hand from "../../assets/handImg.svg";
 import { Fade } from "react-awesome-reveal";
 import ArrowWhite from "../../assets/arrowLinkWhite.svg";
 
