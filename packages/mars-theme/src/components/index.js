@@ -38,7 +38,7 @@ const Theme = ({ state }) => {
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
         <meta name="google-site-verification" content="ULLpQHl1XeVHE2H-ZSPLosCUY10CBkttCwbNrfMBVsc" />
-        <meta name="robots" content="noodp, noydir, index, follow, archive" />
+        <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <link rel="canonical" href={websiteLink} />
         <meta property="og:title" content={state.frontity.title} />
