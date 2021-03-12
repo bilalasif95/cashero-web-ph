@@ -6,7 +6,7 @@ const firebaseAPI =
 
 export const websiteLink = "https://staging.cashero.com";
 
-export const wordPressLink = "https://test.cashero.com";
+export const wordPressLink = "https://wp.cashero.com";
 
 export const gtmId = "GTM-KKSRK7H";
 
