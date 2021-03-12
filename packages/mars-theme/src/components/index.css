@@ -15703,6 +15703,9 @@ select:-webkit-autofill:focus {
       .copiedButton{
         width: auto !important;
       }
+      .Enhance {
+        text-align: center;
+      }
     }
 
     .copiedButton {
