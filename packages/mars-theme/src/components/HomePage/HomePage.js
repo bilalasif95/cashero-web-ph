@@ -49,7 +49,7 @@ export function HomePage(props) {
                     </h2>
                     <h2 className="bannerText slide-up">
                       <img src={Check} alt="check" />
-                      No hidden fees, no minimum deposits, and no stress.
+                      No hidden fees, no minimum balance, and no stress.
                     </h2>
                   </div>
                 </Fade>
