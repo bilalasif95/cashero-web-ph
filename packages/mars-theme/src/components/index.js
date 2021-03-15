@@ -74,7 +74,7 @@ const Theme = ({ state }) => {
         <Loading when={data.isFetching} />
         <HomePage when={data.isArchive} state={state} />
         <Post when={data.isPostType} />
-        <BlogPage blogsCategories={categories} when={data.isBlog} />
+        <BlogPage when={data.isBlog} />
         <PageError when={data.isError} />
       </Switch>
       {/* </Main> */}

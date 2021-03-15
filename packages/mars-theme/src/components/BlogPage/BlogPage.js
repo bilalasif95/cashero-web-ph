@@ -11,13 +11,14 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap
 import FeaturedMedia from "../featured-media";
 import Link from "../link";
 
-const BlogPage = ({ state, blogsCategories }) => {
+const BlogPage = ({ state }) => {
 	const [value, setValue] = useState("All");
 	const [loading, setLoading] = useState(true);
 	const [tabLoading, setTabLoading] = useState(false);
 	const [categoryData, setCategoryData] = useState([]);
 	const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
 	const data = Object.values(state.source.post);
+	const blogsCategories = Object.values(state.source.category);
 	const togglegbp = () => {
 		setDropdownOpengbp((prevState) => !prevState);
 	};
@@ -140,10 +141,44 @@ const BlogPage = ({ state, blogsCategories }) => {
 													Loading...
 												</div>
 											) : (
-													<>
-														<div className="col-md-6">
-															{data.reverse()
-																.slice(0, 1)
+												<>
+													<div className="col-md-6">
+														{data.reverse()
+															.slice(0, 1)
+															.map(
+																({ type, id }
+																) => {
+																	const item = state.source[type][id];
+																	const date = new Date(item.date).toLocaleDateString();
+																	return (
+																		<Link link={item.link}>
+																			<div className="BlogBox">
+																				<div className="MainblogImg">
+																					{state.theme.featured.showOnList && (
+																						<FeaturedMedia id={item.featured_media} />
+																					)}
+																				</div>
+																				<div>
+																					<span className="date">
+																						{date}
+																					</span>
+																					<h1>
+																						<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																					</h1>
+																					<p>
+																						<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																					</p>
+																				</div>
+																			</div>
+																		</Link>
+																	)
+																}
+															)}
+													</div>
+													<div className="col-md-6">
+														<div className="sideBlogs">
+															{data
+																.slice(1, 4)
 																.map(
 																	({ type, id }
 																	) => {
@@ -151,22 +186,28 @@ const BlogPage = ({ state, blogsCategories }) => {
 																		const date = new Date(item.date).toLocaleDateString();
 																		return (
 																			<Link link={item.link}>
-																				<div className="BlogBox">
-																					<div className="MainblogImg">
-																						{state.theme.featured.showOnList && (
-																							<FeaturedMedia id={item.featured_media} />
-																						)}
-																					</div>
-																					<div>
-																						<span className="date">
-																							{date}
-																						</span>
-																						<h1>
-																							<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																						</h1>
-																						<p>
-																							<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																						</p>
+																				<div className="BlogSideBox">
+																					<div className="row">
+																						<div className="col-md-6 col-12">
+																							<div className="sideblogImg">
+																								{state.theme.featured.showOnList && (
+																									<FeaturedMedia id={item.featured_media} />
+																								)}
+																							</div>
+																						</div>
+																						<div className="col-md-6 col-12">
+																							<div className="blogCont">
+																								<span className="date mt-0">
+																									{date}
+																								</span>
+																								<h1>
+																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																								</h1>
+																								<p>
+																									<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																								</p>
+																							</div>
+																						</div>
 																					</div>
 																				</div>
 																			</Link>
@@ -174,49 +215,9 @@ const BlogPage = ({ state, blogsCategories }) => {
 																	}
 																)}
 														</div>
-														<div className="col-md-6">
-															<div className="sideBlogs">
-																{data
-																	.slice(1, 4)
-																	.map(
-																		({ type, id }
-																		) => {
-																			const item = state.source[type][id];
-																			const date = new Date(item.date).toLocaleDateString();
-																			return (
-																				<Link link={item.link}>
-																					<div className="BlogSideBox">
-																						<div className="row">
-																							<div className="col-md-6 col-12">
-																								<div className="sideblogImg">
-																									{state.theme.featured.showOnList && (
-																										<FeaturedMedia id={item.featured_media} />
-																									)}
-																								</div>
-																							</div>
-																							<div className="col-md-6 col-12">
-																								<div className="blogCont">
-																									<span className="date mt-0">
-																										{date}
-																									</span>
-																									<h1>
-																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																									</h1>
-																									<p>
-																										<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																									</p>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</Link>
-																			)
-																		}
-																	)}
-															</div>
-														</div>
-													</>
-												)}
+													</div>
+												</>
+											)}
 										</div>
 										<div className="MoreBlogs">
 											<div className="row">
@@ -273,42 +274,42 @@ const BlogPage = ({ state, blogsCategories }) => {
 																Loading...
 															</div>
 														) : (
-																<>
-																	<div className="col-md-6">
-																		{categoryData.reverse()
-																			.slice(0, 1)
-																			.map(
-																				({ type, id }
-																				) => {
-																					const item = state.source[type][id];
-																					const date = new Date(item.date).toLocaleDateString();
-																					return (
-																						<Link link={item.link}>
-																							<div className="BlogBox">
-																								<div className="MainblogImg">
-																									{state.theme.featured.showOnList && (
-																										<FeaturedMedia id={item.featured_media} />
-																									)}
-																								</div>
-																								<div>
-																									<span className="date">
-																										{date}
-																									</span>
-																									<h1>
-																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																									</h1>
-																									<p>
-																										<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																									</p>
-																								</div>
+															<>
+																<div className="col-md-6">
+																	{categoryData.reverse()
+																		.slice(0, 1)
+																		.map(
+																			({ type, id }
+																			) => {
+																				const item = state.source[type][id];
+																				const date = new Date(item.date).toLocaleDateString();
+																				return (
+																					<Link link={item.link}>
+																						<div className="BlogBox">
+																							<div className="MainblogImg">
+																								{state.theme.featured.showOnList && (
+																									<FeaturedMedia id={item.featured_media} />
+																								)}
 																							</div>
-																						</Link>
-																					)
-																				}
-																			)}
-																	</div>
-																</>
-															)}
+																							<div>
+																								<span className="date">
+																									{date}
+																								</span>
+																								<h1>
+																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																								</h1>
+																								<p>
+																									<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																								</p>
+																							</div>
+																						</div>
+																					</Link>
+																				)
+																			}
+																		)}
+																</div>
+															</>
+														)}
 														<div className="col-md-6">
 															<div className="sideBlogs">
 																{categoryData
@@ -407,42 +408,42 @@ const BlogPage = ({ state, blogsCategories }) => {
 																Loading...
 															</div>
 														) : (
-																<>
-																	<div className="col-md-6">
-																		{categoryData.reverse()
-																			.slice(0, 1)
-																			.map(
-																				({ type, id }
-																				) => {
-																					const item = state.source[type][id];
-																					const date = new Date(item.date).toLocaleDateString();
-																					return (
-																						<Link link={item.link}>
-																							<div className="BlogBox">
-																								<div className="MainblogImg">
-																									{state.theme.featured.showOnList && (
-																										<FeaturedMedia id={item.featured_media} />
-																									)}
-																								</div>
-																								<div>
-																									<span className="date">
-																										{date}
-																									</span>
-																									<h1>
-																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																									</h1>
-																									<p>
-																										<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																									</p>
-																								</div>
+															<>
+																<div className="col-md-6">
+																	{categoryData.reverse()
+																		.slice(0, 1)
+																		.map(
+																			({ type, id }
+																			) => {
+																				const item = state.source[type][id];
+																				const date = new Date(item.date).toLocaleDateString();
+																				return (
+																					<Link link={item.link}>
+																						<div className="BlogBox">
+																							<div className="MainblogImg">
+																								{state.theme.featured.showOnList && (
+																									<FeaturedMedia id={item.featured_media} />
+																								)}
 																							</div>
-																						</Link>
-																					)
-																				}
-																			)}
-																	</div>
-																</>
-															)}
+																							<div>
+																								<span className="date">
+																									{date}
+																								</span>
+																								<h1>
+																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																								</h1>
+																								<p>
+																									<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																								</p>
+																							</div>
+																						</div>
+																					</Link>
+																				)
+																			}
+																		)}
+																</div>
+															</>
+														)}
 														<div className="col-md-6">
 															<div className="sideBlogs">
 																{categoryData
