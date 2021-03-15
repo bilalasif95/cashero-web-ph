@@ -85,7 +85,7 @@ export function Footer() {
 				<hr />
 				<div className="SocialBox">
 					<div className="CopyRight">
-						<p>&copy;2021 Cashero Limited&reg;</p>
+						<p>Cashero 2021&copy;&reg;</p>
 					</div>
 					<div className="SocialCont">
 						<p>United States - English</p>
