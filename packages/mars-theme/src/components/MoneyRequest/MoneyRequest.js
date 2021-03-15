@@ -8,7 +8,7 @@ import Arrow from "../../assets/arrowLink.svg";
 
 export function MoneyRequest() {
 	return (
-		<div className="MoneyRequest sm-mt-30">
+		<div className="MoneyRequest transfer-money sm-mt-30">
 			<div className="row">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
