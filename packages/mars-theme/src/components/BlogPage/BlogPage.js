@@ -33,20 +33,16 @@ const BlogPage = ({ state }) => {
 		else if (typeof newValue === 'number') {
 			setValue(newValue);
 			setCategoryData([])
-			Object.keys(state.source.category).reduce((acc, categoryId) => {
-				const posts = getPostsFromCategory(state.source, newValue)
-				setCategoryData(posts)
-				setTabLoading(false);
-			})
+			const posts = getPostsFromCategory(state.source, newValue)
+			setCategoryData(posts)
+			setTabLoading(false);
 		}
 		else {
 			setValue(newValue);
 			setCategoryData([])
-			Object.keys(state.source.category).reduce((acc, categoryId) => {
-				const posts = getPostsFromCategory(state.source, id)
-				setCategoryData(posts)
-				setTabLoading(false);
-			})
+			const posts = getPostsFromCategory(state.source, id)
+			setCategoryData(posts)
+			setTabLoading(false);
 		}
 	};
 	useEffect(() => {
@@ -131,89 +127,78 @@ const BlogPage = ({ state }) => {
 								<div className="col-md-12">
 									<TabPanel value="All">
 										<div className="row">
-											{data.length === 0 && (
-												<div className="noRecord">
-													No record found.
-												</div>
-											)}
 											{tabLoading ? (
 												<div className="noRecord">
-													Loading...
+													<CircularProgress />
+												</div>
+											) : data.length === 0 ? (
+												<div className="noRecord">
+													No record found.
 												</div>
 											) : (
 												<>
 													<div className="col-md-6">
-														{data.reverse()
-															.slice(0, 1)
-															.map(
-																({ type, id }
-																) => {
-																	const item = state.source[type][id];
-																	const date = new Date(item.date).toLocaleDateString();
-																	return (
-																		<Link link={item.link}>
-																			<div className="BlogBox">
-																				<div className="MainblogImg">
-																					{state.theme.featured.showOnList && (
-																						<FeaturedMedia id={item.featured_media} />
-																					)}
-																				</div>
-																				<div>
-																					<span className="date">
-																						{date}
-																					</span>
-																					<h1>
-																						<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																					</h1>
-																					<p>
-																						<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																					</p>
-																				</div>
-																			</div>
-																		</Link>
-																	)
-																}
-															)}
+														{data.reverse().slice(0, 1).map(({ type, id }) => {
+															const item = state.source[type][id];
+															const date = new Date(item.date).toLocaleDateString();
+															return (
+																<Link link={item.link}>
+																	<div className="BlogBox">
+																		<div className="MainblogImg">
+																			{state.theme.featured.showOnList && (
+																				<FeaturedMedia id={item.featured_media} />
+																			)}
+																		</div>
+																		<div>
+																			<span className="date">
+																				{date}
+																			</span>
+																			<h1>
+																				<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																			</h1>
+																			<p>
+																				<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																			</p>
+																		</div>
+																	</div>
+																</Link>
+															)
+														})}
 													</div>
 													<div className="col-md-6">
 														<div className="sideBlogs">
-															{data
-																.slice(1, 4)
-																.map(
-																	({ type, id }
-																	) => {
-																		const item = state.source[type][id];
-																		const date = new Date(item.date).toLocaleDateString();
-																		return (
-																			<Link link={item.link}>
-																				<div className="BlogSideBox">
-																					<div className="row">
-																						<div className="col-md-6 col-12">
-																							<div className="sideblogImg">
-																								{state.theme.featured.showOnList && (
-																									<FeaturedMedia id={item.featured_media} />
-																								)}
-																							</div>
-																						</div>
-																						<div className="col-md-6 col-12">
-																							<div className="blogCont">
-																								<span className="date mt-0">
-																									{date}
-																								</span>
-																								<h1>
-																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																								</h1>
-																								<p>
-																									<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																								</p>
-																							</div>
-																						</div>
+															{data.slice(1, 4).map(({ type, id }) => {
+																const item = state.source[type][id];
+																const date = new Date(item.date).toLocaleDateString();
+																return (
+																	<Link link={item.link}>
+																		<div className="BlogSideBox">
+																			<div className="row">
+																				<div className="col-md-6 col-12">
+																					<div className="sideblogImg">
+																						{state.theme.featured.showOnList && (
+																							<FeaturedMedia id={item.featured_media} />
+																						)}
 																					</div>
 																				</div>
-																			</Link>
-																		)
-																	}
-																)}
+																				<div className="col-md-6 col-12">
+																					<div className="blogCont">
+																						<span className="date mt-0">
+																							{date}
+																						</span>
+																						<h1>
+																							<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																						</h1>
+																						<p>
+																							<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																						</p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</Link>
+																)
+															})}
 														</div>
 													</div>
 												</>
@@ -221,41 +206,36 @@ const BlogPage = ({ state }) => {
 										</div>
 										<div className="MoreBlogs">
 											<div className="row">
-												{data
-													.slice(4)
-													.map(
-														({ type, id }
-														) => {
-															const item = state.source[type][id];
-															const date = new Date(item.date).toLocaleDateString();
-															return (
-																<div className="col-md-4">
-																	<Link link={item.link}>
-																		<div className="blogCont">
-																			<div className="MoreBlogsCont">
-																				<div className="moreblogImg">
-																					{state.theme.featured.showOnList && (
-																						<FeaturedMedia id={item.featured_media} />
-																					)}
-																				</div>
-																				<div>
-																					<span className="date">
-																						{date}
-																					</span>
-																					<h1>
-																						<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																					</h1>
-																					<p>
-																						<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																					</p>
-																				</div>
-																			</div>
+												{data.slice(4).map(({ type, id }) => {
+													const item = state.source[type][id];
+													const date = new Date(item.date).toLocaleDateString();
+													return (
+														<div className="col-md-4">
+															<Link link={item.link}>
+																<div className="blogCont">
+																	<div className="MoreBlogsCont">
+																		<div className="moreblogImg">
+																			{state.theme.featured.showOnList && (
+																				<FeaturedMedia id={item.featured_media} />
+																			)}
 																		</div>
-																	</Link>
+																		<div>
+																			<span className="date">
+																				{date}
+																			</span>
+																			<h1>
+																				<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																			</h1>
+																			<p>
+																				<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																			</p>
+																		</div>
+																	</div>
 																</div>
-															)
-														}
-													)}
+															</Link>
+														</div>
+													)
+												})}
 											</div>
 										</div>
 									</TabPanel>
@@ -264,131 +244,115 @@ const BlogPage = ({ state }) => {
 											return (
 												<TabPanel value={res.id}>
 													<div className="row">
-														{categoryData.length === 0 && (
-															<div className="noRecord">
-																No record found.
-															</div>
-														)}
 														{tabLoading ? (
 															<div className="noRecord">
-																Loading...
+																<CircularProgress />
+															</div>
+														) : categoryData.length === 0 ? (
+															<div className="noRecord">
+																No record found.
 															</div>
 														) : (
 															<>
 																<div className="col-md-6">
-																	{categoryData.reverse()
-																		.slice(0, 1)
-																		.map(
-																			({ type, id }
-																			) => {
-																				const item = state.source[type][id];
-																				const date = new Date(item.date).toLocaleDateString();
-																				return (
-																					<Link link={item.link}>
-																						<div className="BlogBox">
-																							<div className="MainblogImg">
-																								{state.theme.featured.showOnList && (
-																									<FeaturedMedia id={item.featured_media} />
-																								)}
-																							</div>
-																							<div>
-																								<span className="date">
-																									{date}
-																								</span>
-																								<h1>
-																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																								</h1>
-																								<p>
-																									<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																								</p>
-																							</div>
-																						</div>
-																					</Link>
-																				)
-																			}
-																		)}
+																	{categoryData.reverse().slice(0, 1).map(({ type, id }) => {
+																		const item = state.source[type][id];
+																		const date = new Date(item.date).toLocaleDateString();
+																		return (
+																			<Link link={item.link}>
+																				<div className="BlogBox">
+																					<div className="MainblogImg">
+																						{state.theme.featured.showOnList && (
+																							<FeaturedMedia id={item.featured_media} />
+																						)}
+																					</div>
+																					<div>
+																						<span className="date">
+																							{date}
+																						</span>
+																						<h1>
+																							<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																						</h1>
+																						<p>
+																							<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																						</p>
+																					</div>
+																				</div>
+																			</Link>
+																		)
+																	})}
 																</div>
 															</>
 														)}
 														<div className="col-md-6">
 															<div className="sideBlogs">
-																{categoryData
-																	.slice(1, 4)
-																	.map(
-																		({ type, id }
-																		) => {
-																			const item = state.source[type][id];
-																			const date = new Date(item.date).toLocaleDateString();
-																			return (
-																				<Link link={item.link}>
-																					<div className="BlogSideBox">
-																						<div className="row">
-																							<div className="col-md-6 col-12">
-																								<div className="sideblogImg">
-																									{state.theme.featured.showOnList && (
-																										<FeaturedMedia id={item.featured_media} />
-																									)}
-																								</div>
-																							</div>
-																							<div className="col-md-6 col-12">
-																								<div className="blogCont">
-																									<span className="date mt-0">
-																										{date}
-																									</span>
-																									<h4>
-																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																									</h4>
-																									<p>
-																										<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																									</p>
-																								</div>
-																							</div>
+																{categoryData.slice(1, 4).map(({ type, id }) => {
+																	const item = state.source[type][id];
+																	const date = new Date(item.date).toLocaleDateString();
+																	return (
+																		<Link link={item.link}>
+																			<div className="BlogSideBox">
+																				<div className="row">
+																					<div className="col-md-6 col-12">
+																						<div className="sideblogImg">
+																							{state.theme.featured.showOnList && (
+																								<FeaturedMedia id={item.featured_media} />
+																							)}
 																						</div>
 																					</div>
-																				</Link>
-																			)
-																		}
-																	)}
+																					<div className="col-md-6 col-12">
+																						<div className="blogCont">
+																							<span className="date mt-0">
+																								{date}
+																							</span>
+																							<h4>
+																								<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																							</h4>
+																							<p>
+																								<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</Link>
+																	)
+																})}
 															</div>
 														</div>
 													</div>
 													<div className="MoreBlogs">
 														<div className="row">
-															{categoryData
-																.slice(4)
-																.map(
-																	({ type, id }
-																	) => {
-																		const item = state.source[type][id];
-																		const date = new Date(item.date).toLocaleDateString();
-																		return (
-																			<div className="col-md-4">
-																				<Link link={item.link}>
-																					<div className="blogCont">
-																						<div className="MoreBlogsCont">
-																							<div className="moreblogImg">
-																								{state.theme.featured.showOnList && (
-																									<FeaturedMedia id={item.featured_media} />
-																								)}
-																							</div>
-																							<div>
-																								<span className="date">
-																									{date}
-																								</span>
-																								<h4>
-																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																								</h4>
-																								<p>
-																									<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																								</p>
-																							</div>
-																						</div>
+															{categoryData.slice(4).map(({ type, id }) => {
+																const item = state.source[type][id];
+																const date = new Date(item.date).toLocaleDateString();
+																return (
+																	<div className="col-md-4">
+																		<Link link={item.link}>
+																			<div className="blogCont">
+																				<div className="MoreBlogsCont">
+																					<div className="moreblogImg">
+																						{state.theme.featured.showOnList && (
+																							<FeaturedMedia id={item.featured_media} />
+																						)}
 																					</div>
-																				</Link>
+																					<div>
+																						<span className="date">
+																							{date}
+																						</span>
+																						<h4>
+																							<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																						</h4>
+																						<p>
+																							<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																						</p>
+																					</div>
+																				</div>
 																			</div>
-																		)
-																	}
-																)}
+																		</Link>
+																	</div>
+																)
+															})}
 														</div>
 													</div>
 												</TabPanel>
@@ -398,130 +362,114 @@ const BlogPage = ({ state }) => {
 											return (
 												<TabPanel value={res.name}>
 													<div className="row">
-														{categoryData.length === 0 && (
-															<div className="noRecord">
-																No record found.
-															</div>
-														)}
 														{tabLoading ? (
 															<div className="noRecord">
-																Loading...
+																<CircularProgress />
+															</div>
+														) : categoryData.length === 0 ? (
+															<div className="noRecord">
+																No record found.
 															</div>
 														) : (
 															<>
 																<div className="col-md-6">
-																	{categoryData.reverse()
-																		.slice(0, 1)
-																		.map(
-																			({ type, id }
-																			) => {
-																				const item = state.source[type][id];
-																				const date = new Date(item.date).toLocaleDateString();
-																				return (
-																					<Link link={item.link}>
-																						<div className="BlogBox">
-																							<div className="MainblogImg">
-																								{state.theme.featured.showOnList && (
-																									<FeaturedMedia id={item.featured_media} />
-																								)}
-																							</div>
-																							<div>
-																								<span className="date">
-																									{date}
-																								</span>
-																								<h1>
-																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																								</h1>
-																								<p>
-																									<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																								</p>
-																							</div>
-																						</div>
-																					</Link>
-																				)
-																			}
-																		)}
+																	{categoryData.reverse().slice(0, 1).map(({ type, id }) => {
+																		const item = state.source[type][id];
+																		const date = new Date(item.date).toLocaleDateString();
+																		return (
+																			<Link link={item.link}>
+																				<div className="BlogBox">
+																					<div className="MainblogImg">
+																						{state.theme.featured.showOnList && (
+																							<FeaturedMedia id={item.featured_media} />
+																						)}
+																					</div>
+																					<div>
+																						<span className="date">
+																							{date}
+																						</span>
+																						<h1>
+																							<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																						</h1>
+																						<p>
+																							<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																						</p>
+																					</div>
+																				</div>
+																			</Link>
+																		)
+																	})}
 																</div>
 															</>
 														)}
 														<div className="col-md-6">
 															<div className="sideBlogs">
-																{categoryData
-																	.slice(1, 4)
-																	.map(
-																		({ type, id }
-																		) => {
-																			const item = state.source[type][id];
-																			const date = new Date(item.date).toLocaleDateString();
-																			return (
-																				<Link link={item.link}>
-																					<div className="BlogSideBox">
-																						<div className="row">
-																							<div className="col-md-6 col-12">
-																								<div className="sideblogImg">
-																									{state.theme.featured.showOnList && (
-																										<FeaturedMedia id={item.featured_media} />
-																									)}
-																								</div>
-																							</div>
-																							<div className="col-md-6 col-12">
-																								<div className="blogCont">
-																									<span className="date mt-0">
-																										{date}
-																									</span>
-																									<h4>
-																										<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																									</h4>
-																									<p>
-																										<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																									</p>
-																								</div>
-																							</div>
+																{categoryData.slice(1, 4).map(({ type, id }) => {
+																	const item = state.source[type][id];
+																	const date = new Date(item.date).toLocaleDateString();
+																	return (
+																		<Link link={item.link}>
+																			<div className="BlogSideBox">
+																				<div className="row">
+																					<div className="col-md-6 col-12">
+																						<div className="sideblogImg">
+																							{state.theme.featured.showOnList && (
+																								<FeaturedMedia id={item.featured_media} />
+																							)}
 																						</div>
 																					</div>
-																				</Link>
-																			)
-																		}
-																	)}
+																					<div className="col-md-6 col-12">
+																						<div className="blogCont">
+																							<span className="date mt-0">
+																								{date}
+																							</span>
+																							<h4>
+																								<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																							</h4>
+																							<p>
+																								<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</Link>
+																	)
+																})}
 															</div>
 														</div>
 													</div>
 													<div className="MoreBlogs">
 														<div className="row">
 															<div className="col-md-4">
-																{categoryData
-																	.slice(4)
-																	.map(
-																		({ type, id }
-																		) => {
-																			const item = state.source[type][id];
-																			const date = new Date(item.date).toLocaleDateString();
-																			return (
-																				<Link link={item.link}>
-																					<div className="blogCont">
-																						<div className="MoreBlogsCont">
-																							<div className="moreblogImg">
-																								{state.theme.featured.showOnList && (
-																									<FeaturedMedia id={item.featured_media} />
-																								)}
-																							</div>
-																							<div>
-																								<span className="date">
-																									{date}
-																								</span>
-																								<h4>
-																									<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-																								</h4>
-																								<p>
-																									<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
-																								</p>
-																							</div>
-																						</div>
+																{categoryData.slice(4).map(({ type, id }) => {
+																	const item = state.source[type][id];
+																	const date = new Date(item.date).toLocaleDateString();
+																	return (
+																		<Link link={item.link}>
+																			<div className="blogCont">
+																				<div className="MoreBlogsCont">
+																					<div className="moreblogImg">
+																						{state.theme.featured.showOnList && (
+																							<FeaturedMedia id={item.featured_media} />
+																						)}
 																					</div>
-																				</Link>
-																			)
-																		}
-																	)}
+																					<div>
+																						<span className="date">
+																							{date}
+																						</span>
+																						<h4>
+																							<div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
+																						</h4>
+																						<p>
+																							<div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
+																						</p>
+																					</div>
+																				</div>
+																			</div>
+																		</Link>
+																	)
+																})}
 															</div>
 														</div>
 													</div>
