@@ -15729,3 +15729,9 @@ select:-webkit-autofill:focus {
       margin-top: 30px;
       margin-left: 20px;
     }
+    .sitemap-list li a {
+      color: blue;
+    }
+    .sitemap-head a {
+      color: blue;
+    }
