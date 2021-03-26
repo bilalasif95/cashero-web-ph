@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY  . /app
 RUN npm i
-RUN npm run build && npm run sitemap
+RUN npm run build
 
 HEALTHCHECK --interval=5s --timeout=2s --retries=12 \
   CMD curl --silent --fail localhost:${PORT} || exit 1
