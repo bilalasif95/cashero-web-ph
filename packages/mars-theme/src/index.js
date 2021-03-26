@@ -113,6 +113,16 @@ const giveawayHandler = {
   }
 }
 
+const sitemapHandler = {
+  pattern: "/sitemap/",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isSitemap: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -156,6 +166,7 @@ const marsTheme = {
         libraries.source.handlers.push(receivepaymentsHandler);
         libraries.source.handlers.push(giveawayHandler);
         libraries.source.handlers.push(blogsHandler);
+        libraries.source.handlers.push(sitemapHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

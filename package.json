@@ -12,13 +12,11 @@
   },
   "scripts": {
     "start": "frontity dev",
-    "build": "frontity build && npm run sitemap",
-    "serve": "frontity serve",
-    "sitemap": "babel-node ./packages/mars-theme/src/sitemap-generator.js"
+    "build": "frontity build",
+    "serve": "frontity serve"
   },
   "prettier": {},
   "dependencies": {
-    "@babel/node": "^7.10.5",
     "@frontity/core": "^1.9.1",
     "@frontity/google-tag-manager-analytics": "^1.2.1",
     "@frontity/html2react": "^1.5.0",
@@ -30,17 +28,11 @@
     "@material-ui/lab": "^4.0.0-alpha.49",
     "@material-ui/styles": "4.9.0",
     "axios": "^0.21.1",
-    "babel-node": "0.0.1-security",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.26.0",
     "bootstrap": "^4.6.0",
     "frontity": "^1.13.0",
     "js-big-decimal": "^1.3.1",
     "react-awesome-reveal": "^3.7.0",
     "react-pretty-numbers": "^3.0.0",
-    "react-router-dom": "^5.2.0",
-    "react-router-sitemap": "^1.2.0",
     "react-share": "^4.4.0",
     "react-slick": "^0.27.12",
     "reactstrap": "^8.9.0"

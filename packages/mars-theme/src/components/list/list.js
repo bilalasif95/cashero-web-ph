@@ -13,8 +13,7 @@ import CharityImg from "../../assets/charityImg.svg";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 
-const List = ({ state }) => {
-  // const data = state.source.get(state.router.link);
+const List = () => {
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
@@ -96,14 +95,14 @@ const List = ({ state }) => {
                   <img src={Close} alt="Close" />
                 </div>
               ) : (
-                  <>
-                    <span className="navbar-toggler-icon"></span>
-                    <div
-                      data-testid="mobile-menu-icon"
-                      className="StyledMenuIcon"
-                    ></div>
-                  </>
-                )}
+                <>
+                  <span className="navbar-toggler-icon"></span>
+                  <div
+                    data-testid="mobile-menu-icon"
+                    className="StyledMenuIcon"
+                  ></div>
+                </>
+              )}
             </button>
             <div
               className={toggleBotton ? "collapse navbar-collapse toggleButtonShow" : "collapse navbar-collapse"}
@@ -355,8 +354,8 @@ const List = ({ state }) => {
           />
         </div>
       ) : (
-          ""
-        )}
+        ""
+      )}
     </>
     // <Container>
     //   {/* If the list is a taxonomy, we render a title. */}

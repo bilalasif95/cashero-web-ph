@@ -21,6 +21,7 @@ import { ExchangeRates } from "./ExchangeRates/ExchangeRates";
 import { ReceivePayments } from "./ReceivePayments/ReceivePayments";
 import { Remittance } from "./Remittance/Remittance";
 import { Giveaway } from "./Giveaway/Giveaway";
+import { Sitemap } from "./Sitemap/Sitemap";
 import { websiteLink } from "../config/config";
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -29,7 +30,7 @@ import { websiteLink } from "../config/config";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  const categories = Object.values(state.source.category);
+
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -74,6 +75,7 @@ const Theme = ({ state }) => {
         <Loading when={data.isFetching} />
         <HomePage when={data.isArchive} state={state} />
         <Post when={data.isPostType} />
+        <Sitemap when={data.isSitemap} />
         <BlogPage when={data.isBlog} />
         <PageError when={data.isError} />
       </Switch>

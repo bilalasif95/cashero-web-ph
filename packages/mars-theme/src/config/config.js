@@ -9,6 +9,7 @@ export const websiteLink = "https://staging.cashero.com";
 export const wordPressLink = "https://wp.cashero.com";
 
 export const gtmId = "GTM-KKSRK7H";
+//for cashero.com   GTM-MBGVT62
 
 export const EndPoints = {
   preregistration: `${API + "/api/users/preregistration"}`,

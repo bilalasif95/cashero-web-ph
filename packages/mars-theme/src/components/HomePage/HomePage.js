@@ -1,5 +1,5 @@
 import React from "react";
-import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner"
+import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Banner from "../../assets/photoshop.gif";
 import Check from "../../assets/check-mark.svg";
 import { GlobalMoney } from "../GlobalMoney/GlobalMoney";
