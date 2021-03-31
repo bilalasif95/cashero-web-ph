@@ -1,6 +1,6 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "https://spot.cashero.com";
+  : "https://staging-spot.cashero.com";
 const firebaseAPI =
   "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/";
 
