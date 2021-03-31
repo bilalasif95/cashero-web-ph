@@ -15735,3 +15735,10 @@ select:-webkit-autofill:focus {
     .sitemap-head a {
       color: blue;
     }
+    .MobileAppList{
+      display: flex;
+      justify-content: center;
+    }
+    .MobileAppList li{
+      margin: 16px 10px 0;
+    }
