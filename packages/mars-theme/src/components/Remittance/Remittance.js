@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg";
-// import listPhone from "../../assets/ListPhone.svg";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Dollarlist from "../../assets/Dollarlist.svg";
 import Draw from "../../assets/draw.svg";
 import listHome from "../../assets/listHome.svg";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-// import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { Sendpayments } from "../Sendpayments/Sendpayments";
@@ -42,7 +40,7 @@ export function Remittance() {
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions</Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/giveaway"> Terms and conditions</Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -57,7 +55,6 @@ export function Remittance() {
 						<ul className="PersonalCompanyList list-unstyled">
 							<li><img alt="Globe Dollar" src={GlobeDollar} />Send money worldwide</li>
 							<li><img alt="Dollar list" src={Dollarlist} />No hidden fees. No minimum balance required</li>
-							{/* <li><img alt="list Phone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
@@ -112,7 +109,7 @@ export function Remittance() {
 							<div className="MultistepsCont">
 								<p>Ready to send money hassle-free? Cashero’s global payment solution is here for you and for what matters most.</p>
 								<button className="LinkBtn" onClick={appModalOpen}>
-									Get Early Access   <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+									Get Early Access <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>
@@ -122,7 +119,6 @@ export function Remittance() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				{/* <Companies /> */}
 				<QuestionTabs activeTab={5} />
 			</div>
 			<SignupSection />

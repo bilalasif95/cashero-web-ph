@@ -19,7 +19,7 @@ export function Securepayments() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-							Secure Global Money Transfers
+								Secure Global Money Transfers
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>

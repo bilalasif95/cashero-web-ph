@@ -9,7 +9,6 @@ import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
 import { SingleAccount } from "../SingleAccount/SingleAccount";
 import { Protect } from "../Protect/Protect";
-import { Simple } from "../Simple/Simple";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
@@ -130,7 +129,7 @@ export function CurrencyAccounts() {
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions</Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/giveaway"> Terms and conditions</Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -268,7 +267,6 @@ export function CurrencyAccounts() {
 			<SingleAccount />
 			<div className="container">
 				<Protect />
-				<Simple />
 				<div className="getStarted">
 					<div className="row">
 						<div className="col-md-12">

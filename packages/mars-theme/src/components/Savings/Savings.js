@@ -22,10 +22,10 @@ export function Savings() {
 								How Does Cashero’s <span className="br-block"></span> High Yield Savings Work?
 							</h1>
 							<p>
-							We get you the best high-yield interest rates (between 2%-5% annually) by managing an intelligent portfolio for you.  Do that thing rich people do, earn money while you sleep.  Leave the hard work of optimizing your finances to Cashero and watch your money grow.
+								We get you the best high-yield interest rates (between 2%-5% annually) by managing an intelligent portfolio for you.  Do that thing rich people do, earn money while you sleep.  Leave the hard work of optimizing your finances to Cashero and watch your money grow.
 							</p>
 							<button onClick={appModalOpen} className="LinkBtn">
-							Get Early Access <img alt="Arrow" className="ArrowBtn" src={Arrow} />
+								Get Early Access <img alt="Arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}

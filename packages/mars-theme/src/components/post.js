@@ -84,17 +84,13 @@ const Post = ({ state, actions, libraries }) => {
                   {state.theme.featured.showOnPost && (
                     <FeaturedMedia id={post.featured_media} />
                   )}
-                  {/* <img alt={props.location.state.alt} className="img-fluid" src={props.location.state.imageUrl} /> */}
                 </div>
                 <h1><div dangerouslySetInnerHTML={{ __html: post.title.rendered }}></div></h1>
                 <p className="date">{date}</p>
-                {/* <p>{props.location.state.description}</p> */}
                 <p><div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div></p>
                 <Content>
                   <Html2React html={post.content.rendered} />
                 </Content>
-                {/* {props.location.state.content ? <Editor initialContentState={typeof props.location.state.content === "string" ? JSON.parse(props.location.state.content) : props.location.state.content} readOnly={true} toolbarHidden
-                editorClassName="demo-editor" /> : ""} */}
               </div>
             </div>
           </div>
@@ -113,7 +109,6 @@ const Post = ({ state, actions, libraries }) => {
                           {state.theme.featured.showOnPost && (
                             <FeaturedMedia id={item.featured_media} />
                           )}
-                          {/* <img alt={res.data.alt} className="img-fluid" src={res.data.imageUrl} /> */}
                         </div>
                         <span className="date">{itemDate}</span>
                         <h4><div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div></h4>

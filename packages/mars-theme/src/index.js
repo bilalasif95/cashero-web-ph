@@ -4,7 +4,7 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
 const personalHandler = {
-  pattern: "/high-yield-savings-account/",
+  pattern: "/high-yield-savings-account",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -14,7 +14,7 @@ const personalHandler = {
 }
 
 const companyHandler = {
-  pattern: "/company/",
+  pattern: "/company",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -24,7 +24,7 @@ const companyHandler = {
 }
 
 const contactusHandler = {
-  pattern: "/contact-us/",
+  pattern: "/contact-us",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -34,7 +34,7 @@ const contactusHandler = {
 }
 
 const donationHandler = {
-  pattern: "/donation/",
+  pattern: "/donation",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -44,7 +44,7 @@ const donationHandler = {
 }
 
 const listedcharityHandler = {
-  pattern: "/become-listed-charity/",
+  pattern: "/become-listed-charity",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -54,7 +54,7 @@ const listedcharityHandler = {
 }
 
 const currencyaccountsHandler = {
-  pattern: "/multi-currency-savings-account/",
+  pattern: "/multi-currency-savings-account",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -64,7 +64,7 @@ const currencyaccountsHandler = {
 }
 
 const exchangeratesHandler = {
-  pattern: "/online-currency-exchange/",
+  pattern: "/online-currency-exchange",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -74,7 +74,7 @@ const exchangeratesHandler = {
 }
 
 const receivepaymentsHandler = {
-  pattern: "/instant-money-transfer/",
+  pattern: "/instant-money-transfer",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -84,7 +84,7 @@ const receivepaymentsHandler = {
 }
 
 const remittanceHandler = {
-  pattern: "/transfer-money-abroad/",
+  pattern: "/transfer-money-abroad",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -94,7 +94,7 @@ const remittanceHandler = {
 }
 
 const blogsHandler = {
-  pattern: "/blog/",
+  pattern: "/blog",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -104,7 +104,7 @@ const blogsHandler = {
 }
 
 const giveawayHandler = {
-  pattern: "/giveaway/",
+  pattern: "/giveaway",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -114,7 +114,7 @@ const giveawayHandler = {
 }
 
 const sitemapHandler = {
-  pattern: "/sitemap/",
+  pattern: "/sitemap",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",

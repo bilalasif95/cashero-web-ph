@@ -41,7 +41,7 @@ export default function ThanksModal(props) {
                                 <div className="win-cont">
                                     <h3 id="transition-modal-title">Want to win $1,000?</h3>
                                     <p>Download the app, refer your friends to Cashero, and earn Golden Tickets. The more Golden Tickets you have, the higher your odds of winning $1000! If your friend wins, you get $100 as a referral bonus.</p>
-                                    <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/Giveaway"> Terms and conditions</Link></span>
+                                    <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway"> Terms and conditions</Link></span>
                                     <ul className="Thankyou-modal-list list-unstyled">
                                         <li>Click & Share:</li>
                                         <li><FacebookShareButton quote="Join Cashero to earn 5% interest on your money: https://www.cashero.com" url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>
@@ -57,7 +57,6 @@ export default function ThanksModal(props) {
                                     src={Wait2}
                                 />
                             </div>
-                            {/* <p className="join-text">Join Cashero to earn 5% interest on your money: <Link to="https://www.cashero.com">https://www.cashero.com</Link></p> */}
                         </div>
                     </div>
                 </div>

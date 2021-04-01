@@ -185,7 +185,7 @@ export function QuestionTabs(props) {
 										</h4>
 										<h4 className="FaqText">
 											<span className="bold-text">Rewards:</span> users <Link className="giveaway-link" link="/giveaway">earn rewards</Link> for referring people to Cashero.
-											</h4>
+										</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -243,33 +243,6 @@ export function QuestionTabs(props) {
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{/* <Accordion
-								expanded={expanded === "panel5"}
-								onChange={accordionhandleChange("panel5")}
-							>
-								<AccordionSummary
-									expandIcon={
-										expanded === "panel5" ? (
-											<RemoveCircleOutlineIcon />
-										) : (
-												<ControlPointIcon />
-											)
-									}
-									aria-controls="panel5a-content"
-									id="panel5a-header"
-								>
-									<h4 className="heading">
-										Where can I learn more?
-									</h4>
-								</AccordionSummary>
-								<AccordionDetails>
-									<Typography>
-										<h4 className="FaqText">
-											To learn more about Cashero contact info@cashero.com
-										</h4>
-									</Typography>
-								</AccordionDetails>
-							</Accordion> */}
 						</div>
 					</TabPanel>
 					<TabPanel value={value} index={1}>

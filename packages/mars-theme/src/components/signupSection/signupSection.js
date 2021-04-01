@@ -11,7 +11,7 @@ export function SignupSection() {
             <h3 className="SignUpText mb-0">
               Ready to make your money go further? Join Cashero and get early
               access.
-              </h3>
+            </h3>
             <TextfieldBanner />
           </div>
         </div>

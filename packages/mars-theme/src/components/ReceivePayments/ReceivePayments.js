@@ -3,13 +3,11 @@ import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Clock from "../../assets/clockImg.svg";
 import Instant from "../../assets/instant.svg";
 import walletDown from "../../assets/walletDown.svg";
-// import listPhone from "../../assets/ListPhone.svg";
 import Draw from "../../assets/draw.svg";
 import Dollar from "./../../assets/Dollar.png";
 import Path from "../../assets/path.png";
 import listHome from "../../assets/listHome.svg"
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-// import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { LocalPayments } from "../LocalPayments/LocalPayments";
@@ -42,7 +40,7 @@ export function ReceivePayments() {
 								<ul className="PersonalList list-unstyled">
 									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/Giveaway"> Terms and conditions</Link> apply. </p>
+								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/giveaway"> Terms and conditions</Link> apply. </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -57,14 +55,12 @@ export function ReceivePayments() {
 						<ul className="PersonalCompanyList list-unstyled">
 							<li><img alt="wallet Down" src={walletDown} />Send, request and receive payments instantly</li>
 							<li><img alt="Instant" src={Instant} />No monthly fees. No minimum balance required</li>
-							{/* <li><img alt="list Phone" src={listPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-
 			<div className="container">
 				<LocalPayments />
 				<GetPaid />
@@ -122,9 +118,7 @@ export function ReceivePayments() {
 				</div>
 			</div>
 			<PeoplesSection />
-
 			<div className="container">
-				{/* <Companies /> */}
 				<QuestionTabs activeTab={4} />
 			</div>
 			<SignupSection />
