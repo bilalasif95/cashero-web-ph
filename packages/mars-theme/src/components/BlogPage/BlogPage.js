@@ -60,7 +60,7 @@ const BlogPage = ({ state }) => {
 							<p className="mb-0 blogtext">
 								Follow Cashero’s blog for the latest
 								official news and events.
-								</p>
+							</p>
 						</div>
 					</div>
 				</div>

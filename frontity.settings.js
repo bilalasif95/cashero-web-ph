@@ -59,6 +59,14 @@ const settings = {
               "Remittance",
               "/transfer-money-abroad"
             ],
+            [
+              "Terms & Conditions",
+              "/giveaway"
+            ],
+            [
+              "Sitemap",
+              "/sitemap"
+            ],
           ],
           "featured": {
             "showOnList": true,

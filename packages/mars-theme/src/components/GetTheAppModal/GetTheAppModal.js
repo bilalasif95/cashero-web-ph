@@ -5,7 +5,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-// import TextField from "../../common/textFiled";
 import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
@@ -19,7 +18,6 @@ export default function GetTheAppModal(props) {
   const [searchResults2, setSearchResults2] = useState([]);
   const [phonenoLength, setPhoneNoLength] = useState(0);
   const [newPhone, setNewPhoneNumber] = useState("");
-  // const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [openSuccessModal, setSuccessModal] = useState(false);
@@ -72,16 +70,6 @@ export default function GetTheAppModal(props) {
         setError("Invalid phone number.");
       });
   };
-  // const onSubmit = () => {
-  //   setLoading(true);
-  //   callApi(EndPoints.preregistration, "post", "", {
-  //     Phone: email,
-  //   }).then(() => {
-  //     setSuccessModal(true);
-  //     setLoading(false);
-  //     setEmail("");
-  //   });
-  // };
   useEffect(() => {
     callApi("https://ipwhois.app/json/", "get")
       .then((res) => {
@@ -132,19 +120,6 @@ export default function GetTheAppModal(props) {
                 conditions</Link></span> apply.
               </p>
               <div className="ModalPhone">
-                {/* <div className="GetAppEmail">
-                                    <TextField
-                                        placeholder="Enter Email Address"
-                                        autoComplete='off'
-                                        type="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-
-                                    />
-                                    <div className="GetEarlyBtn">
-                                        <button disabled={loading || !email || !/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(email)} onClick={onSubmit} className="btn btn-default">Get Early Access</button>
-                                    </div>
-                                </div> */}
                 <div className="numberSelection">
                   <div className="selectCountry">
                     <Dropdown isOpen={dropdownOpen} toggle={toggle}>

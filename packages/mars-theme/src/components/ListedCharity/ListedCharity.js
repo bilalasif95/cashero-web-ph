@@ -3,14 +3,12 @@ import Clock from "../../assets/clockImg.svg";
 import donateDollar from "../../assets/donateDollar.svg";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import heart from "../../assets/heart.svg";
-import Draw from "../../assets/draw.svg";
 import listImg from "../../assets/list.png";
 import StepsWallet from "../../assets/stepsWallet.png"
 import heartDollar from "../../assets/heartDollar.svg";
 import listHome from "../../assets/listHome.svg";
 import freeFund from "../../assets/freeFund.png";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-// import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { BetterPlace } from "../BetterPlace/BetterPlace";
@@ -28,7 +26,7 @@ export function ListedCharity() {
 	};
 	const appModalClose = () => {
 		setAppModal(false)
-	}
+	};
 	return (
 		<>
 			<div className="PesonalBanner">
@@ -58,7 +56,6 @@ export function ListedCharity() {
 							<li><img alt="heart Dollar" src={heartDollar} />Become listed as a charity</li>
 							<li><img alt="donate Dollar" src={donateDollar} />Receive donations directly at any time</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
-							{/* <li><img alt="Draw" src={Draw} />Donate your money at any time</li> */}
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
@@ -120,7 +117,6 @@ export function ListedCharity() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				{/* <Companies /> */}
 				<QuestionTabs activeTab={6} />
 			</div>
 			<SignupSection />

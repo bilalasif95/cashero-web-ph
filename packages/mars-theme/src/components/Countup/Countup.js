@@ -4,18 +4,11 @@ export function Countup() {
 	return (
 		<div className="Countup">
 			<div className="row">
-				{/* <div className="col-md-3">
-					<div className="CountupCont">
-						<h1>500K</h1>
-						<p>Business customers</p>
-					</div>
-				</div> */}
 				<div className="col-md-3">
 					<div className="CountupCont">
 						<h1>120</h1>
 						<p>Countries supported</p>
 					</div>
-
 				</div>
 				<div className="col-md-3">
 					<div className="CountupCont">

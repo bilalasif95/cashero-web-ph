@@ -10,7 +10,6 @@ import { Enhance } from "../Enhance/Enhance";
 import { CharitySection } from "../CharitySection/CharitySection";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-// import { Companies } from "../Companies/Companies";
 import { SignupSection } from "../signupSection/signupSection";
 import { GetStarted } from "../GetStarted/GetStarted";
 import Clock from "../../assets/clock.svg";
@@ -89,7 +88,6 @@ export function HomePage(props) {
       </div>
       <PeoplesSection />
       <div className="container">
-        {/* <Companies /> */}
         <QuestionTabs activeTab={0} />
       </div>
       <SignupSection />

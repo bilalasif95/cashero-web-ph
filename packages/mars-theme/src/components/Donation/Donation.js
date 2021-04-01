@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg"
 import SlideGroup from "../../assets/SlideGroup.png";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
-import Draw from "../../assets/draw.svg"
 import donateDollar from "../../assets/donateDollar.svg";
 import heart from "../../assets/heart.svg";
 import listHome from "../../assets/listHome.svg";
 import DonateBox from "../../assets/DonateBox.png";
 import { FindCharity } from "../FindCharity/FindCharity";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-// import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "./../signupSection/signupSection";
 import { StartDonation } from "../StartDonation/StartDonation";
@@ -59,7 +57,6 @@ export function Donation() {
 							<li><img alt="heart Dollar" src={heartDollar} />Become listed as a charity</li>
 							<li><img alt="donate Dollar" src={donateDollar} />Receive donations directly at any time</li>
 							<li><img alt="heart" src={heart} />100% is donated</li>
-							{/* <li><img alt="Draw" src={Draw} />Donate your money at any time</li> */}
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
 					</div>
@@ -122,7 +119,6 @@ export function Donation() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				{/* <Companies /> */}
 				<QuestionTabs activeTab={6} />
 			</div>
 			<SignupSection />

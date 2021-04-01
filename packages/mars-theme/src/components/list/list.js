@@ -114,7 +114,6 @@ const List = () => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onPersonalToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    // href="/personal"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -194,7 +193,6 @@ const List = () => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onBusinessToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    // href="/business"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -265,7 +263,6 @@ const List = () => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onDonationsToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    // href="/#"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"

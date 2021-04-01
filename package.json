@@ -34,7 +34,6 @@
     "react-awesome-reveal": "^3.7.0",
     "react-pretty-numbers": "^3.0.0",
     "react-share": "^4.4.0",
-    "react-slick": "^0.27.12",
     "reactstrap": "^8.9.0"
   }
 }

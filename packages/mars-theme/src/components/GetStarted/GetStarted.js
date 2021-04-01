@@ -10,7 +10,7 @@ export function GetStarted() {
 			<div className="row">
 				<div className="col-md-12">
 					<h3 className="getStartedTitle">
-					Get Started in Minutes
+						Get Started in Minutes
 					</h3>
 				</div>
 			</div>

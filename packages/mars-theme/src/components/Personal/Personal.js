@@ -5,7 +5,6 @@ import Clock from "../../assets/clockImg.svg"
 import Arrow from "../../assets/arrow.svg";
 import listGraph from "../../assets/listGraph.svg";
 import HighDollar from "../../assets/HighDollar.svg";
-// import ListPhone from "../../assets/ListPhone.svg";
 import Draw from "../../assets/draw.svg";
 import listHome from "../../assets/listHome.svg";
 import { NoEffort } from "../NoEffort/NoEffort";
@@ -17,7 +16,6 @@ import WalletCoins from "../../assets/WalletCoins.png";
 import ArrowUp from "../../assets/Arrowup.png";
 import Arrow1 from "../../assets/arrowLink.svg";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-// import { Companies } from "../Companies/Companies";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
@@ -179,7 +177,6 @@ export function Personal() {
 						<ul className="PersonalCompanyList list-unstyled">
 							<li><img alt="High Dollar" src={HighDollar} />Inflation-beating 5% APY</li>
 							<li><img alt="list Graph" src={listGraph} />Interest paid out daily</li>
-							{/* <li><img alt="List Phone" src={ListPhone} />Flexibility, no minimum balance required, monthly fees or penalties for withdrawals</li> */}
 							<li><img alt="Draw" src={Draw} />Deposit or withdraw your money at any time</li>
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
 						</ul>
@@ -223,7 +220,6 @@ export function Personal() {
 									<img className="img-fluid" alt="Arrow Up" src={ArrowUp} />
 									<h3>
 										Earn up to 5% APY. Yep, that simple.
-
 									</h3>
 								</div>
 							</Fade>
@@ -234,7 +230,7 @@ export function Personal() {
 							<div className="MultistepsCont">
 								<p>Ready to earn more? Growing your wealth is easy with Cashero's high-yield savings account.</p>
 								<button onClick={appModalOpen} className="LinkBtn" >
-									Get Early Access    <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+									Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>
@@ -244,7 +240,6 @@ export function Personal() {
 			{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 			<PeoplesSection />
 			<div className="container">
-				{/* <Companies /> */}
 				<QuestionTabs activeTab={1} />
 			</div>
 			<SignupSection />

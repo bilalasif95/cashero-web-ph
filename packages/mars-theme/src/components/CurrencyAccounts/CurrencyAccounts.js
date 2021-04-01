@@ -11,7 +11,6 @@ import { SingleAccount } from "../SingleAccount/SingleAccount";
 import { Protect } from "../Protect/Protect";
 import { Simple } from "../Simple/Simple";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-// import { Companies } from "../Companies/Companies";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { Fade } from "react-awesome-reveal";
@@ -303,7 +302,7 @@ export function CurrencyAccounts() {
 									<img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
 									<h3>
 										Earn interest and safeguard your money from currency devaluation.
-										</h3>
+									</h3>
 								</div>
 							</Fade>
 						</div>
@@ -323,7 +322,6 @@ export function CurrencyAccounts() {
 			</div>
 			<PeoplesSection />
 			<div className="container">
-				{/* <Companies /> */}
 				<QuestionTabs activeTab={2} />
 			</div>
 			<SignupSection />

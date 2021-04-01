@@ -8,8 +8,6 @@ export function Contact() {
 				<div className="row">
 					<div className="col-md-6 offset-md-3">
 						<div className="row">
-							<div className="col-md-6 d-flex">
-							</div>
 							<div className="col-md-12 d-flex">
 								<div className="ContactBox w-100">
 									<img className="img-fluid" alt="Chat" src={Chat} />

@@ -8,10 +8,8 @@ import Draw from "../../assets/draw.svg";
 import ExArrow from "../../assets/ExArrow.svg";
 import ExDollar from "../../assets/ExDollar.svg";
 import MovingCoins from "../../assets/movingCoins.png";
-// import Dollarlist from "../../assets/Dollarlist.svg";
 import listHome from "../../assets/listHome.svg";
 import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-import { Companies } from "../Companies/Companies";
 import { OnlineSave } from "../OnlineSave/OnlineSave";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
@@ -627,10 +625,6 @@ export function ExchangeRates() {
                 <img src={ExDollar} alt="Exchange Dollar" />
                 Switch between USD, GBP, and EUR
               </li>
-              {/* <li>
-                <img src={Dollarlist} alt="Dollar list" />
-                No hidden fees, full transparency
-              </li> */}
               <li>
                 <img src={Draw} alt="Draw" />
                 No hidden fees, full transparency
@@ -687,7 +681,6 @@ export function ExchangeRates() {
               <div className="MultistepsCont">
                 <p>
                   Ready for currency exchange with no surprises? Seamlessly transfer between currencies using Cashero.
-
                 </p>
                 <button onClick={appModalOpen} className="LinkBtn">
                   Get Early Access
@@ -703,7 +696,6 @@ export function ExchangeRates() {
       </div>
       <PeoplesSection />
       <div className="container">
-        {/* <Companies /> */}
         <QuestionTabs activeTab={3} />
       </div>
       <SignupSection />
