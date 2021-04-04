@@ -113,6 +113,16 @@ const giveawayHandler = {
   }
 }
 
+const privacyHandler = {
+  pattern: "/privacy-policy",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPrivacy: true,
+    })
+  }
+}
+
 const sitemapHandler = {
   pattern: "/sitemap",
   func: ({ route, state }) => {
@@ -167,6 +177,7 @@ const marsTheme = {
         libraries.source.handlers.push(giveawayHandler);
         libraries.source.handlers.push(blogsHandler);
         libraries.source.handlers.push(sitemapHandler);
+        libraries.source.handlers.push(privacyHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

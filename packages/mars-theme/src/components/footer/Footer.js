@@ -75,8 +75,7 @@ export function Footer() {
 								<p className="NavTitle">Legal</p>
 								<ul className="list-unstyled FooterList">
 									<li><Link link="/giveaway">Terms</Link></li>
-									<li><a href="/#">Privacy</a></li>
-									<li><a href="/#">Cookies</a></li>
+									<li><Link link="/privacy-policy">Privacy</Link></li>
 									<li><Link link="/sitemap">Sitemap</Link></li>
 								</ul>
 							</div>
@@ -99,7 +98,7 @@ export function Footer() {
 						</ul>
 					</div>
 				</div>
-				<p>Romans 828 (UK) Limited trading as "Cashero" is a limited company registered in England and Wales with the registered company number 12783127 and its registered address at 33 St James's Square, London, SW1Y 4JS, United Kingdom. Cashero uses Circle UK Trading Limited an E-Money Issuer authorised by the Financial Conduct Authority (license No. 900480).</p>
+				<p className="text-center">Copyright © 2021 Cashero. All rights reserved</p>
 			</div>
 		</div>
 	);

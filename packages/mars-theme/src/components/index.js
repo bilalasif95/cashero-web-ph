@@ -21,6 +21,7 @@ import { ExchangeRates } from "./ExchangeRates/ExchangeRates";
 import { ReceivePayments } from "./ReceivePayments/ReceivePayments";
 import { Remittance } from "./Remittance/Remittance";
 import { Giveaway } from "./Giveaway/Giveaway";
+import { Privacy } from "./Privacy/Privacy";
 import { Sitemap } from "./Sitemap/Sitemap";
 import { websiteLink } from "../config/config";
 /**
@@ -73,6 +74,7 @@ const Theme = ({ state }) => {
         <ReceivePayments when={data.isReceivePayments} />
         <Remittance when={data.isRemittance} />
         <Giveaway when={data.isGiveaway} />
+        <Privacy when={data.isPrivacy} />
         <Loading when={data.isFetching} />
         <HomePage when={data.isArchive} state={state} />
         <Post when={data.isPostType} />
