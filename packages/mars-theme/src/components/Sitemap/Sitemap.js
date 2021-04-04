@@ -33,6 +33,7 @@ export function Sitemap() {
 							<h6 className="sitemap-head"><Link link="/company">Company</Link></h6>
 							<h6 className="sitemap-head"><Link link="/contact-us">Help</Link></h6>
 							<h6 className="sitemap-head"><Link link="/giveaway">Terms</Link></h6>
+							<h6 className="sitemap-head"><Link link="/privacy-policy">Privacy</Link></h6>
 							<h6 className="sitemap-head"><Link link="/blog">Blog</Link></h6>
 						</div>
 					</div>
