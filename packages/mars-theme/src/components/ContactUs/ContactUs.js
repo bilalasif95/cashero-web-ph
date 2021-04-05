@@ -1,5 +1,7 @@
 import React from "react";
 import { Contact } from "../Contact/Contact";
+import { ContactForm } from "../ContactForm/ContactForm";
+import { SignupSection } from "../signupSection/signupSection";
 
 export function ContactUs() {
 	return (
@@ -15,6 +17,8 @@ export function ContactUs() {
 				</div>
 			</div>
 			<Contact />
+			<ContactForm />
+			<SignupSection />
 		</div>
 	);
 }

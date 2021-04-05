@@ -1457,8 +1457,11 @@ b {
       font-size: 16px; }
 
 @media (max-width: 540px) {
+  .ContactForm h1 {
+    font-size: 32px;
+}
   .ContactSection {
-    padding: 90px 0px 90px 0px; }
+    padding: 70px 0px 40px 0px; }
     .ContactSection .InAppChat {
       margin-bottom: 80px; }
     .ContactSection .ContactBox {
@@ -4468,6 +4471,12 @@ button:focus {
 }
 
 @media (max-width: 540px) {
+  .ContactFormBox{
+    margin: 40px 0px 40px 0px !important;
+  }
+  .formbtn {
+    margin-top: 40px !important;
+  }
   .SwapGbpRow {
     margin-top: 45px !important; }
   .swapBox {
@@ -4652,7 +4661,7 @@ button:focus {
   font-size: 33px; }
 
 .Footer {
-  padding: 100px 0px; }
+  padding: 70px 0px; }
 
 .HelpText {
   margin-top: 46px; }
@@ -15741,4 +15750,55 @@ select:-webkit-autofill:focus {
     }
     .MobileAppList li{
       margin: 16px 10px 0;
+    }
+    /* form-css */
+    .inputfieldbox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* width: 80%;
+      margin: 0px auto; */
+    }
+    .inputfieldbox input {
+      width: 49%;
+      border-radius: 8px;
+      color: #9ea0a5 !important;
+    }
+    .inputfieldbox input:focus, .ContactForm textarea:focus {
+      box-shadow: inherit;
+      outline: none;
+      border: 1px solid #ced4da;
+      color: #9ea0a5!important;
+    }
+    .ContactFormBox {
+      margin: 98px 0px 98px 0px;
+    }
+    .ContactForm h1 {
+      margin-bottom: 30px;
+      font-size: 48px;
+      font-weight: 400;
+      color: #363636;
+      text-align: center;
+    }
+    .ContactForm textarea {
+      border-radius: 8px;
+      color: #9ea0a5!important;
+    }
+    .formbtn{  
+      background-color: #0667eb!important;
+      border-radius: 8px;
+      margin-top: 50px;
+      padding: 10px 40px;
+    }
+    
+    @media (max-width: 375px) {
+      .inputfieldbox {
+        display: inherit;
+      }
+      .inputfieldbox input {
+        width: 100%;
+      }
+      .inputfieldbox input:first-child {
+        margin-bottom: 24px;
+      }
     }
