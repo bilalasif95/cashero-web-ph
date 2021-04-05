@@ -4476,6 +4476,8 @@ button:focus {
   }
   .formbtn {
     margin-top: 40px !important;
+    display: table !important;
+    margin: 0px auto;
   }
   .SwapGbpRow {
     margin-top: 45px !important; }
