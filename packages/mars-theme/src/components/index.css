@@ -1458,7 +1458,7 @@ b {
 
 @media (max-width: 540px) {
   .ContactForm h1 {
-    font-size: 32px;
+    font-size: 32px !important;
 }
   .ContactSection {
     padding: 70px 0px 40px 0px; }
