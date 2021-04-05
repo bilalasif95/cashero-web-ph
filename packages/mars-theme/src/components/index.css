@@ -15601,6 +15601,9 @@ select:-webkit-autofill:focus {
     .terms_titles {
       margin: 40px 0px;
   }
+  .terms_titles p {
+    text-align: justify;
+  }
   .condition-list {
     padding-left: 40px;
   }
@@ -15609,6 +15612,7 @@ select:-webkit-autofill:focus {
     line-height: 22px;
     letter-spacing: 0.01em;
     margin-bottom: 1rem;
+    text-align: justify;
   }
   .custom-border{
     border-bottom: 1px solid #d2d2d7;
