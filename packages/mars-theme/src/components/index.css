@@ -15804,7 +15804,7 @@ select:-webkit-autofill:focus {
       .inputfieldbox input {
         width: 100%;
       }
-      .inputfieldbox input:first-child {
+      .inputfieldbox input:first-of-type {
         margin-bottom: 24px;
       }
     }
