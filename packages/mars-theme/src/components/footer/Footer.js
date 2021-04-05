@@ -74,7 +74,7 @@ export function Footer() {
 							<div className="col-md-4">
 								<p className="NavTitle">Legal</p>
 								<ul className="list-unstyled FooterList">
-									<li><Link link="/giveaway">Terms</Link></li>
+									<li><Link link="/terms">Terms</Link></li>
 									<li><Link link="/privacy-policy">Privacy</Link></li>
 									<li><Link link="/sitemap">Sitemap</Link></li>
 								</ul>
