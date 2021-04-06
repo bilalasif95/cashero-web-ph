@@ -15808,3 +15808,26 @@ select:-webkit-autofill:focus {
         margin-bottom: 24px;
       }
     }
+    .phoneNumberError{
+      color: red;
+    }
+    .phoneNumberModalError{
+      color: red;
+      width: 100%;
+      text-align: left;
+      padding-top: 0.5rem;
+    }
+    .contactUsFormError{
+      color: red !important;
+      width: 100%;
+      text-align: center;
+      padding-top: 1rem;
+      font-size: 16px;
+    }
+    .contactUsFormSuccess{
+      color: green !important;
+      width: 100%;
+      text-align: center;
+      padding-top: 1rem;
+      font-size: 16px;
+    }
