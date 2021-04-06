@@ -37,9 +37,9 @@ export function TextfieldBanner() {
   };
   const getStarted = () => {
     setLoading(true);
-    let finalPhoneNumb = code + newPhone;
     callApi(EndPoints.preregistration, "post", "", {
-      Phone: finalPhoneNumb,
+      Phone: newPhone,
+      countryCode: code,
     })
       .then((res) => {
         setLoading(false);
