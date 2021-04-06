@@ -40,14 +40,6 @@ const Theme = ({ state }) => {
       localStorage.setItem(`${name}-Version`, version)
       window.location.reload();
     }
-    if ('caches' in window) {
-      caches.keys().then((names) => {
-        names.forEach(name => {
-          caches.delete(name);
-        })
-      });
-      window.location.reload();
-    }
   }, [])
   return (
     <>
