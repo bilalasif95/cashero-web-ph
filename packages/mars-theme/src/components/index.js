@@ -40,6 +40,14 @@ const Theme = ({ state }) => {
       localStorage.setItem(`${name}-Version`, version)
       window.location.reload();
     }
+    if ('caches' in window) {
+      caches.keys().then((names) => {
+        names.forEach(name => {
+          caches.delete(name);
+        })
+      });
+      window.location.reload();
+    }
   }, [])
   return (
     <>
@@ -58,6 +66,9 @@ const Theme = ({ state }) => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={websiteLink} />
         <meta property="og:image" content="https://i.imgur.com/as9Mj8G.png" />
+        <meta http-equiv='cache-control' content='no-cache' />
+        <meta http-equiv='expires' content='0' />
+        <meta http-equiv='pragma' content='no-cache' />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
