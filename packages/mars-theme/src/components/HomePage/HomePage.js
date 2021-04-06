@@ -31,7 +31,7 @@ export function HomePage(props) {
               <div className="bannerCont">
                 <Fade triggerOnce direction="up" delay={100}>
                   <h1 className="bannerTitle">
-                    Your Money's Superhero0000 <span className="br-block"></span> is
+                    Your Money's Superhero <span className="br-block"></span> is
                     Almost Here
                   </h1>
                 </Fade>
