@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Global, css, connect, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 // import Header from "./header";
@@ -32,7 +32,15 @@ import { websiteLink } from "../config/config";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-
+  useEffect(() => {
+    let name = 'cashero-web'
+    let version = '1.0.0'
+    const last_version = localStorage.getItem(`${name}-Version`)
+    if (last_version !== version) {
+      localStorage.setItem(`${name}-Version`, version)
+      window.location.reload();
+    }
+  }, [])
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
