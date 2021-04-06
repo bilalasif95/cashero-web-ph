@@ -36,6 +36,9 @@ const Theme = ({ state }) => {
     let name = 'cashero-web'
     let version = '1.0.1'
     const last_version = localStorage.getItem(`${name}-Version`)
+    if (!last_version) {
+      window.location.reload();
+    }
     if (last_version !== version) {
       localStorage.setItem(`${name}-Version`, version)
       window.location.reload();
