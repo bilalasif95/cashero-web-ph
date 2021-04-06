@@ -87,7 +87,7 @@ const Post = ({ state, actions, libraries }) => {
                 </div>
                 <h1><div dangerouslySetInnerHTML={{ __html: post.title.rendered }}></div></h1>
                 <p className="date">{date}</p>
-                <p><div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div></p>
+                {/* <p><div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div></p> */}
                 <Content>
                   <Html2React html={post.content.rendered} />
                 </Content>
