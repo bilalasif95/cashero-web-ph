@@ -151,9 +151,11 @@ export function TextfieldBanner() {
           Get Early Access
         </button>
       </div>
-      <label style={{ color: "red", width: "100%", textAlign: "left", paddingTop: "0.5rem" }}>
-        {error}
-      </label>
+      {error &&
+        <label className="phoneNumberModalError">
+          {error}
+        </label>
+      }
       {openSuccessModal && (
         <ThanksModal open={openSuccessModal} handleClose={thanksModalClose} />
       )}

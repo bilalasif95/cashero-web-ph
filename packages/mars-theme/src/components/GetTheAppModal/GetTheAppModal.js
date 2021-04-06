@@ -190,9 +190,11 @@ export default function GetTheAppModal(props) {
                   >
                     Get Early Access
                   </button>
-                  <label style={{ color: "red" }}>
-                    {error}
-                  </label>
+                  {error &&
+                    <label className="phoneNumberError">
+                      {error}
+                    </label>
+                  }
                 </div>
                 <button
                   onClick={() => getStarted()}
@@ -206,9 +208,11 @@ export default function GetTheAppModal(props) {
                 >
                   Get Early Access
                 </button>
-                <label style={{ color: "red" }}>
-                  {error}
-                </label>
+                {error &&
+                  <label className="phoneNumberError">
+                    {error}
+                  </label>
+                }
               </div>
             </div>
           </div>
