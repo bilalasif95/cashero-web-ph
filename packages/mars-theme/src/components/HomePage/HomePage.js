@@ -1,6 +1,6 @@
 import React from "react";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
-import Banner from "../../assets/photoshop.gif";
+import Banner from "../../assets/photoshop.webm";
 import Check from "../../assets/check-mark.svg";
 import { GlobalMoney } from "../GlobalMoney/GlobalMoney";
 import { HighInterest } from "../HighInterest/HighInterest";
