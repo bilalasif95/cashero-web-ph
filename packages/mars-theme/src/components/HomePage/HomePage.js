@@ -1,6 +1,6 @@
 import React from "react";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
-import Banner from "../../assets/photoshop.webm";
+import Banner from "../../assets/photoshop.gif";
 import Check from "../../assets/check-mark.svg";
 import { GlobalMoney } from "../GlobalMoney/GlobalMoney";
 import { HighInterest } from "../HighInterest/HighInterest";
@@ -68,7 +68,7 @@ export function HomePage(props) {
             </div>
             <div className="col-md-4">
               <div className="bannerImg">
-                <img className="img-fluid " alt="Banner" src={Banner} />
+                <img className="img-fluid " alt="Banner" src={Banner + "?v=$sha1"} />
               </div>
             </div>
           </div>
