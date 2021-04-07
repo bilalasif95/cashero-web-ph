@@ -68,7 +68,7 @@ export function HomePage(props) {
             </div>
             <div className="col-md-4">
               <div className="bannerImg">
-                <img className="img-fluid " alt="Banner" src={Banner + "?v=$sha1"} />
+                <img className="img-fluid " alt="Banner" src={Banner} />
               </div>
             </div>
           </div>
