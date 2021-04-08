@@ -8,7 +8,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
-import Link from "../link";
+// import Link from "../link";
 
 export default function GetTheAppModal(props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -113,12 +113,13 @@ export default function GetTheAppModal(props) {
                 saving, earning and sending in seconds.
               </h2>
               <p id="transition-modal-description">
-                We’ll send you a message with a link to download the app.
+                Enter your phone number to join our waitlist.
+                {/* We’ll send you a message with a link to download the app. */}
               </p>
-              <p id="transition-modal-description">
+              {/* <p id="transition-modal-description">
                 You’ll also earn a chance to win $1,000 every 3 days! <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and
                 conditions</Link></span> apply.
-              </p>
+              </p> */}
               <div className="ModalPhone">
                 <div className="numberSelection">
                   <div className="selectCountry">

@@ -4,7 +4,7 @@ const API = process.env.REACT_APP_API_URL
 const firebaseAPI =
   "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/";
 
-export const websiteLink = "https://cashero.com";
+export const websiteLink = "https://www.cashero.com";
 
 export const wordPressLink = "https://wp.cashero.com";
 
