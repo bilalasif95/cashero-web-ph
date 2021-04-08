@@ -319,7 +319,7 @@ const List = () => {
                 className="btn btn-primary my-sm-0 Appbtn GetAppBtn"
                 onClick={handleOpen}
               >
-                Get The App
+                Get Early Access
 							</button>
             </div>
           </nav>

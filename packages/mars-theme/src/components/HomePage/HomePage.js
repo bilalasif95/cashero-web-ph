@@ -56,7 +56,7 @@ export function HomePage(props) {
                 <ul className="HomepagelList list-unstyled">
                   <li>
                     <img src={Clock} alt="Clock" />
-                    Open an account in minutes. Launching in June.
+                    Launching in June.
                   </li>
                 </ul>
                 <p className="draw-text">

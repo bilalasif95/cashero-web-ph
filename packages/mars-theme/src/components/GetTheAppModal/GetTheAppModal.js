@@ -109,8 +109,7 @@ export default function GetTheAppModal(props) {
           <div className="joinApp">
             <div className="inner-content">
               <h2 className="ModalTitle" id="transition-modal-title">
-                Your Hero awaits. <span className="br-block-with-no-display"></span> Start
-                saving, earning and sending in seconds.
+                Your money’s superhero <span className="br-block-with-no-display"></span>is almost here.
               </h2>
               <p id="transition-modal-description">
                 Enter your phone number to join our waitlist.
