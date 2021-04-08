@@ -48,7 +48,7 @@ export function Footer() {
 						</Link>
 						<p className="HelpText">Need help? We’re always here <span className="br-block-with-no-display"></span> when you need us. Download the <span className="br-block-with-no-display"></span> App and get started.</p>
 						<ul className="list-unstyled AppList">
-							<li><a href="https://play.google.com/store/apps/details?id=com.rns.casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
+							<li><a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
 							<li><a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
 						</ul>
 					</div>
