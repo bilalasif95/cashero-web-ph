@@ -66,7 +66,7 @@ export function TextfieldBanner() {
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
-          const countryCode = counrtrylist.filter(({ dial_code }) => dial_code === res.country_phone)
+          const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
           setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
