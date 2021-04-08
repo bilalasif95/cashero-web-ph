@@ -340,7 +340,7 @@ const List = () => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.rns.casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
             <li><a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
           </ul>
           {/* <button
