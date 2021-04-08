@@ -250,7 +250,7 @@ export function ExchangeRates() {
                     Open an account in minutes. Launching in June.
                   </li>
                 </ul>
-                <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block"></span> <Link className="giveaway-link1" link="/giveaway"> Terms and conditions</Link> apply. </p>
+                <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">Terms and conditions</Link> apply. </p>
               </div>
             </div>
             <div className="col-md-5">

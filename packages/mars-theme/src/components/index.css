@@ -943,7 +943,9 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
 
 @media (min-width: 767px) {
   .br-block {
-    display: block; } }
+    display: block; }
+    .br-block-with-no-display {
+      display: block; } }
 
 @media (max-width: 1024px) {
   .MainblogImg {
@@ -1054,6 +1056,10 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
 }
   .br-block {
     width: 5px;
+    display: inline-block;
+  }
+  .br-block-with-no-display {
+    display: none;
   }
   .blogDetailImg {
     min-height: 235px; }

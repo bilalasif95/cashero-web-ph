@@ -11,7 +11,7 @@ export function ContactUs() {
 					<div className="col-md-12">
 						<div className="ContactUsCont">
 							<h1> Want to Get a Hold of Us?  </h1>
-							<p className="mb-0">Sign into the Cashero App on your mobile and simply send us <span className="br-block"></span> a message via our in-app chat support.</p>
+							<p className="mb-0">Sign into the Cashero App on your mobile and simply send us <span className="br-block-with-no-display"></span> a message via our in-app chat support.</p>
 						</div>
 					</div>
 				</div>

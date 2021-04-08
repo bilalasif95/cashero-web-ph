@@ -65,7 +65,7 @@ export function QuestionTabs(props) {
 		<div className="Questions">
 			<div className="row">
 				<div className="col-md-4">
-					<h4 className="TabsTitle">Frequently asked <span className="br-block"></span>questions</h4>
+					<h4 className="TabsTitle">Frequently asked <span className="br-block-with-no-display"></span>questions</h4>
 					<AppBar position="static" className="custom-Tabs">
 						<Tabs
 							value={value}

@@ -23,7 +23,7 @@ export function OnlineSave() {
 						<div>
 							<Fade triggerOnce direction="up" delay={0}>
 								<h1 className="oneAppTitle">
-									Transfer Money Instantly <span className="br-block"></span> and Save on Exchange <span className="br-block"></span> Fees
+									Transfer Money Instantly <span className="br-block-with-no-display"></span> and Save on Exchange <span className="br-block-with-no-display"></span> Fees
 								</h1>
 							</Fade>
 							<Fade triggerOnce direction="up" delay={300}>

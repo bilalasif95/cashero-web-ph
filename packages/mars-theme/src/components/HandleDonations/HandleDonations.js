@@ -14,7 +14,7 @@ export function HandleDonations() {
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
 						<div className="oneAppCont sm-mt-0">
-							<h1 className="oneAppTitle">Cashero Helps You <span className="br-block"></span>  Handle Donations from <span className="br-block"></span>  Around The World</h1>
+							<h1 className="oneAppTitle">Cashero Helps You <span className="br-block-with-no-display"></span>  Handle Donations from <span className="br-block-with-no-display"></span>  Around The World</h1>
 							<p className="sm-center">Benefit from the following:</p>
 							<ul className="list-unstyled CharityList">
 								<li><img src={Check} alt="check" /> High-yield savings account.</li>

@@ -31,7 +31,7 @@ export function HomePage(props) {
               <div className="bannerCont">
                 <Fade triggerOnce direction="up" delay={100}>
                   <h1 className="bannerTitle">
-                    Your Money's Superhero <span className="br-block"></span> is
+                    Your Money's Superhero <span className="br-block-with-no-display"></span> is
                     Almost Here
                   </h1>
                 </Fade>
@@ -61,8 +61,8 @@ export function HomePage(props) {
                 </ul>
                 <p className="draw-text">
                   Get early access to the Cashero app and earn a chance to win
-                  $1,000 every 3 days! <span className="br-block"></span>
-                  <Link className="giveaway-link" link="/giveaway"> Terms and conditions</Link> apply.
+                  $1,000 every 3 days! <span className="br-block-with-no-display"></span>
+                  <Link className="giveaway-link" link="/giveaway">Terms and conditions</Link> apply.
                 </p>
               </div>
             </div>

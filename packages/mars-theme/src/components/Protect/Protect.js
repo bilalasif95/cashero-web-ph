@@ -19,7 +19,7 @@ export function Protect() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								Use Cashero to Protect  <span className="br-block"></span> Your Money from Currency <span className="br-block"></span>  Value Fluctuations
+								Use Cashero to Protect  <span className="br-block-with-no-display"></span> Your Money from Currency <span className="br-block-with-no-display"></span>  Value Fluctuations
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={400}>

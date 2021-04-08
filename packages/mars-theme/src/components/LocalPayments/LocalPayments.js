@@ -22,7 +22,7 @@ export function LocalPayments() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								Local and Global Instant <span className="br-block"></span> Payments at the Tip <span className="br-block"></span> of Your Fingers
+								Local and Global Instant <span className="br-block-with-no-display"></span> Payments at the Tip <span className="br-block-with-no-display"></span> of Your Fingers
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>

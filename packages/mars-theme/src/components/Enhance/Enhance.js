@@ -13,7 +13,7 @@ export function Enhance() {
 							<Fade triggerOnce direction="up">
 								<h3 className="EnhanceTitle">Business</h3>
 								<p>
-									Make profit on your profit with our high yield savings. <span className="br-block"></span> Send, request, and receive money from customers worldwide.
+									Make profit on your profit with our high yield savings. <span className="br-block-with-no-display"></span>Send, request, and receive money from customers worldwide.
 								</p>
 								<a className="Link" href="/#">
 									Learn more about Business  <img alt="Arrow" className="ArrowBtn" src={ArrowWhite} />

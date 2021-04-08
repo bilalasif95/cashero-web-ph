@@ -19,7 +19,7 @@ export function EasyCurrencyExchange() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								Your One Tap Hub for <span className="br-block"></span> Easy Currency Exchange
+								Your One Tap Hub for <span className="br-block-with-no-display"></span> Easy Currency Exchange
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
