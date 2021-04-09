@@ -1,2 +1,11 @@
 User-agent: *
+Disallow: https://test.cashero.com/
+Disallow: https://test.cashero.com/blog/author/cashero/
+Disallow: https://test.cashero.com/multi-currency-savings-account/
+Disallow: https://test.cashero.com/blog/online-currency-exchange/
+Disallow: https://test.cashero.com/blog/
+Disallow: https://test.cashero.com/category/instant-money-transfer/
+
 Allow: /
+# Sitemap files
+Sitemap: https://cashero.com/sitemap.xml

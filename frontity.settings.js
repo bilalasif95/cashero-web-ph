@@ -6,7 +6,7 @@ const settings = {
     "frontity": {
       "url": wordPressLink,
       "title": "Cashero App",
-      "description": "Cashero is a limited company registered in England and Wales with the registered company number 12783127"
+      "description": "Cashero is an all-in-one platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero."
     }
   },
   "packages": [
