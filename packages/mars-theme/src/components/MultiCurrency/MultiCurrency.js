@@ -20,7 +20,7 @@ export function MultiCurrency() {
 								Savings Account
 							</h1>
 							<p>Multiple currencies, one wallet. Convert your local currency into USD, GBP, or EUR to reduce currency fluctuation risk. </p>
-							<Link link="/multi-currency-savings-account" className="Link">
+							<Link link="/multi-currency-savings-account" className="Link sm-mb-30">
 								Learn more about Accounts<img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>

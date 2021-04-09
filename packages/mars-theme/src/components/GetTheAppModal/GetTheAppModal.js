@@ -9,6 +9,8 @@ import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
 // import Link from "../link";
+import Android from "../../assets/AndroidApp.svg";
+import IOS from "../../assets/iOSApp.svg";
 
 export default function GetTheAppModal(props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,10 +21,12 @@ export default function GetTheAppModal(props) {
   const [phonenoLength, setPhoneNoLength] = useState(0);
   const [newPhone, setNewPhoneNumber] = useState("");
   const [error, setError] = useState("");
+  const [innerWidth, setInnerWidth] = useState(0);
   const [loading, setLoading] = useState(false);
   const [openSuccessModal, setSuccessModal] = useState(false);
   useEffect(() => {
     setSearchResults(counrtrylist);
+    setInnerWidth(window.innerWidth)
   }, []);
   const thanksModalClose = () => {
     setSuccessModal(false);
@@ -106,116 +110,129 @@ export default function GetTheAppModal(props) {
           >
             <CloseIcon />
           </IconButton>
-          <div className="joinApp">
-            <div className="inner-content">
-              <h2 className="ModalTitle" id="transition-modal-title">
-                Your money’s superhero <span className="br-block-with-no-display"></span>is almost here.
-              </h2>
-              <p id="transition-modal-description">
-                Enter your phone number to join our waitlist.
+          {innerWidth <= 540 ?
+            <div className="mobileJoinApp">
+              <div>
+                <h2 className="ModalTitle" id="transition-modal-title">
+                  Join Cashero in <span className="br-block highInterestHeading"></span>seconds
+                </h2>
+                <ul className="list-unstyled MobileAppList">
+                  <li><a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
+                  <li><a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+                </ul>
+              </div>
+            </div> :
+            <div className="joinApp">
+              <div className="inner-content">
+                <h2 className="ModalTitle" id="transition-modal-title">
+                  Your money’s superhero <span className="br-block-with-no-display"></span>is almost here.
+                </h2>
+                <p id="transition-modal-description">
+                  Enter your phone number to join our waitlist.
                 {/* We’ll send you a message with a link to download the app. */}
-              </p>
-              {/* <p id="transition-modal-description">
+                </p>
+                {/* <p id="transition-modal-description">
                 You’ll also earn a chance to win $1,000 every 3 days! <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and
                 conditions</Link></span> apply.
               </p> */}
-              <div className="ModalPhone">
-                <div className="numberSelection">
-                  <div className="selectCountry">
-                    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                      <DropdownToggle caret>
-                        <input type="text" placeholder="Code" readOnly value={code} />
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem header>
-                          <>
-                            <SearchIcon />
-                            <input
-                              type="text"
-                              placeholder="Country"
-                              value={searchTerm}
-                              onChange={handleChange}
-                            />
-                          </>
-                        </DropdownItem>
-                        <div className="country-list">
-                          {searchResults2.length > 0
-                            ? searchResults2.map((item, index) => (
-                              <DropdownItem
-                                key={index + 1}
-                                onClick={() => selectCountry(item)}
-                                className="country-item"
-                              >
-                                <div className="flag-name">
-                                  <span>{item.flag}</span>
-                                  {item.name}
-                                </div>
-                                <div className="code">{item.dial_code}</div>
-                              </DropdownItem>
-                            ))
-                            : searchResults.map((item, index) => (
-                              <DropdownItem
-                                key={index + 1}
-                                onClick={() => selectCountry(item)}
-                                className="country-item"
-                              >
-                                <div className="flag-name">
-                                  <span>{item.flag}</span>
-                                  {item.name}
-                                </div>
-                                <div className="code">{item.dial_code}</div>
-                              </DropdownItem>
-                            ))}
-                        </div>
-                      </DropdownMenu>
-                    </Dropdown>
-                  </div>
-                  <div className="inputNum">
-                    <input
-                      type="number"
-                      placeholder="Phone number"
-                      value={newPhone}
-                      onChange={(e) => handleOnChange(e)}
-                    />
+                <div className="ModalPhone">
+                  <div className="numberSelection">
+                    <div className="selectCountry">
+                      <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                        <DropdownToggle caret>
+                          <input type="text" placeholder="Code" readOnly value={code} />
+                        </DropdownToggle>
+                        <DropdownMenu>
+                          <DropdownItem header>
+                            <>
+                              <SearchIcon />
+                              <input
+                                type="text"
+                                placeholder="Country"
+                                value={searchTerm}
+                                onChange={handleChange}
+                              />
+                            </>
+                          </DropdownItem>
+                          <div className="country-list">
+                            {searchResults2.length > 0
+                              ? searchResults2.map((item, index) => (
+                                <DropdownItem
+                                  key={index + 1}
+                                  onClick={() => selectCountry(item)}
+                                  className="country-item"
+                                >
+                                  <div className="flag-name">
+                                    <span>{item.flag}</span>
+                                    {item.name}
+                                  </div>
+                                  <div className="code">{item.dial_code}</div>
+                                </DropdownItem>
+                              ))
+                              : searchResults.map((item, index) => (
+                                <DropdownItem
+                                  key={index + 1}
+                                  onClick={() => selectCountry(item)}
+                                  className="country-item"
+                                >
+                                  <div className="flag-name">
+                                    <span>{item.flag}</span>
+                                    {item.name}
+                                  </div>
+                                  <div className="code">{item.dial_code}</div>
+                                </DropdownItem>
+                              ))}
+                          </div>
+                        </DropdownMenu>
+                      </Dropdown>
+                    </div>
+                    <div className="inputNum">
+                      <input
+                        type="number"
+                        placeholder="Phone number"
+                        value={newPhone}
+                        onChange={(e) => handleOnChange(e)}
+                      />
+                    </div>
+                    <button
+                      onClick={() => getStarted()}
+                      disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
+                      className={
+                        newPhone.length === phonenoLength
+                          ? "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block"
+                          : "btn btn-primary my-2 my-sm-0 Appbtn disabled d-none d-sm-none d-md-block"
+                      }
+                      type="submit"
+                    >
+                      Get Early Access
+                  </button>
+                    {error &&
+                      <label className="phoneNumberError">
+                        {error}
+                      </label>
+                    }
                   </div>
                   <button
                     onClick={() => getStarted()}
                     disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
                     className={
                       newPhone.length === phonenoLength
-                        ? "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block"
-                        : "btn btn-primary my-2 my-sm-0 Appbtn disabled d-none d-sm-none d-md-block"
+                        ? "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn"
+                        : "btn btn-primary my-2 my-sm-0 Appbtn disabled d-md-none d-sm-block JoinCasheroBtn"
                     }
                     type="submit"
                   >
                     Get Early Access
-                  </button>
+                </button>
                   {error &&
                     <label className="phoneNumberError">
                       {error}
                     </label>
                   }
                 </div>
-                <button
-                  onClick={() => getStarted()}
-                  disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
-                  className={
-                    newPhone.length === phonenoLength
-                      ? "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn"
-                      : "btn btn-primary my-2 my-sm-0 Appbtn disabled d-md-none d-sm-block JoinCasheroBtn"
-                  }
-                  type="submit"
-                >
-                  Get Early Access
-                </button>
-                {error &&
-                  <label className="phoneNumberError">
-                    {error}
-                  </label>
-                }
               </div>
             </div>
-          </div>
+          }
         </Paper>
       </Modal>
       {openSuccessModal && (
@@ -231,6 +248,10 @@ const Paper = styled.div`
   padding: 16px 32px 24px;
   width: 100% !important;
   height: 100vh !important;
+  @media(max-width: 540px){
+    display: flex;
+    justify-content: center;
+  },
   .MuiButtonBase-root {
     top: 81px;
     right: 86px;
