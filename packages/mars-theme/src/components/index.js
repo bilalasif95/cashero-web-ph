@@ -35,7 +35,7 @@ const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
   useEffect(() => {
     let name = 'cashero-web'
-    let version = '1.0.15'
+    let version = '1.0.16'
     const last_version = localStorage.getItem(`${name}-Version`)
     if (!last_version) {
       window.location.reload();
@@ -62,6 +62,11 @@ const Theme = ({ state }) => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={websiteLink} />
         <meta property="og:image" content="https://i.imgur.com/as9Mj8G.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={state.frontity.title} />
+        <meta name="twitter:description" content={state.frontity.description} />
+        <meta name="twitter:url" content={websiteLink} />
+        <meta name="twitter:image" content="https://i.imgur.com/as9Mj8G.png" />
         <meta http-equiv='cache-control' content='no-cache' />
         <meta http-equiv='expires' content='0' />
         <meta http-equiv='pragma' content='no-cache' />
