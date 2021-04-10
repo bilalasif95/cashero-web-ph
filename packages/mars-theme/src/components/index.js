@@ -24,6 +24,7 @@ import { Giveaway } from "./Giveaway/Giveaway";
 import { Terms } from "./Terms/Terms";
 import { Privacy } from "./Privacy/Privacy";
 import { Sitemap } from "./Sitemap/Sitemap";
+import { Thankyou } from "./Thankyou/Thankyou";
 import { websiteLink } from "../config/config";
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -34,7 +35,7 @@ const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
   useEffect(() => {
     let name = 'cashero-web'
-    let version = '1.0.14'
+    let version = '1.0.15'
     const last_version = localStorage.getItem(`${name}-Version`)
     if (!last_version) {
       window.location.reload();
@@ -95,6 +96,7 @@ const Theme = ({ state }) => {
         <HomePage when={data.isArchive} state={state} />
         <Post when={data.isPostType} />
         <Sitemap when={data.isSitemap} />
+        <Thankyou when={data.isThankYou} />
         <BlogPage when={data.isBlog} />
         <PageError when={data.isError} />
       </Switch>
