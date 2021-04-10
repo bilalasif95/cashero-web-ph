@@ -139,7 +139,7 @@ export function QuestionTabs(props) {
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero is an all-in-one platform for high-yield savings, multi-currency wallets, and instant, fee-free internal and cross-border payments.
+											Cashero is an all-in-one platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero.
 										</h4>
 									</Typography>
 								</AccordionDetails>
