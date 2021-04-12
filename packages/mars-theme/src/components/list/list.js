@@ -137,21 +137,21 @@ const List = () => {
 														Wealth
 													</p>
                           <ul className="HeaderList list-unstyled">
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/high-yield-savings-account">
                                 High Yield
                                 Savings
                                 Account
                               </Link>
                             </li>
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/multi-currency-savings-account">
                                 Multi-Currency
                                 Savings
                                 Account
                               </Link>
                             </li>
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/online-currency-exchange">
                                 Online
                                 Currency
@@ -171,14 +171,14 @@ const List = () => {
 														Payments
 													</p>
                           <ul className="HeaderList list-unstyled">
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/instant-money-transfer">
                                 Instant
                                 Money
                                 Transfer
                               </Link>
                             </li>
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/transfer-money-abroad">
                                 Transfer
                                 Money Abroad
@@ -216,17 +216,17 @@ const List = () => {
 														Wealth
 													</p>
                           <ul className="HeaderList list-unstyled">
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/high-yield-savings-account">
                                 High Yield Savings Account
                               </Link>
                             </li>
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/multi-currency-savings-account">
                                 Multi-Currency Savings Account
                               </Link>
                             </li>
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/online-currency-exchange">
                                 Online Currency Exchange
                               </Link>
@@ -244,12 +244,12 @@ const List = () => {
 														Payments
 													</p>
                           <ul className="HeaderList list-unstyled">
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/instant-money-transfer">
                                 Instant Money Transfer
                               </Link>
                             </li>
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/transfer-money-abroad">
                                 Transfer Money Abroad
                               </Link>
@@ -286,12 +286,12 @@ const List = () => {
 														Charities
 													</p>
                           <ul className="HeaderList list-unstyled">
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/donation">
                                 Donate
                               </Link>
                             </li>
-                            <li>
+                            <li onClick={() => setToggleBotton(false)}>
                               <Link link="/become-listed-charity">
                                 Become a
                                 Listed
@@ -304,12 +304,12 @@ const List = () => {
                     </div>
                   </div>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => setToggleBotton(false)}>
                   <Link link="/company" className="nav-link">
                     Company
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={() => setToggleBotton(false)}>
                   <Link link="/contact-Us" className="nav-link">
                     Help
                   </Link>

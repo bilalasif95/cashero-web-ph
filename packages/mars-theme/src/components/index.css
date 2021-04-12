@@ -1046,6 +1046,9 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
       width: 100%; } }
 
 @media (max-width: 540px) {
+  .highInterestHeading {
+    display: block !important;
+  }
   .sm-mb-0 {
     margin-bottom: 0px !important; }
   .PhoneHand{
@@ -1345,6 +1348,11 @@ b {
   margin-top: 27px; }
 
 @media (max-width: 540px) {
+  .mobileJoinApp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .MoneyRequest {
     padding: 40px 0px; }}
 
@@ -1836,8 +1844,6 @@ b {
 }
 
 @media (max-width: 540px) {
-  .CharityList {
-    text-align: center; }
   .oneApp, .CurrencyConversion, .MoneyRequest, .SavingAccount, .Charity {
     padding: 40px 0px; }
   .PeoplesTitle {
@@ -5421,7 +5427,9 @@ button:focus {
     padding: 40px 0px; } }
 
 .Thankyou {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 100px;
+ }
   .Thankyou .ThankyouCont {
     text-align: center;
     padding-top: 100px; }
@@ -5438,7 +5446,9 @@ button:focus {
 
 @media (max-width: 540px) {
   .Thankyou {
-    margin-top: 100px; }
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
     .Thankyou .ThankyouCont {
       text-align: center;
       padding-top: 0px; }
