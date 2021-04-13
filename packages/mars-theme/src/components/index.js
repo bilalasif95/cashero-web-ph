@@ -26,6 +26,7 @@ import { Privacy } from "./Privacy/Privacy";
 import { Sitemap } from "./Sitemap/Sitemap";
 import { Thankyou } from "./Thankyou/Thankyou";
 import { websiteLink } from "../config/config";
+import { structuredData } from "../config/SEO/Homepage/structuredData";
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -70,6 +71,9 @@ const Theme = ({ state }) => {
         <meta http-equiv='cache-control' content='no-cache' />
         <meta http-equiv='expires' content='0' />
         <meta http-equiv='pragma' content='no-cache' />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
