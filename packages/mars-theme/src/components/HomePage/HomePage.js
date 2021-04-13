@@ -15,15 +15,11 @@ import { GetStarted } from "../GetStarted/GetStarted";
 import Clock from "../../assets/clock.svg";
 import { MultiCurrency } from "../MultiCurrency/MultiCurrency";
 import { Fade } from "react-awesome-reveal";
-import { structuredData } from "../../config/SEO/Homepage/structuredData";
 import Link from "../link";
 
-export function HomePage(props) {
+export function HomePage() {
   return (
     <>
-      <script className="structured-data-list" type="application/ld+json">
-        {structuredData(props.state)}
-      </script>
       <div className="container">
         <div className="banner">
           <div className="row">
