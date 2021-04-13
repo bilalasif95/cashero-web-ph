@@ -57,5 +57,3 @@ Disallow: https://wp.cashero.com/blog/whats-the-quickest-way-to-transfer-money/
 Disallow: https://test.cashero.com/online-currency-exchange/
 
 Disallow: /
-# Sitemap files
-Sitemap: https://staging.cashero.com/sitemap.xml
