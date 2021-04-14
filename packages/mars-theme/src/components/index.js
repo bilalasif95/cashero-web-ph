@@ -23,6 +23,8 @@ import { Remittance } from "./Remittance/Remittance";
 import { Giveaway } from "./Giveaway/Giveaway";
 import { Terms } from "./Terms/Terms";
 import { Privacy } from "./Privacy/Privacy";
+import { AppTerms } from "./AppTerms/AppTerms";
+import { AppPrivacy } from "./AppPrivacy/AppPrivacy";
 import { Sitemap } from "./Sitemap/Sitemap";
 import { Thankyou } from "./Thankyou/Thankyou";
 import { websiteLink } from "../config/config";
@@ -36,7 +38,7 @@ const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
   useEffect(() => {
     let name = 'cashero-web'
-    let version = '1.0.17'
+    let version = '1.0.18'
     const last_version = localStorage.getItem(`${name}-Version`)
     if (!last_version) {
       window.location.reload();
@@ -101,6 +103,8 @@ const Theme = ({ state }) => {
         <Giveaway when={data.isGiveaway} />
         <Terms when={data.isTerms} />
         <Privacy when={data.isPrivacy} />
+        <AppTerms when={data.isAppTerms} />
+        <AppPrivacy when={data.isAppPrivacy} />
         <Loading when={data.isFetching} />
         <HomePage when={data.isArchive} state={state} />
         <Post when={data.isPostType} />

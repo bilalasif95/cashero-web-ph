@@ -123,6 +123,26 @@ const privacyHandler = {
   }
 }
 
+const appPrivacyHandler = {
+  pattern: "/privacy-policy-app",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isAppPrivacy: true,
+    })
+  }
+}
+
+const appTermsHandler = {
+  pattern: "/terms-app",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isAppTerms: true,
+    })
+  }
+}
+
 const termsHandler = {
   pattern: "/terms",
   func: ({ route, state }) => {
@@ -200,6 +220,8 @@ const marsTheme = {
         libraries.source.handlers.push(privacyHandler);
         libraries.source.handlers.push(termsHandler);
         libraries.source.handlers.push(thankyouHandler);
+        libraries.source.handlers.push(appPrivacyHandler);
+        libraries.source.handlers.push(appTermsHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
