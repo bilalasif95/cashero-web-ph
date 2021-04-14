@@ -115,7 +115,7 @@ export function AppTerms() {
 						</div>
 						<div className="terms_titles">
 							<h3>PRIVACY POLICY</h3>
-							<p>We care about data privacy and security. Please refer to our <Link link="/privacy-policy">Privacy Policy</Link>.</p>
+							<p>We care about data privacy and security. Please refer to our <Link link="/app-privacy-policy">Privacy Policy</Link>.</p>
 						</div>
 						<div className="terms_titles">
 							<h3>TERM AND TERMINATION</h3>
