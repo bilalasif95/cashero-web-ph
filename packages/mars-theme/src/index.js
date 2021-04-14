@@ -124,7 +124,7 @@ const privacyHandler = {
 }
 
 const appPrivacyHandler = {
-  pattern: "/privacy-policy-app",
+  pattern: "/app-privacy-policy",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -134,7 +134,7 @@ const appPrivacyHandler = {
 }
 
 const appTermsHandler = {
-  pattern: "/terms-app",
+  pattern: "/app-terms",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
