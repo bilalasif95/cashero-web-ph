@@ -310,7 +310,7 @@ const List = () => {
                   </Link>
                 </li>
                 <li className="nav-item" onClick={() => setToggleBotton(false)}>
-                  <Link link="/contact-Us" className="nav-link">
+                  <Link link="/contact-us" className="nav-link">
                     Help
                   </Link>
                 </li>
