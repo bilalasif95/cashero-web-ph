@@ -55,6 +55,18 @@ Disallow: https://wp.cashero.com/blog/what-factors-affect-currency-exchange-rate
 Disallow: https://test.cashero.com/blog/multi-currency-savings-account/
 Disallow: https://wp.cashero.com/blog/whats-the-quickest-way-to-transfer-money/
 Disallow: https://test.cashero.com/online-currency-exchange/
+Disallow: https://www.cashero.com/blog/what-is-the-difference-between-domestic-and-international-wire-transfer/what-is-the-difference-between-domestic-and-international-wire-transfer-2/
+Disallow: https://www.cashero.com/blog/what-is-the-safest-way-to-transfer-money-internationally/what-is-the-safest-way-to-transfer-money-internationally-2/
+Disallow: https://www.cashero.com/blog/whats-the-cheapest-way-to-exchange-currency-while-traveling/whats-the-cheapest-way-to-exchange-currency/
+Disallow: https://www.cashero.com/blog/whats-the-quickest-way-to-transfer-money/whats-the-quickest-way-to-transfer-money-2/
+Disallow: https://www.cashero.com/blog/how-long-does-it-take-to-transfer-money-internationally-online/how-long-does-it-take-to-transfer-money-internationally-online-2/
+Disallow: https://www.cashero.com/blog/how-to-get-a-high-yield-savings-account/how-to-get-a-high-yield-savings-account-2/
+Disallow: https://www.cashero.com/blog/whats-the-safest-way-to-transfer-money/whats-the-safest-way-to-transfer-money-2/
+Disallow: https://www.cashero.com/blog/is-buying-foreign-currency-a-good-investment/is-buying-foreign-currency-a-good-investment-2/
+Disallow: https://www.cashero.com/blog/are-high-yield-savings-accounts-safe/are-high-yield-savings-accounts-safe-2/
+Disallow: https://www.cashero.com/blog/what-is-a-high-yield-savings-account/what-is-a-high-yield-savings-account-2/
+Disallow: https://staging.cashero.com/sitemap.xml
+Disallow: https://wp.cashero.com/blog/why-would-you-put-money-into-a-savings-account/
 
 Allow: /
 # Sitemap files

@@ -98,7 +98,7 @@ const Post = ({ state, actions, libraries }) => {
           </div>
           <div className="MoreBlogs">
             <div className="row">
-              {popularBlogs.slice(0, 3).map(({ type, id }) => {
+              {popularBlogs.reverse().slice(0, 3).map(({ type, id }) => {
                 const item = state.source[type][id];
                 const itemDate = new Date(item.date).toLocaleDateString();
                 return (
