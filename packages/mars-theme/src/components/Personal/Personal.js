@@ -80,7 +80,7 @@ export function Personal() {
 								<p className="bannerPara">Make your money do the work. Earn up to 5% APY on your hard-earned cash, paid out daily.</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
-									<li><img src={Clock} alt="Clock" />Launching in June.</li>
+									<li><img src={Clock} alt="Clock" />Open an account in minutes. Launching in June.</li>
 								</ul>
 								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">Terms and conditions</Link> apply. </p>
 							</div>

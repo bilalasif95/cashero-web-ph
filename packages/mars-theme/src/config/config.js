@@ -8,6 +8,10 @@ export const websiteLink = "https://www.cashero.com";
 
 export const wordPressLink = "https://wp.cashero.com";
 
+export const androidAppLink = "https://play.google.com/store/apps/details?id=com.rns.casheroapp";
+
+export const iosAppLink = "https://apps.apple.com/us/app/cashero/id1547603420";
+
 export const gtmId = "GTM-MBGVT62";
 //for staging.cashero.com   GTM-KKSRK7H
 

@@ -6,9 +6,9 @@ import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { callApi } from "../../config/call-api";
-import { EndPoints, counrtrylist } from "../../config/config";
+import { EndPoints, counrtrylist, androidAppLink, iosAppLink } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
-// import Link from "../link";
+import Link from "../link";
 import Android from "../../assets/AndroidApp.svg";
 import IOS from "../../assets/iOSApp.svg";
 
@@ -117,24 +117,24 @@ export default function GetTheAppModal(props) {
                   Join Cashero in <span className="br-block highInterestHeading"></span>seconds
                 </h2>
                 <ul className="list-unstyled MobileAppList">
-                  <li><a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-                  <li><a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+                  <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
+                  <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
                 </ul>
               </div>
             </div> :
             <div className="joinApp">
               <div className="inner-content">
                 <h2 className="ModalTitle" id="transition-modal-title">
-                  Your money’s superhero <span className="br-block-with-no-display"></span>is almost here.
+                  Your money’s superhero awaits.
                 </h2>
                 <p id="transition-modal-description">
-                  Enter your phone number to join our waitlist.
-                {/* We’ll send you a message with a link to download the app. */}
+                  {/* Enter your phone number to join our waitlist. */}
+                  We’ll send you a message with a link to download the app.
                 </p>
-                {/* <p id="transition-modal-description">
-                You’ll also earn a chance to win $1,000 every 3 days! <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and
-                conditions</Link></span> apply.
-              </p> */}
+                <p id="transition-modal-description">
+                  You’ll also earn a chance to win $1000 every 3 days! <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and
+                  conditions</Link></span> apply.
+                </p>
                 <div className="ModalPhone">
                   <div className="numberSelection">
                     <div className="selectCountry">

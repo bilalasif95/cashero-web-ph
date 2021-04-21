@@ -14,6 +14,7 @@ import ThanksModal from "../ThanksModal/ThanksModal";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Android from "../../assets/AndroidApp.svg";
 import IOS from "../../assets/iOSApp.svg";
+import { androidAppLink, iosAppLink } from "../../config/config";
 
 const List = () => {
   const [toggleBotton, setToggleBotton] = useState(false);
@@ -340,8 +341,8 @@ const List = () => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-            <li><a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
+            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
           </ul>
           {/* <button
             className="btn btn-primary my-2 my-sm-0 Appbtn GetAppBtn"

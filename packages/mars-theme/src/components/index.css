@@ -800,9 +800,9 @@ p {
     justify-content: center;
     margin-bottom: 50px; }
     .ModalPhone .numberSelection .selectCountry {
-      width: 11%; }
-    .ModalPhone .numberSelection .inputNum {
-      width: 28%; }
+      width: 9%; }
+    /* .ModalPhone .numberSelection .inputNum {
+      width: 20%; } */
 
 .HeaderList li a {
   padding: 0px !important; }
