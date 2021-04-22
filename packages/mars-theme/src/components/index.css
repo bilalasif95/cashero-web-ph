@@ -172,6 +172,9 @@ body{
     text-align: center; }
   .banner .numberSelection {
     display: none !important; }
+    .captcha-cont {
+      display: none !important;
+    }
   .bannerImg {
     margin-top: 4rem;
     margin: 0px auto;
@@ -195,7 +198,7 @@ body{
       margin: 0 auto; } }
 
 .HomepagelList {
-  margin: 35px 0px;}
+  margin: 30px 0px;}
   .HomepagelList li {
     position: relative;
     padding-left: 40px;
@@ -3547,7 +3550,7 @@ button:focus {
   width: 15%; }
 
 .PersonalList {
-  margin: 44px 0px; }
+  margin: 30px 0px; }
   .InputBox .MuiInputBase-input {
     padding: 0px 0px 4px;
     border: none;
@@ -15846,4 +15849,19 @@ select:-webkit-autofill:focus {
       text-align: center;
       padding-top: 1rem;
       font-size: 16px;
+    }
+    .g-recaptcha {
+      transform: scale(0.77);
+      transform-origin: 0px 0px;
+    }
+    .captcha-cont {
+      margin-top: 30px;
+    }
+    .SignUp .captcha-cont {
+      display: flex;
+      justify-content: center;
+    }
+    .inner-content .captcha-cont {
+      display: flex;
+      justify-content: center;
     }

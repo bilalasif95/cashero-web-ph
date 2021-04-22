@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { parse as parseQs } from "qs";
 import { callApi } from "../../config/call-api";
-import { EndPoints, counrtrylist } from "../../config/config";
+import { EndPoints, counrtrylist, recaptchaSiteKep, ipAPI } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import SearchIcon from "@material-ui/icons/Search";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export function TextfieldBanner() {
   const [loading, setLoading] = useState(false);
@@ -13,6 +15,12 @@ export function TextfieldBanner() {
   const [searchResults, setSearchResults] = useState(counrtrylist);
   const [searchResults2, setSearchResults2] = useState([]);
   const [code, setCode] = useState("");
+  const [value, setValue] = useState("");
+  const [utmCampaign, setUtmCampaign] = useState("");
+  const [utmContent, setUtmContent] = useState("");
+  const [utmMedium, setUtmMedium] = useState("");
+  const [utmSource, setUtmSource] = useState("");
+  const [utmTerm, setUtmTerm] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [phonenoLength, setPhoneNoLength] = useState(0);
   const toggle = () => {
@@ -39,7 +47,12 @@ export function TextfieldBanner() {
     setLoading(true);
     callApi(EndPoints.preregistration, "post", "", {
       Phone: newPhone,
-      countryCode: code,
+      CountryCode: code,
+      UtmCampaign: utmCampaign,
+      UtmContent: utmContent,
+      UtmMedium: utmMedium,
+      UtmSource: utmSource,
+      UtmTerm: utmTerm
     })
       .then((res) => {
         setLoading(false);
@@ -47,6 +60,7 @@ export function TextfieldBanner() {
           setError(res.message);
         } else {
           setNewPhoneNumber("");
+          setValue("");
           setSuccessModal(true);
         }
       })
@@ -62,7 +76,13 @@ export function TextfieldBanner() {
     setSuccessModal(false);
   };
   useEffect(() => {
-    callApi("https://ipwhois.app/json/", "get")
+    const qs = parseQs(window.location.search.substr(1));
+    setUtmCampaign(qs.utm_campaign)
+    setUtmContent(qs.utm_content)
+    setUtmMedium(qs.utm_medium)
+    setUtmSource(qs.utm_source)
+    setUtmTerm(qs.utm_term)
+    callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
@@ -78,6 +98,9 @@ export function TextfieldBanner() {
         setPhoneNoLength(10);
       })
   }, [])
+  const onCaptchaHandler = (value) => {
+    setValue(value);
+  };
   return (
     <div>
       <div className="numberSelection">
@@ -140,16 +163,26 @@ export function TextfieldBanner() {
         </div>
         <button
           onClick={() => getStarted()}
-          disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
+          disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value}
           className={
-            newPhone.length === phonenoLength
-              ? "btn btn-primary my-2 my-sm-0 Appbtn "
-              : "btn btn-primary my-2 my-sm-0 Appbtn disabled"
+            loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value
+              ? "btn btn-primary my-2 my-sm-0 Appbtn disabled"
+              : "btn btn-primary my-2 my-sm-0 Appbtn"
           }
           type="submit"
         >
           Get Early Access
         </button>
+      </div>
+      <div className="captcha-cont">
+        <ReCAPTCHA
+          className="g-recaptcha"
+          data-theme="light"
+          sitekey={recaptchaSiteKep}
+          onChange={onCaptchaHandler}
+          height="140px"
+          width="100%"
+        />
       </div>
       {error &&
         <label className="phoneNumberModalError">

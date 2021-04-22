@@ -1,6 +1,6 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "https://spot.cashero.com";
+  : "http://192.168.88.127:8001";
 const firebaseAPI =
   "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/";
 
@@ -11,6 +11,10 @@ export const wordPressLink = "https://wp.cashero.com";
 export const androidAppLink = "https://play.google.com/store/apps/details?id=com.rns.casheroapp";
 
 export const iosAppLink = "https://apps.apple.com/us/app/cashero/id1547603420";
+
+export const recaptchaSiteKep = "6Lc5YbQaAAAAAJRSNLyM9ZXpbvweEgr3bRzdbMaB";
+
+export const ipAPI = "https://ipwhois.app/json/";
 
 export const gtmId = "GTM-MBGVT62";
 //for staging.cashero.com   GTM-KKSRK7H
