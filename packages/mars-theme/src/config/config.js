@@ -1,6 +1,8 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "http://192.168.88.127:8001";
+  : "https://spot.cashero.com";
+//development: "http://192.168.88.127:8001"
+//production: "https://spot.cashero.com"
 const firebaseAPI =
   "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/";
 
