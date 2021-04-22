@@ -38,7 +38,7 @@ const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
   useEffect(() => {
     let name = 'cashero-web'
-    let version = '1.0.24'
+    let version = '1.0.25'
     const last_version = localStorage.getItem(`${name}-Version`)
     if (!last_version) {
       window.location.reload();
