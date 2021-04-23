@@ -4,8 +4,12 @@ const API = process.env.REACT_APP_API_URL
 //testing: "http://192.168.88.175:8001"
 //development: "http://192.168.88.127:8001"
 //production: "https://spot.cashero.com"
+
 const firebaseAPI =
-  "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/";
+  "https://firestore.googleapis.com/v1/projects/cashero-testing-54a48/databases/(default)/documents/";
+//testing: "https://firestore.googleapis.com/v1/projects/cashero-testing-54a48/databases/(default)/documents/"
+//production: "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/"
+//development: "https://firestore.googleapis.com/v1/projects/cashero-development-76cca/databases/(default)/documents/"
 
 export const websiteLink = "https://www.cashero.com";
 
@@ -19,8 +23,9 @@ export const recaptchaSiteKep = "6Lc5YbQaAAAAAJRSNLyM9ZXpbvweEgr3bRzdbMaB";
 
 export const ipAPI = "https://ipwhois.app/json/";
 
-export const gtmId = "GTM-MBGVT62";
-//for staging.cashero.com   GTM-KKSRK7H
+export const gtmId = "GTM-KKSRK7H";
+//testing/development:   GTM-KKSRK7H
+//production: GTM-MBGVT62
 
 export const EndPoints = {
   preregistration: `${API + "/api/users/preregistration"}`,

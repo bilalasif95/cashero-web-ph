@@ -68,6 +68,4 @@ Disallow: https://www.cashero.com/blog/what-is-a-high-yield-savings-account/what
 Disallow: https://staging.cashero.com/sitemap.xml
 Disallow: https://wp.cashero.com/blog/why-would-you-put-money-into-a-savings-account/
 
-Allow: /
-# Sitemap files
-Sitemap: https://cashero.com/sitemap.xml
+Disallow: /
