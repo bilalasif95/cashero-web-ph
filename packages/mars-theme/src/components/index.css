@@ -15865,3 +15865,37 @@ select:-webkit-autofill:focus {
       display: flex;
       justify-content: center;
     }
+
+    .latestVersion {
+      background-color: #fff;
+      position: absolute;
+      color: #363636;
+      right: 20px;
+      top: 110px;
+      z-index: 2;
+      padding: 15px;
+      border: 1px solid #bdbfc2;
+      border-left: 5px solid #0466eb;
+      border-radius: 5px;
+      width: 300px;
+    }
+    .latestVersion h4 {
+      font-size: 18px;
+    }
+    .latestVersion p {
+      font-size: 14px;
+    }
+    .latestVersion button {
+      background-color: #0466eb;
+      border: none;
+      border-radius: 15px;
+      color: #fff;
+      padding: 3px 15px;
+    }
+    @media (max-width: 414px) {
+      .latestVersion {
+        right: 5px;
+        top: 92px;
+        width: 280px;
+      }
+    }
