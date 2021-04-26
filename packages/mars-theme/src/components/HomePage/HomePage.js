@@ -35,7 +35,7 @@ export function HomePage() {
                   <div className="Banner-list">
                     <h2 className="bannerText slide-up">
                       <img src={Check} alt="check" />
-                      Deposit money to earn up to 5% APY.
+                      Deposit money to earn up to 5% APY
                     </h2>
                     <h2 className="bannerText slide-up">
                       <img src={Check} alt="check" />

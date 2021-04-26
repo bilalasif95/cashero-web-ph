@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Global, css, connect, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 // import Header from "./header";
@@ -36,24 +36,24 @@ import { structuredData } from "../config/SEO/Homepage/structuredData";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-  const [version, setVersion] = useState(false);
-  useEffect(() => {
-    let name = 'cashero-web'
-    let version = '1.0.26'
-    const last_version = localStorage.getItem(`${name}-Version`)
-    if (!last_version) {
-      setVersion(true)
-      // window.location.reload();
-    }
-    if (last_version !== version) {
-      localStorage.setItem(`${name}-Version`, version)
-      setVersion(true)
-      // window.location.reload();
-    }
-  }, [])
-  const onRefreshButtonClick = () => {
-    window.location.reload();
-  }
+  // const [version, setVersion] = useState(false);
+  // useEffect(() => {
+  //   let name = 'cashero-web'
+  //   let version = '1.0.26'
+  //   const last_version = localStorage.getItem(`${name}-Version`)
+  //   if (!last_version) {
+  //     setVersion(true)
+  //     // window.location.reload();
+  //   }
+  //   if (last_version !== version) {
+  //     localStorage.setItem(`${name}-Version`, version)
+  //     setVersion(true)
+  //     // window.location.reload();
+  //   }
+  // }, [])
+  // const onRefreshButtonClick = () => {
+  //   window.location.reload();
+  // }
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
@@ -96,13 +96,13 @@ const Theme = ({ state }) => {
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
       {/* <Main> */}
-      {version &&
+      {/* {version &&
         <div className="latestVersion">
           <h4>New version is available!</h4>
           <p>To update the application to the latest version, please refresh the page!</p>
           <button onClick={onRefreshButtonClick}>Refresh</button>
         </div>
-      }
+      } */}
       <Switch>
         <Personal when={data.isPersonal} />
         <Company when={data.isCompany} />
