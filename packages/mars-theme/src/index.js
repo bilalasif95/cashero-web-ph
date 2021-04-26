@@ -95,10 +95,25 @@ const remittanceHandler = {
 
 const blogsHandler = {
   pattern: "/blog",
-  func: ({ route, state }) => {
+  func: async ({ route, state, libraries }) => {
+    const { api, populate } = libraries.source
+    const response = await api.get({
+      endpoint: 'posts',
+      params: {
+        per_page: 100,
+        _embed: true,
+      },
+    })
+    const firstItems = await populate({
+      response,
+      state,
+    })
+    const newItems = await Promise.all(firstItems)
+    const items = firstItems.concat(newItems)
     Object.assign(state.source.data[route], {
       type: "page",
       isBlog: true,
+      items,
     })
   }
 }

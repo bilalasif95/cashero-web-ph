@@ -1,15 +1,31 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "https://spot.cashero.com";
+  : "http://192.168.88.175:8001";
+//testing: "http://192.168.88.175:8001"
+//development: "http://192.168.88.127:8001"
+//production: "https://spot.cashero.com"
+
 const firebaseAPI =
-  "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/";
+  "https://firestore.googleapis.com/v1/projects/cashero-testing-54a48/databases/(default)/documents/";
+//testing: "https://firestore.googleapis.com/v1/projects/cashero-testing-54a48/databases/(default)/documents/"
+//production: "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/"
+//development: "https://firestore.googleapis.com/v1/projects/cashero-development-76cca/databases/(default)/documents/"
 
 export const websiteLink = "https://staging.cashero.com";
 
 export const wordPressLink = "https://wp.cashero.com";
 
+export const androidAppLink = "https://play.google.com/store/apps/details?id=com.rns.casheroapp";
+
+export const iosAppLink = "https://apps.apple.com/us/app/cashero/id1547603420";
+
+export const recaptchaSiteKep = "6Lc5YbQaAAAAAJRSNLyM9ZXpbvweEgr3bRzdbMaB";
+
+export const ipAPI = "https://ipwhois.app/json/";
+
 export const gtmId = "GTM-KKSRK7H";
-//for cashero.com   GTM-MBGVT62
+//testing/development:   GTM-KKSRK7H
+//production: GTM-MBGVT62
 
 export const EndPoints = {
   preregistration: `${API + "/api/users/preregistration"}`,

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { callApi } from "../../config/call-api";
-import { EndPoints } from "../../config/config";
+import { EndPoints, recaptchaSiteKep } from "../../config/config";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export function ContactForm() {
 	const [name, setName] = useState("");
@@ -9,6 +10,7 @@ export function ContactForm() {
 	const [loading, setLoading] = useState(false);
 	const [success, setSuccess] = useState("");
 	const [error, setError] = useState("");
+	const [value, setValue] = useState("");
 	const onNameChange = (e) => {
 		setName(e.target.value)
 	}
@@ -41,6 +43,7 @@ export function ContactForm() {
 						setError("");
 						setSuccess("");
 						setMessage("");
+						setValue("");
 					}, 1500)
 				})
 				.catch((err) => {
@@ -49,6 +52,9 @@ export function ContactForm() {
 				});
 		}
 	}
+	const onCaptchaHandler = (value) => {
+		setValue(value);
+	};
 	return (
 		<div className="ContactFormBox">
 			<div className="container">
@@ -61,7 +67,17 @@ export function ContactForm() {
 					<textarea value={message} onChange={(e) => onMessageChange(e)} className="form-control mt-4" placeholder="Message" rows="9" cols="50"></textarea>
 					{error && <label className="contactUsFormError">{error}</label>}
 					{success && <label className="contactUsFormSuccess">{success}</label>}
-					<button onClick={() => sendMessage()} disabled={loading || !name || !email || !message} className={(loading || !name || !email || !message) ? "btn btn-default formbtn disabled" : "btn btn-default formbtn"}>Send Message</button>
+					<div className="captcha-cont">
+						<ReCAPTCHA
+							className="g-recaptcha"
+							data-theme="light"
+							sitekey={recaptchaSiteKep}
+							onChange={onCaptchaHandler}
+							height="140px"
+							width="100%"
+						/>
+					</div>
+					<button onClick={() => sendMessage()} disabled={loading || !name || !email || !message || !value} className={(loading || !name || !email || !message || !value) ? "btn btn-default formbtn disabled" : "btn btn-default formbtn"}>Send Message</button>
 				</div>
 			</div>
 		</div>

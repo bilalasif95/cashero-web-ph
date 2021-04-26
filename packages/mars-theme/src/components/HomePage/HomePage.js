@@ -52,7 +52,7 @@ export function HomePage() {
                 <ul className="HomepagelList list-unstyled">
                   <li>
                     <img src={Clock} alt="Clock" />
-                    Launching in June.
+                    Open an account in minutes. Launching in June.
                   </li>
                 </ul>
                 <p className="draw-text">

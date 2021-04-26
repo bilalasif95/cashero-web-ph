@@ -33,12 +33,12 @@ export function Giveaway() {
 							<p>Cashero will select a winner at random every 3 days from the pool of Golden Ticket entries. This will be done at Cashero’s sole discretion, from all eligible participants. You can win more than once.</p>
 						</div>
 						<div className="terms_titles">
-							<h3>HOW DOES THE REFERRAL BONUS WORK?</h3>
+							<h3>CAN I WITHDRAW MY PRIZE MONEY?</h3>
 							<p>Yes! You will be able to withdraw your funds (and the interest you’ve accrued) once Cashero is live. At that point you must go through KYC, our Know Your Customer identity verification just to make sure you are who you say you are. Prize money can only be withdrawn and cannot be sent to other users as a payment.</p>
 						</div>
 						<div className="terms_titles">
 							<h3>WHEN DOES THE GIVEAWAY END?</h3>
-							<p>The Golden Ticket Early Access campaign is a prize draw that takes place every 3 days over the next 2 months, from mid-April 2021 to the end of May 2021. The first prize draw will be held on April 19th and the last prize draw will be held on May 31st.</p>
+							<p>The Golden Ticket Early Access campaign is a prize draw that takes place every 3 days starting in May 2021. The first prize draw will be held on May 3rd and the last prize draw will be held on May 30th.</p>
 						</div>
 						<div className="terms_titles">
 							<h3>WHAT ELSE SHOULD I KNOW?</h3>

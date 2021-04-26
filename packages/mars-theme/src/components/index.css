@@ -172,6 +172,9 @@ body{
     text-align: center; }
   .banner .numberSelection {
     display: none !important; }
+    .captcha-cont {
+      display: none !important;
+    }
   .bannerImg {
     margin-top: 4rem;
     margin: 0px auto;
@@ -195,7 +198,7 @@ body{
       margin: 0 auto; } }
 
 .HomepagelList {
-  margin: 35px 0px;}
+  margin: 30px 0px;}
   .HomepagelList li {
     position: relative;
     padding-left: 40px;
@@ -800,9 +803,9 @@ p {
     justify-content: center;
     margin-bottom: 50px; }
     .ModalPhone .numberSelection .selectCountry {
-      width: 11%; }
-    .ModalPhone .numberSelection .inputNum {
-      width: 28%; }
+      width: 9%; }
+    /* .ModalPhone .numberSelection .inputNum {
+      width: 20%; } */
 
 .HeaderList li a {
   padding: 0px !important; }
@@ -3547,7 +3550,7 @@ button:focus {
   width: 15%; }
 
 .PersonalList {
-  margin: 44px 0px; }
+  margin: 30px 0px; }
   .InputBox .MuiInputBase-input {
     padding: 0px 0px 4px;
     border: none;
@@ -15846,4 +15849,53 @@ select:-webkit-autofill:focus {
       text-align: center;
       padding-top: 1rem;
       font-size: 16px;
+    }
+    .g-recaptcha {
+      transform: scale(0.77);
+      transform-origin: 0px 0px;
+    }
+    .captcha-cont {
+      margin-top: 30px;
+    }
+    .SignUp .captcha-cont {
+      display: flex;
+      justify-content: center;
+    }
+    .inner-content .captcha-cont {
+      display: flex;
+      justify-content: center;
+    }
+
+    .latestVersion {
+      background-color: #fff;
+      position: absolute;
+      color: #363636;
+      right: 20px;
+      top: 110px;
+      z-index: 2;
+      padding: 15px;
+      border: 1px solid #bdbfc2;
+      border-left: 5px solid #0466eb;
+      border-radius: 5px;
+      width: 300px;
+    }
+    .latestVersion h4 {
+      font-size: 18px;
+    }
+    .latestVersion p {
+      font-size: 14px;
+    }
+    .latestVersion button {
+      background-color: #0466eb;
+      border: none;
+      border-radius: 15px;
+      color: #fff;
+      padding: 3px 15px;
+    }
+    @media (max-width: 414px) {
+      .latestVersion {
+        right: 5px;
+        top: 92px;
+        width: 280px;
+      }
     }

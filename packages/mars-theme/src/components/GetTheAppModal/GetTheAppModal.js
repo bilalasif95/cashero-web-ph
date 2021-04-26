@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { parse as parseQs } from "qs";
 import { styled } from "frontity";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import SearchIcon from "@material-ui/icons/Search";
@@ -6,11 +7,12 @@ import Modal from "@material-ui/core/Modal";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { callApi } from "../../config/call-api";
-import { EndPoints, counrtrylist } from "../../config/config";
+import { EndPoints, counrtrylist, androidAppLink, iosAppLink, recaptchaSiteKep, ipAPI } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
-// import Link from "../link";
+import Link from "../link";
 import Android from "../../assets/AndroidApp.svg";
 import IOS from "../../assets/iOSApp.svg";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function GetTheAppModal(props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -21,6 +23,12 @@ export default function GetTheAppModal(props) {
   const [phonenoLength, setPhoneNoLength] = useState(0);
   const [newPhone, setNewPhoneNumber] = useState("");
   const [error, setError] = useState("");
+  const [value, setValue] = useState("");
+  const [utmCampaign, setUtmCampaign] = useState("");
+  const [utmContent, setUtmContent] = useState("");
+  const [utmMedium, setUtmMedium] = useState("");
+  const [utmSource, setUtmSource] = useState("");
+  const [utmTerm, setUtmTerm] = useState("");
   const [innerWidth, setInnerWidth] = useState(0);
   const [loading, setLoading] = useState(false);
   const [openSuccessModal, setSuccessModal] = useState(false);
@@ -58,7 +66,12 @@ export default function GetTheAppModal(props) {
     setLoading(true);
     callApi(EndPoints.preregistration, "post", "", {
       Phone: newPhone,
-      countryCode: code,
+      CountryCode: code,
+      UtmCampaign: utmCampaign,
+      UtmContent: utmContent,
+      UtmMedium: utmMedium,
+      UtmSource: utmSource,
+      UtmTerm: utmTerm
     })
       .then((res) => {
         setLoading(false);
@@ -66,6 +79,7 @@ export default function GetTheAppModal(props) {
           setError(res.message);
         } else {
           setNewPhoneNumber("");
+          setValue("");
           setSuccessModal(true);
         }
       })
@@ -75,7 +89,13 @@ export default function GetTheAppModal(props) {
       });
   };
   useEffect(() => {
-    callApi("https://ipwhois.app/json/", "get")
+    const qs = parseQs(window.location.search.substr(1));
+    setUtmCampaign(qs.utm_campaign)
+    setUtmContent(qs.utm_content)
+    setUtmMedium(qs.utm_medium)
+    setUtmSource(qs.utm_source)
+    setUtmTerm(qs.utm_term)
+    callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
@@ -92,6 +112,9 @@ export default function GetTheAppModal(props) {
       })
   }, [])
   const { open, handleClose } = props;
+  const onCaptchaHandler = (value) => {
+    setValue(value);
+  };
   return (
     <div className="GetAppModal">
       <Modal
@@ -117,24 +140,24 @@ export default function GetTheAppModal(props) {
                   Join Cashero in <span className="br-block highInterestHeading"></span>seconds
                 </h2>
                 <ul className="list-unstyled MobileAppList">
-                  <li><a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-                  <li><a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+                  <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
+                  <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
                 </ul>
               </div>
             </div> :
             <div className="joinApp">
               <div className="inner-content">
                 <h2 className="ModalTitle" id="transition-modal-title">
-                  Your money’s superhero <span className="br-block-with-no-display"></span>is almost here.
+                  Your money’s superhero awaits.
                 </h2>
                 <p id="transition-modal-description">
-                  Enter your phone number to join our waitlist.
-                {/* We’ll send you a message with a link to download the app. */}
+                  {/* Enter your phone number to join our waitlist. */}
+                  We’ll send you a message with a link to download the app.
                 </p>
-                {/* <p id="transition-modal-description">
-                You’ll also earn a chance to win $1,000 every 3 days! <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and
-                conditions</Link></span> apply.
-              </p> */}
+                <p id="transition-modal-description">
+                  You’ll also earn a chance to win $1000 every 3 days! <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and
+                  conditions</Link></span> apply.
+                </p>
                 <div className="ModalPhone">
                   <div className="numberSelection">
                     <div className="selectCountry">
@@ -196,11 +219,11 @@ export default function GetTheAppModal(props) {
                     </div>
                     <button
                       onClick={() => getStarted()}
-                      disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
+                      disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value}
                       className={
-                        newPhone.length === phonenoLength
-                          ? "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block"
-                          : "btn btn-primary my-2 my-sm-0 Appbtn disabled d-none d-sm-none d-md-block"
+                        loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value
+                          ? "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block disabled"
+                          : "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block"
                       }
                       type="submit"
                     >
@@ -214,21 +237,31 @@ export default function GetTheAppModal(props) {
                   </div>
                   <button
                     onClick={() => getStarted()}
-                    disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength)}
+                    disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value}
                     className={
-                      newPhone.length === phonenoLength
-                        ? "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn"
-                        : "btn btn-primary my-2 my-sm-0 Appbtn disabled d-md-none d-sm-block JoinCasheroBtn"
+                      loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value
+                        ? "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn disabled"
+                        : "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn"
                     }
                     type="submit"
                   >
                     Get Early Access
-                </button>
+                  </button>
                   {error &&
                     <label className="phoneNumberError">
                       {error}
                     </label>
                   }
+                  <div className="captcha-cont">
+                    <ReCAPTCHA
+                      className="g-recaptcha"
+                      data-theme="light"
+                      sitekey={recaptchaSiteKep}
+                      onChange={onCaptchaHandler}
+                      height="140px"
+                      width="100%"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
