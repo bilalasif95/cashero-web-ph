@@ -38,6 +38,14 @@ pipeline {
         disableConcurrentBuilds()
     }
 
+
+    post {
+        always {
+
+        discordSend description: 'Jenkins Pipeline Build', footer:  '' , link: env.BUILD_URL, result: currentBuild.currentResult, unstable: false, title: JOB_NAME, webhookURL: 'https://discordapp.com/api/webhooks/836489945262063626/_SxqgqjzQ-NHYzUhMKYK6dvzj46jV9jbBXVNNPx3wO0CcmMxAAVOT-08rUL8RMBrIW96'
+        }
+    }
+
     stages {
         stage('Prepare workspace') {
             steps {
@@ -60,6 +68,9 @@ pipeline {
                     switch (env.BRANCH_NAME) {
                         case 'development':
                             GLOBAL_ENVIRONMENT = 'development'
+                            break
+                        case 'testing':
+                            GLOBAL_ENVIRONMENT = 'testing'
                             break
                         case 'staging':
                             GLOBAL_ENVIRONMENT = 'staging'
