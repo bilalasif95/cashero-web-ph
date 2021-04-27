@@ -1,7 +1,7 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "http://192.168.88.175:8001";
-//testing: "http://192.168.88.175:8001"
+  : "https://testing-spot.cashero.com";
+//testing: "https://testing-spot.cashero.com"
 //development: "http://192.168.88.127:8001"
 //production: "https://spot.cashero.com"
 
