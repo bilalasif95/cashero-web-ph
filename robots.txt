@@ -91,4 +91,6 @@ Disallow: https://www.cashero.com/blog/what-is-a-multi-currency-system/what-is-a
 Disallow: https://www.cashero.com/blog/how-to-send-money-instantly/how-to-send-money-instantly-2/
 Disallow: https://www.cashero.com/blog/are-wire-transfers-instant/are-wire-transfers-instant-2/
 
-Disallow: /
+Allow: /
+# Sitemap files
+Sitemap: https://cashero.com/sitemap.xml
