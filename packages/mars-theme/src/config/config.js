@@ -14,6 +14,9 @@ const firebaseAPI =
 export const websiteLink = "https://www.cashero.com";
 
 export const wordPressLink = "http://130.211.200.187:8005";
+//testing: "http://130.211.200.187:8005"
+//development: "http://34.72.26.38:8005"
+//production: "https://wp.cashero.com"
 
 export const androidAppLink = "https://play.google.com/store/apps/details?id=com.rns.casheroapp";
 
