@@ -1,7 +1,7 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "https://testing-spot.cashero.com";
-//testing: "https://testing-spot.cashero.com"
+  : "http://130.211.200.187:9001";
+//testing: "http://130.211.200.187:9001"
 //development: "http://192.168.88.127:8001"
 //production: "https://spot.cashero.com"
 
@@ -13,7 +13,7 @@ const firebaseAPI =
 
 export const websiteLink = "https://www.cashero.com";
 
-export const wordPressLink = "https://wp.cashero.com";
+export const wordPressLink = "http://130.211.200.187:8005";
 
 export const androidAppLink = "https://play.google.com/store/apps/details?id=com.rns.casheroapp";
 
