@@ -34,7 +34,7 @@ export function AppPrivacy() {
 								<li>Identity verification information, such as images of your government-issued ID, passport, national ID card, driving license, or other documents requested by our compliance department;</li>
 								<li>Residence verification information, such as Utility bill details or similar information.</li>
 								<li>Other information, obtained during our KYC procedures, such as information about your financial state and source of funds;</li>
-								<li>We also automatically collect certain computer, device, and browsing information when you access the Site, the App, or use the Services. This information is aggregated to provide statistical data about our users' browsing actions and patterns, and does not personally identify individuals.</li>
+								<li>We also automatically collect certain computer, device, and browsing information when you access the Site, the App, or use the Services. We record your usage of the App with Smartlook. This information is aggregated to provide statistical data about our users' browsing actions and patterns, and does not personally identify individuals.</li>
 							</ul>
 							<p>This information may include:</p>
 							<ul className="condition-list">
