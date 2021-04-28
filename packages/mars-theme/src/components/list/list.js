@@ -15,8 +15,10 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Android from "../../assets/AndroidApp.svg";
 import IOS from "../../assets/iOSApp.svg";
 import { androidAppLink, iosAppLink } from "../../config/config";
+import { withTranslation } from "react-i18next";
+import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 
-const List = () => {
+const List = ({ i18n }) => {
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
@@ -26,6 +28,7 @@ const List = () => {
   const [openSuccessModal, setSuccessModal] = useState(false);
   const [openDiv, setOpenDiv] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+  const [Language, setLanguage] = useState(i18n.language);
   const onToggleButtonClicked = () => {
     if (toggleBotton) {
       return setToggleBotton(false);
@@ -72,9 +75,17 @@ const List = () => {
     }
   };
   useEffect(() => {
+    setLanguage("english")
     setInnerWidth(window.innerWidth)
     window.addEventListener("scroll", handleScroll)
   }, []);
+  useEffect(() => {
+    i18n.changeLanguage("english");
+  }, [i18n])
+  const setLanguageLocal = (lang) => {
+    setLanguage(lang);
+    i18n.changeLanguage(lang);
+  };
   return (
     <>
       <div className={`${scrolled ? "active header" : "header"}`} id="header">
@@ -320,8 +331,21 @@ const List = () => {
                 className="btn btn-primary my-sm-0 Appbtn GetAppBtn"
                 onClick={handleOpen}
               >
-                Get Early Access
-							</button>
+                {i18n.t("Get_Early_Access")}
+              </button>
+              <UncontrolledDropdown className="dropdown-more" nav inNavbar>
+                <DropdownToggle nav caret>
+                  {Language === "english" ? "ENG" : "ɣaɫ"}
+                </DropdownToggle>
+                <DropdownMenu right className="lang-dropdown">
+                  <DropdownItem onClick={() => setLanguageLocal("english")}>
+                    English
+                  </DropdownItem>
+                  <DropdownItem onClick={() => setLanguageLocal("brazilian")}>
+                    ɣaɫ
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </div>
           </nav>
         </div>
@@ -388,7 +412,7 @@ const List = () => {
   );
 };
 
-export default connect(List);
+export default connect(withTranslation()(List));
 
 // const Container = styled.section`
 //   width: 800px;

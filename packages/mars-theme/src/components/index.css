@@ -15899,3 +15899,36 @@ select:-webkit-autofill:focus {
         width: 280px;
       }
     }
+    /* Language Dropdown Styles  */
+    .dropdown-more {
+      list-style: none;
+      padding: 0 0 0 1rem;
+      width: 60px;
+    }
+    .dropdown-more .dropdown-menu {
+      width: 150px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+      border-radius: 10px;
+      background-color: #ffffff;
+      padding: 0;
+      border: none;
+      margin-top: 0;
+      overflow: hidden;
+    }
+    .dropdown-more .dropdown-item:focus,
+    .dropdown-more .dropdown-item:hover,
+    .dropdown-more .dropdown-item:active {
+      background-color: #fff;
+    }
+    .dropdown-more .dropdown-menu .dropdown-item:first-of-type {
+      padding: 1rem 1rem 0.5rem;
+    }
+    .dropdown-more .dropdown-menu .dropdown-item:last-child {
+      padding: 0.5rem 1rem 1rem;
+    }
+    .dropdown-more .dropdown-item,
+    .dropdown-more a {
+      font-size: 16px;
+      color: #9ea0a5!important;
+      font-weight: 400;
+    }

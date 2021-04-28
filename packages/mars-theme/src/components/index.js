@@ -29,10 +29,17 @@ import { Sitemap } from "./Sitemap/Sitemap";
 import { Thankyou } from "./Thankyou/Thankyou";
 import { websiteLink } from "../config/config";
 import { structuredData } from "../config/SEO/Homepage/structuredData";
+import { I18nextProvider } from "react-i18next";
+import i18n from '../config/i18n';
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
+i18n.init({
+  react: {
+    useSuspense: false,
+  },
+})
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -92,42 +99,44 @@ const Theme = ({ state }) => {
       {/* <HeadContainer>
         <Header />
       </HeadContainer> */}
-      <List />
-      {/* Add the main section. It renders a different component depending
+      <I18nextProvider i18n={i18n}>
+        <List />
+        {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
-      {/* <Main> */}
-      {/* {version &&
+        {/* <Main> */}
+        {/* {version &&
         <div className="latestVersion">
           <h4>New version is available!</h4>
           <p>To update the application to the latest version, please refresh the page!</p>
           <button onClick={onRefreshButtonClick}>Refresh</button>
         </div>
       } */}
-      <Switch>
-        <Personal when={data.isPersonal} />
-        <Company when={data.isCompany} />
-        <ContactUs when={data.isContactUs} />
-        <Donation when={data.isDonation} />
-        <ListedCharity when={data.isListedCharity} />
-        <CurrencyAccounts when={data.isCurrencyAccounts} />
-        <ExchangeRates when={data.isExchangeRates} />
-        <ReceivePayments when={data.isReceivePayments} />
-        <Remittance when={data.isRemittance} />
-        <Giveaway when={data.isGiveaway} />
-        <Terms when={data.isTerms} />
-        <Privacy when={data.isPrivacy} />
-        <AppTerms when={data.isAppTerms} />
-        <AppPrivacy when={data.isAppPrivacy} />
-        <Loading when={data.isFetching} />
-        <HomePage when={data.isArchive} state={state} />
-        <Post when={data.isPostType} />
-        <Sitemap when={data.isSitemap} />
-        <Thankyou when={data.isThankYou} />
-        <BlogPage when={data.isBlog} />
-        <PageError when={data.isError} />
-      </Switch>
-      {/* </Main> */}
-      <Footer />
+        <Switch>
+          <Personal when={data.isPersonal} />
+          <Company when={data.isCompany} />
+          <ContactUs when={data.isContactUs} />
+          <Donation when={data.isDonation} />
+          <ListedCharity when={data.isListedCharity} />
+          <CurrencyAccounts when={data.isCurrencyAccounts} />
+          <ExchangeRates when={data.isExchangeRates} />
+          <ReceivePayments when={data.isReceivePayments} />
+          <Remittance when={data.isRemittance} />
+          <Giveaway when={data.isGiveaway} />
+          <Terms when={data.isTerms} />
+          <Privacy when={data.isPrivacy} />
+          <AppTerms when={data.isAppTerms} />
+          <AppPrivacy when={data.isAppPrivacy} />
+          <Loading when={data.isFetching} />
+          <HomePage when={data.isArchive} state={state} />
+          <Post when={data.isPostType} />
+          <Sitemap when={data.isSitemap} />
+          <Thankyou when={data.isThankYou} />
+          <BlogPage when={data.isBlog} />
+          <PageError when={data.isError} />
+        </Switch>
+        {/* </Main> */}
+        <Footer />
+      </I18nextProvider>
     </>
   );
 };
