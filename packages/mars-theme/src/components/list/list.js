@@ -347,7 +347,7 @@ const List = ({ i18n }) => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    {Language === "english" ? "ENG" : "Pt"}
+                    {Language === "english" ? "Eng" : "Pt"}
                   </a>
                   <div
                     className={languageToggleBotton ? "dropdown-menu toggleButtonShow" : "dropdown-menu"}
