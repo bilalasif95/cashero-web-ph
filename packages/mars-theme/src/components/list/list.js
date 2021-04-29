@@ -16,13 +16,13 @@ import Android from "../../assets/AndroidApp.svg";
 import IOS from "../../assets/iOSApp.svg";
 import { androidAppLink, iosAppLink } from "../../config/config";
 import { withTranslation } from "react-i18next";
-import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 
 const List = ({ i18n }) => {
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
   const [donationsToggleBotton, setDonationsToggleBotton] = useState(false);
+  const [languageToggleBotton, setLanguageToggleBotton] = useState(false);
   const [open, setOpen] = useState(false);
   const [innerWidth, setInnerWidth] = useState(0);
   const [openSuccessModal, setSuccessModal] = useState(false);
@@ -42,6 +42,7 @@ const List = ({ i18n }) => {
     setPersonalToggleBotton(true);
     setBusinessToggleBotton(false);
     setDonationsToggleBotton(false);
+    setLanguageToggleBotton(false);
   };
   const onBusinessToggleButtonClicked = () => {
     if (businessToggleBotton) {
@@ -50,12 +51,23 @@ const List = ({ i18n }) => {
     setBusinessToggleBotton(true);
     setPersonalToggleBotton(false);
     setDonationsToggleBotton(false);
+    setLanguageToggleBotton(false);
   };
   const onDonationsToggleButtonClicked = () => {
     if (donationsToggleBotton) {
       return setDonationsToggleBotton(false);
     }
     setDonationsToggleBotton(true);
+    setBusinessToggleBotton(false);
+    setPersonalToggleBotton(false);
+    setLanguageToggleBotton(false);
+  };
+  const onLanguageToggleButtonClicked = () => {
+    if (languageToggleBotton) {
+      return setLanguageToggleBotton(false);
+    }
+    setLanguageToggleBotton(true);
+    setDonationsToggleBotton(false);
     setBusinessToggleBotton(false);
     setPersonalToggleBotton(false);
   };
@@ -326,6 +338,37 @@ const List = ({ i18n }) => {
                     Help
                   </Link>
                 </li>
+                <li className="nav-item dropdown languageDropdown" onClick={innerWidth < 992 ? onLanguageToggleButtonClicked : null}>
+                  <a
+                    className="nav-link dropdown-toggle"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {Language === "english" ? "ENG" : "Pt"}
+                  </a>
+                  <div
+                    className={languageToggleBotton ? "dropdown-menu toggleButtonShow" : "dropdown-menu"}
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="HeaderListCont">
+                          <ul className="HeaderList list-unstyled">
+                            <li onClick={() => { setLanguageLocal("english"); setToggleBotton(false) }}>
+                              English
+                            </li>
+                            <li onClick={() => { setLanguageLocal("brazilian"); setToggleBotton(false) }}>
+                              Portugese (Brazil)
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
               <button
                 className="btn btn-primary my-sm-0 Appbtn GetAppBtn"
@@ -333,19 +376,6 @@ const List = ({ i18n }) => {
               >
                 {i18n.t("Get_Early_Access")}
               </button>
-              <UncontrolledDropdown className="dropdown-more" nav inNavbar>
-                <DropdownToggle nav caret>
-                  {Language === "english" ? "ENG" : "ɣaɫ"}
-                </DropdownToggle>
-                <DropdownMenu right className="lang-dropdown">
-                  <DropdownItem onClick={() => setLanguageLocal("english")}>
-                    English
-                  </DropdownItem>
-                  <DropdownItem onClick={() => setLanguageLocal("brazilian")}>
-                    ɣaɫ
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </div>
           </nav>
         </div>
