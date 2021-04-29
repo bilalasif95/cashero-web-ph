@@ -77,7 +77,7 @@ const Theme = ({ state }) => {
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={websiteLink} />
-        <meta property="og:image" content="https://i.imgur.com/as9Mj8G.png" />
+        <meta property="og:image" content="http://i.imgur.com/EMTwA7F.png" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={state.frontity.title} />
         <meta name="twitter:description" content={state.frontity.description} />
