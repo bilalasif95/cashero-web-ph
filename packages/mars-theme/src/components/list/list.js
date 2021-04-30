@@ -14,8 +14,9 @@ import ThanksModal from "../ThanksModal/ThanksModal";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Android from "../../assets/AndroidApp.svg";
 import IOS from "../../assets/iOSApp.svg";
-import { androidAppLink, iosAppLink } from "../../config/config";
+import { androidAppLink, iosAppLink, ipAPI } from "../../config/config";
 import { withTranslation } from "react-i18next";
+import { callApi } from "../../config/call-api";
 
 const List = ({ i18n }) => {
   const [toggleBotton, setToggleBotton] = useState(false);
@@ -87,13 +88,29 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
-    setLanguage("english")
+    callApi(ipAPI, "get")
+      .then((res) => {
+        if (res.success) {
+          if (res.country_code === "BR") {
+            setLanguage("brazilian")
+            i18n.changeLanguage("brazilian")
+          }
+          else {
+            setLanguage("english")
+            i18n.changeLanguage("english")
+          }
+        }
+        else {
+          setLanguage("english")
+          i18n.changeLanguage("english")
+        }
+      }).catch(() => {
+        setLanguage("english")
+        i18n.changeLanguage("english")
+      })
     setInnerWidth(window.innerWidth)
     window.addEventListener("scroll", handleScroll)
   }, []);
-  useEffect(() => {
-    i18n.changeLanguage("english");
-  }, [i18n])
   const setLanguageLocal = (lang) => {
     setLanguage(lang);
     i18n.changeLanguage(lang);
