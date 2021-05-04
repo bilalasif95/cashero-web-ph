@@ -9,7 +9,7 @@ import linkedIn from "../assets/bloglinked.svg";
 import URL from "../assets/url.svg";
 import Tick from "../assets/tick.svg";
 import twitter from "../assets/blogtwitter.svg";
-import { SignupSection } from "./signupSection/signupSection";
+import SignupSection from "./signupSection/signupSection";
 import { structuredData } from "../config/SEO/Blog/structuredData";
 import { websiteLink } from "../config/config";
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share";

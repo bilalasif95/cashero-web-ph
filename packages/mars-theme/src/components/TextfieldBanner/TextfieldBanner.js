@@ -6,8 +6,9 @@ import ThanksModal from "../ThanksModal/ThanksModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import SearchIcon from "@material-ui/icons/Search";
 import ReCAPTCHA from "react-google-recaptcha";
+import { withTranslation } from "react-i18next";
 
-export function TextfieldBanner() {
+const TextfieldBanner = ({ i18n }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [openSuccessModal, setSuccessModal] = useState(false);
@@ -107,7 +108,7 @@ export function TextfieldBanner() {
         <div className="selectCountry">
           <Dropdown isOpen={dropdownOpen} toggle={toggle}>
             <DropdownToggle caret>
-              <input type="text" placeholder="Code" readOnly value={code} />
+              <input type="text" placeholder={i18n.t("Code")} readOnly value={code} />
             </DropdownToggle>
             <DropdownMenu>
               <DropdownItem header>
@@ -115,7 +116,7 @@ export function TextfieldBanner() {
                   <SearchIcon />
                   <input
                     type="text"
-                    placeholder="Country"
+                    placeholder={i18n.t("Country")}
                     value={searchTerm}
                     onChange={handleChange}
                   />
@@ -156,7 +157,7 @@ export function TextfieldBanner() {
         <div className="inputNum">
           <input
             type="number"
-            placeholder="Phone number"
+            placeholder={i18n.t("Phone_number")}
             value={newPhone}
             onChange={(e) => handleOnChange(e)}
           />
@@ -171,7 +172,7 @@ export function TextfieldBanner() {
           }
           type="submit"
         >
-          Get Early Access
+          {i18n.t("Get_Early_Access")}
         </button>
       </div>
       <div className="captcha-cont">
@@ -195,3 +196,5 @@ export function TextfieldBanner() {
     </div>
   );
 }
+
+export default withTranslation()(TextfieldBanner);

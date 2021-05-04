@@ -1,7 +1,7 @@
 import React from "react";
 import Contact from "../Contact/Contact";
 import ContactForm from "../ContactForm/ContactForm";
-import { SignupSection } from "../signupSection/signupSection";
+import SignupSection from "../signupSection/signupSection";
 import { withTranslation } from "react-i18next";
 
 const ContactUs = ({ i18n }) => {

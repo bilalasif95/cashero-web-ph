@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
+import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import Clock from "../../assets/clockImg.svg";
 import Instant from "../../assets/instant.svg";
 import walletDown from "../../assets/walletDown.svg";
@@ -9,7 +9,7 @@ import Path from "../../assets/path.png";
 import listHome from "../../assets/listHome.svg"
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { QuestionTabs } from "../Tabs/Tabs";
-import { SignupSection } from "../signupSection/signupSection";
+import SignupSection from "../signupSection/signupSection";
 import LocalPayments from "../LocalPayments/LocalPayments";
 import GetPaid from "../Getpaid/Getpaid";
 import { Fade } from "react-awesome-reveal";
@@ -55,9 +55,9 @@ const ReceivePayments = ({ i18n }) => {
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
 							<li><img alt="wallet Down" src={walletDown} />{i18n.t("Receive_Payments_li1")}</li>
-							<li><img alt="Instant" src={Instant} />No monthly fees. No minimum balance required</li>
-							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
-							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="Instant" src={Instant} />{i18n.t("Multi_Currency_Savings_Account_li2")}</li>
+							<li><img alt="Draw" src={Draw} />{i18n.t("Multi_Currency_Savings_Account_li3")}</li>
+							<li><img alt="list Home" src={listHome} />{i18n.t("Multi_Currency_Savings_Account_li4")}</li>
 						</ul>
 					</div>
 				</div>
@@ -69,7 +69,7 @@ const ReceivePayments = ({ i18n }) => {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-								How it Works. It’s Simple.
+								{i18n.t("Multi_Currency_Savings_Account_h3")}
 							</h3>
 						</div>
 					</div>
@@ -78,7 +78,7 @@ const ReceivePayments = ({ i18n }) => {
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
 									<img className="img-fluid" alt="Favourite" src={Fav} />
-									<h3>Sign up for Cashero.</h3>
+									<h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
 								</div>
 							</Fade>
 						</div>
@@ -90,7 +90,7 @@ const ReceivePayments = ({ i18n }) => {
 									src={Dollar}
 								/>
 								<h3>
-									Add funds to your account.
+									{i18n.t("Add_funds_to_your_account")}
 								</h3>
 							</div>
 						</div>
@@ -99,7 +99,7 @@ const ReceivePayments = ({ i18n }) => {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Path" src={Path} />
 									<h3>
-										Send, request and receive payments in an instant.
+										{i18n.t("Send_request_and_receive_payments_in_an_instant")}
 									</h3>
 								</div>
 							</Fade>
@@ -108,9 +108,9 @@ const ReceivePayments = ({ i18n }) => {
 					<div className="row">
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
-								<p>Ready to make an instant money transfer? Cashero’s got you. </p>
+								<p>{i18n.t("Send_request_and_receive_payments_in_an_instant_P")}</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-									Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow1} />
+									{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>

@@ -3,8 +3,9 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import BitCircle from "../../assets/BitCircle.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function Savings() {
+const Savings = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -19,13 +20,13 @@ export function Savings() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
 							<h1 className="oneAppTitle">
-								How Does Cashero’s <span className="br-block-with-no-display"></span> High Yield Savings Work?
+								{i18n.t("How_Does_Cashero")} <span className="br-block-with-no-display"></span> {i18n.t("High_Yield_Savings_Work")}
 							</h1>
 							<p>
-								We get you the best high-yield interest rates (between 2%-5% annually) by managing an intelligent portfolio for you.  Do that thing rich people do, earn money while you sleep.  Leave the hard work of optimizing your finances to Cashero and watch your money grow.
+								{i18n.t("High_Yield_Savings_Work_P")}
 							</p>
 							<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access <img alt="Arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -41,3 +42,5 @@ export function Savings() {
 		</div>
 	);
 }
+
+export default withTranslation()(Savings);

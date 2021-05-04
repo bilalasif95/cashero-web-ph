@@ -6,7 +6,7 @@ import TabList from "@material-ui/lab/TabList";
 import TabContext from "@material-ui/lab/TabContext";
 import Tab from "@material-ui/core/Tab";
 import TabPanel from "@material-ui/lab/TabPanel";
-import { SignupSection } from "../signupSection/signupSection";
+import SignupSection from "../signupSection/signupSection";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import FeaturedMedia from "../featured-media";
 import Link from "../link";

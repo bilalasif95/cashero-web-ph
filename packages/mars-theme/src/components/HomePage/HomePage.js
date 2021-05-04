@@ -1,5 +1,5 @@
 import React from "react";
-import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
+import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import Banner from "../../assets/photoshop.gif";
 import Check from "../../assets/check-mark.svg";
 import GlobalMoney from "../GlobalMoney/GlobalMoney";
@@ -10,7 +10,7 @@ import Enhance from "../Enhance/Enhance";
 import CharitySection from "../CharitySection/CharitySection";
 import { QuestionTabs } from "../Tabs/Tabs";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
-import { SignupSection } from "../signupSection/signupSection";
+import SignupSection from "../signupSection/signupSection";
 import GetStarted from "../GetStarted/GetStarted";
 import Clock from "../../assets/clock.svg";
 import MultiCurrency from "../MultiCurrency/MultiCurrency";

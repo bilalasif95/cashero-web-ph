@@ -3,8 +3,9 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import Globe from "../../assets/Globe.svg";
+import { withTranslation } from "react-i18next";
 
-export function SingleAccount() {
+const SingleAccount = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -29,11 +30,11 @@ export function SingleAccount() {
 						<div className="oneAppCont sm-mt-0">
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle">
-									Your Money From <span className="br-block-with-no-display"></span>  Around the World in <span className="br-block-with-no-display"></span> One Account
+									{i18n.t("Your_Money_From")} <span className="br-block-with-no-display"></span>  {i18n.t("Around_the_World_in")} <span className="br-block-with-no-display"></span> {i18n.t("One_Account")}
 								</h3>
-								<p>We take the headache out of managing money from different countries. Store your money in one place with no minimum balance or maintenance fees added! </p>
-								<p>Receive funds internationally, hold balances in USD, GBP, and EUR, and transfer between currencies within seconds. </p>
-								<button onClick={appModalOpen} className="LinkBtn">Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<p>{i18n.t("Your_Money_From_P1")} </p>
+								<p>{i18n.t("Your_Money_From_P2")} </p>
+								<button onClick={appModalOpen} className="LinkBtn">{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 							{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 						</div>
@@ -43,3 +44,5 @@ export function SingleAccount() {
 		</div>
 	);
 }
+
+export default withTranslation()(SingleAccount);

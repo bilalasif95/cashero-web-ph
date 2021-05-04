@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg";
 import donateDollar from "../../assets/donateDollar.svg";
-import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
+import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import heart from "../../assets/heart.svg";
 import listImg from "../../assets/list.png";
 import StepsWallet from "../../assets/stepsWallet.png"
@@ -10,7 +10,7 @@ import listHome from "../../assets/listHome.svg";
 import freeFund from "../../assets/freeFund.png";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { QuestionTabs } from "../Tabs/Tabs";
-import { SignupSection } from "../signupSection/signupSection";
+import SignupSection from "../signupSection/signupSection";
 import BetterPlace from "../BetterPlace/BetterPlace";
 import HandleDonations from "../HandleDonations/HandleDonations";
 import { Fade } from "react-awesome-reveal";

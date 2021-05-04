@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg"
 import SlideGroup from "../../assets/SlideGroup.png";
-import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
+import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import donateDollar from "../../assets/donateDollar.svg";
 import heart from "../../assets/heart.svg";
 import listHome from "../../assets/listHome.svg";
@@ -9,8 +9,8 @@ import DonateBox from "../../assets/DonateBox.png";
 import FindCharity from "../FindCharity/FindCharity";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { QuestionTabs } from "../Tabs/Tabs";
-import { SignupSection } from "./../signupSection/signupSection";
-import { StartDonation } from "../StartDonation/StartDonation";
+import SignupSection from "./../signupSection/signupSection";
+import StartDonation from "../StartDonation/StartDonation";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import pricewallet from "../../assets/pricewallet.png";

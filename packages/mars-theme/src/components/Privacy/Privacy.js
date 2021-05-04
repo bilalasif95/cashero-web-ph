@@ -1,7 +1,7 @@
 import React from "react";
 import { withTranslation } from "react-i18next";
 
-const  Privacy= ({ i18n }) =>{
+const Privacy = ({ i18n }) => {
 	return (
 		<div className="container">
 			<div className="conditions-cont">
@@ -11,7 +11,7 @@ const  Privacy= ({ i18n }) =>{
 							<h1>{i18n.t("PRIVACY_POLICY")}</h1>
 							<div className="custom-border"></div>
 							<h3>{i18n.t("GENERAL")}</h3>
-							<p>{i18n.t("PRIVACY_POLICY_P1")}</p>
+							<p>{i18n.t("APP_PRIVACY_POLICY_P1")}</p>
 							<p>{i18n.t("PRIVACY_POLICY_P2")}</p>
 							<ul className="condition-list">
 								<li>{i18n.t("GENERAL_li1")}</li>
@@ -31,11 +31,11 @@ const  Privacy= ({ i18n }) =>{
 							<ul className="condition-list">
 								<li>{i18n.t("PERSONAL_li1")}</li>
 								<li>{i18n.t("PERSONAL_li2")}</li>
-								<li>{i18n.t("PERSONAL_li3")} </li>
+								<li>{i18n.t("PERSONAL_li3")}</li>
 								<li>{i18n.t("PERSONAL_li4")}</li>
 								<li>{i18n.t("PERSONAL_li5")}</li>
 								<li>{i18n.t("PERSONAL_li6")}</li>
-								<li>{i18n.t("PERSONAL_li7")} </li>
+								<li>{i18n.t("PERSONAL_li7")}</li>
 							</ul>
 							<p>{i18n.t("GENERAL_P5")}</p>
 							<ul className="condition-list">
@@ -86,8 +86,7 @@ const  Privacy= ({ i18n }) =>{
 								<li>{i18n.t("PRIVACY_POLICY_P25")}</li>
 								<li>{i18n.t("PRIVACY_POLICY_P26")}</li>
 								<li>{i18n.t("PRIVACY_POLICY_P27")}</li>
-								<li>{i18n.t("PRIVACY_POLICY_P28")}
-								</li>
+								<li>{i18n.t("PRIVACY_POLICY_P28")}</li>
 							</ul>
 						</div>
 						<div className="terms_titles">
