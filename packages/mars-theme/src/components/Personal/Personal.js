@@ -16,7 +16,7 @@ import ArrowUp from "../../assets/Arrowup.png";
 import Arrow1 from "../../assets/arrowLink.svg";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
-import { QuestionTabs } from "../Tabs/Tabs";
+import QuestionTabs from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";

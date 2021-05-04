@@ -8,7 +8,7 @@ import listHome from "../../assets/listHome.svg";
 import DonateBox from "../../assets/DonateBox.png";
 import FindCharity from "../FindCharity/FindCharity";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
-import { QuestionTabs } from "../Tabs/Tabs";
+import QuestionTabs from "../Tabs/Tabs";
 import { SignupSection } from "./../signupSection/signupSection";
 import { StartDonation } from "../StartDonation/StartDonation";
 import { Fade } from "react-awesome-reveal";

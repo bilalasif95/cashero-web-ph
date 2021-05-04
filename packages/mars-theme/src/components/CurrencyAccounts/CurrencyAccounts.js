@@ -10,7 +10,7 @@ import { FirebaseEndPoints } from "../../config/config";
 import { SingleAccount } from "../SingleAccount/SingleAccount";
 import Protect from "../Protect/Protect";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
-import { QuestionTabs } from "../Tabs/Tabs";
+import QuestionTabs from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";

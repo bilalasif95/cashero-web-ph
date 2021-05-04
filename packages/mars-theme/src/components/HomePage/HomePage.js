@@ -8,7 +8,7 @@ import CurrencyConversion from "../CurrencyConversion/CurrencyConversion";
 import MoneyRequest from "../MoneyRequest/MoneyRequest";
 import Enhance from "../Enhance/Enhance";
 import CharitySection from "../CharitySection/CharitySection";
-import { QuestionTabs } from "../Tabs/Tabs";
+import QuestionTabs from "../Tabs/Tabs";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { SignupSection } from "../signupSection/signupSection";
 import GetStarted from "../GetStarted/GetStarted";
