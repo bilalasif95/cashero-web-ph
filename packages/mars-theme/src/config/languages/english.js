@@ -531,7 +531,7 @@ export const english = {
 
     DISCLOSING: "DISCLOSING AND TRANSFERRING PERSONAL INFORMATION",
     DISCLOSING_P1: "We may disclose your Personal Information to third parties and legal and regulatory authorities, and transfer your Personal Information as described below:",
-    DISCLOSING_P1: "DISCLOSURES TO THIRD PARTIES",
+    DISCLOSING_P2: "DISCLOSURES TO THIRD PARTIES",
     DISCLOSING_li1: "In processing your transactions and deposits, we may share some of your Personal Information with our third-party service providers who help with our business operations. Your information will not be sold, exchanged, or shared with any third parties without your consent, except to provide Services or as required by law. By using the App or Services you consent to the disclosure of your Personal Information as described in this Privacy Policy. Non-personally identifiable visitor information may be provided to third parties for marketing, advertising, or other uses.",
     DISCLOSING_li2: "Company’s third-party service providers are contractually bound to protect and use such information only for the purposes for which it was disclosed, except as otherwise required or permitted by law. We ensure that such third parties will be bound by terms no less protective than those described in this Privacy Policy, or those we are subject to under applicable data protection laws.",
     DISCLOSING_li3: "Cashero Financial OÜ uses Sum And Substance Ltd a KYC, KYB and AML service provider (Data protection No. ZA222205); Cashero Investment OÜ a Virtual Currency Services provider (license No. XXXX);",

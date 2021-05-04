@@ -8,7 +8,7 @@ import Dollar from "./../../assets/Dollar.png";
 import Path from "../../assets/path.png";
 import listHome from "../../assets/listHome.svg"
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
-import { QuestionTabs } from "../Tabs/Tabs";
+import QuestionTabs from "../Tabs/Tabs";
 import SignupSection from "../signupSection/signupSection";
 import LocalPayments from "../LocalPayments/LocalPayments";
 import GetPaid from "../Getpaid/Getpaid";

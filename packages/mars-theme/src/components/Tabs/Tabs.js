@@ -11,6 +11,7 @@ import Box from "@material-ui/core/Box";
 import Tab from "@material-ui/core/Tab";
 import PropTypes from 'prop-types';
 import Link from "../link";
+import { withTranslation } from "react-i18next";
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -44,7 +45,7 @@ function a11yProps(index) {
 	};
 }
 
-export function QuestionTabs(props) {
+const QuestionTabs = (props) => {
 	const [value, setValue] = useState(props.activeTab);
 	const [path, setPath] = useState("");
 	const handleChange = (event, newValue) => {
@@ -61,11 +62,12 @@ export function QuestionTabs(props) {
 	useEffect(() => {
 		setPath(window.location.pathname)
 	}, [])
+	const {i18n} = props;
 	return (
 		<div className="Questions">
 			<div className="row">
 				<div className="col-md-4">
-					<h4 className="TabsTitle">Frequently asked <span className="br-block-with-no-display"></span>questions</h4>
+					<h4 className="TabsTitle">{i18n.t("FREQUENTLY_ASKED")} <span className="br-block-with-no-display"></span>{i18n.t("QUESTIONS")}</h4>
 					<AppBar position="static" className="custom-Tabs">
 						<Tabs
 							value={value}
@@ -133,13 +135,13 @@ export function QuestionTabs(props) {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										What is Cashero?
+									{i18n.t("What_is_Cashero")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero is an all-in-one platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero.
+										{i18n.t("What_is_Cashero_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -160,31 +162,31 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										What are Cashero’s main features?
+									{i18n.t("main_features")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											<span className="bold-text">High yield savings: </span>  Cashero users receive inflation-beating, bank-beating, almost-too-good-to-be true interest rates of 2%-5% APY.
+											<span className="bold-text">{i18n.t("main_features_B1")} </span> {i18n.t("main_features_P1")} 
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">Multi-currency wallet:</span> no minimum balance or maintenance fees.  Cashero users can reduce currency fluctuation risk by holding balances in USD, GBP, and EUR.
+											<span className="bold-text">{i18n.t("main_features_B2")}</span> {i18n.t("main_features_P2")}
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">Currency conversion:</span> users can instantly exchange between USD, EUR, and GBP.
+											<span className="bold-text">{i18n.t("main_features_B3")}</span>{i18n.t("main_features_P3")} 
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">Instant payments:</span> users can send, request, and receive money from users worldwide faster than you can say Cashero.
+											<span className="bold-text">{i18n.t("main_features_B4")}</span>{i18n.t("main_features_P4")}  
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">Business:</span> businesses can send, request, and receive money from customers worldwide.
+											<span className="bold-text">{i18n.t("main_features_B5")}</span>{i18n.t("main_features_P5")}  
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">Fee-free charity donations:</span> charities can sign up to Cashero to receive donations. Charities can use their Cashero link to request donations via Cashero.
+											<span className="bold-text">{i18n.t("main_features_B6")}</span> {i18n.t("main_features_P6")}  
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">Rewards:</span> users <Link className="giveaway-link" link="/giveaway">earn rewards</Link> for referring people to Cashero.
+											<span className="bold-text">{i18n.t("main_features_B7")}</span>{i18n.t("main_features_Users")}  <Link className="giveaway-link" link="/giveaway">{i18n.t("main_features_Link")}</Link> {i18n.t("main_features_P7")} 
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -205,13 +207,13 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										When will Cashero officially launch?
+									{i18n.t("Launch_Date")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											June 2021.
+										{i18n.t("Date")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -232,13 +234,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										How is Cashero regulated?
+									{i18n.t("Cashero_regulated")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero is in the process of becoming an EU-regulated financial institution.
+										{i18n.t("Cashero_regulated_P1")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -264,12 +266,12 @@ export function QuestionTabs(props) {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										How do I open a high-yield savings account?
+									{i18n.t("savings_account")}	?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">To open an account with Cashero, simply download the app to your smartphone, add money to your account and you will automatically start earning inflation-beating interest rates of 2%-5% APY. </h4>
+										<h4 className="FaqText">{i18n.t("savings_account_P1")}</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -289,12 +291,12 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										How can I see how much interest I’ve earned?
+									{i18n.t("interest_earned")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">On the main Wallet screen within the Cashero app, you’ll be able to click on Chart View. Here you can see how much you’ve invested and your earnings over different periods of time.</h4>
+										<h4 className="FaqText">{i18n.t("interest_earned_P1")}</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -314,12 +316,12 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										What is APY?
+									{i18n.t("What_is_APY")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">APY stands for annual percentage yield. It measures your interest rate over a year, including the effects of compounding. It represents how much you will earn from your investment in one year. </h4>
+										<h4 className="FaqText">{i18n.t("What_is_APY_P1")} </h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -339,13 +341,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										Are there fees associated with Cashero’s savings account?
+									{i18n.t("fees_associated")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											The short answer is no. The long answer is also no. Rest at ease knowing your money can grow without fees eating away at your earnings.
+										{i18n.t("fees_associated_P1")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -366,13 +368,13 @@ export function QuestionTabs(props) {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										Is my money safe?
+									{i18n.t("money_safe")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.
+										{i18n.t("money_safe_P1")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -384,53 +386,53 @@ export function QuestionTabs(props) {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">Learn more about High Yield Savings Accounts</h4>
+										<h4 className="heading">{i18n.t("Learn_more_savings")}</h4>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
 											<div className="expandTypo">
-												<h2 className="blackhead">Our Guide to High Yield Savings Accounts</h2>
-												<p>The term “high yield” may intrigue a lot of people interested in being financially savvy. But is it that attractive of an option, and can it be possibly used to mislead consumers?</p>
-												<p>We've put together this guide to help you know what to expect from a high-yield savings account, whether it's a good fit for you, your funds, and your future.</p>
-												<h3 className="blackhead">What is a high-yield savings account?</h3>
-												<p>A high-yield savings account is a savings account offering higher rates of return on the amount deposited. These rates are better than the national average and are usually tied to specific conditions, such as maintenance fees and minimum balance requirements. A key term here is “APY” (annual percentage yield).</p>
-												<h3 className="blackhead">APY & high-yield savings accounts – An example</h3>
-												<p>In most cases, a high-yield savings account enables you to earn around 0.50% APY. In simple terms, APY is the number that tells you what your money could earn within a fiscal year. So the higher the APY, the more money for you, because the faster your balance will grow without any extra efforts on your behalf. Therefore, a high-yield savings account offering 5% APY is way more rewarding than a traditional savings account. Just consider that the national average savings rate is in the 0.05% APY region. Not so great...</p>
-												<p>Let’s use an example to help you understand the magnitude of what we’re talking about. Assume that you have $10,000 in a high-yield savings account. With a 5% APY you would earn slightly over $500 after 12 months. Compare that to a 0.05% APY and you’d only earn a humble $5. That’s the difference Cashero makes to your money. </p>
-												<p><b>Important notes:</b></p>
+												<h2 className="blackhead">{i18n.t("Learn_more_savings_P1")}</h2>
+												<p>{i18n.t("Learn_more_savings_P2")}</p>
+												<p>{i18n.t("Learn_more_savings_P3")}</p>
+												<h3 className="blackhead">{i18n.t("Learn_more_savings_P4")}</h3>
+												<p>{i18n.t("Learn_more_savings_P5")}</p>
+												<h3 className="blackhead">{i18n.t("Learn_more_savings_P6")}</h3>
+												<p>{i18n.t("Learn_more_savings_P7")}</p>
+												<p>{i18n.t("Learn_more_savings_P8")} </p>
+												<p><b>{i18n.t("Learn_more_savings_P9")}</b></p>
 												<div className="inner-div">
-													<p>Some high yield savings accounts even have rates of return that decrease rapidly after a certain time period. More often than not, it can even result in a lower-than-average rate of return.</p>
+													<p>{i18n.t("Learn_more_savings_P10")}</p>
 												</div>
-												<h2 className="blackhead">Why consider high APY savings account instead of another account type? </h2>
-												<p>If you wish to access your money regularly or fast then a high APY savings account is definitely for you, especially an online account. With an online account, you have 24/7 (and secure) access to your funds and typically have to pay fewer fees than traditional banks.</p>
-												<p>Given that they’re not hampered by the brick-and-mortar expenses of traditional institutions, online accounts pass their savings on to their customers in the form of higher returns. High APY savings accounts are also a good place to put your money if you would rather avoid taking risks. See below for more information.</p>
-												<h3 className="blackhead">How safe are high-yield savings accounts?</h3>
-												<p>High-yield savings accounts are safe when operated by  FDIC (Federal Deposit Insurance Corporation). These accounts are insured by the FDIC up to a max sum allowed by law — $250,000 per depositor at the time of this article. So what does this mean and how do you benefit from it? Putting it simply,  the government ensures your funds are safe and accessible even if the financial institution fails. All of these factors combined make high yield savings accounts the perfect option for individuals wishing to save money for:</p>
+												<h2 className="blackhead">{i18n.t("Learn_more_savings_P11")} </h2>
+												<p>{i18n.t("Learn_more_savings_P12")}</p>
+												<p>{i18n.t("Learn_more_savings_P13")}</p>
+												<h3 className="blackhead">{i18n.t("Learn_more_savings_P14")}</h3>
+												<p>{i18n.t("Learn_more_savings_P15")}</p>
 												<div className="inner-div">
 													<ul>
-														<li>Short-term savings goals</li>
-														<li>Large expenses</li>
-														<li>Emergencies</li>
+														<li>{i18n.t("Learn_more_savings_P16")}</li>
+														<li>{i18n.t("Learn_more_savings_P17")}</li>
+														<li>{i18n.t("Learn_more_savings_P18")}</li>
 													</ul>
 												</div>
-												<h2 className="blackhead">Best uses of a high-yield savings account </h2>
-												<p>People often use a high-yield savings account when saving for large purchases, as the higher interest rate helps you to reach the goal more quickly. That's why you may consider having one for:</p>
+												<h2 className="blackhead">{i18n.t("Learn_more_savings_P19")} </h2>
+												<p>{i18n.t("Learn_more_savings_P20")}</p>
 												<div className="inner-div">
-													<p><b>A down payment on your 1st or 2nd home –</b> A Federal Housing Administration (FHA) loan requires a down payment of 3.5% or more. Traditional conforming loans, 5% or more. This climbs to 20% if you want to skip mortgage insurance. So on a $200,000 home, you would need to save $7,000, $10,000, and $40,000 respectively for each of these payments. Having a high-yield savings account paying 5% APY, you would need 6 months, 12 months, and 36 months respectively, to save the kind of money required for the down payment (with an initial deposit of $1,000 and around $750-$1100 each month). Saving is never a quick task, but using a high-yield savings account will get you to your goal faster than a typical savings account. </p>
-													<p><b>College savings –</b> Everybody knows that college tuition costs can become overwhelming purely because of the amount needed. Although a college saving plan (i.e., a 529 plan) is an excellent option as the funds grow tax-free (even if you take the money out to pay for college), a high-yield savings account is definitely a solid alternative. Using an online savings goal calculator can help you to plan how much you need to save on a regular basis to reach your savings goal by a certain date.</p>
-													<p><b>Big family getaway –</b> First of all, it's paramount to decide when you want to leave on holiday and how much you want to spend. You may even want to budget for food, accommodation, travel, and other items. </p>
-													<p><b>Emergency funds –</b> These funds usually cover 3-6 months of living expenses and are held just in case the money is needed urgently. For example, if the air conditioning unit breaks down in the heart of summer or you're unexpectedly laid off. Think of it as a rainy day fund. </p>
-													<p><b>A wedding or other goals with a short timeline – </b> According to the 2019 Real Wedding Study published by The Knot, the average wedding cost (not including the honeymoon) is nearly $34,000. With a high-yield savings account offering, say, 5% APY, you could save that kind of money for the big day in a shorter time frame. You could do the same for other expenses with a short timeline, such as buying furniture, a vehicle, or even to have money aside for estimated taxes.</p>
+													<p><b>{i18n.t("Learn_more_savings_P21_B1")}</b> {i18n.t("Learn_more_savings_P21_p1")} </p>
+													<p><b>{i18n.t("Learn_more_savings_P22_B1")}</b> {i18n.t("Learn_more_savings_P22_P1")}</p>
+													<p><b>{i18n.t("Learn_more_savings_P23_B1")}</b> {i18n.t("Learn_more_savings_P23_P1")}</p>
+													<p><b>{i18n.t("Learn_more_savings_P24_B1")}</b> {i18n.t("Learn_more_savings_P24_P1")}</p>
+													<p><b>{i18n.t("Learn_more_savings_P25_B1")} </b>{i18n.t("Learn_more_savings_P25_P1")}</p>
 												</div>
-												<h2 className="blackhead">Things to consider when choosing a high-yield savings account</h2>
-												<p>First and foremost, it's important to weigh the APY against the set requirements to earn the interest. For example, one institution may offer a slightly higher APY than another. However, the second institution may require a higher minimum balance and deposit. Other things to factor in before deciding to open an account are:</p>
+												<h2 className="blackhead">{i18n.t("Learn_more_savings_P26")}</h2>
+												<p>{i18n.t("Learn_more_savings_P27")}</p>
 												<div className="inner-div">
-													<p><b>How often rates change –</b> Check how often the financial institution you want to do business with adjusts its rates. Unlike other financial products, the return rate of savings accounts tends to be variable rather than locked in for a period of time. A temporary promotional rate, for example, may seem appealing at first but could be much lower later on. Economic factors may also cause financial institutions to lower their APY (e.g. the coronavirus-related emergency rate cuts from the Federal Reserve in 2019). If you can find a savings account with a guaranteed rate for 6-12 months, then you’ve done yourself a favour. If you can find one that pays you 5% permanently then you’re either very smart or very lucky. </p>
-													<p><b>Opening deposit (aka minimum deposit) required – </b> This amount varies across financial institutions, with some of them requiring an initial deposit of at least $10,000 to open an account while others require nothing. Most of them, however, will probably ask for a minimum deposit of $100 or less. Determining how much you can deposit (realistically) will help compare high-yield savings products and decide which one best suits your needs. </p>
-													<p><b>Minimum balance required –</b> Failing to meet the minimum balance requirements of some high-yield savings accounts can result in fees or failure to earn the high APY you wanted. This figure can be pretty large, sometimes even greater than $10,000. A monthly maintenance fee is just one of the charges you may need to pay if you do not maintain a minimum balance in your account. Luckily, Cashero doesn’t have a minimum balance requirement.</p>
-													<p><b>Withdrawal options – </b> As a saver, you may be limited to six withdrawals per month from your savings account due to Reg D or Regulation D. The only exception is when you withdraw in-person at a bank or from an ATM.  With Cashero there are no limits to withdrawals on your money. </p>
+													<p><b>{i18n.t("Learn_more_savings_P28_B1")}</b>{i18n.t("Learn_more_savings_P28_p1")}  </p>
+													<p><b>{i18n.t("Learn_more_savings_P29_B1")} </b> {i18n.t("Learn_more_savings_P29_p1")}  </p>
+													<p><b>{i18n.t("Learn_more_savings_P30_B1")}</b> {i18n.t("Learn_more_savings_P30_p1")} </p>
+													<p><b>{i18n.t("Learn_more_savings_P31_B1")} </b> {i18n.t("Learn_more_savings_P31_p1")}  </p>
 												</div>
-												<p>High-yield savings accounts are a great way to save your money and earn interest at the same time. Cashero can help you save for large purchases and reach your financial goals faster.</p>
+												<p>{i18n.t("Learn_more_savings_P32")}</p>
 											</div>
 										</Typography>
 									</AccordionDetails>
@@ -456,12 +458,12 @@ export function QuestionTabs(props) {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										How does the multi-currency account work?
+									{i18n.t("multi_currency")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">All Cashero accounts are built with the option to hold money in United States dollars (USD), British pound sterling (GBP), or Euros (EUR). All you have to do is download the app to your smartphone, choose which currency you want to hold (USD, GBP, or EUR), and add money in your local currency. Your funds will be automatically converted into the currency of your choice, and voilà, your multi-currency account is loaded. </h4>
+										<h4 className="FaqText">{i18n.t("multi_currency_P1")}</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -481,13 +483,13 @@ export function QuestionTabs(props) {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										Can I open a multi-currency account in my country?
+									{i18n.t("multi_currency_country")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero is available in all countries except Afghanistan, Albania, Angola, The Bahamas, Barbados, Belarus, Bosnia & Herzegovina, Botswana, Cambodia, Central African Republic, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Ecuador, Eritrea, Ethiopia, Ghana, Guinea-Bissau, Guyana, Haiti, Iceland, Iran, Iraq, Jamaica, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Mauritius, Mongolia, Myanmar, Nicaragua, Nigeria, North-Korea, Pakistan, Panama, Papua NG, Russia, Serbia, Somalia, Sudan, Syria, Turkmenistan, Uganda, Ukraine, Uzbekistan, Vanuatu, Venezuela, Yemen, and Zimbabwe.
+										{i18n.t("multi_currency_country_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -508,12 +510,12 @@ export function QuestionTabs(props) {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										How much does it cost to get a Cashero multi-currency account?
+									{i18n.t("multi_currency_account")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Nothing, it’s free! No minimum balance is needed and there are no maintenance fees.</h4>
+										<h4 className="FaqText">{i18n.t("multi_currency_account_P")}</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -533,13 +535,13 @@ export function QuestionTabs(props) {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										How can I protect my money against currency fluctuations?
+									{i18n.t("currency_fluctuations")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero takes pride in giving its users the ability to protect their money from currency volatility. You can load your Cashero account with your local currency and convert it to either USD, GBP, or EUR. Doing this can give you the opportunity to potentially decrease the risk of your money-losing purchasing power as it is being secured a more stable currency.
+										{i18n.t("currency_fluctuations_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -560,13 +562,13 @@ export function QuestionTabs(props) {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										Is my money safe?
+									{i18n.t("multi_currency_safe")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected.
+										{i18n.t("multi_currency_safe_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -588,23 +590,23 @@ export function QuestionTabs(props) {
 										id="panel6a-header"
 									>
 										<h4 className="heading">
-											Learn more about Multi Currency Savings Accounts
+										{i18n.t("multi_currency_Learn")}
 										</h4>
 									</AccordionSummary>
 									<AccordionDetails>
 										<div className="expandTypo">
-											<h2 className="blackhead">Multi-Currency Savings Account – Must-Know Details</h2>
-											<p>There’s been a lot written lately about multi-currency savings accounts and their benefits for individuals and businesses alike. But is it really an option worth considering? What are the advantages of creating a multi-currency savings account? What is there to look out for, and is there a catch? How can you make the most out of it? </p>
-											<h2 className="blackhead">What is a multi-currency savings account?</h2>
-											<p>A multi-currency savings account is a relatively new type of savings account that enables you to hold multiple currencies in a single account. In other words, you can receive or send money in different currencies without having to go through an exchange process between the currencies involved. For example, you may receive US dollars but pay in Euros using the funds available in a single account. Most of the time, this is done via:</p>
-											<p>(1) Wire transfer</p>
-											<p>(2) ACH (Automated Clearing House) or electronic payments</p>
-											<p>(3) Debit card</p>
-											<p>Multi-currency savings accounts come in three distinct forms: (1) certificates of deposits (CD), (2) money market accounts (MMA), and direct deposit accounts (DDA). Depending on the multi-currency account you open, you may be allowed to save in a foreign currency or use it for your daily transactions. This means that you can use one to send and receive funds from abroad, skipping the tedious paperwork or currency conversions. That's why a multi-currency account is ideal for travelers that often cross borders, as well as businesses working with international clients. Some exceptions do apply, which are highlighted below.</p>
-											<h2 className="blackhead">How many currencies can you hold in one account?</h2>
-											<p>This depends on the financial institution with which you decide to open a multi-currency savings account. Some institutions, for example, enable you to hold up to 7 or even 10 major currencies in a single account, however, it’s important to read the fine print. Cashero allows users to hold funds in EUR, USD, and GBP all in one wallet, without any hidden fees or restrictions.</p>
-											<h3 className="blackhead">What do I need to know about a multi-currency account?</h3>
-											<p>Multi-currency savings accounts enjoy interest rates above the ones offered by the majority of financial institutions out there. However, details like minimum balance requirements should always be clarified beforehand. Furthermore, according to experts, multi-currency accounts charge higher fees than some other types of accounts. These may include fees on withdrawals from ATMs and transaction fees. Some banks charge account management fees, usually on a 12-month basis. As for the per annum interest rates, they are generally announced in advance for the quarter for each currency, so it's good to be prepared. With Cashero, there are no management fees, so you get to keep every cent of the money you make. </p>
+											<h2 className="blackhead">{i18n.t("multi_currency_Learn_P1")}</h2>
+											<p>{i18n.t("multi_currency_Learn_P2")}</p>
+											<h2 className="blackhead">{i18n.t("multi_currency_Learn_P3")}</h2>
+											<p>{i18n.t("multi_currency_Learn_P4")}</p>
+											<p>(1){i18n.t("multi_currency_Learn_P5")} </p>
+											<p>(2){i18n.t("multi_currency_Learn_P6")} </p>
+											<p>(3){i18n.t("multi_currency_Learn_P7")} </p>
+											<p>{i18n.t("multi_currency_Learn_P8")}</p>
+											<h2 className="blackhead">{i18n.t("multi_currency_Learn_P9")}</h2>
+											<p>{i18n.t("multi_currency_Learn_P10")}</p>
+											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P1")}What do I need to know about a multi-currency account?</h3>
+											<p>{i18n.t("multi_currency_Learn_P1")}Multi-currency savings accounts enjoy interest rates above the ones offered by the majority of financial institutions out there. However, details like minimum balance requirements should always be clarified beforehand. Furthermore, according to experts, multi-currency accounts charge higher fees than some other types of accounts. These may include fees on withdrawals from ATMs and transaction fees. Some banks charge account management fees, usually on a 12-month basis. As for the per annum interest rates, they are generally announced in advance for the quarter for each currency, so it's good to be prepared. With Cashero, there are no management fees, so you get to keep every cent of the money you make. </p>
 											<h2 className="blackhead">Advantages of multi-currency accounts</h2>
 											<p>Besides potentially favorable foreign exchange rates, opening a multi-currency savings account can help protect your money from local disturbances to exchange rate fluctuations. This in turn, reduces the risk of potential threats to corporate or personal wealth from such fluctuations. Plus, you get to enjoy a better customer service experience, given that you will probably not need to contact foreign customer service centers. Remember that what you do with your money is up to you. That’s why Cashero makes it easy to switch between deposit, withdrawal, and switch between currencies, whenever you choose.</p>
 											<h3 className="blackhead">When to consider multi-currency accounts for business</h3>
@@ -1450,3 +1452,5 @@ export function QuestionTabs(props) {
 		</div>
 	);
 }
+
+export default withTranslation()(QuestionTabs)

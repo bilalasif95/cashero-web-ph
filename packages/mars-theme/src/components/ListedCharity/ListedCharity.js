@@ -9,7 +9,7 @@ import heartDollar from "../../assets/heartDollar.svg";
 import listHome from "../../assets/listHome.svg";
 import freeFund from "../../assets/freeFund.png";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
-import { QuestionTabs } from "../Tabs/Tabs";
+import QuestionTabs from "../Tabs/Tabs";
 import SignupSection from "../signupSection/signupSection";
 import BetterPlace from "../BetterPlace/BetterPlace";
 import HandleDonations from "../HandleDonations/HandleDonations";

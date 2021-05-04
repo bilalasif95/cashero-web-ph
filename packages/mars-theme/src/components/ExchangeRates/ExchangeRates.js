@@ -11,7 +11,7 @@ import MovingCoins from "../../assets/movingCoins.png";
 import listHome from "../../assets/listHome.svg";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import OnlineSave from "../OnlineSave/OnlineSave";
-import { QuestionTabs } from "../Tabs/Tabs";
+import QuestionTabs from "../Tabs/Tabs";
 import SignupSection from "../signupSection/signupSection";
 import EasyCurrencyExchange from "../EasyCurrencyExchange/EasyCurrencyExchange";
 import { Fade } from "react-awesome-reveal";
