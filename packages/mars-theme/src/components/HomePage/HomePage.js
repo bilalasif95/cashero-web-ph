@@ -2,22 +2,23 @@ import React from "react";
 import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Banner from "../../assets/photoshop.gif";
 import Check from "../../assets/check-mark.svg";
-import { GlobalMoney } from "../GlobalMoney/GlobalMoney";
-import { HighInterest } from "../HighInterest/HighInterest";
-import { CurrencyConversion } from "../CurrencyConversion/CurrencyConversion";
-import { MoneyRequest } from "../MoneyRequest/MoneyRequest";
-import { Enhance } from "../Enhance/Enhance";
-import { CharitySection } from "../CharitySection/CharitySection";
+import GlobalMoney from "../GlobalMoney/GlobalMoney";
+import HighInterest from "../HighInterest/HighInterest";
+import CurrencyConversion from "../CurrencyConversion/CurrencyConversion";
+import MoneyRequest from "../MoneyRequest/MoneyRequest";
+import Enhance from "../Enhance/Enhance";
+import CharitySection from "../CharitySection/CharitySection";
 import { QuestionTabs } from "../Tabs/Tabs";
-import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
+import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { SignupSection } from "../signupSection/signupSection";
-import { GetStarted } from "../GetStarted/GetStarted";
+import GetStarted from "../GetStarted/GetStarted";
 import Clock from "../../assets/clock.svg";
-import { MultiCurrency } from "../MultiCurrency/MultiCurrency";
+import MultiCurrency from "../MultiCurrency/MultiCurrency";
 import { Fade } from "react-awesome-reveal";
 import Link from "../link";
+import { withTranslation } from "react-i18next";
 
-export function HomePage() {
+const HomePage = ({ i18n }) => {
   return (
     <>
       <div className="container">
@@ -27,24 +28,22 @@ export function HomePage() {
               <div className="bannerCont">
                 <Fade triggerOnce direction="up" delay={100}>
                   <h1 className="bannerTitle">
-                    Your Money's Superhero <span className="br-block-with-no-display"></span> is
-                    Almost Here
+                    {i18n.t("Your_Moneys_Superhero")} <span className="br-block-with-no-display"></span> {i18n.t("is_Almost_Here")}
                   </h1>
                 </Fade>
                 <Fade triggerOnce direction="up" delay={500}>
                   <div className="Banner-list">
                     <h2 className="bannerText slide-up">
                       <img src={Check} alt="check" />
-                      Deposit money to earn up to 5% APY.
+                      {i18n.t("Your_Moneys_Superhero_H2_1")}
                     </h2>
                     <h2 className="bannerText slide-up">
                       <img src={Check} alt="check" />
-                      Exchange currencies, send money abroad, and make instant
-                      payments.
+                      {i18n.t("Your_Moneys_Superhero_H2_2")}
                     </h2>
                     <h2 className="bannerText slide-up">
                       <img src={Check} alt="check" />
-                      No hidden fees, no minimum balance, and no stress.
+                      {i18n.t("Your_Moneys_Superhero_H2_3")}
                     </h2>
                   </div>
                 </Fade>
@@ -52,13 +51,12 @@ export function HomePage() {
                 <ul className="HomepagelList list-unstyled">
                   <li>
                     <img src={Clock} alt="Clock" />
-                    Open an account in minutes. Launching in June.
+                    {i18n.t("Open_an_account_in_minutes")}
                   </li>
                 </ul>
                 <p className="draw-text">
-                  Get early access to the Cashero app and earn a chance to win
-                  $1,000 every 3 days! <span className="br-block-with-no-display"></span>
-                  <Link className="giveaway-link" link="/giveaway">Terms and conditions</Link> apply.
+                  {i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span>
+                  <Link className="giveaway-link" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")}
                 </p>
               </div>
             </div>
@@ -90,3 +88,5 @@ export function HomePage() {
     </>
   );
 }
+
+export default withTranslation()(HomePage);

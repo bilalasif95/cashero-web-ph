@@ -1,72 +1,73 @@
 import React from "react";
+import { withTranslation } from "react-i18next";
 
-export function AppPrivacy() {
+const AppPrivacy = ({ i18n }) => {
 	return (
 		<div className="container">
 			<div className="conditions-cont">
 				<div className="row">
 					<div className="col-md-8 offset-md-2">
 						<div className="terms_titles">
-							<h1>PRIVACY POLICY</h1>
+							<h1>{i18n.t("PRIVACY_POLICY")}</h1>
 							<div className="custom-border"></div>
-							<h3>GENERAL</h3>
-							<p>This Privacy Policy explains how Cashero Financial OÜ (“Cashero” or “we,” “us,” or “our”) collects, uses, and discloses information about you when you visit, access, or use Cashero App (hereinafter the “App”), Cashero website (hereinafter the “Site”), software, and other online products and services (collectively, the “Services”) or when you otherwise interact with us. By visiting the Site or the App or otherwise using our Services, you acknowledge the practices described in this Privacy Policy. We will occasionally change this Privacy Policy. We encourage you to review the Privacy Policy whenever you access the Services, the Site or use the App or otherwise interact with us to stay informed about our information practices and the choices available to you.</p>
-							<p>"Personal Information" refers to information that identifies an individual, such as name, address, e-mail address, financial information, and banking details. “Personal Information” does not include anonymized and/or aggregated data that does not identify a specific user. Cashero is committed to protecting and respecting your privacy. The purpose of this Privacy Policy is to describe:</p>
+							<h3>{i18n.t("GENERAL")}</h3>
+							<p>{i18n.t("GENERAL_P1")}</p>
+							<p>{i18n.t("GENERAL_P2")}</p>
 							<ul className="condition-list">
-								<li>The types of Personal Information we collect and how it may be used;</li>
-								<li>How and why we may disclose your Personal Information to third parties;</li>
-								<li>The transfer of your Personal Information;</li>
-								<li>Your right to access, correct, update, and delete your Personal Information;</li>
-								<li>The security measures we use to protect and prevent the loss, misuse, or alteration of Personal Information; and</li>
-								<li>Company’s retention of your Personal Information.</li>
-								<li>This Privacy Policy also covers some basics of our use of cookies, however, for more details please see also our Cookie Policy;</li>
+								<li>{i18n.t("GENERAL_li1")}</li>
+								<li>{i18n.t("GENERAL_li2")}</li>
+								<li>{i18n.t("GENERAL_li3")}</li>
+								<li>{i18n.t("GENERAL_li4")}</li>
+								<li>{i18n.t("GENERAL_li5")}</li>
+								<li>{i18n.t("GENERAL_li6")}</li>
+								<li>{i18n.t("GENERAL_li7")}</li>
 							</ul>
-							<p>We control the ways of collecting your Personal Information and determine goals for which We use Personal Information. We are a “data controller” within the meaning of the General Data Protection Regulation (EU) 2016/679 (hereinafter referred to as “GDPR”) and other applicable European laws on data protection.</p>
+							<p>{i18n.t("GENERAL_P3")}</p>
 						</div>
 						<div className="terms_titles">
-							<h3>COLLECTION AND USE OF PERSONAL INFORMATION</h3>
-							<h3>PERSONAL INFORMATION WE COLLECT</h3>
-							<p>We collect the following Personal Information:</p>
+							<h3>{i18n.t("COLLECTION_AND_USE_OF_PERSONAL_INFORMATION")}</h3>
+							<h3>{i18n.t("PERSONAL_INFORMATION_WE_COLLECT")}</h3>
+							<p>{i18n.t("GENERAL_P4")}</p>
 							<ul className="condition-list">
-								<li>Contact information, such as name, home address, e-mail address, and telephone number, IP address, etc;</li>
-								<li>Account information, such as username and password;</li>
-								<li>Financial information, such as bank account numbers, bank statement, trading activity, and history, commissions charged, etc;</li>
-								<li>Identity verification information, such as images of your government-issued ID, passport, national ID card, driving license, or other documents requested by our compliance department;</li>
-								<li>Residence verification information, such as Utility bill details or similar information.</li>
-								<li>Other information, obtained during our KYC procedures, such as information about your financial state and source of funds;</li>
-								<li>We also automatically collect certain computer, device, and browsing information when you access the Site, the App, or use the Services. We record your usage of the App with Smartlook. This information is aggregated to provide statistical data about our users' browsing actions and patterns, and does not personally identify individuals.</li>
+								<li>{i18n.t("PERSONAL_li1")}</li>
+								<li>{i18n.t("PERSONAL_li2")}</li>
+								<li>{i18n.t("PERSONAL_li3")}</li>
+								<li>{i18n.t("PERSONAL_li4")}</li>
+								<li>{i18n.t("PERSONAL_li5")}</li>
+								<li>{i18n.t("PERSONAL_li6")}</li>
+								<li>{i18n.t("PERSONAL_li7")}</li>
 							</ul>
-							<p>This information may include:</p>
+							<p>{i18n.t("GENERAL_P5")}</p>
 							<ul className="condition-list">
-								<li>The information about the computer or mobile device you use to access our App, including the hardware model, operating system and version, the web browser you use, IP addresses, and other device identifiers.</li>
-								<li>The Site and App usage information, the server log information, which may include (but is not limited to) your login details, the date and time of visits, the pages viewed, your IP address, time spent at our App, and the websites you visit just before and just after our App.</li>
-								<li>The bandwidth upload and download speeds, the amount of free and used storage space on your device, and other statistics about your device.</li>
-								<li>We may automatically capture, store and otherwise process information about you even if you abandon the completion of an online application or registration form.</li>
+								<li>{i18n.t("INFORMATION_li1")}</li>
+								<li>{i18n.t("INFORMATION_li2")}</li>
+								<li>{i18n.t("INFORMATION_li3")}</li>
+								<li>{i18n.t("INFORMATION_li4")}</li>
 							</ul>
 						</div>
 						<div className="terms_titles">
-							<h3>USE OF COOKIES AND SIMILAR TECHNOLOGY</h3>
-							<p>The App is using cookies. Cookies are small text files that are placed on your computer by websites that you visit. They are widely used to make websites work, or work more efficiently, as well as to provide information to the owners of the site. Cookies are typically stored on your computer's hard drive.</p>
-							<p>Our App uses cookies to enable you to use the App, Services we offer, and the materials on the App. Cookies are also used to distinguish you from other users of our App. This helps us to provide you with a good experience when you use our App and also allows us to improve our App.</p>
-							<p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie rights by setting your preferences. You can select which categories of cookies you accept or reject. Essential cookies cannot be rejected as they are strictly necessary to provide you with services.</p>
-							<p>We may update this Cookie policy section from time to time in order to reflect, for example, changes to the cookies we use or for other operational, legal, or regulatory reasons. Please, therefore, re-visit Privacy Policy and Cookie policy regularly to stay informed about our use of cookies and related technologies.</p>
+							<h3>{i18n.t("USE_OF_COOKIES_AND_SIMILAR_TECHNOLOGY")}</h3>
+							<p>{i18n.t("COOKIES_P1")}</p>
+							<p>{i18n.t("COOKIES_P2")}</p>
+							<p>{i18n.t("COOKIES_P3")}</p>
+							<p>{i18n.t("COOKIES_P4")}</p>
 						</div>
 						<div className="terms_titles">
-							<h3>HOW WE USE YOUR PERSONAL INFORMATION</h3>
-							<p>We may use your Personal Information to:</p>
+							<h3>{i18n.t("HOW_WE_USE_YOUR_PERSONAL_INFORMATION")}</h3>
+							<p>{i18n.t("GENERAL_P6")}</p>
 							<ul className="condition-list">
-								<li>Process your transactions and deposits. We will process your Personal Information only for the purpose(s) for which it has been provided to us;</li>
-								<li>Fulfill our legal or regulatory requirements;</li>
-								<li>Verify your identity following the applicable legislation and the Company’s Anti Money Laundering policy, as well as address other law enforcement needs. We also may share your information with other financial institutions and with tax authorities if such actions are required from us due to any applicable legislation;</li>
-								<li>Detect, investigate and prevent fraudulent transactions or unauthorized or illegal activities;</li>
-								<li>Protect our rights and property;</li>
-								<li>Analyze the App usage and improve our Site, App, and offerings. Analyzing and tracking data to determine the usefulness or popularity of certain content and to better understand the online activity of our App users;</li>
-								<li>Help us respond to your customer service requests and support needs, answer your inquiry or respond to a communication from you;</li>
-								<li>Contact you about the Services. The email address you provide may be used to communicate information and updates related to your use of the Services. We may also occasionally communicate technical notices, support or administrative notifications, company news, updates, promotions, and related information relating to similar products and the Services provided by Cashero;</li>
-								<li>Administer a contest, promotion, survey, or other features as will be more explained on the Site or the App;</li>
-								<li>Link, connect or combine Personal Information we collect from or about you with other Personal Information; and</li>
-								<li>Carry out any other purpose or reason for which the Information was collected;</li>
-								<li>We do not perform behavioral tracking of a customer's activities on our App or across different websites, nor do we allow third-party data collection through our services. If you wish to stop receiving marketing communications from us, please contact us to opt-out.</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li1")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li2")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li3")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li4")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li5")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li6")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li7")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li8")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li9")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li10")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li11")}</li>
+								<li>{i18n.t("PERSONAL_INFORMATION_li12")}</li>
 							</ul>
 						</div>
 						<div className="terms_titles">
@@ -146,3 +147,5 @@ export function AppPrivacy() {
 		</div>
 	);
 }
+
+export default withTranslation()(AppPrivacy)

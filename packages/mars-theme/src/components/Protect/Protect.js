@@ -3,8 +3,9 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import Lock from "../../assets/lock.svg";
+import { withTranslation } from "react-i18next";
 
-export function Protect() {
+const Protect = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -19,16 +20,16 @@ export function Protect() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								Use Cashero to Protect  <span className="br-block-with-no-display"></span> Your Money from Currency <span className="br-block-with-no-display"></span>  Value Fluctuations
+								{i18n.t("Use_Cashero_to_Protect")} <span className="br-block-with-no-display"></span> {i18n.t("Your_Money_from_Currency")} <span className="br-block-with-no-display"></span> {i18n.t("Value_Fluctuations")}
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={400}>
-							<p>Deposit your local currency in your Cashero wallet and convert the funds into either USD, GBP, or EUR - you choose. Hold your money in some of the strongest currencies in the world.</p>
-							<p>When you’re ready to convert back to your currency, it’s simple! Chances are you’ll come out a winner if your local currency has devalued. Thanks to Cashero, currency drops ain’t got nothin’ on you.</p>
+							<p>{i18n.t("Protect_P1")}</p>
+							<p>{i18n.t("Protect_P2")}</p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={1000}>
 							<button onClick={appModalOpen} className="LinkBtn" >
-								Get Early Access <img alt="Arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -45,3 +46,5 @@ export function Protect() {
 		</div>
 	);
 }
+
+export default withTranslation()(Protect);

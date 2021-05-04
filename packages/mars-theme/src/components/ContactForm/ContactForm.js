@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { callApi } from "../../config/call-api";
 import { EndPoints, recaptchaSiteKep } from "../../config/config";
 import ReCAPTCHA from "react-google-recaptcha";
+import { withTranslation } from "react-i18next";
 
-export function ContactForm() {
+const ContactForm = ({ i18n }) => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -59,12 +60,12 @@ export function ContactForm() {
 		<div className="ContactFormBox">
 			<div className="container">
 				<div className="ContactForm">
-					<h1>Contact Us</h1>
+					<h1>{i18n.t("Contact_Us")}</h1>
 					<div className="inputfieldbox">
-						<input type="text" value={name} onChange={(e) => onNameChange(e)} className="form-control" placeholder="Name" />
-						<input type="text" value={email} onChange={(e) => onEmailChange(e)} className="form-control" placeholder="Email" />
+						<input type="text" value={name} onChange={(e) => onNameChange(e)} className="form-control" placeholder={i18n.t("Enter_Name")} />
+						<input type="text" value={email} onChange={(e) => onEmailChange(e)} className="form-control" placeholder={i18n.t("Enter_Email")} />
 					</div>
-					<textarea value={message} onChange={(e) => onMessageChange(e)} className="form-control mt-4" placeholder="Message" rows="9" cols="50"></textarea>
+					<textarea value={message} onChange={(e) => onMessageChange(e)} className="form-control mt-4" placeholder={i18n.t("Enter_Message")} rows="9" cols="50"></textarea>
 					{error && <label className="contactUsFormError">{error}</label>}
 					{success && <label className="contactUsFormSuccess">{success}</label>}
 					<div className="captcha-cont">
@@ -77,9 +78,11 @@ export function ContactForm() {
 							width="100%"
 						/>
 					</div>
-					<button onClick={() => sendMessage()} disabled={loading || !name || !email || !message || !value} className={(loading || !name || !email || !message || !value) ? "btn btn-default formbtn disabled" : "btn btn-default formbtn"}>Send Message</button>
+					<button onClick={() => sendMessage()} disabled={loading || !name || !email || !message || !value} className={(loading || !name || !email || !message || !value) ? "btn btn-default formbtn disabled" : "btn btn-default formbtn"}>{i18n.t("Send_Message")}</button>
 				</div>
 			</div>
 		</div>
 	);
 }
+
+export default withTranslation()(ContactForm);

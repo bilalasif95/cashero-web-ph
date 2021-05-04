@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Place from "../../assets/myPlace.png";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import { withTranslation } from "react-i18next";
 
-export function BetterPlace() {
+const BetterPlace = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true);
@@ -20,11 +21,11 @@ export function BetterPlace() {
 					</div>
 					<div className="col-md-6">
 						<div className="MoneyRequestCont">
-							<h1 className="oneAppTitle">  Raise More Money to <span className="br-block-with-no-display"></span> Make Our World a <span className="br-block-with-no-display"></span> Better Place </h1>
-							<p>Thank you for doing what you do. Cashero wants to support you in your effort to make a difference. That’s why when you become a listed charity with us, you can receive donations from people around the world for free.</p>
-							<p>We believe in your work and want you to help others. We enable donations through Cashero and we take care of all transfer and exchange fees. There’s no catch! </p>
-							<p>All you have to do is apply. If you check all of our boxes your charity will make it to the list.</p>
-							<button onClick={appModalOpen} className="LinkBtn"> Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<h1 className="oneAppTitle"> {i18n.t("Raise_More_Money_to")} <span className="br-block-with-no-display"></span> {i18n.t("Make_Our_World_a")} <span className="br-block-with-no-display"></span> {i18n.t("Better_Place")} </h1>
+							<p>{i18n.t("Better_Place_P1")}</p>
+							<p>{i18n.t("Better_Place_P2")}</p>
+							<p>{i18n.t("Better_Place_P3")}</p>
+							<button onClick={appModalOpen} className="LinkBtn"> {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</div>
 					</div>
 				</div>
@@ -33,3 +34,5 @@ export function BetterPlace() {
 		</>
 	);
 }
+
+export default withTranslation()(BetterPlace);

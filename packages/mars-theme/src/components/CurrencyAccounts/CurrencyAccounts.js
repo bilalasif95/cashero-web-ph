@@ -8,8 +8,8 @@ import ListPhone from "../../assets/ListPhone.svg";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
 import { SingleAccount } from "../SingleAccount/SingleAccount";
-import { Protect } from "../Protect/Protect";
-import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
+import Protect from "../Protect/Protect";
+import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { Fade } from "react-awesome-reveal";
@@ -23,10 +23,11 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import currencieslist from "../../config/currenciesList";
 import Link from "../link";
+import { withTranslation } from "react-i18next";
 
 var bigDecimal = require('js-big-decimal');
 
-export function CurrencyAccounts() {
+const CurrencyAccounts = ({ i18n }) => {
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -123,13 +124,13 @@ export function CurrencyAccounts() {
 					<div className="row align-items-center">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>Multi-Currency <span className="br-block-with-no-display"></span> Savings Account</h1>
-								<p className="bannerPara">Go from zero to hero. Make your money borderless and keep it safe from currency fluctuations.</p>
+								<h1>{i18n.t("Multi_Currency")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
+								<p className="bannerPara">{i18n.t("Multi_Currency_Savings_Account_P")}</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
+									<li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">Terms and conditions</Link> apply. </p>
+								<p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -256,10 +257,10 @@ export function CurrencyAccounts() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList2 list-unstyled">
-							<li><img alt="one Wallet" src={oneWallet} />One wallet, multiple currencies</li>
-							<li><img alt="List Phone" src={ListPhone} />No monthly fees. No minimum balance required</li>
-							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
-							<li><img alt="Draw" src={Draw} />EU licensed & regulated financial institution</li>
+							<li><img alt="one Wallet" src={oneWallet} />{i18n.t("Multi_Currency_Savings_Account_li1")}</li>
+							<li><img alt="List Phone" src={ListPhone} />{i18n.t("Multi_Currency_Savings_Account_li2")}</li>
+							<li><img alt="Draw" src={Draw} />{i18n.t("Multi_Currency_Savings_Account_li3")}</li>
+							<li><img alt="Draw" src={Draw} />{i18n.t("Multi_Currency_Savings_Account_li4")}</li>
 						</ul>
 					</div>
 				</div>
@@ -271,7 +272,7 @@ export function CurrencyAccounts() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-								How it Works. It’s Simple.
+								{i18n.t("Multi_Currency_Savings_Account_h3")}
 							</h3>
 						</div>
 					</div>
@@ -280,7 +281,7 @@ export function CurrencyAccounts() {
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
 									<img className="img-fluid" alt="Favourite" src={Fav} />
-									<h3>Sign up for Cashero.</h3>
+									<h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
 								</div>
 							</Fade>
 						</div>
@@ -291,7 +292,7 @@ export function CurrencyAccounts() {
 									alt="Wallet Coins"
 									src={WalletCoins}
 								/>
-								<h3>Add funds to your Multi-Currency Account and hold USD, GBP or EUR.</h3>
+								<h3>{i18n.t("Multi_Currency_Savings_Account_Work2")}</h3>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
@@ -299,7 +300,7 @@ export function CurrencyAccounts() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
 									<h3>
-										Earn interest and safeguard your money from currency devaluation.
+										{i18n.t("Multi_Currency_Savings_Account_Work3")}
 									</h3>
 								</div>
 							</Fade>
@@ -308,9 +309,9 @@ export function CurrencyAccounts() {
 					<div className="row">
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
-								<p>Maintain your wealth with Cashero’s multi-currency account.</p>
+								<p>{i18n.t("Multi_Currency_Savings_Account_Work_P")}</p>
 								<button onClick={appModalOpen} className="LinkBtn">
-									Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+									{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>
@@ -326,3 +327,5 @@ export function CurrencyAccounts() {
 		</>
 	);
 }
+
+export default withTranslation()(CurrencyAccounts);

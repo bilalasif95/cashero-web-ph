@@ -6,8 +6,9 @@ import gbpflag from "../../assets/gbpflag.png";
 import eurflag from "../../assets/eurflag.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function MultiCurrency() {
+const MultiCurrency = ({ i18n }) => {
 	return (
 		<div className="MultiCurrency">
 			<div className="row">
@@ -15,13 +16,13 @@ export function MultiCurrency() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
 							<h1 className="oneAppTitle">
-								Multi-Currency
+								{i18n.t("Multi_Currency")}
 								<span className="br-block"></span>
-								Savings Account
+								{i18n.t("Savings_Account")}
 							</h1>
-							<p>Multiple currencies, one wallet. Convert your local currency into USD, GBP, or EUR to reduce currency fluctuation risk. </p>
+							<p>{i18n.t("Multi_Currency_Savings_Account_MainP")} </p>
 							<Link link="/multi-currency-savings-account" className="Link sm-mb-30">
-								Learn more about Accounts<img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Learn_more_about_Accounts")}<img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -70,3 +71,5 @@ export function MultiCurrency() {
 		</div>
 	);
 }
+
+export default withTranslation()(MultiCurrency);

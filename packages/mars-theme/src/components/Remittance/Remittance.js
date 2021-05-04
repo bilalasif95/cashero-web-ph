@@ -4,7 +4,7 @@ import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
 import Dollarlist from "../../assets/Dollarlist.svg";
 import Draw from "../../assets/draw.svg";
 import listHome from "../../assets/listHome.svg";
-import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
+import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
 import { Sendpayments } from "../Sendpayments/Sendpayments";

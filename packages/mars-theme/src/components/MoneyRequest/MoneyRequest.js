@@ -5,8 +5,9 @@ import Send from "../../assets/send.svg";
 import Request from "../../assets/request.svg";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function MoneyRequest() {
+const MoneyRequest = ({ i18n }) => {
 	return (
 		<div className="MoneyRequest transfer-money sm-mt-30">
 			<div className="row">
@@ -14,13 +15,13 @@ export function MoneyRequest() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								Instant Money
-									<span className="br-block"></span>
-								 Transfer
+								{i18n.t("Instant_Money")}
+								<span className="br-block"></span>
+								{i18n.t("Transfer")}
 							</h1>
-							<p>Tap a button and start sending, requesting, and receiving payments worldwide. It’s fast, secure, and easy.</p>
+							<p>{i18n.t("Money_Request_P")}</p>
 							<Link link="/instant-money-transfer" className="Link">
-								Learn more about Payments <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Learn_more_about_Payments")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -75,3 +76,5 @@ export function MoneyRequest() {
 		</div>
 	);
 }
+
+export default withTranslation()(MoneyRequest);

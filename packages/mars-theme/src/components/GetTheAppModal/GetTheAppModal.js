@@ -13,8 +13,9 @@ import Link from "../link";
 import Android from "../../assets/AndroidApp.svg";
 import IOS from "../../assets/iOSApp.svg";
 import ReCAPTCHA from "react-google-recaptcha";
+import { withTranslation } from "react-i18next";
 
-export default function GetTheAppModal(props) {
+const GetTheAppModal = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -111,7 +112,7 @@ export default function GetTheAppModal(props) {
         setPhoneNoLength(10);
       })
   }, [])
-  const { open, handleClose } = props;
+  const { open, handleClose, i18n } = props;
   const onCaptchaHandler = (value) => {
     setValue(value);
   };
@@ -137,7 +138,7 @@ export default function GetTheAppModal(props) {
             <div className="mobileJoinApp">
               <div>
                 <h2 className="ModalTitle" id="transition-modal-title">
-                  Join Cashero in <span className="br-block highInterestHeading"></span>seconds
+                  {i18n.t("Join_Cashero_in")} <span className="br-block highInterestHeading"></span>{i18n.t("seconds")}
                 </h2>
                 <ul className="list-unstyled MobileAppList">
                   <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
@@ -148,15 +149,14 @@ export default function GetTheAppModal(props) {
             <div className="joinApp">
               <div className="inner-content">
                 <h2 className="ModalTitle" id="transition-modal-title">
-                  Your money’s superhero awaits.
+                  {i18n.t("Your_moneys_superhero_awaits")}
                 </h2>
                 <p id="transition-modal-description">
                   {/* Enter your phone number to join our waitlist. */}
-                  We’ll send you a message with a link to download the app.
+                  {i18n.t("We_will_send_you_a_message_with_a_link_to_download_the_app")}
                 </p>
                 <p id="transition-modal-description">
-                  You’ll also earn a chance to win $1000 every 3 days! <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and
-                  conditions</Link></span> apply.
+                  {i18n.t("You_will_also_earn_a_chance_to_win_1000_every_3_days")} <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link></span> {i18n.t("apply")}
                 </p>
                 <div className="ModalPhone">
                   <div className="numberSelection">
@@ -227,8 +227,8 @@ export default function GetTheAppModal(props) {
                       }
                       type="submit"
                     >
-                      Get Early Access
-                  </button>
+                      {i18n.t("Get_Early_Access")}
+                    </button>
                     {error &&
                       <label className="phoneNumberError">
                         {error}
@@ -245,7 +245,7 @@ export default function GetTheAppModal(props) {
                     }
                     type="submit"
                   >
-                    Get Early Access
+                    {i18n.t("Get_Early_Access")}
                   </button>
                   {error &&
                     <label className="phoneNumberError">
@@ -274,6 +274,8 @@ export default function GetTheAppModal(props) {
     </div>
   );
 }
+
+export default withTranslation()(GetTheAppModal);
 
 const Paper = styled.div`
   background-color: #fff;

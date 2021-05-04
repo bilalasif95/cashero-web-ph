@@ -10,10 +10,11 @@ import currencieslist from "../../config/currenciesList";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
+import { withTranslation } from "react-i18next";
 
 var bigDecimal = require('js-big-decimal');
 
-export function HighInterest() {
+const HighInterest = ({ i18n }) => {
 	const [flaggbp, setflaggbp] = useState("🇺🇸");
 	const [flagcurrencygbp, setflagcurrencygbp] = useState("US Dollar - USD");
 	const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
@@ -222,9 +223,9 @@ export function HighInterest() {
 					<div className="col-md-6">
 						<div className="oneAppCont">
 							<Fade triggerOnce direction="up">
-								<h3 className="HighInterestTitle">High Yield<span className="br-block highInterestHeading"></span>Savings Account</h3>
-								<p className="HighInterestText">Receive inflation-beating interest rates of 2%-5% APY. Yes, you read that correctly. Flexibility, no minimum balance required monthly fees or penalties for withdrawals. Do that thing that rich people do, make money while you sleep.</p>
-								<Link link="/high-yield-savings-account" className="Link">Learn more about Savings
+								<h3 className="HighInterestTitle">{i18n.t("High_Yield")}<span className="br-block highInterestHeading"></span>{i18n.t("Savings_Account")}</h3>
+								<p className="HighInterestText">{i18n.t("High_Yield_Savings_Account_P")}</p>
+								<Link link="/high-yield-savings-account" className="Link">{i18n.t("Learn_more_about_Savings")}
 									{innerWidth >= 540 ?
 										<img alt="Arrow" className="ArrowBtn" src={Arrow} />
 										:
@@ -238,3 +239,5 @@ export function HighInterest() {
 		</div>
 	);
 }
+
+export default withTranslation()(HighInterest);

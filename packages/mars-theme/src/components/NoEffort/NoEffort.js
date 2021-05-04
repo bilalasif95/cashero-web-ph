@@ -3,8 +3,9 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import CoinsUp from "../../assets/coinsUp.png";
 import Arrow from "../../assets/arrowLink.svg";
 import { Fade } from "react-awesome-reveal";
+import { withTranslation } from "react-i18next";
 
-export function NoEffort() {
+const NoEffort = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -23,12 +24,12 @@ export function NoEffort() {
 						<div className="oneAppCont">
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle">
-									Earn the Cashero Way
+									{i18n.t("Earn_the_Cashero_Way")}
 								</h3>
-								<p className="HighInterestText">You want to earn interest on your money, right? We understand. You've come to the right place.</p>
-								<p className="HighInterestText">If your money is sitting in a bank account, chances are you’re losing money. High yield savings account interest rates should beat inflation and make you money. Unfortunately, most don’t.</p>
-								<p className="HighInterestText">Introducing a first-of-its-kind approach to high yield savings. Cashero, the superhero your hard-earned money has been waiting for. </p>
-								<button onClick={appModalOpen} className="LinkBtn" >Get Early Access<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<p className="HighInterestText">{i18n.t("No_Effort_P1")}</p>
+								<p className="HighInterestText">{i18n.t("No_Effort_P2")}</p>
+								<p className="HighInterestText">{i18n.t("No_Effort_P3")}</p>
+								<button onClick={appModalOpen} className="LinkBtn" >{i18n.t("Get_Early_Access")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 						</div>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -38,3 +39,5 @@ export function NoEffort() {
 		</div>
 	);
 }
+
+export default withTranslation()(NoEffort);

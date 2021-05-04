@@ -308,6 +308,10 @@ h4 {
   font-size: 16px;
   color: #9ea0a5 !important;
   font-weight: 400; }
+  .customNav ul li a:hover {
+    color: black !important;
+    transition: color 0.2s ease 0s;
+  }
   .customNav ul li a:after{
     display: none !important;
   }
@@ -335,6 +339,10 @@ h4 {
     color: #9ea0a5!important;
     font-weight: 500;
     cursor: pointer;
+  }
+  .customNav ul li:last-child .dropdown-menu .HeaderList li:hover {
+    color: black !important;
+    transition: color 0.2s ease 0s;
   }
   .customNav ul li:not(:last-child) {
     margin-right: 40px;
@@ -15514,6 +15522,7 @@ button:focus {
 .customNav .navbar-nav li>a{
    padding: 8px 0px;
    display: block;
+   cursor: pointer;
 }
 
 .backList a{
@@ -15652,6 +15661,7 @@ select:-webkit-autofill:focus {
       margin-bottom: 30px;
       font-weight: 600;
       text-align: center;
+      text-transform: uppercase;
     }
     .conditions-cont h3 {
       font-size: 24px;

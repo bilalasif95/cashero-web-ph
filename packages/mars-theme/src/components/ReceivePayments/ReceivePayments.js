@@ -7,19 +7,20 @@ import Draw from "../../assets/draw.svg";
 import Dollar from "./../../assets/Dollar.png";
 import Path from "../../assets/path.png";
 import listHome from "../../assets/listHome.svg"
-import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
+import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import { QuestionTabs } from "../Tabs/Tabs";
 import { SignupSection } from "../signupSection/signupSection";
-import { LocalPayments } from "../LocalPayments/LocalPayments";
-import { GetPaid } from "../Getpaid/Getpaid";
+import LocalPayments from "../LocalPayments/LocalPayments";
+import GetPaid from "../Getpaid/Getpaid";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import KuWu from "../../assets/KuWu.png";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Link from "../link";
+import { withTranslation } from "react-i18next";
 
-export function ReceivePayments() {
+const ReceivePayments = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -34,13 +35,13 @@ export function ReceivePayments() {
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>Instant Money <span className="br-block-with-no-display"></span> Transfer </h1>
-								<p className="bannerPara">Send, request and receive payments in a flash. Pay and get paid, we make it easy.</p>
+								<h1>{i18n.t("Instant_Money")} <span className="br-block-with-no-display"></span> {i18n.t("Transfer")} </h1>
+								<p className="bannerPara">{i18n.t("Receive_Payments_Main_P")}</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
-									<li><img alt="Clock" src={Clock} />Open an account in minutes. Launching in June.</li>
+									<li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway"> Terms and conditions</Link> apply. </p>
+								<p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway"> {i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -53,7 +54,7 @@ export function ReceivePayments() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="wallet Down" src={walletDown} />Send, request and receive payments instantly</li>
+							<li><img alt="wallet Down" src={walletDown} />{i18n.t("Receive_Payments_li1")}</li>
 							<li><img alt="Instant" src={Instant} />No monthly fees. No minimum balance required</li>
 							<li><img alt="Draw" src={Draw} />Add or withdraw your money at any time</li>
 							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
@@ -125,3 +126,5 @@ export function ReceivePayments() {
 		</>
 	);
 }
+
+export default withTranslation()(ReceivePayments);
