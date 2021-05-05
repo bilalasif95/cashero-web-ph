@@ -7,24 +7,25 @@ import listGraph from "../../assets/listGraph.svg";
 import HighDollar from "../../assets/HighDollar.svg";
 import Draw from "../../assets/draw.svg";
 import listHome from "../../assets/listHome.svg";
-import { NoEffort } from "../NoEffort/NoEffort";
-import { Savings } from "../Savings/Savings";
+import NoEffort from "../NoEffort/NoEffort";
+import Savings from "../Savings/Savings";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import WalletCoins from "../../assets/WalletCoins.png";
 import ArrowUp from "../../assets/Arrowup.png";
 import Arrow1 from "../../assets/arrowLink.svg";
-import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
-import { QuestionTabs } from "../Tabs/Tabs";
-import { SignupSection } from "../signupSection/signupSection";
+import PeoplesSection from "../PeoplesSection/PeoplesSection";
+import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
+import QuestionTabs from "../Tabs/Tabs";
+import SignupSection from "../signupSection/signupSection";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import Link from "../link";
+import { withTranslation } from "react-i18next";
 
 var bigDecimal = require('js-big-decimal');
 
-export function Personal() {
+const Personal = ({ i18n }) => {
 	const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
 	const [selectedYear, setSelectedYear] = useState("5");
 	const [value, setValue] = useState("5000");
@@ -76,13 +77,13 @@ export function Personal() {
 					<div className="row">
 						<div className="col-md-7">
 							<div className="PersonalCont">
-								<h1>High-Yield <span className="br-block-with-no-display"></span> Savings Account</h1>
-								<p className="bannerPara">Make your money do the work. Earn up to 5% APY on your hard-earned cash, paid out daily.</p>
+								<h1>{i18n.t("High_Yield_WithDash")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
+								<p className="bannerPara">{i18n.t("Personal_Main_P")}</p>
 								<TextfieldBanner />
 								<ul className="PersonalList list-unstyled">
-									<li><img src={Clock} alt="Clock" />Open an account in minutes. Launching in June.</li>
+									<li><img src={Clock} alt="Clock" />{i18n.t("Open_an_account_in_minutes")}</li>
 								</ul>
-								<p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">Terms and conditions</Link> apply. </p>
+								<p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
 							</div>
 						</div>
 						<div className="col-md-5">
@@ -92,7 +93,7 @@ export function Personal() {
 										<div className="row inputRow">
 											<div className="col-4">
 												<div>
-													<p className="customText">Deposit</p>
+													<p className="customText">{i18n.t("Deposit")}</p>
 													<TextField
 														fullWidth
 														value={value}
@@ -108,7 +109,7 @@ export function Personal() {
 											</div>
 											<div className="col-6">
 												<div className="InterestBox mt-0 TotalText interest-box-cont">
-													<p>Total Interest</p>
+													<p>{i18n.t("Total_Interest")}</p>
 													<h1>$<NumericLabel params={{
 														'shortFormat': true,
 														'justification': 'C',
@@ -124,25 +125,25 @@ export function Personal() {
 										<div className="row">
 											<div className="col-6">
 												<div className="InterestBox TotalText">
-													<p>Interest Rate</p>
-													<h1>5% APY</h1>
+													<p>{i18n.t("Interest_Rate")}</p>
+													<h1>{i18n.t("Percent_APY")}</h1>
 												</div>
 											</div>
 											<div className="col-6">
 												<div className="InterestBox TotalText">
-													<p>Term</p>
+													<p>{i18n.t("Term")}</p>
 													<div className="yearDropdown">
 														<Dropdown
 															isOpen={dropdownOpengbp}
 															toggle={togglegbp}
 														>
 															<DropdownToggle caret>
-																<h1>{selectedYear} {selectedYear === "1" ? "YEAR" : "YEARS"}</h1>
+																<h1>{selectedYear} {selectedYear === "1" ? <>{i18n.t("YEAR")}</> : <>{i18n.t("YEARS")}</>}</h1>
 															</DropdownToggle>
 															<DropdownMenu>
-																<DropdownItem onClick={() => setSelectedYear("1")}>1 YEAR</DropdownItem>
-																<DropdownItem onClick={() => setSelectedYear("5")}>5 YEARS</DropdownItem>
-																<DropdownItem onClick={() => setSelectedYear("10")}>10 YEARS</DropdownItem>
+																<DropdownItem onClick={() => setSelectedYear("1")}>1 {i18n.t("YEAR")}</DropdownItem>
+																<DropdownItem onClick={() => setSelectedYear("5")}>5 {i18n.t("YEARS")}</DropdownItem>
+																<DropdownItem onClick={() => setSelectedYear("10")}>10 {i18n.t("YEARS")}</DropdownItem>
 															</DropdownMenu>
 														</Dropdown>
 													</div>
@@ -156,7 +157,7 @@ export function Personal() {
 								<div className="row">
 									<div className="col-12">
 										<div className="FinalText text-center">
-											<p>Final balance is</p>
+											<p>{i18n.t("Final_balance_is")}</p>
 											<h1>$<NumericLabel params={{
 												'shortFormat': true,
 												'justification': 'C',
@@ -174,10 +175,10 @@ export function Personal() {
 				<div className="row">
 					<div className="col-md -12">
 						<ul className="PersonalCompanyList list-unstyled">
-							<li><img alt="High Dollar" src={HighDollar} />Inflation-beating 5% APY</li>
-							<li><img alt="list Graph" src={listGraph} />Interest paid out daily</li>
-							<li><img alt="Draw" src={Draw} />Deposit or withdraw your money at any time</li>
-							<li><img alt="list Home" src={listHome} />EU licensed & regulated financial institution</li>
+							<li><img alt="High Dollar" src={HighDollar} />{i18n.t("PersonalPage_li1")}</li>
+							<li><img alt="list Graph" src={listGraph} />{i18n.t("PersonalPage_li2")}</li>
+							<li><img alt="Draw" src={Draw} />{i18n.t("PersonalPage_li3")}</li>
+							<li><img alt="list Home" src={listHome} />{i18n.t("Multi_Currency_Savings_Account_li4")}</li>
 						</ul>
 					</div>
 				</div>
@@ -189,7 +190,7 @@ export function Personal() {
 					<div className="row">
 						<div className="col-md-12">
 							<h3 className="getStartedTitle">
-								How it Works. It’s Simple.
+								{i18n.t("Multi_Currency_Savings_Account_h3")}
 							</h3>
 						</div>
 					</div>
@@ -198,7 +199,7 @@ export function Personal() {
 							<Fade triggerOnce direction="left">
 								<div className="GetStartedBox1 w-100">
 									<img alt="Favourite" className="img-fluid" src={Fav} />
-									<h3>Sign up for Cashero.</h3>
+									<h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
 								</div>
 							</Fade>
 						</div>
@@ -209,7 +210,7 @@ export function Personal() {
 									src={WalletCoins}
 									alt="Wallet Coins"
 								/>
-								<h3>Add funds into your Account.</h3>
+								<h3>{i18n.t("Add_funds_into_your_Account")}</h3>
 							</div>
 						</div>
 						<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
@@ -217,7 +218,7 @@ export function Personal() {
 								<div className="GetStartedBox3 w-100">
 									<img className="img-fluid" alt="Arrow Up" src={ArrowUp} />
 									<h3>
-										Earn up to 5% APY. Yep, that simple.
+										{i18n.t("Earn_up_to_5_APY")}
 									</h3>
 								</div>
 							</Fade>
@@ -226,9 +227,9 @@ export function Personal() {
 					<div className="row">
 						<div className="offset-md-1 col-md-10">
 							<div className="MultistepsCont">
-								<p>Ready to earn more? Growing your wealth is easy with Cashero's high-yield savings account.</p>
+								<p>{i18n.t("Personal_LastP")}</p>
 								<button onClick={appModalOpen} className="LinkBtn" >
-									Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+									{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
 								</button>
 							</div>
 						</div>
@@ -244,3 +245,5 @@ export function Personal() {
 		</>
 	);
 }
+
+export default withTranslation()(Personal);

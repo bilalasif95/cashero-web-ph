@@ -1,7 +1,8 @@
 import React from "react";
 import Inbox from "../../assets/inbox.gif";
+import { withTranslation } from "react-i18next";
 
-export function Thankyou() {
+const Thankyou = ({ i18n }) => {
 	return (
 		<div className="container">
 			<div className="Thankyou">
@@ -9,8 +10,8 @@ export function Thankyou() {
 					<div className="col-md-12">
 						<div className="ThankyouCont">
 							<img className="img-fluid mx-auto d-block InboxImg" alt="Inbox" src={Inbox} />
-							<h1>Thank you!</h1>
-							<h3>Your email has been confirmed.</h3>
+							<h1>{i18n.t("Thank_you")}</h1>
+							<h3>{i18n.t("Your_email_has_been_confirmed")}</h3>
 						</div>
 					</div>
 				</div>
@@ -18,3 +19,5 @@ export function Thankyou() {
 		</div>
 	);
 }
+
+export default withTranslation()(Thankyou);

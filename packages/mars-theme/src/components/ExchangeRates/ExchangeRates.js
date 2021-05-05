@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import Clock from "../../assets/clockImg.svg";
 import Currencies from "../../assets/Currencies.svg";
-import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
+import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import ConImg from "../../assets/ConImg.svg";
 import Draw from "../../assets/draw.svg";
 import ExArrow from "../../assets/ExArrow.svg";
 import ExDollar from "../../assets/ExDollar.svg";
 import MovingCoins from "../../assets/movingCoins.png";
 import listHome from "../../assets/listHome.svg";
-import { PeoplesSection } from "../PeoplesSection/PeoplesSection";
-import { OnlineSave } from "../OnlineSave/OnlineSave";
-import { QuestionTabs } from "../Tabs/Tabs";
-import { SignupSection } from "../signupSection/signupSection";
-import { EasyCurrencyExchange } from "../EasyCurrencyExchange/EasyCurrencyExchange";
+import PeoplesSection from "../PeoplesSection/PeoplesSection";
+import OnlineSave from "../OnlineSave/OnlineSave";
+import QuestionTabs from "../Tabs/Tabs";
+import SignupSection from "../signupSection/signupSection";
+import EasyCurrencyExchange from "../EasyCurrencyExchange/EasyCurrencyExchange";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
@@ -24,10 +24,11 @@ import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import Link from "../link";
+import { withTranslation } from "react-i18next";
 
 var bigDecimal = require("js-big-decimal");
 
-export function ExchangeRates() {
+const ExchangeRates = ({ i18n }) => {
   const appModalOpen = () => {
     setAppModal(true);
   };
@@ -241,16 +242,16 @@ export function ExchangeRates() {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>Online Currency <span className="br-block"></span> Exchange</h1>
-                <p className="White">Convert your money instantly with no hidden fees.</p>
+                <h1>{i18n.t("Online_Currency")} <span className="br-block"></span> {i18n.t("Exchange")}</h1>
+                <p className="White">{i18n.t("Online_Currency_Exchange_Rates_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
                   <li>
                     <img alt="Clock" src={Clock} />
-                    Open an account in minutes. Launching in June.
+                    {i18n.t("Open_an_account_in_minutes")}
                   </li>
                 </ul>
-                <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">Terms and conditions</Link> apply. </p>
+                <p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">
@@ -418,7 +419,7 @@ export function ExchangeRates() {
                       </div>
                       <div className="ExchangeNum">
                         {loading ? (
-                          <p>Fetching Rates...</p>
+                          <p>{i18n.t("Fetching_Rates")}</p>
                         ) : swap ? (
                           <p>
                             {quoteCurrency}1 = {baseCurrency}
@@ -599,13 +600,13 @@ export function ExchangeRates() {
                     </div>
                   )}
                   <ul className="NofeeList list-unstyled">
-                    <li>No fee added by Cashero</li>
+                    <li>{i18n.t("No_fee_added_by_Cashero")}</li>
                   </ul>
                   <button
                     onClick={appModalOpen}
                     className="btn btn-default ConvertBtn"
                   >
-                    Get Started
+                    {i18n.t("Get_Started")}
                   </button>
                 </div>
               </div>
@@ -619,19 +620,19 @@ export function ExchangeRates() {
             <ul className="PersonalCompanyList list-unstyled">
               <li>
                 <img src={ExArrow} alt="Exchange Arrow" />
-                Exchange currencies in an instant
+                {i18n.t("Exchange_Rates_li1")}
               </li>
               <li>
                 <img src={ExDollar} alt="Exchange Dollar" />
-                Switch between USD, GBP, and EUR
+                {i18n.t("Exchange_Rates_li2")}
               </li>
               <li>
                 <img src={Draw} alt="Draw" />
-                No hidden fees, full transparency
+                {i18n.t("Exchange_Rates_li3")}
               </li>
               <li>
                 <img src={listHome} alt="list Home" />
-                EU licensed & regulated financial institution
+                {i18n.t("Multi_Currency_Savings_Account_li4")}
               </li>
             </ul>
           </div>
@@ -643,7 +644,7 @@ export function ExchangeRates() {
         <div className="getStarted">
           <div className="row">
             <div className="col-md-12">
-              <h3 className="getStartedTitle">How it Works. It’s Simple.</h3>
+              <h3 className="getStartedTitle">{i18n.t("Multi_Currency_Savings_Account_h3")}</h3>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -651,7 +652,7 @@ export function ExchangeRates() {
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
                   <img className="img-fluid" alt="Favourite" src={Fav} />
-                  <h3>Sign up for Cashero.</h3>
+                  <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
             </div>
@@ -659,7 +660,7 @@ export function ExchangeRates() {
               <div className="GetStartedBox2 w-100">
                 <img className="img-fluid" alt="Currencies" src={Currencies} />
                 <h3>
-                  Add funds into your account and choose to hold your money in USD, GBP, or EUR.
+                  {i18n.t("Exchange_Rates_Work2")}
                 </h3>
               </div>
             </div>
@@ -671,7 +672,7 @@ export function ExchangeRates() {
                     alt="Moving Coins"
                     src={MovingCoins}
                   />
-                  <h3>Hold and switch between USD, GBP, or EUR in seconds. </h3>
+                  <h3>{i18n.t("Exchange_Rates_Work3")} </h3>
                 </div>
               </Fade>
             </div>
@@ -680,10 +681,10 @@ export function ExchangeRates() {
             <div className="offset-md-1 col-md-10">
               <div className="MultistepsCont">
                 <p>
-                  Ready for currency exchange with no surprises? Seamlessly transfer between currencies using Cashero.
+                  {i18n.t("Exchange_Rates_Work_P")}
                 </p>
                 <button onClick={appModalOpen} className="LinkBtn">
-                  Get Early Access
+                  {i18n.t("Get_Early_Access")}
                   <img className="ArrowBtn" alt="arrow" src={Arrow1} />
                 </button>
               </div>
@@ -702,3 +703,5 @@ export function ExchangeRates() {
     </>
   );
 }
+
+export default withTranslation()(ExchangeRates);

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import heartmap from "../../assets/heartmap.svg"
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Check from "../../assets/check-mark.svg";
+import { withTranslation } from "react-i18next";
 
-export function HandleDonations() {
+const HandleDonations = ({ i18n }) => {
 	const appModalClose = () => {
 		setAppModal(false)
 	};
@@ -14,19 +15,19 @@ export function HandleDonations() {
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
 						<div className="oneAppCont sm-mt-0">
-							<h1 className="oneAppTitle">Cashero Helps You <span className="br-block-with-no-display"></span>  Handle Donations from <span className="br-block-with-no-display"></span>  Around The World</h1>
-							<p className="sm-center">Benefit from the following:</p>
+							<h1 className="oneAppTitle">{i18n.t("Cashero_Helps_You")} <span className="br-block-with-no-display"></span>  {i18n.t("Handle_Donations_from")} <span className="br-block-with-no-display"></span>  {i18n.t("Around_The_World")}</h1>
+							<p className="sm-center">{i18n.t("Benefit_from_the_following")}</p>
 							<ul className="list-unstyled CharityList">
-								<li><img src={Check} alt="check" /> High-yield savings account.</li>
-								<p>Automatically earn 2%-5% interest annually on donations received.</p>
-								<li><img src={Check} alt="check" />  Multi-currency accounts.</li>
-								<p>Receive donations in any currency, hold them in USD, GBP, or EUR.</p>
-								<li><img src={Check} alt="check" /> Currency conversion</li>
-								<p>Convert between USD, GBP, or EUR for free. We absorb the costs.</p>
-								<li><img src={Check} alt="check" /> Send, request, and receive payments.</li>
-								<p>Manage your payments all through the Cashero app.</p>
-								<li><img src={Check} alt="check" /> Free global money transfers.</li>
-								<p>Send your donations to where it’s needed around the world.</p>
+								<li><img src={Check} alt="check" /> {i18n.t("High_yield_savings_account")}</li>
+								<p>{i18n.t("High_yield_savings_account_P")}</p>
+								<li><img src={Check} alt="check" /> {i18n.t("Multi_currency_accounts")}</li>
+								<p>{i18n.t("Multi_currency_accounts_P")}</p>
+								<li><img src={Check} alt="check" /> {i18n.t("Currency_conversion")}</li>
+								<p>{i18n.t("Currency_conversion_P")}</p>
+								<li><img src={Check} alt="check" /> {i18n.t("Send_request_and_receive_payments")}</li>
+								<p>{i18n.t("Send_request_and_receive_payments_P")}</p>
+								<li><img src={Check} alt="check" /> {i18n.t("Free_global_money_transfers")}</li>
+								<p>{i18n.t("Free_global_money_transfers_P")}</p>
 							</ul>
 						</div>
 					</div>
@@ -39,3 +40,5 @@ export function HandleDonations() {
 		</>
 	);
 }
+
+export default withTranslation()(HandleDonations);

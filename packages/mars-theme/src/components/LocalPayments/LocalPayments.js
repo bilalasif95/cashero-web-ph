@@ -3,8 +3,9 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Mobile from "../../assets/CasheroMobile.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function LocalPayments() {
+const LocalPayments = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -22,17 +23,17 @@ export function LocalPayments() {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h1 className="oneAppTitle">
-								Local and Global Instant <span className="br-block-with-no-display"></span> Payments at the Tip <span className="br-block-with-no-display"></span> of Your Fingers
+								{i18n.t("Local_and_Global_Instant")} <span className="br-block-with-no-display"></span> {i18n.t("Payments_at_the_Tip")} <span className="br-block-with-no-display"></span> {i18n.t("of_Your_Fingers")}
 							</h1>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
 							<p>
-								Whether you’re paying for shoes, a meal, or tickets to that event you've been waiting all year for, Cashero has your back.
+								{i18n.t("Local_Payments_P")}
 							</p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -42,3 +43,5 @@ export function LocalPayments() {
 		</div>
 	);
 }
+
+export default withTranslation()(LocalPayments);

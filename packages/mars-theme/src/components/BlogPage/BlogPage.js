@@ -6,12 +6,13 @@ import TabList from "@material-ui/lab/TabList";
 import TabContext from "@material-ui/lab/TabContext";
 import Tab from "@material-ui/core/Tab";
 import TabPanel from "@material-ui/lab/TabPanel";
-import { SignupSection } from "../signupSection/signupSection";
+import SignupSection from "../signupSection/signupSection";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import FeaturedMedia from "../featured-media";
 import Link from "../link";
+import { withTranslation } from "react-i18next";
 
-const BlogPage = ({ state }) => {
+const BlogPage = ({ state, i18n }) => {
 	const [value, setValue] = useState("All");
 	const [loading, setLoading] = useState(true);
 	const [tabLoading, setTabLoading] = useState(false);
@@ -56,10 +57,9 @@ const BlogPage = ({ state }) => {
 				<div className="row">
 					<div className="col-md-12">
 						<div className="ContactUsCont">
-							<h1>Blog</h1>
+							<h1>{i18n.t("Blog")}</h1>
 							<p className="mb-0 blogtext">
-								Follow Cashero’s blog for the latest
-								official news and events.
+								{i18n.t("Blog_P")}
 							</p>
 						</div>
 					</div>
@@ -84,7 +84,7 @@ const BlogPage = ({ state }) => {
 													handleChange(e, "All")
 												}
 											>
-												All
+												{i18n.t("All")}
 											</DropdownItem>
 											{blogsCategories.map((res) => (
 												<DropdownItem
@@ -133,7 +133,7 @@ const BlogPage = ({ state }) => {
 												</div>
 											) : data.length === 0 ? (
 												<div className="noRecord">
-													No record found.
+													{i18n.t("No_record_found")}
 												</div>
 											) : (
 												<>
@@ -250,7 +250,7 @@ const BlogPage = ({ state }) => {
 															</div>
 														) : categoryData.length === 0 ? (
 															<div className="noRecord">
-																No record found.
+																{i18n.t("No_record_found")}
 															</div>
 														) : (
 															<>
@@ -368,7 +368,7 @@ const BlogPage = ({ state }) => {
 															</div>
 														) : categoryData.length === 0 ? (
 															<div className="noRecord">
-																No record found.
+																{i18n.t("No_record_found")}
 															</div>
 														) : (
 															<>
@@ -488,4 +488,4 @@ const BlogPage = ({ state }) => {
 	);
 }
 
-export default connect(BlogPage);
+export default connect(withTranslation()(BlogPage));

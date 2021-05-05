@@ -1,7 +1,8 @@
 import React from "react";
 import WhoImg from "../../assets/WhoImg.png";
+import { withTranslation } from "react-i18next";
 
-export function WhoSection() {
+const WhoSection = ({ i18n }) => {
 	return (
 		<div className="WhoSection">
 			<div className="row align-items-center">
@@ -10,12 +11,14 @@ export function WhoSection() {
 				</div>
 				<div className="col-md-6 sm-mt-30">
 					<div className="WhoSectionCont">
-						<h1>Who we are</h1>
-						<p>Cashero is an all-in-one platform for multi-currency high-yield savings, instant, fee-free internal and cross-border payments.</p>
-						<p>The Hero your money has been waiting for, Cashero is designed to help you make and save money. </p>
+						<h1>{i18n.t("Who_we_are")}</h1>
+						<p>{i18n.t("Who_we_are_P1")}</p>
+						<p>{i18n.t("Who_we_are_P2")}</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
+
+export default withTranslation()(WhoSection);

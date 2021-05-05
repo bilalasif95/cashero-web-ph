@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Place from "../../assets/place.png";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import { withTranslation } from "react-i18next";
 
-export function StartDonation() {
+const StartDonation = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -20,9 +21,9 @@ export function StartDonation() {
 					</div>
 					<div className="col-md-6 sm-mt-30">
 						<div className="MoneyRequestCont">
-							<h1 className="oneAppTitle"> Your Generosity Makes <span className="br-block-with-no-display"></span> Our World a Better Place </h1>
-							<p>Give to charities around the world with ease. Cashero makes donating simple, with no hidden fees. Rest assured knowing one hundred percent of your donation is going to your chosen charity.</p>
-							<button onClick={appModalOpen} className="LinkBtn">Get Early Access  <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<h1 className="oneAppTitle"> {i18n.t("Your_Generosity_Makes")} <span className="br-block-with-no-display"></span> {i18n.t("Our_World_a_Better_Place")} </h1>
+							<p>{i18n.t("Your_Generosity_Makes_P")}</p>
+							<button onClick={appModalOpen} className="LinkBtn">{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</div>
 					</div>
 				</div>
@@ -31,3 +32,5 @@ export function StartDonation() {
 		</>
 	);
 }
+
+export default withTranslation()(StartDonation);

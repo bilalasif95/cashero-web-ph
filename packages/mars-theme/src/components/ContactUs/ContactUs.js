@@ -1,17 +1,18 @@
 import React from "react";
-import { Contact } from "../Contact/Contact";
-import { ContactForm } from "../ContactForm/ContactForm";
-import { SignupSection } from "../signupSection/signupSection";
+import Contact from "../Contact/Contact";
+import ContactForm from "../ContactForm/ContactForm";
+import SignupSection from "../signupSection/signupSection";
+import { withTranslation } from "react-i18next";
 
-export function ContactUs() {
+const ContactUs = ({ i18n }) => {
 	return (
 		<div className="ContactUsBanner">
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
 						<div className="ContactUsCont">
-							<h1> Want to Get a Hold of Us?  </h1>
-							<p className="mb-0">Sign into the Cashero App on your mobile and simply send us <span className="br-block-with-no-display"></span> a message via our in-app chat support.</p>
+							<h1>{i18n.t("Want_to_Get_a_Hold_of_Us")}</h1>
+							<p className="mb-0">{i18n.t("Want_to_Get_a_Hold_of_Us_P1")} <span className="br-block-with-no-display"></span> {i18n.t("Want_to_Get_a_Hold_of_Us_P2")}</p>
 						</div>
 					</div>
 				</div>
@@ -22,3 +23,5 @@ export function ContactUs() {
 		</div>
 	);
 }
+
+export default withTranslation()(ContactUs);

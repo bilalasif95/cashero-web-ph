@@ -9,12 +9,13 @@ import linkedIn from "../assets/bloglinked.svg";
 import URL from "../assets/url.svg";
 import Tick from "../assets/tick.svg";
 import twitter from "../assets/blogtwitter.svg";
-import { SignupSection } from "./signupSection/signupSection";
+import SignupSection from "./signupSection/signupSection";
 import { structuredData } from "../config/SEO/Blog/structuredData";
 import { websiteLink } from "../config/config";
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share";
+import { withTranslation } from "react-i18next";
 
-const Post = ({ state, actions, libraries }) => {
+const Post = ({ state, actions, libraries, i18n }) => {
   const [copied, setCopied] = useState(false);
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -61,18 +62,18 @@ const Post = ({ state, actions, libraries }) => {
           <div className="BlogHeader">
             <div className="BackIcon">
               <ul className="list-unstyled backList">
-                <Link link="/blog"><li><img alt="back icon" src={backicon} /> Back</li></Link>
+                <Link link="/blog"><li><img alt="back icon" src={backicon} /> {i18n.t("Back")}</li></Link>
               </ul>
             </div>
             <div>
               <ul className="list-unstyled BlogSocialList">
-                <li><FacebookShareButton url={websiteLink + state.router.link}><img alt="facebook icon" src={FB} /><span className="SocialText">Share</span></FacebookShareButton></li>
-                <li><TwitterShareButton url={websiteLink + state.router.link}><img alt="twitter icon" src={twitter} /><span className="SocialText">Tweet</span></TwitterShareButton></li>
-                <li><LinkedinShareButton url={websiteLink + state.router.link}><img alt="linkedIn icon" src={linkedIn} /><span className="SocialText">Post</span></LinkedinShareButton></li>
+                <li><FacebookShareButton url={websiteLink + state.router.link}><img alt="facebook icon" src={FB} /><span className="SocialText">{i18n.t("Share")}</span></FacebookShareButton></li>
+                <li><TwitterShareButton url={websiteLink + state.router.link}><img alt="twitter icon" src={twitter} /><span className="SocialText">{i18n.t("Tweet")}</span></TwitterShareButton></li>
+                <li><LinkedinShareButton url={websiteLink + state.router.link}><img alt="linkedIn icon" src={linkedIn} /><span className="SocialText">{i18n.t("Post")}</span></LinkedinShareButton></li>
                 {copied ?
-                  <li><button className="copiedButton"><img alt="Tick icon" src={Tick} /><span className="SocialText">Copied</span></button></li>
+                  <li><button className="copiedButton"><img alt="Tick icon" src={Tick} /><span className="SocialText">{i18n.t("Copied")}</span></button></li>
                   :
-                  <li><button onClick={() => CopyText(websiteLink + state.router.link)}><img alt="URL icon" src={URL} /><span className="SocialText">URL</span></button></li>
+                  <li><button onClick={() => CopyText(websiteLink + state.router.link)}><img alt="URL icon" src={URL} /><span className="SocialText">{i18n.t("URL")}</span></button></li>
                 }
               </ul>
             </div>
@@ -159,7 +160,7 @@ const Post = ({ state, actions, libraries }) => {
   ) : null;
 };
 
-export default connect(Post);
+export default connect(withTranslation()(Post));
 
 // const Container = styled.div`
 //   width: 800px;
