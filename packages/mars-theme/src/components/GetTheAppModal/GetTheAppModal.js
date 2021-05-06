@@ -163,7 +163,7 @@ const GetTheAppModal = (props) => {
                     <div className="selectCountry">
                       <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                         <DropdownToggle caret>
-                          <input type="text" placeholder="Code" readOnly value={code} />
+                          <input type="text" placeholder={i18n.t("Code")} readOnly value={code} />
                         </DropdownToggle>
                         <DropdownMenu>
                           <DropdownItem header>
@@ -171,7 +171,7 @@ const GetTheAppModal = (props) => {
                               <SearchIcon />
                               <input
                                 type="text"
-                                placeholder="Country"
+                                placeholder={i18n.t("Country")}
                                 value={searchTerm}
                                 onChange={handleChange}
                               />
@@ -212,7 +212,7 @@ const GetTheAppModal = (props) => {
                     <div className="inputNum">
                       <input
                         type="number"
-                        placeholder="Phone number"
+                        placeholder={i18n.t("Phone_number")}
                         value={newPhone}
                         onChange={(e) => handleOnChange(e)}
                       />
