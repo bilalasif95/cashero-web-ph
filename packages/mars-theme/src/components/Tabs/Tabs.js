@@ -62,7 +62,7 @@ const QuestionTabs = (props) => {
 	useEffect(() => {
 		setPath(window.location.pathname)
 	}, [])
-	const {i18n} = props;
+	const { i18n } = props;
 	return (
 		<div className="Questions">
 			<div className="row">
@@ -79,37 +79,37 @@ const QuestionTabs = (props) => {
 						>
 							<Tab
 								className="customTabs"
-								label="General"
+								label={i18n.t("General")}
 								{...a11yProps(0)}
 							/>
 							<Tab
 								className="customTabs"
-								label="Savings"
+								label={i18n.t("Savings")}
 								{...a11yProps(1)}
 							/>
 							<Tab
 								className="customTabs"
-								label="Multi-Currency"
+								label={i18n.t("Multi_Currency")}
 								{...a11yProps(2)}
 							/>
 							<Tab
 								className="customTabs"
-								label="Exchange"
+								label={i18n.t("Exchange")}
 								{...a11yProps(3)}
 							/>
 							<Tab
 								className="customTabs"
-								label="Payments"
+								label={i18n.t("Payments")}
 								{...a11yProps(4)}
 							/>
 							<Tab
 								className="customTabs"
-								label="Remittance"
+								label={i18n.t("Remittance")}
 								{...a11yProps(5)}
 							/>
 							<Tab
 								className="customTabs"
-								label="Charity"
+								label={i18n.t("Charity")}
 								{...a11yProps(6)}
 							/>
 						</Tabs>
@@ -135,13 +135,13 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h4 className="heading">
-									{i18n.t("What_is_Cashero")}?
+										{i18n.t("What_is_Cashero")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										{i18n.t("What_is_Cashero_P")}
+											{i18n.t("What_is_Cashero_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -162,31 +162,31 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("main_features")}
+										{i18n.t("main_features")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B1")} </span> {i18n.t("main_features_P1")} 
+											<span className="bold-text">{i18n.t("main_features_B1")} </span> {i18n.t("main_features_P1")}
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B2")}</span> {i18n.t("main_features_P2")}
+											<span className="bold-text">{i18n.t("main_features_B2")} </span> {i18n.t("main_features_P2")}
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B3")}</span>{i18n.t("main_features_P3")} 
+											<span className="bold-text">{i18n.t("main_features_B3")} </span> {i18n.t("main_features_P3")}
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B4")}</span>{i18n.t("main_features_P4")}  
+											<span className="bold-text">{i18n.t("main_features_B4")} </span> {i18n.t("main_features_P4")}
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B5")}</span>{i18n.t("main_features_P5")}  
+											<span className="bold-text">{i18n.t("main_features_B5")} </span> {i18n.t("main_features_P5")}
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B6")}</span> {i18n.t("main_features_P6")}  
+											<span className="bold-text">{i18n.t("main_features_B6")} </span> {i18n.t("main_features_P6")}
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B7")}</span>{i18n.t("main_features_Users")}  <Link className="giveaway-link" link="/giveaway">{i18n.t("main_features_Link")}</Link> {i18n.t("main_features_P7")} 
+											<span className="bold-text">{i18n.t("main_features_B7")} </span> {i18n.t("main_features_Users")}  <Link className="giveaway-link" link="/giveaway">{i18n.t("main_features_Link")}</Link> {i18n.t("main_features_P7")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -207,13 +207,13 @@ const QuestionTabs = (props) => {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("Launch_Date")}
+										{i18n.t("Launch_Date")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										{i18n.t("Date")}
+											June 2021.
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -234,13 +234,13 @@ const QuestionTabs = (props) => {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("Cashero_regulated")}
+										{i18n.t("Cashero_regulated")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										{i18n.t("Cashero_regulated_P1")}
+											{i18n.t("Cashero_regulated_P1")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -266,7 +266,7 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h4 className="heading">
-									{i18n.t("savings_account")}	?
+										{i18n.t("savings_account")}	?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -291,7 +291,7 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("interest_earned")}?
+										{i18n.t("interest_earned")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -316,7 +316,7 @@ const QuestionTabs = (props) => {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("What_is_APY")}?
+										{i18n.t("What_is_APY")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -341,13 +341,13 @@ const QuestionTabs = (props) => {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("fees_associated")}?
+										{i18n.t("fees_associated")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										{i18n.t("fees_associated_P1")}
+											{i18n.t("fees_associated_P1")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -368,13 +368,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("money_safe")}?
+										{i18n.t("money_safe")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										{i18n.t("money_safe_P1")}
+											{i18n.t("money_safe_P1")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -427,10 +427,10 @@ const QuestionTabs = (props) => {
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P26")}</h2>
 												<p>{i18n.t("Learn_more_savings_P27")}</p>
 												<div className="inner-div">
-													<p><b>{i18n.t("Learn_more_savings_P28_B1")}</b>{i18n.t("Learn_more_savings_P28_p1")}  </p>
-													<p><b>{i18n.t("Learn_more_savings_P29_B1")} </b> {i18n.t("Learn_more_savings_P29_p1")}  </p>
-													<p><b>{i18n.t("Learn_more_savings_P30_B1")}</b> {i18n.t("Learn_more_savings_P30_p1")} </p>
-													<p><b>{i18n.t("Learn_more_savings_P31_B1")} </b> {i18n.t("Learn_more_savings_P31_p1")}  </p>
+													<p><b>{i18n.t("Learn_more_savings_P28_B1")}</b> {i18n.t("Learn_more_savings_P28_P1")}  </p>
+													<p><b>{i18n.t("Learn_more_savings_P29_B1")} </b> {i18n.t("Learn_more_savings_P29_P1")}  </p>
+													<p><b>{i18n.t("Learn_more_savings_P30_B1")}</b> {i18n.t("Learn_more_savings_P30_P1")} </p>
+													<p><b>{i18n.t("Learn_more_savings_P31_B1")} </b> {i18n.t("Learn_more_savings_P31_P1")}  </p>
 												</div>
 												<p>{i18n.t("Learn_more_savings_P32")}</p>
 											</div>
@@ -458,7 +458,7 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h4 className="heading">
-									{i18n.t("multi_currency")}?
+										{i18n.t("multi_currency")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -483,13 +483,13 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("multi_currency_country")}?
+										{i18n.t("multi_currency_country")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										{i18n.t("multi_currency_country_P")}
+											{i18n.t("multi_currency_country_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -510,7 +510,7 @@ const QuestionTabs = (props) => {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("multi_currency_account")}
+										{i18n.t("multi_currency_account")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -535,13 +535,13 @@ const QuestionTabs = (props) => {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("currency_fluctuations")}
+										{i18n.t("currency_fluctuations")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										{i18n.t("currency_fluctuations_P")}
+											{i18n.t("currency_fluctuations_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -562,13 +562,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-									{i18n.t("multi_currency_safe")}?
+										{i18n.t("money_safe")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-										{i18n.t("multi_currency_safe_P")}
+											{i18n.t("money_safe_P1")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -590,7 +590,7 @@ const QuestionTabs = (props) => {
 										id="panel6a-header"
 									>
 										<h4 className="heading">
-										{i18n.t("multi_currency_Learn")}
+											{i18n.t("multi_currency_Learn")}
 										</h4>
 									</AccordionSummary>
 									<AccordionDetails>
@@ -599,66 +599,66 @@ const QuestionTabs = (props) => {
 											<p>{i18n.t("multi_currency_Learn_P2")}</p>
 											<h2 className="blackhead">{i18n.t("multi_currency_Learn_P3")}</h2>
 											<p>{i18n.t("multi_currency_Learn_P4")}</p>
-											<p>(1){i18n.t("multi_currency_Learn_P5")} </p>
-											<p>(2){i18n.t("multi_currency_Learn_P6")} </p>
-											<p>(3){i18n.t("multi_currency_Learn_P7")} </p>
+											<p>(1) {i18n.t("multi_currency_Learn_P5")} </p>
+											<p>(2) {i18n.t("multi_currency_Learn_P6")} </p>
+											<p>(3) {i18n.t("multi_currency_Learn_P7")} </p>
 											<p>{i18n.t("multi_currency_Learn_P8")}</p>
 											<h2 className="blackhead">{i18n.t("multi_currency_Learn_P9")}</h2>
 											<p>{i18n.t("multi_currency_Learn_P10")}</p>
-											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P1")}What do I need to know about a multi-currency account?</h3>
-											<p>{i18n.t("multi_currency_Learn_P1")}Multi-currency savings accounts enjoy interest rates above the ones offered by the majority of financial institutions out there. However, details like minimum balance requirements should always be clarified beforehand. Furthermore, according to experts, multi-currency accounts charge higher fees than some other types of accounts. These may include fees on withdrawals from ATMs and transaction fees. Some banks charge account management fees, usually on a 12-month basis. As for the per annum interest rates, they are generally announced in advance for the quarter for each currency, so it's good to be prepared. With Cashero, there are no management fees, so you get to keep every cent of the money you make. </p>
-											<h2 className="blackhead">Advantages of multi-currency accounts</h2>
-											<p>Besides potentially favorable foreign exchange rates, opening a multi-currency savings account can help protect your money from local disturbances to exchange rate fluctuations. This in turn, reduces the risk of potential threats to corporate or personal wealth from such fluctuations. Plus, you get to enjoy a better customer service experience, given that you will probably not need to contact foreign customer service centers. Remember that what you do with your money is up to you. That’s why Cashero makes it easy to switch between deposit, withdrawal, and switch between currencies, whenever you choose.</p>
-											<h3 className="blackhead">When to consider multi-currency accounts for business</h3>
-											<p>If you do business in different currencies, opening a multi-currency account may be worth considering. Indeed, the uncertainty of the economic climate nowadays requires businesses to protect themselves from risks deriving from fluctuations of exchange rates. Multi-currency accounts can contribute in this direction.</p>
-											<p>Multi-currency accounts might be useful for you if:</p>
+											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P11")}</h3>
+											<p>{i18n.t("multi_currency_Learn_P12")} </p>
+											<h2 className="blackhead">{i18n.t("multi_currency_Learn_P13")}</h2>
+											<p>{i18n.t("multi_currency_Learn_P14")}</p>
+											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P15")}</h3>
+											<p>{i18n.t("multi_currency_Learn_P16")}</p>
+											<p>{i18n.t("multi_currency_Learn_P17")}</p>
 											<div className="inner-div">
 												<ul>
-													<li>Your company trades internationally (import, export, or both).</li>
-													<li>You operate an e-commerce store and sell services and/or goods to multiple currencies.</li>
-													<li>You work with freelancers overseas.</li>
-													<li>You employ staff abroad.</li>
-													<li>You are a freelancer or independent contractor working with international clients.</li>
-													<li>You are an online seller across multiple marketplaces.</li>
-													<li>Your business has a large international transaction volume.</li>
+													<li>{i18n.t("multi_currency_Learn_P18")}</li>
+													<li>{i18n.t("multi_currency_Learn_P19")}</li>
+													<li>{i18n.t("multi_currency_Learn_P20")}</li>
+													<li>{i18n.t("multi_currency_Learn_P21")}</li>
+													<li>{i18n.t("multi_currency_Learn_P22")}</li>
+													<li>{i18n.t("multi_currency_Learn_P23")}</li>
+													<li>{i18n.t("multi_currency_Learn_P24")}</li>
 												</ul>
 											</div>
-											<h3 className="blackhead">What to look for from a business multi-currency account</h3>
-											<p>Flexibility is the key here. It's paramount to find a flexible enough multi-currency account that suits your needs the best. This can be achieved by comparing your available options and weighing factors, such as:</p>
+											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P25")}</h3>
+											<p>{i18n.t("multi_currency_Learn_P26")}</p>
 											<div className="inner-div">
-												<p><b>Currency conversion fees –</b> You may find that with multi currency accounts, a fee may apply whenever you convert money into another currency. That means you may need to consider both exchange rate differences and conversion charges.</p>
-												<p><b>Transaction limitations –</b> The minimum and maximum amounts you can transfer vary per institution. Therefore, it's advised to ensure your multi-currency account can handle your business’ typical payment sums (minimum and maximum amounts included).</p>
-												<p><b>Minimum monthly account balance –</b> Some financial institutions require specific account minimums. Failing to meet this requirement may lead to paying penalties and fees.</p>
-												<p><b>Supported currencies –</b> Most institutions support a few major currencies. It's important that the currencies offered are the ones you most frequently need or use to conduct business.</p>
-												<p><b>Account fees –</b> Besides the costs mentioned above, you may also want to check other charges such as handling fees on specific transactions and currencies that may apply, as well as processing charges. Ask for a complete list of fees to be on the safe side. Hidden fees can creep up on you, but this won’t happen to Cashero users.</p>
-												<p><b>Turnaround speed –</b> It's critical for your business to have fast transactions between your overseas accounts and your home bank. That's why you should check the typical transaction time required. The transaction speed with Cashero is instantaneous.</p>
-												<p><b>Account flexibility –</b> Research details like whether your multi-currency account allows withdrawals, deposits, and transfers online, over the phone, or at a branch. Also, if any of these options come with fees.</p>
-												<h3 className="blackhead">Where to get a multi-currency account from?</h3>
-												<p>Without a doubt, the growth of the FinTech sphere means there are new players offering multi-currency savings accounts with appealing terms. Here are some factors to consider before making your final decision and why preferring Cashero might be a better option for you.</p>
+												<p><b>{i18n.t("multi_currency_Learn_P27")} –</b> {i18n.t("multi_currency_Learn_P28")}</p>
+												<p><b>{i18n.t("multi_currency_Learn_P29")} –</b> {i18n.t("multi_currency_Learn_P30")}</p>
+												<p><b>{i18n.t("multi_currency_Learn_P31")} –</b> {i18n.t("multi_currency_Learn_P32")}</p>
+												<p><b>{i18n.t("multi_currency_Learn_P33")} –</b> {i18n.t("multi_currency_Learn_P34")}</p>
+												<p><b>{i18n.t("multi_currency_Learn_P35")} –</b> {i18n.t("multi_currency_Learn_P36")}</p>
+												<p><b>{i18n.t("multi_currency_Learn_P37")} –</b> {i18n.t("multi_currency_Learn_P38")}</p>
+												<p><b>{i18n.t("multi_currency_Learn_P39")} –</b> {i18n.t("multi_currency_Learn_P40")}</p>
+												<h3 className="blackhead">{i18n.t("multi_currency_Learn_P41")}</h3>
+												<p>{i18n.t("multi_currency_Learn_P42")}</p>
 												<div className="inner-div">
-													<p><b>Exchange Rates and Transaction Time –</b> With a foreign currency account, you may be allowed to keep your funds in the transaction’s currency. This means that you get to choose to convert your foreign currency at the most convenient time for you (if you need to convert your money at all). Cashero lets you access and exchange your funds 24/7 / 365. That means no waiting during weekends or holidays. And oh ya, your transfers are near-instantaneous too.</p>
-													<p><b>Interest –</b> Traditional savings accounts offer an average interest rate of 0.05%. So-called “high yield” accounts tend to give around 0.5%. But these rates often don’t beat inflation, so can it really be called saving?</p>
-													<p>With Cashero the average rate of return is 5%.</p>
-													<p>That’s 100 times higher than a traditional savings account.</p>
-													<p>And no, that’s not a typo.</p>
+													<p><b>{i18n.t("multi_currency_Learn_P43")} –</b> {i18n.t("multi_currency_Learn_P44")}</p>
+													<p><b>{i18n.t("multi_currency_Learn_P45")} –</b> {i18n.t("multi_currency_Learn_P46")}</p>
+													<p>{i18n.t("multi_currency_Learn_P47")}</p>
+													<p>{i18n.t("multi_currency_Learn_P48")}</p>
+													<p>{i18n.t("multi_currency_Learn_P49")}</p>
 												</div>
-												<h2 className="blackhead">How does a multi-currency account work?</h2>
-												<p>In most cases, a standard single currency account and a multi-currency account do not differ much. This means that you can:</p>
+												<h2 className="blackhead">{i18n.t("multi_currency_Learn_P50")}</h2>
+												<p>{i18n.t("multi_currency_Learn_P51")}</p>
 												<div className="inner-div">
 													<ul>
-														<li>Receive payments</li>
-														<li>Send payments</li>
-														<li>Withdraw payments</li>
-														<li>Access your funds via various means</li>
+														<li>{i18n.t("multi_currency_Learn_P52")}</li>
+														<li>{i18n.t("multi_currency_Learn_P53")}</li>
+														<li>{i18n.t("multi_currency_Learn_P54")}</li>
+														<li>{i18n.t("multi_currency_Learn_P55")}</li>
 													</ul>
 												</div>
-												<p>When it comes to fees, these vary per provider and usually include deposit/withdrawal charges for payments outside the set values. Also, fees for deposits/withdrawals of specific currencies, alongside a monthly account fee, may apply. Finally, you might be asked to pay charges for sending funds to another bank.</p>
-												<h3 className="blackhead">Is reporting on international assets easier with multi-currency accounts?</h3>
-												<p>Considering that you can hold multiple assets (currencies) in a single location (account), keeping track of your deposits and withdrawals can be easier with a multi-currency account.</p>
-												<h2 className="blackhead">How to find the right multi-currency savings account?</h2>
-												<p>With such an overwhelming number of providers offering multi-currency accounts, you may become confused or overwhelmed. To decide which multi-currency account is right for you, start searching the latest offers and see what features are offered. For example, it might be critical for you to have access to your funds via an app, or to be able to contact a Customer Service agent on a 24/7 basis. You might even want to handle your money without ever stepping foot in a branch location for whatever reason, and keep things totally digital. These particular prerequisites should be on your mind when choosing a multi-currency account to ensure that your needs are met.</p>
-												<p>If you're a business owner, you will most likely be interested in locking in the most favorable rates for linked services, such as overseas travel services, overdrafts, and savings. Depending on your company’s transaction requirements and needs, it's paramount to see which multi-currency account will best suit them. That way, you will also be able to calculate how much a typical transaction will cost you and see if it is beneficial for you.</p>
-												<p>Join Cashero today and see what it’s like when your money works for you - with some of the world’s strong currencies, industry-leading return rates, zero hidden fees, and instant transactions - you’ll wonder why you didn’t join sooner.</p>
+												<p>{i18n.t("multi_currency_Learn_P56")}</p>
+												<h3 className="blackhead">{i18n.t("multi_currency_Learn_P57")}</h3>
+												<p>{i18n.t("multi_currency_Learn_P58")}</p>
+												<h2 className="blackhead">{i18n.t("multi_currency_Learn_P59")}</h2>
+												<p>{i18n.t("multi_currency_Learn_P60")}</p>
+												<p>{i18n.t("multi_currency_Learn_P61")}</p>
+												<p>{i18n.t("multi_currency_Learn_P62")}</p>
 											</div>
 										</div>
 									</AccordionDetails>
@@ -684,14 +684,13 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										How can I exchange funds from one
-										currency to another?
+										{i18n.t("multi_currency_exchange_H4_1")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Once you’ve downloaded the app, hit the exchange button on the main Wallet screen. The Exchange screen will show you the live exchange rate at that moment. Select the currency and the amount you wish to exchange and hit the Exchange button. Your funds will be converted instantly and you can confirm your transaction by verifying with your new balance on the Wallet screen.
+											{i18n.t("multi_currency_exchange_H4_1_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -712,12 +711,12 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										What currencies can I exchange?
+										{i18n.t("multi_currency_exchange_H4_2")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Cashero allows you to instantly convert between United States dollars (USD), British pounds (GBP), or Euros (EUR).</h4>
+										<h4 className="FaqText">{i18n.t("multi_currency_exchange_H4_2_P")}</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -737,12 +736,12 @@ const QuestionTabs = (props) => {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										How much does it cost to convert between currencies?
+										{i18n.t("multi_currency_exchange_H4_3")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Cashero may charge a small fee to convert money between currencies in your account and you can do so in seconds. Everything will be displayed in the app, with no hidden fees ever.</h4>
+										<h4 className="FaqText">{i18n.t("multi_currency_exchange_H4_3_P")}</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -762,13 +761,13 @@ const QuestionTabs = (props) => {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										How does Cashero compare to converting currency with the bank?
+										{i18n.t("multi_currency_exchange_H4_4")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero uses a transparent exchange rate to convert money from one currency to another. Cashero has no hidden fees and the whole transaction is transparent.
+											{i18n.t("multi_currency_exchange_H4_4_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -789,13 +788,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										How long does it take to convert currencies?
+										{i18n.t("multi_currency_exchange_H4_5")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Exchanging currencies with Cashero is instant.
+											{i18n.t("multi_currency_exchange_H4_5_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -816,63 +815,63 @@ const QuestionTabs = (props) => {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">Learn more about Online Currency Exchanges</h4>
+										<h4 className="heading">{i18n.t("Learn_more_about_Online_Currency_Exchanges")}</h4>
 									</AccordionSummary>
 									<AccordionDetails>
 										<div className="expandTypo">
-											<h2 className="blackhead">Everything You Need To Know About Online Currency Exchanges</h2>
-											<p>Online currency exchanges are becoming more common every day. This makes a lot of sense in today's world, given that there are over 180 different currencies already recognized as legal tender worldwide. Online currency exchanges are pretty much a necessity for global trade and commerce. It’s no wonder, then, that currency traders, brokerage firms, banks, and other brick and mortar financial institutions saw huge potential in providing currency exchange services years ago.</p>
-											<p>Whether you're a traveler, a company doing business with an international clientele, or an individual wanting to pay for services or goods across the globe, you will most likely need to convert currencies from one form to another. And, thanks to the Internet, you can now do so online using currency exchange sites. But what exactly are online currency exchanges and how do they work? And what options might be available for personal use if you want to keep multiple currencies at once?</p>
-											<h2 className="blackhead">What is currency exchange trading?</h2>
-											<p>Also known as forex (foreign exchange), currency exchange trading refers to a network of traders (buyers and sellers) that wish to convert one currency into another at a prearranged price. The majority of forex transactions are done for practical reasons (i.e., to travel abroad). Many people, though, choose to convert currency to earn a profit. Foreign exchanges can be particularly attractive to traders, especially when the amount of currency transferred daily can bring a greater chance of high profit (aka currency volatility). But now more than ever, everyday people are wanting the ability to hold multiple currencies at once, along with the ability to change in and out of them at will. Currency exchange platforms like Cashero were built with them in mind.</p>
-											<h2 className="blackhead">What are currency exchange platforms?</h2>
-											<p>These refer to online-based websites that enable people and corporations to convert currencies, irrespective of where they are in the world. Most of the time, these platforms allow involved parties to explore the exchange currencies and financial market conditions safely. Bringing immediate transparency into play, they feature a centralized and secure setting that usually provides tools like a universal currency converter. This is an application that you can use to help convert currency values based on the exchange rates of the day.</p>
-											<h3 className="blackhead">When is the best time to use a currency exchange</h3>
-											<p>To begin with, you will most likely need the services of an online currency exchange site if you are traveling in a foreign country. In this case, most people prefer to convert their money before making the journey as a means to ensure better rates. As for organizations, utilizing an online currency exchange can help make trading with other companies or individuals easier. This is particularly true when engaging in international trade or business.</p>
-											<h2 className="blackhead">What about Forex trades? Do they take place on an exchange?</h2>
-											<p>In a nutshell, no. Unlike commodities and shares that require an exchange to take place, Forex trading is done in an OTC (over-the-counter) market, directly between two parties. The Forex currency market is run by a global network of financial institutions, spread across Tokyo, Sydney, New York, and London – the big four Forex trading centers. This enables Forex trading on a 24/7 basis.</p>
-											<p>As of now, there are three primary types of Forex market:</p>
+											<h2 className="blackhead">{i18n.t("online_currency_exchange_learn_1")}</h2>
+											<p>{i18n.t("online_currency_exchange_learn_2")}</p>
+											<p>{i18n.t("online_currency_exchange_learn_3")}</p>
+											<h2 className="blackhead">{i18n.t("online_currency_exchange_learn_4")}</h2>
+											<p>{i18n.t("online_currency_exchange_learn_5")}</p>
+											<h2 className="blackhead">{i18n.t("online_currency_exchange_learn_6")}</h2>
+											<p>{i18n.t("online_currency_exchange_learn_7")}</p>
+											<h3 className="blackhead">{i18n.t("online_currency_exchange_learn_8")}</h3>
+											<p>{i18n.t("online_currency_exchange_learn_9")}</p>
+											<h2 className="blackhead">{i18n.t("online_currency_exchange_learn_10")}</h2>
+											<p>{i18n.t("online_currency_exchange_learn_11")}</p>
+											<p>{i18n.t("online_currency_exchange_learn_12")}</p>
 											<div className="inner-div">
 												<ol>
-													<li><b>Future Forex market – </b>The trader agrees to trade (buy or sell) a set amount of a given currency. The contract is legally binding and forces the trader to trade the specified currency at an agreed price and date.</li>
-													<li><b>Forward Forex market –</b>The trader agrees to a contract (not legally binding) where they sell or buy a set amount of a currency at a prearranged value. The trade will be settled either within a range of future dates or a specific date in the future.</li>
-													<li><b>Spot Forex market – </b>The trader physically exchanges a currency either within a short time frame or on the spot.</li>
+													<li><b>{i18n.t("online_currency_exchange_learn_13_1")} – </b>{i18n.t("online_currency_exchange_learn_13_2")}</li>
+													<li><b>{i18n.t("online_currency_exchange_learn_14_1")} – </b>{i18n.t("online_currency_exchange_learn_14_2")}</li>
+													<li><b>{i18n.t("online_currency_exchange_learn_15_1")} – </b>{i18n.t("online_currency_exchange_learn_15_2")}</li>
 												</ol>
 											</div>
-											<p><b>Note</b>: The majority of traders prefer to make foreign currency exchange rate predictions to “catch” a favorable price movement in the market. For that reason, they usually do not plan to take delivery of the currency, instead they simply speculate on Forex prices.</p>
-											<h3 className="blackhead">How Forex trading works</h3>
-											<p>You can trade foreign currencies in various ways. However, they all share the same basics in regards to how the process goes. The common concept in them all is that trading Forex involves buying one currency and simultaneously selling another. Traditionally, one would need to turn to a Forex broker to make a Forex transaction. Nevertheless, the growth of online trading enables traders to benefit from price movements using CFD trading and other derivatives.</p>
-											<p>CFDs are products (leveraged) that allow traders to take a position on whether they believe the market will fall or rise in value. This means that they (traders) do not take ownership of the asset and only open a position for a fraction of the trade’s full value. However, if you're interested in CFDs, it's best to be extra careful. They can indeed boost your profits, but they can also lead to major losses. This is the same with all leveraged products.</p>
-											<h2 className="blackhead">What affects currency exchange rates?</h2>
-											<p>Global supply and demand is one of the most critical factors that affects how exchange rates fluctuate. In simpler terms, a currency in high demand enjoys increased value. Of the factors that influence a currency's supply and demand, the most common ones are:</p>
+											<p><b>{i18n.t("Note")}</b>: {i18n.t("Note_1")}</p>
+											<h3 className="blackhead">{i18n.t("online_currency_exchange_learn_16")}</h3>
+											<p>{i18n.t("online_currency_exchange_learn_17")}</p>
+											<p>{i18n.t("online_currency_exchange_learn_18")}</p>
+											<h2 className="blackhead">{i18n.t("online_currency_exchange_learn_19")}</h2>
+											<p>{i18n.t("online_currency_exchange_learn_20")}</p>
 											<div className="inner-div">
 												<ul>
-													<li>Countries’ political and economic stability</li>
-													<li>Businesses (and governments) trading internationally</li>
-													<li>Natural disasters</li>
-													<li>Trading of currencies on the stock market</li>
-													<li>Tourism and travel</li>
-													<li>Interest rates</li>
-													<li>Countries’ actions and regulations governing their currency (aka fiscal policies)</li>
+													<li>{i18n.t("online_currency_exchange_learn_20_li1")}</li>
+													<li>{i18n.t("online_currency_exchange_learn_20_li2")}</li>
+													<li>{i18n.t("online_currency_exchange_learn_20_li3")}</li>
+													<li>{i18n.t("online_currency_exchange_learn_20_li4")}</li>
+													<li>{i18n.t("online_currency_exchange_learn_20_li5")}</li>
+													<li>{i18n.t("online_currency_exchange_learn_20_li6")}</li>
+													<li>{i18n.t("online_currency_exchange_learn_20_li7")}</li>
 												</ul>
 											</div>
-											<p>It becomes apparent that foreign exchange rates are affected by virtually everything that goes around, including political, market, and economic news. It should be noted that even a 1% fluctuation in the market rates can hinder the purchase of, say, your dream home. That is if you are transferring money to buy property.</p>
-											<h3 className="blackhead">Calculating online currency exchange rates</h3>
-											<p>The foreign exchange rate can be affected by the volume of the currency being traded at any given time. The attractiveness of a particular currency dictates whether its trading volume will increase or decrease. In other words, a competitively priced currency will most likely drive traders to buy that specific currency. This will, in turn, increase its value (or price).</p>
-											<p>That aside, the foreign exchange rate is also affected by government central banks themselves, which can set a currency at a constant price that will determine its value over another currency (aka the pegging method).</p>
-											<h2 className="blackhead">Must-know online currency exchange terms</h2>
-											<p>When it comes to Forex trading, it's good to know basic terminology:</p>
+											<p>{i18n.t("online_currency_exchange_learn_21")}</p>
+											<h3 className="blackhead">{i18n.t("online_currency_exchange_learn_22")}</h3>
+											<p>{i18n.t("online_currency_exchange_learn_23")}</p>
+											<p>{i18n.t("online_currency_exchange_learn_24")}</p>
+											<h2 className="blackhead">{i18n.t("online_currency_exchange_learn_25")}</h2>
+											<p>{i18n.t("online_currency_exchange_learn_26")}</p>
 											<div className="inner-div">
 												<ul>
-													<li><b>Spread</b>– This is the difference between the sell and buy prices set on a foreign exchange currency pair. When you open a forex position, you're being provided with two prices. If you wish to open a short position, you trade a currency pair at a price slightly below the market sell price. Opening a long position means that you trade a currency pair at a slightly higher buy market price.</li>
-													<li><b>Leverage</b>– This is the process where you put down a small initial deposit (aka margin) to open and keep a leveraged position without paying the full trade value upfront. The full size of the trade is taken into account, though, to calculate your profit or loss when you close the leveraged position. When trading foreign exchange with margin, bear in mind that factors like how large the trade size is will determine your margin requirement. Margins are usually expressed as a % of the full position. For example, a trade on USD/EUR may require you to pay only 1% of the total value of the position so you can open it. This means that instead of depositing GBP 100,000, you will be called to deposit GBP 1,000.</li>
-													<li><b>Lot</b>– This refers to currency batches that are used to standardize foreign exchange currency trades. Lots usually consist of many units of the base currency (around 100.000 or more), considering that Forex does tend to move in small amounts. This means that nearly all forex trading is leveraged because individual traders don’t usually have $100.000 (or another currency) to place on every trade.</li>
-													<li><b>Pip</b>– We use pips to measure a Forex pair’s movement. To understand pips, look at the 4th decimal place of a currency pair. A one-digit movement here equals to one pip. So, if USD/GBP moves from $1.35471 to $1.35481, it has moved one pip. The only exception is when the listed currency has smaller denominations. For example, if you're trading Japanese yen, a single pip is a movement in the 2nd decimal place.</li>
-													<li><b>Base currency</b>– This is the first currency listed in an online currency exchange pair.</li>
-													<li><b>Quote currency</b>– This is the second currency in a forex pair.</li>
+													<li><b>{i18n.t("Spread")}</b>– {i18n.t("Spread_P")}</li>
+													<li><b>{i18n.t("Leverage")}</b>– {i18n.t("Leverage_P")}</li>
+													<li><b>{i18n.t("Lot")}</b>– {i18n.t("Lot_P")}</li>
+													<li><b>{i18n.t("Pip")}</b>– {i18n.t("Pip_P")}</li>
+													<li><b>{i18n.t("Base_currency")}</b>– {i18n.t("Base_currency_P")}</li>
+													<li><b>{i18n.t("Quote_currency")}</b>– {i18n.t("Quote_currency_P")}</li>
 												</ul>
 											</div>
-											<p>Cashero takes all the benefits of an online currency exchange - low fees, instant currency transfer, fair market exchange rates - and leaves out everything unnecessary - no complex terms to know, no cumbersome user interface, no risk of massive financial ruin - and gives our customers a financial tool that they can use for daily to make their lives easier.</p>
+											<p>{i18n.t("online_currency_exchange_learn_27")}</p>
 										</div>
 									</AccordionDetails>
 								</Accordion>}
@@ -897,14 +896,13 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										What kind of payments can I make
-										with Cashero?
+										{i18n.t("online_currency_exchange_panel")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero allows you to send, request and receive payments. Simply go to the Payments tab, and select the contact you would like to transfer money to and add the amount you would like to send. You can search for your contacts and even businesses. If your contact or a business is not a registered Cashero user, you can invite them and earn rewards for it too.
+											{i18n.t("online_currency_exchange_panel_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -925,12 +923,12 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										What are the fees to make payments?
+										{i18n.t("online_currency_exchange_panel_1")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">For users with personal accounts, users can send, request and instantly receive money from users worldwide. Businesses can send, request and receive money from customers worldwide for a nominal fee of 1% after their first $50,000 USD.</h4>
+										<h4 className="FaqText">{i18n.t("online_currency_exchange_panel_1_P")}</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -950,12 +948,12 @@ const QuestionTabs = (props) => {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										How long do payments take to send and receive?
+										{i18n.t("online_currency_exchange_panel_2")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Payments between registered users, charities and businesses are sent and received instantly. </h4>
+										<h4 className="FaqText">{i18n.t("online_currency_exchange_panel_2_P")} </h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -975,12 +973,12 @@ const QuestionTabs = (props) => {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										Can I send, request and receive payments in different currencies?
+										{i18n.t("online_currency_exchange_panel_3")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Yes! You can choose between USD, GBP or EUR. </h4>
+										<h4 className="FaqText">{i18n.t("online_currency_exchange_panel_3_P")} </h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1000,13 +998,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										Is my money safe?
+										{i18n.t("money_safe")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These extra security layers ensure your money is safe and protected.
+											{i18n.t("online_currency_exchange_panel_4_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1027,56 +1025,56 @@ const QuestionTabs = (props) => {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">Learn more about Instant Money Transfers</h4>
+										<h4 className="heading">{i18n.t("Learn_more_about_Instant_Money_Transfers")}</h4>
 									</AccordionSummary>
 									<AccordionDetails>
 										<div className="expandTypo">
-											<h2 className="blackhead">Choosing The Right Platform For Your Instant Money Transfers</h2>
-											<p>Financial emergencies happen. Overdue bills, unforeseen medical expenses, family crises, and even car breakdowns are all a part of life that may require a fast transfer of money. In these scenarios, you want to make sure you find the right provider to meet your particular needs. But how do you choose the right one? What do you need to know about instant money transfers to make sure nothing goes awry and the money gets where it needs to go?</p>
-											<h2 className="blackhead">How “instant” are instant money transfers?</h2>
-											<p>It depends on the selected money transfer company. In most cases, “instant” means “within a few seconds or minutes”. Although many companies claim instant money transfer services, their transactions may take a little while before they eventually clear. This is because the transfer speed is affected by several factors.</p>
-											<h3 className="blackhead">What factors affect the speed of money transfers?</h3>
-											<p>The four major factors affecting transfer speed are:</p>
-											<p><b>1. The countries between which you are transferring money</b></p>
-											<p>If you're transferring funds between countries where foreign money transfers are more commonplace or occur more frequently, the transaction is usually fast. For example, if you're transferring funds from the USA to the UK, you can expect near-instant transfer services. Less common transfers (i.e., from the USA to Honduras) will take a bit longer. But with advances in financial technology, and the rising of online payment providers like Cashero, global transfers are happening faster than ever. </p>
-											<p><b>2. The way the money is received </b></p>
-											<p>When funds are transferred, there are different ways they can be received by the beneficiary. Some methods of receipt are faster than others. Here are the most common:</p>
+											<h2 className="blackhead">{i18n.t("instant_money_transfer_P1")}</h2>
+											<p>{i18n.t("instant_money_transfer_P2")}</p>
+											<h2 className="blackhead">{i18n.t("instant_money_transfer_P3")}</h2>
+											<p>{i18n.t("instant_money_transfer_P4")}</p>
+											<h3 className="blackhead">{i18n.t("instant_money_transfer_P5")}</h3>
+											<p>{i18n.t("instant_money_transfer_P6")}</p>
+											<p><b>1. {i18n.t("instant_money_transfer_P7")}</b></p>
+											<p>{i18n.t("instant_money_transfer_P8")} </p>
+											<p><b>2. {i18n.t("instant_money_transfer_P9")} </b></p>
+											<p>{i18n.t("instant_money_transfer_P10")}</p>
 											<div className="inner-div">
-												<p><b>Cash transfers</b> – Most providers offering instant money transfers do so in the form of cash pickups. This means that the person receiving that money can collect it from a designated agent location the moment you deposit the funds. Cash transfers are typically the fastest way to send money overseas. Requiring the recipient to go to a physical location for a money transfer enables the company to verify the transaction immediately and payout the funds. So, funds are transferred instantly. However cash transfers can come with high fees and potentially poor exchange rates.</p>
-												<p><b>E-wallet transfers</b> – Some providers allow you to transfer money instantly to electronic or mobile wallets. With these kinds of transfers we enter the world of FinTech - Financial Technology. FinTech Payment Providers, like Cashero, now lead the industry in terms of transfer speed, costs of fees, and ease of use. </p>
-												<p><b>Bank & debit card transfers</b> – These types of transfers save you from having to visit a physical location to send money. The tradeoff for convenience is that bank account or debit card transfers usually come with extra fees and may take between 1- 5 business days to clear (though in many cases the transfer is instant). The reason for this delay is that the bank needs to verify the transaction first before it allows the transfer. If both banks involved are on a network (i.e., SEPA), the money transfer process might be faster than regular international bank transfers. </p>
-												<p><b>Directly to the recipient’s account</b> – This is a bank-related option to send money to another individual overseas. This type of transfer may not be instantaneous, but usually takes only a few hours to process. However if the bank uses SWIFT for their transfer network, the sender may incur a fee for making the transfer “instantaneous”, sometimes upwards of $25. </p>
+												<p><b>{i18n.t("Cash_transfers")}</b> – {i18n.t("Cash_transfers_P")}</p>
+												<p><b>{i18n.t("E_wallet_transfers")}</b> – {i18n.t("E_wallet_transfers_P")} </p>
+												<p><b>{i18n.t("Bank_debit_card_transfers")}</b> – {i18n.t("Bank_debit_card_transfers_P")} </p>
+												<p><b>{i18n.t("Directly_to_the_recipients_account")}</b> – {i18n.t("Directly_to_the_recipients_account_P")} </p>
 											</div>
-											<p><b>3. The money transfer company</b></p>
-											<p>The money transfer process can vary depending on the transfer company you choose to do business with. The efficacy of the selected company’s sending, exchanging, and receiving funds procedures will determine the speed of transfer. </p>
-											<p><b>4. Having an account with a payment provider </b></p>
-											<p>If you'll be opening an account with a money transfer company that offers money instant transfer services now, the provider will need to verify your account. With Cashero our KYC process is simple and efficient, so you can be signed up and ready to make any transfer you need, almost immediately. This may take some time, though usually not more than a few hours, depending on the selected provider’s processes.</p>
-											<p>If you already have an active account with a provider, you can deposit your money and the recipient/beneficiary will receive it almost instantly. It's vital to ensure that the chosen provider is equipped to send money to and from the necessary countries. Some providers, for example, specialize in money transfers between the USA and the UK, while others offer faster European international transfers.</p>
-											<h2 className="blackhead">Sending an instant money transfer – How does it work?</h2>
-											<p> The process is pretty straightforward. You send money by supplying the required amount to a transfer company agent or online platform. Once the transfer is complete the recipient has access to the funds either in person or electronically. Although the exact fund transfer procedure may differ among providers, the basic steps are as follows:</p>
+											<p><b>3. {i18n.t("instant_money_transfer_P11")}</b></p>
+											<p>{i18n.t("instant_money_transfer_P12")} </p>
+											<p><b>4. {i18n.t("instant_money_transfer_P13")} </b></p>
+											<p>{i18n.t("instant_money_transfer_P14")}</p>
+											<p>{i18n.t("instant_money_transfer_P15")}</p>
+											<h2 className="blackhead">{i18n.t("instant_money_transfer_P16")}</h2>
+											<p>{i18n.t("instant_money_transfer_P17")}</p>
 											<div className="inner-div">
-												<p><b>Register </b> – You will most likely be asked to provide some personal details (i.e., name, email address, etc.). Some providers also request evidence of where you got the money you are sending. For online platforms, you will need to create an account.</p>
-												<p><b>Initiate the money transfer </b> – For those sending funds through an online platform, use your login credentials to access your account. Sending funds can also be achieved by visiting a provider’s nearest physical location.  </p>
-												<p><b>Provide the recipient’s information</b> – The provider will ask you to provide the recipient’s personal details (i.e., name, currency in which they will collect the money, and account details). Note that you should enter the correct information (i.e., the recipient’s name should match the one on their ID and account precisely).  </p>
-												<p><b>Pay for the transfer</b> – This step involves funding your transfer, if applicable. Different providers will accept different payment methods, including cash, check, or bank withdrawal.  </p>
+												<p><b>{i18n.t("Register")} </b> – {i18n.t("Register_P")}</p>
+												<p><b>{i18n.t("Initiate_the_money_transfer")} </b> – {i18n.t("Initiate_the_money_transfer_P")}</p>
+												<p><b>{i18n.t("Provide_the_recipients_information")}</b> – {i18n.t("Provide_the_recipients_information_P")}</p>
+												<p><b>{i18n.t("Pay_for_the_transfer")}</b> – {i18n.t("Pay_for_the_transfer_P")}</p>
 											</div>
-											<p><b>Note</b>:  If the transfer recipient is making a cash collection, you will most likely need to provide them with the transaction number or PIN. The agent in the recipient’s country will ask for that number or PIN to verify the transaction. Without it, the recipient will probably not be able to collect their money.  </p>
-											<h3 className="blackhead">Is sending an instant transfer anywhere in the world possible?</h3>
-											<p>In most cases, yes. But the answer to this question largely depends on the selected provider. This allows for instant money transfers to nearly any location. Nevertheless, sending funds to less-commonly used countries or routes can be more difficult and may take more time. </p>
-											<h3>Sending large amounts of money via instant money transfers</h3>
-											<p>Again, this depends on the transfer company you choose to send money with. Each one has its own limit on how much you can send via an instant money transfer service. Depending on the service, you won’t be able to send very large amounts using an instant money transfer. However, your definition of “large” will determine the answer to this question. Most transfer companies have both daily and weekly limits in place on the amount of money you can send. So be sure to learn what their limit is before signing up. For many providers, handling five-figure sums is quite challenging.</p>
-											<h3 className="blackhead">Reversing instant money transfers </h3>
-											<p>Unfortunately in the majority of cases, cancelling or reversing a transfer is not possible. Once you initiate the instant funds transfer process, little can be done to reverse it. In fact, as soon as you deposit the money, there is usually no turning back. The procedure will automatically end when the money is delivered to the intended recipient. Given this, it is important to carefully check all details before starting an instant money transfer. </p>
-											<h2 className="blackhead">Tips to speed up your instant money transfer </h2>
-											<p>To avoid inconvenient delays and logistical problems, there are some things you can do before you initiate a transfer:</p>
+											<p><b>{i18n.t("Note")}</b>:  {i18n.t("instant_money_transfer_Note")}</p>
+											<h3 className="blackhead">{i18n.t("instant_money_transfer_P18")}</h3>
+											<p>{i18n.t("instant_money_transfer_P19")}</p>
+											<h3>{i18n.t("instant_money_transfer_P20")}</h3>
+											<p>{i18n.t("instant_money_transfer_P21")}</p>
+											<h3 className="blackhead">{i18n.t("instant_money_transfer_P22")} </h3>
+											<p>{i18n.t("instant_money_transfer_P23")} </p>
+											<h2 className="blackhead">{i18n.t("instant_money_transfer_P24")} </h2>
+											<p>{i18n.t("instant_money_transfer_P25")}</p>
 											<div className="inner-div">
-												<p><b>Be prepared – </b> Creating an account with a money transfer company and verifying it beforehand will most likely boost your instant money transfer experience. The same applies to having the recipient’s details early on. Furthermore, entering the right details (both yours and the beneficiary's) will also prevent slowdowns in the procedure.</p>
-												<p><b>Check the supported currencies – </b> Does your selected provider support the currencies you need? For example, Cashero allows you to send money in USD, EUR, and GBP. This means that your recipient can also receive funds in these currencies.  You can withdraw money from Cashero in your local currency.</p>
-												<p><b>Ensure the safety of your transfer – </b>  First of all, it's advised not to rush sending large sums to help avoid making a mistake that may delay the process. It's also worth inquiring how the provider protects your money. Cashero, for instance, uses complex security layers, including MPC (multi-party computation) and hardware isolation, to ensure safe transactions. </p>
-												<p><b>Compare providers –</b> It's paramount to find the provider that offers the fastest and most reliable money transfer services. If you can also find a trusted provider offering fast and 24/7 customer service, even better.  </p>
-												<p><b>Check the cost involved – </b> Costly fees can inflate the overall cost of the transaction. That's why you should check the exchange rate margins and transfer fees offered by various providers. Some providers charge a mark-up exchange rate (usually around 1%-2%), others charge a fixed fee (normally, between $1.99-$24.99), and there are even providers that charge both. Note that higher exchange rates can affect the transfer cost dramatically, especially if you're sending large sums.  </p>
+												<p><b>{i18n.t("Be_prepared")} – </b> {i18n.t("Be_prepared_P")}</p>
+												<p><b>{i18n.t("Check_the_supported_currencies")} – </b> {i18n.t("Check_the_supported_currencies_P")}</p>
+												<p><b>{i18n.t("Ensure_the_safety_of_your_transfer")} – </b>  {i18n.t("Ensure_the_safety_of_your_transfer_P")}</p>
+												<p><b>{i18n.t("Compare_providers")} –</b> {i18n.t("Compare_providers_P")}</p>
+												<p><b>{i18n.t("Check_the_cost_involved")} – </b> {i18n.t("Check_the_cost_involved_P")}</p>
 											</div>
-											<p>Making instant money transfers does not need to be a tedious or drawn-out process. With Cashero, you can make fast, reliable, and secure fund transfers to many users around the world. No small letters, no fine print, and no hidden fees.</p>
+											<p>{i18n.t("instant_money_transfer_P26")}</p>
 										</div>
 									</AccordionDetails>
 								</Accordion>}
@@ -1101,13 +1099,12 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										What kind of transfers can I make
-										with Cashero?
+										{i18n.t("instant_money_transfer_panel5")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">Cashero allows you to send money across the globe. Once we’re live, go to the Payments tab, and select the contact you would like to transfer money to, and add the amount you would like to send. The user will receive your funds and then can withdraw the money to their bank account, debit card, mobile wallet, or even at the cash pickup location depending on the country.</h4>
+										<h4 className="FaqText">{i18n.t("instant_money_transfer_panel5_P")}</h4>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1127,13 +1124,13 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										What countries does Cashero support?
+										{i18n.t("instant_money_transfer_panel5_2")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero will be available in all countries except Afghanistan, Albania, Angola, The Bahamas, Barbados, Belarus, Bosnia & Herzegovina, Botswana, Cambodia, Central African Republic, Congo (DRC), Cote d’Ivoire (Ivory Coast), Cuba, Ecuador, Eritrea, Ethiopia, Ghana, Guinea-Bissau, Guyana, Haiti, Iceland, Iran, Iraq, Jamaica, Kosovo, Laos, Lebanon, Liberia, Libya, Macedonia, Mauritius, Mongolia, Myanmar, Nicaragua, Nigeria, North-Korea, Pakistan, Panama, Papua NG, Russia, Serbia, Somalia, Sudan, Syria, Turkmenistan, Uganda, Ukraine, Uzbekistan, Vanuatu, Venezuela, Yemen, and Zimbabwe.
+											{i18n.t("instant_money_transfer_panel5_2_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1154,13 +1151,13 @@ const QuestionTabs = (props) => {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										What are the fees to transfer money?
+										{i18n.t("instant_money_transfer_panel5_3")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											There are different fees for individual users, charities, and businesses. All fees are laid out in the app, completely transparent so you always know what they are.
+											{i18n.t("instant_money_transfer_panel5_3_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1181,13 +1178,13 @@ const QuestionTabs = (props) => {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										How long does it take the transfer money with Cashero?
+										{i18n.t("instant_money_transfer_panel5_4")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Transferring money from your Cashero account to another user is done in an instant. When the user withdraws these funds to the bank account, this can take anywhere from 1-3 days to appear.
+											{i18n.t("instant_money_transfer_panel5_4_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1208,13 +1205,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										Is my money safe?
+										{i18n.t("money_safe")}?
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your money is protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your money is safe and protected
+											{i18n.t("money_safe_P1")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1235,56 +1232,56 @@ const QuestionTabs = (props) => {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">Learn more about How to Transfer Money Abroad</h4>
+										<h4 className="heading">{i18n.t("learn_more_transfer_money_abroad")}</h4>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
 											<div className="expandTypo">
-												<h2 className="blackhead">The Cashero Guide: How to Transfer Money Abroad</h2>
-												<p>International money transfers can be confusing, and many people have a hard time wrapping their heads around security concerns, unclear fees, and different services. Sending money abroad, however, does not necessarily need to be so challenging. </p>
-												<p>With Cashero, we’ve made it easy.</p>
-												<p>Whether you need to pay a freelancer abroad, fund a university course in the UK, or buy a summer home on a Mediterranean island (we can dream, can’t we?), you will most likely need to send money overseas. The truth is that you have plenty of options, but which one is best for you? You are probably already familiar with a few choices, especially if you have sent money online in the past to pay for goods or services. </p>
-												<p>In a nutshell, you can normally transfer money abroad through your bank or a FinTech (financial technology) online provider, like Cashero. The latter offers easier, cheaper, and quicker transactions than banks. </p>
-												<p>Alternatively, you may use FX (foreign exchange) brokers or a specialist high street transfer service. In the first case, you can expect relatively good deals and a preferential rate. In the second case, you enjoy convenience as you will probably not be asked to set up an account so you can send the cash. But these two ways aren’t quite so user-friendly for the everyday individual. </p>
-												<h2 className="blackhead">The most common ways to send money internationally</h2>
-												<p>Let’s dive into some more details about the three most used options to send money abroad:</p>
+												<h2 className="blackhead">{i18n.t("transfer_money_abroad_P1")}</h2>
+												<p>{i18n.t("transfer_money_abroad_P2")}</p>
+												<p>{i18n.t("transfer_money_abroad_P3")}</p>
+												<p>{i18n.t("transfer_money_abroad_P4")}</p>
+												<p>{i18n.t("transfer_money_abroad_P5")}</p>
+												<p>{i18n.t("transfer_money_abroad_P6")}</p>
+												<h2 className="blackhead">{i18n.t("transfer_money_abroad_P7")}</h2>
+												<p>{i18n.t("transfer_money_abroad_P8")}</p>
 												<div className="inner-div">
-													<p><b>Banks -</b> Transferring money abroad via your high street bank account is one of the most secure ways to transfer funds internationally. The good thing about bank transfers is that you can send quite a lot of cash in one go (even up to $50,000-$100,000) with most banks. In addition, an international online transaction can be pulled through either by walking into a branch or over the phone. Expect some delays in clearing a transaction though; depending on where you are sending money to and from, there could be a delay of up to four or five business days. This means getting money quickly to someone abroad in an emergency is usually not an option with Bank transfers. Also, beware of the fees in this situation — you may incur transaction fees or a high exchange rate from some banks. The recipient may also have to pay a fee to be able to collect the cash you send them. While bank transfers were traditionally the most common method of transferring money abroad in years past, advancements in technology have given rise to the more sophisticated and user-friendly options, in the form of FinTech payment providers. </p>
-													<p><b>FinTech companies – </b> Financial technology or FinTech companies entice with varying offerings. Some of them charge a transfer fee but provide competitive exchange rates. Others charge no fees but require up to 3-4 days for your funds to reach the intended account. Deciding which one to choose depends on what you are after and the method of sending. Will you use a credit/debit card or opt for the funds to be transferred from your bank account? These can determine the fees and delivery time. </p>
-													<p><b>Money transfer operators – </b> When sending money overseas, you will probably find several high-street money transfer operators. These usually offer process times between 24-48 hours, with fees varying depending on the selected method to send money, the location, and the currency. What is paramount, however, before deciding to use their services is to ensure the chosen operator is properly authorized by your country’s governing financial services regulator. In the UK, for example, this would be the FCA (Financial Conduct Authority). Also, take note of the offered exchange rates as some operators’ rates are particularly high, and you may see corresponding high fees as well. </p>
+													<p><b>{i18n.t("Banks")} -</b> {i18n.t("Banks_P")} </p>
+													<p><b>{i18n.t("FinTech_companies")} – </b> {i18n.t("FinTech_companies_P")} </p>
+													<p><b>{i18n.t("Money_transfer_operators")} – </b> {i18n.t("Money_transfer_operators_P")} </p>
 												</div>
-												<h3 className="blackhead">The best way to transfer money abroad</h3>
-												<p>Given that cash can be stolen at any given time during a transfer, it's probably best to send it abroad via an online service. That way, you also save yourself from extra charges (i.e., insurance for safe delivery), not to mention the time it will probably take for your funds to arrive. Plus, who really sends physical cash these days? Luckily, with such a wealth of digital services offering easy availability, safety, and convenience, money is rarely sent via the mail anymore. </p>
-												<p>It should be noted that choosing a bank wire transfer to send money overseas usually comes with a hefty fee that can range between $45-$60 per transaction. In addition to this, the exchange rate might be higher if you are sending funds in a different currency. This is why money transfer apps, like Cashero, have seen such a rise in the past few years as they offer fast, secure, easy, and cheap money transfer services. They are more consumer-friendly, offer the upsides of modern security, along with ease of use. </p>
-												<h3 className="blackhead">The least secure ways to transfer money abroad</h3>
-												<p>When it comes to the less secure alternatives to send money internationally, these would probably be cashier’s checks, unless you're using one to give money to someone in person. International money orders are also not secure, especially for large sums, because they are often lost in the mail. However, you can replace an international money order (for a fee) if it has not been cashed. Finally, it's best to avoid personal checks. If the wrong person gets your check, they instantly gain access to your routing or bank account number. </p>
-												<h2 className="blackhead">Sending money abroad – How secure is it?</h2>
-												<p>As already mentioned before, it's critical that the selected organization or service is regulated by the relevant authorities. It's also paramount that they have taken all security measures for safe money transfers.</p>
-												<h3 className="blackhead">What makes a money transfer safe?</h3>
-												<p>Here are some precautions most secure transfer providers take to keep your data and money safe:</p>
+												<h3 className="blackhead">{i18n.t("transfer_money_abroad_P9")}</h3>
+												<p>{i18n.t("transfer_money_abroad_P10")} </p>
+												<p>{i18n.t("transfer_money_abroad_P11")} </p>
+												<h3 className="blackhead">{i18n.t("transfer_money_abroad_P12")}</h3>
+												<p>{i18n.t("transfer_money_abroad_P13")} </p>
+												<h2 className="blackhead">{i18n.t("transfer_money_abroad_P14")}</h2>
+												<p>{i18n.t("transfer_money_abroad_P15")}</p>
+												<h3 className="blackhead">{i18n.t("transfer_money_abroad_P16")}</h3>
+												<p>{i18n.t("transfer_money_abroad_P17")}</p>
 												<div className="inner-div">
-													<p><b>ID verification –</b> This can involve using security questions, requiring a secure password, allowing only the intended recipient to pick up your money, and logging you out automatically after a set amount of time has passed since the time you logged in. At Cashero we use One Time Passwords (OPT) to ensure your transfers are secure.</p>
-													<p><b>Encryption –</b> Some providers offer 256-bit or bank-level encryption to prevent hackers from getting their hands on your personal information.</p>
-													<p><b>Tracking – </b> Depending on the provider you choose, you might be provided with the ability to track your transfer. Using the confirmation number, the provider will give you, you could see where your funds are at any given moment until receipt. </p>
-													<p><b>Fraud prevention – </b> Fraud prevention tactics may be triggered by activities such as sending funds to a suspicious recipient, sending an unusually large number of transfers, and logging in from a different device than the one you created your account with. When that happens, you might be asked to verify your identity with the money transfer provider, provide a confirmation number sent to your phone or email, or answer security questions. </p>
+													<p><b>{i18n.t("ID_verification")} –</b> {i18n.t("ID_verification_P")}</p>
+													<p><b>{i18n.t("Encryption")} –</b> {i18n.t("Encryption_P")}</p>
+													<p><b>{i18n.t("Tracking")} –</b> {i18n.t("Tracking_P")}</p>
+													<p><b>{i18n.t("Fraud_prevention")} –</b> {i18n.t("Fraud_prevention_P")}</p>
 												</div>
-												<h2 className="blackhead">Transfer money overseas – The costs </h2>
-												<p>When you're sending funds abroad, it's essential that you're aware of the costs involved — and that you know exactly what you're paying for. These charges are usually calculated in the following two ways:</p>
+												<h2 className="blackhead">{i18n.t("transfer_money_abroad_P18")}</h2>
+												<p>{i18n.t("transfer_money_abroad_P19")}</p>
 												<div className="inner-div">
 													<ol>
-														<li><b>Fees –</b> Expect some operating costs when doing business with a foreign exchange company. It's a business after all. This means that they have employees to pay, pay money on things like renewing their licenses, and premises to rent. A portion of these costs is passed on to you via fees. Note that most financial institutions and FX brokers will hardly give you an upfront estimate of such costs.</li>
-														<li><b>Exchange rates – </b> These determine how much of a specific currency you can buy with another currency. For example, how many euros you can purchase for $50. There is usually a catch here, though. Some providers add an inflated mark-up on top of the real-time market exchange rate. That way, they are actually asking you to pay for their resources and time. So, it's crucial to understand whether the provider offers real-time exchange rates like the ones you will find via Reuters or Google – with no fees or mark-ups. </li>
+														<li><b>{i18n.t("Fees")} –</b> {i18n.t("Fees_P")}</li>
+														<li><b>{i18n.t("Exchange_rates")} – </b> {i18n.t("Exchange_rates_P")}</li>
 													</ol>
 												</div>
-												<p>But here at Cashero, we do things a bit differently. You’ll always know the exchange rate you’re getting and any incurred transfer fees.</p>
-												<h2 className="blackhead">How to send money abroad – Important Tips and Advice</h2>
-												<p>A provider that respects its customers will provide you with all international transfer cost-related information upfront in a transparent way. With Cashero, you’ll always know what fees, if any, would be charged before you send your payment. Also, consider the following:</p>
+												<p>{i18n.t("transfer_money_abroad_P20")}</p>
+												<h2 className="blackhead">{i18n.t("transfer_money_abroad_P21")}</h2>
+												<p>{i18n.t("transfer_money_abroad_P22")}</p>
 												<div className="inner-div">
-													<p><b>Timing – </b> Most of the time, when you transfer money abroad, the recipient receives it almost instantly. This, however, has to do with the specific services offered and the provider you choose. So with some providers, the money transfer process can take a few minutes, while others require five or more business days to clear your transaction. Note that sending money during bank holidays or over a weekend may affect the time your money transfer takes significantly. That is if you're using primarily bank transfers. When you go with online providers, you can ensure that no matter the day or time, be it a holiday or weekend, your money always gets where you need it to go, almost instantly. </p>
-													<p><b>Access and ease – </b> The new-generation fintech-style money apps make sending money abroad feel like a walk in the park. In the majority of cases, you simply download a user-friendly and easy-to-navigate app, register, and verify your account. Then, you're free to send funds internationally within minutes using your debit card, or another method of transfer. </p>
-													<p><b>Laws and regulations – </b> Sending money abroad is not illegal. However, it's paramount to be in line with the local and international laws so that your transaction is not regarded as an act of money laundering. Always check details like the maximum sum you can transfer without having to file a report. Failure to abide by the laws or even miscommunication and not filling out the required details can lead to serious punishment or a least a minor headache.</p>
+													<p><b>{i18n.t("Timing")} – </b> {i18n.t("Timing_P")}</p>
+													<p><b>{i18n.t("Access_and_ease")} – </b> {i18n.t("Access_and_ease_P")}</p>
+													<p><b>{i18n.t("Laws_and_regulations")} – </b> {i18n.t("Laws_and_regulations_P")}</p>
 												</div>
-												<p>Transferring money abroad is easy with Cashero. We offer a quick, easy, and secure way to send money across the globe all while maintaining transparency.</p>
+												<p>{i18n.t("transfer_money_abroad_P23")}</p>
 											</div>
 										</Typography>
 									</AccordionDetails>
@@ -1310,19 +1307,13 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h4 className="heading">
-										How do donations work on Cashero?
+										{i18n.t("transfer_money_abroad_panel6")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Cashero has selected a list of
-											approved charities. Users can
-											donate by selecting Giving on
-											their Cashero app, searching for
-											a charity of their choice, and
-											donating directly with a click
-											of a button.
+											{i18n.t("transfer_money_abroad_panel6_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1343,13 +1334,13 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h4 className="heading">
-										How much money goes to charity?
+										{i18n.t("transfer_money_abroad_panel6_1")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											100% of donations made through the Cashero app will go to charity. There are no hidden fees.
+											{i18n.t("transfer_money_abroad_panel6_1_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1370,21 +1361,13 @@ const QuestionTabs = (props) => {
 									id="panel3a-header"
 								>
 									<h4 className="heading">
-										Which charities are listed on Cashero?
+										{i18n.t("transfer_money_abroad_panel6_2")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Charities that meet Cashero’s
-											internal approval process of
-											making a significant impact in
-											our world can be listed on
-											Cashero. By selecting on any
-											charity in the Cashero app, you
-											can discover more about the
-											difference that charity is
-											making.
+											{i18n.t("transfer_money_abroad_panel6_2_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1405,15 +1388,13 @@ const QuestionTabs = (props) => {
 									id="panel4a-header"
 								>
 									<h4 className="heading">
-										Can recurring donations be made?
+										{i18n.t("transfer_money_abroad_panel6_3")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											At this point, donations can
-											only be made as one-off
-											donations.
+											{i18n.t("transfer_money_abroad_panel6_3_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
@@ -1434,13 +1415,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h4 className="heading">
-										Are my donations safe?
+										{i18n.t("transfer_money_abroad_panel6_4")}
 									</h4>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<h4 className="FaqText">
-											Yes. Your donations are protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your donations are safe and protected.
+											{i18n.t("transfer_money_abroad_panel6_4_P")}
 										</h4>
 									</Typography>
 								</AccordionDetails>
