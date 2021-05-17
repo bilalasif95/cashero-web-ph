@@ -12,7 +12,7 @@ const Privacy = ({ i18n }) => {
 							<div className="custom-border"></div>
 							<h3>{i18n.t("GENERAL")}</h3>
 							<p>{i18n.t("APP_PRIVACY_POLICY_P1")}</p>
-							<p>{i18n.t("PRIVACY_POLICY_P2")}</p>
+							<p>{i18n.t("GENERAL_P2")}</p>
 							<ul className="condition-list">
 								<li>{i18n.t("GENERAL_li1")}</li>
 								<li>{i18n.t("GENERAL_li2")}</li>
