@@ -22,7 +22,13 @@ import currencieslist from "../../config/currenciesList";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
+import { Head } from "frontity";
 import Link from "../link";
 
 var bigDecimal = require("js-big-decimal");
@@ -75,12 +81,12 @@ export function ExchangeRates() {
           flagcodeeuro === "US"
             ? doc.fields.usd.stringValue
             : flagcodeeuro === "GB"
-              ? doc.fields.gbp.stringValue
-              : doc.fields.eur.stringValue;
+            ? doc.fields.gbp.stringValue
+            : doc.fields.eur.stringValue;
         setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
         setLoading(false);
       })
-      .catch(() => { });
+      .catch(() => {});
   }, []);
   const togglegbp = () => {
     setSearchTermgbp("");
@@ -144,21 +150,21 @@ export function ExchangeRates() {
             flagcodegbp === "US"
               ? doc.fields.usd.stringValue
               : flagcodegbp === "GB"
-                ? doc.fields.gbp.stringValue
-                : doc.fields.eur.stringValue;
+              ? doc.fields.gbp.stringValue
+              : doc.fields.eur.stringValue;
           setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
         } else {
           const val =
             flagcodeeuro === "US"
               ? doc.fields.usd.stringValue
               : flagcodeeuro === "GB"
-                ? doc.fields.gbp.stringValue
-                : doc.fields.eur.stringValue;
+              ? doc.fields.gbp.stringValue
+              : doc.fields.eur.stringValue;
           setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
         }
         setLoading(false);
       })
-      .catch(() => { });
+      .catch(() => {});
   };
   const selectCountryeuro = (country) => {
     setSearchTermeuro("");
@@ -171,8 +177,8 @@ export function ExchangeRates() {
       country.code === "US"
         ? baseCurrencyUSDValue
         : country.code === "GB"
-          ? baseCurrencyGBPValue
-          : baseCurrencyEURValue;
+        ? baseCurrencyGBPValue
+        : baseCurrencyEURValue;
     setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
   };
   const onBaseCurrencyValueChange = (e) => {
@@ -181,8 +187,8 @@ export function ExchangeRates() {
       flagcodeeuro === "US"
         ? baseCurrencyUSDValue
         : flagcodeeuro === "GB"
-          ? baseCurrencyGBPValue
-          : baseCurrencyEURValue;
+        ? baseCurrencyGBPValue
+        : baseCurrencyEURValue;
     setQuoteCurrencyValue(bigDecimal.multiply(e.target.value, val));
   };
   const actualLimit = (bal) => {
@@ -226,23 +232,33 @@ export function ExchangeRates() {
             flagcodegbp === "US"
               ? doc.fields.usd.stringValue
               : flagcodegbp === "GB"
-                ? doc.fields.gbp.stringValue
-                : doc.fields.eur.stringValue;
+              ? doc.fields.gbp.stringValue
+              : doc.fields.eur.stringValue;
           setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
           setLoading(false);
         })
-        .catch(() => { });
+        .catch(() => {});
     }
   };
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://www.cashero.com/online-currency-exchange/"
+        />
+      </Head>
       <div className="ExchangeBanner">
         <div className="container">
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>Online Currency <span className="br-block"></span> Exchange</h1>
-                <p className="White">Convert your money instantly with no hidden fees.</p>
+                <h1>
+                  Online Currency <span className="br-block"></span> Exchange
+                </h1>
+                <p className="White">
+                  Convert your money instantly with no hidden fees.
+                </p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
                   <li>
@@ -250,7 +266,15 @@ export function ExchangeRates() {
                     Open an account in minutes. Launching in June.
                   </li>
                 </ul>
-                <p className="draw-banner-text">Get early access to the Cashero app and earn a chance to win $1,000 every 3 days! <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">Terms and conditions</Link> apply. </p>
+                <p className="draw-banner-text">
+                  Get early access to the Cashero app and earn a chance to win
+                  $1,000 every 3 days!{" "}
+                  <span className="br-block-with-no-display"></span>{" "}
+                  <Link className="giveaway-link1" link="/giveaway">
+                    Terms and conditions
+                  </Link>{" "}
+                  apply.{" "}
+                </p>
               </div>
             </div>
             <div className="col-md-5">
@@ -287,29 +311,29 @@ export function ExchangeRates() {
                                 <div className="country-list">
                                   {searchResults2euro.length > 0
                                     ? searchResults2euro.map((item, index) => (
-                                      <DropdownItem
-                                        key={index + 1}
-                                        onClick={() => selectCountrygbp(item)}
-                                        className="country-item"
-                                      >
-                                        <div className="flag-name">
-                                          <span>{item.flag}</span>
-                                          {item.name}
-                                        </div>
-                                      </DropdownItem>
-                                    ))
+                                        <DropdownItem
+                                          key={index + 1}
+                                          onClick={() => selectCountrygbp(item)}
+                                          className="country-item"
+                                        >
+                                          <div className="flag-name">
+                                            <span>{item.flag}</span>
+                                            {item.name}
+                                          </div>
+                                        </DropdownItem>
+                                      ))
                                     : searchResultseuro.map((item, index) => (
-                                      <DropdownItem
-                                        key={index + 1}
-                                        onClick={() => selectCountrygbp(item)}
-                                        className="country-item"
-                                      >
-                                        <div className="flag-name">
-                                          <span>{item.flag}</span>
-                                          {item.name}
-                                        </div>
-                                      </DropdownItem>
-                                    ))}
+                                        <DropdownItem
+                                          key={index + 1}
+                                          onClick={() => selectCountrygbp(item)}
+                                          className="country-item"
+                                        >
+                                          <div className="flag-name">
+                                            <span>{item.flag}</span>
+                                            {item.name}
+                                          </div>
+                                        </DropdownItem>
+                                      ))}
                                 </div>
                               </DropdownMenu>
                             </Dropdown>
@@ -363,29 +387,29 @@ export function ExchangeRates() {
                                 <div className="country-list">
                                   {searchResults2gbp.length > 0
                                     ? searchResults2gbp.map((item, index) => (
-                                      <DropdownItem
-                                        key={index + 1}
-                                        onClick={() => selectCountrygbp(item)}
-                                        className="country-item"
-                                      >
-                                        <div className="flag-name">
-                                          <span>{item.flag}</span>
-                                          {item.name}
-                                        </div>
-                                      </DropdownItem>
-                                    ))
+                                        <DropdownItem
+                                          key={index + 1}
+                                          onClick={() => selectCountrygbp(item)}
+                                          className="country-item"
+                                        >
+                                          <div className="flag-name">
+                                            <span>{item.flag}</span>
+                                            {item.name}
+                                          </div>
+                                        </DropdownItem>
+                                      ))
                                     : searchResultsgbp.map((item, index) => (
-                                      <DropdownItem
-                                        key={index + 1}
-                                        onClick={() => selectCountrygbp(item)}
-                                        className="country-item"
-                                      >
-                                        <div className="flag-name">
-                                          <span>{item.flag}</span>
-                                          {item.name}
-                                        </div>
-                                      </DropdownItem>
-                                    ))}
+                                        <DropdownItem
+                                          key={index + 1}
+                                          onClick={() => selectCountrygbp(item)}
+                                          className="country-item"
+                                        >
+                                          <div className="flag-name">
+                                            <span>{item.flag}</span>
+                                            {item.name}
+                                          </div>
+                                        </DropdownItem>
+                                      ))}
                                 </div>
                               </DropdownMenu>
                             </Dropdown>
@@ -425,8 +449,8 @@ export function ExchangeRates() {
                             {flagcodegbp === "US"
                               ? actualLimit(baseCurrencyUSDValue)
                               : flagcodegbp === "GB"
-                                ? actualLimit(baseCurrencyGBPValue)
-                                : actualLimit(baseCurrencyEURValue)}
+                              ? actualLimit(baseCurrencyGBPValue)
+                              : actualLimit(baseCurrencyEURValue)}
                           </p>
                         ) : (
                           <p>
@@ -434,8 +458,8 @@ export function ExchangeRates() {
                             {flagcodeeuro === "US"
                               ? actualLimit(baseCurrencyUSDValue)
                               : flagcodeeuro === "GB"
-                                ? actualLimit(baseCurrencyGBPValue)
-                                : actualLimit(baseCurrencyEURValue)}
+                              ? actualLimit(baseCurrencyGBPValue)
+                              : actualLimit(baseCurrencyEURValue)}
                           </p>
                         )}
                       </div>
@@ -472,29 +496,29 @@ export function ExchangeRates() {
                                 <div className="country-list">
                                   {searchResults2gbp.length > 0
                                     ? searchResults2gbp.map((item, index) => (
-                                      <DropdownItem
-                                        key={index + 1}
-                                        onClick={() => selectCountrygbp(item)}
-                                        className="country-item"
-                                      >
-                                        <div className="flag-name">
-                                          <span>{item.flag}</span>
-                                          {item.name}
-                                        </div>
-                                      </DropdownItem>
-                                    ))
+                                        <DropdownItem
+                                          key={index + 1}
+                                          onClick={() => selectCountrygbp(item)}
+                                          className="country-item"
+                                        >
+                                          <div className="flag-name">
+                                            <span>{item.flag}</span>
+                                            {item.name}
+                                          </div>
+                                        </DropdownItem>
+                                      ))
                                     : searchResultsgbp.map((item, index) => (
-                                      <DropdownItem
-                                        key={index + 1}
-                                        onClick={() => selectCountrygbp(item)}
-                                        className="country-item"
-                                      >
-                                        <div className="flag-name">
-                                          <span>{item.flag}</span>
-                                          {item.name}
-                                        </div>
-                                      </DropdownItem>
-                                    ))}
+                                        <DropdownItem
+                                          key={index + 1}
+                                          onClick={() => selectCountrygbp(item)}
+                                          className="country-item"
+                                        >
+                                          <div className="flag-name">
+                                            <span>{item.flag}</span>
+                                            {item.name}
+                                          </div>
+                                        </DropdownItem>
+                                      ))}
                                 </div>
                               </DropdownMenu>
                             </Dropdown>
@@ -548,33 +572,33 @@ export function ExchangeRates() {
                                 <div className="country-list">
                                   {searchResults2euro.length > 0
                                     ? searchResults2euro.map((item, index) => (
-                                      <DropdownItem
-                                        key={index + 1}
-                                        onClick={() =>
-                                          selectCountryeuro(item)
-                                        }
-                                        className="country-item"
-                                      >
-                                        <div className="flag-name">
-                                          <span>{item.flag}</span>
-                                          {item.name}
-                                        </div>
-                                      </DropdownItem>
-                                    ))
+                                        <DropdownItem
+                                          key={index + 1}
+                                          onClick={() =>
+                                            selectCountryeuro(item)
+                                          }
+                                          className="country-item"
+                                        >
+                                          <div className="flag-name">
+                                            <span>{item.flag}</span>
+                                            {item.name}
+                                          </div>
+                                        </DropdownItem>
+                                      ))
                                     : searchResultseuro.map((item, index) => (
-                                      <DropdownItem
-                                        key={index + 1}
-                                        onClick={() =>
-                                          selectCountryeuro(item)
-                                        }
-                                        className="country-item"
-                                      >
-                                        <div className="flag-name">
-                                          <span>{item.flag}</span>
-                                          {item.name}
-                                        </div>
-                                      </DropdownItem>
-                                    ))}
+                                        <DropdownItem
+                                          key={index + 1}
+                                          onClick={() =>
+                                            selectCountryeuro(item)
+                                          }
+                                          className="country-item"
+                                        >
+                                          <div className="flag-name">
+                                            <span>{item.flag}</span>
+                                            {item.name}
+                                          </div>
+                                        </DropdownItem>
+                                      ))}
                                 </div>
                               </DropdownMenu>
                             </Dropdown>
@@ -659,7 +683,8 @@ export function ExchangeRates() {
               <div className="GetStartedBox2 w-100">
                 <img className="img-fluid" alt="Currencies" src={Currencies} />
                 <h3>
-                  Add funds into your account and choose to hold your money in USD, GBP, or EUR.
+                  Add funds into your account and choose to hold your money in
+                  USD, GBP, or EUR.
                 </h3>
               </div>
             </div>
@@ -680,7 +705,8 @@ export function ExchangeRates() {
             <div className="offset-md-1 col-md-10">
               <div className="MultistepsCont">
                 <p>
-                  Ready for currency exchange with no surprises? Seamlessly transfer between currencies using Cashero.
+                  Ready for currency exchange with no surprises? Seamlessly
+                  transfer between currencies using Cashero.
                 </p>
                 <button onClick={appModalOpen} className="LinkBtn">
                   Get Early Access
