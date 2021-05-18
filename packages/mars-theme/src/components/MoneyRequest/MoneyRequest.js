@@ -3,6 +3,7 @@ import Link from "../link";
 import SendMoney from "../../assets/SendMoney.svg";
 import Send from "../../assets/send.svg";
 import Request from "../../assets/request.svg";
+import instant_money_transfer from "../../assets/instant-money-transfer.png";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
@@ -66,9 +67,9 @@ const MoneyRequest = ({ i18n }) => {
 							</div>
 						</div>
 						<img
-							className="img-fluid mx-auto d-block send-money"
-							src={SendMoney}
-							alt="Send Money"
+							className="img-fluid mx-auto money-transfer"
+							src={instant_money_transfer}
+							alt="instant money transfer"
 						/>
 					</div>
 				</div>
