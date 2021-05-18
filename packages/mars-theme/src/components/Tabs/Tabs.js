@@ -406,15 +406,6 @@ const QuestionTabs = (props) => {
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P11")} </h2>
 												<p>{i18n.t("Learn_more_savings_P12")}</p>
 												<p>{i18n.t("Learn_more_savings_P13")}</p>
-												<h3 className="blackhead">{i18n.t("Learn_more_savings_P14")}</h3>
-												<p>{i18n.t("Learn_more_savings_P15")}</p>
-												<div className="inner-div">
-													<ul>
-														<li>{i18n.t("Learn_more_savings_P16")}</li>
-														<li>{i18n.t("Learn_more_savings_P17")}</li>
-														<li>{i18n.t("Learn_more_savings_P18")}</li>
-													</ul>
-												</div>
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P19")} </h2>
 												<p>{i18n.t("Learn_more_savings_P20")}</p>
 												<div className="inner-div">
