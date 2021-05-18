@@ -237,6 +237,9 @@ body {
   }
 }
 .bannerImg .cash-pic {
+  display: block;
+}
+.bannerImg .gif {
   display: none;
 }
 @media (max-width: 540px) {
