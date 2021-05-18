@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -237,9 +237,6 @@ body {
   }
 }
 .bannerImg .cash-pic {
-  display: block;
-}
-.bannerImg .gif {
   display: none;
 }
 @media (max-width: 540px) {
@@ -1998,7 +1995,7 @@ b {
 }
 
 .Enhance {
-  background-image: url("https://i.imgur.com/SfRVlGI.png");
+  background-image: url("https://i.imgur.com/7avIJ78.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px 0px 0px;
@@ -3456,7 +3453,7 @@ b {
 }
 
 .SignUp {
-  background-image: url("https://i.imgur.com/dhaP8KJ.png");
+  background-image: url("https://i.imgur.com/2RIhA4q.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 134px 191px 134px 191px;
