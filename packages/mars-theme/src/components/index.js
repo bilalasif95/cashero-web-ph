@@ -73,6 +73,7 @@ const Theme = ({ state }) => {
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <link rel="canonical" href={websiteLink} />
+        <link rel="alternate" hreflang="en" href={websiteLink} />
         <meta property="og:title" content={state.frontity.title} />
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />

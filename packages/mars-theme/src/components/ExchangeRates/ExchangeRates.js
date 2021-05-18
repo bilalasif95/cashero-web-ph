@@ -23,6 +23,7 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import { Head } from "frontity";
 import Link from "../link";
 import { withTranslation } from "react-i18next";
 
@@ -237,6 +238,12 @@ const ExchangeRates = ({ i18n }) => {
   };
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://www.cashero.com/online-currency-exchange/"
+        />
+      </Head>
       <div className="ExchangeBanner">
         <div className="container">
           <div className="row">
@@ -613,7 +620,7 @@ const ExchangeRates = ({ i18n }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
       <div className="container">
         <div className="row">
           <div className="col-md -12">
@@ -690,11 +697,13 @@ const ExchangeRates = ({ i18n }) => {
               </div>
             </div>
           </div>
-          {appModal && (
-            <GetTheAppModal open={appModal} handleClose={appModalClose} />
-          )}
-        </div>
-      </div>
+          {
+            appModal && (
+              <GetTheAppModal open={appModal} handleClose={appModalClose} />
+            )
+          }
+        </div >
+      </div >
       <PeoplesSection />
       <div className="container">
         <QuestionTabs activeTab={3} />
