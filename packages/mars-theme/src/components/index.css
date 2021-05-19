@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -231,26 +231,29 @@ body {
   .bannerImg img {
     max-width: 300px;
     height: auto;
-    margin: 5rem auto 0;
+    margin: 3rem auto 2rem;
     width: 100%;
     display: block;
   }
 }
-.bannerImg .cash-pic {
+/* .bannerImg .cash-pic {
   display: none;
-}
+} */
 @media (max-width: 540px) {
   .bannerImg {
-    padding: 0;
+    padding: 0 !important;
   }
-  .bannerImg .gif {
+  .bannerImg img {
+    max-width: 100%;
+  }
+  /* .bannerImg .gif {
     display: none;
   }
   .bannerImg .cash-pic {
     display: block;
     max-width: 100%;
     margin: 0 auto;
-  }
+  } */
 }
 
 .HomepagelList {
@@ -1995,7 +1998,7 @@ b {
 }
 
 .Enhance {
-  background-image: url("https://i.imgur.com/SfRVlGI.png");
+  background-image: url("https://i.imgur.com/7avIJ78.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px 0px 0px;
@@ -2213,7 +2216,7 @@ b {
   }
   .cashero-map {
     display: block !important;
-    margin-top: 40px; 
+    margin-top: 40px;
   }
   .map-pic {
     top: 0;
@@ -3453,7 +3456,7 @@ b {
 }
 
 .SignUp {
-  background-image: url("https://i.imgur.com/dhaP8KJ.png");
+  background-image: url("https://i.imgur.com/gF6V6lg.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 134px 191px 134px 191px;
