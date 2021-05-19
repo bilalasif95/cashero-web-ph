@@ -1,7 +1,7 @@
 import * as React from "react";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import Banner from "../../assets/photoshop.gif";
-import casheromain from "../../assets/casheromain.png";
+// import casheromain from "../../assets/casheromain.png";
 import Check from "../../assets/check-mark.svg";
 import GlobalMoney from "../GlobalMoney/GlobalMoney";
 import HighInterest from "../HighInterest/HighInterest";
@@ -63,30 +63,30 @@ const HomePage = ({ i18n }) => {
             </div>
             <div className="col-md-4">
               <div className="bannerImg">
-                <img className="img-fluid gif" alt="Banner" src={Banner} />
-                <img className="img-fluid cash-pic" alt="Banner" src={casheromain} />
+                  <img className="img-fluid gif" alt="Banner" src={Banner} />
+                  {/* <img className="img-fluid cash-pic" alt="Banner" src={casheromain} /> */}
+              </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <HighInterest />
-      <div className="container">
-        <MoneyRequest />
-        <GlobalMoney />
-        <MultiCurrency />
-        <CurrencyConversion />
-      </div>
-      <Enhance />
-      <div className="container">
-        <CharitySection />
-        <GetStarted />
-      </div>
-      <PeoplesSection />
-      <div className="container">
-        <QuestionTabs activeTab={0} />
-      </div>
-      <SignupSection />
+        <HighInterest />
+        <div className="container">
+          <MoneyRequest />
+          <GlobalMoney />
+          <MultiCurrency />
+          <CurrencyConversion />
+        </div>
+        <Enhance />
+        <div className="container">
+          <CharitySection />
+          <GetStarted />
+        </div>
+        <PeoplesSection />
+        <div className="container">
+          <QuestionTabs activeTab={0} />
+        </div>
+        <SignupSection />
     </>
   );
 }
