@@ -2207,14 +2207,21 @@ b {
     position: inherit !important;
   }
   .map-pic .cashero-c,
-  .map-pic .c-map {
-    top: 0;
+  .map-pic .c-map,
+  .map-pic .animate-img {
+    display: none !important;
   }
-  .map-pic .map-pic {
+  .cashero-map {
+    display: block !important;
+    margin-top: 40px; 
+  }
+  .map-pic {
     top: 0;
   }
 }
-
+.cashero-map {
+  display: none;
+}
 .map-pic {
   position: relative;
 }
@@ -3153,6 +3160,9 @@ b {
   }
   .MoneyRequest {
     padding: 40px 0px;
+  }
+  .main-flags {
+    display: block !important;
   }
 }
 
