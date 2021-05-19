@@ -1,19 +1,19 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "http://130.211.200.187:9001";
+  : "http://34.72.26.38:9001";
 //testing: "http://130.211.200.187:9001"
 //development: "http://34.72.26.38:9001"
 //production: "https://spot.cashero.com"
 
 const firebaseAPI =
-  "https://firestore.googleapis.com/v1/projects/cashero-testing-54a48/databases/(default)/documents/";
+  "https://firestore.googleapis.com/v1/projects/cashero-development-76cca/databases/(default)/documents/";
 //testing: "https://firestore.googleapis.com/v1/projects/cashero-testing-54a48/databases/(default)/documents/"
 //production: "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/"
 //development: "https://firestore.googleapis.com/v1/projects/cashero-development-76cca/databases/(default)/documents/"
 
 export const websiteLink = "https://www.cashero.com";
 
-export const wordPressLink = "http://130.211.200.187:8005";
+export const wordPressLink = "http://34.72.26.38:8005";
 //testing: "http://130.211.200.187:8005"
 //development: "http://34.72.26.38:8005"
 //production: "https://wp.cashero.com"
