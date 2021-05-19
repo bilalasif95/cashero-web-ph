@@ -100,6 +100,7 @@ const Footer = ({ i18n }) => {
 						</ul>
 					</div>
 				</div>
+				<p className="text-center">{i18n.t("Footnote_P")}</p>
 				<p className="text-center">{i18n.t("Footnote")}</p>
 			</div>
 		</div>
