@@ -68,6 +68,7 @@ export const brazilian = {
     Terms: "Terms",
     Privacy: "Privacy",
     Sitemap: "Sitemap",
+    Footnote_P: "Cashero Financial OÜ (16169563) trading as “Cashero” is a private limited company with its registered address at Keemia 4, 10616 Tallinn, Estonia. Phone +3727124338.",
     Footnote: "Copyright © 2021 Cashero. All rights reserved",
     Get_Started_in_Minutes: "Get Started in Minutes",
     Download_the_Cashero_app: "Download the Cashero app",
