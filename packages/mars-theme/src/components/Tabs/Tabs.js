@@ -67,7 +67,7 @@ const QuestionTabs = (props) => {
 		<div className="Questions">
 			<div className="row">
 				<div className="col-md-4">
-					<h4 className="TabsTitle">{i18n.t("FREQUENTLY_ASKED")} <span className="br-block-with-no-display"></span>{i18n.t("QUESTIONS")}</h4>
+					<h3 className="TabsTitle">{i18n.t("FREQUENTLY_ASKED")} <span className="br-block-with-no-display"></span>{i18n.t("QUESTIONS")}</h3>
 					<AppBar position="static" className="custom-Tabs">
 						<Tabs
 							value={value}
@@ -134,15 +134,15 @@ const QuestionTabs = (props) => {
 									id="panel1a-header"
 									className="iconSet"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("What_is_Cashero")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("What_is_Cashero_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -161,33 +161,33 @@ const QuestionTabs = (props) => {
 									aria-controls="panel2a-content"
 									id="panel2a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("main_features")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B1")} </span> {i18n.t("main_features_P1")}
-										</h4>
-										<h4 className="FaqText">
+										</p>
+										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B2")} </span> {i18n.t("main_features_P2")}
-										</h4>
-										<h4 className="FaqText">
+										</p>
+										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B3")} </span> {i18n.t("main_features_P3")}
-										</h4>
-										<h4 className="FaqText">
+										</p>
+										<p className="FaqText">
 											<span className="bold-text">{i18n.t("Instant_Payments")} </span> {i18n.t("main_features_P4")}
-										</h4>
-										<h4 className="FaqText">
+										</p>
+										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B5")} </span> {i18n.t("main_features_P5")}
-										</h4>
-										<h4 className="FaqText">
+										</p>
+										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B6")} </span> {i18n.t("main_features_P6")}
-										</h4>
-										<h4 className="FaqText">
+										</p>
+										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B7")} </span> {i18n.t("main_features_Users")}  <Link className="giveaway-link" link="/giveaway">{i18n.t("main_features_Link")}</Link> {i18n.t("main_features_P7")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -206,15 +206,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel3a-content"
 									id="panel3a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("Launch_Date")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											June 2021.
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -233,15 +233,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel4a-content"
 									id="panel4a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("Cashero_regulated")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("Cashero_regulated_P1")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -265,13 +265,13 @@ const QuestionTabs = (props) => {
 									id="panel1a-header"
 									className="iconSet"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("savings_account")}	?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("savings_account_P1")}</h4>
+										<p className="FaqText">{i18n.t("savings_account_P1")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -290,13 +290,13 @@ const QuestionTabs = (props) => {
 									aria-controls="panel2a-content"
 									id="panel2a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("interest_earned")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("interest_earned_P1")}</h4>
+										<p className="FaqText">{i18n.t("interest_earned_P1")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -315,13 +315,13 @@ const QuestionTabs = (props) => {
 									aria-controls="panel3a-content"
 									id="panel3a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("What_is_APY")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("What_is_APY_P1")} </h4>
+										<p className="FaqText">{i18n.t("What_is_APY_P1")} </p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -340,15 +340,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel4a-content"
 									id="panel4a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("fees_associated")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("fees_associated_P1")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -367,15 +367,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel5a-content"
 									id="panel5a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("money_safe")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("money_safe_P1")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -448,13 +448,13 @@ const QuestionTabs = (props) => {
 									id="panel1a-header"
 									className="iconSet"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("multi_currency")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("multi_currency_P1")}</h4>
+										<p className="FaqText">{i18n.t("multi_currency_P1")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -473,15 +473,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel2a-content"
 									id="panel2a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("multi_currency_country")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("multi_currency_country_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -500,13 +500,13 @@ const QuestionTabs = (props) => {
 									aria-controls="panel3a-content"
 									id="panel3a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("multi_currency_account")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("multi_currency_account_P")}</h4>
+										<p className="FaqText">{i18n.t("multi_currency_account_P")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -525,15 +525,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel4a-content"
 									id="panel4a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("currency_fluctuations")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("currency_fluctuations_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -552,15 +552,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel5a-content"
 									id="panel5a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("money_safe")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("money_safe_P1")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -580,9 +580,9 @@ const QuestionTabs = (props) => {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">
+										<h3 className="heading">
 											{i18n.t("multi_currency_Learn")}
-										</h4>
+										</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<div className="expandTypo">
@@ -886,15 +886,15 @@ const QuestionTabs = (props) => {
 									id="panel1a-header"
 									className="iconSet"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("online_currency_exchange_panel")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("online_currency_exchange_panel_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -913,13 +913,13 @@ const QuestionTabs = (props) => {
 									aria-controls="panel2a-content"
 									id="panel2a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("online_currency_exchange_panel_1")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("online_currency_exchange_panel_1_P")}</h4>
+										<p className="FaqText">{i18n.t("online_currency_exchange_panel_1_P")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -938,13 +938,13 @@ const QuestionTabs = (props) => {
 									aria-controls="panel3a-content"
 									id="panel3a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("online_currency_exchange_panel_2")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("online_currency_exchange_panel_2_P")} </h4>
+										<p className="FaqText">{i18n.t("online_currency_exchange_panel_2_P")} </p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -963,13 +963,13 @@ const QuestionTabs = (props) => {
 									aria-controls="panel4a-content"
 									id="panel4a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("online_currency_exchange_panel_3")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("online_currency_exchange_panel_3_P")} </h4>
+										<p className="FaqText">{i18n.t("online_currency_exchange_panel_3_P")} </p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -988,15 +988,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel5a-content"
 									id="panel5a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("money_safe")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("online_currency_exchange_panel_4_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1016,7 +1016,7 @@ const QuestionTabs = (props) => {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">{i18n.t("Learn_more_about_Instant_Money_Transfers")}</h4>
+										<h3 className="heading">{i18n.t("Learn_more_about_Instant_Money_Transfers")}</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<div className="expandTypo">
@@ -1089,13 +1089,13 @@ const QuestionTabs = (props) => {
 									id="panel1a-header"
 									className="iconSet"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("instant_money_transfer_panel5")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("instant_money_transfer_panel5_P")}</h4>
+										<p className="FaqText">{i18n.t("instant_money_transfer_panel5_P")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1114,15 +1114,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel2a-content"
 									id="panel2a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("instant_money_transfer_panel5_2")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("instant_money_transfer_panel5_2_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1141,15 +1141,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel3a-content"
 									id="panel3a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("instant_money_transfer_panel5_3")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("instant_money_transfer_panel5_3_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1168,15 +1168,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel4a-content"
 									id="panel4a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("instant_money_transfer_panel5_4")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("instant_money_transfer_panel5_4_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1195,15 +1195,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel5a-content"
 									id="panel5a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("money_safe")}?
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("money_safe_P1")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1223,7 +1223,7 @@ const QuestionTabs = (props) => {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">{i18n.t("learn_more_transfer_money_abroad")}</h4>
+										<h3 className="heading">{i18n.t("learn_more_transfer_money_abroad")}</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
@@ -1297,15 +1297,15 @@ const QuestionTabs = (props) => {
 									id="panel1a-header"
 									className="iconSet"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("transfer_money_abroad_panel6")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("transfer_money_abroad_panel6_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1324,15 +1324,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel2a-content"
 									id="panel2a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("transfer_money_abroad_panel6_1")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("transfer_money_abroad_panel6_1_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1351,15 +1351,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel3a-content"
 									id="panel3a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("transfer_money_abroad_panel6_2")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("transfer_money_abroad_panel6_2_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1378,15 +1378,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel4a-content"
 									id="panel4a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("transfer_money_abroad_panel6_3")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("transfer_money_abroad_panel6_3_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1405,15 +1405,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel5a-content"
 									id="panel5a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("transfer_money_abroad_panel6_4")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("transfer_money_abroad_panel6_4_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>

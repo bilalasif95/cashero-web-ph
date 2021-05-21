@@ -43,6 +43,15 @@ i18n.init({
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
+  Object.values(state.source.attachment).map((res) => {
+    state.source.attachment[res.id].link = "";
+    state.source.attachment[res.id].slug = "";
+  })
+  Object.values(state.source.data).map((type) => {
+    if (type.type === 'attachment') {
+      state.source.data[type.link] = Object
+    }
+  })
   // const [version, setVersion] = useState(false);
   // useEffect(() => {
   //   let name = 'cashero-web'

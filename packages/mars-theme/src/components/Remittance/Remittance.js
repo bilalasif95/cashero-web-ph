@@ -32,6 +32,8 @@ const Remittance = ({ i18n }) => {
   return (
     <>
       <Head>
+      <title>Transfer Money Abroad And Send It Overseas Instantly | Cashero App</title>
+      <meta name="description" content="Cashero’s global money transfer service gives you a quick and secure way to send money abroad. We make sending money easy-peasy with no hidden fees. Click here to learn more." />
         <link
           rel="canonical"
           href="https://www.cashero.com/transfer-money-abroad/"
@@ -42,7 +44,7 @@ const Remittance = ({ i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>{i18n.t("Transfer_Money")} <span className="br-block-with-no-display"></span> {i18n.t("Abroad")} </h1>
+                <h1>{i18n.t("Transfer_Money_Remittance")}</h1>
                 <p className="bannerPara">{i18n.t("Remittance_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
