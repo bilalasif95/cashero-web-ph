@@ -26,9 +26,9 @@ const Sendpayments = ({ i18n }) => {
 				<div className="col-md-5 sm-mt-30">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
+							<h2 className="oneAppTitle">
 								{i18n.t("The_Cashero_Way")}
-							</h1>
+							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
 							<p>{i18n.t("The_Cashero_Way_P")}</p>

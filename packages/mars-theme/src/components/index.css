@@ -183,7 +183,7 @@ body{
     .box-container {
       display: none !important;
     } 
-    .sr-money .send-money {
+    .sr-money .money-transfer {
       visibility: visible !important;
     }
   }
@@ -1914,13 +1914,6 @@ b {
         width: 180px;
         height: 180px; } }
 
-.sr-money {
-  width: 100%;
-  height: 100%;
-  position: relative; }
-  .sr-money .send-money {
-    visibility: hidden; }
-
 .box-container {
   position: absolute;
   width: 100%;
@@ -1996,12 +1989,7 @@ b {
         width: 180px;
         height: 180px; } }
 
-.sr-money {
-  width: 100%;
-  height: 100%;
-  position: relative; }
-  .sr-money .send-money {
-    visibility: hidden; }
+
 
 .box-container {
   position: absolute;
@@ -2546,9 +2534,6 @@ b {
       }
   }
 
-.main-flags {
-  visibility: hidden; }
-
 .flags {
   height: 100%;
   width: 100%;
@@ -2617,8 +2602,7 @@ b {
   .MoneyRequest {
     padding: 40px 0px; }}
 
-.main-flags {
-  visibility: hidden; }
+
 
 .flags {
   height: 100%;
@@ -2725,8 +2709,7 @@ b {
   width: 100%;
   height: 100%;
   position: relative; }
-  .sr-money .send-money {
-    visibility: hidden; }
+
 
 .box-container {
   position: absolute;
@@ -15580,6 +15563,7 @@ select:-webkit-autofill:focus {
     .bold-text{
       color: #000;
       font-weight: 600;  
+      font-style: italic;
     }
 
     .underline {
@@ -15920,3 +15904,4 @@ select:-webkit-autofill:focus {
         width: 280px;
       }
     }
+  

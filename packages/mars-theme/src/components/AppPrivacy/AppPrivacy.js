@@ -79,12 +79,12 @@ const AppPrivacy = ({ i18n }) => {
                 </ul>
               </div>
               <div className="terms_titles">
-                <h3>{i18n.t("DISCLOSING")}</h3>
-                <p>{i18n.t("DISCLOSING_P1")} </p>
-                <h3>{i18n.t("DISCLOSING_P2")}</h3>
+                <h3>{i18n.t("PRIVACY_POLICY_P18")}</h3>
+                <p>{i18n.t("PRIVACY_POLICY_P19")} </p>
+                <h3>{i18n.t("PRIVACY_POLICY_P20")}</h3>
                 <ul className="condition-list">
                   <li>{i18n.t("DISCLOSING_li1")}</li>
-                  <li>{i18n.t("DISCLOSING_li2")} </li>
+                  <li>{i18n.t("PRIVACY_POLICY_P22")} </li>
                   <li>{i18n.t("DESCRIPTION_P4")} </li>
                 </ul>
               </div>
@@ -93,22 +93,22 @@ const AppPrivacy = ({ i18n }) => {
                 <p>{i18n.t("LEGAL_AUTHORITIES_P1")}</p>
                 <ul className="condition-list">
                   <li>{i18n.t("LEGAL_AUTHORITIES_li1")}</li>
-                  <li>{i18n.t("LEGAL_AUTHORITIES_li2")}</li>
-                  <li>{i18n.t("LEGAL_AUTHORITIES_li3")}</li>
-                  <li>{i18n.t("LEGAL_AUTHORITIES_li4")}</li>
+                  <li>{i18n.t("PRIVACY_POLICY_P26")}</li>
+                  <li>{i18n.t("PRIVACY_POLICY_P27")}</li>
+                  <li>{i18n.t("PRIVACY_POLICY_P28")}</li>
                 </ul>
               </div>
               <div className="terms_titles">
-                <h3>{i18n.t("INTERNATIONAL_TRANSFERS")}</h3>
-                <p>{i18n.t("INTERNATIONAL_TRANSFERS_P1")}</p>
+                <h3>{i18n.t("PRIVACY_POLICY_P29")}</h3>
+                <p>{i18n.t("PRIVACY_POLICY_P30")}</p>
               </div>
               <div className="terms_titles">
-                <h3>{i18n.t("CIRCUMSTANCES")}</h3>
-                <p>{i18n.t("CIRCUMSTANCES_P1")}</p>
+                <h3>{i18n.t("PRIVACY_POLICY_P31")}</h3>
+                <p>{i18n.t("PRIVACY_POLICY_P32")}</p>
                 <ul className="condition-list">
                   <li>{i18n.t("CIRCUMSTANCES_li1")}</li>
-                  <li>{i18n.t("CIRCUMSTANCES_li2")}</li>
-                  <li>{i18n.t("CIRCUMSTANCES_li3")}</li>
+                  <li>{i18n.t("PRIVACY_POLICY_P34")}</li>
+                  <li>{i18n.t(" PRIVACY_POLICY_P35")}</li>
                 </ul>
               </div>
               <div className="terms_titles">

@@ -37,12 +37,13 @@ const GlobalMoney = ({ i18n }) => {
 							alt="Cashero"
 							src={CasheroC}
 						/>
-						<img
-							className="img-fluid mx-auto cashero-map"
+						
+					</div>
+					<img
+							className="img-fluid mx-auto c-map-mob"
 							alt="Cashero Map"
 							src={TransferMoneyAbroad}
 						/>
-					</div>
 				</div>
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
