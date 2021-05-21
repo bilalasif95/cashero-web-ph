@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "../link";
-import SendMoney from "../../assets/SendMoney.svg";
 import Send from "../../assets/send.svg";
 import Request from "../../assets/request.svg";
-import instant_money_transfer from "../../assets/instant-money-transfer.png";
+import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
@@ -68,8 +67,8 @@ const MoneyRequest = ({ i18n }) => {
 						</div>
 						<img
 							className="img-fluid mx-auto money-transfer"
-							src={instant_money_transfer}
-							alt="instant money transfer"
+							src={InstantMoneyTransfer}
+							alt="Instant Money Transfer"
 						/>
 					</div>
 				</div>
