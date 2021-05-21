@@ -16916,6 +16916,7 @@ select:-webkit-autofill:focus {
 .bold-text {
   color: #000;
   font-weight: 600;
+  font-style: italic;
 }
 
 .underline {
