@@ -45,6 +45,7 @@ const Theme = ({ state }) => {
   const data = state.source.get(state.router.link);
   Object.values(state.source.attachment).map((res) => {
     state.source.attachment[res.id].link = "";
+    state.source.attachment[res.id].slug = "";
   })
   Object.values(state.source.data).map((type) => {
     if (type.type === 'attachment') {

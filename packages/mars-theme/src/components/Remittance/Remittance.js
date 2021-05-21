@@ -44,7 +44,7 @@ const Remittance = ({ i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>{i18n.t("Transfer_Money")}</h1>
+                <h1>{i18n.t("Transfer_Money_Remittance")}</h1>
                 <p className="bannerPara">{i18n.t("Remittance_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
