@@ -62,7 +62,7 @@ const HomePage = ({ i18n }) => {
             </div>
             <div className="col-md-4">
               <div className="bannerImg">
-                <img className="img-fluid gif" alt="Banner" src={CasheroIntro} />
+                <img className="img-fluid" alt="Banner" src={CasheroIntro} />
               </div>
             </div>
           </div>

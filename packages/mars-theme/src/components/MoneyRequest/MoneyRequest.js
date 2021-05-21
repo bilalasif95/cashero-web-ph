@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "../link";
+import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
 import Send from "../../assets/send.svg";
 import Request from "../../assets/request.svg";
-import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
