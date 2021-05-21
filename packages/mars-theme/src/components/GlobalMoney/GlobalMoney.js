@@ -3,7 +3,7 @@ import Link from "../link";
 import Locations from "../../assets/Locations.png";
 import CMap from "../../assets/CMap.png";
 import CasheroC from "../../assets/CasheroC.png";
-import transfer_money_abroad from "../../assets/transfer-money-abroad.png";
+import TransferMoneyAbroad from "../../assets/TransferMoneyAbroad.png";
 import { Fade } from "react-awesome-reveal";
 import { Zoom } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
@@ -40,7 +40,7 @@ const GlobalMoney = ({ i18n }) => {
 						<img
 							className="img-fluid mx-auto cashero-map"
 							alt="Cashero Map"
-							src={transfer_money_abroad}
+							src={TransferMoneyAbroad}
 						/>
 					</div>
 				</div>
