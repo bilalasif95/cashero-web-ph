@@ -42,7 +42,7 @@ const AppTerms = ({ i18n }) => {
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("REPRESENTATIONS")}</h3>
-                <p>{i18n.t("REPRESENTATIONS_P1")}</p>
+                <p>{i18n.t("REPRESENTATIONS_P1_APP")}</p>
                 <p>1) {i18n.t("REPRESENTATIONS_P2")}</p>
                 <p>2) {i18n.t("REPRESENTATIONS_P3")}</p>
                 <p>3) {i18n.t("REPRESENTATIONS_P4")}</p>
@@ -161,9 +161,9 @@ const AppTerms = ({ i18n }) => {
                 <h3>{i18n.t("GOLDEN_TICKET")}</h3>
                 <ul className="condition-list">
                   <li>{i18n.t("GOLDEN_TICKET_li1")}</li>
-                  <li>{i18n.t("GOLDEN_TICKET_li2")}</li>
-                  <li>{i18n.t("GOLDEN_TICKET_li3")}</li>
-                  <li>{i18n.t("GOLDEN_TICKET_li4")}</li>
+                  <li>{i18n.t("Giveaway_h3_5_P")}</li>
+                  <li>{i18n.t("Giveaway_h3_6_P")}</li>
+                  <li>{i18n.t("Giveaway_li1")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li5")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li6")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li7")}</li>

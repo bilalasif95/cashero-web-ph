@@ -52,7 +52,7 @@ const Terms = ({ i18n }) => {
                 <p>{i18n.t("TERMS_USER_CONTENT_P1")}</p>
                 <p>{i18n.t("TERMS_USER_CONTENT_P2")}</p>
                 <p>{i18n.t("TERMS_USER_CONTENT_P3")}</p>
-                <p>{i18n.t("TERMS_USER_CONTENT_P4")}</p>
+                <p>{i18n.t("USER_CONTENT_P4")}</p>
                 <p>{i18n.t("TERMS_USER_CONTENT_P5")}</p>
               </div>
               <div className="terms_titles">

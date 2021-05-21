@@ -177,7 +177,7 @@ const QuestionTabs = (props) => {
 											<span className="bold-text">{i18n.t("main_features_B3")} </span> {i18n.t("main_features_P3")}
 										</h4>
 										<h4 className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B4")} </span> {i18n.t("main_features_P4")}
+											<span className="bold-text">{i18n.t("Instant_Payments")} </span> {i18n.t("main_features_P4")}
 										</h4>
 										<h4 className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B5")} </span> {i18n.t("main_features_P5")}
