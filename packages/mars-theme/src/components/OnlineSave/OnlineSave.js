@@ -23,9 +23,9 @@ const OnlineSave = ({ i18n }) => {
 					<div className="CurrencyConversionCont">
 						<div>
 							<Fade triggerOnce direction="up" delay={0}>
-								<h1 className="oneAppTitle">
+								<h2 className="oneAppTitle">
 									{i18n.t("Transfer_Money_Instantly")} <span className="br-block-with-no-display"></span> {i18n.t("and_Save_on_Exchange")} <span className="br-block-with-no-display"></span> {i18n.t("Fees")}
-								</h1>
+								</h2>
 							</Fade>
 							<Fade triggerOnce direction="up" delay={300}>
 								<p>{i18n.t("Online_Save_P")}</p>

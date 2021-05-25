@@ -19,9 +19,9 @@ const Protect = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
+							<h2 className="oneAppTitle">
 								{i18n.t("Use_Cashero_to_Protect")} <span className="br-block-with-no-display"></span> {i18n.t("Your_Money_from_Currency")} <span className="br-block-with-no-display"></span> {i18n.t("Value_Fluctuations")}
-							</h1>
+							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={400}>
 							<p>{i18n.t("Protect_P1")}</p>

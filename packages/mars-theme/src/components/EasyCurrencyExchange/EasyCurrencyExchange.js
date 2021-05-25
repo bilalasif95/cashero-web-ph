@@ -19,9 +19,9 @@ const EasyCurrencyExchange = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
+							<h2 className="oneAppTitle">
 								{i18n.t("Your_One_Tap_Hub_for")} <span className="br-block-with-no-display"></span> {i18n.t("Easy_Currency_Exchange")}
-							</h1>
+							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
 							<p>{i18n.t("Your_One_Tap_Hub_for_P")} </p>

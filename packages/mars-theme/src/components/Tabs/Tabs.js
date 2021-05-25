@@ -386,7 +386,7 @@ const QuestionTabs = (props) => {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">{i18n.t("Learn_more_savings")}</h4>
+										<h3 className="heading">{i18n.t("Learn_more_savings")}</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
@@ -409,19 +409,28 @@ const QuestionTabs = (props) => {
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P19")} </h2>
 												<p>{i18n.t("Learn_more_savings_P20")}</p>
 												<div className="inner-div">
-													<p><b>{i18n.t("Learn_more_savings_P21_B1")}</b> {i18n.t("Learn_more_savings_P21_p1")} </p>
-													<p><b>{i18n.t("Learn_more_savings_P22_B1")}</b> {i18n.t("Learn_more_savings_P22_P1")}</p>
-													<p><b>{i18n.t("Learn_more_savings_P23_B1")}</b> {i18n.t("Learn_more_savings_P23_P1")}</p>
-													<p><b>{i18n.t("Learn_more_savings_P24_B1")}</b> {i18n.t("Learn_more_savings_P24_P1")}</p>
-													<p><b>{i18n.t("Learn_more_savings_P25_B1")} </b>{i18n.t("Learn_more_savings_P25_P1")}</p>
+													<h3>{i18n.t("Learn_more_savings_P21_B1")}</h3>
+													<p>{i18n.t("Learn_more_savings_P21_p1")}</p>
+													<h3>{i18n.t("Learn_more_savings_P22_B1")} </h3>
+													<p>{i18n.t("Learn_more_savings_P22_P1")}</p>
+													<h3>{i18n.t("Learn_more_savings_P23_B1")} </h3>
+													<p>{i18n.t("Learn_more_savings_P23_P1")}</p>
+													<h3>{i18n.t("Learn_more_savings_P24_B1")} </h3>
+													<p>{i18n.t("Learn_more_savings_P24_P1")}</p>
+													<h3>{i18n.t("Learn_more_savings_P25_B1")}</h3>
+													<p>{i18n.t("Learn_more_savings_P25_P1")}</p>
 												</div>
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P26")}</h2>
 												<p>{i18n.t("Learn_more_savings_P27")}</p>
 												<div className="inner-div">
-													<p><b>{i18n.t("Learn_more_savings_P28_B1")}</b> {i18n.t("Learn_more_savings_P28_P1")}  </p>
-													<p><b>{i18n.t("Learn_more_savings_P29_B1")} </b> {i18n.t("Learn_more_savings_P29_P1")}  </p>
-													<p><b>{i18n.t("Learn_more_savings_P30_B1")}</b> {i18n.t("Learn_more_savings_P30_P1")} </p>
-													<p><b>{i18n.t("Learn_more_savings_P31_B1")} </b> {i18n.t("Learn_more_savings_P31_P1")}  </p>
+													<h3>{i18n.t("Learn_more_savings_P28_B1")}   </h3>
+													<p>{i18n.t("Learn_more_savings_P28_P1")}</p>
+													<h3>{i18n.t("Learn_more_savings_P29_B1")}    </h3>
+													<p>{i18n.t("Learn_more_savings_P29_P1")}</p>
+													<h3>{i18n.t("Learn_more_savings_P30_B1")}  </h3>
+													<p>{i18n.t("Learn_more_savings_P30_P1")}</p>
+													<h3>{i18n.t("Learn_more_savings_P31_B1")}    </h3>
+													<p>{i18n.t("Learn_more_savings_P31_P1")}</p>
 												</div>
 												<p>{i18n.t("Learn_more_savings_P32")}</p>
 											</div>
@@ -602,7 +611,7 @@ const QuestionTabs = (props) => {
 											<p>{i18n.t("multi_currency_Learn_P14")}</p>
 											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P15")}</h3>
 											<p>{i18n.t("multi_currency_Learn_P16")}</p>
-											<p>{i18n.t("multi_currency_Learn_P17")}</p>
+											<h3>{i18n.t("multi_currency_Learn_P17")}</h3>
 											<div className="inner-div">
 												<ul>
 													<li>{i18n.t("multi_currency_Learn_P18")}</li>
@@ -617,18 +626,18 @@ const QuestionTabs = (props) => {
 											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P25")}</h3>
 											<p>{i18n.t("multi_currency_Learn_P26")}</p>
 											<div className="inner-div">
-												<p><b>{i18n.t("multi_currency_Learn_P27")} –</b> {i18n.t("multi_currency_Learn_P28")}</p>
-												<p><b>{i18n.t("multi_currency_Learn_P29")} –</b> {i18n.t("multi_currency_Learn_P30")}</p>
-												<p><b>{i18n.t("multi_currency_Learn_P31")} –</b> {i18n.t("multi_currency_Learn_P32")}</p>
-												<p><b>{i18n.t("multi_currency_Learn_P33")} –</b> {i18n.t("multi_currency_Learn_P34")}</p>
-												<p><b>{i18n.t("multi_currency_Learn_P35")} –</b> {i18n.t("multi_currency_Learn_P36")}</p>
-												<p><b>{i18n.t("multi_currency_Learn_P37")} –</b> {i18n.t("multi_currency_Learn_P38")}</p>
-												<p><b>{i18n.t("multi_currency_Learn_P39")} –</b> {i18n.t("multi_currency_Learn_P40")}</p>
+												<p><span className="bold-text">{i18n.t("multi_currency_Learn_P27")} –</span> {i18n.t("multi_currency_Learn_P28")}</p>
+												<p><span className="bold-text">{i18n.t("multi_currency_Learn_P29")} –</span> {i18n.t("multi_currency_Learn_P30")}</p>
+												<p><span className="bold-text">{i18n.t("multi_currency_Learn_P31")} –</span> {i18n.t("multi_currency_Learn_P32")}</p>
+												<p><span className="bold-text">{i18n.t("multi_currency_Learn_P33")} –</span> {i18n.t("multi_currency_Learn_P34")}</p>
+												<p><span className="bold-text">{i18n.t("multi_currency_Learn_P35")} –</span> {i18n.t("multi_currency_Learn_P36")}</p>
+												<p><span className="bold-text">{i18n.t("multi_currency_Learn_P37")} –</span> {i18n.t("multi_currency_Learn_P38")}</p>
+												<p><span className="bold-text">{i18n.t("multi_currency_Learn_P39")} –</span> {i18n.t("multi_currency_Learn_P40")}</p>
 												<h3 className="blackhead">{i18n.t("multi_currency_Learn_P41")}</h3>
 												<p>{i18n.t("multi_currency_Learn_P42")}</p>
 												<div className="inner-div">
-													<p><b>{i18n.t("multi_currency_Learn_P43")} –</b> {i18n.t("multi_currency_Learn_P44")}</p>
-													<p><b>{i18n.t("multi_currency_Learn_P45")} –</b> {i18n.t("multi_currency_Learn_P46")}</p>
+													<p><span className="bold-text">{i18n.t("multi_currency_Learn_P43")} –</span> {i18n.t("multi_currency_Learn_P44")}</p>
+													<p><span className="bold-text">{i18n.t("multi_currency_Learn_P45")} –</span> {i18n.t("multi_currency_Learn_P46")}</p>
 													<p>{i18n.t("multi_currency_Learn_P47")}</p>
 													<p>{i18n.t("multi_currency_Learn_P48")}</p>
 													<p>{i18n.t("multi_currency_Learn_P49")}</p>
@@ -674,15 +683,15 @@ const QuestionTabs = (props) => {
 									id="panel1a-header"
 									className="iconSet"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("multi_currency_exchange_H4_1")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("multi_currency_exchange_H4_1_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -701,13 +710,13 @@ const QuestionTabs = (props) => {
 									aria-controls="panel2a-content"
 									id="panel2a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("multi_currency_exchange_H4_2")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("multi_currency_exchange_H4_2_P")}</h4>
+										<p className="FaqText">{i18n.t("multi_currency_exchange_H4_2_P")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -726,13 +735,13 @@ const QuestionTabs = (props) => {
 									aria-controls="panel3a-content"
 									id="panel3a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("multi_currency_exchange_H4_3")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">{i18n.t("multi_currency_exchange_H4_3_P")}</h4>
+										<p className="FaqText">{i18n.t("multi_currency_exchange_H4_3_P")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -751,15 +760,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel4a-content"
 									id="panel4a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("multi_currency_exchange_H4_4")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("multi_currency_exchange_H4_4_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -778,15 +787,15 @@ const QuestionTabs = (props) => {
 									aria-controls="panel5a-content"
 									id="panel5a-header"
 								>
-									<h4 className="heading">
+									<h3 className="heading">
 										{i18n.t("multi_currency_exchange_H4_5")}
-									</h4>
+									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<h4 className="FaqText">
+										<p className="FaqText">
 											{i18n.t("multi_currency_exchange_H4_5_P")}
-										</h4>
+										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -806,7 +815,7 @@ const QuestionTabs = (props) => {
 										aria-controls="panel6a-content"
 										id="panel6a-header"
 									>
-										<h4 className="heading">{i18n.t("Learn_more_about_Online_Currency_Exchanges")}</h4>
+										<h3 className="heading">{i18n.t("Learn_more_about_Online_Currency_Exchanges")}</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<div className="expandTypo">

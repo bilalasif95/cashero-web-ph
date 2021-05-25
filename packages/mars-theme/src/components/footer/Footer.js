@@ -57,7 +57,7 @@ const Footer = ({ i18n }) => {
 					<div className="col-md-6">
 						<div className="row">
 							<div className="col-md-5">
-								<p className="NavTitle">{i18n.t("Features")}</p>
+								<h4 className="NavTitle">{i18n.t("Features")}</h4>
 								<ul className="list-unstyled FooterList">
 									<li><Link link="/high-yield-savings-account">{i18n.t("High_Yield_Savings")}</Link></li>
 									<li><Link link="/multi-currency-savings-account">{i18n.t("Multi_Currency_Account")}</Link></li>
@@ -67,14 +67,14 @@ const Footer = ({ i18n }) => {
 								</ul>
 							</div>
 							<div className="col-md-3">
-								<p className="NavTitle">{i18n.t("Company")}</p>
+								<h4 className="NavTitle">{i18n.t("Company")}</h4>
 								<ul className="list-unstyled FooterList">
 									<li><Link link="/company">{i18n.t("About_Us")}</Link></li>
 									<li><Link link="/blog">{i18n.t("Blog")}</Link></li>
 								</ul>
 							</div>
 							<div className="col-md-4">
-								<p className="NavTitle">{i18n.t("Legal")}</p>
+								<h4 className="NavTitle">{i18n.t("Legal")}</h4>
 								<ul className="list-unstyled FooterList">
 									<li><Link link="/terms">{i18n.t("Terms")}</Link></li>
 									<li><Link link="/privacy-policy">{i18n.t("Privacy")}</Link></li>

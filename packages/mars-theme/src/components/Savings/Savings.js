@@ -19,9 +19,9 @@ const Savings = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
-							<h1 className="oneAppTitle">
+							<h2 className="oneAppTitle">
 								{i18n.t("How_Does_Cashero")} <span className="br-block-with-no-display"></span> {i18n.t("High_Yield_Savings_Work")}
-							</h1>
+							</h2>
 							<p>
 								{i18n.t("High_Yield_Savings_Work_P")}
 							</p>
