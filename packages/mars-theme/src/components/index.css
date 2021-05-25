@@ -140,7 +140,9 @@ body{
       .bannerEmail .GetEarlyBtn .btn-default:active {
         background-color: #0667eb !important;
         box-shadow: inherit; }
-
+        .sr-money .money-transfer {
+          visibility: hidden !important;
+        }
 @media (max-width: 540px) {
   .bannerEmail {
     display: none; }
@@ -1330,6 +1332,8 @@ b {
 
 .inner-div {
   margin: 0 0 0 2rem; }
+  .inner-div h3 {
+    color: #363636; }
   .inner-div b {
     color: #363636; }
   .inner-div ul {
@@ -3598,10 +3602,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
 
 .FinalTextBox {
   padding: 34px 0px !important; }
@@ -3722,11 +3722,6 @@ button:focus {
 .FinalText p {
   font-size: 16px;
   color: #9ea0a5 !important; }
-
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
 
 .FinalTextBox {
   padding: 34px 0px !important; }
@@ -3882,11 +3877,6 @@ button:focus {
 .FinalText p {
   font-size: 16px;
   color: #9ea0a5 !important; }
-
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
 
 .FinalTextBox {
   padding: 34px 0px !important; }
@@ -4240,11 +4230,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
-
 .FinalTextBox {
   padding: 34px 0px !important; }
 
@@ -4450,10 +4435,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
 
 .FinalTextBox {
   padding: 34px 0px !important; }
@@ -4683,6 +4664,8 @@ button:focus {
 
 .Footer {
   padding: 70px 0px; }
+  .Footer .NavTitle {
+    color: #9ea0a5 !important;}
 
 .HelpText {
   margin-top: 46px; }
@@ -4904,11 +4887,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
-
 .FinalTextBox {
   padding: 34px 0px !important; }
 
@@ -5078,8 +5056,9 @@ button:focus {
 
 .InterestBox {
   margin-top: 41px; }
-  .InterestBox h1 {
-    color: #363636;
+  
+  .InterestBox .value {
+    color: #212529 !important;
     font-size: 34px;
     font-weight: 500;
     font-style: normal;
@@ -5263,11 +5242,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
-
 .FinalTextBox {
   padding: 34px 0px !important; }
 
@@ -5358,10 +5332,14 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
+.FinalText .value {
   font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
+  font-weight: 500;
+  color: #0667eb !important;
+  margin-bottom: 0px; 
+  display: flex;
+  justify-content: center;
+}
 
 .FinalTextBox {
   padding: 34px 0px !important; }
