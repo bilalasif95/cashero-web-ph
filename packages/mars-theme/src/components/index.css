@@ -1804,6 +1804,7 @@ b {
     .map-pic {
       display: none !important;
       top: 0; }
+      
       .c-map-mob {
         display: block !important;
       }

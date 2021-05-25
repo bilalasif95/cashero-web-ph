@@ -22,9 +22,9 @@ const LocalPayments = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
+							<h2 className="oneAppTitle">
 								{i18n.t("Local_and_Global_Instant")} <span className="br-block-with-no-display"></span> {i18n.t("Payments_at_the_Tip")} <span className="br-block-with-no-display"></span> {i18n.t("of_Your_Fingers")}
-							</h1>
+							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
 							<p>
