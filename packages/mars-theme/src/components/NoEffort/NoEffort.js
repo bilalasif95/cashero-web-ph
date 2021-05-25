@@ -23,9 +23,9 @@ const NoEffort = ({ i18n }) => {
 					<div className="col-md-6">
 						<div className="oneAppCont">
 							<Fade triggerOnce direction="up">
-								<h3 className="HighInterestTitle">
+								<h2 className="HighInterestTitle">
 									{i18n.t("Earn_the_Cashero_Way")}
-								</h3>
+								</h2>
 								<p className="HighInterestText">{i18n.t("No_Effort_P1")}</p>
 								<p className="HighInterestText">{i18n.t("No_Effort_P2")}</p>
 								<p className="HighInterestText">{i18n.t("No_Effort_P3")}</p>

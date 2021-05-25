@@ -74,6 +74,8 @@ const Personal = ({ i18n }) => {
   return (
     <>
       <Head>
+      <title>High Yield Savings Account | Cashero App</title>
+      <meta name="description" content="Put your money to work with the Cashero High Yield Savings Account. Beat the rate of inflation with an average APY of 5% on your deposits. Our savings accounts..." />
         <link
           rel="canonical"
           href="https://www.cashero.com/high-yield-savings-account/"
@@ -117,11 +119,11 @@ const Personal = ({ i18n }) => {
                       <div className="col-6">
                         <div className="InterestBox mt-0 TotalText interest-box-cont">
                           <p>{i18n.t("Total_Interest")}</p>
-                          <h1>$<NumericLabel params={{
+                          <p className="value">$<NumericLabel params={{
                             'shortFormat': true,
                             'justification': 'C',
                             'shortFormatMinValue': 1000000000000
-                          }}>{totalInterest()}</NumericLabel></h1>
+                          }}>{totalInterest()}</NumericLabel></p>
                         </div>
                       </div>
                     </div>
@@ -133,7 +135,7 @@ const Personal = ({ i18n }) => {
                       <div className="col-6">
                         <div className="InterestBox TotalText">
                           <p>{i18n.t("Interest_Rate")}</p>
-                          <h1>{i18n.t("Percent_APY")}</h1>
+                          <p className="value">{i18n.t("Percent_APY")}</p>
                         </div>
                       </div>
                       <div className="col-6">
@@ -145,7 +147,7 @@ const Personal = ({ i18n }) => {
                               toggle={togglegbp}
                             >
                               <DropdownToggle caret>
-                                <h1>{selectedYear} {selectedYear === "1" ? <>{i18n.t("YEAR")}</> : <>{i18n.t("YEARS")}</>}</h1>
+                                <p className="value">{selectedYear} {selectedYear === "1" ? <>{i18n.t("YEAR")}</> : <>{i18n.t("YEARS")}</>}</p>
                               </DropdownToggle>
                               <DropdownMenu>
                                 <DropdownItem onClick={() => setSelectedYear("1")}>1 {i18n.t("YEAR")}</DropdownItem>
@@ -165,11 +167,11 @@ const Personal = ({ i18n }) => {
                   <div className="col-12">
                     <div className="FinalText text-center">
                       <p>{i18n.t("Final_balance_is")}</p>
-                      <h1>$<NumericLabel params={{
+                      <p className="value">$<NumericLabel params={{
                         'shortFormat': true,
                         'justification': 'C',
                         'shortFormatMinValue': 10000000000000000
-                      }}>{finalBalance()}</NumericLabel></h1>
+                      }}>{finalBalance()}</NumericLabel></p>
                     </div>
                   </div>
                 </div>
