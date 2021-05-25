@@ -223,7 +223,6 @@ export const english = {
     Fees: "Fees",
     Online_Save_P: "You know those great currency exchange rates you see advertised everywhere? That’s the rate Cashero actually uses to exchange your money.  Most banks use a lower rate.  No bait and switch. Convert currency almost at the speed of light with a small, transparent fee.",
     Cashero_Works_Across_the_Globe: "Cashero Works Across the Globe",
-    High_Yield_WithDash: "High-Yield",
     Personal_Main_P: "Make your money do the work. Earn up to 5% APY on your hard-earned cash, paid out daily.",
     Deposit: "Deposit",
     Total_Interest: "Total Interest",
