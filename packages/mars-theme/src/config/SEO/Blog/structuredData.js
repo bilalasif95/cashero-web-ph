@@ -20,7 +20,7 @@ export const structuredData = blog => {
       "@type": "Organization",
       logo: {
         "@type": "ImageObject",
-        url: "https://i.imgur.com/as9Mj8G.png"
+        url: "https://i.imgur.com/WjbRyFw.png"
       },
       name: blog.frontity.title
     },
