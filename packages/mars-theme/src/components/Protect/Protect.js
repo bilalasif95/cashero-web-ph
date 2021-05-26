@@ -14,7 +14,7 @@ const Protect = ({ i18n }) => {
 		setAppModal(false)
 	};
 	return (
-		<div className="MultiCurrency sm-mt-30">
+		<div className="MultiCurrency">
 			<div className="row">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">

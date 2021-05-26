@@ -36,7 +36,7 @@ const EasyCurrencyExchange = ({ i18n }) => {
 				</div>
 				<div className="col-md-6">
 					<img
-						className="img-fluid mx-auto d-block"
+						className="img-fluid mx-auto d-block sm-mt-30"
 						alt="exchange"
 						src={Exchange}
 					/>

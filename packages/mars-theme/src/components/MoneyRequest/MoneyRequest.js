@@ -66,7 +66,7 @@ const MoneyRequest = ({ i18n }) => {
 							</div>
 						</div>
 						<img
-							className="img-fluid mx-auto money-transfer"
+							className="img-fluid mx-auto money-transfer sm-mt-30"
 							src={InstantMoneyTransfer}
 							alt="Instant Money Transfer"
 						/>

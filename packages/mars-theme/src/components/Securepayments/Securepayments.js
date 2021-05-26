@@ -14,7 +14,7 @@ const Securepayments = ({ i18n }) => {
 		setAppModal(false)
 	};
 	return (
-		<div className="MoneyRequest">
+		<div className="MoneyRequest sm-mt-30">
 			<div className="row align-items-center">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
@@ -37,7 +37,7 @@ const Securepayments = ({ i18n }) => {
 				</div>
 				<div className="col-md-6">
 					<img
-						className="img-fluid mx-auto d-block"
+						className="img-fluid mx-auto d-block sm-mt-30"
 						alt="Globe"
 						src={Globe}
 					/>
