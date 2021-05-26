@@ -86,7 +86,7 @@ const Personal = ({ i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>{i18n.t("High_Yield_WithDash")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
+                <h1>{i18n.t("High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
                 <p className="bannerPara">{i18n.t("Personal_Main_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
