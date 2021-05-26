@@ -6,7 +6,7 @@ export const brazilian = {
     Online_Currency_Exchange: "Conversão de moedas online",
     Payments: "Pagamentos",
     Instant_Money_Transfer: "Transferência de valores instantâneas",
-    Instant_Money_Transfer_MainHeading: "Instant Money Transfer: Send Money Instantly Between Cashero Accounts",
+Instant_Money_Transfer_MainHeading: "Instant Money Transfer: Send Money Instantly Between Cashero Accounts",
     Transfer_Money_Abroad: "Transferir valores para o exterior",
     Donations: "Doações",
     Charities: "Instituições filantrópicas",
