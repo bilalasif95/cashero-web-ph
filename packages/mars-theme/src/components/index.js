@@ -92,7 +92,7 @@ const Theme = ({ state }) => {
         <meta name="twitter:title" content={state.frontity.title} />
         <meta name="twitter:description" content={state.frontity.description} />
         <meta name="twitter:url" content={websiteLink} />
-        <meta name="twitter:image" content="https://i.imgur.com/as9Mj8G.png" />
+        <meta name="twitter:image" content="https://i.imgur.com/WjbRyFw.png" />
         <meta http-equiv='cache-control' content='no-cache' />
         <meta http-equiv='expires' content='0' />
         <meta http-equiv='pragma' content='no-cache' />
