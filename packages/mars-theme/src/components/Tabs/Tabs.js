@@ -368,13 +368,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("money_safe")}?
+										{path === "/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("money_safe_P1")}
+											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -562,13 +562,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("money_safe")}?
+										{path === "/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("money_safe_P1")}
+											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -998,13 +998,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("money_safe")}?
+										{path === "/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("online_currency_exchange_panel_4_P")}
+											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -1205,13 +1205,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("money_safe")}?
+										{path === "/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("money_safe_P1")}
+											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
