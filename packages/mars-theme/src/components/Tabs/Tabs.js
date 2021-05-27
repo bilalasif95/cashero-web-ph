@@ -788,13 +788,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("multi_currency_exchange_H4_5")}
+										{path === "/instant-money-transfer/" ? i18n.t("multi_currency_exchange_H4_5_1") : i18n.t("multi_currency_exchange_H4_5")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("multi_currency_exchange_H4_5_P")}
+											{path === "/instant-money-transfer/" ? i18n.t("multi_currency_exchange_H4_5_P_1") : i18n.t("multi_currency_exchange_H4_5_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -1004,7 +1004,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
+											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : path === "/instant-money-transfer/" ? i18n.t("money_safe_P3") : i18n.t("money_safe_P1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -1124,13 +1124,13 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("instant_money_transfer_panel5_2")}
+										{path === "/instant-money-transfer/" ? i18n.t("instant_money_transfer_panel5_2") : i18n.t("instant_money_transfer_panel5_2_1")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("instant_money_transfer_panel5_2_P")}
+											{path === "/transfer-money-abroad/" ? i18n.t("instant_money_transfer_panel5_2_P_1") : i18n.t("instant_money_transfer_panel5_2_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -1184,7 +1184,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("instant_money_transfer_panel5_4_P")}
+											{path === "/transfer-money-abroad/" ? i18n.t("instant_money_transfer_panel5_4_P_1") : i18n.t("instant_money_transfer_panel5_4_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
