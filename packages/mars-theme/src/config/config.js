@@ -290,7 +290,7 @@ export const counrtrylist = [
     flag: "🇧🇷",
     code: "BR",
     dial_code: "+55",
-    phone_length: 10,
+    phone_length: 11,
     white_listed: true,
   },
   {
