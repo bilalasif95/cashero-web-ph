@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { connect, styled } from "frontity";
+import { connect, Head, styled } from "frontity";
 import Link from "./link";
 import List from "./list";
 import FeaturedMedia from "./featured-media";
@@ -54,9 +54,15 @@ const Post = ({ state, actions, libraries, i18n }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <>
-      <script className="structured-data-list" type="application/ld+json">
-        {structuredData(state)}
-      </script>
+      <Head>
+        <link
+          rel="canonical"
+          href={websiteLink + state.router.link}
+        />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
+      </Head>
       <div className="ContactUsBanner">
         <div className="container">
           <div className="BlogHeader">

@@ -43,19 +43,19 @@ const AppPrivacy = ({ i18n }) => {
                   <li>{i18n.t("PERSONAL_li4")}</li>
                   <li>{i18n.t("PERSONAL_li5")}</li>
                   <li>{i18n.t("PERSONAL_li6")}</li>
-                  <li>{i18n.t("PERSONAL_li7")}</li>
+                  <li>{i18n.t("PERSONAL_li7_APP")}</li>
                 </ul>
                 <p>{i18n.t("GENERAL_P5")}</p>
                 <ul className="condition-list">
-                  <li>{i18n.t("INFORMATION_li1")}</li>
-                  <li>{i18n.t("INFORMATION_li2")}</li>
+                  <li>{i18n.t("INFORMATION_li1_APP")}</li>
+                  <li>{i18n.t("APP_INFORMATION_li2")}</li>
                   <li>{i18n.t("INFORMATION_li3")}</li>
                   <li>{i18n.t("INFORMATION_li4")}</li>
                 </ul>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("USE_OF_COOKIES_AND_SIMILAR_TECHNOLOGY")}</h3>
-                <p>{i18n.t("COOKIES_P1")}</p>
+                <p>{i18n.t("COOKIES_P1_APP")}</p>
                 <p>{i18n.t("COOKIES_P2")}</p>
                 <p>{i18n.t("COOKIES_P3")}</p>
                 <p>{i18n.t("COOKIES_P4")}</p>
@@ -69,6 +69,7 @@ const AppPrivacy = ({ i18n }) => {
                   <li>{i18n.t("PRIVACY_POLICY_P7")}</li>
                   <li>{i18n.t("PRIVACY_POLICY_P8")}</li>
                   <li>{i18n.t("PRIVACY_POLICY_P9")}</li>
+                  <li>{i18n.t("PRIVACY_POLICY_P10")}</li>
                   <li>{i18n.t("PERSONAL_INFORMATION_li6")}</li>
                   <li>{i18n.t("PRIVACY_POLICY_P12")}</li>
                   <li>{i18n.t("PRIVACY_POLICY_P13")}</li>
@@ -108,12 +109,12 @@ const AppPrivacy = ({ i18n }) => {
                 <ul className="condition-list">
                   <li>{i18n.t("CIRCUMSTANCES_li1")}</li>
                   <li>{i18n.t("PRIVACY_POLICY_P34")}</li>
-                  <li>{i18n.t(" PRIVACY_POLICY_P35")}</li>
+                  <li>{i18n.t("PRIVACY_POLICY_P35")}</li>
                 </ul>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("EXTERNAL_WEBSITES")}</h3>
-                <p>{i18n.t("EXTERNAL_WEBSITES_P1")}</p>
+                <p>{i18n.t("EXTERNAL_WEBSITES_P1_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("RIGHTS_REGARDING")}</h3>
@@ -132,7 +133,7 @@ const AppPrivacy = ({ i18n }) => {
                 <p>{i18n.t("RIGHTS_REGARDING_P5")}</p>
                 <p>{i18n.t("RIGHTS_REGARDING_P6")}</p>
                 <p>{i18n.t("RIGHTS_REGARDING_P7")}</p>
-                <p>{i18n.t("RIGHTS_REGARDING_P8")}</p>
+                <p>{i18n.t("RIGHTS_REGARDING_P8_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("PRIVACY_SECURITY")}</h3>

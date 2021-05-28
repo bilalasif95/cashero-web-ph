@@ -65,7 +65,7 @@ const Terms = ({ i18n }) => {
                 <p>4) {i18n.t("TERMS_PROHIBITED_P3")}</p>
                 <p>5) {i18n.t("PROHIBITED_P5")}</p>
                 <p>6) {i18n.t("PROHIBITED_P6")}</p>
-                <p>7) {i18n.t("PROHIBITED_P5")}</p>
+                <p>7) {i18n.t("PROHIBITED_P7")}</p>
                 <p>8) {i18n.t("TERMS_PROHIBITED_P4")} </p>
                 <p>9) {i18n.t("PROHIBITED_P9")}</p>
                 <p>10) {i18n.t("PROHIBITED_P10")}</p>
