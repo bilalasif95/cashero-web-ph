@@ -121,7 +121,7 @@ const CurrencyAccounts = ({ i18n }) => {
   return (
     <>
       <Head>
-      <title>Multi-Currency Savings Account | Cashero App</title>
+      <title>{i18n.t("Online_Currency_Exchange_1")}</title>
       <meta name="description" content="Don’t be limited to keeping your savings in a single currency. With the Cashero Multi-Currency Savings Account you can hold your savings in USD, EUR, and GBP, offering you protection against currency fluctuations. Our accounts also offer..." />
         <link
           rel="canonical"

@@ -40,7 +40,7 @@ const GlobalMoney = ({ i18n }) => {
 
 					</div>
 					<img
-						className="img-fluid mx-auto  c-map-mob sm-mt-30"
+						className="img-fluid mx-auto c-map-mob sm-mt-30"
 						alt="Cashero"
 						src={TransferMoneyAbroad}
 					/>

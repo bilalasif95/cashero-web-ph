@@ -37,8 +37,8 @@ const AppTerms = ({ i18n }) => {
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("INTELLECTUAL")}</h3>
-                <p>{i18n.t("INTELLECTUAL_P1")}</p>
-                <p>{i18n.t("INTELLECTUAL_P2")}</p>
+                <p>{i18n.t("INTELLECTUAL_P1_APP")}</p>
+                <p>{i18n.t("INTELLECTUAL_P2_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("REPRESENTATIONS")}</h3>
@@ -48,12 +48,12 @@ const AppTerms = ({ i18n }) => {
                 <p>3) {i18n.t("REPRESENTATIONS_P4")}</p>
                 <p>4) {i18n.t("REPRESENTATIONS_P5")}</p>
                 <p>5) {i18n.t("REPRESENTATIONS_P6")}</p>
-                <p>6) {i18n.t("REPRESENTATIONS_P7")}</p>
-                <p>7) {i18n.t("REPRESENTATIONS_P8")}</p>
-                <p>8) {i18n.t("REPRESENTATIONS_P9")}</p>
-                <p>9) {i18n.t("REPRESENTATIONS_P10")}</p>
+                <p>6) {i18n.t("REPRESENTATIONS_P7_APP")}</p>
+                <p>7) {i18n.t("REPRESENTATIONS_P8_APP")}</p>
+                <p>8) {i18n.t("REPRESENTATIONS_P9_APP")}</p>
+                <p>9) {i18n.t("REPRESENTATIONS_P10_APP")}</p>
                 <br />
-                <p>{i18n.t("REPRESENTATIONS_P11")}</p>
+                <p>{i18n.t("REPRESENTATIONS_P11_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("USER REGISTRATION")}</h3>
@@ -71,17 +71,17 @@ const AppTerms = ({ i18n }) => {
               <div className="terms_titles">
                 <h3>{i18n.t("PROHIBITED")}</h3>
                 <p>{i18n.t("PROHIBITED_T1")}</p>
-                <p>{i18n.t("PROHIBITED_T2")}</p>
-                <p>1) {i18n.t("PROHIBITED_P1")}</p>
+                <p>{i18n.t("PROHIBITED_T2_APP")}</p>
+                <p>1) {i18n.t("PROHIBITED_P1_APP")}</p>
                 <p>2) {i18n.t("PROHIBITED_P2")}</p>
                 <p>3) {i18n.t("PROHIBITED_P3")}</p>
                 <p>4) {i18n.t("PROHIBITED_P4")}</p>
-                <p>5) {i18n.t("PROHIBITED_P5")}</p>
+                <p>5) {i18n.t("PROHIBITED_P5_APP")}</p>
                 <p>6) {i18n.t("PROHIBITED_P6")}</p>
-                <p>7) {i18n.t("PROHIBITED_P7")}</p>
+                <p>7) {i18n.t("PROHIBITED_P7_APP")}</p>
                 <p>8) {i18n.t("PROHIBITED_P8")}</p>
-                <p>9) {i18n.t("PROHIBITED_P9")}</p>
-                <p>10)	{i18n.t("PROHIBITED_P10")}</p>
+                <p>9) {i18n.t("PROHIBITED_P9_APP")}</p>
+                <p>10)	{i18n.t("PROHIBITED_P10_APP")}</p>
                 <p>11)	{i18n.t("PROHIBITED_P11")}</p>
                 <p>12)	{i18n.t("PROHIBITED_P12")}</p>
                 <p>13)	{i18n.t("PROHIBITED_P13")}</p>
@@ -108,15 +108,15 @@ const AppTerms = ({ i18n }) => {
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("THIRD_PARTY")}</h3>
-                <p>{i18n.t("THIRD_PARTY_P1")}</p>
+                <p>{i18n.t("THIRD_PARTY_P1_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("APP_MANAGEMENT")}</h3>
                 <p> {i18n.t("APP_MANAGEMENT_P1")}</p>
-                <p>1) {i18n.t("APP_MANAGEMENT_P2")}	</p>
+                <p>1) {i18n.t("APP_MANAGEMENT_P2_APP")}	</p>
                 <p>2) {i18n.t("APP_MANAGEMENT_P3")}	</p>
                 <p>3) {i18n.t("APP_MANAGEMENT_P4")}	</p>
-                <p>4) {i18n.t("APP_MANAGEMENT_P5")}	</p>
+                <p>4) {i18n.t("APP_MANAGEMENT_P5_APP")}	</p>
                 <p>5) {i18n.t("APP_MANAGEMENT_P6")}	</p>
               </div>
               <div className="terms_titles">
@@ -130,16 +130,16 @@ const AppTerms = ({ i18n }) => {
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("MODIFICATIONS")}</h3>
-                <p>{i18n.t("MODIFICATIONS_P1")}</p>
-                <p>{i18n.t("MODIFICATIONS_P2")}</p>
+                <p>{i18n.t("MODIFICATIONS_P1_APP")}</p>
+                <p>{i18n.t("MODIFICATIONS_P2_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("FORCE_MAJEURE")}</h3>
-                <p>{i18n.t("FORCE_MAJEURE_P1")}</p>
+                <p>{i18n.t("FORCE_MAJEURE_P1_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("INDEMNIFICATION")}</h3>
-                <p>{i18n.t("INDEMNIFICATION_P1")}</p>
+                <p>{i18n.t("INDEMNIFICATION_P1_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("ASSUMPTION")} </h3>
@@ -155,7 +155,7 @@ const AppTerms = ({ i18n }) => {
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("DISCLAIMER")}</h3>
-                <p>{i18n.t("DISCLAIMER_P1")}</p>
+                <p>{i18n.t("DISCLAIMER_P1_APP")}</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("GOLDEN_TICKET")}</h3>

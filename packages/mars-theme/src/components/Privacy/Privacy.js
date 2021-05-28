@@ -52,7 +52,7 @@ const Privacy = ({ i18n }) => {
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("USE_OF_COOKIES_AND_SIMILAR_TECHNOLOGY")}</h3>
-                <p>{i18n.t("INFORMATION_li4")}</p>
+                <p>{i18n.t("COOKIES_P1")}</p>
                 <p>{i18n.t("PRIVACY_POLICY_P3")}</p>
                 <p>{i18n.t("PRIVACY_POLICY_P4")}</p>
               </div>

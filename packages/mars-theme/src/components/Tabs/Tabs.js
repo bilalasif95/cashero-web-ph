@@ -141,7 +141,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("What_is_Cashero_P")}
+											{path === "/multi-currency-savings-account/" ? i18n.t("What_is_Cashero_P_1") : i18n.t("What_is_Cashero_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -177,7 +177,7 @@ const QuestionTabs = (props) => {
 											<span className="bold-text">{i18n.t("main_features_B3")} </span> {i18n.t("main_features_P3")}
 										</p>
 										<p className="FaqText">
-											<span className="bold-text">{i18n.t("Instant_Payments")} </span> {i18n.t("main_features_P4")}
+											<span className="bold-text">{i18n.t("Instant_Payments")} </span> {path === "/multi-currency-savings-account/" ? i18n.t("main_features_P4_1") : i18n.t("main_features_P4")}
 										</p>
 										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B5")} </span> {i18n.t("main_features_P5")}
@@ -266,12 +266,12 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h3 className="heading">
-										{i18n.t("savings_account")}	?
+										{i18n.t("savings_account")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<p className="FaqText">{i18n.t("savings_account_P1")}</p>
+										<p className="FaqText">{path === "/multi-currency-savings-account/" ? i18n.t("savings_account_P1_1") : i18n.t("savings_account_P1")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -562,7 +562,7 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h3 className="heading">
-										{path === "/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
+										{i18n.t("money_safe_2")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -690,7 +690,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("multi_currency_exchange_H4_1_P")}
+											{path === "/multi-currency-savings-account/" ? i18n.t("multi_currency_exchange_H4_1_P_1") : i18n.t("multi_currency_exchange_H4_1_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -998,13 +998,13 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h3 className="heading">
-										{path === "/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
+										{i18n.t("money_safe_2")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : path === "/instant-money-transfer/" ? i18n.t("money_safe_P3") : i18n.t("money_safe_P1")}
+											{i18n.t("money_safe_P3")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -1205,7 +1205,7 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h3 className="heading">
-										{path === "/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
+										{i18n.t("money_safe_2")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>

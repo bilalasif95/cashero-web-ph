@@ -32,7 +32,7 @@ const Remittance = ({ i18n }) => {
   return (
     <>
       <Head>
-      <title>Transfer Money Abroad And Send It Overseas Instantly | Cashero App</title>
+      <title>{i18n.t("Transfer_Money_Remittance_1")}</title>
       <meta name="description" content="Cashero’s global money transfer service gives you a quick and secure way to send money abroad. We make sending money easy-peasy with no hidden fees. Click here to learn more." />
         <link
           rel="canonical"
