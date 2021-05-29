@@ -32,7 +32,7 @@ const ReceivePayments = ({ i18n }) => {
   return (
     <>
       <Head>
-      <title>Instant Money Transfer: Send Money Instantly Between Cashero Accounts | Cashero App</title>
+      <title>{i18n.t("Instant_Money_Transfer_MainHeading_1")}</title>
       <meta name="description" content="Cashero allows you to make instant money transfers to other Cashero Accounts all over the world. We offer an all-in-one platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero." />
         <link
           rel="canonical"

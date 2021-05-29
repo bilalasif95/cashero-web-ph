@@ -135,7 +135,7 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h3 className="heading">
-										{i18n.t("What_is_Cashero")}?
+										{i18n.t("What_is_Cashero")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -291,7 +291,7 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("interest_earned")}?
+										{i18n.t("interest_earned")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -316,7 +316,7 @@ const QuestionTabs = (props) => {
 									id="panel3a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("What_is_APY")}?
+										{i18n.t("What_is_APY")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -341,7 +341,7 @@ const QuestionTabs = (props) => {
 									id="panel4a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("fees_associated")}?
+										{i18n.t("fees_associated")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -458,7 +458,7 @@ const QuestionTabs = (props) => {
 									className="iconSet"
 								>
 									<h3 className="heading">
-										{i18n.t("multi_currency")}?
+										{i18n.t("multi_currency")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
@@ -483,7 +483,7 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h3 className="heading">
-										{i18n.t("multi_currency_country")}?
+										{i18n.t("multi_currency_country")}
 									</h3>
 								</AccordionSummary>
 								<AccordionDetails>
