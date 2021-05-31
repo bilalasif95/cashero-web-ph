@@ -550,7 +550,7 @@ export const english = {
     RIGHTS_REGARDING_P8_APP: "To withdraw the consent to personal data processing and/or exercise your rights to be forgotten please contact us. Furthermore, in this case, for safety, we may request you to present your ID document.",
     RETENTION_UPDATES_PRIVACY: "This Privacy Policy may be revised, modified, updated, and/or supplemented at any time, without prior notice, at the sole discretion of Cashero. When we make changes to this Privacy Policy, we make the amended Privacy Policy available on our App.",
     FREQUENTLY_ASKED: "Frequently asked",
-    QUESTIONS: "QUESTIONS",
+    QUESTIONS: "Questions",
     What_is_Cashero: "What is Cashero?",
     What_is_Cashero_P: "Cashero is an all-in-one mobile platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero.",
     What_is_Cashero_P_1: "Cashero is an all-in-one platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero.",

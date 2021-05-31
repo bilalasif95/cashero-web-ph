@@ -3,6 +3,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
+import { styled } from "frontity";
 import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import ControlPointIcon from "@material-ui/icons/ControlPoint";
 import AppBar from "@material-ui/core/AppBar";
@@ -69,6 +70,7 @@ const QuestionTabs = (props) => {
 				<div className="col-md-4">
 					<h3 className="TabsTitle">{i18n.t("FREQUENTLY_ASKED")} <span className="br-block-with-no-display"></span>{i18n.t("QUESTIONS")}</h3>
 					<AppBar position="static" className="custom-Tabs">
+						<CustomTabs>
 						<Tabs
 							value={value}
 							onChange={handleChange}
@@ -113,6 +115,7 @@ const QuestionTabs = (props) => {
 								{...a11yProps(6)}
 							/>
 						</Tabs>
+						</CustomTabs>
 					</AppBar>
 				</div>
 				<div className="col-md-8">
@@ -1434,4 +1437,37 @@ const QuestionTabs = (props) => {
 	);
 }
 
-export default withTranslation()(QuestionTabs)
+export default withTranslation()(QuestionTabs);
+
+const CustomTabs = styled.div`
+.MuiTabs-root {
+	display: inherit !important;
+	.MuiTabs-scroller {
+		-webkit-flex: inherit!important;
+		-ms-flex: inherit!important;
+		flex: inherit!important;
+	}
+	.MuiTabs-flexContainer .MuiTab-textColorPrimary.Mui-selected {
+		border-left: 4px solid #0667eb!important;
+	}
+	.MuiAppBar-root span, .MuiTabs-root span, .MuiTabs-flexContainer span {
+		background-color: inherit!important;
+	}
+	.MuiTab-textColorPrimary {
+		color: rgba(0, 0, 0, 0.54);
+	}
+	.MuiTab-root {
+		background-color: transparent !important;
+		border: none;
+		font-size: 16px;
+		min-height: 48px;
+		padding: 6px 0px 6px 19px!important;
+		text-transform: uppercase;
+		font-weight: 500;
+		border-left: 4px solid transparent !important;
+	}
+	.MuiTab-wrapper {
+		font-size: 16px;
+	}
+}
+`;
