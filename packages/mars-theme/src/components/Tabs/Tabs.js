@@ -71,50 +71,50 @@ const QuestionTabs = (props) => {
 					<h3 className="TabsTitle">{i18n.t("FREQUENTLY_ASKED")} <span className="br-block-with-no-display"></span>{i18n.t("QUESTIONS")}</h3>
 					<AppBar position="static" className="custom-Tabs">
 						<CustomTabs>
-						<Tabs
-							value={value}
-							onChange={handleChange}
-							textColor="primary"
-							variant="scrollable"
-							scrollButtons="auto"
-							aria-label="scrollable auto tabs example"
-						>
-							<Tab
-								className="customTabs"
-								label={i18n.t("General")}
-								{...a11yProps(0)}
-							/>
-							<Tab
-								className="customTabs"
-								label={i18n.t("Savings")}
-								{...a11yProps(1)}
-							/>
-							<Tab
-								className="customTabs"
-								label={i18n.t("Multi_Currency")}
-								{...a11yProps(2)}
-							/>
-							<Tab
-								className="customTabs"
-								label={i18n.t("Exchange")}
-								{...a11yProps(3)}
-							/>
-							<Tab
-								className="customTabs"
-								label={i18n.t("Payments")}
-								{...a11yProps(4)}
-							/>
-							<Tab
-								className="customTabs"
-								label={i18n.t("Remittance")}
-								{...a11yProps(5)}
-							/>
-							<Tab
-								className="customTabs"
-								label={i18n.t("Charity")}
-								{...a11yProps(6)}
-							/>
-						</Tabs>
+							<Tabs
+								value={value}
+								onChange={handleChange}
+								textColor="primary"
+								variant="scrollable"
+								scrollButtons="auto"
+								aria-label="scrollable auto tabs example"
+							>
+								<Tab
+									className="customTabs"
+									label={i18n.t("General")}
+									{...a11yProps(0)}
+								/>
+								<Tab
+									className="customTabs"
+									label={i18n.t("Savings")}
+									{...a11yProps(1)}
+								/>
+								<Tab
+									className="customTabs"
+									label={i18n.t("Multi_Currency")}
+									{...a11yProps(2)}
+								/>
+								<Tab
+									className="customTabs"
+									label={i18n.t("Exchange")}
+									{...a11yProps(3)}
+								/>
+								<Tab
+									className="customTabs"
+									label={i18n.t("Payments")}
+									{...a11yProps(4)}
+								/>
+								<Tab
+									className="customTabs"
+									label={i18n.t("Remittance")}
+									{...a11yProps(5)}
+								/>
+								<Tab
+									className="customTabs"
+									label={i18n.t("Charity")}
+									{...a11yProps(6)}
+								/>
+							</Tabs>
 						</CustomTabs>
 					</AppBar>
 				</div>
