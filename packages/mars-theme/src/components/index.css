@@ -3136,17 +3136,13 @@ b {
 .MuiTabs-root,
 .MuiTabs-flexContainer {
   display: inherit !important; }
-  .MuiAppBar-root span,
+  /* .MuiAppBar-root span,
   .MuiTabs-root span,
   .MuiTabs-flexContainer span {
-    background-color: inherit !important; }
+    background-color: inherit !important; } */
 
 .MuiAppBar-root:focus {
   outline: none !important; }
-
-.MuiTabs-scroller {
-  flex: inherit !important; }
-
 .MuiAppBar-colorPrimary {
   background-color: transparent !important;
   box-shadow: inherit !important; }
@@ -3158,21 +3154,21 @@ button:focus {
 .PrivateTabIndicator-colorSecondary-5 {
   background-color: inherit !important; }
 
-.MuiTabs-flexContainer .MuiTab-textColorPrimary.Mui-selected {
-  border-left: 4px solid #0667eb !important; }
+/* .MuiTabs-flexContainer .MuiTab-textColorPrimary.Mui-selected {
+  border-left: 4px solid #0667eb !important; } */
 
 .MuiTab-textColorPrimary {
   border-left: 4px solid transparent !important; }
 
-.MuiTab-wrapper {
-  font-size: 16px; }
+/* .MuiTab-wrapper {
+  font-size: 16px; } */
 
 .TabsTitle {
   margin-bottom: 40px;
   text-transform: capitalize; }
 
-.MuiTab-root {
-  padding: 6px 0px 6px 19px !important; }
+/* .MuiTab-root {
+  padding: 6px 0px 6px 19px !important; } */
 
 .MuiAccordionSummary-root {
   display: flex !important;
