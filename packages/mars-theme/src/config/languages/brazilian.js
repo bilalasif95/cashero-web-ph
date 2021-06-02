@@ -94,7 +94,7 @@ Instant_Money_Transfer_MainHeading_1: "Instant Money Transfer: Send Money Instan
     Your_Moneys_Superhero_H2_1: "Deposite em reais e tenha a mesma segurança da poupança com 3 vezes mais rendimento",
     Your_Moneys_Superhero_H2_2: "Faça operações de câmbio, envie dinheiro para o exterior e faça pagamentos instantâneos.",
     Your_Moneys_Superhero_H2_3: "Sem tarifas ocultas, sem saldo mínimo e sem estresse.",
-Open_an_account_in_minutes: "Open an account in minutes. Launching in September.",
+    Open_an_account_in_minutes: "Abra sua conta em minutos. Lançamento em Setembro.",
     Open_an_account_in_minutes_P: "Tenha acesso antecipado ao app Cashero e concorra a US$ 1.000 a cada 3 dias!",
     Raise_More_Money_to: "Arrecade dinheiro para",
     Make_Our_World_a: "tornar o mundo um",

@@ -31,6 +31,7 @@ import { websiteLink } from "../config/config";
 import { structuredData } from "../config/SEO/Homepage/structuredData";
 import { I18nextProvider } from "react-i18next";
 import i18n from '../config/i18n';
+import Zendesk from "../components/Zendesk/Zendesk";
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -110,7 +111,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        <List />
+        {!data.isZendesk && <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -143,9 +144,10 @@ const Theme = ({ state }) => {
           <Thankyou when={data.isThankYou} />
           <BlogPage when={data.isBlog} />
           <PageError when={data.isError} />
+          <Zendesk when={data.isZendesk} />
         </Switch>
         {/* </Main> */}
-        <Footer />
+        {!data.isZendesk && <Footer />}
       </I18nextProvider>
     </>
   );
