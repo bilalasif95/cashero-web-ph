@@ -198,6 +198,16 @@ const personalCompaignHandler = {
   }
 }
 
+const zendeskHandler = {
+  pattern: "/zendesk",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isZendesk: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -248,6 +258,7 @@ const marsTheme = {
         libraries.source.handlers.push(thankyouHandler);
         libraries.source.handlers.push(appPrivacyHandler);
         libraries.source.handlers.push(appTermsHandler);
+        libraries.source.handlers.push(zendeskHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
