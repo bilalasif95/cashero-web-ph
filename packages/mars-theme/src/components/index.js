@@ -3,12 +3,15 @@ import { Global, css, connect, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 // import Header from "./header";
 import List from "./list";
+import CampaignHeader from "../components/campaignHeader/campaignHeader";
+import CampaignFooter from "../components/Campaignfooter/Campaignfooter";
 import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
 import externalCss from "./index.css";
 import Personal from "./Personal/Personal";
+import PersonalCompaign from "./PersonalCompaign/PersonalCompaign";
 import Footer from "./footer/Footer";
 import BlogPage from "./BlogPage/BlogPage";
 import HomePage from "./HomePage/HomePage";
@@ -110,7 +113,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        <List />
+        {data.isPersonalCompaign ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -143,9 +146,10 @@ const Theme = ({ state }) => {
           <Thankyou when={data.isThankYou} />
           <BlogPage when={data.isBlog} />
           <PageError when={data.isError} />
+          <PersonalCompaign when={data.isPersonalCompaign} />
         </Switch>
         {/* </Main> */}
-        <Footer />
+        {data.isPersonalCompaign ? <CampaignFooter /> : <Footer />}
       </I18nextProvider>
     </>
   );

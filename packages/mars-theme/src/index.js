@@ -188,6 +188,16 @@ const thankyouHandler = {
   }
 }
 
+const personalCompaignHandler = {
+  pattern: "/PersonalCompaign",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaign: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -221,6 +231,7 @@ const marsTheme = {
     theme: {
       init: ({ libraries }) => {
         libraries.source.handlers.push(personalHandler);
+        libraries.source.handlers.push(personalCompaignHandler);
         libraries.source.handlers.push(companyHandler);
         libraries.source.handlers.push(contactusHandler);
         libraries.source.handlers.push(donationHandler);
