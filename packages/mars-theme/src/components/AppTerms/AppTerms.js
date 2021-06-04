@@ -166,7 +166,7 @@ const AppTerms = ({ i18n }) => {
                   <li>{i18n.t("Giveaway_li1")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li5")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li6")}</li>
-                  <li>{i18n.t("GOLDEN_TICKET_li7")}</li>
+                  <li>{i18n.t("Giveaway_li4")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li8")}</li>
                   <li><a href="https://www.gamblingcommission.gov.uk/for-the-public/Safer-gambling/Consumer-guides/Running-prize-competitions-and-free-draws.aspx" target="_blank" rel="noopener noreferrer">https://www.gamblingcommission.gov.uk/for-the-public/Safer-gambling/Consumer-guides/Running-prize-competitions-and-free-draws.aspx</a></li>
                 </ul>
