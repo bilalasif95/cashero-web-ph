@@ -34,7 +34,6 @@ import { websiteLink } from "../config/config";
 import { structuredData } from "../config/SEO/Homepage/structuredData";
 import { I18nextProvider } from "react-i18next";
 import i18n from '../config/i18n';
-import Zendesk from "../components/Zendesk/Zendesk";
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -86,7 +85,6 @@ const Theme = ({ state }) => {
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <link rel="canonical" href={websiteLink} />
-        <link rel="alternate" hreflang="en" href={websiteLink} />
         <meta property="og:title" content={state.frontity.title} />
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />
@@ -114,7 +112,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {data.isPersonalCompaign ? <CampaignHeader /> : !data.isZendesk && <List />}
+        {data.isPersonalCompaign ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -147,11 +145,10 @@ const Theme = ({ state }) => {
           <Thankyou when={data.isThankYou} />
           <BlogPage when={data.isBlog} />
           <PageError when={data.isError} />
-          <Zendesk when={data.isZendesk} />
           <PersonalCompaign when={data.isPersonalCompaign} />
         </Switch>
         {/* </Main> */}
-        {data.isPersonalCompaign ? <CampaignFooter /> : !data.isZendesk && <Footer />}
+        {data.isPersonalCompaign ? <CampaignFooter /> : <Footer />}
       </I18nextProvider >
     </>
   );

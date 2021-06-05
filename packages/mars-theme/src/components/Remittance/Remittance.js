@@ -32,12 +32,14 @@ const Remittance = ({ i18n }) => {
   return (
     <>
       <Head>
-      <title>{i18n.t("Transfer_Money_Remittance_1")}</title>
-      <meta name="description" content="Cashero’s global money transfer service gives you a quick and secure way to send money abroad. We make sending money easy-peasy with no hidden fees. Click here to learn more." />
+        <title>{i18n.t("Transfer_Money_Remittance_1")}</title>
+        <meta name="description" content="Cashero’s global money transfer service gives you a quick and secure way to send money abroad. We make sending money easy-peasy with no hidden fees. Click here to learn more." />
         <link
           rel="canonical"
           href="https://www.cashero.com/transfer-money-abroad/"
         />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/transfer-money-abroad/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/transfer-money-abroad/" />
       </Head>
       <div className="PesonalBanner">
         <div className="container">

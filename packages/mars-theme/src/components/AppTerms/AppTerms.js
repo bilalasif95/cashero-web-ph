@@ -8,6 +8,8 @@ const AppTerms = ({ i18n }) => {
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/app-terms/" />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/app-terms/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/app-terms/" />
       </Head>
       <div className="container">
         <div className="conditions-cont">
