@@ -25,7 +25,7 @@ const Personal = ({ i18n }) => {
     <>
       <Head>
         <title>{i18n.t("High_Yield_Savings_Account_Menu_1")}</title>
-        <meta name="description" content="Put your money to work with the Cashero High Yield Savings Account. Beat the rate of inflation with an average APY of 5% on your deposits. Our savings accounts..." />
+        <meta name="description" content={i18n.t("High_Yield_Savings_Account_Meta_Description")} />
         <link
           rel="canonical"
           href="https://www.cashero.com/high-yield-savings-account/"

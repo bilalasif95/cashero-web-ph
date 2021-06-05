@@ -33,7 +33,7 @@ const ReceivePayments = ({ i18n }) => {
     <>
       <Head>
         <title>{i18n.t("Instant_Money_Transfer_MainHeading_1")}</title>
-        <meta name="description" content="Cashero allows you to make instant money transfers to other Cashero Accounts all over the world. We offer an all-in-one platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero." />
+        <meta name="description" content={i18n.t("Instant_Money_Transfer_Meta_Description")} />
         <link
           rel="canonical"
           href="https://www.cashero.com/instant-money-transfer/"

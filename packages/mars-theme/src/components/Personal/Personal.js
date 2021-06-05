@@ -20,13 +20,14 @@ import QuestionTabs from "../Tabs/Tabs";
 import SignupSection from "../signupSection/signupSection";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
-import { Head } from "frontity";
+import { Head, connect } from "frontity";
 import Link from "../link";
+import { structuredData } from "../../config/SEO/HighYieldpage/structuredData";
 import { withTranslation } from "react-i18next";
 
 var bigDecimal = require("js-big-decimal");
 
-const Personal = ({ i18n }) => {
+const Personal = ({ state, i18n }) => {
   const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
   const [selectedYear, setSelectedYear] = useState("5");
   const [value, setValue] = useState("5000");
@@ -75,13 +76,16 @@ const Personal = ({ i18n }) => {
     <>
       <Head>
         <title>{i18n.t("High_Yield_Savings_Account_Menu_1")}</title>
-        <meta name="description" content="Put your money to work with the Cashero High Yield Savings Account. Beat the rate of inflation with an average APY of 5% on your deposits. Our savings accounts..." />
+        <meta name="description" content={i18n.t("High_Yield_Savings_Account_Meta_Description")} />
         <link
           rel="canonical"
           href="https://www.cashero.com/high-yield-savings-account/"
         />
         <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/high-yield-savings-account/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/high-yield-savings-account/" />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
       </Head>
       <div className="PesonalBanner InterestBanner">
         <div className="container">
@@ -257,4 +261,4 @@ const Personal = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(Personal);
+export default connect(withTranslation()(Personal));

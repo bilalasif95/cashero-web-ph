@@ -33,7 +33,7 @@ const Remittance = ({ i18n }) => {
     <>
       <Head>
         <title>{i18n.t("Transfer_Money_Remittance_1")}</title>
-        <meta name="description" content="Cashero’s global money transfer service gives you a quick and secure way to send money abroad. We make sending money easy-peasy with no hidden fees. Click here to learn more." />
+        <meta name="description" content={i18n.t("Transfer_Money_Abroad_Meta_Description")} />
         <link
           rel="canonical"
           href="https://www.cashero.com/transfer-money-abroad/"

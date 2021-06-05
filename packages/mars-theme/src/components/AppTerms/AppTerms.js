@@ -164,7 +164,7 @@ const AppTerms = ({ i18n }) => {
                 <ul className="condition-list">
                   <li>{i18n.t("GOLDEN_TICKET_li1")}</li>
                   <li>{i18n.t("Giveaway_h3_5_P")}</li>
-                  <li>{i18n.t("Giveaway_h3_6_P")}</li>
+                  <li>{i18n.t("Giveaway_h3_6_P_1")}</li>
                   <li>{i18n.t("Giveaway_li1")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li5")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li6")}</li>
