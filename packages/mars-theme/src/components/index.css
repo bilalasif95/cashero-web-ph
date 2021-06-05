@@ -13,6 +13,9 @@ body{
     max-width: 1140px !important;
   }
 }
+.font-medium {
+  font-weight: 500;
+}
 
 .navbar{
   padding: 0px !important;
@@ -20,7 +23,7 @@ body{
 .banner {
   margin-top: 100px;
   padding: 37px 0px 37px 0px; }
-  .banner .bannerCont .bannerText {
+  .banner .bannerCont .bannerText, .compaignList .bannerText {
     font-size: 18px;
     color: #9ea0a5;
     font-weight: 400;
@@ -144,6 +147,48 @@ body{
           visibility: hidden !important;
         }
 @media (max-width: 540px) {
+  .Waitlistbtn {
+    width: 75% !important;
+    margin: 0px auto !important;
+    margin-top: 30px !important;
+}
+  .campaignFaq .TabsTitle {
+    font-size: 24px !important;
+    text-transform: capitalize !important;
+    margin-bottom: 25px !important;
+}
+  .campaignFaq {
+    padding: 30px 0px !important;
+  }
+  .inflation-sec {
+    padding: 30px 0px !important;
+    margin-bottom: 0px !important;
+}
+  .inflation-cont {
+    width: 50% !important;}
+  .Compaignbtn {
+    font-size: 16px !important;
+    padding: 10px 0px !important;
+    font-weight: normal !important;
+    margin: 0px auto !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+}
+  .compaignForm {
+    padding: 40px 30px;
+}
+  .seenList {
+    justify-content: center;
+  }
+  .compaignForm h2 {
+    font-size: 24px;
+}
+.compaignForm p {
+  font-size: 14px !important;
+}
+  .compaignForm, .seen-text {
+    margin-top: 30px !important;
+  }
   .bannerEmail {
     display: none; }
   .bannerEmail {
@@ -5541,6 +5586,21 @@ button:focus {
       }
       
       @media (max-width: 375px) {
+        .SignUpTitle {
+          font-size: 28px!important;
+      }
+        .oneAppCont {
+          margin: 20px 0px;
+      }
+        .inflation-sec {
+          padding: 20px 0px!important;
+      }
+        .inflation-cont p {
+          font-size: 14px !important;
+      }
+        .compaignForm {
+          padding: 30px 30px !important;
+      }
         .circle-cont .blue-circle {
           width: 275px;
           height: 290px;
@@ -15971,3 +16031,97 @@ select:-webkit-autofill:focus {
     color: #9ea0a5!important;
     font-weight: 400;
   }
+  .compaignList .bannerText {
+    color: #fff;
+    font-size: 16px;}
+  .compaignList h2:nth-of-type(2) {
+    width: inherit;}
+    .compaignForm {
+      box-shadow: 15px 0 20px rgb(0 0 0 / 30%);
+      border-radius: 10px;
+      background-color: #ffffff;
+      padding: 50px 55px;}
+    .compaignForm h2 {
+      color: #2178f5;
+      margin-bottom: 15px;}
+    .compaignForm p {
+      color: #000 !important;
+      font-size: 16px;
+      margin-bottom: 30px;}
+    .Compaignbtn {
+      background-color: #ee7120;
+      display: block;
+      width: 100%;
+      text-align: center;
+      border-radius: 50px;
+      font-size: 20px;
+      padding: 15px 0px;
+      font-weight: 500;
+      margin: 40px 0px 20px;}
+    .compaignFormCont .form-group {
+      margin-bottom: 30px;}
+    .compaignFormCont input {
+      border: none;
+      border-bottom: 1px solid #0f6df5;
+      border-radius: initial;
+      padding-left: 0px;}
+    .compaignForm a {
+      display: table;
+      color: #b0b1b5;
+      font-size: 14px;
+      text-align: center;
+      margin: 0px auto;
+      text-decoration: underline;}
+    .seenList {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;}
+    .seen-text {
+      margin-top: 80px;}
+    .compaign-banner .PersonalCont h1, .compaignList {
+      margin-bottom: 30px;}
+      .inflation-sec {
+        background-color: #f5f9ff;
+        padding: 70px 0px;
+        margin-bottom: 100px;}
+      .inflation {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;}
+        .inflation-cont {
+          width: 25%;
+        }
+      .inflation-cont p {
+        color: #2178f5 !important;
+        font-size: 18px;}
+        .inflation-cont img {
+          margin-bottom: 15px;}
+          .campaignHeader .GetAppBtn {
+            font-weight: 500;}
+          .compaignLink {
+            color: #ee7120 !important;}
+          .Waitlistbtn {
+            width: 35%;
+            margin: 0px auto;
+            margin-top: 40px;}
+            .campaignFaq {
+              background-color: #fafafa;}
+            .campBold {
+              color: #363636 !important;
+              font-weight: 500;}
+              .campaignFaq .TabsTitle {
+                font-weight: normal;
+                font-size: 36px;
+                text-transform: capitalize;
+                margin-bottom: 70px;
+                color: #363636;}
+                .footerCont img {
+                  margin-bottom: 40px;
+                }
+
+.compaignFormCont .form-control:focus {
+  outline: 0;
+  box-shadow: inherit;
+  border-bottom: 1px solid #0f6df5;
+  color: #495057;
+}

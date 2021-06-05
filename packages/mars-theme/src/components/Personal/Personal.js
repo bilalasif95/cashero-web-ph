@@ -74,12 +74,14 @@ const Personal = ({ i18n }) => {
   return (
     <>
       <Head>
-      <title>{i18n.t("High_Yield_Savings_Account_Menu_1")}</title>
-      <meta name="description" content="Put your money to work with the Cashero High Yield Savings Account. Beat the rate of inflation with an average APY of 5% on your deposits. Our savings accounts..." />
+        <title>{i18n.t("High_Yield_Savings_Account_Menu_1")}</title>
+        <meta name="description" content="Put your money to work with the Cashero High Yield Savings Account. Beat the rate of inflation with an average APY of 5% on your deposits. Our savings accounts..." />
         <link
           rel="canonical"
           href="https://www.cashero.com/high-yield-savings-account/"
         />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/high-yield-savings-account/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/high-yield-savings-account/" />
       </Head>
       <div className="PesonalBanner InterestBanner">
         <div className="container">

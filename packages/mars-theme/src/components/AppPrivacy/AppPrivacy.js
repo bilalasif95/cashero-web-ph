@@ -10,6 +10,8 @@ const AppPrivacy = ({ i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/app-privacy-policy/"
         />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/app-privacy-policy/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/app-privacy-policy/" />
       </Head>
       <div className="container">
         <div className="conditions-cont">
@@ -90,7 +92,7 @@ const AppPrivacy = ({ i18n }) => {
                 </ul>
               </div>
               <div className="terms_titles">
-                <h3>{i18n.t("LEGAL_AUTHORITIES")}</h3>
+                <h3>{i18n.t("PRIVACY_POLICY_P23")}</h3>
                 <p>{i18n.t("LEGAL_AUTHORITIES_P1")}</p>
                 <ul className="condition-list">
                   <li>{i18n.t("LEGAL_AUTHORITIES_li1")}</li>

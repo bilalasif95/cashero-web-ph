@@ -239,12 +239,14 @@ const ExchangeRates = ({ i18n }) => {
   return (
     <>
       <Head>
-      <title>{i18n.t("Online_Currency_Exchange_1")}</title>
-      <meta name="description" content="Exchange currency online easily with the Cashero App. Your currency exchange happens in an instant and with mid-market rates, best of all, there’s no hidden fees." />
+        <title>{i18n.t("Online_Currency_Exchange_1")}</title>
+        <meta name="description" content="Exchange currency online easily with the Cashero App. Your currency exchange happens in an instant and with mid-market rates, best of all, there’s no hidden fees." />
         <link
           rel="canonical"
           href="https://www.cashero.com/online-currency-exchange/"
         />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/online-currency-exchange/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/online-currency-exchange/" />
       </Head>
       <div className="ExchangeBanner">
         <div className="container">

@@ -188,12 +188,12 @@ const thankyouHandler = {
   }
 }
 
-const zendeskHandler = {
-  pattern: "/zendesk",
+const personalCompaignHandler = {
+  pattern: "/PersonalCompaign",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
-      isZendesk: true,
+      isPersonalCompaign: true,
     })
   }
 }
@@ -231,6 +231,7 @@ const marsTheme = {
     theme: {
       init: ({ libraries }) => {
         libraries.source.handlers.push(personalHandler);
+        libraries.source.handlers.push(personalCompaignHandler);
         libraries.source.handlers.push(companyHandler);
         libraries.source.handlers.push(contactusHandler);
         libraries.source.handlers.push(donationHandler);
@@ -247,7 +248,6 @@ const marsTheme = {
         libraries.source.handlers.push(thankyouHandler);
         libraries.source.handlers.push(appPrivacyHandler);
         libraries.source.handlers.push(appTermsHandler);
-        libraries.source.handlers.push(zendeskHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

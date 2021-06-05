@@ -8,6 +8,8 @@ const Sitemap = ({ i18n }) => {
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/sitemap/" />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/sitemap/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/sitemap/" />
       </Head>
       <div className="container">
         <div className="banner">

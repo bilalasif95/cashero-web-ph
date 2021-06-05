@@ -7,6 +7,8 @@ const Giveaway = ({ i18n }) => {
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/giveaway/" />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/giveaway/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/giveaway/" />
       </Head>
       <div className="container">
         <div className="conditions-cont">
@@ -51,8 +53,8 @@ const Giveaway = ({ i18n }) => {
                 <p>{i18n.t("Giveaway_h3_8_P")}</p>
                 <ul className="condition-list">
                   <li>{i18n.t("Giveaway_li1")}</li>
-                  <li>{i18n.t("Giveaway_li2")}</li>
-                  <li>{i18n.t("Giveaway_li3")}</li>
+                  <li>{i18n.t("GOLDEN_TICKET_li5")}</li>
+                  <li>{i18n.t("GOLDEN_TICKET_li6")}</li>
                   <li>{i18n.t("Giveaway_li4")}</li>
                   <li>{i18n.t("Giveaway_li5_1")} <a href="https://www.gamblingcommission.gov.uk/for-the-public/Safer-gambling/Consumer-guides/Running-prize-competitions-and-free-draws.aspx" target="_blank" rel="noopener noreferrer">{i18n.t("Giveaway_li5_2")}</a> {i18n.t("Giveaway_li5_3")}</li>
                 </ul>

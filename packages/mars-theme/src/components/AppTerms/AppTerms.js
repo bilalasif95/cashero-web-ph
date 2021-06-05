@@ -8,6 +8,8 @@ const AppTerms = ({ i18n }) => {
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/app-terms/" />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/app-terms/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/app-terms/" />
       </Head>
       <div className="container">
         <div className="conditions-cont">
@@ -166,7 +168,7 @@ const AppTerms = ({ i18n }) => {
                   <li>{i18n.t("Giveaway_li1")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li5")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li6")}</li>
-                  <li>{i18n.t("GOLDEN_TICKET_li7")}</li>
+                  <li>{i18n.t("Giveaway_li4")}</li>
                   <li>{i18n.t("GOLDEN_TICKET_li8")}</li>
                   <li><a href="https://www.gamblingcommission.gov.uk/for-the-public/Safer-gambling/Consumer-guides/Running-prize-competitions-and-free-draws.aspx" target="_blank" rel="noopener noreferrer">https://www.gamblingcommission.gov.uk/for-the-public/Safer-gambling/Consumer-guides/Running-prize-competitions-and-free-draws.aspx</a></li>
                 </ul>
