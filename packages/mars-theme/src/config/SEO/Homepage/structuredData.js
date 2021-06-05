@@ -1,11 +1,11 @@
 import { websiteLink } from "../../config";
 
-export const structuredData = shop => {
+export const structuredData = home => {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebSite",
-    description: shop.frontity.description,
-    name: shop.frontity.title,
+    description: home.frontity.description,
+    name: home.frontity.title,
     url: websiteLink
   });
 };
