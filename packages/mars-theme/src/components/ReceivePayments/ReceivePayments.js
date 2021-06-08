@@ -17,11 +17,12 @@ import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import KuWu from "../../assets/KuWu.png";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import { Head } from "frontity";
+import { Head, connect } from "frontity";
 import Link from "../link";
+import { structuredData, faqStructuredData, organizationStructuredData } from "../../config/SEO/InstantMoneyTransfer/structuredData";
 import { withTranslation } from "react-i18next";
 
-const ReceivePayments = ({ i18n }) => {
+const ReceivePayments = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
   const appModalOpen = () => {
     setAppModal(true)
@@ -40,6 +41,15 @@ const ReceivePayments = ({ i18n }) => {
         />
         <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/instant-money-transfer/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/instant-money-transfer/" />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {faqStructuredData()}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {organizationStructuredData()}
+        </script>
       </Head>
       <div className="PesonalBanner">
         <div className="container">
@@ -138,4 +148,4 @@ const ReceivePayments = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(ReceivePayments);
+export default connect(withTranslation()(ReceivePayments));

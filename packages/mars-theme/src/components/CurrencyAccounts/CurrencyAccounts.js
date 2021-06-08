@@ -22,13 +22,14 @@ import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import currencieslist from "../../config/currenciesList";
-import { Head } from "frontity";
+import { Head, connect } from "frontity";
 import Link from "../link";
+import { structuredData, faqStructuredData, organizationStructuredData } from "../../config/SEO/MultiCurrencySavingsAccount/structuredData";
 import { withTranslation } from "react-i18next";
 
 var bigDecimal = require("js-big-decimal");
 
-const CurrencyAccounts = ({ i18n }) => {
+const CurrencyAccounts = ({ state, i18n }) => {
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -129,6 +130,15 @@ const CurrencyAccounts = ({ i18n }) => {
         />
         <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/multi-currency-savings-account/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/multi-currency-savings-account/" />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {faqStructuredData()}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {organizationStructuredData()}
+        </script>
       </Head>
       <div className="PesonalBanner InterestBanner">
         <div className="container">
@@ -339,4 +349,4 @@ const CurrencyAccounts = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(CurrencyAccounts);
+export default connect(withTranslation()(CurrencyAccounts));

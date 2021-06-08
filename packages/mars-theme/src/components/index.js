@@ -31,7 +31,6 @@ import AppPrivacy from "./AppPrivacy/AppPrivacy";
 import Sitemap from "./Sitemap/Sitemap";
 import Thankyou from "./Thankyou/Thankyou";
 import { websiteLink } from "../config/config";
-import { structuredData } from "../config/SEO/Homepage/structuredData";
 import { I18nextProvider } from "react-i18next";
 import i18n from '../config/i18n';
 /**
@@ -98,9 +97,6 @@ const Theme = ({ state }) => {
         <meta http-equiv='cache-control' content='no-cache' />
         <meta http-equiv='expires' content='0' />
         <meta http-equiv='pragma' content='no-cache' />
-        <script className="structured-data-list" type="application/ld+json">
-          {structuredData(state)}
-        </script>
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
@@ -139,7 +135,7 @@ const Theme = ({ state }) => {
           <AppTerms when={data.isAppTerms} />
           <AppPrivacy when={data.isAppPrivacy} />
           <Loading when={data.isFetching} />
-          <HomePage when={data.isArchive} state={state} />
+          <HomePage when={data.isArchive} />
           <Post when={data.isPostType} />
           <Sitemap when={data.isSitemap} />
           <Thankyou when={data.isThankYou} />
