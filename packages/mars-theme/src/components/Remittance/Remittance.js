@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Head } from "frontity";
+import { Head, connect } from "frontity";
 import Clock from "../../assets/clockImg.svg";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import Dollarlist from "../../assets/Dollarlist.svg";
@@ -18,10 +18,11 @@ import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import StepsDollar from "../../assets/StepsDollar.svg";
 import Link from "../link";
+import { structuredData, faqStructuredData, organizationStructuredData } from "../../config/SEO/TransferMoneyAbroad/structuredData";
 import Securepayments from "../Securepayments/Securepayments";
 import { withTranslation } from "react-i18next";
 
-const Remittance = ({ i18n }) => {
+const Remittance = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
   const appModalOpen = () => {
     setAppModal(true)
@@ -40,6 +41,15 @@ const Remittance = ({ i18n }) => {
         />
         <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/transfer-money-abroad/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/transfer-money-abroad/" />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {faqStructuredData()}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {organizationStructuredData()}
+        </script>
       </Head>
       <div className="PesonalBanner">
         <div className="container">
@@ -138,4 +148,4 @@ const Remittance = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(Remittance);
+export default connect(withTranslation()(Remittance));

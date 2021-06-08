@@ -22,7 +22,7 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import { Head, connect } from "frontity";
 import Link from "../link";
-import { structuredData } from "../../config/SEO/HighYieldpage/structuredData";
+import { structuredData, faqStructuredData, organizationStructuredData } from "../../config/SEO/HighYieldpage/structuredData";
 import { withTranslation } from "react-i18next";
 
 var bigDecimal = require("js-big-decimal");
@@ -85,6 +85,12 @@ const Personal = ({ state, i18n }) => {
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/high-yield-savings-account/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {faqStructuredData()}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {organizationStructuredData()}
         </script>
       </Head>
       <div className="PesonalBanner InterestBanner">

@@ -23,13 +23,14 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
-import { Head } from "frontity";
+import { Head, connect } from "frontity";
 import Link from "../link";
+import { structuredData, faqStructuredData, organizationStructuredData } from "../../config/SEO/OnlineCurrencyExchange/structuredData";
 import { withTranslation } from "react-i18next";
 
 var bigDecimal = require("js-big-decimal");
 
-const ExchangeRates = ({ i18n }) => {
+const ExchangeRates = ({ state, i18n }) => {
   const appModalOpen = () => {
     setAppModal(true);
   };
@@ -247,6 +248,15 @@ const ExchangeRates = ({ i18n }) => {
         />
         <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/online-currency-exchange/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/online-currency-exchange/" />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {faqStructuredData()}
+        </script>
+        <script className="structured-data-list" type="application/ld+json">
+          {organizationStructuredData()}
+        </script>
       </Head>
       <div className="ExchangeBanner">
         <div className="container">
@@ -717,4 +727,4 @@ const ExchangeRates = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(ExchangeRates);
+export default connect(withTranslation()(ExchangeRates));

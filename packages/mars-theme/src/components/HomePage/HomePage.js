@@ -1,5 +1,5 @@
 import React from "react";
-import { Head } from "frontity";
+import { Head, connect } from "frontity";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import CasheroIntro from "../../assets/cashero-intro.gif";
 import Check from "../../assets/check-mark.svg";
@@ -17,15 +17,19 @@ import Clock from "../../assets/clock.svg";
 import MultiCurrency from "../MultiCurrency/MultiCurrency";
 import { Fade } from "react-awesome-reveal";
 import Link from "../link";
+import { structuredData } from "../../config/SEO/Homepage/structuredData";
 import { withTranslation } from "react-i18next";
 import { websiteLink } from "../../config/config";
 
-const HomePage = ({ i18n }) => {
+const HomePage = ({ state, i18n }) => {
   return (
     <>
       <Head>
         <link rel="alternate" hreflang="en-US" href={websiteLink} />
         <link rel="alternate" hreflang="x-default" href={websiteLink} />
+        <script className="structured-data-list" type="application/ld+json">
+          {structuredData(state)}
+        </script>
       </Head>
       <div className="container">
         <div className="banner">
@@ -95,4 +99,4 @@ const HomePage = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(HomePage);
+export default connect(withTranslation()(HomePage));
