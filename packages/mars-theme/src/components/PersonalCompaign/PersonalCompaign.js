@@ -15,7 +15,6 @@ import CampaignSignup from "../campaignSignup/campaignSignup";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
-import Link from "../link";
 import { withTranslation } from "react-i18next";
 
 const Personal = ({ i18n }) => {
@@ -85,12 +84,13 @@ const Personal = ({ i18n }) => {
       setError("Invalid Email.")
     }
     else {
-      callApi(EndPoints.contactUs, "post", "", {
-        name: name,
-        email: email,
-        message: newPhone,
+      callApi(EndPoints.joinWaitlist, "post", "", {
+        Name: name,
+        Email: email,
+        Phone: newPhone,
+        CountryCode: code,
       }, i18n.language)
-        .then((res) => {
+        .then(() => {
           setLoading(false);
           setSuccessModal(true);
           setName("");
