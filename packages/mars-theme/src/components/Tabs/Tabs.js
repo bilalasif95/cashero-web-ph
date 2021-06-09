@@ -216,7 +216,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											September 2021.
+											{i18n.t("Launch_Date_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>

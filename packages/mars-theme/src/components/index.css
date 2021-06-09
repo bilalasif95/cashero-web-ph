@@ -16049,7 +16049,7 @@ select:-webkit-autofill:focus {
       font-size: 16px;
       margin-bottom: 30px;}
     .Compaignbtn {
-      background-color: #ee7120;
+      background-color: #ee7120 !important;
       display: block;
       width: 100%;
       text-align: center;
@@ -16062,7 +16062,7 @@ select:-webkit-autofill:focus {
       margin-bottom: 30px;}
     .compaignFormCont input {
       border: none;
-      border-bottom: 1px solid #0f6df5;
+      border-bottom: 1px solid #0f6df5 !important;
       border-radius: initial;
       padding-left: 0px;}
     .compaignForm a {
@@ -16124,4 +16124,52 @@ select:-webkit-autofill:focus {
   box-shadow: inherit;
   border-bottom: 1px solid #0f6df5;
   color: #495057;
+}
+.width80 {
+  width: 80%;
+}
+.compaignFormCont .selectCountry .btn {
+  border-bottom: 0px !important;
+  border-radius: 0px;
+}
+.compaign-select .selectCountry .btn {
+  padding: 0!important;
+    display: -webkit-box!important;
+    display: -webkit-flex!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -webkit-align-items: center!important;
+    -webkit-box-align: center!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+    background: transparent !important;
+    color: #363636!important;
+    border-bottom: 1px solid #0f6df5 !important;
+    border: inherit;
+    box-shadow: none!important;
+    border-radius: none!important;
+    cursor: pointer;
+}
+.compaign-select .selectCountry input {
+  border-bottom: 0px !important;
+  width: 100%;
+    border: none;
+    font-size: 16px;
+    height: 46px;
+    color: #363636;
+    cursor: pointer;
+}
+.compaign-select .numberSelection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.compaign-select .selectCountry {
+  width: 16% !important;
+}
+.compaign-select .numberSelection .inputNum input {
+  height: 46px;
+}
+.compaign-select .numberSelection .selectCountry .btn input:focus {
+  outline: none;
 }

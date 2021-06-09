@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const callApi = (endpoint, method, token, payload) => {
+export const callApi = (endpoint, method, token, payload, language) => {
     const authHeaders = token
         ? {
             Authorization: `Bearer ${token}`,
@@ -11,6 +11,7 @@ export const callApi = (endpoint, method, token, payload) => {
         url: endpoint,
         data: payload,
         headers: {
+            'Accept-Language': language === "english" ? "en" : "br",
             'Content-Type': 'application/x-www-form-urlencoded',
             ...authHeaders,
         }

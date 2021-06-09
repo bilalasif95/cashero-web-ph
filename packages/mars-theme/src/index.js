@@ -189,7 +189,7 @@ const thankyouHandler = {
 }
 
 const personalCompaignHandler = {
-  pattern: "/PersonalCompaign",
+  pattern: "/en",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",

@@ -34,7 +34,7 @@ const ContactForm = ({ i18n }) => {
 				name: name,
 				email: email,
 				message: message,
-			})
+			}, i18n.language)
 				.then((res) => {
 					setSuccess(res.message);
 					setTimeout(() => {

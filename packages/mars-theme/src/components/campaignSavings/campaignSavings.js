@@ -21,7 +21,7 @@ const campaignSavings = () => {
 								How High-Yield <span className="br-block-with-no-display"></span> Savings Work
 							</h2>
 							<p>
-								By managing an intelligent portfolio for you, Cashero offers the best high-yield interest rates on your money (between 2 - 5%). You can earn money while you sleep, making Cashero a smart financial decision. Optimize your finances and watch your money grow.
+								By managing an intelligent portfolio for you, Cashero offers the best high-yield interest rates on your money (between 2 - 5% annually). You can earn money while you sleep, making Cashero a smart financial decision. Optimize your finances and watch your money grow.
 							</p>
 							<button onClick={appModalOpen} className="LinkBtn compaignLink" >Join the Waitlist<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</Fade>

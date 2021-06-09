@@ -54,7 +54,7 @@ const TextfieldBanner = ({ i18n }) => {
       UtmMedium: utmMedium,
       UtmSource: utmSource,
       UtmTerm: utmTerm
-    })
+    }, i18n.language)
       .then((res) => {
         setLoading(false);
         if (res.code === 400) {
