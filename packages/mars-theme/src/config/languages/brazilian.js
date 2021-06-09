@@ -572,6 +572,7 @@ export const brazilian = {
     main_features_P7: "por indicar pessoas à Cashero.",
     main_features_Users: "usuários",
     Launch_Date: "Quando a Cashero será oficialmente lançada?",
+    Launch_Date_P: "Setembro 2021.",
     Cashero_regulated: "Como a Cashero é regulamentada?",
     Cashero_regulated_P1: "A Cashero está em processo de se tornar uma instituição financeira regulamentada pela UE.",
     savings_account: "Como faço para abrir uma conta em real com rendimento em dólar?",

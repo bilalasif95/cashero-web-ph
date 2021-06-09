@@ -33,6 +33,7 @@ export const gtmId = "GTM-KKSRK7H";
 export const EndPoints = {
   preregistration: `${API + "/api/users/preregistration"}`,
   contactUs: `${API + "/api/contactUs"}`,
+  joinWaitlist: `${API + "/api/users/waitingregistration"}`,
 };
 
 const firebaseTableName = {

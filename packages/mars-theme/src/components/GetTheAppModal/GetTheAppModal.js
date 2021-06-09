@@ -63,6 +63,7 @@ const GetTheAppModal = (props) => {
   const handleOnChange = (e) => {
     setNewPhoneNumber(e.target.value);
   };
+  const { open, handleClose, i18n } = props;
   const getStarted = () => {
     setLoading(true);
     callApi(EndPoints.preregistration, "post", "", {
@@ -73,7 +74,7 @@ const GetTheAppModal = (props) => {
       UtmMedium: utmMedium,
       UtmSource: utmSource,
       UtmTerm: utmTerm
-    })
+    }, i18n.language)
       .then((res) => {
         setLoading(false);
         if (res.code === 400) {
@@ -112,7 +113,6 @@ const GetTheAppModal = (props) => {
         setPhoneNoLength(10);
       })
   }, [])
-  const { open, handleClose, i18n } = props;
   const onCaptchaHandler = (value) => {
     setValue(value);
   };
