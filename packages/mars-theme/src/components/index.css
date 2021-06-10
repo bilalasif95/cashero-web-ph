@@ -2162,6 +2162,9 @@ b {
     width: 90% !important;
     margin: 0px auto;
     margin-bottom: 40px !important; }
+    .Coins img {
+      margin: 2rem auto;
+    }
   .Coins .HighInterestText {
     color: #9ea0a5 !important;
     text-align: center; }
@@ -16095,6 +16098,7 @@ select:-webkit-autofill:focus {
         color: #2178f5 !important;
         font-size: 18px;}
         .inflation-cont img {
+          height: 70px;
           margin-bottom: 15px;}
           .campaignHeader .GetAppBtn {
             font-weight: 500;}
@@ -16172,4 +16176,30 @@ select:-webkit-autofill:focus {
 }
 .compaign-select .numberSelection .selectCountry .btn input:focus {
   outline: none;
+}
+.PesonalCompaignBanner {
+  background-image: url(https://i.imgur.com/Vbv2uT3.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  padding: 98px 0px 98px 0px;
+  margin-top: 98px;
+}
+.CompaignSignUp {
+  background-image: url(https://i.imgur.com/HL4RcXS.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 134px 0 134px 0;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .compaign-select .selectCountry {
+    width: 25% !important;
+  }
+  .compaign-select .numberSelection .inputNum {
+    width: 70% !important;
+  }
 }
