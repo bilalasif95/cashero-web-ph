@@ -112,12 +112,12 @@ const PersonalCompaign = ({ i18n }) => {
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
-      <div className="PesonalCompaignBanner InterestBanner compaign-banner">
+      <div className="PesonalCompaignBanner compaign-banner">
         <div className="container">
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <p className="text-uppercase bannerPara font-medium">Do your savings need a lifeline? <span className="br-block"></span> cashero is on the way!</p>
+                <p className="text-uppercase bannerPara font-medium">Do your savings need a lifeline?<span className="br-block"></span>cashero is on the way!</p>
                 <h1>{i18n.t("High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
                 <div className="Banner-list compaignList">
                   <h2 className="bannerText">
@@ -143,7 +143,7 @@ const PersonalCompaign = ({ i18n }) => {
             <div className="col-md-5">
               <div className="compaignForm">
                 <h2 className="text-center">Cashero is on the way!</h2>
-                <p className="text-center">We are launching multinationally. <span className="br-block"></span> Be the first to earn with Cashero in USA. <span className="br-block"></span> Join the waitlist, today. </p>
+                <p className="text-center">We are launching multinationally.<span className="br-block"></span>Be the first to earn with Cashero in USA.<span className="br-block"></span>Join the waitlist, today.</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
                     <input type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder="Enter Name" />
@@ -244,19 +244,19 @@ const PersonalCompaign = ({ i18n }) => {
               <div className="inflation">
                 <div className="inflation-cont text-center">
                   <img src={inflation} />
-                  <p>Inflation-beating <span className="br-block"></span> 5% APY</p>
+                  <p>Inflation-beating 5% APY</p>
                 </div>
                 <div className="inflation-cont text-center">
                   <img src={depositUSD} />
-                  <p>Deposit in [local] <span className="br-block"></span> earn in USD</p>
+                  <p>Deposit in [local] earn in USD</p>
                 </div>
                 <div className="inflation-cont text-center">
                   <img src={interestpaid} />
-                  <p>Interest paid out <span className="br-block"></span> daily</p>
+                  <p>Interest paid out daily</p>
                 </div>
                 <div className="inflation-cont text-center">
                   <img src={depositmoneytime} />
-                  <p>Deposit or withdraw your <span className="br-block"></span> money at any time</p>
+                  <p>Deposit or withdraw your money at any time</p>
                 </div>
               </div>
             </div>
