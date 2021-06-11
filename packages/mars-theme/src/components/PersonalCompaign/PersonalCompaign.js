@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Check from "../../assets/check-mark2.png";
-import listGraph from "../../assets/listGraph.svg";
-import HighDollar from "../../assets/HighDollar.svg";
-import Draw from "../../assets/draw.svg";
-import listHome from "../../assets/listHome.svg";
+import depositUSD from "../../assets/depositUSD.svg";
+import inflation from "../../assets/inflation.svg";
+import interestpaid from "../../assets/interestpaid.svg";
+import depositmoneytime from "../../assets/depositmoneytime.svg";
 import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist, recaptchaSiteKep, ipAPI } from "../../config/config";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
@@ -17,7 +17,7 @@ import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const Personal = ({ i18n }) => {
+const PersonalCompaign = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -112,7 +112,7 @@ const Personal = ({ i18n }) => {
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
-      <div className="PesonalBanner InterestBanner compaign-banner">
+      <div className="PesonalCompaignBanner InterestBanner compaign-banner">
         <div className="container">
           <div className="row">
             <div className="col-md-7">
@@ -243,19 +243,19 @@ const Personal = ({ i18n }) => {
             <div className="col-md -12">
               <div className="inflation">
                 <div className="inflation-cont text-center">
-                  <img src={HighDollar} />
-                  <p>inflation-beating <span className="br-block"></span> 5% APY</p>
+                  <img src={inflation} />
+                  <p>Inflation-beating <span className="br-block"></span> 5% APY</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={listGraph} />
+                  <img src={depositUSD} />
                   <p>Deposit in [local] <span className="br-block"></span> earn in USD</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={Draw} />
+                  <img src={interestpaid} />
                   <p>Interest paid out <span className="br-block"></span> daily</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={listHome} />
+                  <img src={depositmoneytime} />
                   <p>Deposit or withdraw your <span className="br-block"></span> money at any time</p>
                 </div>
               </div>
@@ -276,4 +276,4 @@ const Personal = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(Personal);
+export default withTranslation()(PersonalCompaign);

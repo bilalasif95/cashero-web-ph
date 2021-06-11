@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import CoinsUp from "../../assets/coinsUp.png";
+import earncashero from "../../assets/earncashero.png";
 import Arrow from "../../assets/arrowLink.png";
 import { Fade } from "react-awesome-reveal";
 
@@ -17,7 +17,7 @@ const CompaignNoEffort = ({ i18n }) => {
 			<div className="container">
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
-						<img className="img-fluid mx-auto d-block" alt="coins Up" src={CoinsUp} />
+						<img className="img-fluid mx-auto d-block" alt="coins Up" src={earncashero} />
 					</div>
 					<div className="col-md-6">
 						<div className="oneAppCont">

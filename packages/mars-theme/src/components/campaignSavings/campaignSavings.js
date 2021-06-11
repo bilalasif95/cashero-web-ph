@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import BitCircle from "../../assets/BitCircle.png";
+import savingwork from "../../assets/savingwork.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.png";
 const campaignSavings = () => {
@@ -32,7 +32,7 @@ const campaignSavings = () => {
 					<img
 						className="img-fluid mx-auto d-block"
 						alt="Bit Circle"
-						src={BitCircle} />
+						src={savingwork} />
 				</div>
 			</div>
 		</div>
