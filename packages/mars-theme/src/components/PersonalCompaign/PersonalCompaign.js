@@ -144,9 +144,9 @@ const PersonalCompaign = ({ i18n }) => {
               <div className="compaignForm">
                 <h2 className="text-center">Cashero is on the way!</h2>
                 <p className="text-center">We are launching multinationally. <span className="br-block"></span> Be the first to earn with Cashero in USA. <span className="br-block"></span> Join the waitlist, today. </p>
-                <form className="compaignFormCont">
+                <div className="compaignFormCont">
                   <div className="form-group">
-                    <input type="text" className="form-control" autoFocus="true" value={name} onChange={e => setName(e.target.value)} placeholder="Enter Name" />
+                    <input type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder="Enter Name" />
                   </div>
                   <div className="form-group">
                     <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter Email" />
@@ -224,14 +224,14 @@ const PersonalCompaign = ({ i18n }) => {
                     />
                   </div>
                   {error && <label className="contactUsFormError">{error}</label>}
-                  <button onClick={() => getStarted()} disabled={!name || !value || loading || !newPhone.length || (newPhone.length !== phonenoLength)}
+                  <button onClick={() => getStarted()} disabled={!email || !name || !value || loading || !newPhone.length || (newPhone.length !== phonenoLength)}
                     className={
-                      !name || !value || loading || !newPhone.length || (newPhone.length !== phonenoLength)
+                      !email || !name || !value || loading || !newPhone.length || (newPhone.length !== phonenoLength)
                         ? "btn btn-default Compaignbtn disabled"
                         : "btn btn-default Compaignbtn"
                     }>Join the Waitlist</button>
                   <a href="https://www.cashero.com/terms/" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
-                </form>
+                </div>
               </div>
             </div>
           </div>
