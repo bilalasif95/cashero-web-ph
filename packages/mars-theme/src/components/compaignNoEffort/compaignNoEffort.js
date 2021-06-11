@@ -1,17 +1,10 @@
-import React, { useState } from "react";
-import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import React from "react";
 import earncashero from "../../assets/earncashero.png";
 import Arrow from "../../assets/arrowLink.png";
 import { Fade } from "react-awesome-reveal";
+import { animateScroll as scroll } from "react-scroll";
 
-const CompaignNoEffort = ({ i18n }) => {
-	const [appModal, setAppModal] = useState(false);
-	const appModalOpen = () => {
-		setAppModal(true)
-	};
-	const appModalClose = () => {
-		setAppModal(false)
-	};
+const CompaignNoEffort = () => {
 	return (
 		<div className="Coins sm-mb-30">
 			<div className="container">
@@ -27,10 +20,9 @@ const CompaignNoEffort = ({ i18n }) => {
 								</h2>
 								<p className="HighInterestText">Saving can often seem like an uphill struggle, we know. With most traditional accounts you're likely to lose money.</p>
 								<p className="HighInterestText">Cashero is different. We offer a high-yield savings account with bank beating interest rates so you can keep your money above inflation. When your hard earned money needs a Cashero.</p>
-								<button onClick={appModalOpen} className="LinkBtn compaignLink" >Join the Waitlist<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >Join the Waitlist<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 						</div>
-						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 					</div>
 				</div>
 			</div>

@@ -1,16 +1,10 @@
-import React, { useState } from "react";
-import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import React from "react";
 import savingwork from "../../assets/savingwork.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.png";
+import { animateScroll as scroll } from "react-scroll";
+
 const campaignSavings = () => {
-	const [appModal, setAppModal] = useState(false);
-	const appModalOpen = () => {
-		setAppModal(true)
-	};
-	const appModalClose = () => {
-		setAppModal(false)
-	};
 	return (
 		<div className="MultiCurrency sm-mt-40">
 			<div className="row">
@@ -23,9 +17,8 @@ const campaignSavings = () => {
 							<p>
 								By managing an intelligent portfolio for you, Cashero offers the best high-yield interest rates on your money (between 2 - 5% annually). You can earn money while you sleep, making Cashero a smart financial decision. Optimize your finances and watch your money grow.
 							</p>
-							<button onClick={appModalOpen} className="LinkBtn compaignLink" >Join the Waitlist<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >Join the Waitlist<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</Fade>
-						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 					</div>
 				</div>
 				<div className="col-md-6">

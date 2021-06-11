@@ -12,7 +12,7 @@ import Savings from "../campaignSavings/campaignSavings";
 import CampaignTabs from "../campaignTabs/campaignTabs";
 import SearchIcon from "@material-ui/icons/Search";
 import CampaignSignup from "../campaignSignup/campaignSignup";
-import ThanksModal from "../ThanksModal/ThanksModal";
+import CompaignThanksModal from "../CompaignThanksModal/CompaignThanksModal";
 import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
@@ -123,30 +123,30 @@ const PersonalCompaign = ({ i18n }) => {
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
                     Get up to 5% APY saving
-                    </h2>
+                  </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
                     Deposit in [local], earn in USD
                   </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
-                     Exchange currencies, send money abroad & make instant payments
+                    Exchange currencies, send money abroad & make instant payments
                   </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
-                     No hidden fees, no minimum balance, no stress :)
+                    No hidden fees, no minimum balance, no stress :)
                   </h2>
                 </div>
-                <p className="bannerPara font-medium">With Cashero, we protect your value for money and maximize your savings. Get higher returns and make your money works for you.</p>
+                <p className="bannerPara font-medium">With Cashero, we protect your value for money and maximize your savings. Get higher returns and make your money work for you.</p>
               </div>
             </div>
             <div className="col-md-5">
               <div className="compaignForm">
                 <h2 className="text-center">Cashero is on the way!</h2>
-                <p className="text-center">We are launching multinationally. <span className="br-block"></span> Be the first to earn with Cashero in [country name]. <span className="br-block"></span> Join the waitlist, today. </p>
+                <p className="text-center">We are launching multinationally. <span className="br-block"></span> Be the first to earn with Cashero in USA. <span className="br-block"></span> Join the waitlist, today. </p>
                 <form className="compaignFormCont">
                   <div className="form-group">
-                    <input type="text" className="form-control" value={name} onChange={e => setName(e.target.value)} placeholder="Enter Name" />
+                    <input type="text" className="form-control" autoFocus="true" value={name} onChange={e => setName(e.target.value)} placeholder="Enter Name" />
                   </div>
                   <div className="form-group">
                     <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter Email" />
@@ -268,7 +268,7 @@ const PersonalCompaign = ({ i18n }) => {
         <Savings />
       </div>
       {openSuccessModal && (
-        <ThanksModal open={openSuccessModal} handleClose={thanksModalClose} />
+        <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} />
       )}
       <CampaignTabs />
       <CampaignSignup />
