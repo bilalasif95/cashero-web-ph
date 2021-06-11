@@ -137,7 +137,7 @@ const Personal = ({ i18n }) => {
                      No hidden fees, no minimum balance, no stress :)
                   </h2>
                 </div>
-                <p className="bannerPara font-medium">With Cashero, we protect your value for money and <span className="br-block"></span> maximize your savings. Get higher returns and make your <span className="br-block"></span> money works for you.</p>
+                <p className="bannerPara font-medium">With Cashero, we protect your value for money and maximize your savings. Get higher returns and make your money works for you.</p>
               </div>
             </div>
             <div className="col-md-5">
