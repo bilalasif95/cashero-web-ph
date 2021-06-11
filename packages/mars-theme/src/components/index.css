@@ -1063,7 +1063,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     margin: 20px 0px 20px 0px !important; }
   .BlogTabs {
     width: 100%; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 25px; } }
 
 /* .sideBlogs div:last-child {
@@ -1085,7 +1085,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     height: 130px; }
   .MainblogImg {
     height: 250px; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 24px; }
   .BlogCont .BlogSideBox {
     margin-bottom: 20px; }
@@ -1102,7 +1102,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     font-size: 14px; }
   .BlogCont p {
     font-size: 14px; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 20px !important;
     margin-bottom: 10px !important; }
   .BlogCont .MoreBlogsCont p {
@@ -1570,7 +1570,7 @@ b {
     text-align: center; }
     .ContactSection .ContactBox img {
       margin-top: -185px; }
-    .ContactSection .ContactBox h1 {
+    .ContactSection .ContactBox h2 {
       font-size: 48px;
       margin-bottom: 26px;
       font-weight: 400; }
@@ -1578,7 +1578,7 @@ b {
       font-size: 16px; }
 
 @media (max-width: 540px) {
-  .ContactForm h1 {
+  .ContactForm h2 {
     font-size: 32px !important;
 }
   .ContactSection {
@@ -1589,7 +1589,7 @@ b {
       padding: 50px 20px 50px 20px; }
       .ContactSection .ContactBox img {
         margin-top: -119px; }
-      .ContactSection .ContactBox h1 {
+      .ContactSection .ContactBox h2 {
         font-size: 48px;
         margin-bottom: 26px; }
       .ContactSection .ContactBox p {
@@ -3394,7 +3394,7 @@ button:focus {
       padding: 0.84rem 1rem !important;
       text-transform: none !important;
       width: 100% !important; }
-    .BlogTabs .dropdown h1 {
+    .BlogTabs .dropdown h2 {
       font-size: 16px !important;
       font-weight: 400;
       margin: 0 !important; }
@@ -3424,7 +3424,7 @@ button:focus {
       cursor: pointer;
       height: 100%;
       object-fit: cover; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 32px;
       color: #363636;
       font-weight: 400;
@@ -3488,7 +3488,7 @@ button:focus {
     padding: 6px 15px 6px 15px !important; }
   .BlogCont {
     margin: 30px 0px 0px 0px; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 24px;
       margin-bottom: 12px; }
   .date {
@@ -3614,7 +3614,7 @@ button:focus {
     padding: 6px 15px 6px 15px !important; }
   .BlogCont {
     margin: 30px 0px 0px 0px; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 24px;
       margin-bottom: 12px; }
   .date {
@@ -3906,7 +3906,7 @@ button:focus {
   padding: 80px 0px; }
   .Countup .CountupCont {
     text-align: center; }
-    .Countup .CountupCont h1 {
+    .Countup .CountupCont h2 {
       color: #363636;
       font-size: 60px;
       font-weight: 700;
@@ -3927,7 +3927,7 @@ button:focus {
 @media (max-width: 540px) {
   .Countup {
     padding: 20px 0px; }
-    .Countup .CountupCont h1 {
+    .Countup .CountupCont h2 {
       font-size: 46px;
       margin-bottom: 20px; }
   .OpeningSection {
@@ -4014,7 +4014,7 @@ button:focus {
         .Enhance {
           padding: 30px 0px 0px 0px;
       }
-        .ContactSection .ContactBox h1 {
+        .ContactSection .ContactBox h2 {
           font-size: 32px;
           margin-bottom: 15px;
       }
@@ -4029,7 +4029,7 @@ button:focus {
         margin-bottom: 10px;
         font-size: 40px;
     }
-      .Countup .CountupCont h1 {
+      .Countup .CountupCont h2 {
         font-size: 40px;
       }
       
@@ -15895,7 +15895,7 @@ select:-webkit-autofill:focus {
     .ContactFormBox {
       margin: 98px 0px 98px 0px;
     }
-    .ContactForm h1 {
+    .ContactForm h2 {
       margin-bottom: 30px;
       font-size: 48px;
       font-weight: 400;

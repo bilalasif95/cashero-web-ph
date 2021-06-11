@@ -15,11 +15,11 @@ const MultiCurrency = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
-							<h1 className="oneAppTitle">
+							<h2 className="oneAppTitle">
 								{i18n.t("Multi_Currency")}
 								<span className="br-block"></span>
 								{i18n.t("Savings_Account")}
-							</h1>
+							</h2>
 							<p>{i18n.t("Multi_Currency_Savings_Account_MainP")} </p>
 							<Link link="/multi-currency-savings-account" className="Link sm-mb-30">
 								{i18n.t("Learn_more_about_Accounts")}<img className="ArrowBtn" alt="Arrow" src={Arrow} />

@@ -21,7 +21,7 @@ const BetterPlace = ({ i18n }) => {
 					</div>
 					<div className="col-md-6">
 						<div className="MoneyRequestCont">
-							<h1 className="oneAppTitle sm-mt-30"> {i18n.t("Raise_More_Money_to")} <span className="br-block-with-no-display"></span> {i18n.t("Make_Our_World_a")} <span className="br-block-with-no-display"></span> {i18n.t("Better_Place")} </h1>
+							<h2 className="oneAppTitle sm-mt-30"> {i18n.t("Raise_More_Money_to")} <span className="br-block-with-no-display"></span> {i18n.t("Make_Our_World_a")} <span className="br-block-with-no-display"></span> {i18n.t("Better_Place")} </h2>
 							<p>{i18n.t("Better_Place_P1")}</p>
 							<p>{i18n.t("Better_Place_P2")}</p>
 							<p>{i18n.t("Better_Place_P3")}</p>

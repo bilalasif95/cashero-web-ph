@@ -14,11 +14,11 @@ const MoneyRequest = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
+							<h2 className="oneAppTitle">
 								{i18n.t("Instant_Money")}
 								<span className="br-block"></span>
 								{i18n.t("Transfer")}
-							</h1>
+							</h2>
 							<p>{i18n.t("Money_Request_P")}</p>
 							<Link link="/instant-money-transfer" className="Link">
 								{i18n.t("Learn_more_about_Payments")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
