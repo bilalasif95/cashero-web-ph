@@ -6,7 +6,7 @@ import { animateScroll as scroll } from "react-scroll";
 
 const campaignSavings = () => {
 	return (
-		<div className="MultiCurrency sm-mt-40">
+		<div className="MultiCurrency sm-mt-40 campaignSavings">
 			<div className="row">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">

@@ -48,7 +48,7 @@ const CampaignFooter = () => {
 							<Link link="/">
 								<img src={Logo} alt="logo" />
 							</Link>
-							<p>Cashero Financial OÜ (16169563) trading as “Cashero” is a private limited company with its registered address at Keemia 4, <span className="br-block"></span> 10616 Tallinn, Estonia. Phone +3727124338.</p>
+							<p>Cashero Financial OÜ (16169563) trading as “Cashero” is a private limited company with its registered address at Keemia 4,<span className="br-block"></span>10616 Tallinn, Estonia. Phone +3727124338.</p>
 							<p>Copyright © 2021 Cashero. All rights reserved</p>
 						</div>
 					
