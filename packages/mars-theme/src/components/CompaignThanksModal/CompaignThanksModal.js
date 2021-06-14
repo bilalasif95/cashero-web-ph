@@ -12,7 +12,7 @@ import { withTranslation } from "react-i18next";
 import { websiteLink } from "../../config/config";
 
 const CompaignThanksModal = (props) => {
-    const { open, handleClose, i18n } = props
+    const { open, handleClose, i18n, lang } = props
     return (
         <Modal
             aria-labelledby="transition-modal-title"
@@ -35,15 +35,15 @@ const CompaignThanksModal = (props) => {
                         <div className="row waitlistRow">
                             <div className="col-md-6">
                                 <div className="waitlistcont">
-                                    <h3 id="transition-modal-title">Thank you for joining <span className="br-block-with-no-display"></span> Cashero's waitlist!</h3>
-                                    <p>When Cashero becomes available in your country, we'll send you an SMS to download the app. We look forward to welcoming more users soon!</p>
+                                    <h3 id="transition-modal-title">{i18n.t("Thank_you_for_joining")} <span className="br-block-with-no-display"></span> {i18n.t("Cashero_waitlist")}</h3>
+                                    <p>{i18n.t("Cashero_waitlist_P")}</p>
                                 </div>
                                 <div className="win-cont">
                                     <ul className="Thankyou-modal-list list-unstyled">
                                         <li>{i18n.t("Click_AND_Share")}</li>
-                                        <li><FacebookShareButton quote="I just joined Cashero's waitlist! Soon I'll be able to start earning up to 5% APY. Join the waitlist today: https://www.cashero.com/en/" url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>
-                                        <li><TwitterShareButton title="I just joined Cashero's waitlist! Soon I'll be able to start earning up to 5% APY. Join the waitlist today: " url="https://www.cashero.com/en/"><img alt="Twitter" src={Twitter} /> </TwitterShareButton></li>
-                                        <li><EmailShareButton separator=" " subject="Join Cashero" body="I just joined Cashero's waitlist! Soon I'll be able to start earning up to 5% APY. Join the waitlist today: " url="https://www.cashero.com/en/"><img alt="gmail" src={Gmail} /> </EmailShareButton></li>
+                                        <li><FacebookShareButton quote={`${i18n.t("Cashero_waitlist_Quote")}${`https://www.cashero.com/${lang}/`}`} url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>
+                                        <li><TwitterShareButton title={i18n.t("Cashero_waitlist_Quote")} url={`${`https://www.cashero.com/${lang}/`}`}><img alt="Twitter" src={Twitter} /> </TwitterShareButton></li>
+                                        <li><EmailShareButton separator=" " subject="Join Cashero" body={i18n.t("Cashero_waitlist_Quote")} url={`${`https://www.cashero.com/${lang}/`}`}><img alt="gmail" src={Gmail} /> </EmailShareButton></li>
                                     </ul>
                                 </div>
                             </div>

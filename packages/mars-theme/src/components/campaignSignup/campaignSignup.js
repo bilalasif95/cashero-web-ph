@@ -1,17 +1,18 @@
 import React from "react";
 import { animateScroll as scroll } from "react-scroll";
+import { withTranslation } from "react-i18next";
 
-const campaignSignup = () => {
+const campaignSignup = ({ i18n }) => {
   return (
     <div className="CompaignSignUp">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1 className="SignUpTitle campTabtitle">Cashero's here to keep you on top</h1>
+            <h2 className="SignUpTitle campTabtitle">{i18n.t("CampaignSignup_1")}</h2>
             <h3 className="SignUpText mb-0">
-              Make a smart financial decision today and get better rates without <span className="br-block"></span> sacrificing access to your cash. Maximize your earnings and learn  <span className="br-block"></span> how to get the most out of your money, with Cashero.
+              {i18n.t("CampaignSignup_2")}<span className="br-block"></span>{i18n.t("CampaignSignup_3")}<span className="br-block"></span>{i18n.t("CampaignSignup_4")}
             </h3>
-            <button onClick={() => scroll.scrollToTop()} className="btn btn-default Compaignbtn Waitlistbtn">Join the Waitlist</button>
+            <button onClick={() => scroll.scrollToTop()} className="btn btn-default Compaignbtn Waitlistbtn">{i18n.t("Join_the_Waitlist")}</button>
           </div>
         </div>
       </div>
@@ -19,4 +20,4 @@ const campaignSignup = () => {
   );
 }
 
-export default campaignSignup;
+export default withTranslation()(campaignSignup);
