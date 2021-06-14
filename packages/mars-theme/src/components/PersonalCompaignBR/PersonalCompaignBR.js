@@ -17,7 +17,7 @@ import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const PersonalCompaign = ({ i18n }) => {
+const PersonalCompaignBR = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -61,15 +61,23 @@ const PersonalCompaign = ({ i18n }) => {
     callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
+          if (res.country_code === "BR") {
+            i18n.changeLanguage("brazilian")
+          }
+          else {
+            i18n.changeLanguage("english")
+          }
           setCode(res.country_phone);
           const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
           setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
+          i18n.changeLanguage("english")
           setCode("+1");
           setPhoneNoLength(10);
         }
       }).catch(() => {
+        i18n.changeLanguage("english")
         setCode("+1");
         setPhoneNoLength(10);
       })
@@ -109,8 +117,8 @@ const PersonalCompaign = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/en/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -127,7 +135,7 @@ const PersonalCompaign = ({ i18n }) => {
                   </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
-                    {i18n.t("Compaign_Img_2")}
+                    {i18n.t("Compaign_Img_2_1")}
                   </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
@@ -144,7 +152,7 @@ const PersonalCompaign = ({ i18n }) => {
             <div className="col-md-5">
               <div className="compaignForm">
                 <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
-                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")} USA.<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
+                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")} Brazil.<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
                     <input type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
@@ -249,7 +257,7 @@ const PersonalCompaign = ({ i18n }) => {
                 </div>
                 <div className="inflation-cont text-center">
                   <img src={depositUSD} />
-                  <p>{i18n.t("Compaign_Img_2")}</p>
+                  <p>{i18n.t("Compaign_Img_2_1")}</p>
                 </div>
                 <div className="inflation-cont text-center">
                   <img src={interestpaid} />
@@ -268,11 +276,11 @@ const PersonalCompaign = ({ i18n }) => {
       <div className="container">
         <Savings />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="br" />}
       <CampaignTabs />
       <CampaignSignup />
     </>
   );
 }
 
-export default withTranslation()(PersonalCompaign);
+export default withTranslation()(PersonalCompaignBR);

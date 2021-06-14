@@ -3,8 +3,9 @@ import savingwork from "../../assets/savingwork.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.png";
 import { animateScroll as scroll } from "react-scroll";
+import { withTranslation } from "react-i18next";
 
-const campaignSavings = () => {
+const campaignSavings = ({ i18n }) => {
 	return (
 		<div className="MultiCurrency sm-mt-40 campaignSavings">
 			<div className="row">
@@ -12,12 +13,12 @@ const campaignSavings = () => {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
 							<h2 className="oneAppTitle">
-								How High-Yield <span className="br-block-with-no-display"></span> Savings Work
+								{i18n.t("How_High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Work")}
 							</h2>
 							<p>
-								By managing an intelligent portfolio for you, Cashero offers the best high-yield interest rates on your money (between 2 - 5% annually). You can earn money while you sleep, making Cashero a smart financial decision. Optimize your finances and watch your money grow.
+								{i18n.t("CampaignSavings_P")}
 							</p>
-							<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >Join the Waitlist<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</Fade>
 					</div>
 				</div>
@@ -32,4 +33,4 @@ const campaignSavings = () => {
 	);
 }
 
-export default campaignSavings;
+export default withTranslation()(campaignSavings);

@@ -77,6 +77,7 @@ const TextfieldBanner = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
+    setSearchResults(counrtrylist);
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
     setUtmContent(qs.utm_content)

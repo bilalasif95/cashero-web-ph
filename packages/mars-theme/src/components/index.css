@@ -247,6 +247,13 @@ body{
       width: 100%;
       display: block; } }
 
+@media (min-width: 475px) {
+  .CampaignFooter {
+    width: 65%;
+    margin: 0 auto 1rem;
+  }
+}
+
 @media (max-width: 480px) {
   .bannerImg {
     padding: 0 !important; }

@@ -3,8 +3,9 @@ import earncashero from "../../assets/earncashero.png";
 import Arrow from "../../assets/arrowLink.png";
 import { Fade } from "react-awesome-reveal";
 import { animateScroll as scroll } from "react-scroll";
+import { withTranslation } from "react-i18next";
 
-const CompaignNoEffort = () => {
+const CompaignNoEffort = ({ i18n }) => {
 	return (
 		<div className="Coins sm-mb-30">
 			<div className="container">
@@ -16,11 +17,11 @@ const CompaignNoEffort = () => {
 						<div className="oneAppCont">
 							<Fade triggerOnce direction="up">
 								<h2 className="HighInterestTitle">
-									Earn the Cashero Way
+									{i18n.t("Earn_the_Cashero_Way")}
 								</h2>
-								<p className="HighInterestText">Saving can often seem like an uphill struggle, we know. With most traditional accounts you're likely to lose money.</p>
-								<p className="HighInterestText">Cashero is different. We offer a high-yield savings account with bank beating interest rates so you can keep your money above inflation. When your hard earned money needs a Cashero.</p>
-								<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >Join the Waitlist<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<p className="HighInterestText">{i18n.t("CompaignNoEffort_P1")}</p>
+								<p className="HighInterestText">{i18n.t("CompaignNoEffort_P2")}</p>
+								<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 						</div>
 					</div>
@@ -30,4 +31,4 @@ const CompaignNoEffort = () => {
 	);
 }
 
-export default CompaignNoEffort;
+export default withTranslation()(CompaignNoEffort);

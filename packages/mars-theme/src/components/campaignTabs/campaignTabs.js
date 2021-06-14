@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
@@ -6,9 +6,9 @@ import Typography from "@material-ui/core/Typography";
 import { styled } from "frontity";
 import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 import ControlPointIcon from "@material-ui/icons/ControlPoint";
+import { withTranslation } from "react-i18next";
 
-const campaignTabs = (props) => {
-
+const campaignTabs = ({ i18n }) => {
 	const [expanded, setExpanded] = useState("panel1");
 	const accordionhandleChange = (panel) => (
 		event,
@@ -16,13 +16,12 @@ const campaignTabs = (props) => {
 	) => {
 		setExpanded(newExpanded ? panel : false);
 	};
-
 	return (
 		<div className="Questions campaignFaq">
 			<div className="container">
 				<div className="row">
 					<div className="col-md-8 offset-md-2 col-sm-12">
-						<h3 className="TabsTitle text-center">Frequently Asked Questions</h3>
+						<h3 className="TabsTitle text-center">{i18n.t("Frequently_Asked_Questions")}</h3>
 						<div className="CollapseToggle">
 							<PanelHeadTabs>
 								<Accordion
@@ -42,14 +41,14 @@ const campaignTabs = (props) => {
 										className="iconSet"
 									>
 										<h3 className="heading">
-											What is Cashero?
-									</h3>
+											{i18n.t("What_is_Cashero")}
+										</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
 											<p className="FaqText">
-												Cashero is a high-interest savings platform that lets you make instant online transfers and cross-border payments in multiple currencies.
-										</p>
+												{i18n.t("What_is_Cashero_P_1_1")}
+											</p>
 										</Typography>
 									</AccordionDetails>
 								</Accordion>
@@ -69,44 +68,42 @@ const campaignTabs = (props) => {
 										id="panel2a-header"
 									>
 										<h3 className="heading">
-											What are Cashero's main features?
-									</h3>
+											{i18n.t("What_are_Cashero_main_features")}
+										</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
 											<p className="FaqText">
 												<span className="campBold">
-													Cashero offers high-yield savings to keep your money above inflation with bank-beating interest rates of 2% - 5% APY.
-											</span>
+													{i18n.t("What_are_Cashero_main_features_P")}
+												</span>
 											</p>
-
 											<p className="campBold mb-0">
-												A Multi-Currency Wallet
-										</p>
+												{i18n.t("What_are_Cashero_main_features_P1")}
+											</p>
 											<p className="FaqText">
-												Users can hold their balance in USD, GBP and EUR to reduce fluctuations. There's no minimum balance or maintenance fees.
-										</p>
-											<p className="campBold mb-0">Currency Conversion</p>
+												{i18n.t("What_are_Cashero_main_features_P2")}
+											</p>
+											<p className="campBold mb-0">{i18n.t("Currency_conversion")}:</p>
 											<p className="FaqText">
-												Instantly switch between currencies USD, EUR and GBP.
-										</p>
-											<p className="campBold mb-0">Instant Payments</p>
+												{i18n.t("What_are_Cashero_main_features_P3")}
+											</p>
+											<p className="campBold mb-0">{i18n.t("Instant_Payments")}:</p>
 											<p className="FaqText">
-												Cashero lets you send, request and receive money instantly around the world.
-										</p>
-											<p className="campBold mb-0">Business:</p>
+												{i18n.t("What_are_Cashero_main_features_P4")}
+											</p>
+											<p className="campBold mb-0">{i18n.t("main_features_B5")}</p>
 											<p className="FaqText">
-												Businesses can also send, request, and receive money from customers around the world in different currencies.
-										</p>
-											<p className="campBold mb-0">Fee-free charity donations</p>
+												{i18n.t("What_are_Cashero_main_features_P5")}
+											</p>
+											<p className="campBold mb-0">{i18n.t("main_features_B6")}</p>
 											<p className="FaqText">
-												Charities can get donations by signing up to Cashero and use their Cashero link to request donations.
-										</p>
-											<p className="campBold mb-0">Rewards</p>
+												{i18n.t("What_are_Cashero_main_features_P6")}
+											</p>
+											<p className="campBold mb-0">{i18n.t("main_features_B7")}</p>
 											<p className="FaqText">
-												What's more, users can earn rewards when you refer your friends and colleagues to Cashero.
-										</p>
-
+												{i18n.t("What_are_Cashero_main_features_P7")}
+											</p>
 										</Typography>
 									</AccordionDetails>
 								</Accordion>
@@ -126,14 +123,14 @@ const campaignTabs = (props) => {
 										id="panel3a-header"
 									>
 										<h3 className="heading">
-											When will Cashero officially launch?
-									</h3>
+											{i18n.t("Launch_Date")}
+										</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
 											<p className="FaqText">
-												September 2021.
-										</p>
+												{i18n.t("Launch_Date_P")}
+											</p>
 										</Typography>
 									</AccordionDetails>
 								</Accordion>
@@ -153,14 +150,14 @@ const campaignTabs = (props) => {
 										id="panel4a-header"
 									>
 										<h3 className="heading">
-											How is Cashero regulated?
-									</h3>
+											{i18n.t("Cashero_regulated")}
+										</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
 											<p className="FaqText">
-												Cashero is in the process of becoming an EU-regulated financial institution.
-										</p>
+												{i18n.t("Cashero_regulated_P1")}
+											</p>
 										</Typography>
 									</AccordionDetails>
 								</Accordion>
@@ -180,14 +177,14 @@ const campaignTabs = (props) => {
 										id="panel5a-header"
 									>
 										<h3 className="heading">
-											Is my money safe?
-									</h3>
+											{i18n.t("money_safe_2")}
+										</h3>
 									</AccordionSummary>
 									<AccordionDetails>
 										<Typography>
 											<p className="FaqText">
-												Ever heard of multi-party computation (MPC) and hardware isolation? In short, this is a highly secured cryptographic network shared between systems using intel SGX enclaves. That's complex, but these security layers ensure your money is protected.
-										</p>
+												{i18n.t("money_safe_2_1")}
+											</p>
 										</Typography>
 									</AccordionDetails>
 								</Accordion>
@@ -200,7 +197,8 @@ const campaignTabs = (props) => {
 	);
 }
 
-export default campaignTabs;
+export default withTranslation()(campaignTabs);
+
 const PanelHeadTabs = styled.div`
 	.MuiPaper-root {
 		background: transparent !important;
