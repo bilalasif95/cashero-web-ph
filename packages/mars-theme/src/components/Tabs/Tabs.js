@@ -81,7 +81,7 @@ const QuestionTabs = (props) => {
 							>
 								<Tab
 									className="customTabs"
-									label={i18n.t("General")}
+									label={i18n.t("GENERAL")}
 									{...a11yProps(0)}
 								/>
 								<Tab
