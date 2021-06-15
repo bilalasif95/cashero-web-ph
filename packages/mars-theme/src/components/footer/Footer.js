@@ -90,7 +90,7 @@ const Footer = ({ i18n }) => {
 						<p>Cashero 2021&copy;&reg;</p>
 					</div>
 					<div className="SocialCont">
-						<p>United States - English</p>
+						{/* <p>United States - English</p> */}
 						<ul className="SocialIcons list-unstyled">
 							<li><a href="https://www.linkedin.com/company/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" src={LinkedIn} /> </a></li>
 							<li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
