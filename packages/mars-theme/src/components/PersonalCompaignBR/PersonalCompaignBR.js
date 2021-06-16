@@ -57,27 +57,20 @@ const PersonalCompaignBR = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
+    i18n.changeLanguage("brazilian")
     setSearchResults(counrtrylist);
     callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
-          if (res.country_code === "BR") {
-            i18n.changeLanguage("brazilian")
-          }
-          else {
-            i18n.changeLanguage("english")
-          }
           setCode(res.country_phone);
           const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
           setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          i18n.changeLanguage("english")
           setCode("+1");
           setPhoneNoLength(10);
         }
       }).catch(() => {
-        i18n.changeLanguage("english")
         setCode("+1");
         setPhoneNoLength(10);
       })
