@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Check from "../../assets/check-mark2.png";
+import { parse as parseQs } from "qs";
 import depositUSD from "../../assets/depositUSD.svg";
 import inflation from "../../assets/inflation.svg";
 import interestpaid from "../../assets/interestpaid.svg";
@@ -31,6 +32,11 @@ const PersonalCompaign = ({ i18n }) => {
   const [phonenoLength, setPhoneNoLength] = useState(0);
   const [openSuccessModal, setSuccessModal] = useState(false);
   const [error, setError] = useState("");
+  const [utmCampaign, setUtmCampaign] = useState("");
+  const [utmContent, setUtmContent] = useState("");
+  const [utmMedium, setUtmMedium] = useState("");
+  const [utmSource, setUtmSource] = useState("");
+  const [utmTerm, setUtmTerm] = useState("");
   const toggle = () => {
     setSearchTerm("");
     setDropdownOpen((prevState) => !prevState);
@@ -57,6 +63,13 @@ const PersonalCompaign = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
+    i18n.changeLanguage("english")
+    const qs = parseQs(window.location.search.substr(1));
+    setUtmCampaign(qs.utm_campaign)
+    setUtmContent(qs.utm_content)
+    setUtmMedium(qs.utm_medium)
+    setUtmSource(qs.utm_source)
+    setUtmTerm(qs.utm_term)
     setSearchResults(counrtrylist);
     callApi(ipAPI, "get")
       .then((res) => {
@@ -90,6 +103,11 @@ const PersonalCompaign = ({ i18n }) => {
         Email: email,
         Phone: newPhone,
         CountryCode: code,
+        UtmCampaign: utmCampaign,
+        UtmContent: utmContent,
+        UtmMedium: utmMedium,
+        UtmSource: utmSource,
+        UtmTerm: utmTerm
       }, i18n.language)
         .then(() => {
           setLoading(false);

@@ -3,6 +3,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import XHR from "i18next-xhr-backend";
 import { english } from "./languages/english";
 import { brazilian } from "./languages/brazilian";
+import { portuguese } from "./languages/portuguese";
 
 i18n.use(XHR).use(LanguageDetector).init({
     // we init with resources
@@ -13,6 +14,9 @@ i18n.use(XHR).use(LanguageDetector).init({
         brazilian: {
             translations: brazilian
         },
+        portuguese: {
+            translations: portuguese
+        }
     },
     // lng:"eng",
     fallbackLng: "english",

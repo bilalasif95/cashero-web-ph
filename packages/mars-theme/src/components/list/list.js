@@ -7,6 +7,7 @@ import Link from "../link";
 import Logo from "../../assets/logo.svg";
 import Close from "../../assets/clear.svg";
 import close from "../../assets/close.svg";
+import Lang from "../../assets/lang-icon.png";
 import DropdownGraph from "../../assets/DropdownGraph.svg";
 import DropdownArrow from "../../assets/DropdownArrow.svg";
 import CharityImg from "../../assets/charityImg.svg";
@@ -362,6 +363,14 @@ const List = ({ i18n }) => {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="HeaderListCont">
+                        <p className="ListTitle CharityTitle">
+                            <img
+                              src={Lang}
+                              alt="Charity"
+                            />
+                            {/* {i18n.t("Charities")} */}
+                            Languages
+                          </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => { setLanguageLocal("english"); setToggleBotton(false) }}>
                               English

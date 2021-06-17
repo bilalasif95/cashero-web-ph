@@ -13,6 +13,7 @@ import externalCss from "./index.css";
 import Personal from "./Personal/Personal";
 import PersonalCompaign from "./PersonalCompaign/PersonalCompaign";
 import PersonalCompaignBR from "./PersonalCompaignBR/PersonalCompaignBR";
+import PersonalCompaignPT from "./PersonalCompaignPT/PersonalCompaignPT";
 import Footer from "./footer/Footer";
 import BlogPage from "./BlogPage/BlogPage";
 import HomePage from "./HomePage/HomePage";
@@ -109,7 +110,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR) ? <CampaignHeader /> : <List />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT) ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -144,9 +145,10 @@ const Theme = ({ state }) => {
           <PageError when={data.isError} />
           <PersonalCompaign when={data.isPersonalCompaign} />
           <PersonalCompaignBR when={data.isPersonalCompaignBR} />
+          <PersonalCompaignPT when={data.isPersonalCompaignPT} />
         </Switch>
         {/* </Main> */}
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR) ? <CampaignFooter /> : <Footer />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT) ? <CampaignFooter /> : <Footer />}
       </I18nextProvider >
     </>
   );
