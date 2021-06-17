@@ -357,7 +357,7 @@ const List = ({ i18n }) => {
                     {Language === "english" ? "Eng" : "Pt"}
                   </a>
                   <div
-                    className={languageToggleBotton ? "dropdown-menu toggleButtonShow" : "dropdown-menu"}
+                    className={languageToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
                     aria-labelledby="navbarDropdown"
                   >
                     <div className="row">
