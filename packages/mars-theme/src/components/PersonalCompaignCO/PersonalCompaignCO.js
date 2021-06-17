@@ -18,7 +18,7 @@ import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const PersonalCompaignSG = ({ i18n }) => {
+const PersonalCompaignCO = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -127,8 +127,8 @@ const PersonalCompaignSG = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="en-SG" href="https://www.cashero.com/sg/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/sg/" />
+        <link rel="alternate" hreflang="en-CO" href="https://www.cashero.com/co/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/co/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -162,7 +162,7 @@ const PersonalCompaignSG = ({ i18n }) => {
             <div className="col-md-5">
               <div className="compaignForm">
                 <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
-                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")} Singapore.<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
+                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")} Columbia.<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
                     <input type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
@@ -286,11 +286,11 @@ const PersonalCompaignSG = ({ i18n }) => {
       <div className="container">
         <Savings />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="pt" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="co" />}
       <CampaignTabs />
       <CampaignSignup />
     </>
   );
 }
 
-export default withTranslation()(PersonalCompaignSG);
+export default withTranslation()(PersonalCompaignCO);

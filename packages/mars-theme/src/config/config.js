@@ -1,8 +1,8 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "http://34.72.26.38:9001";
-//testing: "http://130.211.200.187:9001"
-//development: "http://34.72.26.38:9001"
+  : "https://development-spot.cashero.com";
+//testing: "https://testing-spot.cashero.com"
+//development: "https://development-spot.cashero.com"
 //production: "https://spot.cashero.com"
 
 const firebaseAPI =

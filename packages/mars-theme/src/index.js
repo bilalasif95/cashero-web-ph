@@ -318,12 +318,12 @@ const personalCompaignPHHandler = {
   }
 }
 
-const personalCompaignSGHandler = {
-  pattern: "/sg",
+const personalCompaignCOHandler = {
+  pattern: "/co",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
-      isPersonalCompaignSG: true,
+      isPersonalCompaignCO: true,
     })
   }
 }
@@ -400,7 +400,7 @@ const marsTheme = {
         libraries.source.handlers.push(personalCompaignINHandler);
         libraries.source.handlers.push(personalCompaignIDHandler);
         libraries.source.handlers.push(personalCompaignPHHandler);
-        libraries.source.handlers.push(personalCompaignSGHandler);
+        libraries.source.handlers.push(personalCompaignCOHandler);
         libraries.source.handlers.push(personalCompaignESHandler);
       },
       toggleMobileMenu: ({ state }) => {

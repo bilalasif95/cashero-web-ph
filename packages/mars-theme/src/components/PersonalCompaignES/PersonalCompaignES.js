@@ -286,7 +286,7 @@ const PersonalCompaignES = ({ i18n }) => {
       <div className="container">
         <Savings />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="pt" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="es" />}
       <CampaignTabs />
       <CampaignSignup />
     </>
