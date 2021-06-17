@@ -4,6 +4,18 @@ import XHR from "i18next-xhr-backend";
 import { english } from "./languages/english";
 import { brazilian } from "./languages/brazilian";
 import { portuguese } from "./languages/portuguese";
+import { spanish } from "./languages/spanish";
+import { arspanish } from "./languages/arspanish";
+import { clspanish } from "./languages/clspanish";
+import { french } from "./languages/french";
+import { german } from "./languages/german";
+import { italian } from "./languages/italian";
+import { zaenglish } from "./languages/zaenglish";
+import { inenglish } from "./languages/inenglish";
+import { bahasa } from "./languages/bahasa";
+import { filipino } from "./languages/filipino";
+import { malay } from "./languages/malay";
+import { spspanish } from "./languages/spspanish";
 
 i18n.use(XHR).use(LanguageDetector).init({
     // we init with resources
@@ -16,7 +28,44 @@ i18n.use(XHR).use(LanguageDetector).init({
         },
         portuguese: {
             translations: portuguese
-        }
+        },
+        spanish: {
+            translations: spanish
+        },
+        arspanish: {
+            translations: arspanish
+        },
+        clspanish: {
+            translations: clspanish
+        },
+        french: {
+            translations: french
+        },
+        german: {
+            translations: german
+        },
+        italian: {
+            translations: italian
+        },
+        zaenglish: {
+            translations: zaenglish
+        },
+        inenglish: {
+            translations: inenglish
+        },
+        bahasa: {
+            translations: bahasa
+        },
+        filipino: {
+            translations: filipino
+        },
+        malay: {
+            translations: malay
+        },
+        spspanish: {
+            translations: spspanish
+        },
+
     },
     // lng:"eng",
     fallbackLng: "english",

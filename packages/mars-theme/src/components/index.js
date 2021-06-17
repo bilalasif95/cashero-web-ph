@@ -14,6 +14,18 @@ import Personal from "./Personal/Personal";
 import PersonalCompaign from "./PersonalCompaign/PersonalCompaign";
 import PersonalCompaignBR from "./PersonalCompaignBR/PersonalCompaignBR";
 import PersonalCompaignPT from "./PersonalCompaignPT/PersonalCompaignPT";
+import PersonalCompaignMX from "./PersonalCompaignMX/PersonalCompaignMX";
+import PersonalCompaignAR from "./PersonalCompaignAR/PersonalCompaignAR";
+import PersonalCompaignCL from "./PersonalCompaignCL/PersonalCompaignCL";
+import PersonalCompaignFR from "./PersonalCompaignFR/PersonalCompaignFR";
+import PersonalCompaignGR from "./PersonalCompaignGR/PersonalCompaignGR";
+import PersonalCompaignIT from "./PersonalCompaignIT/PersonalCompaignIT";
+import PersonalCompaignZA from "./PersonalCompaignZA/PersonalCompaignZA";
+import PersonalCompaignIN from "./PersonalCompaignIN/PersonalCompaignIN";
+import PersonalCompaignID from "./PersonalCompaignID/PersonalCompaignID";
+import PersonalCompaignPH from "./PersonalCompaignPH/PersonalCompaignPH";
+import PersonalCompaignSG from "./PersonalCompaignSG/PersonalCompaignSG";
+import PersonalCompaignES from "./PersonalCompaignES/PersonalCompaignES";
 import Footer from "./footer/Footer";
 import BlogPage from "./BlogPage/BlogPage";
 import HomePage from "./HomePage/HomePage";
@@ -110,7 +122,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT) ? <CampaignHeader /> : <List />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignSG)   ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -146,9 +158,21 @@ const Theme = ({ state }) => {
           <PersonalCompaign when={data.isPersonalCompaign} />
           <PersonalCompaignBR when={data.isPersonalCompaignBR} />
           <PersonalCompaignPT when={data.isPersonalCompaignPT} />
+          <PersonalCompaignMX when={data.isPersonalCompaignMX} />
+          <PersonalCompaignAR when={data.isPersonalCompaignAR} />
+          <PersonalCompaignCL when={data.isPersonalCompaignCL} />
+          <PersonalCompaignFR when={data.isPersonalCompaignFR} />
+          <PersonalCompaignGR when={data.isPersonalCompaignGR} />
+          <PersonalCompaignIT when={data.isPersonalCompaignIT} />
+          <PersonalCompaignZA when={data.isPersonalCompaignZA} />
+          <PersonalCompaignIN when={data.isPersonalCompaignIN} />
+          <PersonalCompaignID when={data.isPersonalCompaignID} />
+          <PersonalCompaignPH when={data.isPersonalCompaignPH} />
+          <PersonalCompaignSG when={data.isPersonalCompaignSG} />
+          <PersonalCompaignES when={data.isPersonalCompaignES} />
         </Switch>
         {/* </Main> */}
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT) ? <CampaignFooter /> : <Footer />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignSG) ? <CampaignFooter /> : <Footer />}
       </I18nextProvider >
     </>
   );
