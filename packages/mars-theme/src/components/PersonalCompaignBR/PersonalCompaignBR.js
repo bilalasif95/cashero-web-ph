@@ -239,6 +239,7 @@ const PersonalCompaignBR = ({ i18n }) => {
                       sitekey={recaptchaSiteKep}
                       onChange={onCaptchaHandler}
                       height="140px"
+                      hl="pt-BR"
                       width="100%"
                     />
                   </div>
@@ -282,7 +283,7 @@ const PersonalCompaignBR = ({ i18n }) => {
           </div>
         </div>
       </div>
-      <CompaignNoEffort />
+      <CompaignNoEffort lang="br" />
       <div className="container">
         <Savings />
       </div>

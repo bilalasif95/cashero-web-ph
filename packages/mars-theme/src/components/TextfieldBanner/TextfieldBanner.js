@@ -184,6 +184,7 @@ const TextfieldBanner = ({ i18n }) => {
           onChange={onCaptchaHandler}
           height="140px"
           width="100%"
+          hl={i18n.language === "brazilian" ? "pt-BR" : "en"}
         />
       </div>
       {error &&

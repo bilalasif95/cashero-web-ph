@@ -92,7 +92,6 @@ const Theme = ({ state }) => {
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
         <meta name="google-site-verification" content="ULLpQHl1XeVHE2H-ZSPLosCUY10CBkttCwbNrfMBVsc" />
         <meta name="facebook-domain-verification" content="ao1nxtpttahaf3nsk7ukhlila8irwf" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
@@ -122,7 +121,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO) ? <CampaignHeader /> : <List />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -172,7 +171,7 @@ const Theme = ({ state }) => {
           <PersonalCompaignES when={data.isPersonalCompaignES} />
         </Switch>
         {/* </Main> */}
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO) ? <CampaignFooter /> : <Footer />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
       </I18nextProvider >
     </>
   );

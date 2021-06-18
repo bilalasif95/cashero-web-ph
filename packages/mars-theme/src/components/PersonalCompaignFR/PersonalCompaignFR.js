@@ -127,7 +127,7 @@ const PersonalCompaignFR = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="es-FR" href="https://www.cashero.com/fr/" />
+        <link rel="alternate" hreflang="fr-FR" href="https://www.cashero.com/fr/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/fr/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
@@ -240,6 +240,7 @@ const PersonalCompaignFR = ({ i18n }) => {
                       onChange={onCaptchaHandler}
                       height="140px"
                       width="100%"
+                      hl="fr"
                     />
                   </div>
                   {error && <label className="contactUsFormError">{error}</label>}
@@ -282,7 +283,7 @@ const PersonalCompaignFR = ({ i18n }) => {
           </div>
         </div>
       </div>
-      <CompaignNoEffort />
+      <CompaignNoEffort lang="fr" />
       <div className="container">
         <Savings />
       </div>
