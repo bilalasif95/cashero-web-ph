@@ -240,6 +240,7 @@ const PersonalCompaignIT = ({ i18n }) => {
                       onChange={onCaptchaHandler}
                       height="140px"
                       width="100%"
+                      hl="it"
                     />
                   </div>
                   {error && <label className="contactUsFormError">{error}</label>}
@@ -282,7 +283,7 @@ const PersonalCompaignIT = ({ i18n }) => {
           </div>
         </div>
       </div>
-      <CompaignNoEffort />
+      <CompaignNoEffort lang="it" />
       <div className="container">
         <Savings />
       </div>

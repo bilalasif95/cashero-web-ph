@@ -127,7 +127,7 @@ const PersonalCompaignCO = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="en-CO" href="https://www.cashero.com/co/" />
+        <link rel="alternate" hreflang="es-CO" href="https://www.cashero.com/co/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/co/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
@@ -239,6 +239,7 @@ const PersonalCompaignCO = ({ i18n }) => {
                       sitekey={recaptchaSiteKep}
                       onChange={onCaptchaHandler}
                       height="140px"
+                      hl="es"
                       width="100%"
                     />
                   </div>
@@ -282,7 +283,7 @@ const PersonalCompaignCO = ({ i18n }) => {
           </div>
         </div>
       </div>
-      <CompaignNoEffort />
+      <CompaignNoEffort lang="co" />
       <div className="container">
         <Savings />
       </div>

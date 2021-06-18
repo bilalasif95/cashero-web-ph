@@ -260,6 +260,7 @@ const GetTheAppModal = (props) => {
                       onChange={onCaptchaHandler}
                       height="140px"
                       width="100%"
+                      hl={i18n.language === "brazilian" ? "pt-BR" : "en"}
                     />
                   </div>
                 </div>
