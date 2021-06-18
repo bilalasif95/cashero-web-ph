@@ -12,9 +12,9 @@ const campaignSavings = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
-							<h2 className="oneAppTitle">
-								{i18n.t("How_High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Work")}
-								{/* {i18n.t("How_High_Yield_Savings_Work")} */}
+							<h2 className="oneAppTitle compaignHeading">
+								{/* {i18n.t("How_High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Work")} */}
+								{i18n.t("How_High_Yield_Savings_Work")}
 							</h2>
 							<p>
 								{i18n.t("CampaignSavings_P")}

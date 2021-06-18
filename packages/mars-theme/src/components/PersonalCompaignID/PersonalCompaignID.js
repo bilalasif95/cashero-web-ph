@@ -162,7 +162,7 @@ const PersonalCompaignID = ({ i18n }) => {
             <div className="col-md-5">
               <div className="compaignForm">
                 <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
-                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")} Indonesia.<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
+                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
                     <input type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />

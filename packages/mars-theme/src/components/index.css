@@ -16029,6 +16029,12 @@ select:-webkit-autofill:focus {
     /* padding: 0 0 0 1rem; */
     width: 60px;
   }
+
+  @media (min-width: 1200px) {
+    .compaignHeading {
+      padding-right: 170px;
+    }
+  }
   @media (max-width: 540px) {
     .dropdown-more {
       padding: 8px 0px;
