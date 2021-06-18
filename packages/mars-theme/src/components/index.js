@@ -101,12 +101,12 @@ const Theme = ({ state }) => {
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={websiteLink} />
-        <meta property="og:image" content="https://i.imgur.com/EMTwA7F.png" />
+        <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FEMTwA7F.png?alt=media" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={state.frontity.title} />
         <meta name="twitter:description" content={state.frontity.description} />
         <meta name="twitter:url" content={websiteLink} />
-        <meta name="twitter:image" content="https://i.imgur.com/WjbRyFw.png" />
+        <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FWjbRyFw.png?alt=media" />
         <meta http-equiv='cache-control' content='no-cache' />
         <meta http-equiv='expires' content='0' />
         <meta http-equiv='pragma' content='no-cache' />
