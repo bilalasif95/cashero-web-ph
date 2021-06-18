@@ -917,6 +917,7 @@ export const english = {
     CompaignNoEffort_P2: "Cashero is different. We offer a high-yield savings account with bank beating interest rates so you can keep your money above inflation. When your hard earned money needs a Cashero.",
     How_High_Yield: "How High-Yield",
     Savings_Work: "Savings Work",
+    How_High_Yield_Savings_Work: "How High-Yield Savings Work",
     CampaignSavings_P: "By managing an intelligent portfolio for you, Cashero offers the best high-yield interest rates on your money (between 2 - 5% annually). You can earn money while you sleep, making Cashero a smart financial decision. Optimize your finances and watch your money grow.",
     Frequently_Asked_Questions: "Frequently Asked Questions",
     What_is_Cashero_P_1_1: "Cashero is a high-interest savings platform that lets you make instant online transfers and cross-border payments in multiple currencies.",

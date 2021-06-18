@@ -76,6 +76,7 @@ const ContactForm = ({ i18n }) => {
 							onChange={onCaptchaHandler}
 							height="140px"
 							width="100%"
+							hl={i18n.language === "brazilian" ? "pt-BR" : "en"}
 						/>
 					</div>
 					<button onClick={() => sendMessage()} disabled={loading || !name || !email || !message || !value} className={(loading || !name || !email || !message || !value) ? "btn btn-default formbtn disabled" : "btn btn-default formbtn"}>{i18n.t("Send_Message")}</button>
