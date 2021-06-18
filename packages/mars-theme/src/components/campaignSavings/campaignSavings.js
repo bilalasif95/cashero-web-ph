@@ -1,11 +1,18 @@
 import React from "react";
 import savingwork from "../../assets/savingwork.png";
+import savingworkBRandPT from "../../assets/savingworkBRandPT.png";
+import savingworkCOMXARCLES from "../../assets/savingworkCOMXARCLES.png";
+import savingworkFR from "../../assets/savingworkFR.png";
+import savingworkDE from "../../assets/savingworkDE.png";
+import savingworkIT from "../../assets/savingworkIT.png";
+import savingworkID from "../../assets/savingworkID.png";
+import savingworkPH from "../../assets/savingworkPH.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.png";
 import { animateScroll as scroll } from "react-scroll";
 import { withTranslation } from "react-i18next";
 
-const campaignSavings = ({ i18n }) => {
+const campaignSavings = ({ i18n, lang }) => {
 	return (
 		<div className="MultiCurrency sm-mt-40 campaignSavings">
 			<div className="row">
@@ -27,7 +34,7 @@ const campaignSavings = ({ i18n }) => {
 					<img
 						className="img-fluid mx-auto d-block"
 						alt="Bit Circle"
-						src={savingwork} />
+						src={lang === "pt" || lang === "br" ? savingworkBRandPT : lang === "co" || lang === "mx" || lang === "ar" || lang === "cl" || lang === "es" ? savingworkCOMXARCLES : lang === "fr" ? savingworkFR : lang === "de" ? savingworkDE : lang === "it" ? savingworkIT : lang === "id" ? savingworkID : lang === "ph" ? savingworkPH : savingwork} />
 				</div>
 			</div>
 		</div>
