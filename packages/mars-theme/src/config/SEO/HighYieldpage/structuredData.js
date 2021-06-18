@@ -71,8 +71,8 @@ export const organizationStructuredData = () => {
     url: "https://www.cashero.com/high-yield-savings-account/",
     name: "High Yield Savings Account | Cashero App",
     description: "Put your money to work with the Cashero High Yield Savings Account. Beat the rate of inflation with an average APY of 5% on your deposits.",
-    logo: "https://i.imgur.com/Bs18pDE.png",
-    image: "https://i.imgur.com/RQSek8v.gif",
+    logo: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FBs18pDE.png?alt=media",
+    image: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FRQSek8v.gif?alt=media",
     "brand": {
       "@type": "Website",
       "name": "Cashero App",
