@@ -4,7 +4,7 @@ import { withTranslation } from "react-i18next";
 
 const campaignSignup = ({ i18n }) => {
   return (
-    <div className="CompaignSignUp">
+    <div className="SignUp compaign-signup">
       <div className="container">
         <div className="row">
           <div className="col-12">

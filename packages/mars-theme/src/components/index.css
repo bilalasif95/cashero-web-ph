@@ -245,7 +245,10 @@ body{
       height: auto;
       margin: 5rem auto 0;
       width: 100%;
-      display: block; } }
+      display: block; } 
+      .inflation-cont {
+        width: 50% !important;}
+    }
 
 @media (min-width: 475px) {
   .CampaignFooter {
@@ -283,6 +286,11 @@ body{
     width: 16% !important; }
   .numberSelection .inputNum {
     width: 40%; } }
+
+  .compaignForm .numberSelection .selectCountry {
+    width: 16% !important; }
+  .compaignForm .numberSelection .inputNum {
+    width: 80%; }
 
 @media (max-width: 960px) and (min-width: 768px) {
   .numberSelection {
@@ -1547,6 +1555,14 @@ b {
       width: 33%;
       margin: 0 0 1rem;
     }
+    .compaignForm {
+      padding: 20px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .compaignForm {
+      margin: 2rem 0 0;
+    }
   }
   
   @media (max-width: 414px) {
@@ -1684,7 +1700,7 @@ b {
   margin-top: 15px; }
 
 .Enhance {
-  background-image: url("https://i.imgur.com/7avIJ78.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F7avIJ78.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px 0px 0px;
@@ -2899,9 +2915,11 @@ b {
     padding: 0px 0px 40px 0px; }
   .CasheroSignupCont {
     margin-top: 40px; } }
-
+    .compaign-signup {
+      padding: 134px 0 !important;
+    }
 .SignUp {
-  background-image: url("https://i.imgur.com/gF6V6lg.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FgF6V6lg.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 134px 191px 134px 191px;
@@ -4313,7 +4331,7 @@ button:focus {
     height: 100%; }
 
 .PesonalBanner {
-  background-image: url("https://i.imgur.com/1OhH9GF.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F1OhH9GF.png?alt=media");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4447,7 +4465,7 @@ button:focus {
       text-align: center; } }
 
 .ExchangeBanner {
-  background-image: url("https://i.imgur.com/1OhH9GF.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F1OhH9GF.png?alt=media");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4845,7 +4863,7 @@ button:focus {
   font-size: 14px; }
 
 .SavingAccount {
-  background-image: url("https://i.imgur.com/UQVk2iI.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FUQVk2iI.png?alt=media");
   background-repeat: no-repeat;
   background-position: left; }
 
@@ -5629,7 +5647,7 @@ button:focus {
           font-size: 14px !important;
       }
         .compaignForm {
-          padding: 30px 30px !important;
+          padding: 15px !important;
       }
         .circle-cont .blue-circle {
           width: 275px;
@@ -16125,7 +16143,7 @@ select:-webkit-autofill:focus {
         justify-content: space-between;
         flex-wrap: wrap;}
         .inflation-cont {
-          padding: 0 4rem;
+          padding: 0 1.5rem;
           width: 25%;
         }
         .inflation-cont:last-child {
@@ -16142,7 +16160,8 @@ select:-webkit-autofill:focus {
           .compaignLink {
             color: #ee7120 !important;}
           .Waitlistbtn {
-            width: 35%;
+            width: 100%;
+            max-width: 250px;
             margin: 0px auto;
             margin-top: 40px;}
             .campaignFaq {
@@ -16215,7 +16234,7 @@ select:-webkit-autofill:focus {
   outline: none;
 }
 .PesonalCompaignBanner {
-  background-image: url(https://i.imgur.com/Vbv2uT3.png);
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FVbv2uT3.png?alt=media");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -16224,7 +16243,7 @@ select:-webkit-autofill:focus {
   margin-top: 98px;
 }
 .CompaignSignUp {
-  background-image: url(https://i.imgur.com/HL4RcXS.png);
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FHL4RcXS.png?alt=media");
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;

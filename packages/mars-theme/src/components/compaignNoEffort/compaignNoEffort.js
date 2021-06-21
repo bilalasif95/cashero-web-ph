@@ -1,5 +1,5 @@
 import React from "react";
-import earncashero from "../../assets/test.jpg";
+import earncashero from "../../assets/earncashero.png";
 import earncasheroBRandPT from "../../assets/earncasheroBRandPT.png";
 import earncasheroCOMXARCLES from "../../assets/earncasheroCOMXARCLES.png";
 import earncasheroFR from "../../assets/earncasheroFR.png";
@@ -12,7 +12,7 @@ import { Fade } from "react-awesome-reveal";
 import { animateScroll as scroll } from "react-scroll";
 import { withTranslation } from "react-i18next";
 
-const CompaignNoEffort = ({ i18n,lang }) => {
+const CompaignNoEffort = ({ i18n, lang }) => {
 	return (
 		<div className="Coins sm-mb-30">
 			<div className="container">
