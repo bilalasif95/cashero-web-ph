@@ -179,6 +179,9 @@ body{
   .compaignForm {
     padding: 40px 30px;
 }
+.compaignForm .captcha-cont {
+  display: block !important;
+}
   .seenList {
     justify-content: center;
   }
@@ -245,7 +248,10 @@ body{
       height: auto;
       margin: 5rem auto 0;
       width: 100%;
-      display: block; } }
+      display: block; } 
+      .inflation-cont {
+        width: 50% !important;}
+    }
 
 @media (min-width: 475px) {
   .CampaignFooter {
@@ -283,6 +289,11 @@ body{
     width: 16% !important; }
   .numberSelection .inputNum {
     width: 40%; } }
+
+  .compaignForm .numberSelection .selectCountry {
+    width: 16% !important; }
+  .compaignForm .numberSelection .inputNum {
+    width: 80%; }
 
 @media (max-width: 960px) and (min-width: 768px) {
   .numberSelection {
@@ -1546,6 +1557,14 @@ b {
       justify-content: center;
       width: 33%;
       margin: 0 0 1rem;
+    }
+    .compaignForm {
+      padding: 20px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .compaignForm {
+      margin: 2rem 0 0;
     }
   }
   
@@ -2899,7 +2918,9 @@ b {
     padding: 0px 0px 40px 0px; }
   .CasheroSignupCont {
     margin-top: 40px; } }
-
+    .compaign-signup {
+      padding: 134px 0 !important;
+    }
 .SignUp {
   background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FgF6V6lg.png?alt=media");
   background-size: cover;
@@ -5629,7 +5650,7 @@ button:focus {
           font-size: 14px !important;
       }
         .compaignForm {
-          padding: 30px 30px !important;
+          padding: 15px !important;
       }
         .circle-cont .blue-circle {
           width: 275px;
@@ -16128,7 +16149,7 @@ select:-webkit-autofill:focus {
         justify-content: space-between;
         flex-wrap: wrap;}
         .inflation-cont {
-          padding: 0 4rem;
+          padding: 0 1.5rem;
           width: 25%;
         }
         .inflation-cont:last-child {
@@ -16145,7 +16166,8 @@ select:-webkit-autofill:focus {
           .compaignLink {
             color: #ee7120 !important;}
           .Waitlistbtn {
-            width: 35%;
+            width: 100%;
+            max-width: 250px;
             margin: 0px auto;
             margin-top: 40px;}
             .campaignFaq {

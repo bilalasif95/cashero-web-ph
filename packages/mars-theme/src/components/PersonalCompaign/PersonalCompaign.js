@@ -134,7 +134,7 @@ const PersonalCompaign = ({ i18n }) => {
       <div className="PesonalCompaignBanner compaign-banner">
         <div className="container">
           <div className="row">
-            <div className="col-md-7">
+            <div className="col-lg-7 col-md-6 col-sm-12">
               <div className="PersonalCont">
                 <p className="text-uppercase bannerPara font-medium mb-0">{i18n.t("Compaign_1")}</p>
                 <p className="text-uppercase bannerPara font-medium">{i18n.t("Compaign_2")}</p>
@@ -160,7 +160,7 @@ const PersonalCompaign = ({ i18n }) => {
                 <p className="bannerPara font-medium">{i18n.t("Compaign_P")}</p>
               </div>
             </div>
-            <div className="col-md-5">
+            <div className="col-lg-5 col-md-6 col-sm-12">
               <div className="compaignForm">
                 <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
                 <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")} USA.<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
@@ -222,7 +222,7 @@ const PersonalCompaign = ({ i18n }) => {
                           </DropdownMenu>
                         </Dropdown>
                       </div>
-                      <div className="inputNum width80">
+                      <div className="inputNum">
                         <input
                           className="form-control"
                           type="number"
