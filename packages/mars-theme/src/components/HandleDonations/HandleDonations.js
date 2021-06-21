@@ -15,7 +15,7 @@ const HandleDonations = ({ i18n }) => {
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
 						<div className="oneAppCont sm-mt-0">
-							<h1 className="oneAppTitle sm-mt-30">{i18n.t("Cashero_Helps_You")} <span className="br-block-with-no-display"></span>  {i18n.t("Handle_Donations_from")} <span className="br-block-with-no-display"></span>  {i18n.t("Around_The_World")}</h1>
+							<h2 className="oneAppTitle sm-mt-30">{i18n.t("Cashero_Helps_You")} <span className="br-block-with-no-display"></span>  {i18n.t("Handle_Donations_from")} <span className="br-block-with-no-display"></span>  {i18n.t("Around_The_World")}</h2>
 							<p className="sm-center">{i18n.t("Benefit_from_the_following")}</p>
 							<ul className="list-unstyled CharityList">
 								<li><img src={Check} alt="check" /> {i18n.t("High_yield_savings_account")}</li>

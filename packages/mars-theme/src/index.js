@@ -198,6 +198,146 @@ const personalCompaignHandler = {
   }
 }
 
+const personalCompaignBRHandler = {
+  pattern: "/br",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignBR: true,
+    })
+  }
+}
+
+const personalCompaignPTHandler = {
+  pattern: "/pt",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignPT: true,
+    })
+  }
+}
+
+const personalCompaignMXHandler = {
+  pattern: "/mx",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignMX: true,
+    })
+  }
+}
+
+const personalCompaignARHandler = {
+  pattern: "/ar",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignAR: true,
+    })
+  }
+}
+
+const personalCompaignCLHandler = {
+  pattern: "/cl",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignCL: true,
+    })
+  }
+}
+
+const personalCompaignFRHandler = {
+  pattern: "/fr",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignFR: true,
+    })
+  }
+}
+
+const personalCompaignGRHandler = {
+  pattern: "/de",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignGR: true,
+    })
+  }
+}
+
+const personalCompaignITHandler = {
+  pattern: "/it",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignIT: true,
+    })
+  }
+}
+
+const personalCompaignZAHandler = {
+  pattern: "/za",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignZA: true,
+    })
+  }
+}
+
+const personalCompaignINHandler = {
+  pattern: "/in",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignIN: true,
+    })
+  }
+}
+
+const personalCompaignIDHandler = {
+  pattern: "/id",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignID: true,
+    })
+  }
+}
+
+const personalCompaignPHHandler = {
+  pattern: "/ph",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignPH: true,
+    })
+  }
+}
+
+const personalCompaignCOHandler = {
+  pattern: "/co",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignCO: true,
+    })
+  }
+}
+
+const personalCompaignESHandler = {
+  pattern: "/es",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignES: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -248,6 +388,20 @@ const marsTheme = {
         libraries.source.handlers.push(thankyouHandler);
         libraries.source.handlers.push(appPrivacyHandler);
         libraries.source.handlers.push(appTermsHandler);
+        libraries.source.handlers.push(personalCompaignBRHandler);
+        libraries.source.handlers.push(personalCompaignPTHandler);
+        libraries.source.handlers.push(personalCompaignMXHandler);
+        libraries.source.handlers.push(personalCompaignARHandler);
+        libraries.source.handlers.push(personalCompaignCLHandler);
+        libraries.source.handlers.push(personalCompaignFRHandler);
+        libraries.source.handlers.push(personalCompaignGRHandler);
+        libraries.source.handlers.push(personalCompaignITHandler);
+        libraries.source.handlers.push(personalCompaignZAHandler);
+        libraries.source.handlers.push(personalCompaignINHandler);
+        libraries.source.handlers.push(personalCompaignIDHandler);
+        libraries.source.handlers.push(personalCompaignPHHandler);
+        libraries.source.handlers.push(personalCompaignCOHandler);
+        libraries.source.handlers.push(personalCompaignESHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

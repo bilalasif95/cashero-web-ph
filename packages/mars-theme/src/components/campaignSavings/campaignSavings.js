@@ -1,42 +1,44 @@
-import React, { useState } from "react";
-import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import BitCircle from "../../assets/BitCircle.png";
+import React from "react";
+import savingwork from "../../assets/savingwork.svg";
+import savingworkBRandPT from "../../assets/savingworkBRandPT.svg";
+import savingworkCOMXARCLES from "../../assets/savingworkCOMXARCLES.svg";
+import savingworkFR from "../../assets/savingworkFR.svg";
+import savingworkDE from "../../assets/savingworkDE.svg";
+import savingworkIT from "../../assets/savingworkIT.svg";
+import savingworkID from "../../assets/savingworkID.svg";
+import savingworkPH from "../../assets/savingworkPH.svg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.png";
-const campaignSavings = () => {
-	const [appModal, setAppModal] = useState(false);
-	const appModalOpen = () => {
-		setAppModal(true)
-	};
-	const appModalClose = () => {
-		setAppModal(false)
-	};
+import { animateScroll as scroll } from "react-scroll";
+import { withTranslation } from "react-i18next";
+
+const campaignSavings = ({ i18n, lang }) => {
 	return (
-		<div className="MultiCurrency sm-mt-40">
+		<div className="MultiCurrency sm-mt-40 campaignSavings">
 			<div className="row">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
-							<h2 className="oneAppTitle">
-								How High-Yield <span className="br-block-with-no-display"></span> Savings Work
+							<h2 className="oneAppTitle compaignHeading">
+								{/* {i18n.t("How_High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Work")} */}
+								{i18n.t("How_High_Yield_Savings_Work")}
 							</h2>
 							<p>
-								By managing an intelligent portfolio for you, Cashero offers the best high-yield interest rates on your money (between 2 - 5% annually). You can earn money while you sleep, making Cashero a smart financial decision. Optimize your finances and watch your money grow.
+								{i18n.t("CampaignSavings_P")}
 							</p>
-							<button onClick={appModalOpen} className="LinkBtn compaignLink" >Join the Waitlist<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</Fade>
-						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 					</div>
 				</div>
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block"
 						alt="Bit Circle"
-						src={BitCircle} />
+						src={lang === "pt" || lang === "br" ? savingworkBRandPT : lang === "co" || lang === "mx" || lang === "ar" || lang === "cl" || lang === "es" ? savingworkCOMXARCLES : lang === "fr" ? savingworkFR : lang === "de" ? savingworkDE : lang === "it" ? savingworkIT : lang === "id" ? savingworkID : lang === "ph" ? savingworkPH : savingwork} />
 				</div>
 			</div>
 		</div>
 	);
 }
 
-export default campaignSavings;
+export default withTranslation()(campaignSavings);

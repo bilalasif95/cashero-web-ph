@@ -18,7 +18,7 @@ const FindCharity = ({ i18n }) => {
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
 						<div className="oneAppCont sm-mt-0 sm-mb-0">
-							<h1 className="oneAppTitle sm-mt-30">{i18n.t("Choose_from_Our_List")} <span className="br-block-with-no-display"></span> {i18n.t("of_Charities")} </h1>
+							<h2 className="oneAppTitle sm-mt-30">{i18n.t("Choose_from_Our_List")} <span className="br-block-with-no-display"></span> {i18n.t("of_Charities")} </h2>
 							<p>{i18n.t("Find_Charity_P")}</p>
 							<button onClick={appModalOpen} className="LinkBtn" >{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</div>

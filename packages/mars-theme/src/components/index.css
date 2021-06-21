@@ -164,7 +164,10 @@ body{
     padding: 30px 0px !important;
     margin-bottom: 0px !important;
 }
- 
+  .inflation-cont {
+    width: 50% !important;
+    padding: 0 !important;
+  }
   .Compaignbtn {
     font-size: 16px !important;
     padding: 10px 0px !important;
@@ -246,6 +249,13 @@ body{
       .inflation-cont {
         width: 50% !important;}
     }
+
+@media (min-width: 475px) {
+  .CampaignFooter {
+    width: 65%;
+    margin: 0 auto 1rem;
+  }
+}
 
 @media (max-width: 480px) {
   .bannerImg {
@@ -390,19 +400,19 @@ h4 {
         top: 45%;
         right: 0;
       }
-      .languageDropdown .dropdown-menu {
+      /* .languageDropdown .dropdown-menu {
         width: 200px !important;
-        padding: 20px !important;
-      }
+        padding: 59px 50px 51px 50px !important;
+      } */
       .languageDropdown {
         width: 53px;
       }
       .customNav ul li:last-child .dropdown-menu .HeaderListCont {
         margin-bottom: 0;
       }
-      .customNav ul li:last-child .dropdown-menu .HeaderList {
-        margin-top: 0;
-      }
+      /* .customNav ul li:last-child .dropdown-menu .HeaderList {
+        margin-top: 30px;
+      } */
       .customNav ul li:last-child .dropdown-menu .HeaderList li {
         font-size: 16px;
         color: #9ea0a5!important;
@@ -485,7 +495,11 @@ h4 {
 
 @media (max-width: 425px) {
   .customNav ul li:not(:last-child) {
-    margin-right: 15px !important; } }
+    margin-right: 15px !important; } 
+  .numberSelection .selectCountry .dropdown-menu.show{
+    width: 285px;
+  }
+}
 
 @media (max-width: 375px) {
   .customNav ul li:not(:last-child) {
@@ -497,6 +511,9 @@ h4 {
   .circle-cont .blue-circle {
     width: 275px;
     height: 290px;
+}
+.numberSelection .selectCountry .dropdown-menu.show{
+  width: 230px;
 }
 .circle-cont .blue-circle {
   margin: -6rem auto 0px;
@@ -518,6 +535,14 @@ h4 {
   display: none; }
 
 @media (max-width: 540px) {
+  .customNav ul li:last-child .dropdown-menu .HeaderList {
+    margin-top: 00px;
+  }
+  .numberSelection .inputNum {
+    width: 75% !important; }
+    .compaign-select .selectCountry {
+      width: 21% !important;
+    }
   .CrouselCard {
     width: 240px !important;
 }
@@ -531,9 +556,9 @@ h4 {
       width: 100% !important;
       padding-top: 0 !important;
     }
-    .customNav ul >li:last-child .HeaderList {
+    /* .customNav ul >li:last-child .HeaderList {
       padding-left: 0;
-    }
+    } */
   .customNav ul li a:after{
     display: block !important;
   }
@@ -1070,7 +1095,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     margin: 20px 0px 20px 0px !important; }
   .BlogTabs {
     width: 100%; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 25px; } }
 
 /* .sideBlogs div:last-child {
@@ -1092,7 +1117,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     height: 130px; }
   .MainblogImg {
     height: 250px; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 24px; }
   .BlogCont .BlogSideBox {
     margin-bottom: 20px; }
@@ -1109,7 +1134,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     font-size: 14px; }
   .BlogCont p {
     font-size: 14px; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 20px !important;
     margin-bottom: 10px !important; }
   .BlogCont .MoreBlogsCont p {
@@ -1585,7 +1610,7 @@ b {
     text-align: center; }
     .ContactSection .ContactBox img {
       margin-top: -185px; }
-    .ContactSection .ContactBox h1 {
+    .ContactSection .ContactBox h2 {
       font-size: 48px;
       margin-bottom: 26px;
       font-weight: 400; }
@@ -1593,7 +1618,7 @@ b {
       font-size: 16px; }
 
 @media (max-width: 540px) {
-  .ContactForm h1 {
+  .ContactForm h2 {
     font-size: 32px !important;
 }
   .ContactSection {
@@ -1604,7 +1629,7 @@ b {
       padding: 50px 20px 50px 20px; }
       .ContactSection .ContactBox img {
         margin-top: -119px; }
-      .ContactSection .ContactBox h1 {
+      .ContactSection .ContactBox h2 {
         font-size: 48px;
         margin-bottom: 26px; }
       .ContactSection .ContactBox p {
@@ -1675,7 +1700,7 @@ b {
   margin-top: 15px; }
 
 .Enhance {
-  background-image: url("https://i.imgur.com/7avIJ78.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F7avIJ78.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px 0px 0px;
@@ -2177,6 +2202,12 @@ b {
     width: 90% !important;
     margin: 0px auto;
     margin-bottom: 40px !important; }
+    .Coins img {
+      margin: 2rem auto;
+    }
+    .campaignSavings img {
+      margin: 2rem auto;
+    }
   .Coins .HighInterestText {
     color: #9ea0a5 !important;
     text-align: center; }
@@ -2888,7 +2919,7 @@ b {
       padding: 134px 0 !important;
     }
 .SignUp {
-  background-image: url("https://i.imgur.com/gF6V6lg.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FgF6V6lg.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 134px 191px 134px 191px;
@@ -3408,7 +3439,7 @@ button:focus {
       padding: 0.84rem 1rem !important;
       text-transform: none !important;
       width: 100% !important; }
-    .BlogTabs .dropdown h1 {
+    .BlogTabs .dropdown h2 {
       font-size: 16px !important;
       font-weight: 400;
       margin: 0 !important; }
@@ -3438,7 +3469,7 @@ button:focus {
       cursor: pointer;
       height: 100%;
       object-fit: cover; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 32px;
       color: #363636;
       font-weight: 400;
@@ -3502,7 +3533,7 @@ button:focus {
     padding: 6px 15px 6px 15px !important; }
   .BlogCont {
     margin: 30px 0px 0px 0px; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 24px;
       margin-bottom: 12px; }
   .date {
@@ -3628,7 +3659,7 @@ button:focus {
     padding: 6px 15px 6px 15px !important; }
   .BlogCont {
     margin: 30px 0px 0px 0px; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 24px;
       margin-bottom: 12px; }
   .date {
@@ -3920,7 +3951,7 @@ button:focus {
   padding: 80px 0px; }
   .Countup .CountupCont {
     text-align: center; }
-    .Countup .CountupCont h1 {
+    .Countup .CountupCont h2 {
       color: #363636;
       font-size: 60px;
       font-weight: 700;
@@ -3941,7 +3972,7 @@ button:focus {
 @media (max-width: 540px) {
   .Countup {
     padding: 20px 0px; }
-    .Countup .CountupCont h1 {
+    .Countup .CountupCont h2 {
       font-size: 46px;
       margin-bottom: 20px; }
   .OpeningSection {
@@ -4028,7 +4059,7 @@ button:focus {
         .Enhance {
           padding: 30px 0px 0px 0px;
       }
-        .ContactSection .ContactBox h1 {
+        .ContactSection .ContactBox h2 {
           font-size: 32px;
           margin-bottom: 15px;
       }
@@ -4043,7 +4074,7 @@ button:focus {
         margin-bottom: 10px;
         font-size: 40px;
     }
-      .Countup .CountupCont h1 {
+      .Countup .CountupCont h2 {
         font-size: 40px;
       }
       
@@ -4300,7 +4331,7 @@ button:focus {
     height: 100%; }
 
 .PesonalBanner {
-  background-image: url("https://i.imgur.com/1OhH9GF.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F1OhH9GF.png?alt=media");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4434,7 +4465,7 @@ button:focus {
       text-align: center; } }
 
 .ExchangeBanner {
-  background-image: url("https://i.imgur.com/1OhH9GF.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F1OhH9GF.png?alt=media");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4832,7 +4863,7 @@ button:focus {
   font-size: 14px; }
 
 .SavingAccount {
-  background-image: url("https://i.imgur.com/UQVk2iI.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FUQVk2iI.png?alt=media");
   background-repeat: no-repeat;
   background-position: left; }
 
@@ -15909,7 +15940,7 @@ select:-webkit-autofill:focus {
     .ContactFormBox {
       margin: 98px 0px 98px 0px;
     }
-    .ContactForm h1 {
+    .ContactForm h2 {
       margin-bottom: 30px;
       font-size: 48px;
       font-weight: 400;
@@ -16016,6 +16047,12 @@ select:-webkit-autofill:focus {
     /* padding: 0 0 0 1rem; */
     width: 60px;
   }
+
+  @media (min-width: 1200px) {
+    .compaignHeading {
+      padding-right: 170px;
+    }
+  }
   @media (max-width: 540px) {
     .dropdown-more {
       padding: 8px 0px;
@@ -16109,10 +16146,14 @@ select:-webkit-autofill:focus {
           padding: 0 1.5rem;
           width: 25%;
         }
+        .inflation-cont:last-child {
+          padding: 0 3rem;
+        }
       .inflation-cont p {
         color: #2178f5 !important;
         font-size: 18px;}
         .inflation-cont img {
+          height: 70px;
           margin-bottom: 15px;}
           .campaignHeader .GetAppBtn {
             font-weight: 500;}
@@ -16184,11 +16225,37 @@ select:-webkit-autofill:focus {
   justify-content: space-between;
 }
 .compaign-select .selectCountry {
-  width: 16% !important;
+  width: 16%;
 }
 .compaign-select .numberSelection .inputNum input {
   height: 46px;
 }
 .compaign-select .numberSelection .selectCountry .btn input:focus {
   outline: none;
+}
+.PesonalCompaignBanner {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FVbv2uT3.png?alt=media");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  padding: 98px 0px 98px 0px;
+  margin-top: 98px;
+}
+.CompaignSignUp {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FHL4RcXS.png?alt=media");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 134px 0 134px 0;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .compaign-select .selectCountry {
+    width: 25% !important;
+  }
+  .compaign-select .numberSelection .inputNum {
+    width: 70% !important;
+  }
 }

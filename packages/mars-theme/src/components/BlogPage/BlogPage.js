@@ -82,7 +82,7 @@ const BlogPage = ({ state, i18n }) => {
                       toggle={togglegbp}
                     >
                       <DropdownToggle caret>
-                        <h1>{value}</h1>
+                        <h2>{value}</h2>
                       </DropdownToggle>
                       <DropdownMenu>
                         <DropdownItem
@@ -159,9 +159,9 @@ const BlogPage = ({ state, i18n }) => {
                                         <span className="date">
                                           {date}
                                         </span>
-                                        <h1>
+                                        <h2>
                                           <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-                                        </h1>
+                                        </h2>
                                         <p>
                                           <div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
                                         </p>
@@ -192,9 +192,9 @@ const BlogPage = ({ state, i18n }) => {
                                               <span className="date mt-0">
                                                 {date}
                                               </span>
-                                              <h1>
+                                              <h2>
                                                 <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-                                              </h1>
+                                              </h2>
                                               <p>
                                                 <div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
                                               </p>
@@ -229,9 +229,9 @@ const BlogPage = ({ state, i18n }) => {
                                         <span className="date">
                                           {date}
                                         </span>
-                                        <h1>
+                                        <h2>
                                           <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-                                        </h1>
+                                        </h2>
                                         <p>
                                           <div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
                                         </p>
@@ -276,9 +276,9 @@ const BlogPage = ({ state, i18n }) => {
                                               <span className="date">
                                                 {date}
                                               </span>
-                                              <h1>
+                                              <h2>
                                                 <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-                                              </h1>
+                                              </h2>
                                               <p>
                                                 <div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
                                               </p>
@@ -394,9 +394,9 @@ const BlogPage = ({ state, i18n }) => {
                                               <span className="date">
                                                 {date}
                                               </span>
-                                              <h1>
+                                              <h2>
                                                 <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-                                              </h1>
+                                              </h2>
                                               <p>
                                                 <div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
                                               </p>

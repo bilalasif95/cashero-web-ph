@@ -16,7 +16,7 @@ const Sitemap = ({ i18n }) => {
           <div className="row">
             <div className="col-md-12">
               <div className="bannerCont">
-                <h2 className="sitemap-h2">{i18n.t("Sitemap")}</h2>
+                <h1 className="sitemap-h2">{i18n.t("Sitemap")}</h1>
                 <h6 className="sitemap-head">{i18n.t("Personal")}</h6>
                 <ul className="sitemap-list">
                   <li><Link link="/high-yield-savings-account">{i18n.t("High_Yield_Savings_Account_Menu")}</Link></li>

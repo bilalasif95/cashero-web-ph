@@ -21,7 +21,7 @@ const CharitySection = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="CharityCont">
 						<Fade triggerOnce direction="up">
-							<h1 className="oneAppTitle">{i18n.t("Fee_Free_Donations")}</h1>
+							<h2 className="oneAppTitle">{i18n.t("Fee_Free_Donations")}</h2>
 							<p>{i18n.t("Fee_Free_Donations_P")}</p>
 							<Link link="/donation" className="Link">{i18n.t("Learn_more_about_Charity")}<img className="ArrowBtn" alt="arrow" src={Arrow} /></Link>
 						</Fade>

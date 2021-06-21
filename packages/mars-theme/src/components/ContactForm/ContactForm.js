@@ -60,7 +60,7 @@ const ContactForm = ({ i18n }) => {
 		<div className="ContactFormBox">
 			<div className="container">
 				<div className="ContactForm">
-					<h1>{i18n.t("Contact_Us")}</h1>
+					<h2>{i18n.t("Contact_Us")}</h2>
 					<div className="inputfieldbox">
 						<input type="text" value={name} onChange={(e) => onNameChange(e)} className="form-control" placeholder={i18n.t("Enter_Name")} />
 						<input type="text" value={email} onChange={(e) => onEmailChange(e)} className="form-control" placeholder={i18n.t("Enter_Email")} />
@@ -76,6 +76,7 @@ const ContactForm = ({ i18n }) => {
 							onChange={onCaptchaHandler}
 							height="140px"
 							width="100%"
+							hl={i18n.language === "brazilian" ? "pt-BR" : "en"}
 						/>
 					</div>
 					<button onClick={() => sendMessage()} disabled={loading || !name || !email || !message || !value} className={(loading || !name || !email || !message || !value) ? "btn btn-default formbtn disabled" : "btn btn-default formbtn"}>{i18n.t("Send_Message")}</button>

@@ -5,8 +5,8 @@ export const structuredData = home => {
     url: "https://cashero.com/",
     name: home.frontity.title,
     description: home.frontity.description,
-    logo: "https://i.imgur.com/Bs18pDE.png",
-    image: "https://i.imgur.com/RQSek8v.gif",
+    logo: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FBs18pDE.png?alt=media",
+    image: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FRQSek8v.gif?alt=media",
     "brand": {
       "@type": "Website",
       "name": "Cashero App",

@@ -21,7 +21,7 @@ const StartDonation = ({ i18n }) => {
 					</div>
 					<div className="col-md-6 sm-mt-30">
 						<div className="MoneyRequestCont">
-							<h1 className="oneAppTitle"> {i18n.t("Your_Generosity_Makes")} <span className="br-block-with-no-display"></span> {i18n.t("Our_World_a_Better_Place")} </h1>
+							<h2 className="oneAppTitle"> {i18n.t("Your_Generosity_Makes")} <span className="br-block-with-no-display"></span> {i18n.t("Our_World_a_Better_Place")} </h2>
 							<p>{i18n.t("Your_Generosity_Makes_P")}</p>
 							<button onClick={appModalOpen} className="LinkBtn">{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</div>
