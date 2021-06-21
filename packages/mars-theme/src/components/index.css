@@ -179,6 +179,9 @@ body{
   .compaignForm {
     padding: 40px 30px;
 }
+.compaignForm .captcha-cont {
+  display: block !important;
+}
   .seenList {
     justify-content: center;
   }
