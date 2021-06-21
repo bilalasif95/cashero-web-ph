@@ -1,5 +1,5 @@
 import React from "react";
-import savingwork from "../../assets/savingwork.png";
+import savingwork from "../../assets/en-US_English_United_States.svg";
 import savingworkBRandPT from "../../assets/savingworkBRandPT.png";
 import savingworkCOMXARCLES from "../../assets/savingworkCOMXARCLES.png";
 import savingworkFR from "../../assets/savingworkFR.png";
