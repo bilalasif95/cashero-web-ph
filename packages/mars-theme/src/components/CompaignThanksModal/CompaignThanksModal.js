@@ -35,16 +35,16 @@ const CompaignThanksModal = (props) => {
                         <div className="row waitlistRow">
                             <div className="col-md-6">
                                 <div className="waitlistcont">
-                                    <h3 id="transition-modal-title">{i18n.t("Thank_you")}</h3>
-                                    {/* <h3 id="transition-modal-title">{i18n.t("Thank_you_for_joining")} <span className="br-block-with-no-display"></span> {i18n.t("Cashero_waitlist")}</h3> */}
+                                    {/* <h3 id="transition-modal-title">{i18n.t("Thank_you")}</h3> */}
+                                    <h1 id="transition-modal-title">{i18n.t("Thank_you_for_joining_Cashero_waitlist")}</h1>
                                     <p>{i18n.t("Cashero_waitlist_P")}</p>
                                 </div>
                                 <div className="win-cont">
                                     <ul className="Thankyou-modal-list list-unstyled">
                                         <li>{i18n.t("Click_AND_Share")}</li>
-                                        <li><FacebookShareButton quote={`${i18n.t("Cashero_waitlist_Quote")}${`https://www.cashero.com/${lang}/`}`} url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>
-                                        <li><TwitterShareButton title={i18n.t("Cashero_waitlist_Quote")} url={`${`https://www.cashero.com/${lang}/`}`}><img alt="Twitter" src={Twitter} /> </TwitterShareButton></li>
-                                        <li><EmailShareButton separator=" " subject="Join Cashero" body={i18n.t("Cashero_waitlist_Quote")} url={`${`https://www.cashero.com/${lang}/`}`}><img alt="gmail" src={Gmail} /> </EmailShareButton></li>
+                                        <li><FacebookShareButton quote={`${i18n.t("Cashero_waitlist_Quote")}${`${websiteLink}/${lang}/`}`} url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>
+                                        <li><TwitterShareButton title={i18n.t("Cashero_waitlist_Quote")} url={`${`${websiteLink}/${lang}/`}`}><img alt="Twitter" src={Twitter} /> </TwitterShareButton></li>
+                                        <li><EmailShareButton separator=" " subject="Join Cashero" body={i18n.t("Cashero_waitlist_Quote")} url={`${`${websiteLink}/${lang}/`}`}><img alt="gmail" src={Gmail} /> </EmailShareButton></li>
                                     </ul>
                                 </div>
                             </div>

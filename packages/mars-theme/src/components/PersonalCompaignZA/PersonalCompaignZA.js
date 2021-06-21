@@ -136,8 +136,9 @@ const PersonalCompaignZA = ({ i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <p className="text-uppercase bannerPara font-medium">{i18n.t("Compaign_1")}<span className="br-block"></span>{i18n.t("Compaign_2")}</p>
-                <h1>{i18n.t("High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
+                <p className="text-uppercase bannerPara font-medium mb-0">{i18n.t("Compaign_1")}</p>
+                <p className="text-uppercase bannerPara font-medium">{i18n.t("Compaign_2")}</p>
+                <h1 className="compaignHighYield">{i18n.t("High_Yield_Savings_Account")}</h1>
                 <div className="Banner-list compaignList">
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />

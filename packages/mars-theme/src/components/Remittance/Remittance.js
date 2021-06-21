@@ -39,7 +39,11 @@ const Remittance = ({ state, i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/transfer-money-abroad/"
         />
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/transfer-money-abroad/" />
+        {i18n.language === "brazilian" ?
+          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/transfer-money-abroad/" />
+          :
+          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/transfer-money-abroad/" />
+        }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/transfer-money-abroad/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}

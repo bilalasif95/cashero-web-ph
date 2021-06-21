@@ -59,7 +59,11 @@ const Post = ({ state, actions, libraries, i18n }) => {
           rel="canonical"
           href={websiteLink + state.router.link}
         />
-        <link rel="alternate" hreflang="en-US" href={websiteLink + state.router.link} />
+        {i18n.language === "brazilian" ?
+          <link rel="alternate" hreflang="pt-BR" href={websiteLink + state.router.link} />
+          :
+          <link rel="alternate" hreflang="en-US" href={websiteLink + state.router.link} />
+        }
         <link rel="alternate" hreflang="x-default" href={websiteLink + state.router.link} />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
