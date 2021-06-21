@@ -115,7 +115,7 @@ const Personal = ({ i18n }) => {
       <div className="PesonalBanner InterestBanner compaign-banner">
         <div className="container">
           <div className="row">
-            <div className="col-md-7">
+            <div className="col-lg-7 col-md-6 col-sm-12">
               <div className="PersonalCont">
                 <p className="text-uppercase bannerPara font-medium">Do your savings need a lifeline? <span className="br-block"></span> cashero is on the way!</p>
                 <h1>{i18n.t("High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
@@ -140,7 +140,7 @@ const Personal = ({ i18n }) => {
                 <p className="bannerPara font-medium">With Cashero, we protect your value for money and maximize your savings. Get higher returns and make your money works for you.</p>
               </div>
             </div>
-            <div className="col-md-5">
+            <div className="col-lg-5 col-md-6 col-sm-12">
               <div className="compaignForm">
                 <h2 className="text-center">Cashero is on the way!</h2>
                 <p className="text-center">We are launching multinationally. <span className="br-block"></span> Be the first to earn with Cashero in [country name]. <span className="br-block"></span> Join the waitlist, today. </p>
@@ -202,7 +202,7 @@ const Personal = ({ i18n }) => {
                           </DropdownMenu>
                         </Dropdown>
                       </div>
-                      <div className="inputNum width80">
+                      <div className="inputNum">
                         <input
                           className="form-control"
                           type="number"

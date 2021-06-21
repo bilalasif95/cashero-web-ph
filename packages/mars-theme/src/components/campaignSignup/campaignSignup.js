@@ -2,7 +2,7 @@ import React from "react";
 
 const campaignSignup = () => {
   return (
-    <div className="SignUp">
+    <div className="SignUp compaign-signup">
       <div className="container">
         <div className="row">
           <div className="col-12">
