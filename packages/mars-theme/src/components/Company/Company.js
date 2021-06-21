@@ -5,13 +5,18 @@ import WhoSection from "../WhoSection/WhoSection";
 import CasheroImg from "../../assets/CasheroImg.png";
 import YearsImg from "../../assets/YearsImg.png";
 import { Head } from "frontity";
+import { withTranslation } from "react-i18next";
 
-export function Company() {
+const Company = ({ i18n }) => {
   return (
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/company/" />
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/company/" />
+        {i18n.language === "brazilian" ?
+          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/company/" />
+          :
+          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/company/" />
+        }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/company/" />
       </Head>
       <div className="CompanyBanner">
@@ -46,3 +51,5 @@ export function Company() {
     </>
   );
 }
+
+export default withTranslation()(Company);

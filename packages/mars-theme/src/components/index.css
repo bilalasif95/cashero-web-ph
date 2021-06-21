@@ -1003,7 +1003,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
   text-align: inherit !important; }
   .waitlistcont p {
     text-align: left !important; }
-  .waitlistcont h3 {
+  .waitlistcont h1 {
     text-align: left !important;
     font-style: normal;
     font-weight: 400;
@@ -1256,7 +1256,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     padding: 0px !important;
     background-color: #fff;
     height: 100vh !important; }
-  .waitlistcont h3 {
+  .waitlistcont h1 {
     font-size: 32px !important;
     line-height: 40px !important;
     text-align: center; }
@@ -16033,6 +16033,9 @@ select:-webkit-autofill:focus {
   @media (min-width: 1200px) {
     .compaignHeading {
       padding-right: 170px;
+    }
+    .compaignHighYield {
+      width: 48%;
     }
   }
   @media (max-width: 540px) {
