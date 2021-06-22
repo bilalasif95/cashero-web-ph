@@ -4,6 +4,7 @@ import Countup from "../Countup/Countup";
 import WhoSection from "../WhoSection/WhoSection";
 import CasheroImg from "../../assets/CasheroImg.png";
 import YearsImg from "../../assets/YearsImg.png";
+import YearsImgBR from "../../assets/YearsImgBR.png";
 import { Head } from "frontity";
 import { withTranslation } from "react-i18next";
 
@@ -41,7 +42,7 @@ const Company = ({ i18n }) => {
               <img
                 className="img-fluid mx-auto d-block"
                 alt="Years Image"
-                src={YearsImg}
+                src={i18n.language === "brazilian" ? YearsImgBR : YearsImg}
               />
             </div>
           </div>

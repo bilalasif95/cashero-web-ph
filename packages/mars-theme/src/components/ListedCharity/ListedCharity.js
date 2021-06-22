@@ -8,6 +8,7 @@ import StepsWallet from "../../assets/stepsWallet.png";
 import heartDollar from "../../assets/heartDollar.svg";
 import listHome from "../../assets/listHome.svg";
 import freeFund from "../../assets/freeFund.png";
+import freeFundBR from "../../assets/freeFundBR.png";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import QuestionTabs from "../Tabs/Tabs";
 import SignupSection from "../signupSection/signupSection";
@@ -58,7 +59,7 @@ const ListedCharity = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-6">
-              <img alt="free Fund" className="img-fluid mx-auto d-block" src={freeFund} />
+              <img alt="free Fund" className="img-fluid mx-auto d-block" src={i18n.language === "brazilian" ? freeFundBR : freeFund} />
             </div>
           </div>
         </div>

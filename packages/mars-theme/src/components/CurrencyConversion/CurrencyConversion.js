@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "../link";
 import currExchange from "../../assets/exchange.svg";
+import currExchangeBR from "../../assets/exchangeBR.svg";
 import { Fade } from "react-awesome-reveal";
 import { Zoom } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
@@ -20,7 +21,7 @@ const CurrencyConversion = ({ i18n }) => {
 						<img
 							className="charity-mob"
 							alt="currency exchange"
-							src={currExchange}
+							src={i18n.language === "brazilian" ? currExchangeBR : currExchange}
 						/>
 					</div>
 				</div>

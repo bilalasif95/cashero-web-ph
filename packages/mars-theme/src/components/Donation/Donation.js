@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg";
 import SlideGroup from "../../assets/SlideGroup.png";
+import SlideGroupBR from "../../assets/SlideGroupBR.png";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import donateDollar from "../../assets/donateDollar.svg";
 import heart from "../../assets/heart.svg";
@@ -55,7 +56,7 @@ const Donation = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Slide Group" className="img-fluid mx-auto d-block sm-mt-30" src={SlideGroup} />
+              <img alt="Slide Group" className="img-fluid mx-auto d-block sm-mt-30" src={i18n.language === "brazilian" ? SlideGroupBR : SlideGroup} />
             </div>
           </div>
         </div>

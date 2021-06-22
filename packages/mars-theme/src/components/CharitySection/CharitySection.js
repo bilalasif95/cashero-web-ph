@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "../link";
 import Charity from "../../assets/Charity.png";
+import CharityBR from "../../assets/CharityBR.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
@@ -14,7 +15,7 @@ const CharitySection = ({ i18n }) => {
 						<img
 							className="sm-center img-fluid"
 							alt="Charity"
-							src={Charity}
+							src={i18n.language === "brazilian" ? CharityBR : Charity}
 						/>
 					</div>
 				</div>

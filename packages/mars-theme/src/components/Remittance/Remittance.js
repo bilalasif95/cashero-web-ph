@@ -13,7 +13,9 @@ import GlobeDollar from "../../assets/GlobeDollar.svg";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Casher0map from "../../assets/Casher0map.svg";
+import Casher0mapBR from "../../assets/Casher0mapBR.svg";
 import Done from "../../assets/done.svg";
+import DoneBR from "../../assets/doneBR.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import StepsDollar from "../../assets/StepsDollar.svg";
@@ -70,7 +72,7 @@ const Remittance = ({ state, i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Cashero map" className="mx-auto d-block w-100" src={Casher0map} />
+              <img alt="Cashero map" className="mx-auto d-block w-100" src={i18n.language === "brazilian" ? Casher0mapBR : Casher0map} />
             </div>
           </div>
         </div>
@@ -122,7 +124,7 @@ const Remittance = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Done" src={Done} />
+                  <img className="img-fluid" alt="Done" src={i18n.language === "brazilian" ? DoneBR : Done} />
                   <h3>
                     {i18n.t("Remittance_Work")}
                   </h3>

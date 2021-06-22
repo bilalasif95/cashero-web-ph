@@ -16,6 +16,7 @@ import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import KuWu from "../../assets/KuWu.png";
+import KuWuBR from "../../assets/KuWuBR.png";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Head, connect } from "frontity";
 import Link from "../link";
@@ -70,7 +71,7 @@ const ReceivePayments = ({ state, i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="KuWu" className="img-fluid mx-auto d-block" src={KuWu} />
+              <img alt="KuWu" className="img-fluid mx-auto d-block" src={i18n.language === "brazilian" ? KuWuBR : KuWu} />
             </div>
           </div>
         </div>
