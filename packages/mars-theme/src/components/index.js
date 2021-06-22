@@ -29,7 +29,7 @@ import PersonalCompaignES from "./PersonalCompaignES/PersonalCompaignES";
 import Footer from "./footer/Footer";
 import BlogPage from "./BlogPage/BlogPage";
 import HomePage from "./HomePage/HomePage";
-import { Company } from "./Company/Company";
+import Company from "./Company/Company";
 import ContactUs from "./ContactUs/ContactUs";
 import Donation from "./Donation/Donation";
 import ListedCharity from "./ListedCharity/ListedCharity";

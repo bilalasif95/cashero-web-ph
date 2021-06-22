@@ -36,7 +36,11 @@ const ListedCharity = ({ i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/become-listed-charity/"
         />
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/become-listed-charity/" />
+        {i18n.language === "brazilian" ?
+          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/become-listed-charity/" />
+          :
+          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/become-listed-charity/" />
+        }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/become-listed-charity/" />
       </Head>
       <div className="PesonalBanner">
