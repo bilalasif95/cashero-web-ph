@@ -37,7 +37,6 @@ const GlobalMoney = ({ i18n }) => {
 							alt="Cashero"
 							src={CasheroC}
 						/>
-
 					</div>
 					<img
 						className="img-fluid mx-auto c-map-mob sm-mt-30"

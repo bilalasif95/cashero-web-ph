@@ -90,7 +90,9 @@ const BlogPage = ({ state, i18n }) => {
                           {i18n.t("All")}
                         </DropdownItem>
                         {blogsCategories.map((res) => (
-                          <DropdownItem onClick={(e) => handleChange(e, res.name, res.id)}>
+                          <DropdownItem
+                            onClick={(e) => handleChange(e, res.name, res.id)}
+                          >
                             {res.name}
                           </DropdownItem>
                         ))}
@@ -124,9 +126,7 @@ const BlogPage = ({ state, i18n }) => {
                             <CircularProgress />
                           </div>
                         ) : data.length === 0 ? (
-                          <div className="noRecord">
-                            {i18n.t("No_record_found")}
-                          </div>
+                          <div className="noRecord">{i18n.t("No_record_found")}</div>
                         ) : (
                           <>
                             <div className="col-md-6">
@@ -173,7 +173,9 @@ const BlogPage = ({ state, i18n }) => {
                                           </div>
                                           <div className="col-md-6 col-12">
                                             <div className="blogCont">
-                                              <span className="date mt-0">{date}</span>
+                                              <span className="date mt-0">
+                                                {date}
+                                              </span>
                                               <h2>
                                                 <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
                                               </h2>
@@ -208,9 +210,7 @@ const BlogPage = ({ state, i18n }) => {
                                         )}
                                       </div>
                                       <div>
-                                        <span className="date">
-                                          {date}
-                                        </span>
+                                        <span className="date">{date}</span>
                                         <h2>
                                           <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
                                         </h2>
@@ -237,9 +237,7 @@ const BlogPage = ({ state, i18n }) => {
                                   <CircularProgress />
                                 </div>
                               ) : categoryData.length === 0 ? (
-                                <div className="noRecord">
-                                  {i18n.t("No_record_found")}
-                                </div>
+                                <div className="noRecord">{i18n.t("No_record_found")}</div>
                               ) : (
                                 <>
                                   <div className="col-md-6">
@@ -355,9 +353,7 @@ const BlogPage = ({ state, i18n }) => {
                                   <CircularProgress />
                                 </div>
                               ) : categoryData.length === 0 ? (
-                                <div className="noRecord">
-                                  {i18n.t("No_record_found")}
-                                </div>
+                                <div className="noRecord">{i18n.t("No_record_found")}</div>
                               ) : (
                                 <>
                                   <div className="col-md-6">

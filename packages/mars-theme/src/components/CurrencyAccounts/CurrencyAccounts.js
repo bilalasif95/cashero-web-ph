@@ -222,8 +222,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
                                 {item.name}
                               </div>
                             </DropdownItem>
-                          )
-                          )}
+                          ))}
                       </div>
                     </DropdownMenu>
                   </Dropdown>
