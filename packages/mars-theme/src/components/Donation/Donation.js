@@ -93,14 +93,8 @@ const Donation = ({ i18n }) => {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img
-                  className="img-fluid"
-                  alt="Donate Box"
-                  src={DonateBox}
-                />
-                <h3>
-                  {i18n.t("Donation_Work2")}
-                </h3>
+                <img className="img-fluid" alt="Donate Box" src={DonateBox} />
+                <h3>{i18n.t("Donation_Work2")}</h3>
               </div>
             </div>
 

@@ -95,9 +95,7 @@ const Remittance = ({ state, i18n }) => {
         <div className="getStarted">
           <div className="row">
             <div className="col-md-12">
-              <h3 className="getStartedTitle">
-                {i18n.t("Multi_Currency_Savings_Account_h3")}
-              </h3>
+              <h3 className="getStartedTitle">{i18n.t("Multi_Currency_Savings_Account_h3")}</h3>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -116,9 +114,7 @@ const Remittance = ({ state, i18n }) => {
                   alt="Steps Dollar"
                   src={StepsDollar}
                 />
-                <h3>
-                  {i18n.t("Add_funds_to_your_account")}
-                </h3>
+                <h3>{i18n.t("Add_funds_to_your_account")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">

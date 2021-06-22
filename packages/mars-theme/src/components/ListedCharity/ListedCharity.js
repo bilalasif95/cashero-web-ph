@@ -96,23 +96,15 @@ const ListedCharity = ({ i18n }) => {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img
-                  className="img-fluid"
-                  alt="list Image"
-                  src={listImg}
-                />
-                <h3>
-                  {i18n.t("Apply_to_become_a_listed_charity")}
-                </h3>
+                <img className="img-fluid" alt="list Image" src={listImg} />
+                <h3>{i18n.t("Apply_to_become_a_listed_charity")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
                   <img className="img-fluid" alt="Steps Wallet" src={StepsWallet} />
-                  <h3>
-                    {i18n.t("Receive_donations_and_make_a_difference")}
-                  </h3>
+                  <h3>{i18n.t("Receive_donations_and_make_a_difference")}</h3>
                 </div>
               </Fade>
             </div>

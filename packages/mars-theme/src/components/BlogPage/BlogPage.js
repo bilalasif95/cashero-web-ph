@@ -50,7 +50,7 @@ const BlogPage = ({ state, i18n }) => {
     setTimeout(() => {
       setLoading(false)
     }, 2000)
-  }, [])
+  }, []);
   return (
     <>
       <Head>
@@ -81,31 +81,16 @@ const BlogPage = ({ state, i18n }) => {
               <div className="row">
                 <div className="col-md-12">
                   <div className="BlogTabs">
-                    <Dropdown
-                      isOpen={dropdownOpengbp}
-                      toggle={togglegbp}
-                    >
+                    <Dropdown isOpen={dropdownOpengbp} toggle={togglegbp}>
                       <DropdownToggle caret>
                         <h2>{value}</h2>
                       </DropdownToggle>
                       <DropdownMenu>
-                        <DropdownItem
-                          onClick={(e) =>
-                            handleChange(e, "All")
-                          }
-                        >
+                        <DropdownItem onClick={(e) => handleChange(e, "All")}>
                           {i18n.t("All")}
                         </DropdownItem>
                         {blogsCategories.map((res) => (
-                          <DropdownItem
-                            onClick={(e) =>
-                              handleChange(
-                                e,
-                                res.name,
-                                res.id
-                              )
-                            }
-                          >
+                          <DropdownItem onClick={(e) => handleChange(e, res.name, res.id)}>
                             {res.name}
                           </DropdownItem>
                         ))}
@@ -122,10 +107,7 @@ const BlogPage = ({ state, i18n }) => {
                       >
                         <Tab label="All" value="All" />
                         {blogsCategories.map((res) => (
-                          <Tab
-                            label={res.name}
-                            value={res.id}
-                          />
+                          <Tab label={res.name} value={res.id} />
                         ))}
                       </TabList>
                     </Paper>
@@ -160,9 +142,7 @@ const BlogPage = ({ state, i18n }) => {
                                         )}
                                       </div>
                                       <div>
-                                        <span className="date">
-                                          {date}
-                                        </span>
+                                        <span className="date">{date}</span>
                                         <h2>
                                           <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
                                         </h2>
@@ -193,9 +173,7 @@ const BlogPage = ({ state, i18n }) => {
                                           </div>
                                           <div className="col-md-6 col-12">
                                             <div className="blogCont">
-                                              <span className="date mt-0">
-                                                {date}
-                                              </span>
+                                              <span className="date mt-0">{date}</span>
                                               <h2>
                                                 <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
                                               </h2>

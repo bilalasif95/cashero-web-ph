@@ -110,23 +110,15 @@ const ReceivePayments = ({ state, i18n }) => {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img
-                  className="img-fluid"
-                  alt="Dollar"
-                  src={Dollar}
-                />
-                <h3>
-                  {i18n.t("Add_funds_to_your_account")}
-                </h3>
+                <img className="img-fluid" alt="Dollar" src={Dollar} />
+                <h3>{i18n.t("Add_funds_to_your_account")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
                   <img className="img-fluid" alt="Path" src={Path} />
-                  <h3>
-                    {i18n.t("Send_request_and_receive_payments_in_an_instant")}
-                  </h3>
+                  <h3>{i18n.t("Send_request_and_receive_payments_in_an_instant")}</h3>
                 </div>
               </Fade>
             </div>
