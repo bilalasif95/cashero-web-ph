@@ -36,7 +36,7 @@ const ThanksModal = (props) => {
                         <div className="row waitlistRow">
                             <div className="col-md-6">
                                 <div className="waitlistcont">
-                                    <h3 id="transition-modal-title">{i18n.t("Thank_you_for_joining")} <span className="br-block-with-no-display"></span> Cashero!</h3>
+                                    <h1 id="transition-modal-title">{i18n.t("Thank_you_for_joining")} <span className="br-block-with-no-display"></span> Cashero!</h1>
                                     <p>{i18n.t("We_have_sent_you_an_SMS_with_a_link_to_download_the_app")}</p>
                                     {/* <p>We’ll keep you posted so be sure to look out for an SMS from us very soon.</p> */}
                                 </div>

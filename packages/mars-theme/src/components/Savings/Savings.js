@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import BitCircle from "../../assets/BitCircle.png";
+import BitCircleBR from "../../assets/BitCircleBR.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
@@ -36,7 +37,7 @@ const Savings = ({ i18n }) => {
 					<img
 						className="img-fluid mx-auto d-block"
 						alt="Bit Circle"
-						src={BitCircle} />
+						src={i18n.language === "brazilian" ? BitCircleBR : BitCircle} />
 				</div>
 			</div>
 		</div>

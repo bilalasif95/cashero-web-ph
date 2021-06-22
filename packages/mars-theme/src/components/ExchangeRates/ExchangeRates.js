@@ -638,7 +638,7 @@ const ExchangeRates = ({ state, i18n }) => {
             </div>
           </div>
         </div>
-      </div >
+      </div>
       <div className="container">
         <div className="row">
           <div className="col-md -12">
@@ -715,13 +715,9 @@ const ExchangeRates = ({ state, i18n }) => {
               </div>
             </div>
           </div>
-          {
-            appModal && (
-              <GetTheAppModal open={appModal} handleClose={appModalClose} />
-            )
-          }
-        </div >
-      </div >
+          {appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
+        </div>
+      </div>
       <PeoplesSection />
       <div className="container">
         <QuestionTabs activeTab={3} />

@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "../link";
 import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
+import InstantMoneyTransferBR from "../../assets/InstantMoneyTransferBR.svg";
 import Send from "../../assets/send.svg";
+import SendBR from "../../assets/sendBR.svg";
 import Request from "../../assets/request.svg";
+import RequestBR from "../../assets/requestBR.svg";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
@@ -42,7 +45,7 @@ const MoneyRequest = ({ i18n }) => {
 										>
 											<img
 												className="img-fluid mx-auto d-block"
-												src={Request}
+												src={i18n.language === "brazilian" ? RequestBR : Request}
 												alt="Request"
 											/>
 										</Slide>
@@ -57,7 +60,7 @@ const MoneyRequest = ({ i18n }) => {
 										>
 											<img
 												className="img-fluid mx-auto d-block"
-												src={Send}
+												src={i18n.language === "brazilian" ? SendBR : Send}
 												alt="Send"
 											/>
 										</Slide>
@@ -67,7 +70,7 @@ const MoneyRequest = ({ i18n }) => {
 						</div>
 						<img
 							className="img-fluid mx-auto money-transfer sm-mt-30"
-							src={InstantMoneyTransfer}
+							src={i18n.language === "brazilian" ? InstantMoneyTransferBR : InstantMoneyTransfer}
 							alt="Instant Money Transfer"
 						/>
 					</div>

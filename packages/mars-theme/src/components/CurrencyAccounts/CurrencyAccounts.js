@@ -181,93 +181,48 @@ const CurrencyAccounts = ({ state, i18n }) => {
                     </span>
                     <span ref={ref} id="counter"></span>
                   </div>
-                  <Dropdown
-                    isOpen={dropdownOpengbp}
-                    toggle={togglegbp}
-                  >
+                  <Dropdown isOpen={dropdownOpengbp} toggle={togglegbp}>
                     <DropdownToggle caret>
                       <div className="mr-3"><span className="FlagIcon">{flaggbp} </span></div>
                       <span className="FlagCode">{flagcurrencygbp}</span>
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem
-                        header
-                      >
+                      <DropdownItem header>
                         <>
                           <SearchIcon />
                           <input
                             type="text"
-                            value={
-                              searchTermgbp
-                            }
-                            onChange={
-                              handleChangegbp
-                            }
+                            value={searchTermgbp}
+                            onChange={handleChangegbp}
                           />
                         </>
                       </DropdownItem>
                       <div className="country-list">
-                        {searchResults2gbp.length >
-                          0
-                          ? searchResults2gbp.map(
-                            (
-                              item,
-                              index
-                            ) => (
-                              <DropdownItem
-                                key={
-                                  index +
-                                  1
-                                }
-                                onClick={() =>
-                                  selectCountrygbp(
-                                    item
-                                  )
-                                }
-                                className="country-item"
-                              >
-                                <div className="flag-name">
-                                  <span>
-                                    {
-                                      item.flag
-                                    }
-                                  </span>
-                                  {
-                                    item.name
-                                  }
-                                </div>
-                              </DropdownItem>
-                            )
+                        {searchResults2gbp.length > 0
+                          ? searchResults2gbp.map((item, index) => (
+                            <DropdownItem
+                              key={index + 1}
+                              onClick={() => selectCountrygbp(item)}
+                              className="country-item"
+                            >
+                              <div className="flag-name">
+                                <span>{item.flag}</span>
+                                {item.name}
+                              </div>
+                            </DropdownItem>
+                          ))
+                          : searchResultsgbp.map((item, index) => (
+                            <DropdownItem
+                              key={index + 1}
+                              onClick={() => selectCountrygbp(item)}
+                              className="country-item"
+                            >
+                              <div className="flag-name">
+                                <span>{item.flag}</span>
+                                {item.name}
+                              </div>
+                            </DropdownItem>
                           )
-                          : searchResultsgbp.map(
-                            (
-                              item,
-                              index
-                            ) => (
-                              <DropdownItem
-                                key={
-                                  index +
-                                  1
-                                }
-                                onClick={() =>
-                                  selectCountrygbp(
-                                    item
-                                  )
-                                }
-                                className="country-item"
-                              >
-                                <div className="flag-name">
-                                  <span>
-                                    {
-                                      item.flag
-                                    }
-                                  </span>
-                                  {
-                                    item.name
-                                  }
-                                </div>
-                              </DropdownItem>
-                            )
                           )}
                       </div>
                     </DropdownMenu>
