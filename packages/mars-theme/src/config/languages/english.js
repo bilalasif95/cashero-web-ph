@@ -936,4 +936,5 @@ export const english = {
     Cashero_waitlist_P: "When Cashero becomes available in your country, we'll send you an SMS to download the app. We look forward to welcoming more users soon!",
     Cashero_waitlist_Quote: "I just joined Cashero's waitlist! Soon I'll be able to start earning up to 5% APY. Join the waitlist today: ",
     Thank_you_for_joining_Cashero_waitlist: "Thank you for joining Cashero's waitlist!",
+    Earning_5_APY: "Earning 5% APY",
 };

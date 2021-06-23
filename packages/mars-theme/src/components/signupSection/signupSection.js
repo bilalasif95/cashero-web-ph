@@ -7,7 +7,7 @@ const SignupSection = ({ i18n }) => {
     <div className="SignUp">
       <div className="container">
         <div className="row">
-          <div className="col-12">
+          <div className="col-md-8 offset-md-2">
             <h2 className="SignUpTitle">{i18n.t("Join_Cashero")}</h2>
             <h3 className="SignUpText mb-0">
               {i18n.t("Join_Cashero_P")}

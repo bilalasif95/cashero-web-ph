@@ -12,7 +12,7 @@ import Arrow from "../../assets/arrowLink.png";
 import { animateScroll as scroll } from "react-scroll";
 import { withTranslation } from "react-i18next";
 
-const campaignSavings = ({ i18n, lang }) => {
+const campaignSavings = ({ i18n, lang, focus }) => {
 	return (
 		<div className="MultiCurrency sm-mt-40 campaignSavings">
 			<div className="row">
@@ -26,7 +26,7 @@ const campaignSavings = ({ i18n, lang }) => {
 							<p>
 								{i18n.t("CampaignSavings_P")}
 							</p>
-							<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<button onClick={() => { focus(); scroll.scrollTo('myScrollToElement', { containerId: 'ContainerElementID' }) }} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</Fade>
 					</div>
 				</div>

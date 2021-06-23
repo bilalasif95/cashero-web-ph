@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Check from "../../assets/check-mark2.png";
 import { parse as parseQs } from "qs";
 import depositUSD from "../../assets/depositUSD.svg";
@@ -37,6 +37,7 @@ const PersonalCompaign = ({ i18n }) => {
   const [utmMedium, setUtmMedium] = useState("");
   const [utmSource, setUtmSource] = useState("");
   const [utmTerm, setUtmTerm] = useState("");
+  const fullName = useRef(null);
   const toggle = () => {
     setSearchTerm("");
     setDropdownOpen((prevState) => !prevState);
@@ -124,11 +125,14 @@ const PersonalCompaign = ({ i18n }) => {
         });
     }
   };
+  const focus = () => {
+    fullName.current.focus();
+  }
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/en/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en/" />
+        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/us/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/us/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -166,7 +170,7 @@ const PersonalCompaign = ({ i18n }) => {
                 <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")} USA.<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
-                    <input type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
+                    <input id="ContainerElementID" ref={fullName} type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
                   </div>
                   <div className="form-group">
                     <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder={i18n.t("Enter_Email")} />
@@ -283,13 +287,13 @@ const PersonalCompaign = ({ i18n }) => {
           </div>
         </div>
       </div>
-      <CompaignNoEffort />
+      <CompaignNoEffort focus={focus} />
       <div className="container">
-        <Savings />
+        <Savings focus={focus} />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="us" />}
       <CampaignTabs />
-      <CampaignSignup />
+      <CampaignSignup focus={focus} />
     </>
   );
 }
