@@ -936,4 +936,5 @@ CampaignSignup_4: "how to get the most out of your money, with Cashero.",
 Cashero_waitlist_P: "When Cashero becomes available in your country, we'll send you an SMS to download the app. We look forward to welcoming more users soon!",
     Cashero_waitlist_Quote: "I just joined Cashero's waitlist! Soon I'll be able to start earning up to 5% APY. Join the waitlist today: ",
     High_Yield_Savings_Account: "Conta em real, com rendimento em dólar",
+    Earning_5_APY: "Até 5% a.a. de retorno",
 };

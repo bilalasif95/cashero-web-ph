@@ -288,23 +288,49 @@ body{
   .numberSelection .selectCountry {
     width: 16% !important; }
   .numberSelection .inputNum {
-    width: 40%; } }
+    width: 30%; } }
 
   .compaignForm .numberSelection .selectCountry {
     width: 16% !important; }
   .compaignForm .numberSelection .inputNum {
     width: 80%; }
 
-@media (max-width: 960px) and (min-width: 768px) {
+    @media (max-width: 1199px) and (min-width: 992px) {
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 262px !important;
+    }
+    }
+@media (max-width: 992px) and (min-width: 768px) {
   .numberSelection {
     justify-content: space-between; }
     .numberSelection .selectCountry {
-      width: 20% !important; }
+      width: 15% !important; }
     .numberSelection .inputNum {
-      width: 42%; }
+      width: 40%; }
+      .banner .numberSelection .inputNum input, .PersonalCont .numberSelection .inputNum input {
+        width: 100%;
+      }
+      .numberSelection .selectCountry .dropdown-menu.show{
+        width: 440px !important;
+      }
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 290px !important;
+    }
     .numberSelection .Appbtn {
       margin-left: 0 !important;
       margin-top: 1.5rem !important; } }
+
+      @media (max-width: 768px) and (min-width: 540px) { 
+        .numberSelection .selectCountry .dropdown-menu.show{
+          width: 450px !important;
+        }
+        .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+          width: 470px !important;
+      }
+      .SignUp {
+        padding: 50px !important;
+    }
+      }    
 
 .WhoSection .WhoSectionCont h1 {
   color: #363636;
@@ -491,10 +517,23 @@ h4 {
     height: 100%;
     width: 100%;
     border-radius: 20px; }
-
+    @media (max-width: 475px) and (min-width: 320px) {
+      .numberSelection .selectCountry .dropdown-menu.show {
+        width: 280px!important;
+    }
+    }
+@media (max-width: 475px) and (min-width: 375px) {
+  .compaign-select .numberSelection .inputNum {
+    width: 80% !important;
+  }
+}
 @media (max-width: 475px) {
   .blogDetailImg {
-    min-height: 180px !important; } }
+    min-height: 180px !important; }
+    .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+      width: 405px !important;
+  }
+  }
 
 @media (max-width: 425px) {
   .customNav ul li:not(:last-child) {
@@ -502,21 +541,37 @@ h4 {
   .numberSelection .selectCountry .dropdown-menu.show{
     width: 285px;
   }
+  .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+    width: 355px !important;
 }
-
+}
 @media (max-width: 375px) {
   .customNav ul li:not(:last-child) {
     margin-right: 10px !important; }
+    .compaign-select .selectCountry {
+      width: 25% !important;
+    }
+    .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+      width: 316px !important;
+  }
   .blogDetailImg {
     min-height: 140px !important; } }
-
 @media (max-width: 320px) {
+  .compaignForm .numberSelection .selectCountry {
+    width: 20%!important;
+}
+.compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+  width: 260px !important;
+}
+.compaign-select .numberSelection .inputNum {
+  width: 75%!important;
+}
   .circle-cont .blue-circle {
     width: 275px;
     height: 290px;
 }
 .numberSelection .selectCountry .dropdown-menu.show{
-  width: 230px;
+  width: 230px !important;
 }
 .circle-cont .blue-circle {
   margin: -6rem auto 0px;
@@ -2230,13 +2285,6 @@ b {
     .SavingAccount .Link {
       color: #fff !important; } }
 
-.HighInterestText {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.01em; }
-
 #counter {
   font-weight: normal;
   letter-spacing: 1px;
@@ -2925,7 +2973,7 @@ b {
   background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FgF6V6lg.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 134px 191px 134px 191px;
+  padding: 134px 0px;
   text-align: center; }
 
 .SignUpText {
@@ -3153,14 +3201,6 @@ b {
     background-size: cover; }
     .SavingAccount .Link {
       color: #fff !important; } }
-
-.HighInterestText {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.01em; }
-
 #counter {
   font-weight: normal;
   letter-spacing: 1px;
@@ -15739,6 +15779,7 @@ select:-webkit-autofill:focus {
     } */
     .numberSelection .selectCountry .dropdown-menu.show{
       background-color: #fff !important;
+      width: 500px;
     }
     .Appbtn.disabled{
       background-color: #0667eb !important;
@@ -16120,6 +16161,9 @@ select:-webkit-autofill:focus {
       margin: 40px 0px 20px;}
     .compaignFormCont .form-group {
       margin-bottom: 30px;}
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 378px;
+    }
     .compaignFormCont input {
       border: none;
       border-bottom: 1px solid #0f6df5 !important;
@@ -16256,12 +16300,16 @@ select:-webkit-autofill:focus {
   padding: 134px 0 134px 0;
   text-align: center;
 }
-
-@media (max-width: 375px) {
-  .compaign-select .selectCountry {
-    width: 25% !important;
-  }
-  .compaign-select .numberSelection .inputNum {
-    width: 70% !important;
-  }
+.earningText {
+  border: 1px solid #eeeeec;
+  border-radius: 13px;
+  width: auto;
+  display: inline-block;
+  padding: 0px 32px;
+  margin-bottom: 1rem;
+}
+.earningText p {
+  margin-bottom: 0px;
+  font-size: 13px;
+  color: #0667eb !important;
 }
