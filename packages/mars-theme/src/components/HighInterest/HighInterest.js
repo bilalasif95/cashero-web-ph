@@ -117,7 +117,7 @@ const HighInterest = ({ i18n }) => {
 									alt="Earning"
 								/> */}
 								<div className="earningText">
-								<p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
+									<p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
 								</div>
 								<p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
 									flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : calculateBRL(baseCurrencyGBPValue, "")}</p>
