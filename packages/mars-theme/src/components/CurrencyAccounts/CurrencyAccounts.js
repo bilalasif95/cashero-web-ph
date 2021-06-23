@@ -15,13 +15,13 @@ import SignupSection from "../signupSection/signupSection";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import CounterIcon from "../../assets/counterIcon.svg";
-import Earning from "../../assets/earning.svg";
 import SearchIcon from "@material-ui/icons/Search";
 import MovingCoins from "../../assets/movingCoins.png";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import currencieslist from "../../config/currenciesList";
+import currencieslistBR from "../../config/currenciesListBR";
 import { Head, connect } from "frontity";
 import Link from "../link";
 import { structuredData, faqStructuredData, organizationStructuredData } from "../../config/SEO/MultiCurrencySavingsAccount/structuredData";
@@ -39,11 +39,11 @@ const CurrencyAccounts = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
   const ref = useRef(null);
   const [flaggbp, setflaggbp] = useState("🇺🇸");
-  const [flagcurrencygbp, setflagcurrencygbp] = useState("US Dollar - USD");
+  const [flagcurrencygbp, setflagcurrencygbp] = useState(i18n.language === "brazilian" ? "Dollar Americano - USD" : "US Dollar - USD");
   const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
   const [searchTermgbp, setSearchTermgbp] = useState("");
   const [searchResults2gbp, setSearchResults2gbp] = useState([]);
-  const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslist);
+  const [searchResultsgbp, setSearchResultsgbp] = useState(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
   const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
   const [baseCurrencyGBPValue, setBaseCurrencyGBPValue] = useState("1");
   const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
@@ -64,10 +64,24 @@ const CurrencyAccounts = ({ state, i18n }) => {
   };
   const selectCountrygbp = (country) => {
     setSearchTermgbp("");
-    setSearchResults2gbp(currencieslist);
+    setSearchResults2gbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
     setflaggbp(country.flag);
     setflagcurrencygbp(country.name)
   };
+  useEffect(() => {
+		if (i18n.language === "brazilian") {
+			setSearchResultsgbp(currencieslistBR)
+			setSearchResults2gbp([])
+			setflagcurrencygbp("Dollar Americano - USD")
+			setflaggbp("🇺🇸")
+		}
+		else {
+			setSearchResultsgbp(currencieslist)
+			setSearchResults2gbp([])
+			setflagcurrencygbp("US Dollar - USD")
+			setflaggbp("🇺🇸")
+		}
+	}, [i18n.language])
   useEffect(() => {
     var start = 1000;
     var speed = 0;
@@ -81,7 +95,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
         start += 1;
       }
     }, speed);
-    setSearchResultsgbp(currencieslist)
+    setSearchResultsgbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist)
     callApi(FirebaseEndPoints.ExchangeRates, "get", "")
       .then((doc) => {
         setBaseCurrencyEURValue(doc.fields.eur.stringValue)
@@ -103,7 +117,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
     return x ? temp[0] + "." + x : "0.00";
   };
   const calculateBRL = (value, label) => {
-    if (label === "US Dollar - USD") {
+    if (label === "Dollar Americano - USD" || label === "US Dollar - USD") {
       const multi = bigDecimal.multiply(50.00, value)
       const final = limit(multi)
       return final
@@ -166,20 +180,15 @@ const CurrencyAccounts = ({ state, i18n }) => {
                   src={CounterIcon}
                 />
                 <div className="GraphCont">
-                  {/* <img
-                    className="img-fluid countryFlag mb-3"
-                    src={Earning}
-                    alt="Earning"
-                  /> */}
                   <div className="earningText">
-									  <p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
-								</div>
+                    <p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
+                  </div>
                   <p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
-                    flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : calculateBRL(baseCurrencyGBPValue, "")}</p>
+                    flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "Dollar Americano - USD" ? calculateBRL(baseCurrencyUSDValue, "Dollar Americano - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
                   <div className="CustomCounter">
                     <span className="CounterText">
-                      {flagcurrencygbp === "US Dollar - USD" ? "$" :
-                        flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" ? "50.00" :
+                      {flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "Dollar Americano - USD" ? "$" :
+                        flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "Dollar Americano - USD" ? "50.00" :
                           flagcurrencygbp === "EU Euro - EUR" ? "60.00" : "70.00"}
                     </span>
                     <span ref={ref} id="counter"></span>

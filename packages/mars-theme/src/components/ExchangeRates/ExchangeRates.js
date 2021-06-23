@@ -19,6 +19,7 @@ import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import SearchIcon from "@material-ui/icons/Search";
 import currencieslist from "../../config/currenciesList";
+import currencieslistBR from "../../config/currenciesListBR";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
@@ -39,11 +40,11 @@ const ExchangeRates = ({ state, i18n }) => {
   };
   const [appModal, setAppModal] = useState(false);
   const [searchTermgbp, setSearchTermgbp] = useState("");
-  const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslist);
+  const [searchResultsgbp, setSearchResultsgbp] = useState(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
   const [searchResults2gbp, setSearchResults2gbp] = useState([]);
   const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
   const [searchTermeuro, setSearchTermeuro] = useState("");
-  const [searchResultseuro, setSearchResultseuro] = useState(currencieslist);
+  const [searchResultseuro, setSearchResultseuro] = useState(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
   const [searchResults2euro, setSearchResults2euro] = useState([]);
   const [dropdownOpeneuro, setDropdownOpeneuro] = useState(false);
   const [flaggbp, setflaggbp] = useState("🇬🇧");
@@ -63,8 +64,8 @@ const ExchangeRates = ({ state, i18n }) => {
   const [quoteCurrencyValue, setQuoteCurrencyValue] = useState("");
   useEffect(() => {
     setLoading(true);
-    setSearchResultseuro(currencieslist);
-    setSearchResultsgbp(currencieslist);
+    setSearchResultseuro(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+    setSearchResultsgbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
     callApi(
       FirebaseEndPoints.IndividualExchangeRates + `/${flagcodegbp}`,
       "get",
@@ -85,6 +86,20 @@ const ExchangeRates = ({ state, i18n }) => {
       })
       .catch(() => { });
   }, []);
+  useEffect(() => {
+    if (i18n.language === "brazilian") {
+      setSearchResultsgbp(currencieslistBR)
+      setSearchResultseuro(currencieslistBR)
+      setSearchResults2gbp([])
+      setSearchResults2euro([])
+    }
+    else {
+      setSearchResultsgbp(currencieslist)
+      setSearchResultseuro(currencieslist)
+      setSearchResults2gbp([])
+      setSearchResults2euro([])
+    }
+  }, [i18n.language])
   const togglegbp = () => {
     setSearchTermgbp("");
     setDropdownOpengbp((prevState) => !prevState);
@@ -121,7 +136,7 @@ const ExchangeRates = ({ state, i18n }) => {
     setBaseCurrencyUSDValue("");
     setSearchTermgbp("");
     setQuoteCurrencyValue("");
-    setSearchResults2gbp(currencieslist);
+    setSearchResults2gbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
     if (swap) {
       setflageuro(country.flag);
       setflagcodeeuro(country.code);
@@ -165,7 +180,7 @@ const ExchangeRates = ({ state, i18n }) => {
   };
   const selectCountryeuro = (country) => {
     setSearchTermeuro("");
-    setSearchResults2euro(currencieslist);
+    setSearchResults2euro(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
     setflageuro(country.flag);
     setflagcodeeuro(country.code);
     setflagcurrencyeuro(country.currencyCode);
