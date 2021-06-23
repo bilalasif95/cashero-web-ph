@@ -12,7 +12,7 @@ import { Fade } from "react-awesome-reveal";
 import { animateScroll as scroll } from "react-scroll";
 import { withTranslation } from "react-i18next";
 
-const CompaignNoEffort = ({ i18n, lang }) => {
+const CompaignNoEffort = ({ i18n, lang, focus }) => {
 	return (
 		<div className="Coins sm-mb-30">
 			<div className="container">
@@ -28,7 +28,7 @@ const CompaignNoEffort = ({ i18n, lang }) => {
 								</h2>
 								<p className="HighInterestText">{i18n.t("CompaignNoEffort_P1")}</p>
 								<p className="HighInterestText">{i18n.t("CompaignNoEffort_P2")}</p>
-								<button onClick={() => scroll.scrollToTop()} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<button onClick={() => { focus(); scroll.scrollToTop() }} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 						</div>
 					</div>

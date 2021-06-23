@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "../link";
 import Flags from "../../assets/Flags.svg";
+import FlagsBR from "../../assets/FlagsBR.svg";
 import usdflag from "../../assets/usdflag.png";
+import usdflagBR from "../../assets/usdflagBR.png";
 import gbpflag from "../../assets/gbpflag.png";
+import gbpflagBR from "../../assets/gbpflagBR.png";
 import eurflag from "../../assets/eurflag.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
@@ -35,7 +38,7 @@ const MultiCurrency = ({ i18n }) => {
 									<Fade triggerOnce direction="right" duration={2000} delay={100}>
 										<img
 											className="d-block"
-											src={usdflag}
+											src={i18n.language === "brazilian" ? usdflagBR : usdflag}
 											alt="american flag"
 										/>
 									</Fade>
@@ -44,7 +47,7 @@ const MultiCurrency = ({ i18n }) => {
 									<Fade triggerOnce direction="left" duration={2000} delay={300}>
 										<img
 											className="d-block"
-											src={gbpflag}
+											src={i18n.language === "brazilian" ? gbpflagBR : gbpflag}
 											alt="uk flag"
 										/>
 									</Fade>
@@ -63,7 +66,7 @@ const MultiCurrency = ({ i18n }) => {
 					</div>
 					<img
 						className="img-fluid mx-auto main-flags"
-						src={Flags}
+						src={i18n.language === "brazilian" ? FlagsBR : Flags}
 						alt="Flags"
 					/>
 				</div>

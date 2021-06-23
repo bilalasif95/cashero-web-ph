@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Donations from "../../assets/Donations.png";
+import DonationsBR from "../../assets/DonationsBR.png";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { withTranslation } from "react-i18next";
@@ -24,7 +25,7 @@ const FindCharity = ({ i18n }) => {
 						</div>
 					</div>
 					<div className="col-md-6">
-						<img alt="Donations" className="img-fluid sm-center mx-auto d-block" src={Donations} />
+						<img alt="Donations" className="img-fluid sm-center mx-auto d-block" src={i18n.language === "brazilian" ? DonationsBR : Donations} />
 					</div>
 				</div>
 			</div>

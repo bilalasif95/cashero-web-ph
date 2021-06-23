@@ -3,6 +3,7 @@ import SignupSection from "../signupSection/signupSection";
 import Countup from "../Countup/Countup";
 import WhoSection from "../WhoSection/WhoSection";
 import CasheroImg from "../../assets/CasheroImg.png";
+import CasheroImgBR from "../../assets/CasheroImgBR.jpg";
 import YearsImg from "../../assets/YearsImg.png";
 import YearsImgBR from "../../assets/YearsImgBR.png";
 import { Head } from "frontity";
@@ -27,7 +28,7 @@ const Company = ({ i18n }) => {
               <img
                 className="img-fluid d-block CasheroImg w-100"
                 alt="Cashero Image"
-                src={CasheroImg}
+                src={i18n.language === "brazilian" ? CasheroImgBR : CasheroImg}
               />
             </div>
           </div>
