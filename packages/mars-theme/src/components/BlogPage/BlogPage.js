@@ -176,9 +176,9 @@ const BlogPage = ({ state, i18n }) => {
                                               <span className="date mt-0">
                                                 {date}
                                               </span>
-                                              <h2>
+                                              <h4>
                                                 <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-                                              </h2>
+                                              </h4>
                                               <p>
                                                 <div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
                                               </p>
@@ -211,9 +211,9 @@ const BlogPage = ({ state, i18n }) => {
                                       </div>
                                       <div>
                                         <span className="date">{date}</span>
-                                        <h2>
+                                        <h4>
                                           <div dangerouslySetInnerHTML={{ __html: item.title.rendered }}></div>
-                                        </h2>
+                                        </h4>
                                         <p>
                                           <div dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}></div>
                                         </p>
