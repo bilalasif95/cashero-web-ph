@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Place from "../../assets/place.png";
+import PlaceBR from "../../assets/placeBR.png";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { withTranslation } from "react-i18next";
@@ -17,7 +18,7 @@ const StartDonation = ({ i18n }) => {
 			<div className="MoneyRequest">
 				<div className="row align-items-center">
 					<div className="col-md-6">
-						<img className="img-fluid mx-auto d-block" alt="Place" src={Place} />
+						<img className="img-fluid mx-auto d-block" alt="Place" src={i18n.language === "brazilian" ? PlaceBR : Place} />
 					</div>
 					<div className="col-md-6 sm-mt-30">
 						<div className="MoneyRequestCont">

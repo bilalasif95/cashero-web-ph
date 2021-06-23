@@ -11,7 +11,9 @@ import { EndPoints, counrtrylist, androidAppLink, iosAppLink, recaptchaSiteKep, 
 import ThanksModal from "../ThanksModal/ThanksModal";
 import Link from "../link";
 import Android from "../../assets/AndroidApp.svg";
+import AndroidBR from "../../assets/AndroidAppBR.svg";
 import IOS from "../../assets/iOSApp.svg";
+import IOSBR from "../../assets/iOSAppBR.svg";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
@@ -141,8 +143,8 @@ const GetTheAppModal = (props) => {
                   {i18n.t("Join_Cashero_in")} <span className="br-block highInterestHeading"></span>{i18n.t("seconds")}
                 </h2>
                 <ul className="list-unstyled MobileAppList">
-                  <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-                  <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+                  <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
+                  <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
                 </ul>
               </div>
             </div> :

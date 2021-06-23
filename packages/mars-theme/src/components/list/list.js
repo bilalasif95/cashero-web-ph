@@ -14,7 +14,9 @@ import CharityImg from "../../assets/charityImg.svg";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Android from "../../assets/AndroidApp.svg";
+import AndroidBR from "../../assets/AndroidAppBR.svg";
 import IOS from "../../assets/iOSApp.svg";
+import IOSBR from "../../assets/iOSAppBR.svg";
 import { androidAppLink, iosAppLink, ipAPI } from "../../config/config";
 import { withTranslation } from "react-i18next";
 import { callApi } from "../../config/call-api";
@@ -363,7 +365,7 @@ const List = ({ i18n }) => {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="HeaderListCont">
-                        <p className="ListTitle CharityTitle">
+                          <p className="ListTitle CharityTitle">
                             <img
                               src={Lang}
                               alt="Charity"
@@ -410,8 +412,8 @@ const List = ({ i18n }) => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
+            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
           </ul>
           {/* <button
             className="btn btn-primary my-2 my-sm-0 Appbtn GetAppBtn"

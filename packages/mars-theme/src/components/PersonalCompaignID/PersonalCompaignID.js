@@ -45,7 +45,7 @@ const PersonalCompaignID = ({ i18n }) => {
     setSearchTerm(e.target.value);
     const results = searchResults.filter(
       (country) =>
-        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.name_id.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
         country.dial_code.includes(searchTerm.toLocaleLowerCase())
     );
     setSearchResults2(results);
@@ -200,7 +200,7 @@ const PersonalCompaignID = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name}
+                                      {item.name_id}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>
@@ -213,7 +213,7 @@ const PersonalCompaignID = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name}
+                                      {item.name_id}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>

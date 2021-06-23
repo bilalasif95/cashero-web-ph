@@ -5,7 +5,9 @@ import Link from "../link";
 import PropTypes from 'prop-types';
 import Logo from "../../assets/logo.svg";
 import Android from "../../assets/AndroidApp.svg";
+import AndroidBR from "../../assets/AndroidAppBR.svg";
 import IOS from "../../assets/iOSApp.svg";
+import IOSBR from "../../assets/iOSAppBR.svg";
 import LinkedIn from "../../assets/linkedin.svg";
 import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg";
@@ -50,8 +52,8 @@ const Footer = ({ i18n }) => {
 						</Link>
 						<p className="HelpText">{i18n.t("Footer_P1")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P2")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P3")}</p>
 						<ul className="list-unstyled AppList">
-							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
+							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
 						</ul>
 					</div>
 					<div className="col-md-6">
