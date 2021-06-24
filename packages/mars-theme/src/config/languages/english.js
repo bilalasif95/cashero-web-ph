@@ -908,7 +908,7 @@ export const english = {
     Compaign_Img_4: "No hidden fees, no minimum balance, no stress :)",
     Compaign_P: "With Cashero, we protect your value for money and maximize your savings. Get higher returns and make your money work for you.",
     Compaign_Launch_1: "We are launching multinationally.",
-    Compaign_Launch_2: "Be the first to earn with Cashero in",
+    Compaign_Launch_2: "Be the first to earn with Cashero in USA.",
     Compaign_Launch_3: "Join the waitlist, today.",
     Join_the_Waitlist: "Join the Waitlist",
     Terms_And_Conditions: "Terms & Conditions",
