@@ -3,7 +3,8 @@ import { connect } from "frontity";
 import Link from "../link";
 import Logo from "../../assets/logo.svg";
 
-const CampaignHeader = () => {
+const CampaignHeader = ({ state }) => {
+  const data = state.source.get(state.router.link);
   const [scrolled, setScrolled] = useState(false);
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -20,7 +21,7 @@ const CampaignHeader = () => {
     <div className={`${scrolled ? "active header" : "header"}`} id="header">
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light customNav campaignHeader">
-          <Link link="/" className="navbar-brand">
+          <Link link={data.link} className="navbar-brand">
             <img className="Logo" alt="Logo" src={Logo} />
           </Link>
         </nav>
