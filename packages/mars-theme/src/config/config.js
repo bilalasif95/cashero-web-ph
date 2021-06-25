@@ -4,12 +4,14 @@ const API = process.env.REACT_APP_API_URL
 //testing: "https://testing-spot.cashero.com"
 //development: "https://development-spot.cashero.com"
 //production: "https://spot.cashero.com"
+//staging: "https://staging-spot.cashero.com"
 
 const firebaseAPI =
   "https://firestore.googleapis.com/v1/projects/cashero-development-76cca/databases/(default)/documents/";
 //testing: "https://firestore.googleapis.com/v1/projects/cashero-testing-54a48/databases/(default)/documents/"
 //production: "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/"
 //development: "https://firestore.googleapis.com/v1/projects/cashero-development-76cca/databases/(default)/documents/"
+//staging: "https://firestore.googleapis.com/v1/projects/cashero-staging/databases/(default)/documents/"
 
 export const websiteLink = "https://www.cashero.com";
 
@@ -17,6 +19,7 @@ export const wordPressLink = "http://34.72.26.38:8005";
 //testing: "http://130.211.200.187:8005"
 //development: "http://34.72.26.38:8005"
 //production: "https://wp.cashero.com"
+//staging: "http://130.211.200.187:8005"
 
 export const androidAppLink = "https://play.google.com/store/apps/details?id=com.rns.casheroapp";
 
@@ -27,7 +30,7 @@ export const recaptchaSiteKep = "6Lc5YbQaAAAAAJRSNLyM9ZXpbvweEgr3bRzdbMaB";
 export const ipAPI = "https://ipwhois.app/json/";
 
 export const gtmId = "GTM-KKSRK7H";
-//testing/development:   GTM-KKSRK7H
+//testing/development/staging:   GTM-KKSRK7H
 //production: GTM-MBGVT62
 
 export const EndPoints = {
@@ -1072,7 +1075,7 @@ export const counrtrylist = [
     name_in: "Cocos (Keeling) Islands",
     name_id: "Kepulauan Cocos (Keeling)",
     name_ph: "Cocos (Keeling) Islands",
-    name_co: "Islas Cocos (Keeling)",                                                  
+    name_co: "Islas Cocos (Keeling)",
     name_es: "Islas Cocos (Keeling)",
     flag: "🇨🇨",
     code: "CC",
