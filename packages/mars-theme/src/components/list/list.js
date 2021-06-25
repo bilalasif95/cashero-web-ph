@@ -378,7 +378,7 @@ const List = ({ i18n }) => {
                               English
                             </li>
                             <li onClick={() => { setLanguageLocal("brazilian"); setToggleBotton(false) }}>
-                              Portuguese (Brazil)
+                              Português
                             </li>
                           </ul>
                         </div>
