@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Global, css, connect, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 // import Header from "./header";
@@ -69,20 +69,62 @@ const Theme = ({ state }) => {
     }
   })
   // const [version, setVersion] = useState(false);
-  // useEffect(() => {
-  //   let name = 'cashero-web'
-  //   let version = '1.0.26'
-  //   const last_version = localStorage.getItem(`${name}-Version`)
-  //   if (!last_version) {
-  //     setVersion(true)
-  //     // window.location.reload();
-  //   }
-  //   if (last_version !== version) {
-  //     localStorage.setItem(`${name}-Version`, version)
-  //     setVersion(true)
-  //     // window.location.reload();
-  //   }
-  // }, [])
+  useEffect(() => {
+    if (data.isPersonalCompaignPT) {
+      i18n.changeLanguage("portuguese")
+    }
+    else if (data.isPersonalCompaignAR) {
+      i18n.changeLanguage("arspanish")
+    }
+    else if (data.isPersonalCompaignBR) {
+      i18n.changeLanguage("brazilian")
+    }
+    else if (data.isPersonalCompaignCL) {
+      i18n.changeLanguage("clspanish")
+    }
+    else if (data.isPersonalCompaignCO) {
+      i18n.changeLanguage("malay")
+    }
+    else if (data.isPersonalCompaignES) {
+      i18n.changeLanguage("spspanish")
+    }
+    else if (data.isPersonalCompaignFR) {
+      i18n.changeLanguage("french")
+    }
+    else if (data.isPersonalCompaignGR) {
+      i18n.changeLanguage("german")
+    }
+    else if (data.isPersonalCompaignID) {
+      i18n.changeLanguage("bahasa")
+    }
+    else if (data.isPersonalCompaignIN) {
+      i18n.changeLanguage("inenglish")
+    }
+    else if (data.isPersonalCompaignIT) {
+      i18n.changeLanguage("italian")
+    }
+    else if (data.isPersonalCompaignPH) {
+      i18n.changeLanguage("filipino")
+    }
+    else if (data.isPersonalCompaignZA) {
+      i18n.changeLanguage("zaenglish")
+    }
+    else {
+      i18n.changeLanguage("english")
+    }
+    //   let name = 'cashero-web'
+    //   let version = '1.0.26'
+    //   const last_version = localStorage.getItem(`${name}-Version`)
+    //   if (!last_version) {
+    //     setVersion(true)
+    //     // window.location.reload();
+    //   }
+    //   if (last_version !== version) {
+    //     localStorage.setItem(`${name}-Version`, version)
+    //     setVersion(true)
+    //     // window.location.reload();
+    //   }
+  }, [i18n.language])
   // const onRefreshButtonClick = () => {
   //   window.location.reload();
   // }
