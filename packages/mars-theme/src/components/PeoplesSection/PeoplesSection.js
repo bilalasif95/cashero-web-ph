@@ -1,12 +1,13 @@
 import React from "react";
 import Map from "../../assets/map.png";
+import { withTranslation } from "react-i18next";
 
-export function PeoplesSection() {
+const PeoplesSection = ({ i18n }) => {
 	return (
 		<div className="peoples">
 			<div className="PeoplesCont">
 				<div className="container">
-					<h3 className="PeoplesTitle">Cashero Works Across the Globe</h3>
+					<h3 className="PeoplesTitle">{i18n.t("Cashero_Works_Across_the_Globe")}</h3>
 					<div className="row">
 						<div className="col-md-2" />
 						<div className="col-md-8">
@@ -21,3 +22,5 @@ export function PeoplesSection() {
 		</div >
 	);
 }
+
+export default withTranslation()(PeoplesSection);

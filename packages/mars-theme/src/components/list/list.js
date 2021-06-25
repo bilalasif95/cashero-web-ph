@@ -7,25 +7,32 @@ import Link from "../link";
 import Logo from "../../assets/logo.svg";
 import Close from "../../assets/clear.svg";
 import close from "../../assets/close.svg";
+import Lang from "../../assets/lang-icon.png";
 import DropdownGraph from "../../assets/DropdownGraph.svg";
 import DropdownArrow from "../../assets/DropdownArrow.svg";
 import CharityImg from "../../assets/charityImg.svg";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Android from "../../assets/AndroidApp.svg";
+import AndroidBR from "../../assets/AndroidAppBR.svg";
 import IOS from "../../assets/iOSApp.svg";
-import { androidAppLink, iosAppLink } from "../../config/config";
+import IOSBR from "../../assets/iOSAppBR.svg";
+import { androidAppLink, iosAppLink, ipAPI } from "../../config/config";
+import { withTranslation } from "react-i18next";
+import { callApi } from "../../config/call-api";
 
-const List = () => {
+const List = ({ i18n }) => {
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
   const [donationsToggleBotton, setDonationsToggleBotton] = useState(false);
+  const [languageToggleBotton, setLanguageToggleBotton] = useState(false);
   const [open, setOpen] = useState(false);
   const [innerWidth, setInnerWidth] = useState(0);
   const [openSuccessModal, setSuccessModal] = useState(false);
   const [openDiv, setOpenDiv] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+  const [Language, setLanguage] = useState(i18n.language);
   const onToggleButtonClicked = () => {
     if (toggleBotton) {
       return setToggleBotton(false);
@@ -39,6 +46,7 @@ const List = () => {
     setPersonalToggleBotton(true);
     setBusinessToggleBotton(false);
     setDonationsToggleBotton(false);
+    setLanguageToggleBotton(false);
   };
   const onBusinessToggleButtonClicked = () => {
     if (businessToggleBotton) {
@@ -47,12 +55,23 @@ const List = () => {
     setBusinessToggleBotton(true);
     setPersonalToggleBotton(false);
     setDonationsToggleBotton(false);
+    setLanguageToggleBotton(false);
   };
   const onDonationsToggleButtonClicked = () => {
     if (donationsToggleBotton) {
       return setDonationsToggleBotton(false);
     }
     setDonationsToggleBotton(true);
+    setBusinessToggleBotton(false);
+    setPersonalToggleBotton(false);
+    setLanguageToggleBotton(false);
+  };
+  const onLanguageToggleButtonClicked = () => {
+    if (languageToggleBotton) {
+      return setLanguageToggleBotton(false);
+    }
+    setLanguageToggleBotton(true);
+    setDonationsToggleBotton(false);
     setBusinessToggleBotton(false);
     setPersonalToggleBotton(false);
   };
@@ -72,9 +91,33 @@ const List = () => {
     }
   };
   useEffect(() => {
+    callApi(ipAPI, "get")
+      .then((res) => {
+        if (res.success) {
+          if (res.country_code === "BR") {
+            setLanguage("brazilian")
+            i18n.changeLanguage("brazilian")
+          }
+          else {
+            setLanguage("english")
+            i18n.changeLanguage("english")
+          }
+        }
+        else {
+          setLanguage("english")
+          i18n.changeLanguage("english")
+        }
+      }).catch(() => {
+        setLanguage("english")
+        i18n.changeLanguage("english")
+      })
     setInnerWidth(window.innerWidth)
     window.addEventListener("scroll", handleScroll)
   }, []);
+  const setLanguageLocal = (lang) => {
+    setLanguage(lang);
+    i18n.changeLanguage(lang);
+  };
   return (
     <>
       <div className={`${scrolled ? "active header" : "header"}`} id="header">
@@ -121,8 +164,8 @@ const List = () => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Personal
-									</a>
+                    {i18n.t("Personal")}
+                  </a>
                   <div
                     className={personalToggleBotton ? "dropdown-menu toggleButtonShow" : "dropdown-menu"}
                     aria-labelledby="navbarDropdown"
@@ -135,28 +178,22 @@ const List = () => {
                               alt="Dropdown Graph"
                               src={DropdownGraph}
                             />
-														Wealth
-													</p>
+                            {i18n.t("Wealth")}
+                          </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/high-yield-savings-account">
-                                High Yield
-                                Savings
-                                Account
+                                {i18n.t("High_Yield_Savings_Account_Menu")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/multi-currency-savings-account">
-                                Multi-Currency
-                                Savings
-                                Account
+                                {i18n.t("Multi_Currency_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/online-currency-exchange">
-                                Online
-                                Currency
-                                Exchange
+                                {i18n.t("Online_Currency_Exchange")}
                               </Link>
                             </li>
                           </ul>
@@ -169,20 +206,17 @@ const List = () => {
                               src={DropdownArrow}
                               alt="Dropdown Arrow"
                             />
-														Payments
-													</p>
+                            {i18n.t("Payments")}
+                          </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/instant-money-transfer">
-                                Instant
-                                Money
-                                Transfer
+                                {i18n.t("Instant_Money_Transfer")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/transfer-money-abroad">
-                                Transfer
-                                Money Abroad
+                                {i18n.t("Transfer_Money_Abroad")}
                               </Link>
                             </li>
                           </ul>
@@ -200,8 +234,8 @@ const List = () => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Business
-									</a>
+                    {i18n.t("Business")}
+                  </a>
                   <div
                     className={businessToggleBotton ? "dropdown-menu toggleButtonShow BusinessDropdown" : "dropdown-menu BusinessDropdown"}
                     aria-labelledby="navbarDropdown"
@@ -214,22 +248,22 @@ const List = () => {
                               src={DropdownGraph}
                               alt="Dropdown Graph"
                             />
-														Wealth
-													</p>
+                            {i18n.t("Wealth")}
+                          </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/high-yield-savings-account">
-                                High Yield Savings Account
+                                {i18n.t("High_Yield_Savings_Account_Menu")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/multi-currency-savings-account">
-                                Multi-Currency Savings Account
+                                {i18n.t("Multi_Currency_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/online-currency-exchange">
-                                Online Currency Exchange
+                                {i18n.t("Online_Currency_Exchange")}
                               </Link>
                             </li>
                           </ul>
@@ -242,17 +276,17 @@ const List = () => {
                               src={DropdownArrow}
                               alt="Dropdown Arrow"
                             />
-														Payments
-													</p>
+                            {i18n.t("Payments")}
+                          </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/instant-money-transfer">
-                                Instant Money Transfer
+                                {i18n.t("Instant_Money_Transfer")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/transfer-money-abroad">
-                                Transfer Money Abroad
+                                {i18n.t("Transfer_Money_Abroad")}
                               </Link>
                             </li>
                           </ul>
@@ -270,8 +304,8 @@ const List = () => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Donations
-									</a>
+                    {i18n.t("Donations")}
+                  </a>
                   <div
                     className={donationsToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
                     aria-labelledby="navbarDropdown"
@@ -284,19 +318,17 @@ const List = () => {
                               src={CharityImg}
                               alt="Charity"
                             />
-														Charities
-													</p>
+                            {i18n.t("Charities")}
+                          </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/donation">
-                                Donate
+                                {i18n.t("Donate")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/become-listed-charity">
-                                Become a
-                                Listed
-                                Charity
+                                {i18n.t("Become_a_Listed_Charity")}
                               </Link>
                             </li>
                           </ul>
@@ -307,21 +339,60 @@ const List = () => {
                 </li>
                 <li className="nav-item" onClick={() => setToggleBotton(false)}>
                   <Link link="/company" className="nav-link">
-                    Company
+                    {i18n.t("Company")}
                   </Link>
                 </li>
                 <li className="nav-item" onClick={() => setToggleBotton(false)}>
                   <Link link="/contact-us" className="nav-link">
-                    Help
+                    {i18n.t("Help")}
                   </Link>
+                </li>
+                <li className="nav-item dropdown languageDropdown" onClick={innerWidth < 992 ? onLanguageToggleButtonClicked : null}>
+                  <a
+                    className="nav-link dropdown-toggle"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {Language === "english" ? "Eng" : "Pt"}
+                  </a>
+                  <div
+                    className={languageToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="HeaderListCont">
+                          <p className="ListTitle CharityTitle">
+                            <img
+                              src={Lang}
+                              alt="Charity"
+                            />
+                            {/* {i18n.t("Charities")} */}
+                            Languages
+                          </p>
+                          <ul className="HeaderList list-unstyled">
+                            <li onClick={() => { setLanguageLocal("english"); setToggleBotton(false) }}>
+                              English
+                            </li>
+                            <li onClick={() => { setLanguageLocal("brazilian"); setToggleBotton(false) }}>
+                              Português
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
               <button
                 className="btn btn-primary my-sm-0 Appbtn GetAppBtn"
                 onClick={handleOpen}
               >
-                Get Early Access
-							</button>
+                {i18n.t("Get_Early_Access")}
+              </button>
             </div>
           </nav>
         </div>
@@ -341,8 +412,8 @@ const List = () => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
+            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
           </ul>
           {/* <button
             className="btn btn-primary my-2 my-sm-0 Appbtn GetAppBtn"
@@ -388,7 +459,7 @@ const List = () => {
   );
 };
 
-export default connect(List);
+export default connect(withTranslation()(List));
 
 // const Container = styled.section`
 //   width: 800px;

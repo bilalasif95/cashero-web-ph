@@ -3,8 +3,9 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Globe from "../../assets/globe.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function Securepayments() {
+const Securepayments = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -13,22 +14,22 @@ export function Securepayments() {
 		setAppModal(false)
 	};
 	return (
-		<div className="MoneyRequest">
+		<div className="MoneyRequest sm-mt-30">
 			<div className="row align-items-center">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
-								Secure Global Money Transfers
-							</h1>
+							<h2 className="oneAppTitle">
+								{i18n.t("Secure_Global_Money_Transfers")}
+							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
-							<p>Cashero’s global money transfer service gives you a quick and secure way to send money abroad. We make sending money easy-peasy with no hidden fees. </p>
-							<p>Your friends and family across the world will thank you, but no need to thank us, that’s what we’re here for.</p>
+							<p>{i18n.t("Secure_Global_Money_Transfers_P1")}</p>
+							<p>{i18n.t("Secure_Global_Money_Transfers_P2")}</p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access <img alt="arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -36,7 +37,7 @@ export function Securepayments() {
 				</div>
 				<div className="col-md-6">
 					<img
-						className="img-fluid mx-auto d-block"
+						className="img-fluid mx-auto d-block sm-mt-30"
 						alt="Globe"
 						src={Globe}
 					/>
@@ -45,3 +46,5 @@ export function Securepayments() {
 		</div>
 	);
 }
+
+export default withTranslation()(Securepayments);

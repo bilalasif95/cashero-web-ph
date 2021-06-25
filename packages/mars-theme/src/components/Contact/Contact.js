@@ -1,7 +1,8 @@
 import React from "react";
 import Chat from "../../assets/Chat.svg";
+import { withTranslation } from "react-i18next";
 
-export function Contact() {
+const Contact = ({ i18n }) => {
 	return (
 		<div className="ContactSection">
 			<div className="container">
@@ -11,8 +12,8 @@ export function Contact() {
 							<div className="col-md-12 d-flex">
 								<div className="ContactBox w-100">
 									<img className="img-fluid" alt="Chat" src={Chat} />
-									<h1>In-App Chat</h1>
-									<p>Monday—Sunday: &nbsp; 24 hours</p>
+									<h2>{i18n.t("In_App_Chat")}</h2>
+									<p>{i18n.t("Monday_Sunday")} &nbsp; {i18n.t("hours")}</p>
 								</div>
 							</div>
 						</div>
@@ -22,3 +23,5 @@ export function Contact() {
 		</div>
 	);
 }
+
+export default withTranslation()(Contact);

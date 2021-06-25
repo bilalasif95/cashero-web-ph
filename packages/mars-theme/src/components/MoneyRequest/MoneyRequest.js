@@ -1,26 +1,30 @@
 import React from "react";
 import Link from "../link";
-import SendMoney from "../../assets/SendMoney.svg";
+import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
+import InstantMoneyTransferBR from "../../assets/InstantMoneyTransferBR.svg";
 import Send from "../../assets/send.svg";
+import SendBR from "../../assets/sendBR.svg";
 import Request from "../../assets/request.svg";
+import RequestBR from "../../assets/requestBR.svg";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function MoneyRequest() {
+const MoneyRequest = ({ i18n }) => {
 	return (
 		<div className="MoneyRequest transfer-money sm-mt-30">
 			<div className="row">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
-								Instant Money
-									<span className="br-block"></span>
-								 Transfer
-							</h1>
-							<p>Tap a button and start sending, requesting, and receiving payments worldwide. It’s fast, secure, and easy.</p>
+							<h2 className="oneAppTitle">
+								{i18n.t("Instant_Money")}
+								<span className="br-block"></span>
+								{i18n.t("Transfer")}
+							</h2>
+							<p>{i18n.t("Money_Request_P")}</p>
 							<Link link="/instant-money-transfer" className="Link">
-								Learn more about Payments <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Learn_more_about_Payments")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -41,7 +45,7 @@ export function MoneyRequest() {
 										>
 											<img
 												className="img-fluid mx-auto d-block"
-												src={Request}
+												src={i18n.language === "brazilian" ? RequestBR : Request}
 												alt="Request"
 											/>
 										</Slide>
@@ -56,7 +60,7 @@ export function MoneyRequest() {
 										>
 											<img
 												className="img-fluid mx-auto d-block"
-												src={Send}
+												src={i18n.language === "brazilian" ? SendBR : Send}
 												alt="Send"
 											/>
 										</Slide>
@@ -65,9 +69,9 @@ export function MoneyRequest() {
 							</div>
 						</div>
 						<img
-							className="img-fluid mx-auto d-block send-money"
-							src={SendMoney}
-							alt="Send Money"
+							className="img-fluid mx-auto money-transfer sm-mt-30"
+							src={i18n.language === "brazilian" ? InstantMoneyTransferBR : InstantMoneyTransfer}
+							alt="Instant Money Transfer"
 						/>
 					</div>
 				</div>
@@ -75,3 +79,5 @@ export function MoneyRequest() {
 		</div>
 	);
 }
+
+export default withTranslation()(MoneyRequest);

@@ -1,16 +1,16 @@
 import React from "react";
-import { TextfieldBanner } from "../TextfieldBanner/TextfieldBanner";
+import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
+import { withTranslation } from "react-i18next";
 
-export function SignupSection() {
+const SignupSection = ({ i18n }) => {
   return (
     <div className="SignUp">
       <div className="container">
         <div className="row">
-          <div className="col-12">
-            <h1 className="SignUpTitle">Join Cashero</h1>
+          <div className="col-md-8 offset-md-2">
+            <h2 className="SignUpTitle">{i18n.t("Join_Cashero")}</h2>
             <h3 className="SignUpText mb-0">
-              Ready to make your money go further? Join Cashero and get early
-              access.
+              {i18n.t("Join_Cashero_P")}
             </h3>
             <TextfieldBanner />
           </div>
@@ -19,3 +19,5 @@ export function SignupSection() {
     </div>
   );
 }
+
+export default withTranslation()(SignupSection);

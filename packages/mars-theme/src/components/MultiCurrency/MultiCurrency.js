@@ -1,27 +1,31 @@
 import React from "react";
 import Link from "../link";
 import Flags from "../../assets/Flags.svg";
+import FlagsBR from "../../assets/FlagsBR.svg";
 import usdflag from "../../assets/usdflag.png";
+import usdflagBR from "../../assets/usdflagBR.png";
 import gbpflag from "../../assets/gbpflag.png";
+import gbpflagBR from "../../assets/gbpflagBR.png";
 import eurflag from "../../assets/eurflag.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function MultiCurrency() {
+const MultiCurrency = ({ i18n }) => {
 	return (
 		<div className="MultiCurrency">
 			<div className="row">
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
-							<h1 className="oneAppTitle">
-								Multi-Currency
+							<h2 className="oneAppTitle">
+								{i18n.t("Multi_Currency")}
 								<span className="br-block"></span>
-								Savings Account
-							</h1>
-							<p>Multiple currencies, one wallet. Convert your local currency into USD, GBP, or EUR to reduce currency fluctuation risk. </p>
+								{i18n.t("Savings_Account")}
+							</h2>
+							<p>{i18n.t("Multi_Currency_Savings_Account_MainP")} </p>
 							<Link link="/multi-currency-savings-account" className="Link sm-mb-30">
-								Learn more about Accounts<img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Learn_more_about_Accounts")}<img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -34,7 +38,7 @@ export function MultiCurrency() {
 									<Fade triggerOnce direction="right" duration={2000} delay={100}>
 										<img
 											className="d-block"
-											src={usdflag}
+											src={i18n.language === "brazilian" ? usdflagBR : usdflag}
 											alt="american flag"
 										/>
 									</Fade>
@@ -43,7 +47,7 @@ export function MultiCurrency() {
 									<Fade triggerOnce direction="left" duration={2000} delay={300}>
 										<img
 											className="d-block"
-											src={gbpflag}
+											src={i18n.language === "brazilian" ? gbpflagBR : gbpflag}
 											alt="uk flag"
 										/>
 									</Fade>
@@ -62,7 +66,7 @@ export function MultiCurrency() {
 					</div>
 					<img
 						className="img-fluid mx-auto main-flags"
-						src={Flags}
+						src={i18n.language === "brazilian" ? FlagsBR : Flags}
 						alt="Flags"
 					/>
 				</div>
@@ -70,3 +74,5 @@ export function MultiCurrency() {
 		</div>
 	);
 }
+
+export default withTranslation()(MultiCurrency);

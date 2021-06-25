@@ -3,8 +3,9 @@ import ExchangeCoins from "../../assets/exchangeCoin.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import { withTranslation } from "react-i18next";
 
-export function OnlineSave() {
+const OnlineSave = ({ i18n }) => {
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -22,16 +23,16 @@ export function OnlineSave() {
 					<div className="CurrencyConversionCont">
 						<div>
 							<Fade triggerOnce direction="up" delay={0}>
-								<h1 className="oneAppTitle">
-									Transfer Money Instantly <span className="br-block-with-no-display"></span> and Save on Exchange <span className="br-block-with-no-display"></span> Fees
-								</h1>
+								<h2 className="oneAppTitle">
+									{i18n.t("Transfer_Money_Instantly")} <span className="br-block-with-no-display"></span> {i18n.t("and_Save_on_Exchange")} <span className="br-block-with-no-display"></span> {i18n.t("Fees")}
+								</h2>
 							</Fade>
 							<Fade triggerOnce direction="up" delay={300}>
-								<p>You know those great currency exchange rates you see advertised everywhere? That’s the rate Cashero actually uses to exchange your money.  Most banks use a lower rate.  No bait and switch. Convert currency almost at the speed of light with a small, transparent fee.</p>
+								<p>{i18n.t("Online_Save_P")}</p>
 							</Fade>
 							<Fade triggerOnce direction="up" delay={700}>
 								<button onClick={appModalOpen} className="LinkBtn">
-									Get Early Access  <img alt="arrow" className="ArrowBtn" src={Arrow} />
+									{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow} />
 								</button>
 							</Fade>
 						</div>
@@ -42,3 +43,5 @@ export function OnlineSave() {
 		</div>
 	);
 }
+
+export default withTranslation()(OnlineSave);

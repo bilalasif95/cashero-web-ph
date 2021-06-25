@@ -1,9 +1,11 @@
 import React from "react";
-import Hand from "../../assets/handImg.svg";
+import Hand from "../../assets/handImg.png";
+import HandBR from "../../assets/handImgBR.png";
 import { Fade } from "react-awesome-reveal";
 import ArrowWhite from "../../assets/arrowLinkWhite.svg";
+import { withTranslation } from "react-i18next";
 
-export function Enhance() {
+const Enhance = ({ i18n }) => {
 	return (
 		<div className="Enhance">
 			<div className="container">
@@ -11,21 +13,23 @@ export function Enhance() {
 					<div className="col-md-7">
 						<div className="EnhanceCont">
 							<Fade triggerOnce direction="up">
-								<h3 className="EnhanceTitle">Business</h3>
+								<h3 className="EnhanceTitle">{i18n.t("Business")}</h3>
 								<p>
-									Make profit on your profit with our high yield savings. <span className="br-block-with-no-display"></span>Send, request, and receive money from customers worldwide.
+									{i18n.t("Business_P1")} <span className="br-block-with-no-display"></span>{i18n.t("Business_P2")}
 								</p>
 								<a className="Link" href="/#">
-									Learn more about Business  <img alt="Arrow" className="ArrowBtn" src={ArrowWhite} />
+									{i18n.t("Learn_more_about_Business")}  <img alt="Arrow" className="ArrowBtn" src={ArrowWhite} />
 								</a>
 							</Fade>
 						</div>
 					</div>
 					<div className="col-md-5">
-						<img className="img-fluid PhoneHand" alt="Hand" src={Hand} />
+						<img className="img-fluid PhoneHand" alt="Hand" src={i18n.language === "brazilian" ? HandBR : Hand} />
 					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
+
+export default withTranslation()(Enhance);

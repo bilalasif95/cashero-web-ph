@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Donations from "../../assets/Donations.png";
+import DonationsBR from "../../assets/DonationsBR.png";
 import Arrow from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
+import { withTranslation } from "react-i18next";
 
-export function FindCharity() {
+const FindCharity = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -17,13 +19,13 @@ export function FindCharity() {
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
 						<div className="oneAppCont sm-mt-0 sm-mb-0">
-							<h1 className="oneAppTitle sm-mt-30">Choose from Our List <span className="br-block-with-no-display"></span> of Charities </h1>
-							<p className="sm-center">Cashero has a list of charities that are making a difference in various parts of the world. Discover which cause you’d like to support in the app and donate with a click of a button.</p>
-							<button onClick={appModalOpen} className="LinkBtn" >Get Early Access <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<h2 className="oneAppTitle sm-mt-30">{i18n.t("Choose_from_Our_List")} <span className="br-block-with-no-display"></span> {i18n.t("of_Charities")} </h2>
+							<p>{i18n.t("Find_Charity_P")}</p>
+							<button onClick={appModalOpen} className="LinkBtn" >{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
 						</div>
 					</div>
 					<div className="col-md-6">
-						<img alt="Donations" className="img-fluid sm-center mx-auto d-block" src={Donations} />
+						<img alt="Donations" className="img-fluid sm-center mx-auto d-block" src={i18n.language === "brazilian" ? DonationsBR : Donations} />
 					</div>
 				</div>
 			</div>
@@ -31,3 +33,5 @@ export function FindCharity() {
 		</>
 	);
 }
+
+export default withTranslation()(FindCharity);

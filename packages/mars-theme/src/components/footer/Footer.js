@@ -5,13 +5,16 @@ import Link from "../link";
 import PropTypes from 'prop-types';
 import Logo from "../../assets/logo.svg";
 import Android from "../../assets/AndroidApp.svg";
+import AndroidBR from "../../assets/AndroidAppBR.svg";
 import IOS from "../../assets/iOSApp.svg";
+import IOSBR from "../../assets/iOSAppBR.svg";
 import LinkedIn from "../../assets/linkedin.svg";
 import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg";
 import Youtube from "../../assets/youtube.svg";
 import Instagram from "../../assets/instagram.svg";
 import { androidAppLink, iosAppLink } from "../../config/config";
+import { withTranslation } from "react-i18next";
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -38,7 +41,7 @@ TabPanel.propTypes = {
 	value: PropTypes.any.isRequired,
 };
 
-export function Footer() {
+const Footer = ({ i18n }) => {
 	return (
 		<div className="container">
 			<div className="Footer">
@@ -47,37 +50,37 @@ export function Footer() {
 						<Link link="/">
 							<img src={Logo} alt="logo" />
 						</Link>
-						<p className="HelpText">Need help? We’re always here <span className="br-block-with-no-display"></span> when you need us. Download the <span className="br-block-with-no-display"></span> App and get started.</p>
+						<p className="HelpText">{i18n.t("Footer_P1")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P2")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P3")}</p>
 						<ul className="list-unstyled AppList">
-							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
+							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
 						</ul>
 					</div>
 					<div className="col-md-6">
 						<div className="row">
 							<div className="col-md-5">
-								<p className="NavTitle">Features</p>
+								<h4 className="NavTitle">{i18n.t("Features")}</h4>
 								<ul className="list-unstyled FooterList">
-									<li><Link link="/high-yield-savings-account">High Yield Savings</Link></li>
-									<li><Link link="/multi-currency-savings-account">Multi-Currency Account</Link></li>
-									<li><Link link="/online-currency-exchange">Currency Exchange</Link></li>
-									<li><Link link="/instant-money-transfer">Instant Payments</Link></li>
-									<li><Link link="/transfer-money-abroad">Global Transfers</Link></li>
+									<li><Link link="/high-yield-savings-account">{i18n.t("High_Yield_Savings")}</Link></li>
+									<li><Link link="/multi-currency-savings-account">{i18n.t("Multi_Currency_Account")}</Link></li>
+									<li><Link link="/online-currency-exchange">{i18n.t("Currency_Exchange")}</Link></li>
+									<li><Link link="/instant-money-transfer">{i18n.t("Instant_Payments")}</Link></li>
+									<li><Link link="/transfer-money-abroad">{i18n.t("Global_Transfers")}</Link></li>
 								</ul>
 							</div>
 							<div className="col-md-3">
-								<p className="NavTitle">Company</p>
+								<h4 className="NavTitle">{i18n.t("Company")}</h4>
 								<ul className="list-unstyled FooterList">
-									<li><Link link="/company">About Us</Link></li>
-									<li><Link link="/blog">Blog</Link></li>
+									<li><Link link="/company">{i18n.t("About_Us")}</Link></li>
+									<li><Link link="/blog">{i18n.t("Blog")}</Link></li>
 								</ul>
 							</div>
 							<div className="col-md-4">
-								<p className="NavTitle">Legal</p>
+								<h4 className="NavTitle">{i18n.t("Legal")}</h4>
 								<ul className="list-unstyled FooterList">
-									<li><Link link="/terms">Terms</Link></li>
-									<li><Link link="/privacy-policy">Privacy</Link></li>
-									<li><Link link="/sitemap">Sitemap</Link></li>
+									<li><Link link="/terms">{i18n.t("Terms")}</Link></li>
+									<li><Link link="/privacy-policy">{i18n.t("Privacy")}</Link></li>
+									<li><Link link="/sitemap">{i18n.t("Sitemap")}</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -89,7 +92,7 @@ export function Footer() {
 						<p>Cashero 2021&copy;&reg;</p>
 					</div>
 					<div className="SocialCont">
-						<p>United States - English</p>
+						{/* <p>United States - English</p> */}
 						<ul className="SocialIcons list-unstyled">
 							<li><a href="https://www.linkedin.com/company/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" src={LinkedIn} /> </a></li>
 							<li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
@@ -99,8 +102,11 @@ export function Footer() {
 						</ul>
 					</div>
 				</div>
-				<p className="text-center">Copyright © 2021 Cashero. All rights reserved</p>
+				<p className="text-center">{i18n.t("Footnote_P")}</p>
+				<p className="text-center">{i18n.t("Footnote")}</p>
 			</div>
 		</div>
 	);
 }
+
+export default withTranslation()(Footer);

@@ -13,6 +13,9 @@ body{
     max-width: 1140px !important;
   }
 }
+.font-medium {
+  font-weight: 500;
+}
 
 .navbar{
   padding: 0px !important;
@@ -20,7 +23,7 @@ body{
 .banner {
   margin-top: 100px;
   padding: 37px 0px 37px 0px; }
-  .banner .bannerCont .bannerText {
+  .banner .bannerCont .bannerText, .compaignList .bannerText {
     font-size: 18px;
     color: #9ea0a5;
     font-weight: 400;
@@ -140,8 +143,57 @@ body{
       .bannerEmail .GetEarlyBtn .btn-default:active {
         background-color: #0667eb !important;
         box-shadow: inherit; }
-
+        .sr-money .money-transfer {
+          visibility: hidden !important;
+        }
 @media (max-width: 540px) {
+  .Waitlistbtn {
+    width: 75% !important;
+    margin: 0px auto !important;
+    margin-top: 30px !important;
+}
+  .campaignFaq .TabsTitle {
+    font-size: 24px !important;
+    text-transform: capitalize !important;
+    margin-bottom: 25px !important;
+}
+  .campaignFaq {
+    padding: 30px 0px !important;
+  }
+  .inflation-sec {
+    padding: 30px 0px !important;
+    margin-bottom: 0px !important;
+}
+  .inflation-cont {
+    width: 50% !important;
+    padding: 0 !important;
+  }
+  .Compaignbtn {
+    font-size: 16px !important;
+    padding: 10px 0px !important;
+    font-weight: normal !important;
+    margin: 0px auto !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+}
+  .compaignForm {
+    padding: 40px 30px;
+}
+.compaignForm .captcha-cont {
+  display: block !important;
+}
+  .seenList {
+    justify-content: center;
+  }
+  .compaignForm h2 {
+    font-size: 24px;
+}
+.compaignForm p {
+  font-size: 14px !important;
+}
+  .compaignForm, .seen-text {
+    margin-top: 30px !important;
+  }
   .bannerEmail {
     display: none; }
   .bannerEmail {
@@ -162,11 +214,11 @@ body{
     margin-top: 40px !important;
     padding: 37px 0px 0px; }
   .bannerTitle {
-    font-size: 36px !important;
+    font-size: 28px !important;
     margin-bottom: 25px;
     margin-top: 18px;
     text-align: center;
-    line-height: 45px !important;
+    line-height: 36px !important;
     margin-bottom: 25px !important; }
   .bannerCont p {
     text-align: center; }
@@ -178,7 +230,15 @@ body{
   .bannerImg {
     margin-top: 4rem;
     margin: 0px auto;
-    display: block; } }
+    display: block; } 
+    .circle-cont, 
+    .box-container {
+      display: none !important;
+    } 
+    .sr-money .money-transfer {
+      visibility: visible !important;
+    }
+  }
 
 @media (max-width: 767px) {
   .bannerImg {
@@ -188,11 +248,21 @@ body{
       height: auto;
       margin: 5rem auto 0;
       width: 100%;
-      display: block; } }
+      display: block; } 
+      .inflation-cont {
+        width: 50% !important;}
+    }
+
+@media (min-width: 475px) {
+  .CampaignFooter {
+    width: 65%;
+    margin: 0 auto 1rem;
+  }
+}
 
 @media (max-width: 480px) {
   .bannerImg {
-    padding: 0; }
+    padding: 0 !important; }
     .bannerImg img {
       max-width: 100%;
       margin: 0 auto; } }
@@ -218,18 +288,49 @@ body{
   .numberSelection .selectCountry {
     width: 16% !important; }
   .numberSelection .inputNum {
-    width: 40%; } }
+    width: 30%; } }
 
-@media (max-width: 960px) and (min-width: 768px) {
+  .compaignForm .numberSelection .selectCountry {
+    width: 16% !important; }
+  .compaignForm .numberSelection .inputNum {
+    width: 80%; }
+
+    @media (max-width: 1199px) and (min-width: 992px) {
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 262px !important;
+    }
+    }
+@media (max-width: 992px) and (min-width: 768px) {
   .numberSelection {
     justify-content: space-between; }
     .numberSelection .selectCountry {
-      width: 20% !important; }
+      width: 15% !important; }
     .numberSelection .inputNum {
-      width: 42%; }
+      width: 40%; }
+      .banner .numberSelection .inputNum input, .PersonalCont .numberSelection .inputNum input {
+        width: 100%;
+      }
+      .numberSelection .selectCountry .dropdown-menu.show{
+        width: 440px !important;
+      }
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 290px !important;
+    }
     .numberSelection .Appbtn {
       margin-left: 0 !important;
       margin-top: 1.5rem !important; } }
+
+      @media (max-width: 768px) and (min-width: 540px) { 
+        .numberSelection .selectCountry .dropdown-menu.show{
+          width: 450px !important;
+        }
+        .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+          width: 470px !important;
+      }
+      .SignUp {
+        padding: 50px !important;
+    }
+      }    
 
 .WhoSection .WhoSectionCont h1 {
   color: #363636;
@@ -308,12 +409,45 @@ h4 {
   font-size: 16px;
   color: #9ea0a5 !important;
   font-weight: 400; }
+  .customNav ul li a:hover {
+        color: black !important;
+        transition: color 0.2s ease 0s;
+      }
   .customNav ul li a:after{
     display: none !important;
   }
-
+  .customNav ul li:last-child .dropdown-menu .HeaderList li:hover {
+      color: black !important;
+      transition: color 0.2s ease 0s;
+     }
 .customNav ul li:not(:last-child) {
   margin-right: 40px; }
+
+  .customNav ul li:last-child a:after{
+        display: inherit !important;
+        position: absolute;
+        top: 45%;
+        right: 0;
+      }
+      /* .languageDropdown .dropdown-menu {
+        width: 200px !important;
+        padding: 59px 50px 51px 50px !important;
+      } */
+      .languageDropdown {
+        width: 53px;
+      }
+      .customNav ul li:last-child .dropdown-menu .HeaderListCont {
+        margin-bottom: 0;
+      }
+      /* .customNav ul li:last-child .dropdown-menu .HeaderList {
+        margin-top: 30px;
+      } */
+      .customNav ul li:last-child .dropdown-menu .HeaderList li {
+        font-size: 16px;
+        color: #9ea0a5!important;
+        font-weight: 500;
+        cursor: pointer;
+      }
 
 .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
   color: #363636 !important;
@@ -383,25 +517,61 @@ h4 {
     height: 100%;
     width: 100%;
     border-radius: 20px; }
-
+    @media (max-width: 475px) and (min-width: 320px) {
+      .numberSelection .selectCountry .dropdown-menu.show {
+        width: 280px!important;
+    }
+    }
+@media (max-width: 475px) and (min-width: 375px) {
+  .compaign-select .numberSelection .inputNum {
+    width: 80% !important;
+  }
+}
 @media (max-width: 475px) {
   .blogDetailImg {
-    min-height: 180px !important; } }
+    min-height: 180px !important; }
+    .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+      width: 405px !important;
+  }
+  }
 
 @media (max-width: 425px) {
   .customNav ul li:not(:last-child) {
-    margin-right: 15px !important; } }
-
+    margin-right: 15px !important; } 
+  .numberSelection .selectCountry .dropdown-menu.show{
+    width: 285px;
+  }
+  .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+    width: 355px !important;
+}
+}
 @media (max-width: 375px) {
   .customNav ul li:not(:last-child) {
     margin-right: 10px !important; }
+    .compaign-select .selectCountry {
+      width: 25% !important;
+    }
+    .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+      width: 316px !important;
+  }
   .blogDetailImg {
     min-height: 140px !important; } }
-
 @media (max-width: 320px) {
+  .compaignForm .numberSelection .selectCountry {
+    width: 20%!important;
+}
+.compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+  width: 260px !important;
+}
+.compaign-select .numberSelection .inputNum {
+  width: 75%!important;
+}
   .circle-cont .blue-circle {
     width: 275px;
     height: 290px;
+}
+.numberSelection .selectCountry .dropdown-menu.show{
+  width: 230px !important;
 }
 .circle-cont .blue-circle {
   margin: -6rem auto 0px;
@@ -423,9 +593,30 @@ h4 {
   display: none; }
 
 @media (max-width: 540px) {
+  .customNav ul li:last-child .dropdown-menu .HeaderList {
+    margin-top: 00px;
+  }
+  .numberSelection .inputNum {
+    width: 75% !important; }
+    .compaign-select .selectCountry {
+      width: 21% !important;
+    }
   .CrouselCard {
     width: 240px !important;
 }
+.languageDropdown {
+      width: 100%;
+    }
+    .customNav ul li:last-child .dropdown-menu .HeaderList li {
+      margin-bottom: 1rem;
+    }
+    .customNav ul >li:last-child .dropdown-menu {
+      width: 100% !important;
+      padding-top: 0 !important;
+    }
+    /* .customNav ul >li:last-child .HeaderList {
+      padding-left: 0;
+    } */
   .customNav ul li a:after{
     display: block !important;
   }
@@ -491,8 +682,8 @@ h4 {
     width: 111%;
     margin: 0 -15px;
     padding: 0px 15px; }
-    .customNav > .navbar-collapse .navbar-nav > li {
-      margin-right: 25px; }
+    /* .customNav > .navbar-collapse .navbar-nav > li {
+      margin-right: 25px; } */
       .customNav > .navbar-collapse .navbar-nav > li > a:not(:last-child):after {
         position: absolute;
         top: 17px;
@@ -878,7 +1069,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
   text-align: inherit !important; }
   .waitlistcont p {
     text-align: left !important; }
-  .waitlistcont h3 {
+  .waitlistcont h1 {
     text-align: left !important;
     font-style: normal;
     font-weight: 400;
@@ -962,7 +1153,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     margin: 20px 0px 20px 0px !important; }
   .BlogTabs {
     width: 100%; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 25px; } }
 
 /* .sideBlogs div:last-child {
@@ -984,7 +1175,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     height: 130px; }
   .MainblogImg {
     height: 250px; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 24px; }
   .BlogCont .BlogSideBox {
     margin-bottom: 20px; }
@@ -1001,7 +1192,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     font-size: 14px; }
   .BlogCont p {
     font-size: 14px; }
-  .BlogCont .BlogBox h1 {
+  .BlogCont .BlogBox h2 {
     font-size: 20px !important;
     margin-bottom: 10px !important; }
   .BlogCont .MoreBlogsCont p {
@@ -1056,6 +1247,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     margin-bottom: 0px !important; }
   .PhoneHand{
     margin-top: 30px;
+    max-width: 50% !important;
   }
   .map-pic {
     height: 320px;
@@ -1130,7 +1322,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     padding: 0px !important;
     background-color: #fff;
     height: 100vh !important; }
-  .waitlistcont h3 {
+  .waitlistcont h1 {
     font-size: 32px !important;
     line-height: 40px !important;
     text-align: center; }
@@ -1321,6 +1513,8 @@ b {
 
 .inner-div {
   margin: 0 0 0 2rem; }
+  .inner-div h3 {
+    color: #363636; }
   .inner-div b {
     color: #363636; }
   .inner-div ul {
@@ -1419,6 +1613,14 @@ b {
       width: 33%;
       margin: 0 0 1rem;
     }
+    .compaignForm {
+      padding: 20px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .compaignForm {
+      margin: 2rem 0 0;
+    }
   }
   
   @media (max-width: 414px) {
@@ -1466,7 +1668,7 @@ b {
     text-align: center; }
     .ContactSection .ContactBox img {
       margin-top: -185px; }
-    .ContactSection .ContactBox h1 {
+    .ContactSection .ContactBox h2 {
       font-size: 48px;
       margin-bottom: 26px;
       font-weight: 400; }
@@ -1474,7 +1676,7 @@ b {
       font-size: 16px; }
 
 @media (max-width: 540px) {
-  .ContactForm h1 {
+  .ContactForm h2 {
     font-size: 32px !important;
 }
   .ContactSection {
@@ -1485,7 +1687,7 @@ b {
       padding: 50px 20px 50px 20px; }
       .ContactSection .ContactBox img {
         margin-top: -119px; }
-      .ContactSection .ContactBox h1 {
+      .ContactSection .ContactBox h2 {
         font-size: 48px;
         margin-bottom: 26px; }
       .ContactSection .ContactBox p {
@@ -1502,7 +1704,9 @@ b {
   color: #0667eb !important;
   display: inline-block;
   margin-top: 15px; }
-
+  .CurrencyConversion .circle-container {
+    display: none;
+  }
 @media (max-width: 540px) {
   .CurrencyConversion {
     padding: 40px 0px 10px !important; }
@@ -1554,7 +1758,7 @@ b {
   margin-top: 15px; }
 
 .Enhance {
-  background-image: url("https://i.imgur.com/SfRVlGI.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F7avIJ78.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px 0px 0px;
@@ -1725,20 +1929,29 @@ b {
 .cardText {
   font-size: 16px;
   margin-top: 27px; }
-
+  .c-map-mob {
+    display: none;
+  }
 @media (max-width: 540px) {
   .sm-pt-0 {
     padding-top: 0px !important; }
   .MoneyRequest {
     padding: 0px !important; }
-  .map-pic {
-    position: relative; }
     .map-pic div {
       position: inherit !important; }
-    .map-pic .cashero-c, .map-pic .c-map {
+    .map-pic .cashero-c, 
+    .map-pic .c-map,
+    .map-pic .animate-img {
+      display: none !important; 
+    }
+    .map-pic {
+      display: none !important;
       top: 0; }
-    .map-pic .map-pic {
-      top: 0; } }
+      
+      .c-map-mob {
+        display: block !important;
+      }
+    }
 
 .map-pic {
   position: relative; }
@@ -1900,13 +2113,6 @@ b {
         width: 180px;
         height: 180px; } }
 
-.sr-money {
-  width: 100%;
-  height: 100%;
-  position: relative; }
-  .sr-money .send-money {
-    visibility: hidden; }
-
 .box-container {
   position: absolute;
   width: 100%;
@@ -1982,12 +2188,7 @@ b {
         width: 180px;
         height: 180px; } }
 
-.sr-money {
-  width: 100%;
-  height: 100%;
-  position: relative; }
-  .sr-money .send-money {
-    visibility: hidden; }
+
 
 .box-container {
   position: absolute;
@@ -2059,6 +2260,12 @@ b {
     width: 90% !important;
     margin: 0px auto;
     margin-bottom: 40px !important; }
+    .Coins img {
+      margin: 2rem auto;
+    }
+    .campaignSavings img {
+      margin: 2rem auto;
+    }
   .Coins .HighInterestText {
     color: #9ea0a5 !important;
     text-align: center; }
@@ -2071,17 +2278,12 @@ b {
     text-align: center; }
   .SavingAccount {
     padding: 40px 0px;
+    background-image: none !important;
+    background-color: #0667eb !important;
     background-position: inherit;
     background-size: cover; }
     .SavingAccount .Link {
       color: #fff !important; } }
-
-.HighInterestText {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.01em; }
 
 #counter {
   font-weight: normal;
@@ -2523,10 +2725,13 @@ b {
   .MultiCurrency {
     padding: 0px 0px 0px 0px; }
   .MoneyRequest {
-    padding: 40px 0px; } }
-
-.main-flags {
-  visibility: hidden; }
+    padding: 40px 0px; }
+    .main-flags {
+      visibility: visible !important; }
+      .flags {
+        display: none !important;
+      }
+  }
 
 .flags {
   height: 100%;
@@ -2596,8 +2801,7 @@ b {
   .MoneyRequest {
     padding: 40px 0px; }}
 
-.main-flags {
-  visibility: hidden; }
+
 
 .flags {
   height: 100%;
@@ -2704,8 +2908,7 @@ b {
   width: 100%;
   height: 100%;
   position: relative; }
-  .sr-money .send-money {
-    visibility: hidden; }
+
 
 .box-container {
   position: absolute;
@@ -2763,12 +2966,14 @@ b {
     padding: 0px 0px 40px 0px; }
   .CasheroSignupCont {
     margin-top: 40px; } }
-
+    .compaign-signup {
+      padding: 134px 0 !important;
+    }
 .SignUp {
-  background-image: url("https://i.imgur.com/dhaP8KJ.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FgF6V6lg.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 134px 191px 134px 191px;
+  padding: 134px 0px;
   text-align: center; }
 
 .SignUpText {
@@ -2996,14 +3201,6 @@ b {
     background-size: cover; }
     .SavingAccount .Link {
       color: #fff !important; } }
-
-.HighInterestText {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.01em; }
-
 #counter {
   font-weight: normal;
   letter-spacing: 1px;
@@ -3075,17 +3272,13 @@ b {
 .MuiTabs-root,
 .MuiTabs-flexContainer {
   display: inherit !important; }
-  .MuiAppBar-root span,
+  /* .MuiAppBar-root span,
   .MuiTabs-root span,
   .MuiTabs-flexContainer span {
-    background-color: inherit !important; }
+    background-color: inherit !important; } */
 
 .MuiAppBar-root:focus {
   outline: none !important; }
-
-.MuiTabs-scroller {
-  flex: inherit !important; }
-
 .MuiAppBar-colorPrimary {
   background-color: transparent !important;
   box-shadow: inherit !important; }
@@ -3097,21 +3290,21 @@ button:focus {
 .PrivateTabIndicator-colorSecondary-5 {
   background-color: inherit !important; }
 
-.MuiTabs-flexContainer .MuiTab-textColorPrimary.Mui-selected {
-  border-left: 4px solid #0667eb !important; }
+/* .MuiTabs-flexContainer .MuiTab-textColorPrimary.Mui-selected {
+  border-left: 4px solid #0667eb !important; } */
 
 .MuiTab-textColorPrimary {
   border-left: 4px solid transparent !important; }
 
-.MuiTab-wrapper {
-  font-size: 16px; }
+/* .MuiTab-wrapper {
+  font-size: 16px; } */
 
 .TabsTitle {
   margin-bottom: 40px;
   text-transform: capitalize; }
 
-.MuiTab-root {
-  padding: 6px 0px 6px 19px !important; }
+/* .MuiTab-root {
+  padding: 6px 0px 6px 19px !important; } */
 
 .MuiAccordionSummary-root {
   display: flex !important;
@@ -3289,7 +3482,7 @@ button:focus {
       padding: 0.84rem 1rem !important;
       text-transform: none !important;
       width: 100% !important; }
-    .BlogTabs .dropdown h1 {
+    .BlogTabs .dropdown h2 {
       font-size: 16px !important;
       font-weight: 400;
       margin: 0 !important; }
@@ -3319,7 +3512,7 @@ button:focus {
       cursor: pointer;
       height: 100%;
       object-fit: cover; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 32px;
       color: #363636;
       font-weight: 400;
@@ -3383,7 +3576,7 @@ button:focus {
     padding: 6px 15px 6px 15px !important; }
   .BlogCont {
     margin: 30px 0px 0px 0px; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 24px;
       margin-bottom: 12px; }
   .date {
@@ -3509,7 +3702,7 @@ button:focus {
     padding: 6px 15px 6px 15px !important; }
   .BlogCont {
     margin: 30px 0px 0px 0px; }
-    .BlogCont .BlogBox h1 {
+    .BlogCont .BlogBox h2 {
       font-size: 24px;
       margin-bottom: 12px; }
   .date {
@@ -3594,10 +3787,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
 
 .FinalTextBox {
   padding: 34px 0px !important; }
@@ -3719,11 +3908,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
-
 .FinalTextBox {
   padding: 34px 0px !important; }
 
@@ -3810,7 +3994,7 @@ button:focus {
   padding: 80px 0px; }
   .Countup .CountupCont {
     text-align: center; }
-    .Countup .CountupCont h1 {
+    .Countup .CountupCont h2 {
       color: #363636;
       font-size: 60px;
       font-weight: 700;
@@ -3831,7 +4015,7 @@ button:focus {
 @media (max-width: 540px) {
   .Countup {
     padding: 20px 0px; }
-    .Countup .CountupCont h1 {
+    .Countup .CountupCont h2 {
       font-size: 46px;
       margin-bottom: 20px; }
   .OpeningSection {
@@ -3879,11 +4063,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
-
 .FinalTextBox {
   padding: 34px 0px !important; }
 
@@ -3923,7 +4102,7 @@ button:focus {
         .Enhance {
           padding: 30px 0px 0px 0px;
       }
-        .ContactSection .ContactBox h1 {
+        .ContactSection .ContactBox h2 {
           font-size: 32px;
           margin-bottom: 15px;
       }
@@ -3938,7 +4117,7 @@ button:focus {
         margin-bottom: 10px;
         font-size: 40px;
     }
-      .Countup .CountupCont h1 {
+      .Countup .CountupCont h2 {
         font-size: 40px;
       }
       
@@ -4195,7 +4374,7 @@ button:focus {
     height: 100%; }
 
 .PesonalBanner {
-  background-image: url("https://i.imgur.com/1OhH9GF.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F1OhH9GF.png?alt=media");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4235,11 +4414,6 @@ button:focus {
 .FinalText p {
   font-size: 16px;
   color: #9ea0a5 !important; }
-
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
 
 .FinalTextBox {
   padding: 34px 0px !important; }
@@ -4334,7 +4508,7 @@ button:focus {
       text-align: center; } }
 
 .ExchangeBanner {
-  background-image: url("https://i.imgur.com/1OhH9GF.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F1OhH9GF.png?alt=media");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4446,10 +4620,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
 
 .FinalTextBox {
   padding: 34px 0px !important; }
@@ -4679,6 +4849,8 @@ button:focus {
 
 .Footer {
   padding: 70px 0px; }
+  .Footer .NavTitle {
+    color: #9ea0a5 !important;}
 
 .HelpText {
   margin-top: 46px; }
@@ -4734,7 +4906,7 @@ button:focus {
   font-size: 14px; }
 
 .SavingAccount {
-  background-image: url("https://i.imgur.com/UQVk2iI.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FUQVk2iI.png?alt=media");
   background-repeat: no-repeat;
   background-position: left; }
 
@@ -4900,11 +5072,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
-
 .FinalTextBox {
   padding: 34px 0px !important; }
 
@@ -5035,7 +5202,7 @@ button:focus {
   color: #FFFFFF !important; }
 
 .InterestBanner .selectCountry {
-  width: 14% !important; }
+  width: 10% !important; }
 
   .InputBox1 .MuiInputBase-input {
     padding: 0px 0px 4px; }
@@ -5074,8 +5241,9 @@ button:focus {
 
 .InterestBox {
   margin-top: 41px; }
-  .InterestBox h1 {
-    color: #363636;
+  
+  .InterestBox .value {
+    color: #212529 !important;
     font-size: 34px;
     font-weight: 500;
     font-style: normal;
@@ -5259,11 +5427,6 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
-  font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
-
 .FinalTextBox {
   padding: 34px 0px !important; }
 
@@ -5354,10 +5517,14 @@ button:focus {
   font-size: 16px;
   color: #9ea0a5 !important; }
 
-.FinalText h1 {
+.FinalText .value {
   font-size: 36px;
-  color: #0667eb;
-  margin-bottom: 0px; }
+  font-weight: 500;
+  color: #0667eb !important;
+  margin-bottom: 0px; 
+  display: flex;
+  justify-content: center;
+}
 
 .FinalTextBox {
   padding: 34px 0px !important; }
@@ -5510,6 +5677,21 @@ button:focus {
       }
       
       @media (max-width: 375px) {
+        .SignUpTitle {
+          font-size: 28px!important;
+      }
+        .oneAppCont {
+          margin: 20px 0px;
+      }
+        .inflation-sec {
+          padding: 20px 0px!important;
+      }
+        .inflation-cont p {
+          font-size: 14px !important;
+      }
+        .compaignForm {
+          padding: 15px !important;
+      }
         .circle-cont .blue-circle {
           width: 275px;
           height: 290px;
@@ -15476,6 +15658,7 @@ button:focus {
 .customNav .navbar-nav li>a{
    padding: 8px 0px;
    display: block;
+   cursor: pointer;
 }
 
 .backList a{
@@ -15559,6 +15742,7 @@ select:-webkit-autofill:focus {
     .bold-text{
       color: #000;
       font-weight: 600;  
+      font-style: italic;
     }
 
     .underline {
@@ -15595,6 +15779,7 @@ select:-webkit-autofill:focus {
     } */
     .numberSelection .selectCountry .dropdown-menu.show{
       background-color: #fff !important;
+      width: 500px;
     }
     .Appbtn.disabled{
       background-color: #0667eb !important;
@@ -15614,6 +15799,7 @@ select:-webkit-autofill:focus {
       margin-bottom: 30px;
       font-weight: 600;
       text-align: center;
+      text-transform: uppercase;
     }
     .conditions-cont h3 {
       font-size: 24px;
@@ -15798,7 +15984,7 @@ select:-webkit-autofill:focus {
     .ContactFormBox {
       margin: 98px 0px 98px 0px;
     }
-    .ContactForm h1 {
+    .ContactForm h2 {
       margin-bottom: 30px;
       font-size: 48px;
       font-weight: 400;
@@ -15899,3 +16085,231 @@ select:-webkit-autofill:focus {
         width: 280px;
       }
     }
+  /* Language Dropdown Styles  */
+  .dropdown-more {
+    list-style: none;
+    /* padding: 0 0 0 1rem; */
+    width: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    .compaignHeading {
+      padding-right: 170px;
+    }
+    .compaignHighYield {
+      width: 48%;
+    }
+  }
+  @media (max-width: 540px) {
+    .dropdown-more {
+      padding: 8px 0px;
+    }
+  }
+  .dropdown-more .dropdown-menu {
+    width: 150px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 0;
+    border: none;
+    margin-top: 0;
+    overflow: hidden;
+  }
+  .dropdown-more .dropdown-item:focus,
+  .dropdown-more .dropdown-item:hover,
+  .dropdown-more .dropdown-item:active {
+    background-color: #fff;
+  }
+  .dropdown-more .dropdown-menu .dropdown-item:first-of-type {
+    padding: 1rem 1rem 0.5rem;
+  }
+  .dropdown-more .dropdown-menu .dropdown-item:last-child {
+    padding: 0.5rem 1rem 1rem;
+  }
+  .dropdown-more .dropdown-item,
+  .dropdown-more a {
+    font-size: 16px;
+    color: #9ea0a5!important;
+    font-weight: 400;
+  }
+  .compaignList .bannerText {
+    color: #fff;
+    font-size: 16px;}
+  .compaignList h2:nth-of-type(2) {
+    width: inherit;}
+    .compaignForm {
+      box-shadow: 15px 0 20px rgb(0 0 0 / 30%);
+      border-radius: 10px;
+      background-color: #ffffff;
+      padding: 50px 55px;}
+    .compaignForm h2 {
+      color: #2178f5;
+      margin-bottom: 15px;}
+    .compaignForm p {
+      color: #000 !important;
+      font-size: 16px;
+      margin-bottom: 30px;}
+    .Compaignbtn {
+      background-color: #ee7120 !important;
+      display: block;
+      width: 100%;
+      text-align: center;
+      border-radius: 50px;
+      font-size: 20px;
+      padding: 15px 0px;
+      font-weight: 500;
+      margin: 40px 0px 20px;}
+    .compaignFormCont .form-group {
+      margin-bottom: 30px;}
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 378px;
+    }
+    .compaignFormCont input {
+      border: none;
+      border-bottom: 1px solid #0f6df5 !important;
+      border-radius: initial;
+      padding-left: 0px;}
+    .compaignForm a {
+      display: table;
+      color: #b0b1b5;
+      font-size: 14px;
+      text-align: center;
+      margin: 0px auto;
+      text-decoration: underline;}
+    .seenList {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;}
+    .seen-text {
+      margin-top: 80px;}
+    .compaign-banner .PersonalCont h1, .compaignList {
+      margin-bottom: 30px;}
+      .inflation-sec {
+        background-color: #f5f9ff;
+        padding: 70px 0px;
+        margin-bottom: 100px;}
+      .inflation {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;}
+        .inflation-cont {
+          padding: 0 1.5rem;
+          width: 25%;
+        }
+        .inflation-cont:last-child {
+          padding: 0 3rem;
+        }
+      .inflation-cont p {
+        color: #2178f5 !important;
+        font-size: 18px;}
+        .inflation-cont img {
+          height: 70px;
+          margin-bottom: 15px;}
+          .campaignHeader .GetAppBtn {
+            font-weight: 500;}
+          .compaignLink {
+            color: #ee7120 !important;}
+          .Waitlistbtn {
+            width: 100%;
+            max-width: 250px;
+            margin: 0px auto;
+            margin-top: 40px;}
+            .campaignFaq {
+              background-color: #fafafa;}
+            .campBold {
+              color: #363636 !important;
+              font-weight: 500;}
+              .campaignFaq .TabsTitle {
+                font-weight: normal;
+                font-size: 36px;
+                text-transform: capitalize;
+                margin-bottom: 70px;
+                color: #363636;}
+                .footerCont img {
+                  margin-bottom: 40px;
+                }
+
+.compaignFormCont .form-control:focus {
+  outline: 0;
+  box-shadow: inherit;
+  border-bottom: 1px solid #0f6df5;
+  color: #495057;
+}
+.width80 {
+  width: 80%;
+}
+.compaignFormCont .selectCountry .btn {
+  border-bottom: 0px !important;
+  border-radius: 0px;
+}
+.compaign-select .selectCountry .btn {
+  padding: 0!important;
+    display: -webkit-box!important;
+    display: -webkit-flex!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -webkit-align-items: center!important;
+    -webkit-box-align: center!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+    background: transparent !important;
+    color: #363636!important;
+    border-bottom: 1px solid #0f6df5 !important;
+    border: inherit;
+    box-shadow: none!important;
+    border-radius: none!important;
+    cursor: pointer;
+}
+.compaign-select .selectCountry input {
+  border-bottom: 0px !important;
+  width: 100%;
+    border: none;
+    font-size: 16px;
+    height: 46px;
+    color: #363636;
+    cursor: pointer;
+}
+.compaign-select .numberSelection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.compaign-select .selectCountry {
+  width: 16%;
+}
+.compaign-select .numberSelection .inputNum input {
+  height: 46px;
+}
+.compaign-select .numberSelection .selectCountry .btn input:focus {
+  outline: none;
+}
+.PesonalCompaignBanner {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FVbv2uT3.png?alt=media");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  padding: 98px 0px 98px 0px;
+  margin-top: 98px;
+}
+.CompaignSignUp {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FHL4RcXS.png?alt=media");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 134px 0 134px 0;
+  text-align: center;
+}
+.earningText {
+  border: 1px solid #eeeeec;
+  border-radius: 13px;
+  width: auto;
+  display: inline-block;
+  padding: 0px 32px;
+  margin-bottom: 1rem;
+}
+.earningText p {
+  margin-bottom: 0px;
+  font-size: 13px;
+  color: #0667eb !important;
+}

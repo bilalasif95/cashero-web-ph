@@ -10,9 +10,10 @@ import Link from "../link";
 import Gmail from "../../assets/gmail.png";
 import { websiteLink } from "../../config/config";
 import { FacebookShareButton, EmailShareButton, TwitterShareButton } from "react-share";
+import { withTranslation } from "react-i18next";
 
-export default function ThanksModal(props) {
-    const { open, handleClose } = props
+const ThanksModal = (props) => {
+    const { open, handleClose, i18n } = props
     return (
         <Modal
             aria-labelledby="transition-modal-title"
@@ -35,16 +36,16 @@ export default function ThanksModal(props) {
                         <div className="row waitlistRow">
                             <div className="col-md-6">
                                 <div className="waitlistcont">
-                                    <h3 id="transition-modal-title">Thank you for joining <span className="br-block-with-no-display"></span> Cashero!</h3>
-                                    <p>We’ve sent you an SMS with a link to download the app.</p>
+                                    <h1 id="transition-modal-title">{i18n.t("Thank_you_for_joining")} <span className="br-block-with-no-display"></span> Cashero!</h1>
+                                    <p>{i18n.t("We_have_sent_you_an_SMS_with_a_link_to_download_the_app")}</p>
                                     {/* <p>We’ll keep you posted so be sure to look out for an SMS from us very soon.</p> */}
                                 </div>
                                 <div className="win-cont">
-                                    <h3 id="transition-modal-title">Want to win $1,000?</h3>
-                                    <p>Download the app, refer your friends to Cashero, and earn Golden Tickets. The more Golden Tickets you have, the higher your odds of winning $1000! If your friend wins, you get $100 as a referral bonus.</p>
-                                    <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">Terms and conditions</Link></span>
+                                    <h3 id="transition-modal-title">{i18n.t("Want_to_win_1000")}</h3>
+                                    <p>{i18n.t("Want_to_win_1000_P")}</p>
+                                    <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link></span>
                                     <ul className="Thankyou-modal-list list-unstyled">
-                                        <li>Click & Share:</li>
+                                        <li>{i18n.t("Click_AND_Share")}</li>
                                         <li><FacebookShareButton quote="Join me on Cashero and start earning up to 5% APY. Download the app today and make your money work for you: https://play.google.com/store/apps/details?id=com.rns.casheroapp https://apps.apple.com/us/app/cashero/id1547603420" url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>
                                         <li><TwitterShareButton title="Join me on Cashero and start earning up to 5% APY. Download the app today and make your money work for you: https://play.google.com/store/apps/details?id=com.rns.casheroapp https://apps.apple.com/us/app/cashero/id1547603420" url={websiteLink}><img alt="Twitter" src={Twitter} /> </TwitterShareButton></li>
                                         <li><EmailShareButton separator=" " subject="Join Cashero" body="Join me on Cashero and start earning up to 5% APY. Download the app today and make your money work for you: https://play.google.com/store/apps/details?id=com.rns.casheroapp https://apps.apple.com/us/app/cashero/id1547603420" url={websiteLink}><img alt="gmail" src={Gmail} /> </EmailShareButton></li>
@@ -65,6 +66,8 @@ export default function ThanksModal(props) {
         </Modal>
     )
 }
+
+export default withTranslation()(ThanksModal);
 
 const Paper = styled.div`
   background-color: #fff;

@@ -20,7 +20,7 @@ export const structuredData = blog => {
       "@type": "Organization",
       logo: {
         "@type": "ImageObject",
-        url: "https://i.imgur.com/as9Mj8G.png"
+        url: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FWjbRyFw.png?alt=media"
       },
       name: blog.frontity.title
     },

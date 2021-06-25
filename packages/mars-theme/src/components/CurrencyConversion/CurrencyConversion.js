@@ -1,11 +1,13 @@
 import React from "react";
 import Link from "../link";
 import currExchange from "../../assets/exchange.svg";
+import currExchangeBR from "../../assets/exchangeBR.svg";
 import { Fade } from "react-awesome-reveal";
 import { Zoom } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function CurrencyConversion() {
+const CurrencyConversion = ({ i18n }) => {
 	return (
 		<div className="CurrencyConversion">
 			<div className="row flex-column-reverse flex-sm-row">
@@ -19,7 +21,7 @@ export function CurrencyConversion() {
 						<img
 							className="charity-mob"
 							alt="currency exchange"
-							src={currExchange}
+							src={i18n.language === "brazilian" ? currExchangeBR : currExchange}
 						/>
 					</div>
 				</div>
@@ -27,10 +29,10 @@ export function CurrencyConversion() {
 					<div className="CurrencyConversionCont">
 						<div>
 							<Fade triggerOnce direction="up">
-								<h1 className="oneAppTitle">Online Currency<span className="br-block"></span>Exchange</h1>
-								<p>Instantly exchange between USD, EUR, and GBP at rates so good that you’ll never exchange currency with a bank again. Beat that.</p>
+								<h2 className="oneAppTitle">{i18n.t("Online_Currency")}<span className="br-block"></span>{i18n.t("Exchange")}</h2>
+								<p>{i18n.t("Online_Currency_Exchange_P")}</p>
 								<Link link="/online-currency-exchange" className="Link sm-mb-30">
-									Learn more about Exchange <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+									{i18n.t("Learn_more_about_Exchange")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 								</Link>
 							</Fade>
 						</div>
@@ -40,3 +42,5 @@ export function CurrencyConversion() {
 		</div >
 	);
 }
+
+export default withTranslation()(CurrencyConversion);

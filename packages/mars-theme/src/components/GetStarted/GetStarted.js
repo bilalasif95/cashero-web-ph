@@ -2,15 +2,17 @@ import React from "react";
 import Fav from "../../assets/favImg.svg";
 import Vector from "../../assets/vector.svg";
 import Done from "../../assets/done.svg";
+import DoneBR from "../../assets/doneBR.svg";
 import { Fade } from "react-awesome-reveal";
+import { withTranslation } from "react-i18next";
 
-export function GetStarted() {
+const GetStarted = ({ i18n }) => {
 	return (
 		<div className="getStarted">
 			<div className="row">
 				<div className="col-md-12">
 					<h3 className="getStartedTitle">
-						Get Started in Minutes
+						{i18n.t("Get_Started_in_Minutes")}
 					</h3>
 				</div>
 			</div>
@@ -19,7 +21,7 @@ export function GetStarted() {
 					<Fade triggerOnce direction="left">
 						<div className="GetStartedBox1 w-100">
 							<img className="img-fluid" alt="Favourite" src={Fav} />
-							<h3>Download the Cashero app</h3>
+							<h3>{i18n.t("Download_the_Cashero_app")}</h3>
 						</div>
 					</Fade>
 				</div>
@@ -31,16 +33,16 @@ export function GetStarted() {
 							src={Vector}
 						/>
 						<h3>
-							Sign up and verify your identity
+							{i18n.t("Sign_up_and_verify_your_identity")}
 						</h3>
 					</div>
 				</div>
 				<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 					<Fade triggerOnce direction="right">
 						<div className="GetStartedBox3 w-100">
-							<img className="img-fluid" alt="Done" src={Done} />
+							<img className="img-fluid" alt="Done" src={i18n.language === "brazilian" ? DoneBR : Done} />
 							<h3>
-								Add or receive funds and start benefiting
+								{i18n.t("Add_or_receive_funds_and_start_benefiting")}
 							</h3>
 						</div>
 					</Fade>
@@ -49,3 +51,5 @@ export function GetStarted() {
 		</div>
 	);
 }
+
+export default withTranslation()(GetStarted);

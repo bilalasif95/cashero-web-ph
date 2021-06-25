@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Exchange from "../../assets/exchange.svg";
+import ExchangeBR from "../../assets/exchangeBR.svg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function EasyCurrencyExchange() {
+const EasyCurrencyExchange = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -18,16 +20,16 @@ export function EasyCurrencyExchange() {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
-								Your One Tap Hub for <span className="br-block-with-no-display"></span> Easy Currency Exchange
-							</h1>
+							<h2 className="oneAppTitle">
+								{i18n.t("Your_One_Tap_Hub_for")} <span className="br-block-with-no-display"></span> {i18n.t("Easy_Currency_Exchange")}
+							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
-							<p>By using Cashero, you can hold your money in one place, transfer money instantly and save on exchange fees. We give you the best possible rate so you can say goodbye to those excessive bank fees. </p>
+							<p>{i18n.t("Your_One_Tap_Hub_for_P")} </p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access <img alt="arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -35,12 +37,14 @@ export function EasyCurrencyExchange() {
 				</div>
 				<div className="col-md-6">
 					<img
-						className="img-fluid mx-auto d-block"
+						className="img-fluid mx-auto d-block sm-mt-30"
 						alt="exchange"
-						src={Exchange}
+						src={i18n.language === "brazilian" ? ExchangeBR : Exchange}
 					/>
 				</div>
 			</div>
 		</div>
 	);
 }
+
+export default withTranslation()(EasyCurrencyExchange);

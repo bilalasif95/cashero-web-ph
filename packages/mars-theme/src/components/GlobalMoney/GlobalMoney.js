@@ -3,11 +3,13 @@ import Link from "../link";
 import Locations from "../../assets/Locations.png";
 import CMap from "../../assets/CMap.png";
 import CasheroC from "../../assets/CasheroC.png";
+import TransferMoneyAbroad from "../../assets/TransferMoneyAbroad.png";
 import { Fade } from "react-awesome-reveal";
 import { Zoom } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function GlobalMoney() {
+const GlobalMoney = ({ i18n }) => {
 	return (
 		<div className="MoneyRequest sm-pt-0 sm-mt-30">
 			<div className="row flex-column-reverse flex-sm-row">
@@ -36,20 +38,25 @@ export function GlobalMoney() {
 							src={CasheroC}
 						/>
 					</div>
+					<img
+						className="img-fluid mx-auto c-map-mob sm-mt-30"
+						alt="Cashero"
+						src={TransferMoneyAbroad}
+					/>
 				</div>
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h3 className="oneAppTitle">
-								Transfer Money
-									<span className="br-block"></span>
-								Abroad
+								{i18n.t("Transfer_Money")}
+								<span className="br-block"></span>
+								{i18n.t("Abroad")}
 							</h3>
 							<p>
-								Send money back home. Stretch your hard-earned money even further with low exchange fees. Cashero helps you send money internationally with no hassle.
+								{i18n.t("Transfer_Money_Abroad_P")}
 							</p>
 							<Link link="/transfer-money-abroad" className="Link">
-								Learn more about Transfers  <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Learn_more_about_Transfers")}  <img className="ArrowBtn" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -58,3 +65,5 @@ export function GlobalMoney() {
 		</div>
 	);
 }
+
+export default withTranslation()(GlobalMoney);

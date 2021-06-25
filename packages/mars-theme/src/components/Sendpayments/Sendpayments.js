@@ -3,8 +3,9 @@ import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import WorldMap from "../../assets/Worldmap.svg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
+import { withTranslation } from "react-i18next";
 
-export function Sendpayments() {
+const Sendpayments = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
 	const appModalOpen = () => {
 		setAppModal(true)
@@ -25,16 +26,16 @@ export function Sendpayments() {
 				<div className="col-md-5 sm-mt-30">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h1 className="oneAppTitle">
-								The Cashero Way: Quickly Send Money Around the World Online
-							</h1>
+							<h2 className="oneAppTitle">
+								{i18n.t("The_Cashero_Way")}
+							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
-							<p>Not all heroes wear capes, some go to work every day to take care of their loved ones. We know this. We’re by your side each step of the way ensuring your hard-earned money arrives safely and quickly.</p>
+							<p>{i18n.t("The_Cashero_Way_P")}</p>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								Get Early Access <img alt="arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -44,3 +45,5 @@ export function Sendpayments() {
 		</div>
 	);
 }
+
+export default withTranslation()(Sendpayments);
