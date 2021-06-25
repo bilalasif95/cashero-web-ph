@@ -110,7 +110,7 @@ const Terms = ({ i18n }) => {
               </div>
               <div className="terms_titles">
                 <h3 className="text-uppercase">{i18n.t("PRIVACY_POLICY")}</h3>
-                <p>{i18n.t("PRIVACY_POLICY_SHORT")} <Link link="/app-privacy-policy">{i18n.t("PRIVACY_POLICY")}</Link>.</p>
+                <p>{i18n.t("PRIVACY_POLICY_SHORT")} <Link link="/privacy-policy">{i18n.t("PRIVACY_POLICY")}</Link>.</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("TERMINATION")}</h3>
