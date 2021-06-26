@@ -138,6 +138,7 @@ const Theme = ({ state }) => {
         <meta name="facebook-domain-verification" content="ao1nxtpttahaf3nsk7ukhlila8irwf" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
+        <meta name="googlebot" content="noindex" />
         <link rel="canonical" href={websiteLink} />
         <meta property="og:title" content={state.frontity.title} />
         <meta property="og:description" content={state.frontity.description} />
