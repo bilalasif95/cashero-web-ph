@@ -29,7 +29,7 @@ const PersonalCompaignES = ({ i18n }) => {
   const [value, setValue] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phonenoLength, setPhoneNoLength] = useState(0);
+  // const [phonenoLength, setPhoneNoLength] = useState(0);
   const [openSuccessModal, setSuccessModal] = useState(false);
   const [error, setError] = useState("");
   const [utmCampaign, setUtmCampaign] = useState("");
@@ -56,7 +56,7 @@ const PersonalCompaignES = ({ i18n }) => {
   };
   const selectCountry = (country) => {
     setCode(country.dial_code);
-    setPhoneNoLength(country.phone_length);
+    // setPhoneNoLength(country.phone_length);
     setSearchTerm("");
     setSearchResults2(counrtrylist);
   };
@@ -76,16 +76,16 @@ const PersonalCompaignES = ({ i18n }) => {
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
-          const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
-          setPhoneNoLength(countryCode[0].phone_length)
+          // const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
+          // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
           setCode("+34");
-          setPhoneNoLength(9);
+          // setPhoneNoLength(9);
         }
       }).catch(() => {
         setCode("+34");
-        setPhoneNoLength(9);
+        // setPhoneNoLength(9);
       })
   }, [])
   const handleOnChange = (e) => {
@@ -249,9 +249,9 @@ const PersonalCompaignES = ({ i18n }) => {
                     />
                   </div>
                   {error && <label className="contactUsFormError">{error}</label>}
-                  <button onClick={() => getStarted()} disabled={!email || !name || !value || loading || !newPhone.length || (newPhone.length !== phonenoLength)}
+                  <button onClick={() => getStarted()} disabled={!email || !name || !value || loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone))}
                     className={
-                      !email || !name || !value || loading || !newPhone.length || (newPhone.length !== phonenoLength)
+                      !email || !name || !value || loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone))
                         ? "btn btn-default Compaignbtn disabled"
                         : "btn btn-default Compaignbtn"
                     }>{i18n.t("Join_the_Waitlist")}</button>

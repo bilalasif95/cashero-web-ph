@@ -23,7 +23,7 @@ const GetTheAppModal = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState(counrtrylist);
   const [searchResults2, setSearchResults2] = useState([]);
-  const [phonenoLength, setPhoneNoLength] = useState(0);
+  // const [phonenoLength, setPhoneNoLength] = useState(0);
   const [newPhone, setNewPhoneNumber] = useState("");
   const [error, setError] = useState("");
   const [value, setValue] = useState("");
@@ -49,7 +49,7 @@ const GetTheAppModal = (props) => {
   };
   const selectCountry = (country) => {
     setCode(country.dial_code);
-    setPhoneNoLength(country.phone_length);
+    // setPhoneNoLength(country.phone_length);
     setSearchTerm("");
     setSearchResults2(counrtrylist);
   };
@@ -103,16 +103,16 @@ const GetTheAppModal = (props) => {
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
-          const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
-          setPhoneNoLength(countryCode[0].phone_length)
+          // const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
+          // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
           setCode("+1");
-          setPhoneNoLength(10);
+          // setPhoneNoLength(10);
         }
       }).catch(() => {
         setCode("+1");
-        setPhoneNoLength(10);
+        // setPhoneNoLength(10);
       })
   }, [])
   const onCaptchaHandler = (value) => {
@@ -221,9 +221,9 @@ const GetTheAppModal = (props) => {
                     </div>
                     <button
                       onClick={() => getStarted()}
-                      disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value}
+                      disabled={loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone)) || !value}
                       className={
-                        loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value
+                        loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone)) || !value
                           ? "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block disabled"
                           : "btn btn-primary my-2 my-sm-0 Appbtn d-none d-sm-none d-md-block"
                       }
@@ -239,9 +239,9 @@ const GetTheAppModal = (props) => {
                   </div>
                   <button
                     onClick={() => getStarted()}
-                    disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value}
+                    disabled={loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone)) || !value}
                     className={
-                      loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value
+                      loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone)) || !value
                         ? "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn disabled"
                         : "btn btn-primary my-2 my-sm-0 Appbtn d-md-none d-sm-block JoinCasheroBtn"
                     }
