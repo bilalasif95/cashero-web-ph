@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "frontity";
+import { parse as parseQs } from "qs";
 // import { connect, styled, decode } from "frontity";
 // import Item from "./list-item";
 // import Pagination from "./pagination";
@@ -91,6 +92,7 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
+    const qs = parseQs(window.location.search.substr(1));
     callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
@@ -99,17 +101,35 @@ const List = ({ i18n }) => {
             i18n.changeLanguage("brazilian")
           }
           else {
+            if (qs.lang === "pt_br") {
+              setLanguage("brazilian")
+              i18n.changeLanguage("brazilian")
+            }
+            else {
+              setLanguage("english")
+              i18n.changeLanguage("english")
+            }
+          }
+        }
+        else {
+          if (qs.lang === "pt_br") {
+            setLanguage("brazilian")
+            i18n.changeLanguage("brazilian")
+          }
+          else {
             setLanguage("english")
             i18n.changeLanguage("english")
           }
+        }
+      }).catch(() => {
+        if (qs.lang === "pt_br") {
+          setLanguage("brazilian")
+          i18n.changeLanguage("brazilian")
         }
         else {
           setLanguage("english")
           i18n.changeLanguage("english")
         }
-      }).catch(() => {
-        setLanguage("english")
-        i18n.changeLanguage("english")
       })
     setInnerWidth(window.innerWidth)
     window.addEventListener("scroll", handleScroll)

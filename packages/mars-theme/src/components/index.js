@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Global, css, connect, Head } from "frontity";
 import Switch from "@frontity/components/switch";
+import { parse as parseQs } from "qs";
 // import Header from "./header";
 import List from "./list";
 import CampaignHeader from "../components/campaignHeader/campaignHeader";
@@ -70,13 +71,14 @@ const Theme = ({ state }) => {
   })
   // const [version, setVersion] = useState(false);
   useEffect(() => {
+    const qs = parseQs(window.location.search.substr(1));
     if (data.isPersonalCompaignPT) {
       i18n.changeLanguage("portuguese")
     }
     else if (data.isPersonalCompaignAR) {
       i18n.changeLanguage("arspanish")
     }
-    else if (data.isPersonalCompaignBR) {
+    else if (data.isPersonalCompaignBR || qs.lang === "pt_br") {
       i18n.changeLanguage("brazilian")
     }
     else if (data.isPersonalCompaignCL) {
