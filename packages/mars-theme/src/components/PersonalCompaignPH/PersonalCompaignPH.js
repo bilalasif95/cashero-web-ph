@@ -144,10 +144,10 @@ const PersonalCompaignPH = ({ i18n }) => {
                 <p className="text-uppercase bannerPara font-medium">{i18n.t("Compaign_2")}</p>
                 <h1 className="compaignHighYield">{i18n.t("High_Yield_Savings_Account")}</h1>
                 <div className="Banner-list compaignList">
-                  <h2 className="bannerText">
+                  {/* <h2 className="bannerText">
                     <img src={Check} alt="check" />
                     {i18n.t("Compaign_Img_1")}
-                  </h2>
+                  </h2> */}
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
                     {i18n.t("Compaign_Img_2_1")}
