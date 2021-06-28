@@ -8,7 +8,7 @@ export const malay = {
     Compaign_Img_4: "Sin cargos ocultos, sin saldo mínimo, sin estrés :)",
     Compaign_P: "Con Cashero, protegemos el valor del dinero y maximizamos tus ahorros. Obtén mayores retornos y haz que tu dinero trabaje para ti.",
     Compaign_Launch_1: "Nuestro lanzamiento es multinacional.",
-    Compaign_Launch_2: "Sé el primero en ganar con Cashero en Columbia.",
+    Compaign_Launch_2: "Sé el primero en ganar con Cashero en Colombia.",
     Compaign_Launch_3: "Únete hoy a la lista de espera.",
     Enter_Name: "Ingresar nombre",
     Enter_Email: "Ingresar correo electrónico",
