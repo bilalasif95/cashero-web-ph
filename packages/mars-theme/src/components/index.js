@@ -111,6 +111,9 @@ const Theme = ({ state }) => {
     else if (data.isPersonalCompaignZA) {
       i18n.changeLanguage("zaenglish")
     }
+    else if (data.isPersonalCompaignMX) {
+      i18n.changeLanguage("spanish")
+    }
     else {
       i18n.changeLanguage("english")
     }
