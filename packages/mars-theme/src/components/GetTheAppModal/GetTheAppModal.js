@@ -55,11 +55,17 @@ const GetTheAppModal = (props) => {
   };
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
-    const results = searchResults.filter(
-      (country) =>
-        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-        country.dial_code.includes(searchTerm.toLocaleLowerCase())
-    );
+    const results = i18n.language === "brazilian" ?
+      searchResults.filter(
+        (country) =>
+          country.name_br.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+          country.dial_code.includes(searchTerm.toLocaleLowerCase())
+      ) :
+      searchResults.filter(
+        (country) =>
+          country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+          country.dial_code.includes(searchTerm.toLocaleLowerCase())
+      );
     setSearchResults2(results);
   };
   const handleOnChange = (e) => {
@@ -189,7 +195,7 @@ const GetTheAppModal = (props) => {
                                 >
                                   <div className="flag-name">
                                     <span>{item.flag}</span>
-                                    {item.name}
+                                    {i18n.language === "brazilian" ? item.name_br : item.name}
                                   </div>
                                   <div className="code">{item.dial_code}</div>
                                 </DropdownItem>
@@ -202,7 +208,7 @@ const GetTheAppModal = (props) => {
                                 >
                                   <div className="flag-name">
                                     <span>{item.flag}</span>
-                                    {item.name}
+                                    {i18n.language === "brazilian" ? item.name_br : item.name}
                                   </div>
                                   <div className="code">{item.dial_code}</div>
                                 </DropdownItem>

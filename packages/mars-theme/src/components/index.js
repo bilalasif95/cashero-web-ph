@@ -114,9 +114,10 @@ const Theme = ({ state }) => {
     else if (data.isPersonalCompaignMX) {
       i18n.changeLanguage("spanish")
     }
-    else {
+    else if (data.isPersonalCompaign) {
       i18n.changeLanguage("english")
     }
+    else { }
     //   let name = 'cashero-web'
     //   let version = '1.0.26'
     //   const last_version = localStorage.getItem(`${name}-Version`)
