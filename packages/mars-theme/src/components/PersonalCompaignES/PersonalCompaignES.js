@@ -37,6 +37,7 @@ const PersonalCompaignES = ({ i18n }) => {
   const [utmMedium, setUtmMedium] = useState("");
   const [utmSource, setUtmSource] = useState("");
   const [utmTerm, setUtmTerm] = useState("");
+  const [innerWidth, setInnerWidth] = useState(0);
   const fullName = useRef(null);
   const toggle = () => {
     setSearchTerm("");
@@ -65,6 +66,7 @@ const PersonalCompaignES = ({ i18n }) => {
   };
   useEffect(() => {
     i18n.changeLanguage("spspanish")
+    setInnerWidth(window.innerWidth)
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
     setUtmContent(qs.utm_content)
@@ -170,7 +172,7 @@ const PersonalCompaignES = ({ i18n }) => {
                 <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
-                    <input id="ContainerElementID" ref={fullName} type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
+                    <input id="ContainerElementID" ref={fullName} type="text" className="form-control" autoFocus={innerWidth <= 540 ? false : true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
                   </div>
                   <div className="form-group">
                     <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder={i18n.t("Enter_Email")} />
