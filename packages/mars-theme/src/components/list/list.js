@@ -22,7 +22,7 @@ import { androidAppLink, iosAppLink, ipAPI } from "../../config/config";
 import { withTranslation } from "react-i18next";
 import { callApi } from "../../config/call-api";
 
-const List = ({ i18n }) => {
+const List = ({ i18n, state }) => {
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
@@ -103,7 +103,7 @@ const List = ({ i18n }) => {
       i18n.changeLanguage("english")
     }
     else { }
-  }, [Language, i18n.language])
+  }, [state.router.link])
   useEffect(() => {
     const qs = parseQs(window.location.search.substr(1));
     callApi(ipAPI, "get")
