@@ -114,7 +114,7 @@ const Theme = ({ state }) => {
     else if (data.isPersonalCompaignMX) {
       i18n.changeLanguage("spanish")
     }
-    else if (data.isPersonalCompaign) {
+    else if (data.isPersonalCompaign || localStorage.getItem("lang") === "english") {
       i18n.changeLanguage("english")
     }
     else { }
