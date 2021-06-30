@@ -92,45 +92,43 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
-    console.log("========")
-    if (localStorage.getItem("lang") === "brazilian") {
-      setLanguage("brazilian")
-    }
-    else if (localStorage.getItem("lang") === "english") {
-      setLanguage("english")
-    }
-    else { }
-  }, [i18n.language])
-  useEffect(() => {
     const qs = parseQs(window.location.search.substr(1));
     callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
-          if (res.country_code === "BR") {
+          if (res.country_code === "BR" || qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
             setLanguage("brazilian")
             localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
           }
           else {
-            if (qs.lang === "pt_br") {
-              setLanguage("brazilian")
-              localStorage.setItem("lang", "brazilian")
-              i18n.changeLanguage("brazilian")
-            }
+            setLanguage("english")
+            localStorage.setItem("lang", "english")
+            i18n.changeLanguage("english")
           }
         }
         else {
-          if (qs.lang === "pt_br") {
+          if (qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
             setLanguage("brazilian")
             localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
           }
+          else {
+            setLanguage("english")
+            localStorage.setItem("lang", "english")
+            i18n.changeLanguage("english")
+          }
         }
       }).catch(() => {
-        if (qs.lang === "pt_br") {
+        if (qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
           setLanguage("brazilian")
           localStorage.setItem("lang", "brazilian")
           i18n.changeLanguage("brazilian")
+        }
+        else {
+          setLanguage("english")
+          localStorage.setItem("lang", "english")
+          i18n.changeLanguage("english")
         }
       })
     setInnerWidth(window.innerWidth)
@@ -141,7 +139,6 @@ const List = ({ i18n }) => {
     setLanguage(lang);
     i18n.changeLanguage(lang);
   };
-  console.log(Language,"========")
   return (
     <>
       <div className={`${scrolled ? "active header" : "header"}`} id="header">
