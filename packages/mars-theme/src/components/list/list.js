@@ -98,43 +98,36 @@ const List = ({ i18n }) => {
         if (res.success) {
           if (res.country_code === "BR") {
             setLanguage("brazilian")
+            localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
           }
           else {
             if (qs.lang === "pt_br") {
               setLanguage("brazilian")
+              localStorage.setItem("lang", "brazilian")
               i18n.changeLanguage("brazilian")
-            }
-            else {
-              setLanguage("english")
-              i18n.changeLanguage("english")
             }
           }
         }
         else {
           if (qs.lang === "pt_br") {
             setLanguage("brazilian")
+            localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
-          }
-          else {
-            setLanguage("english")
-            i18n.changeLanguage("english")
           }
         }
       }).catch(() => {
         if (qs.lang === "pt_br") {
           setLanguage("brazilian")
+          localStorage.setItem("lang", "brazilian")
           i18n.changeLanguage("brazilian")
-        }
-        else {
-          setLanguage("english")
-          i18n.changeLanguage("english")
         }
       })
     setInnerWidth(window.innerWidth)
     window.addEventListener("scroll", handleScroll)
   }, []);
   const setLanguageLocal = (lang) => {
+    localStorage.setItem("lang", lang);
     setLanguage(lang);
     i18n.changeLanguage(lang);
   };
