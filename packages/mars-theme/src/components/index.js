@@ -78,7 +78,7 @@ const Theme = ({ state }) => {
     else if (data.isPersonalCompaignAR) {
       i18n.changeLanguage("arspanish")
     }
-    else if ((data.isPersonalCompaignBR) || (qs.lang === "pt_br")) {
+    else if (data.isPersonalCompaignBR || qs.lang === "pt_br") {
       i18n.changeLanguage("brazilian")
     }
     else if (data.isPersonalCompaignCL) {
@@ -114,7 +114,7 @@ const Theme = ({ state }) => {
     else if (data.isPersonalCompaignMX) {
       i18n.changeLanguage("spanish")
     }
-    else if ((data.isPersonalCompaign)) {
+    else if (data.isPersonalCompaign) {
       i18n.changeLanguage("english")
     }
     else { }
