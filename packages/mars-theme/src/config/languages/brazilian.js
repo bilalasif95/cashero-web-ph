@@ -908,7 +908,7 @@ export const brazilian = {
     Compaign_Img_4: "Sem tarifas ocultas, sem saldo mínimo e sem estresse.",
     Compaign_P: "Na Cashero, garantimos uma boa relação qualidade/preço e maximizamos suas economias. Obtenha retornos mais altos e deixe seu dinheiro trabalhar por você.",
     Compaign_Launch_1: "Estamos lançando internacionalmente.",
-    Compaign_Launch_2: "Seja o primeiro a ganhar com a Cashero em Brazil.",
+    Compaign_Launch_2: "Seja o primeiro a ganhar com a Cashero no Brasil.",
     Compaign_Launch_3: "Entre para a lista de espera ainda hoje.",
     Join_the_Waitlist: "Junte-se à lista de espera.",
     Terms_And_Conditions: "Termos e Condições",
