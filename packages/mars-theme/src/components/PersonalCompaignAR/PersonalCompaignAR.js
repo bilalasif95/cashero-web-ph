@@ -65,8 +65,8 @@ const PersonalCompaignAR = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
-    setInnerWidth(window.innerWidth)
     i18n.changeLanguage("arspanish")
+    setInnerWidth(window.innerWidth)
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
     setUtmContent(qs.utm_content)
