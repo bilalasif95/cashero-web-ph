@@ -92,6 +92,19 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
+    if (localStorage.getItem("lang") === "brazilian") {
+      setLanguage("brazilian")
+      localStorage.setItem("lang", "brazilian")
+      i18n.changeLanguage("brazilian")
+    }
+    else if (localStorage.getItem("lang") === "english") {
+      setLanguage("english")
+      localStorage.setItem("lang", "english")
+      i18n.changeLanguage("english")
+    }
+    else { }
+  }, [Language, i18n.language])
+  useEffect(() => {
     const qs = parseQs(window.location.search.substr(1));
     callApi(ipAPI, "get")
       .then((res) => {
