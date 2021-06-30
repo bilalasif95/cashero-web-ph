@@ -22,7 +22,7 @@ import { androidAppLink, iosAppLink, ipAPI } from "../../config/config";
 import { withTranslation } from "react-i18next";
 import { callApi } from "../../config/call-api";
 
-const List = ({ i18n }) => {
+const List = ({ i18n, state }) => {
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
@@ -92,42 +92,55 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
+    if (localStorage.getItem("lang") === "brazilian") {
+      setLanguage("brazilian")
+      localStorage.setItem("lang", "brazilian")
+      i18n.changeLanguage("brazilian")
+    }
+    else if (localStorage.getItem("lang") === "english") {
+      setLanguage("english")
+      localStorage.setItem("lang", "english")
+      i18n.changeLanguage("english")
+    }
+    else { }
+  }, [state.router.link])
+  useEffect(() => {
     const qs = parseQs(window.location.search.substr(1));
     callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
-          if (res.country_code === "BR") {
+          if (res.country_code === "BR" || qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
             setLanguage("brazilian")
-            i18n.changeLanguage("brazilian")
-          }
-          else {
-            if (qs.lang === "pt_br") {
-              setLanguage("brazilian")
-              i18n.changeLanguage("brazilian")
-            }
-            else {
-              setLanguage("english")
-              i18n.changeLanguage("english")
-            }
-          }
-        }
-        else {
-          if (qs.lang === "pt_br") {
-            setLanguage("brazilian")
+            localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
           }
           else {
             setLanguage("english")
+            localStorage.setItem("lang", "english")
+            i18n.changeLanguage("english")
+          }
+        }
+        else {
+          if (qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
+            setLanguage("brazilian")
+            localStorage.setItem("lang", "brazilian")
+            i18n.changeLanguage("brazilian")
+          }
+          else {
+            setLanguage("english")
+            localStorage.setItem("lang", "english")
             i18n.changeLanguage("english")
           }
         }
       }).catch(() => {
-        if (qs.lang === "pt_br") {
+        if (qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
           setLanguage("brazilian")
+          localStorage.setItem("lang", "brazilian")
           i18n.changeLanguage("brazilian")
         }
         else {
           setLanguage("english")
+          localStorage.setItem("lang", "english")
           i18n.changeLanguage("english")
         }
       })
@@ -135,6 +148,7 @@ const List = ({ i18n }) => {
     window.addEventListener("scroll", handleScroll)
   }, []);
   const setLanguageLocal = (lang) => {
+    localStorage.setItem("lang", lang);
     setLanguage(lang);
     i18n.changeLanguage(lang);
   };

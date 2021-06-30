@@ -8,7 +8,7 @@ export const spspanish = {
     Compaign_Img_4: "Sin comisiones ocultas, sin saldos mínimos, sin estrés :)",
     Compaign_P: "Con Cashero, protegemos el valor adquisitivo de tu dinero y maximizamos tus ahorros. Consigue más rendimiento y haz que tu dinero trabaje para ti.",
     Compaign_Launch_1: "Vamos a lanzar Cashero a nivel multinacional.",
-    Compaign_Launch_2: "Sé el primero en ganar con Cashero en Spain.",
+    Compaign_Launch_2: "Sé el primero en ganar con Cashero en España.",
     Compaign_Launch_3: "Únete a la lista de espera, hoy mismo.",
     Enter_Name: "Introducir nombre",
     Enter_Email: "Introducir correo electrónico",

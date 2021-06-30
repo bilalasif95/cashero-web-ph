@@ -8,7 +8,7 @@ export const filipino = {
     Compaign_Img_4: "Walang hidden fees, walang minimum balance, walang stress :)",
     Compaign_P: "Sa Cashero, pinoprotektahan namin ang halaga ng pera mo at minamaximize ang savings mo. Kumita nang mas malaki at palaguin ang pera mo.",
     Compaign_Launch_1: "Magiging available na sa iba't-ibang bansa.",
-    Compaign_Launch_2: "Maunang kumita gamit ang Cashero sa Philippines.",
+    Compaign_Launch_2: "Maunang kumita gamit ang Cashero sa Pilipinas.",
     Compaign_Launch_3: "Sumali na sa waitlist ngayon",
     Enter_Name: "Ilagay ang Pangalan",
     Enter_Email: "Ilagay ang Email",
