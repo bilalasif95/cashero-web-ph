@@ -92,9 +92,14 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
-    if (localStorage.getItem("lang") === "english") {
+    console.log("========")
+    if (localStorage.getItem("lang") === "brazilian") {
+      setLanguage("brazilian")
+    }
+    else if (localStorage.getItem("lang") === "english") {
       setLanguage("english")
     }
+    else { }
   }, [i18n.language])
   useEffect(() => {
     const qs = parseQs(window.location.search.substr(1));
@@ -136,6 +141,7 @@ const List = ({ i18n }) => {
     setLanguage(lang);
     i18n.changeLanguage(lang);
   };
+  console.log(Language,"========")
   return (
     <>
       <div className={`${scrolled ? "active header" : "header"}`} id="header">
