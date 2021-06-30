@@ -92,6 +92,11 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
+    if (localStorage.getItem("lang") === "english") {
+      setLanguage("english")
+    }
+  }, [i18n.language])
+  useEffect(() => {
     const qs = parseQs(window.location.search.substr(1));
     callApi(ipAPI, "get")
       .then((res) => {
