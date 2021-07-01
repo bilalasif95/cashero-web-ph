@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Donations from "../../assets/Donations.png";
 import DonationsBR from "../../assets/DonationsBR.png";
 import Arrow from "../../assets/arrowLink.svg";
@@ -7,6 +7,10 @@ import { withTranslation } from "react-i18next";
 
 const FindCharity = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -25,7 +29,7 @@ const FindCharity = ({ i18n }) => {
 						</div>
 					</div>
 					<div className="col-md-6">
-						<img alt="Donations" className="img-fluid sm-center mx-auto d-block" src={i18n.language === "brazilian" ? DonationsBR : Donations} />
+						<img alt="Donations" className="img-fluid sm-center mx-auto d-block" src={storage === "brazilian" ? DonationsBR : Donations} />
 					</div>
 				</div>
 			</div>

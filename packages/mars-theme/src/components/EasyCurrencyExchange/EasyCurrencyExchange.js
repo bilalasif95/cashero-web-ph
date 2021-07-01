@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Exchange from "../../assets/exchange.svg";
 import ExchangeBR from "../../assets/exchangeBR.svg";
@@ -8,6 +8,10 @@ import { withTranslation } from "react-i18next";
 
 const EasyCurrencyExchange = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -39,7 +43,7 @@ const EasyCurrencyExchange = ({ i18n }) => {
 					<img
 						className="img-fluid mx-auto d-block sm-mt-30"
 						alt="exchange"
-						src={i18n.language === "brazilian" ? ExchangeBR : Exchange}
+						src={storage === "brazilian" ? ExchangeBR : Exchange}
 					/>
 				</div>
 			</div>

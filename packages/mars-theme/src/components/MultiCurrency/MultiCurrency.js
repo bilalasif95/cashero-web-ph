@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "../link";
 import Flags from "../../assets/Flags.svg";
 import FlagsBR from "../../assets/FlagsBR.svg";
@@ -12,6 +12,10 @@ import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const MultiCurrency = ({ i18n }) => {
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	return (
 		<div className="MultiCurrency">
 			<div className="row">
@@ -38,7 +42,7 @@ const MultiCurrency = ({ i18n }) => {
 									<Fade triggerOnce direction="right" duration={2000} delay={100}>
 										<img
 											className="d-block"
-											src={i18n.language === "brazilian" ? usdflagBR : usdflag}
+											src={storage === "brazilian" ? usdflagBR : usdflag}
 											alt="american flag"
 										/>
 									</Fade>
@@ -47,7 +51,7 @@ const MultiCurrency = ({ i18n }) => {
 									<Fade triggerOnce direction="left" duration={2000} delay={300}>
 										<img
 											className="d-block"
-											src={i18n.language === "brazilian" ? gbpflagBR : gbpflag}
+											src={storage === "brazilian" ? gbpflagBR : gbpflag}
 											alt="uk flag"
 										/>
 									</Fade>
@@ -66,7 +70,7 @@ const MultiCurrency = ({ i18n }) => {
 					</div>
 					<img
 						className="img-fluid mx-auto main-flags"
-						src={i18n.language === "brazilian" ? FlagsBR : Flags}
+						src={storage === "brazilian" ? FlagsBR : Flags}
 						alt="Flags"
 					/>
 				</div>

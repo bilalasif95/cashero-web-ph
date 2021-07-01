@@ -894,7 +894,7 @@ export const english = {
     transfer_money_abroad_panel6_1: "How much money goes to charity?",
     transfer_money_abroad_panel6_1_P: "100% of donations made through the Cashero app will go to charity. There are no hidden fees.",
     transfer_money_abroad_panel6_2: "Which charities are listed on Cashero?",
-    transfer_money_abroad_panel6_2_P: "Charities that meet Cashero’s internal approval process of making a significant impact in our world can be listed on Cashero. By selecting on any charity in the Cashero app, you can discover more about the difference that charity is making.",
+    transfer_money_abroad_panel6_2_P: "Charities that meet Cashero’s internal approval process of making a significant impact in our world can be listed on Cashero. By selecting any charity in the Cashero app, you can discover more about the difference that charity is making.",
     transfer_money_abroad_panel6_3: "Can recurring donations be made?",
     transfer_money_abroad_panel6_3_P: "At this point, donations can only be made as one-off donations.",
     transfer_money_abroad_panel6_4: "Are my donations safe?",

@@ -22,7 +22,7 @@ import { androidAppLink, iosAppLink, ipAPI } from "../../config/config";
 import { withTranslation } from "react-i18next";
 import { callApi } from "../../config/call-api";
 
-const List = ({ i18n }) => {
+const List = ({ i18n, state }) => {
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
@@ -34,6 +34,10 @@ const List = ({ i18n }) => {
   const [openDiv, setOpenDiv] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [Language, setLanguage] = useState(i18n.language);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const onToggleButtonClicked = () => {
     if (toggleBotton) {
       return setToggleBotton(false);
@@ -92,42 +96,55 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
+    if (localStorage.getItem("lang") === "brazilian") {
+      setLanguage("brazilian")
+      localStorage.setItem("lang", "brazilian")
+      i18n.changeLanguage("brazilian")
+    }
+    else if (localStorage.getItem("lang") === "english") {
+      setLanguage("english")
+      localStorage.setItem("lang", "english")
+      i18n.changeLanguage("english")
+    }
+    else { }
+  }, [state.router.link])
+  useEffect(() => {
     const qs = parseQs(window.location.search.substr(1));
     callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
-          if (res.country_code === "BR") {
+          if (res.country_code === "BR" || qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
             setLanguage("brazilian")
-            i18n.changeLanguage("brazilian")
-          }
-          else {
-            if (qs.lang === "pt_br") {
-              setLanguage("brazilian")
-              i18n.changeLanguage("brazilian")
-            }
-            else {
-              setLanguage("english")
-              i18n.changeLanguage("english")
-            }
-          }
-        }
-        else {
-          if (qs.lang === "pt_br") {
-            setLanguage("brazilian")
+            localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
           }
           else {
             setLanguage("english")
+            localStorage.setItem("lang", "english")
+            i18n.changeLanguage("english")
+          }
+        }
+        else {
+          if (qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
+            setLanguage("brazilian")
+            localStorage.setItem("lang", "brazilian")
+            i18n.changeLanguage("brazilian")
+          }
+          else {
+            setLanguage("english")
+            localStorage.setItem("lang", "english")
             i18n.changeLanguage("english")
           }
         }
       }).catch(() => {
-        if (qs.lang === "pt_br") {
+        if (qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
           setLanguage("brazilian")
+          localStorage.setItem("lang", "brazilian")
           i18n.changeLanguage("brazilian")
         }
         else {
           setLanguage("english")
+          localStorage.setItem("lang", "english")
           i18n.changeLanguage("english")
         }
       })
@@ -135,6 +152,7 @@ const List = ({ i18n }) => {
     window.addEventListener("scroll", handleScroll)
   }, []);
   const setLanguageLocal = (lang) => {
+    localStorage.setItem("lang", lang);
     setLanguage(lang);
     i18n.changeLanguage(lang);
   };
@@ -432,8 +450,8 @@ const List = ({ i18n }) => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
-            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
+            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
+            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>
           </ul>
           {/* <button
             className="btn btn-primary my-2 my-sm-0 Appbtn GetAppBtn"

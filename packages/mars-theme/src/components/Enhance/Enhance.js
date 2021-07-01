@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Hand from "../../assets/handImg.png";
 import HandBR from "../../assets/handImgBR.png";
 import { Fade } from "react-awesome-reveal";
@@ -6,6 +6,10 @@ import ArrowWhite from "../../assets/arrowLinkWhite.svg";
 import { withTranslation } from "react-i18next";
 
 const Enhance = ({ i18n }) => {
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	return (
 		<div className="Enhance">
 			<div className="container">
@@ -24,7 +28,7 @@ const Enhance = ({ i18n }) => {
 						</div>
 					</div>
 					<div className="col-md-5">
-						<img className="img-fluid PhoneHand" alt="Hand" src={i18n.language === "brazilian" ? HandBR : Hand} />
+						<img className="img-fluid PhoneHand" alt="Hand" src={storage === "brazilian" ? HandBR : Hand} />
 					</div>
 				</div>
 			</div>

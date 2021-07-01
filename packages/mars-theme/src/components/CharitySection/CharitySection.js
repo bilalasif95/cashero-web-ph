@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "../link";
 import Charity from "../../assets/Charity.jpg";
 import CharityBR from "../../assets/CharityBR.jpg";
@@ -7,6 +7,10 @@ import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const CharitySection = ({ i18n }) => {
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	return (
 		<div className="Charity sm-pb-0">
 			<div className="row flex-column-reverse flex-sm-row">
@@ -15,7 +19,7 @@ const CharitySection = ({ i18n }) => {
 						<img
 							className="sm-center img-fluid"
 							alt="Charity"
-							src={i18n.language === "brazilian" ? CharityBR : Charity}
+							src={storage === "brazilian" ? CharityBR : Charity}
 						/>
 					</div>
 				</div>

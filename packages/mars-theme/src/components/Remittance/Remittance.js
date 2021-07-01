@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Head, connect } from "frontity";
 import Clock from "../../assets/clockImg.svg";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
@@ -26,6 +26,10 @@ import { withTranslation } from "react-i18next";
 
 const Remittance = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -72,7 +76,7 @@ const Remittance = ({ state, i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Cashero map" className="mx-auto d-block w-100" src={i18n.language === "brazilian" ? Casher0mapBR : Casher0map} />
+              <img alt="Cashero map" className="mx-auto d-block w-100" src={storage === "brazilian" ? Casher0mapBR : Casher0map} />
             </div>
           </div>
         </div>
@@ -120,7 +124,7 @@ const Remittance = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Done" src={i18n.language === "brazilian" ? DoneBR : Done} />
+                  <img className="img-fluid" alt="Done" src={storage === "brazilian" ? DoneBR : Done} />
                   <h3>
                     {i18n.t("Remittance_Work")}
                   </h3>
