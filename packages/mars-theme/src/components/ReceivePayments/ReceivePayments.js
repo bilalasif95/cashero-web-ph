@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import Clock from "../../assets/clockImg.svg";
 import Instant from "../../assets/instant.svg";
@@ -25,6 +25,10 @@ import { withTranslation } from "react-i18next";
 
 const ReceivePayments = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -71,7 +75,7 @@ const ReceivePayments = ({ state, i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="KuWu" className="img-fluid mx-auto d-block" src={i18n.language === "brazilian" ? KuWuBR : KuWu} />
+              <img alt="KuWu" className="img-fluid mx-auto d-block" src={storage === "brazilian" ? KuWuBR : KuWu} />
             </div>
           </div>
         </div>

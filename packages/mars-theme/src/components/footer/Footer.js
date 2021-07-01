@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from "../link";
@@ -42,6 +42,10 @@ TabPanel.propTypes = {
 };
 
 const Footer = ({ i18n }) => {
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	return (
 		<div className="container">
 			<div className="Footer">
@@ -52,8 +56,8 @@ const Footer = ({ i18n }) => {
 						</Link>
 						<p className="HelpText">{i18n.t("Footer_P1")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P2")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P3")}</p>
 						<ul className="list-unstyled AppList">
-							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
-							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
+							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
+							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>
 						</ul>
 					</div>
 					<div className="col-md-6">

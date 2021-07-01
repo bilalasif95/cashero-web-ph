@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Clock from "../../assets/clockImg.svg";
 import donateDollar from "../../assets/donateDollar.svg";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
@@ -24,6 +24,10 @@ import { withTranslation } from "react-i18next";
 
 const ListedCharity = ({ i18n }) => {
   const [appModal, setAppModal] = useState(false);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -59,7 +63,7 @@ const ListedCharity = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-6">
-              <img alt="free Fund" className="img-fluid mx-auto d-block" src={i18n.language === "brazilian" ? freeFundBR : freeFund} />
+              <img alt="free Fund" className="img-fluid mx-auto d-block" src={storage === "brazilian" ? freeFundBR : freeFund} />
             </div>
           </div>
         </div>
