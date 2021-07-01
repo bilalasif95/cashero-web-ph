@@ -396,7 +396,7 @@ export const english = {
     DESCRIPTION_P3: "Cashero has established two companies to separate elements of the business. Cashero Financial OÜ for traditional financial transactions and Cashero Investment OÜ for those that involve virtual currencies. Cashero Financial OÜ will hold the financial institution license and Cashero Investment OÜ will hold the virtual currency service license.",
     DESCRIPTION_P4: "Cashero Financial OÜ uses Sum And Substance Ltd a KYC, KYB and AML service provider (Data protection No. ZA222205); Cashero Investment OÜ a Virtual Currency Services provider (license No. XXXX);",
     CONSENT: "CONSENT",
-    CONSENT_P1: "BY DEPOSITING YOUR FUNDS (GBP, EUR, OR USD)  TO THE APP, YOU FULLY UNDERSTAND AND CONSENT FOR CASHERO TO CONVERT YOUR DEPOSITED FUNDS (GBP, EUR, OR USD) TO CRYPTOCURRENCY STABLECOINS WHICH WILL BE INVESTED INTO DECENTRALIZED FINANCE LENDING PROTOCOLS AND DECENTRALIZED FINANCE MONEY MARKET PROTOCOLS.  YOU ALSO CONSENT TO PLACE YOUR FUNDS IN COLLATERALIZED DEPOSITS TO GENERATE YIELD.",
+    CONSENT_P1: "BY DEPOSITING YOUR FUNDS (GBP, EUR, OR USD) TO THE APP, YOU FULLY UNDERSTAND AND CONSENT FOR CASHERO TO CONVERT YOUR DEPOSITED FUNDS (GBP, EUR, OR USD) TO CRYPTOCURRENCY STABLECOINS WHICH WILL BE INVESTED INTO DECENTRALIZED FINANCE LENDING PROTOCOLS AND DECENTRALIZED FINANCE MONEY MARKET PROTOCOLS. YOU ALSO CONSENT TO PLACE YOUR FUNDS IN COLLATERALIZED DEPOSITS TO GENERATE YIELD.",
     USER_REPRESENTATIONS: "USER REPRESENTATIONS",
     REPRESENTATIONS: "REPRESENTATIONS",
     REPRESENTATIONS_P1_APP: "By using the App, you hereby confirm you are fully aware, agree, represent, and warrant that:",
