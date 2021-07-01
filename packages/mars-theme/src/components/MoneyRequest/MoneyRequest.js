@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "../link";
 import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
 import InstantMoneyTransferBR from "../../assets/InstantMoneyTransferBR.svg";
@@ -11,6 +11,10 @@ import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const MoneyRequest = ({ i18n }) => {
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	return (
 		<div className="MoneyRequest transfer-money sm-mt-30">
 			<div className="row">
@@ -45,7 +49,7 @@ const MoneyRequest = ({ i18n }) => {
 										>
 											<img
 												className="img-fluid mx-auto d-block"
-												src={i18n.language === "brazilian" ? RequestBR : Request}
+												src={storage === "brazilian" ? RequestBR : Request}
 												alt="Request"
 											/>
 										</Slide>
@@ -60,7 +64,7 @@ const MoneyRequest = ({ i18n }) => {
 										>
 											<img
 												className="img-fluid mx-auto d-block"
-												src={i18n.language === "brazilian" ? SendBR : Send}
+												src={storage === "brazilian" ? SendBR : Send}
 												alt="Send"
 											/>
 										</Slide>
@@ -70,7 +74,7 @@ const MoneyRequest = ({ i18n }) => {
 						</div>
 						<img
 							className="img-fluid mx-auto money-transfer sm-mt-30"
-							src={i18n.language === "brazilian" ? InstantMoneyTransferBR : InstantMoneyTransfer}
+							src={storage === "brazilian" ? InstantMoneyTransferBR : InstantMoneyTransfer}
 							alt="Instant Money Transfer"
 						/>
 					</div>

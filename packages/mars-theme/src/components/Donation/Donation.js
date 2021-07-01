@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Clock from "../../assets/clockImg.svg";
 import SlideGroup from "../../assets/SlideGroup.png";
 import SlideGroupBR from "../../assets/SlideGroupBR.png";
@@ -24,6 +24,10 @@ import { withTranslation } from "react-i18next";
 
 const Donation = ({ i18n }) => {
   const [appModal, setAppModal] = useState(false)
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -56,7 +60,7 @@ const Donation = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Slide Group" className="img-fluid mx-auto d-block sm-mt-30" src={i18n.language === "brazilian" ? SlideGroupBR : SlideGroup} />
+              <img alt="Slide Group" className="img-fluid mx-auto d-block sm-mt-30" src={storage === "brazilian" ? SlideGroupBR : SlideGroup} />
             </div>
           </div>
         </div>

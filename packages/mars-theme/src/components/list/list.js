@@ -34,6 +34,10 @@ const List = ({ i18n, state }) => {
   const [openDiv, setOpenDiv] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [Language, setLanguage] = useState(i18n.language);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const onToggleButtonClicked = () => {
     if (toggleBotton) {
       return setToggleBotton(false);
@@ -446,8 +450,8 @@ const List = ({ i18n, state }) => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
-            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
+            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
+            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>
           </ul>
           {/* <button
             className="btn btn-primary my-2 my-sm-0 Appbtn GetAppBtn"
