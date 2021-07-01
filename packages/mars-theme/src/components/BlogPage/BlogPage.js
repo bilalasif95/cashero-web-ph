@@ -87,7 +87,7 @@ const BlogPage = ({ state, i18n }) => {
                       </DropdownToggle>
                       <DropdownMenu>
                         <DropdownItem onClick={(e) => handleChange(e, "All")}>
-                          {i18n.t("All")}
+                         All
                         </DropdownItem>
                         {blogsCategories.map((res) => (
                           <DropdownItem

@@ -3626,6 +3626,9 @@ button:focus {
     font-size: 12px !important;
     width: 80px;
     text-align: center; }
+    .brazilianButton button {
+      width: 116px !important;
+    }
   .BlogSocialList li:not(:last-child) {
     margin-right: 10px; }
   .BlogSocialList li:first-of-type a,.BlogSocialList li:first-of-type button {

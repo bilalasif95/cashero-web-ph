@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "../link";
 import currExchange from "../../assets/exchange.svg";
 import currExchangeBR from "../../assets/exchangeBR.svg";
@@ -8,6 +8,10 @@ import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const CurrencyConversion = ({ i18n }) => {
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	return (
 		<div className="CurrencyConversion">
 			<div className="row flex-column-reverse flex-sm-row">
@@ -21,7 +25,7 @@ const CurrencyConversion = ({ i18n }) => {
 						<img
 							className="charity-mob"
 							alt="currency exchange"
-							src={i18n.language === "brazilian" ? currExchangeBR : currExchange}
+							src={storage === "brazilian" ? currExchangeBR : currExchange}
 						/>
 					</div>
 				</div>

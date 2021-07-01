@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SignupSection from "../signupSection/signupSection";
 import Countup from "../Countup/Countup";
 import WhoSection from "../WhoSection/WhoSection";
@@ -10,6 +10,10 @@ import { Head } from "frontity";
 import { withTranslation } from "react-i18next";
 
 const Company = ({ i18n }) => {
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   return (
     <>
       <Head>
@@ -28,7 +32,7 @@ const Company = ({ i18n }) => {
               <img
                 className="img-fluid d-block CasheroImg w-100"
                 alt="Cashero Image"
-                src={i18n.language === "brazilian" ? CasheroImgBR : CasheroImg}
+                src={storage === "brazilian" ? CasheroImgBR : CasheroImg}
               />
             </div>
           </div>
@@ -43,7 +47,7 @@ const Company = ({ i18n }) => {
               <img
                 className="img-fluid mx-auto d-block"
                 alt="Years Image"
-                src={i18n.language === "brazilian" ? YearsImgBR : YearsImg}
+                src={storage === "brazilian" ? YearsImgBR : YearsImg}
               />
             </div>
           </div>

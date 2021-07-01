@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import BitCircle from "../../assets/BitCircle.png";
 import BitCircleBR from "../../assets/BitCircleBR.png";
@@ -8,6 +8,10 @@ import { withTranslation } from "react-i18next";
 
 const Savings = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -37,7 +41,7 @@ const Savings = ({ i18n }) => {
 					<img
 						className="img-fluid mx-auto d-block"
 						alt="Bit Circle"
-						src={i18n.language === "brazilian" ? BitCircleBR : BitCircle} />
+						src={storage === "brazilian" ? BitCircleBR : BitCircle} />
 				</div>
 			</div>
 		</div>
