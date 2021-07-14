@@ -28,14 +28,14 @@ const GetPaid = ({ i18n }) => {
 								{i18n.t("Get_Paid_P")}
 							</p>
 							<button onClick={appModalOpen} className="LinkBtn">
-								{i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="Arrow" height="24px" width="24px" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
 					</div>
 				</div>
 				<div className="col-md-6">
-					<img className="img-fluid sm-mb-30" src={Paid} />
+					<img className="img-fluid sm-mb-30" height="100%" width="486px" src={Paid} />
 				</div>
 			</div>
 		</div>

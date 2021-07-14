@@ -22,13 +22,13 @@ const Enhance = ({ i18n }) => {
 									{i18n.t("Business_P1")} <span className="br-block-with-no-display"></span>{i18n.t("Business_P2")}
 								</p>
 								<a className="Link" href="/#">
-									{i18n.t("Learn_more_about_Business")}  <img alt="Arrow" className="ArrowBtn" src={ArrowWhite} />
+									{i18n.t("Learn_more_about_Business")}  <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={ArrowWhite} />
 								</a>
 							</Fade>
 						</div>
 					</div>
 					<div className="col-md-5">
-						<img className="img-fluid PhoneHand" alt="Hand" src={storage === "brazilian" ? HandBR : Hand} />
+						<img className="img-fluid PhoneHand" height="100%" width="100%" alt="Hand" src={storage === "brazilian" ? HandBR : Hand} />
 					</div>
 				</div>
 			</div>

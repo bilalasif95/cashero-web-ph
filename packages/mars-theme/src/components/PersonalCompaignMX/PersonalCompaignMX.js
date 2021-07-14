@@ -270,19 +270,19 @@ const PersonalCompaignMX = ({ i18n }) => {
             <div className="col-md -12">
               <div className="inflation">
                 <div className="inflation-cont text-center">
-                  <img src={inflation} />
+                  <img className="img-fluid" height="70px" width="70px" src={inflation} />
                   <p>{i18n.t("PersonalPage_li1")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={depositUSD} />
+                  <img className="img-fluid" height="70px" width="70px" src={depositUSD} />
                   <p>{i18n.t("Compaign_Img_2_1")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={interestpaid} />
+                  <img className="img-fluid" height="70px" width="70px" src={interestpaid} />
                   <p>{i18n.t("PersonalPage_li2")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={depositmoneytime} />
+                  <img className="img-fluid" height="70px" width="70px" src={depositmoneytime} />
                   <p>{i18n.t("PersonalPage_li3")}</p>
                 </div>
               </div>

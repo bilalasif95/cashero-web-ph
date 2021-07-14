@@ -25,13 +25,15 @@ const campaignSavings = ({ i18n, lang, focus }) => {
 							<p>
 								{i18n.t("CampaignSavings_P")}
 							</p>
-							<button onClick={() => { focus(); scroll.scrollTo('myScrollToElement', { containerId: 'ContainerElementID' }) }} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<button onClick={() => { focus(); scroll.scrollTo('myScrollToElement', { containerId: 'ContainerElementID' }) }} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow} /> </button>
 						</Fade>
 					</div>
 				</div>
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block"
+						height="100%"
+						width="550px"
 						alt="Bit Circle"
 						src={lang === "pt" || lang === "br" ? savingworkBRandPT : lang === "co" || lang === "mx" || lang === "ar" || lang === "cl" || lang === "es" ? savingworkCOMXARCLES : lang === "fr" ? savingworkFR : lang === "de" ? savingworkDE : lang === "it" ? savingworkIT : lang === "id" ? savingworkID : lang === "ph" ? savingworkPH : savingwork} />
 				</div>

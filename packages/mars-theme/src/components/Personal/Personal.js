@@ -130,7 +130,7 @@ const Personal = ({ state, i18n }) => {
                         </div>
                       </div>
                       <div className="col-2">
-                        <img className="interest-arrow" src={Arrow} alt="Arrow" />
+                        <img className="interest-arrow" height="24px" width="24px" src={Arrow} alt="Arrow" />
                       </div>
                       <div className="col-6">
                         <div className="InterestBox mt-0 TotalText interest-box-cont">
@@ -223,7 +223,7 @@ const Personal = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img alt="Favourite" className="img-fluid" src={Fav} />
+                  <img alt="Favourite" height="100%" width="100%" className="img-fluid" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
@@ -233,6 +233,7 @@ const Personal = ({ state, i18n }) => {
                 <img
                   className="img-fluid"
                   src={WalletCoins}
+                  height="152px" width="152px" 
                   alt="Wallet Coins"
                 />
                 <h3>{i18n.t("Add_funds_into_your_Account")}</h3>
@@ -241,7 +242,7 @@ const Personal = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Arrow Up" src={ArrowUp} />
+                  <img className="img-fluid" height="152px" width="152px" alt="Arrow Up" src={ArrowUp} />
                   <h3>
                     {i18n.t("Earn_up_to_5_APY")}
                   </h3>
@@ -254,7 +255,7 @@ const Personal = ({ state, i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Personal_LastP")}</p>
                 <button onClick={appModalOpen} className="LinkBtn" >
-                  {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow1} />
                 </button>
               </div>
             </div>

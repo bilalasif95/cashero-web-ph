@@ -63,7 +63,7 @@ const ListedCharity = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-6">
-              <img alt="free Fund" className="img-fluid mx-auto d-block" src={storage === "brazilian" ? freeFundBR : freeFund} />
+              <img alt="free Fund" className="img-fluid mx-auto d-block" height="100%" width="579px" src={storage === "brazilian" ? freeFundBR : freeFund} />
             </div>
           </div>
         </div>
@@ -93,21 +93,21 @@ const ListedCharity = ({ i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img className="img-fluid" alt="Favourite" src={Fav} />
+                  <img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img className="img-fluid" alt="list Image" src={listImg} />
+                <img className="img-fluid" alt="list Image" height="152px" width="152px" src={listImg} />
                 <h3>{i18n.t("Apply_to_become_a_listed_charity")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Steps Wallet" src={StepsWallet} />
+                  <img className="img-fluid" height="152px" width="152px" alt="Steps Wallet" src={StepsWallet} />
                   <h3>{i18n.t("Receive_donations_and_make_a_difference")}</h3>
                 </div>
               </Fade>
@@ -118,7 +118,7 @@ const ListedCharity = ({ i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Listed_Charity_Work_P")}</p>
                 <button onClick={appModalOpen} className="LinkBtn">
-                  {i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img className="ArrowBtn" height="24px" width="24px" alt="arrow" src={Arrow1} />
                 </button>
               </div>
             </div>

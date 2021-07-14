@@ -282,7 +282,8 @@ body{
   background-color: #cde0fb !important; }
 
 .bannerImg {
-  padding: 0 3rem; }
+  padding: 0 3rem;
+}
 
 @media (max-width: 1150px) {
   .numberSelection .selectCountry {
@@ -3097,10 +3098,13 @@ b {
         box-shadow: inherit; }
 
 @media (max-width: 540px) {
+  .PesonalCompaignBanner {
+    padding: 30px 0px !important;
+  }
   .SignInEmail {
     display: none; }
   .SignUp {
-    padding: 20px 20px 20px 20px; }
+    padding: 30px 0px !important; }
     .SignUp .numberSelection {
       display: none; }
   .SignUpTitle {
@@ -16226,7 +16230,7 @@ select:-webkit-autofill:focus {
             color: #ee7120 !important;}
           .Waitlistbtn {
             width: 100%;
-            max-width: 250px;
+            max-width: 270px;
             margin: 0px auto;
             margin-top: 40px;}
             .campaignFaq {

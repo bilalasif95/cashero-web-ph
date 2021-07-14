@@ -12,7 +12,7 @@ const PeoplesSection = ({ i18n }) => {
 						<div className="col-md-2" />
 						<div className="col-md-8">
 							<div className="people-map">
-								<img alt="map" className="img-fluid" src={Map} />
+								<img alt="map" className="img-fluid" height="100%" width="100%" src={Map} />
 							</div>
 						</div>
 						<div className="col-md-2" />

@@ -22,7 +22,7 @@ const CampaignHeader = ({ state }) => {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light customNav campaignHeader">
           <Link link={data.link} className="navbar-brand">
-            <img className="Logo" alt="Logo" src={Logo} />
+            <img className="Logo" height="100%" width="100%" alt="Logo" src={Logo} />
           </Link>
         </nav>
       </div>
