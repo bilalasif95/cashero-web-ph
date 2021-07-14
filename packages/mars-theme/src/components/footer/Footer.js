@@ -54,7 +54,7 @@ const Footer = ({ i18n }) => {
 						<Link link="/">
 							<img src={Logo} alt="logo" />
 						</Link>
-						<p className="HelpText">{i18n.t("Footer_P1")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P2")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P3")}</p>
+						<p className="HelpText footerBreakText">{i18n.t("Footer_P1")}</p>
 						<ul className="list-unstyled AppList">
 							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
 							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>

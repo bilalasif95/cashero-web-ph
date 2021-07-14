@@ -235,7 +235,7 @@ const HighInterest = ({ i18n }) => {
 					<div className="col-md-6">
 						<div className="oneAppCont">
 							<Fade triggerOnce direction="up">
-								<h3 className="HighInterestTitle">{i18n.t("High_Yield")}<span className="br-block highInterestHeading"></span>{i18n.t("Savings_Account")}</h3>
+								<h3 className="HighInterestTitle noBreakHomeHeading">{i18n.t("High_Yield_Savings_Account")}</h3>
 								<p className="HighInterestText">{i18n.t("High_Yield_Savings_Account_P")}</p>
 								<Link link="/high-yield-savings-account" className="Link">{i18n.t("Learn_more_about_Savings")}
 									{innerWidth >= 540 ?

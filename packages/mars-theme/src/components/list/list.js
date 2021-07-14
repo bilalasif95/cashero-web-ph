@@ -221,7 +221,7 @@ const List = ({ i18n, state }) => {
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/high-yield-savings-account">
-                                {i18n.t("High_Yield_Savings_Account_Menu")}
+                                {i18n.t("High_Yield_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
@@ -291,7 +291,7 @@ const List = ({ i18n, state }) => {
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/high-yield-savings-account">
-                                {i18n.t("High_Yield_Savings_Account_Menu")}
+                                {i18n.t("High_Yield_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>

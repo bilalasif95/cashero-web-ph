@@ -56,7 +56,7 @@ const Donation = ({ i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">

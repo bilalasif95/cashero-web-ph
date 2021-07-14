@@ -16099,8 +16099,20 @@ select:-webkit-autofill:focus {
     .compaignHeading {
       padding-right: 170px;
     }
+    .noBreakHeading {
+      width: 65%;
+    }
+    .noBreakHomeHeading {
+      width: 60%;
+    }
+    .noBreakBannerHeading {
+      width: 90%;
+    }
     .compaignHighYield {
       width: 48%;
+    }
+    .footerBreakText {
+      width: 38%;
     }
   }
   @media (max-width: 540px) {

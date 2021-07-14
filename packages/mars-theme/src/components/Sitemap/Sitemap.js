@@ -23,7 +23,7 @@ const Sitemap = ({ i18n }) => {
                 <h1 className="sitemap-h2">{i18n.t("Sitemap")}</h1>
                 <h6 className="sitemap-head">{i18n.t("Personal")}</h6>
                 <ul className="sitemap-list">
-                  <li><Link link="/high-yield-savings-account">{i18n.t("High_Yield_Savings_Account_Menu")}</Link></li>
+                  <li><Link link="/high-yield-savings-account">{i18n.t("High_Yield_Savings_Account")}</Link></li>
                   <li><Link link="/multi-currency-savings-account">{i18n.t("Multi_Currency_Savings_Account")}</Link></li>
                   <li><Link link="/online-currency-exchange">{i18n.t("Online_Currency_Exchange")}</Link></li>
                   <li><Link link="/instant-money-transfer">{i18n.t("Instant_Money_Transfer")}</Link></li>
@@ -31,7 +31,7 @@ const Sitemap = ({ i18n }) => {
                 </ul>
                 <h6 className="sitemap-head">{i18n.t("Business")}</h6>
                 <ul className="sitemap-list">
-                  <li><Link link="/high-yield-savings-account">{i18n.t("High_Yield_Savings_Account_Menu")}</Link></li>
+                  <li><Link link="/high-yield-savings-account">{i18n.t("High_Yield_Savings_Account")}</Link></li>
                   <li><Link link="/multi-currency-savings-account">{i18n.t("Multi_Currency_Savings_Account")}</Link></li>
                   <li><Link link="/online-currency-exchange">{i18n.t("Online_Currency_Exchange")}</Link></li>
                   <li><Link link="/instant-money-transfer">{i18n.t("Instant_Money_Transfer")}</Link></li>
