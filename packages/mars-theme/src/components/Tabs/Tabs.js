@@ -180,7 +180,7 @@ const QuestionTabs = (props) => {
 											<span className="bold-text">{i18n.t("main_features_B3")} </span> {i18n.t("main_features_P3")}
 										</p>
 										<p className="FaqText">
-											<span className="bold-text">{i18n.t("Instant_Payments")} </span> {path === "/multi-currency-savings-account/" ? i18n.t("main_features_P4_1") : i18n.t("main_features_P4")}
+											<span className="bold-text">{i18n.t("Instant_Payments")}: </span> {path === "/multi-currency-savings-account/" ? i18n.t("main_features_P4_1") : i18n.t("main_features_P4")}
 										</p>
 										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B5")} </span> {i18n.t("main_features_P5")}
