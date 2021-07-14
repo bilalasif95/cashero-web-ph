@@ -162,7 +162,7 @@ const List = ({ i18n, state }) => {
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light customNav">
             <Link link="/" className="navbar-brand">
-              <img className="Logo" alt="Logo" src={Logo} />
+              <img className="Logo" height="100%" width="100%" alt="Logo" src={Logo} />
             </Link>
             <button
               className="navbar-toggler"
@@ -450,8 +450,8 @@ const List = ({ i18n, state }) => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
-            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>
+            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="132px" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
+            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="116px" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>
           </ul>
           {/* <button
             className="btn btn-primary my-2 my-sm-0 Appbtn GetAppBtn"

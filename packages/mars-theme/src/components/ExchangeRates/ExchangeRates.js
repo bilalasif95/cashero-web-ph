@@ -455,7 +455,7 @@ const ExchangeRates = ({ state, i18n }) => {
                   ) : (
                     <div className="exchangeAmount">
                       <div className="ExchangeImg">
-                        <img alt="Coin Image" onClick={onSwap} src={ConImg} />
+                        <img alt="Coin Image" height="47px" width="47px" onClick={onSwap} src={ConImg} />
                       </div>
                       <div className="ExchangeNum">
                         {loading ? (
@@ -659,7 +659,7 @@ const ExchangeRates = ({ state, i18n }) => {
           <div className="col-md -12">
             <ul className="PersonalCompanyList list-unstyled">
               <li>
-                <img src={ExArrow} alt="Exchange Arrow" />
+                <img src={ExArrow} height="24px" width="24px" alt="Exchange Arrow" />
                 {i18n.t("Exchange_Rates_li1")}
               </li>
               <li>
@@ -691,14 +691,14 @@ const ExchangeRates = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img className="img-fluid" alt="Favourite" src={Fav} />
+                  <img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img className="img-fluid" alt="Currencies" src={Currencies} />
+                <img className="img-fluid" height="100%" width="121px" alt="Currencies" src={Currencies} />
                 <h3>
                   {i18n.t("Exchange_Rates_Work2")}
                 </h3>
@@ -709,6 +709,7 @@ const ExchangeRates = ({ state, i18n }) => {
                 <div className="GetStartedBox3 w-100">
                   <img
                     className="img-fluid"
+                    height="152px" width="152px"
                     alt="Moving Coins"
                     src={MovingCoins}
                   />
@@ -725,7 +726,7 @@ const ExchangeRates = ({ state, i18n }) => {
                 </p>
                 <button onClick={appModalOpen} className="LinkBtn">
                   {i18n.t("Get_Early_Access")}
-                  <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+                  <img className="ArrowBtn" height="24px" width="24px" alt="arrow" src={Arrow1} />
                 </button>
               </div>
             </div>

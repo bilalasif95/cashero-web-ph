@@ -76,7 +76,7 @@ const Remittance = ({ state, i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Cashero map" className="mx-auto d-block w-100" src={storage === "brazilian" ? Casher0mapBR : Casher0map} />
+              <img alt="Cashero map" className="mx-auto d-block w-100" height="100%" width="100%" src={storage === "brazilian" ? Casher0mapBR : Casher0map} />
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ const Remittance = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img alt="Favourite" className="img-fluid" src={Fav} />
+                  <img alt="Favourite" height="100%" width="100%" className="img-fluid" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
@@ -115,6 +115,8 @@ const Remittance = ({ state, i18n }) => {
               <div className="GetStartedBox2 w-100">
                 <img
                   className="img-fluid"
+                  height="152px"
+                  width="152px"
                   alt="Steps Dollar"
                   src={StepsDollar}
                 />
@@ -124,7 +126,7 @@ const Remittance = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Done" src={storage === "brazilian" ? DoneBR : Done} />
+                  <img className="img-fluid" height="100%" width="84px" alt="Done" src={storage === "brazilian" ? DoneBR : Done} />
                   <h3>
                     {i18n.t("Remittance_Work")}
                   </h3>
@@ -137,7 +139,7 @@ const Remittance = ({ state, i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Remittance_Work_P")}</p>
                 <button className="LinkBtn" onClick={appModalOpen}>
-                  {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow1} />
                 </button>
               </div>
             </div>

@@ -31,6 +31,8 @@ const Company = ({ i18n }) => {
             <div className="col-md-12">
               <img
                 className="img-fluid d-block CasheroImg w-100"
+                height="100%"
+                width="100%"
                 alt="Cashero Image"
                 src={storage === "brazilian" ? CasheroImgBR : CasheroImg}
               />
@@ -46,6 +48,8 @@ const Company = ({ i18n }) => {
             <div className="col-md-12">
               <img
                 className="img-fluid mx-auto d-block"
+                height="100%"
+                width="1150px"
                 alt="Years Image"
                 src={storage === "brazilian" ? YearsImgBR : YearsImg}
               />

@@ -18,7 +18,7 @@ const CompaignNoEffort = ({ i18n, lang, focus }) => {
 			<div className="container">
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
-						<img className="img-fluid mx-auto d-block" alt="coins Up" src={lang === "pt" || lang === "br" ? earncasheroBRandPT : lang === "co" || lang === "mx" || lang === "ar" || lang === "cl" || lang === "es" ? earncasheroCOMXARCLES : lang === "fr" ? earncasheroFR : lang === "de" ? earncasheroDE : lang === "it" ? earncasheroIT : lang === "id" ? earncasheroID : lang === "ph" ? earncasheroPH : earncashero} />
+						<img className="img-fluid mx-auto d-block" height="100%" width="550px" alt="coins Up" src={lang === "pt" || lang === "br" ? earncasheroBRandPT : lang === "co" || lang === "mx" || lang === "ar" || lang === "cl" || lang === "es" ? earncasheroCOMXARCLES : lang === "fr" ? earncasheroFR : lang === "de" ? earncasheroDE : lang === "it" ? earncasheroIT : lang === "id" ? earncasheroID : lang === "ph" ? earncasheroPH : earncashero} />
 					</div>
 					<div className="col-md-6">
 						<div className="oneAppCont">
@@ -28,7 +28,7 @@ const CompaignNoEffort = ({ i18n, lang, focus }) => {
 								</h2>
 								<p className="HighInterestText">{i18n.t("CompaignNoEffort_P1")}</p>
 								<p className="HighInterestText">{i18n.t("CompaignNoEffort_P2")}</p>
-								<button onClick={() => { focus(); scroll.scrollTo('myScrollToElement', { containerId: 'ContainerElementID' }) }} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<button onClick={() => { focus(); scroll.scrollTo('myScrollToElement', { containerId: 'ContainerElementID' }) }} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 						</div>
 					</div>

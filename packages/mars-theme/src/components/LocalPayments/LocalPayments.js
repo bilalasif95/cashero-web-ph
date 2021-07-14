@@ -17,7 +17,7 @@ const LocalPayments = ({ i18n }) => {
 		<div className="MoneyRequest sm-mt-40">
 			<div className="row align-items-center">
 				<div className="col-md-6 sm-mb-30">
-					<img className="img-fluid mx-auto d-block" alt="Mobile" src={Mobile} />
+					<img className="img-fluid mx-auto d-block" height="100%" width="479px" alt="Mobile" src={Mobile} />
 				</div>
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
@@ -33,7 +33,7 @@ const LocalPayments = ({ i18n }) => {
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								{i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img className="ArrowBtn" height="24px" width="24px" alt="Arrow" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}

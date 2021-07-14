@@ -271,7 +271,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img className="img-fluid" alt="Favourite" src={Fav} />
+                  <img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
@@ -280,6 +280,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
               <div className="GetStartedBox2 w-100">
                 <img
                   className="img-fluid"
+                  height="152px" width="152px"
                   alt="Wallet Coins"
                   src={WalletCoins}
                 />
@@ -289,7 +290,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
+                  <img className="img-fluid" height="152px" width="152px" alt="Moving Coins" src={MovingCoins} />
                   <h3>
                     {i18n.t("Multi_Currency_Savings_Account_Work3")}
                   </h3>
@@ -302,7 +303,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Multi_Currency_Savings_Account_Work_P")}</p>
                 <button onClick={appModalOpen} className="LinkBtn">
-                  {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow1} />
                 </button>
               </div>
             </div>

@@ -60,7 +60,7 @@ const Donation = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Slide Group" className="img-fluid mx-auto d-block sm-mt-30" src={storage === "brazilian" ? SlideGroupBR : SlideGroup} />
+              <img alt="Slide Group" height="100%" width="100%" className="img-fluid mx-auto d-block sm-mt-30" src={storage === "brazilian" ? SlideGroupBR : SlideGroup} />
             </div>
           </div>
         </div>
@@ -90,14 +90,14 @@ const Donation = ({ i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img className="img-fluid" alt="Favourite" src={Fav} />
+                  <img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img className="img-fluid" alt="Donate Box" src={DonateBox} />
+                <img className="img-fluid" height="152px" width="152px" alt="Donate Box" src={DonateBox} />
                 <h3>{i18n.t("Donation_Work2")}</h3>
               </div>
             </div>
@@ -105,7 +105,7 @@ const Donation = ({ i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="price wallet" src={pricewallet} />
+                  <img className="img-fluid" height="152px" width="152px"  alt="price wallet" src={pricewallet} />
                   <h3>
                     {i18n.t("Donation_Work3")}
                   </h3>
@@ -118,7 +118,7 @@ const Donation = ({ i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Donation_Work_P")}</p>
                 <button onClick={appModalOpen} className="LinkBtn">
-                  {i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img className="ArrowBtn" height="24px" width="24px" alt="arrow" src={Arrow1} />
                 </button>
               </div>
             </div>

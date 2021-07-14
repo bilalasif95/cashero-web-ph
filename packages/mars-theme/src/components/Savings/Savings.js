@@ -31,7 +31,7 @@ const Savings = ({ i18n }) => {
 								{i18n.t("High_Yield_Savings_Work_P")}
 							</p>
 							<button onClick={appModalOpen} className="LinkBtn">
-								{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -40,6 +40,7 @@ const Savings = ({ i18n }) => {
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block"
+						height="100%"width="444px"
 						alt="Bit Circle"
 						src={storage === "brazilian" ? BitCircleBR : BitCircle} />
 				</div>

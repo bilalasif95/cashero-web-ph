@@ -75,7 +75,7 @@ const ReceivePayments = ({ state, i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="KuWu" className="img-fluid mx-auto d-block" src={storage === "brazilian" ? KuWuBR : KuWu} />
+              <img alt="KuWu" width="100%" height="100%" className="img-fluid mx-auto d-block" src={storage === "brazilian" ? KuWuBR : KuWu} />
             </div>
           </div>
         </div>
@@ -107,21 +107,21 @@ const ReceivePayments = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img className="img-fluid" alt="Favourite" src={Fav} />
+                  <img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img className="img-fluid" alt="Dollar" src={Dollar} />
+                <img className="img-fluid" height="152px" width="152px" alt="Dollar" src={Dollar} />
                 <h3>{i18n.t("Add_funds_to_your_account")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Path" src={Path} />
+                  <img className="img-fluid" height="152px" width="152px" alt="Path" src={Path} />
                   <h3>{i18n.t("Send_request_and_receive_payments_in_an_instant")}</h3>
                 </div>
               </Fade>
@@ -132,7 +132,7 @@ const ReceivePayments = ({ state, i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Send_request_and_receive_payments_in_an_instant_P")}</p>
                 <button onClick={appModalOpen} className="LinkBtn">
-                  {i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img alt="arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow1} />
                 </button>
               </div>
             </div>
