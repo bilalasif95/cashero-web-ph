@@ -894,6 +894,7 @@ export const english = {
     transfer_money_abroad_panel6_3_P: "At this point, donations can only be made as one-off donations.",
     transfer_money_abroad_panel6_4: "Are my donations safe?",
     transfer_money_abroad_panel6_4_P: "Yes. Your donations are protected using multi-party computation (MPC) and hardware isolation with Intel SGX enclaves. It sounds complex and it is, on purpose. These security layers ensure your donations are safe and protected.",
+    Earning_5_APY: "Earning 5% APY",
 
     Compaign_1: "Do your savings need a lifeline?",
     Compaign_2: "Cashero is on the way!",
@@ -929,5 +930,4 @@ export const english = {
     Cashero_waitlist_P: "When Cashero becomes available in your country, we'll send you an SMS to download the app. We look forward to welcoming more users soon!",
     Cashero_waitlist_Quote: "I just joined Cashero's waitlist! Soon I'll be able to start earning up to 5% APY. Join the waitlist today: ",
     Thank_you_for_joining_Cashero_waitlist: "Thank you for joining Cashero's waitlist!",
-    Earning_5_APY: "Earning 5% APY",
 };

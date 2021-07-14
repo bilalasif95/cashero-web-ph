@@ -894,6 +894,7 @@ export const brazilian = {
     transfer_money_abroad_panel6_3_P: "As doações só podem ser feitas uma de cada vez.",
     transfer_money_abroad_panel6_4: "Minhas doações estão seguras?",
     transfer_money_abroad_panel6_4_P: "Sim. Suas doações estão protegidas por computação multipartidária (MPC) e isolamento de hardware com enclaves Intel SGX. Tudo isso parece complicado demais e é para ser assim. Essas camadas de segurança garantem que seu dinheiro fique seguro e protegido.",
+    Earning_5_APY: "Até 5% a.a. de retorno",
 
     Compaign_1: "Precisa de ajuda com suas economias?",
     Compaign_2: "A Cashero está chegando!",
@@ -929,5 +930,4 @@ export const brazilian = {
     Thank_you_for_joining_Cashero_waitlist: "Obrigado por se inscrever",
     Cashero_waitlist_P: "Assim que a Cashero estiver disponível no Brasil, enviaremos um SMS para você baixar o app. Em breve poderemos dar as boas-vindas aos novos usuários!",
     Cashero_waitlist_Quote: "Fiz minha inscrição para a lista de espera da Cashero! Em breve, poderei começar a receber rendimentos em dólar, com segurança e liquidez. Junte-se à lista de espera ainda hoje: ",
-    Earning_5_APY: "Até 5% a.a. de retorno",
 };

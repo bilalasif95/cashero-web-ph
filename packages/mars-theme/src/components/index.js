@@ -146,6 +146,7 @@ const Theme = ({ state }) => {
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <meta name="googlebot" content="noindex" />
         <link rel="canonical" href={websiteLink} />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="preload" as="font" />
         <meta property="og:title" content={state.frontity.title} />
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />
