@@ -282,7 +282,7 @@ const ExchangeRates = ({ state, i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>{i18n.t("Online_Currency")} <span className="br-block"></span> {i18n.t("Exchange")}</h1>
+                <h1 className="noBreakBannerHeading">{i18n.t("Online_Currency_Exchange")}</h1>
                 <p className="White">{i18n.t("Online_Currency_Exchange_Rates_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">

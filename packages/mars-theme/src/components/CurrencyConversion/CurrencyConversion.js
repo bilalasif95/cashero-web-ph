@@ -35,7 +35,7 @@ const CurrencyConversion = ({ i18n }) => {
 					<div className="CurrencyConversionCont">
 						<div>
 							<Fade triggerOnce direction="up">
-								<h2 className="oneAppTitle">{i18n.t("Online_Currency")}<span className="br-block"></span>{i18n.t("Exchange")}</h2>
+								<h2 className="oneAppTitle noBreakOnlineCurrencyHeading">{i18n.t("Online_Currency_Exchange")}</h2>
 								<p>{i18n.t("Online_Currency_Exchange_P")}</p>
 								<Link link="/online-currency-exchange" className="Link sm-mb-30">
 									{i18n.t("Learn_more_about_Exchange")} <img className="ArrowBtn" height="24px" width="24px" alt="Arrow" src={Arrow} />

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 body{
   font-family: 'Roboto', sans-serif;
 }
@@ -16111,6 +16112,9 @@ select:-webkit-autofill:focus {
     }
     .noBreakBannerHeading {
       width: 90%;
+    }
+    .noBreakOnlineCurrencyHeading {
+      width: 85%;
     }
     .compaignHighYield {
       width: 48%;
