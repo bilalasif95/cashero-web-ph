@@ -265,7 +265,7 @@ export const brazilian = {
     The_Cashero_Way: "O Jeito Cashero de ser : Envie dinheiro rapidamente para qualquer lugar do mundo",
     The_Cashero_Way_P: "Nem todos os heróis usam capas, alguns vão trabalhar todos os dias para cuidar de seus entes queridos. Nós sabemos disso. Estamos ao seu lado em cada etapa do caminho, garantindo que seu dinheiro chegue com segurança e rapidez.",
     Join_Cashero: "Junte-se ao Cashero",
-    Join_Cashero_P: "Pronto para fazer seu dinheiro ir mais longe? Junte-se a Cashero e tenha acesso antecipado.",
+    Join_Cashero_P: "Pronto para fazer seu dinheiro ir mais longe? Junte-se o Cashero e tenha acesso antecipado.",
     Your_Money_From: "Seu dinheiro de qualquer",
     Around_the_World_in: "parte do mundo",
     One_Account: "numa única conta.",
