@@ -45,9 +45,15 @@ const ReceivePayments = ({ state, i18n }) => {
           href="https://www.cashero.com/instant-money-transfer/"
         />
         {i18n.language === "brazilian" ?
-          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/instant-money-transfer/" />
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/instant-money-transfer/" />
+            <html lang="pt-BR" />
+          </>
           :
-          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/instant-money-transfer/" />
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/instant-money-transfer/" />
+            <html lang="en" />
+          </>
         }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/instant-money-transfer/" />
         <script className="structured-data-list" type="application/ld+json">

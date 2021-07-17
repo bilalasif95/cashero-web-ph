@@ -133,6 +133,7 @@ const PersonalCompaign = ({ i18n }) => {
   return (
     <>
       <Head>
+        <html lang="en-US" />
         <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/us/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/us/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
@@ -269,19 +270,19 @@ const PersonalCompaign = ({ i18n }) => {
             <div className="col-md -12">
               <div className="inflation">
                 <div className="inflation-cont text-center">
-                  <img className="img-fluid" height="70px" width="70px" src={inflation} />
+                  <img className="img-fluid" height="70px" width="70px" alt="inflation" src={inflation} />
                   <p>{i18n.t("PersonalPage_li1")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img className="img-fluid" height="70px" width="70px" src={depositUSD} />
+                  <img className="img-fluid" height="70px" width="70px" alt="depositUSD" src={depositUSD} />
                   <p>{i18n.t("Compaign_Img_2")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img className="img-fluid" height="70px" width="70px" src={interestpaid} />
+                  <img className="img-fluid" height="70px" width="70px" alt="interestpaid" src={interestpaid} />
                   <p>{i18n.t("PersonalPage_li2")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img className="img-fluid" height="70px" width="70px" src={depositmoneytime} />
+                  <img className="img-fluid" height="70px" width="70px" alt="depositmoneytime" src={depositmoneytime} />
                   <p>{i18n.t("PersonalPage_li3")}</p>
                 </div>
               </div>

@@ -69,19 +69,19 @@ const CurrencyAccounts = ({ state, i18n }) => {
     setflagcurrencygbp(country.name)
   };
   useEffect(() => {
-		if (i18n.language === "brazilian") {
-			setSearchResultsgbp(currencieslistBR)
-			setSearchResults2gbp([])
-			setflagcurrencygbp("Dollar Americano - USD")
-			setflaggbp("🇺🇸")
-		}
-		else {
-			setSearchResultsgbp(currencieslist)
-			setSearchResults2gbp([])
-			setflagcurrencygbp("US Dollar - USD")
-			setflaggbp("🇺🇸")
-		}
-	}, [i18n.language])
+    if (i18n.language === "brazilian") {
+      setSearchResultsgbp(currencieslistBR)
+      setSearchResults2gbp([])
+      setflagcurrencygbp("Dollar Americano - USD")
+      setflaggbp("🇺🇸")
+    }
+    else {
+      setSearchResultsgbp(currencieslist)
+      setSearchResults2gbp([])
+      setflagcurrencygbp("US Dollar - USD")
+      setflaggbp("🇺🇸")
+    }
+  }, [i18n.language])
   useEffect(() => {
     var start = 1000;
     var speed = 0;
@@ -143,9 +143,15 @@ const CurrencyAccounts = ({ state, i18n }) => {
           href="https://www.cashero.com/multi-currency-savings-account/"
         />
         {i18n.language === "brazilian" ?
-          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/multi-currency-savings-account/" />
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/multi-currency-savings-account/" />
+            <html lang="pt-BR" />
+          </>
           :
-          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/multi-currency-savings-account/" />
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/multi-currency-savings-account/" />
+            <html lang="en" />
+          </>
         }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/multi-currency-savings-account/" />
         <script className="structured-data-list" type="application/ld+json">
