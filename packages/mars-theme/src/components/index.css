@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  src: local('Roboto Regular'),local('Roboto-Regular'), url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2'),url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2');
   font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 }
 body{
   font-family: 'Roboto', sans-serif;
