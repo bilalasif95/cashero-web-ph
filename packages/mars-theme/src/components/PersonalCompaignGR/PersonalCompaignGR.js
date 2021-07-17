@@ -228,7 +228,7 @@ const PersonalCompaignGR = ({ i18n }) => {
                           </DropdownMenu>
                         </Dropdown>
                       </div>
-                      <div className="inputNum width80">
+                      <div className="inputNum">
                         <input
                           className="form-control"
                           type="number"

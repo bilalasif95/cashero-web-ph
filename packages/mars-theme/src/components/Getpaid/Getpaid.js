@@ -19,10 +19,8 @@ const GetPaid = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h3 className="oneAppTitle">
+							<h3 className="oneAppTitle noBreakGetPaidHeading">
 								{i18n.t("Get_Paid_the")}
-								<span className="br-block"></span>
-								{i18n.t("Cashero_Way_Fast")}
 							</h3>
 							<p>
 								{i18n.t("Get_Paid_P")}

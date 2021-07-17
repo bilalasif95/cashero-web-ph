@@ -338,6 +338,16 @@ const personalCompaignESHandler = {
   }
 }
 
+const personalCompaignPHENHandler = {
+  pattern: "/ph-en",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignPHEN: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -402,6 +412,7 @@ const marsTheme = {
         libraries.source.handlers.push(personalCompaignPHHandler);
         libraries.source.handlers.push(personalCompaignCOHandler);
         libraries.source.handlers.push(personalCompaignESHandler);
+        libraries.source.handlers.push(personalCompaignPHENHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

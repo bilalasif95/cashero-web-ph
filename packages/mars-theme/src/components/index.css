@@ -16120,6 +16120,9 @@ select:-webkit-autofill:focus {
     .noBreakOnlineCurrencyHeading {
       width: 85%;
     }
+    .noBreakGetPaidHeading {
+      width: 70%;
+    }
     .compaignHighYield {
       width: 48%;
     }
@@ -16261,9 +16264,6 @@ select:-webkit-autofill:focus {
   box-shadow: inherit;
   border-bottom: 1px solid #0f6df5;
   color: #495057;
-}
-.width80 {
-  width: 80%;
 }
 .compaignFormCont .selectCountry .btn {
   border-bottom: 0px !important;
