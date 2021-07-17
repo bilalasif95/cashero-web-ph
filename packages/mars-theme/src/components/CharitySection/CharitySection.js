@@ -18,6 +18,8 @@ const CharitySection = ({ i18n }) => {
 					<div className="charity">
 						<img
 							className="sm-center img-fluid"
+							height="100%"
+							width="430px"
 							alt="Charity"
 							src={storage === "brazilian" ? CharityBR : Charity}
 						/>
@@ -28,7 +30,7 @@ const CharitySection = ({ i18n }) => {
 						<Fade triggerOnce direction="up">
 							<h2 className="oneAppTitle">{i18n.t("Fee_Free_Donations")}</h2>
 							<p>{i18n.t("Fee_Free_Donations_P")}</p>
-							<Link link="/donation" className="Link">{i18n.t("Learn_more_about_Charity")}<img className="ArrowBtn" alt="arrow" src={Arrow} /></Link>
+							<Link link="/donation" className="Link">{i18n.t("Learn_more_about_Charity")}<img className="ArrowBtn" height="24px" width="24px" alt="arrow" src={Arrow} /></Link>
 						</Fade>
 					</div>
 				</div>

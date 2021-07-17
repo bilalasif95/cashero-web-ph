@@ -29,7 +29,7 @@ const Protect = ({ i18n }) => {
 						</Fade>
 						<Fade triggerOnce direction="up" delay={1000}>
 							<button onClick={appModalOpen} className="LinkBtn" >
-								{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -38,6 +38,8 @@ const Protect = ({ i18n }) => {
 				<div className="col-md-6 sm-mt-30">
 					<img
 						className="img-fluid mx-auto d-block"
+						height="100%"
+						width="277px"
 						src={Lock}
 						alt="Lock"
 					/>

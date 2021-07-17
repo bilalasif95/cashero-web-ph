@@ -24,7 +24,7 @@ const GetStarted = ({ i18n }) => {
 				<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
 					<Fade triggerOnce direction="left">
 						<div className="GetStartedBox1 w-100">
-							<img className="img-fluid" alt="Favourite" src={Fav} />
+							<img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
 							<h3>{i18n.t("Download_the_Cashero_app")}</h3>
 						</div>
 					</Fade>
@@ -33,6 +33,8 @@ const GetStarted = ({ i18n }) => {
 					<div className="GetStartedBox2 w-100">
 						<img
 							className="img-fluid"
+							height="100%"
+							width="100%"
 							alt="Vector"
 							src={Vector}
 						/>
@@ -44,7 +46,7 @@ const GetStarted = ({ i18n }) => {
 				<div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
 					<Fade triggerOnce direction="right">
 						<div className="GetStartedBox3 w-100">
-							<img className="img-fluid" alt="Done" src={storage === "brazilian" ? DoneBR : Done} />
+							<img className="img-fluid" alt="Done" height="100%" width="100%" src={storage === "brazilian" ? DoneBR : Done} />
 							<h3>
 								{i18n.t("Add_or_receive_funds_and_start_benefiting")}
 							</h3>

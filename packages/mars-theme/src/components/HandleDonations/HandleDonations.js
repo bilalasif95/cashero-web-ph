@@ -26,7 +26,7 @@ const HandleDonations = ({ i18n }) => {
 					</div>
 				</div>
 				<div className="col-md-6">
-					<img className="img-fluid mx-auto d-block sm-center" alt="heart map" src={heartmap} />
+					<img className="img-fluid mx-auto d-block sm-center" height="100%" width="458px" alt="heart map" src={heartmap} />
 				</div>
 			</div>
 		</div>

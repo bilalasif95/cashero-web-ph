@@ -28,7 +28,7 @@ const MoneyRequest = ({ i18n }) => {
 							</h2>
 							<p>{i18n.t("Money_Request_P")}</p>
 							<Link link="/instant-money-transfer" className="Link">
-								{i18n.t("Learn_more_about_Payments")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Learn_more_about_Payments")} <img className="ArrowBtn" alt="Arrow" height="24px" width="24px" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -49,6 +49,8 @@ const MoneyRequest = ({ i18n }) => {
 										>
 											<img
 												className="img-fluid mx-auto d-block"
+												height="100%"
+												width="100%"
 												src={storage === "brazilian" ? RequestBR : Request}
 												alt="Request"
 											/>
@@ -64,6 +66,8 @@ const MoneyRequest = ({ i18n }) => {
 										>
 											<img
 												className="img-fluid mx-auto d-block"
+												height="100%"
+												width="100%"
 												src={storage === "brazilian" ? SendBR : Send}
 												alt="Send"
 											/>
@@ -74,6 +78,8 @@ const MoneyRequest = ({ i18n }) => {
 						</div>
 						<img
 							className="img-fluid mx-auto money-transfer sm-mt-30"
+							height="100%"
+							width="100%"
 							src={storage === "brazilian" ? InstantMoneyTransferBR : InstantMoneyTransfer}
 							alt="Instant Money Transfer"
 						/>

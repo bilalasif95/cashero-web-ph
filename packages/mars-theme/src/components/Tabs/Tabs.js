@@ -68,7 +68,7 @@ const QuestionTabs = (props) => {
 		<div className="Questions">
 			<div className="row">
 				<div className="col-md-4">
-					<h3 className="TabsTitle">{i18n.t("FREQUENTLY_ASKED")} <span className="br-block-with-no-display"></span>{i18n.t("QUESTIONS")}</h3>
+					<h3 className="TabsTitle noBreakHeading">{i18n.t("Frequently_Asked_Questions")}</h3>
 					<AppBar position="static" className="custom-Tabs">
 						<CustomTabs>
 							<Tabs
@@ -617,13 +617,13 @@ const QuestionTabs = (props) => {
 											<h3>{i18n.t("multi_currency_Learn_P17")}</h3>
 											<div className="inner-div">
 												<ul>
-													<li>{i18n.t("multi_currency_Learn_P18")}</li>
-													<li>{i18n.t("multi_currency_Learn_P19")}</li>
-													<li>{i18n.t("multi_currency_Learn_P20")}</li>
-													<li>{i18n.t("multi_currency_Learn_P21")}</li>
-													<li>{i18n.t("multi_currency_Learn_P22")}</li>
-													<li>{i18n.t("multi_currency_Learn_P23")}</li>
-													<li>{i18n.t("multi_currency_Learn_P24")}</li>
+													<li><p>{i18n.t("multi_currency_Learn_P18")}</p></li>
+													<li><p>{i18n.t("multi_currency_Learn_P19")}</p></li>
+													<li><p>{i18n.t("multi_currency_Learn_P20")}</p></li>
+													<li><p>{i18n.t("multi_currency_Learn_P21")}</p></li>
+													<li><p>{i18n.t("multi_currency_Learn_P22")}</p></li>
+													<li><p>{i18n.t("multi_currency_Learn_P23")}</p></li>
+													<li><p>{i18n.t("multi_currency_Learn_P24")}</p></li>
 												</ul>
 											</div>
 											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P25")}</h3>
@@ -649,10 +649,10 @@ const QuestionTabs = (props) => {
 												<p>{i18n.t("multi_currency_Learn_P51")}</p>
 												<div className="inner-div">
 													<ul>
-														<li>{i18n.t("multi_currency_Learn_P52")}</li>
-														<li>{i18n.t("multi_currency_Learn_P53")}</li>
-														<li>{i18n.t("multi_currency_Learn_P54")}</li>
-														<li>{i18n.t("multi_currency_Learn_P55")}</li>
+														<li><p>{i18n.t("multi_currency_Learn_P52")}</p></li>
+														<li><p>{i18n.t("multi_currency_Learn_P53")}</p></li>
+														<li><p>{i18n.t("multi_currency_Learn_P54")}</p></li>
+														<li><p>{i18n.t("multi_currency_Learn_P55")}</p></li>
 													</ul>
 												</div>
 												<p>{i18n.t("multi_currency_Learn_P56")}</p>
@@ -836,9 +836,9 @@ const QuestionTabs = (props) => {
 											<p>{i18n.t("online_currency_exchange_learn_12")}</p>
 											<div className="inner-div">
 												<ol>
-													<li><b>{i18n.t("online_currency_exchange_learn_13_1")} – </b>{i18n.t("online_currency_exchange_learn_13_2")}</li>
-													<li><b>{i18n.t("online_currency_exchange_learn_14_1")} – </b>{i18n.t("online_currency_exchange_learn_14_2")}</li>
-													<li><b>{i18n.t("online_currency_exchange_learn_15_1")} – </b>{i18n.t("online_currency_exchange_learn_15_2")}</li>
+													<li><p><b>{i18n.t("online_currency_exchange_learn_13_1")} – </b>{i18n.t("online_currency_exchange_learn_13_2")}</p></li>
+													<li><p><b>{i18n.t("online_currency_exchange_learn_14_1")} – </b>{i18n.t("online_currency_exchange_learn_14_2")}</p></li>
+													<li><p><b>{i18n.t("online_currency_exchange_learn_15_1")} – </b>{i18n.t("online_currency_exchange_learn_15_2")}</p></li>
 												</ol>
 											</div>
 											<p><b>{i18n.t("Note")}</b>: {i18n.t("Note_1")}<a href="https://www.cashero.com/blog/is-buying-foreign-currency-a-good-investment/" target="_blank" rel="noopener noreferrer">{i18n.t("Note_1_1")}</a>{i18n.t("Note_1_2")}</p>
@@ -849,13 +849,13 @@ const QuestionTabs = (props) => {
 											<p>{i18n.t("online_currency_exchange_learn_20")}</p>
 											<div className="inner-div">
 												<ul>
-													<li>{i18n.t("online_currency_exchange_learn_20_li1")}</li>
-													<li>{i18n.t("online_currency_exchange_learn_20_li2")}</li>
-													<li>{i18n.t("online_currency_exchange_learn_20_li3")}</li>
-													<li>{i18n.t("online_currency_exchange_learn_20_li4")}</li>
-													<li>{i18n.t("online_currency_exchange_learn_20_li5")}</li>
-													<li>{i18n.t("online_currency_exchange_learn_20_li6")}</li>
-													<li>{i18n.t("online_currency_exchange_learn_20_li7")}</li>
+													<li><p>{i18n.t("online_currency_exchange_learn_20_li1")}</p></li>
+													<li><p>{i18n.t("online_currency_exchange_learn_20_li2")}</p></li>
+													<li><p>{i18n.t("online_currency_exchange_learn_20_li3")}</p></li>
+													<li><p>{i18n.t("online_currency_exchange_learn_20_li4")}</p></li>
+													<li><p>{i18n.t("online_currency_exchange_learn_20_li5")}</p></li>
+													<li><p>{i18n.t("online_currency_exchange_learn_20_li6")}</p></li>
+													<li><p>{i18n.t("online_currency_exchange_learn_20_li7")}</p></li>
 												</ul>
 											</div>
 											<p>{i18n.t("online_currency_exchange_learn_21")}</p>
@@ -866,12 +866,12 @@ const QuestionTabs = (props) => {
 											<p>{i18n.t("online_currency_exchange_learn_26")}</p>
 											<div className="inner-div">
 												<ul>
-													<li><b>{i18n.t("Spread")}</b>– {i18n.t("Spread_P")}</li>
-													<li><b>{i18n.t("Leverage")}</b>– {i18n.t("Leverage_P")}</li>
-													<li><b>{i18n.t("Lot")}</b>– {i18n.t("Lot_P")}</li>
-													<li><b>{i18n.t("Pip")}</b>– {i18n.t("Pip_P")}</li>
-													<li><b>{i18n.t("Base_currency")}</b>– {i18n.t("Base_currency_P")}</li>
-													<li><b>{i18n.t("Quote_currency")}</b>– {i18n.t("Quote_currency_P")}</li>
+													<li><p><b>{i18n.t("Spread")}</b>– {i18n.t("Spread_P")}</p></li>
+													<li><p><b>{i18n.t("Leverage")}</b>– {i18n.t("Leverage_P")}</p></li>
+													<li><p><b>{i18n.t("Lot")}</b>– {i18n.t("Lot_P")}</p></li>
+													<li><p><b>{i18n.t("Pip")}</b>– {i18n.t("Pip_P")}</p></li>
+													<li><p><b>{i18n.t("Base_currency")}</b>– {i18n.t("Base_currency_P")}</p></li>
+													<li><p><b>{i18n.t("Quote_currency")}</b>– {i18n.t("Quote_currency_P")}</p></li>
 												</ul>
 											</div>
 											<p>{i18n.t("online_currency_exchange_learn_27")}</p>
@@ -1272,8 +1272,8 @@ const QuestionTabs = (props) => {
 												<p>{i18n.t("transfer_money_abroad_P19")}</p>
 												<div className="inner-div">
 													<ol>
-														<li><b>{i18n.t("Fees")} –</b> {i18n.t("Fees_P")}</li>
-														<li><b>{i18n.t("Exchange_rates")} – </b> {i18n.t("Exchange_rates_P")}</li>
+														<li><p><b>{i18n.t("Fees_Heading")} –</b> {i18n.t("Fees_P")}</p></li>
+														<li><p><b>{i18n.t("Exchange_rates")} – </b> {i18n.t("Exchange_rates_P")}</p></li>
 													</ol>
 												</div>
 												<p>{i18n.t("transfer_money_abroad_P20")}</p>

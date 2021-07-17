@@ -25,7 +25,7 @@ const EasyCurrencyExchange = ({ i18n }) => {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h2 className="oneAppTitle">
-								{i18n.t("Your_One_Tap_Hub_for")} <span className="br-block-with-no-display"></span> {i18n.t("Easy_Currency_Exchange")}
+								{i18n.t("Your_One_Tap_Hub_for")}
 							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
@@ -33,7 +33,7 @@ const EasyCurrencyExchange = ({ i18n }) => {
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -42,6 +42,8 @@ const EasyCurrencyExchange = ({ i18n }) => {
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block sm-mt-30"
+						height="100%"
+						width="372px"
 						alt="exchange"
 						src={storage === "brazilian" ? ExchangeBR : Exchange}
 					/>
