@@ -2,7 +2,7 @@ export const enfilipino = {
     Compaign_1: "Do your savings need a lifeline?",
     Compaign_2: "Cashero is on the way!",
     High_Yield_Savings_Account: "High Yield Savings Account",
-    Compaign_Img_1: "Get up to 5% APY saving",
+    // Compaign_Img_1: "Get up to 5% APY saving",
     Compaign_Img_2_1: "Deposit in Peso, Earn in Dollar",
     Compaign_Img_3: "Exchange currencies, send money abroad & make instant payments",
     Compaign_Img_4: "No hidden fees, no minimum balance, no stress :)",

@@ -31,8 +31,8 @@ const SingleAccount = ({ i18n }) => {
 					<div className="col-md-6">
 						<div className="oneAppCont sm-mt-0">
 							<Fade triggerOnce direction="up">
-								<h3 className="HighInterestTitle">
-									{i18n.t("Your_Money_From")} <span className="br-block-with-no-display"></span>  {i18n.t("Around_the_World_in")} <span className="br-block-with-no-display"></span> {i18n.t("One_Account")}
+								<h3 className="HighInterestTitle noBreakGetPaidHeading">
+									{i18n.t("Your_Money_From")}
 								</h3>
 								<p>{i18n.t("Your_Money_From_P1")} </p>
 								<p>{i18n.t("Your_Money_From_P2")} </p>

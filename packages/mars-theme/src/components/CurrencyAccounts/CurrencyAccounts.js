@@ -169,7 +169,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
           <div className="row align-items-center">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>{i18n.t("Multi_Currency")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
+                <h1 className="noBreakGetPaidHeading">{i18n.t("Multi_Currency_Savings_Account")}</h1>
                 <p className="bannerPara">{i18n.t("Multi_Currency_Savings_Account_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
