@@ -3929,19 +3929,6 @@ button:focus {
     border-bottom: 1px dashed #9ea0a5 !important; }
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
-
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 @media (max-width: 540px) {
   .YearsSec {
     padding: 30px 0px !important; }
@@ -4642,19 +4629,6 @@ button:focus {
     border-bottom: 1px dashed #9ea0a5 !important; }
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
-
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 .charityImg {
   z-index: 1;
   position: relative;
@@ -4713,9 +4687,6 @@ button:focus {
     margin-bottom: -7px; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li:not(:last-child) {
       margin-bottom: 50px;
       height: 45px; } }
@@ -5094,18 +5065,6 @@ button:focus {
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
 
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
       font-size: 36px !important;
@@ -5125,9 +5084,6 @@ button:focus {
     text-align: left !important; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li:not(:last-child) {
       margin-bottom: 50px;
       height: 45px; } }
@@ -5317,18 +5273,6 @@ button:focus {
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
 
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 .PersonalCompanyList4 {
   display: flex;
   justify-content: space-between;
@@ -5355,9 +5299,6 @@ button:focus {
       font-size: 17px; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li:not(:last-child) {
       margin-bottom: 50px;
       height: 45px; } }
@@ -5449,18 +5390,6 @@ button:focus {
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
 
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
       font-size: 36px !important;
@@ -5478,9 +5407,6 @@ button:focus {
       font-size: 17px; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li:not(:last-child) {
       margin-bottom: 50px;
       height: 45px; } }
@@ -5548,18 +5474,6 @@ button:focus {
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
 
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
       font-size: 36px !important;
@@ -5577,9 +5491,6 @@ button:focus {
       font-size: 17px; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li {
       width: 100% !important; }
     .PersonalCompanyList li:not(:last-child) {
