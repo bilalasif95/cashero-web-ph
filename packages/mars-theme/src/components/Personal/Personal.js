@@ -82,9 +82,15 @@ const Personal = ({ state, i18n }) => {
           href="https://www.cashero.com/high-yield-savings-account/"
         />
         {i18n.language === "brazilian" ?
-          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/high-yield-savings-account/" />
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/high-yield-savings-account/" />
+            <html lang="pt-BR" />
+          </>
           :
-          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/high-yield-savings-account/" />
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/high-yield-savings-account/" />
+            <html lang="en" />
+          </>
         }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/high-yield-savings-account/" />
         <script className="structured-data-list" type="application/ld+json">
@@ -121,6 +127,7 @@ const Personal = ({ state, i18n }) => {
                           <p className="customText">{i18n.t("Deposit")}</p>
                           <TextField
                             fullWidth
+                            label=""
                             value={value}
                             onChange={(e) => onChange(e)}
                             type="number"
@@ -233,7 +240,7 @@ const Personal = ({ state, i18n }) => {
                 <img
                   className="img-fluid"
                   src={WalletCoins}
-                  height="152px" width="152px" 
+                  height="152px" width="152px"
                   alt="Wallet Coins"
                 />
                 <h3>{i18n.t("Add_funds_into_your_Account")}</h3>

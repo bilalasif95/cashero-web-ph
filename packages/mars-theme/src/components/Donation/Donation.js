@@ -39,9 +39,15 @@ const Donation = ({ i18n }) => {
       <Head>
         <link rel="canonical" href="https://www.cashero.com/donation/" />
         {i18n.language === "brazilian" ?
-          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/donation/" />
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/donation/" />
+            <html lang="pt-BR" />
+          </>
           :
-          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/donation/" />
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/donation/" />
+            <html lang="en" />
+          </>
         }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/donation/" />
       </Head>
@@ -105,7 +111,7 @@ const Donation = ({ i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" height="152px" width="152px"  alt="price wallet" src={pricewallet} />
+                  <img className="img-fluid" height="152px" width="152px" alt="price wallet" src={pricewallet} />
                   <h3>
                     {i18n.t("Donation_Work3")}
                   </h3>

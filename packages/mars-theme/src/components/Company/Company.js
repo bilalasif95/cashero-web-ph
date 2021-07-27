@@ -19,9 +19,15 @@ const Company = ({ i18n }) => {
       <Head>
         <link rel="canonical" href="https://www.cashero.com/company/" />
         {i18n.language === "brazilian" ?
-          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/company/" />
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/company/" />
+            <html lang="pt-BR" />
+          </>
           :
-          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/company/" />
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/company/" />
+            <html lang="en" />
+          </>
         }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/company/" />
       </Head>

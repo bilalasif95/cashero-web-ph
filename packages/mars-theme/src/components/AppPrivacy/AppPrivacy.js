@@ -11,9 +11,15 @@ const AppPrivacy = ({ i18n }) => {
           href="https://www.cashero.com/app-privacy-policy/"
         />
         {i18n.language === "brazilian" ?
-          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/app-privacy-policy/" />
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/app-privacy-policy/" />
+            <html lang="pt-BR" />
+          </>
           :
-          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/app-privacy-policy/" />
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/app-privacy-policy/" />
+            <html lang="en" />
+          </>
         }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/app-privacy-policy/" />
       </Head>

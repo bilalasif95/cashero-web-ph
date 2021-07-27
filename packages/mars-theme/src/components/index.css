@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  src: local('Roboto Regular'),local('Roboto-Regular'), url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2');
   font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 }
 body{
   font-family: 'Roboto', sans-serif;
@@ -15334,7 +15335,7 @@ button:focus {
 }
 
 /* Icons */
-@font-face
+/* @font-face
 {
     font-family: 'slick';
     font-weight: normal;
@@ -15343,7 +15344,7 @@ button:focus {
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
     font-display: swap;
-  }
+  } */
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -16115,7 +16116,7 @@ select:-webkit-autofill:focus {
       width: 60%;
     }
     .noBreakBannerHeading {
-      width: 90%;
+      width: 91%;
     }
     .noBreakOnlineCurrencyHeading {
       width: 85%;

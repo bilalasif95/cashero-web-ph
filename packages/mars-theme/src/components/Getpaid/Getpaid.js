@@ -33,7 +33,7 @@ const GetPaid = ({ i18n }) => {
 					</div>
 				</div>
 				<div className="col-md-6">
-					<img className="img-fluid sm-mb-30" height="100%" width="486px" src={Paid} />
+					<img className="img-fluid sm-mb-30" height="100%" width="486px" alt="Paid" src={Paid} />
 				</div>
 			</div>
 		</div>
