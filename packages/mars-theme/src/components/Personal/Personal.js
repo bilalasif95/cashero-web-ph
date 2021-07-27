@@ -127,7 +127,6 @@ const Personal = ({ state, i18n }) => {
                           <p className="customText">{i18n.t("Deposit")}</p>
                           <TextField
                             fullWidth
-                            label=""
                             value={value}
                             onChange={(e) => onChange(e)}
                             type="number"
