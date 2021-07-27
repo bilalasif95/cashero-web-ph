@@ -29,7 +29,7 @@ const Securepayments = ({ i18n }) => {
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -38,6 +38,8 @@ const Securepayments = ({ i18n }) => {
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block sm-mt-30"
+						height="100%"
+						width="379px"
 						alt="Globe"
 						src={Globe}
 					/>

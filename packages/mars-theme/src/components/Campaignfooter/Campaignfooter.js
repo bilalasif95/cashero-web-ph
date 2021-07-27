@@ -13,7 +13,7 @@ const CampaignFooter = ({ state, i18n }) => {
 					<div className="col-md-12">
 						<div className="footerCont text-center">
 							<Link link={data.link}>
-								<img src={Logo} alt="logo" />
+								<img src={Logo} height="36px" width="191px" alt="logo" />
 							</Link>
 							<p className="CampaignFooter">{i18n.t("Footnote_P")}</p>
 							<p>{i18n.t("Footnote")}</p>

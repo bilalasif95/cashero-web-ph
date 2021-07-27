@@ -44,7 +44,7 @@ const CompaignThanksModal = (props) => {
                                         <li>{i18n.t("Click_AND_Share")}</li>
                                         <li><FacebookShareButton quote={`${i18n.t("Cashero_waitlist_Quote")}${`${websiteLink}/${lang}/`}`} url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>
                                         <li><TwitterShareButton title={i18n.t("Cashero_waitlist_Quote")} url={`${`${websiteLink}/${lang}/`}`}><img alt="Twitter" src={Twitter} /> </TwitterShareButton></li>
-                                        <li><EmailShareButton separator=" " subject="Join Cashero" body={i18n.t("Cashero_waitlist_Quote")} url={`${`${websiteLink}/${lang}/`}`}><img alt="gmail" src={Gmail} /> </EmailShareButton></li>
+                                        <li><EmailShareButton separator=" " subject="Join the Waitlist" body={i18n.t("Cashero_waitlist_Quote")} url={`${`${websiteLink}/${lang}/`}`}><img alt="gmail" src={Gmail} /> </EmailShareButton></li>
                                     </ul>
                                 </div>
                             </div>

@@ -16,6 +16,7 @@ import { bahasa } from "./languages/bahasa";
 import { filipino } from "./languages/filipino";
 import { malay } from "./languages/malay";
 import { spspanish } from "./languages/spspanish";
+import { enfilipino } from "./languages/enfilipino";
 
 i18n.use(XHR).use(LanguageDetector).init({
     // we init with resources
@@ -65,7 +66,9 @@ i18n.use(XHR).use(LanguageDetector).init({
         spspanish: {
             translations: spspanish
         },
-
+        enfilipino: {
+            translations: enfilipino
+        }
     },
     // lng:"eng",
     fallbackLng: "english",

@@ -82,9 +82,15 @@ const Personal = ({ state, i18n }) => {
           href="https://www.cashero.com/high-yield-savings-account/"
         />
         {i18n.language === "brazilian" ?
-          <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/high-yield-savings-account/" />
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/high-yield-savings-account/" />
+            <html lang="pt-BR" />
+          </>
           :
-          <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/high-yield-savings-account/" />
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/high-yield-savings-account/" />
+            <html lang="en" />
+          </>
         }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/high-yield-savings-account/" />
         <script className="structured-data-list" type="application/ld+json">
@@ -102,13 +108,13 @@ const Personal = ({ state, i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>{i18n.t("High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
+                <h1 className="noBreakHeading">{i18n.t("High_Yield_Savings_Account")}</h1>
                 <p className="bannerPara">{i18n.t("Personal_Main_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
                   <li><img src={Clock} alt="Clock" />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">
@@ -130,7 +136,7 @@ const Personal = ({ state, i18n }) => {
                         </div>
                       </div>
                       <div className="col-2">
-                        <img className="interest-arrow" src={Arrow} alt="Arrow" />
+                        <img className="interest-arrow" height="24px" width="24px" src={Arrow} alt="Arrow" />
                       </div>
                       <div className="col-6">
                         <div className="InterestBox mt-0 TotalText interest-box-cont">
@@ -223,7 +229,7 @@ const Personal = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img alt="Favourite" className="img-fluid" src={Fav} />
+                  <img alt="Favourite" height="100%" width="100%" className="img-fluid" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
@@ -233,6 +239,7 @@ const Personal = ({ state, i18n }) => {
                 <img
                   className="img-fluid"
                   src={WalletCoins}
+                  height="152px" width="152px"
                   alt="Wallet Coins"
                 />
                 <h3>{i18n.t("Add_funds_into_your_Account")}</h3>
@@ -241,7 +248,7 @@ const Personal = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Arrow Up" src={ArrowUp} />
+                  <img className="img-fluid" height="152px" width="152px" alt="Arrow Up" src={ArrowUp} />
                   <h3>
                     {i18n.t("Earn_up_to_5_APY")}
                   </h3>
@@ -254,7 +261,7 @@ const Personal = ({ state, i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Personal_LastP")}</p>
                 <button onClick={appModalOpen} className="LinkBtn" >
-                  {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow1} />
                 </button>
               </div>
             </div>

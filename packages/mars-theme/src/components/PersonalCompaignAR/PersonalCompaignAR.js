@@ -133,6 +133,7 @@ const PersonalCompaignAR = ({ i18n }) => {
   return (
     <>
       <Head>
+        <html lang="es-AR" />
         <link rel="alternate" hreflang="es-AR" href="https://www.cashero.com/ar/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ar/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
@@ -228,7 +229,7 @@ const PersonalCompaignAR = ({ i18n }) => {
                           </DropdownMenu>
                         </Dropdown>
                       </div>
-                      <div className="inputNum width80">
+                      <div className="inputNum">
                         <input
                           className="form-control"
                           type="number"
@@ -270,19 +271,19 @@ const PersonalCompaignAR = ({ i18n }) => {
             <div className="col-md -12">
               <div className="inflation">
                 <div className="inflation-cont text-center">
-                  <img src={inflation} />
+                  <img className="img-fluid" height="70px" width="70px" alt="inflation" src={inflation} />
                   <p>{i18n.t("PersonalPage_li1")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={depositUSD} />
+                  <img className="img-fluid" height="70px" width="70px" alt="depositUSD" src={depositUSD} />
                   <p>{i18n.t("Compaign_Img_2_1")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={interestpaid} />
+                  <img className="img-fluid" height="70px" width="70px" alt="interestpaid" src={interestpaid} />
                   <p>{i18n.t("PersonalPage_li2")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={depositmoneytime} />
+                  <img className="img-fluid" height="70px" width="70px" alt="depositmoneytime" src={depositmoneytime} />
                   <p>{i18n.t("PersonalPage_li3")}</p>
                 </div>
               </div>

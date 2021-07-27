@@ -1,6 +1,6 @@
 const currencies = [
     {
-        name: "Libra Esrtrelina - GBP",
+        name: "Libra Esterlina - GBP",
         flag: "🇬🇧",
         code: "GB",
         currencyCode: "GBP",

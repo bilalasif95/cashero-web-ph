@@ -17,7 +17,7 @@ const BetterPlace = ({ i18n }) => {
 			<div className="MoneyRequest">
 				<div className="row">
 					<div className="col-md-6">
-						<img className="img-fluid mx-auto d-block" alt="Place" src={Place} />
+						<img className="img-fluid mx-auto d-block" height="100%" width="422px" alt="Place" src={Place} />
 					</div>
 					<div className="col-md-6">
 						<div className="MoneyRequestCont">
@@ -25,7 +25,7 @@ const BetterPlace = ({ i18n }) => {
 							<p>{i18n.t("Better_Place_P1")}</p>
 							<p>{i18n.t("Better_Place_P2")}</p>
 							<p>{i18n.t("Better_Place_P3")}</p>
-							<button onClick={appModalOpen} className="LinkBtn"> {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<button onClick={appModalOpen} className="LinkBtn"> {i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow} /> </button>
 						</div>
 					</div>
 				</div>

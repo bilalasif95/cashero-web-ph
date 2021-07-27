@@ -18,7 +18,7 @@ const NoEffort = ({ i18n }) => {
 			<div className="container">
 				<div className="row flex-column-reverse flex-sm-row">
 					<div className="col-md-6">
-						<img className="img-fluid mx-auto d-block" alt="coins Up" src={CoinsUp} />
+						<img className="img-fluid mx-auto d-block" height="100%" width="328px" alt="coins Up" src={CoinsUp} />
 					</div>
 					<div className="col-md-6">
 						<div className="oneAppCont">
@@ -29,7 +29,7 @@ const NoEffort = ({ i18n }) => {
 								<p className="HighInterestText">{i18n.t("No_Effort_P1")}</p>
 								<p className="HighInterestText">{i18n.t("No_Effort_P2")}</p>
 								<p className="HighInterestText">{i18n.t("No_Effort_P3")}</p>
-								<button onClick={appModalOpen} className="LinkBtn" >{i18n.t("Get_Early_Access")}<img alt="arrow" className="ArrowBtn" src={Arrow} /> </button>
+								<button onClick={appModalOpen} className="LinkBtn" >{i18n.t("Get_Early_Access")}<img alt="arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow} /> </button>
 							</Fade>
 						</div>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}

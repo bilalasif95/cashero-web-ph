@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  src: local('Roboto Regular'),local('Roboto-Regular'), url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2');
+  font-display: swap;
+}
 body{
   font-family: 'Roboto', sans-serif;
 }
@@ -282,7 +287,8 @@ body{
   background-color: #cde0fb !important; }
 
 .bannerImg {
-  padding: 0 3rem; }
+  padding: 0 3rem;
+}
 
 @media (max-width: 1150px) {
   .numberSelection .selectCountry {
@@ -3097,10 +3103,13 @@ b {
         box-shadow: inherit; }
 
 @media (max-width: 540px) {
+  .PesonalCompaignBanner {
+    padding: 30px 0px !important;
+  }
   .SignInEmail {
     display: none; }
   .SignUp {
-    padding: 20px 20px 20px 20px; }
+    padding: 30px 0px !important; }
     .SignUp .numberSelection {
       display: none; }
   .SignUpTitle {
@@ -15326,7 +15335,7 @@ button:focus {
 }
 
 /* Icons */
-@font-face
+/* @font-face
 {
     font-family: 'slick';
     font-weight: normal;
@@ -15334,7 +15343,8 @@ button:focus {
 
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-}
+    font-display: swap;
+  } */
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -16099,8 +16109,26 @@ select:-webkit-autofill:focus {
     .compaignHeading {
       padding-right: 170px;
     }
+    .noBreakHeading {
+      width: 65%;
+    }
+    .noBreakHomeHeading {
+      width: 60%;
+    }
+    .noBreakBannerHeading {
+      width: 91%;
+    }
+    .noBreakOnlineCurrencyHeading {
+      width: 85%;
+    }
+    .noBreakGetPaidHeading {
+      width: 70%;
+    }
     .compaignHighYield {
       width: 48%;
+    }
+    .footerBreakText {
+      width: 38%;
     }
   }
   @media (max-width: 540px) {
@@ -16214,7 +16242,7 @@ select:-webkit-autofill:focus {
             color: #ee7120 !important;}
           .Waitlistbtn {
             width: 100%;
-            max-width: 250px;
+            max-width: 270px;
             margin: 0px auto;
             margin-top: 40px;}
             .campaignFaq {
@@ -16237,9 +16265,6 @@ select:-webkit-autofill:focus {
   box-shadow: inherit;
   border-bottom: 1px solid #0f6df5;
   color: #495057;
-}
-.width80 {
-  width: 80%;
 }
 .compaignFormCont .selectCountry .btn {
   border-bottom: 0px !important;

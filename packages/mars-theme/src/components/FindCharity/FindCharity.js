@@ -25,11 +25,11 @@ const FindCharity = ({ i18n }) => {
 						<div className="oneAppCont sm-mt-0 sm-mb-0">
 							<h2 className="oneAppTitle sm-mt-30">{i18n.t("Choose_from_Our_List")} <span className="br-block-with-no-display"></span> {i18n.t("of_Charities")} </h2>
 							<p>{i18n.t("Find_Charity_P")}</p>
-							<button onClick={appModalOpen} className="LinkBtn" >{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} /> </button>
+							<button onClick={appModalOpen} className="LinkBtn" >{i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow} /> </button>
 						</div>
 					</div>
 					<div className="col-md-6">
-						<img alt="Donations" className="img-fluid sm-center mx-auto d-block" src={storage === "brazilian" ? DonationsBR : Donations} />
+						<img alt="Donations" height="100%" width="100%" className="img-fluid sm-center mx-auto d-block" src={storage === "brazilian" ? DonationsBR : Donations} />
 					</div>
 				</div>
 			</div>
