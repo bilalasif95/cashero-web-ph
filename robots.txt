@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: https://wp.cashero.com/
 
 Disallow: /
