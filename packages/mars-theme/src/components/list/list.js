@@ -196,7 +196,7 @@ const List = ({ i18n, state }) => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onPersonalToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    id="navbarDropdown"
+                    id="PersonalDropdown"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -206,7 +206,7 @@ const List = ({ i18n, state }) => {
                   </a>
                   <div
                     className={personalToggleBotton ? "dropdown-menu toggleButtonShow" : "dropdown-menu"}
-                    aria-labelledby="navbarDropdown"
+                    aria-labelledby="PersonalDropdown"
                   >
                     <div className="row">
                       <div className="col-md-6">
@@ -266,7 +266,7 @@ const List = ({ i18n, state }) => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onBusinessToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    id="navbarDropdown"
+                    id="BusinessDropdown"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -276,7 +276,7 @@ const List = ({ i18n, state }) => {
                   </a>
                   <div
                     className={businessToggleBotton ? "dropdown-menu toggleButtonShow BusinessDropdown" : "dropdown-menu BusinessDropdown"}
-                    aria-labelledby="navbarDropdown"
+                    aria-labelledby="BusinessDropdown"
                   >
                     <div className="row">
                       <div className="col-md-6">
@@ -336,7 +336,7 @@ const List = ({ i18n, state }) => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onDonationsToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    id="navbarDropdown"
+                    id="DonationsDropdown"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -346,7 +346,7 @@ const List = ({ i18n, state }) => {
                   </a>
                   <div
                     className={donationsToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
-                    aria-labelledby="navbarDropdown"
+                    aria-labelledby="DonationsDropdown"
                   >
                     <div className="row">
                       <div className="col-md-12">
@@ -388,7 +388,7 @@ const List = ({ i18n, state }) => {
                 <li className="nav-item dropdown languageDropdown" onClick={innerWidth < 992 ? onLanguageToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    id="navbarDropdown"
+                    id="LanguageDropdown"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -398,7 +398,7 @@ const List = ({ i18n, state }) => {
                   </a>
                   <div
                     className={languageToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
-                    aria-labelledby="navbarDropdown"
+                    aria-labelledby="LanguageDropdown"
                   >
                     <div className="row">
                       <div className="col-md-12">
