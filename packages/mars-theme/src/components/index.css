@@ -401,13 +401,13 @@ h4 {
   cursor: not-allowed;
   background-color: white !important;
 }
-.customNav .navbar-nav li:first-of-type a, .customNav .navbar-nav li:nth-of-type(3) a{
+.customNav .navbar-nav>li:first-of-type a, .customNav .navbar-nav>li:nth-of-type(3) a{
   cursor: not-allowed;
 }
-.customNav .navbar-nav li:first-of-type a:hover, .customNav .navbar-nav li:nth-of-type(3) a:hover{
+.customNav .navbar-nav>li:first-of-type a:hover, .customNav .navbar-nav>li:nth-of-type(3) a:hover{
   color: #9ea0a5 !important;
 }
-.customNav .navbar-nav li:first-of-type a:after, .customNav .navbar-nav li:nth-of-type(3) a:after{
+.customNav .navbar-nav>li:first-of-type a:after, .customNav .navbar-nav>li:nth-of-type(3) a:after{
   display: none !important;
 }
 .GetAppBtn {
