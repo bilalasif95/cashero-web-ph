@@ -767,7 +767,7 @@ h4 {
   .customNav .navbar-nav .nav-item:hover .dropdown-menu {
     display: block; }
   .customNav .dropdown-menu {
-    width: 725px;
+    width: 650px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     background-color: #ffffff;
@@ -8908,7 +8908,7 @@ button:focus {
       .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: -140px;
       z-index: 1000;
       display: none;
       float: left;
