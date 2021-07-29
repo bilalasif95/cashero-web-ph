@@ -193,7 +193,7 @@ const List = ({ i18n, state }) => {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item dropdown" onClick={innerWidth < 992 ? onPersonalToggleButtonClicked : null}>
+                <li className="nav-item dropdown disabled" onClick={innerWidth < 992 ? onPersonalToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
                     id="PersonalDropdown"
@@ -204,7 +204,7 @@ const List = ({ i18n, state }) => {
                   >
                     {i18n.t("Personal")}
                   </a>
-                  <div
+                  {/* <div
                     className={personalToggleBotton ? "dropdown-menu toggleButtonShow" : "dropdown-menu"}
                     aria-labelledby="PersonalDropdown"
                   >
@@ -261,7 +261,7 @@ const List = ({ i18n, state }) => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </li>
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onBusinessToggleButtonClicked : null}>
                   <a
@@ -333,7 +333,7 @@ const List = ({ i18n, state }) => {
                     </div>
                   </div>
                 </li>
-                <li className="nav-item dropdown" onClick={innerWidth < 992 ? onDonationsToggleButtonClicked : null}>
+                <li className="nav-item dropdown disabled" onClick={innerWidth < 992 ? onDonationsToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
                     id="DonationsDropdown"
@@ -344,7 +344,7 @@ const List = ({ i18n, state }) => {
                   >
                     {i18n.t("Donations")}
                   </a>
-                  <div
+                  {/* <div
                     className={donationsToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
                     aria-labelledby="DonationsDropdown"
                   >
@@ -373,7 +373,7 @@ const List = ({ i18n, state }) => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </li>
                 <li className="nav-item" onClick={() => setToggleBotton(false)}>
                   <Link link="/company" className="nav-link">
