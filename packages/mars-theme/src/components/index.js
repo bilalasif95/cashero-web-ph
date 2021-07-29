@@ -153,6 +153,24 @@ const Theme = ({ state }) => {
         <link rel="preload" as="font" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://ipwhois.app" crossorigin />
+        <link rel="dns-prefetch" href="https://ipwhois.app" />
+        <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+        <link rel="dns-prefetch" href="https://www.gstatic.com" />
+        <link rel="preconnect" href="https://firestore.googleapis.com" crossorigin />
+        <link rel="dns-prefetch" href="https://firestore.googleapis.com" />
+        <link rel="preconnect" href="https://stats.g.doubleclick.net" crossorigin />
+        <link rel="dns-prefetch" href="https://stats.g.doubleclick.net" />
+        <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://www.google.com.pk" crossorigin />
+        <link rel="dns-prefetch" href="https://www.google.com.pk" />
+        <link rel="preconnect" href="https://www.facebook.com" crossorigin />
+        <link rel="dns-prefetch" href="https://www.facebook.com" />
+        <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossorigin />
+        <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
+        <link rel="preconnect" href="https://cdn.loom.com" crossorigin />
+        <link rel="dns-prefetch" href="https://cdn.loom.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
         <meta property="og:title" content={state.frontity.title} />
         <meta property="og:description" content={state.frontity.description} />
