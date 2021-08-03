@@ -33,25 +33,25 @@ const contactusHandler = {
   }
 }
 
-// const donationHandler = {
-//   pattern: "/donation",
-//   func: ({ route, state }) => {
-//     Object.assign(state.source.data[route], {
-//       type: "page",
-//       isDonation: true,
-//     })
-//   }
-// }
+const donationHandler = {
+  pattern: "/donation",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isDonation: true,
+    })
+  }
+}
 
-// const listedcharityHandler = {
-//   pattern: "/become-listed-charity",
-//   func: ({ route, state }) => {
-//     Object.assign(state.source.data[route], {
-//       type: "page",
-//       isListedCharity: true,
-//     })
-//   }
-// }
+const listedcharityHandler = {
+  pattern: "/become-listed-charity",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isListedCharity: true,
+    })
+  }
+}
 
 const currencyaccountsHandler = {
   pattern: "/multi-currency-savings-account",
@@ -384,8 +384,8 @@ const marsTheme = {
         libraries.source.handlers.push(personalCompaignHandler);
         libraries.source.handlers.push(companyHandler);
         libraries.source.handlers.push(contactusHandler);
-        // libraries.source.handlers.push(donationHandler);
-        // libraries.source.handlers.push(listedcharityHandler);
+        libraries.source.handlers.push(donationHandler);
+        libraries.source.handlers.push(listedcharityHandler);
         libraries.source.handlers.push(currencyaccountsHandler);
         libraries.source.handlers.push(remittanceHandler);
         libraries.source.handlers.push(exchangeratesHandler);
