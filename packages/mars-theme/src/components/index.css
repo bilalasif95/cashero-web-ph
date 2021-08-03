@@ -397,19 +397,9 @@ h4 {
       box-shadow: inherit !important;
     }
 
-/* .disabled {
-  cursor: not-allowed;
-  background-color: white !important;
-}
-.customNav .navbar-nav>li:first-of-type a, .customNav .navbar-nav>li:nth-of-type(3) a{
-  cursor: not-allowed;
-}
-.customNav .navbar-nav>li:first-of-type a:hover, .customNav .navbar-nav>li:nth-of-type(3) a:hover{
-  color: #9ea0a5 !important;
-}
-.customNav .navbar-nav>li:first-of-type a:after, .customNav .navbar-nav>li:nth-of-type(3) a:after{
-  display: none !important;
-} */
+.disabled {
+  cursor: not-allowed; }
+
 .GetAppBtn {
   text-transform: inherit; }
 
@@ -767,7 +757,7 @@ h4 {
   .customNav .navbar-nav .nav-item:hover .dropdown-menu {
     display: block; }
   .customNav .dropdown-menu {
-    width: 650px;
+    width: 725px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     background-color: #ffffff;
@@ -8908,7 +8898,7 @@ button:focus {
       .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: -140px;
+      left: 0px;
       z-index: 1000;
       display: none;
       float: left;
