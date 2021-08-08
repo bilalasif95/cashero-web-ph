@@ -180,7 +180,7 @@ export const english = {
     Giveaway_h3_6_P_1: "You will be able to withdraw your funds (and the interest you’ve accrued) once Cashero is live. At that point you must go through KYC, our Know Your Customer identity verification just to make sure you are who you say you are. Prize money can only be withdrawn and cannot be sent to other users as a payment.",
     Giveaway_h3_6: "CAN I WITHDRAW MY PRIZE MONEY?",
     Giveaway_h3_7: "WHEN DOES THE GIVEAWAY END?",
-    Giveaway_h3_7_P: "The Golden Ticket Early Access campaign is a prize draw that takes place every 3 days starting in May 2021. The first prize draw will be held on May 3rd and the draw will continue until Cashero launches in September 2021.",
+    Giveaway_h3_7_P: "The Golden Ticket Early Access campaign is a prize draw that takes place every 3 days starting in May 2021. The first prize draw will be held on May 3rd and the draw will continue until Cashero launches in Fall 2021.",
     Giveaway_h3_8: "WHAT ELSE SHOULD I KNOW?",
     Giveaway_h3_8_P: "We’re all about transparency so let’s make sure we’re all on the same page.",
     Giveaway_li1: "We may, at our sole discretion, suspend, terminate or change the terms and requirements of the Cashero Golden Ticket Giveaway.",
