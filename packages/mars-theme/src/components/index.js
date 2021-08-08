@@ -150,7 +150,7 @@ const Theme = ({ state }) => {
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <meta name="googlebot" content="noindex" />
         <link rel="canonical" href={websiteLink} />
-        <link rel="preload" as="font" />
+        <link rel="preload" as="font" font-display="optional" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://ipwhois.app" crossorigin />
