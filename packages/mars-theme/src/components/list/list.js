@@ -113,7 +113,7 @@ const List = ({ i18n, state }) => {
     callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
-          if (res.country_code === "BR" || qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
+          if (res.country_code === "BR" || qs.lang === "pt_BR" || localStorage.getItem("lang") === "brazilian") {
             setLanguage("brazilian")
             localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
@@ -125,7 +125,7 @@ const List = ({ i18n, state }) => {
           }
         }
         else {
-          if (qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
+          if (qs.lang === "pt_BR" || localStorage.getItem("lang") === "brazilian") {
             setLanguage("brazilian")
             localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
@@ -137,7 +137,7 @@ const List = ({ i18n, state }) => {
           }
         }
       }).catch(() => {
-        if (qs.lang === "pt_br" || localStorage.getItem("lang") === "brazilian") {
+        if (qs.lang === "pt_BR" || localStorage.getItem("lang") === "brazilian") {
           setLanguage("brazilian")
           localStorage.setItem("lang", "brazilian")
           i18n.changeLanguage("brazilian")
