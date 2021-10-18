@@ -348,6 +348,16 @@ const personalCompaignPHENHandler = {
   }
 }
 
+const countriesHandler = {
+  pattern: "/countries",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isCountries: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -413,6 +423,7 @@ const marsTheme = {
         libraries.source.handlers.push(personalCompaignCOHandler);
         libraries.source.handlers.push(personalCompaignESHandler);
         libraries.source.handlers.push(personalCompaignPHENHandler);
+        libraries.source.handlers.push(countriesHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

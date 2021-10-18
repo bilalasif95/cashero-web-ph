@@ -46,6 +46,7 @@ import AppTerms from "./AppTerms/AppTerms";
 import AppPrivacy from "./AppPrivacy/AppPrivacy";
 import Sitemap from "./Sitemap/Sitemap";
 import Thankyou from "./Thankyou/Thankyou";
+import Countries from "./Countries/Countries";
 import { websiteLink } from "../config/config";
 import { I18nextProvider } from "react-i18next";
 import i18n from '../config/i18n';
@@ -151,7 +152,7 @@ const Theme = ({ state }) => {
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <meta name="googlebot" content="noindex" />
         <link rel="canonical" href={websiteLink} />
-        <link rel="preload" as="font" font-display="optional" />
+        <link rel="preload" as="font" font-display="swap" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://ipwhois.app" crossorigin />
@@ -246,6 +247,7 @@ const Theme = ({ state }) => {
           <PersonalCompaignCO when={data.isPersonalCompaignCO} />
           <PersonalCompaignES when={data.isPersonalCompaignES} />
           <PersonalCompaignPHEN when={data.isPersonalCompaignPHEN} />
+          <Countries when={data.isCountries} />
         </Switch>
         {/* </Main> */}
         {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}

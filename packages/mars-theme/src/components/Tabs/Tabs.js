@@ -412,27 +412,27 @@ const QuestionTabs = (props) => {
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P19")} </h2>
 												<p>{i18n.t("Learn_more_savings_P20")}</p>
 												<div className="inner-div">
-													<h3>{i18n.t("Learn_more_savings_P21_B1")}</h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P21_B1")}</h3>
 													<p>{i18n.t("Learn_more_savings_P21_p1")}</p>
-													<h3>{i18n.t("Learn_more_savings_P22_B1")} </h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P22_B1")} </h3>
 													<p>{i18n.t("Learn_more_savings_P22_P1")}</p>
-													<h3>{i18n.t("Learn_more_savings_P23_B1")} </h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P23_B1")} </h3>
 													<p>{i18n.t("Learn_more_savings_P23_P1")}</p>
-													<h3>{i18n.t("Learn_more_savings_P24_B1")} </h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P24_B1")} </h3>
 													<p>{i18n.t("Learn_more_savings_P24_P1")}</p>
-													<h3>{i18n.t("Learn_more_savings_P25_B1")}</h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P25_B1")}</h3>
 													<p>{i18n.t("Learn_more_savings_P25_P1")}</p>
 												</div>
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P26")}</h2>
 												<p>{i18n.t("Learn_more_savings_P27")}</p>
 												<div className="inner-div">
-													<h3>{i18n.t("Learn_more_savings_P28_B1")}   </h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P28_B1")}   </h3>
 													<p>{i18n.t("Learn_more_savings_P28_P1")}</p>
-													<h3>{i18n.t("Learn_more_savings_P29_B1")}    </h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P29_B1")}    </h3>
 													<p>{i18n.t("Learn_more_savings_P29_P1")}</p>
-													<h3>{i18n.t("Learn_more_savings_P30_B1")}  </h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P30_B1")}  </h3>
 													<p>{i18n.t("Learn_more_savings_P30_P1")}</p>
-													<h3>{i18n.t("Learn_more_savings_P31_B1")}    </h3>
+													<h3 className="blackhead">{i18n.t("Learn_more_savings_P31_B1")}    </h3>
 													<p>{i18n.t("Learn_more_savings_P31_P1")}</p>
 												</div>
 												<p>{i18n.t("Learn_more_savings_P32")}</p>
@@ -492,7 +492,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("multi_currency_country_P")}
+											{i18n.t("multi_currency_country_P")} <Link link="/countries">{i18n.t("click_here")}</Link> {i18n.t("multi_currency_country_P_1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -614,7 +614,7 @@ const QuestionTabs = (props) => {
 											<p>{i18n.t("multi_currency_Learn_P14")}</p>
 											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P15")}</h3>
 											<p>{i18n.t("multi_currency_Learn_P16")}</p>
-											<h3>{i18n.t("multi_currency_Learn_P17")}</h3>
+											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P17")}</h3>
 											<div className="inner-div">
 												<ul>
 													<li><p>{i18n.t("multi_currency_Learn_P18")}</p></li>
@@ -1038,9 +1038,9 @@ const QuestionTabs = (props) => {
 											<p>{i18n.t("instant_money_transfer_P4")}</p>
 											<h3 className="blackhead">{i18n.t("instant_money_transfer_P5")}</h3>
 											<p>{i18n.t("instant_money_transfer_P6")}</p>
-											<h4>1. {i18n.t("instant_money_transfer_P7")}</h4>
+											<h4 className="blackhead">1. {i18n.t("instant_money_transfer_P7")}</h4>
 											<p>{i18n.t("instant_money_transfer_P8")} </p>
-											<h4>2. {i18n.t("instant_money_transfer_P9")}</h4>
+											<h4 className="blackhead">2. {i18n.t("instant_money_transfer_P9")}</h4>
 											<p>{i18n.t("instant_money_transfer_P10")}</p>
 											<div className="inner-div">
 												<p><b>{i18n.t("Cash_transfers")}</b> – {i18n.t("Cash_transfers_P")}</p>
@@ -1048,9 +1048,9 @@ const QuestionTabs = (props) => {
 												<p><b>{i18n.t("Bank_debit_card_transfers")}</b> – {i18n.t("Bank_debit_card_transfers_P")} </p>
 												<p><b>{i18n.t("Directly_to_the_recipients_account")}</b> – {i18n.t("Directly_to_the_recipients_account_P")} </p>
 											</div>
-											<h4>3. {i18n.t("instant_money_transfer_P11")}</h4>
+											<h4 className="blackhead">3. {i18n.t("instant_money_transfer_P11")}</h4>
 											<p>{i18n.t("instant_money_transfer_P12")} </p>
-											<h4>4. {i18n.t("instant_money_transfer_P13")}</h4>
+											<h4 className="blackhead">4. {i18n.t("instant_money_transfer_P13")}</h4>
 											<p>{i18n.t("instant_money_transfer_P14")}</p>
 											<p>{i18n.t("instant_money_transfer_P15")}</p>
 											<h2 className="blackhead">{i18n.t("instant_money_transfer_P16")}<a href="https://www.cashero.com/blog/how-to-transfer-money-instantly-online/" target="_blank" rel="noopener noreferrer">{i18n.t("instant_money_transfer_P16_1")}</a></h2>
@@ -1064,7 +1064,7 @@ const QuestionTabs = (props) => {
 											<p><b>{i18n.t("Note")}</b>:  {i18n.t("instant_money_transfer_Note")}</p>
 											<h3 className="blackhead">{i18n.t("instant_money_transfer_P18")}</h3>
 											<p>{i18n.t("instant_money_transfer_P19")}</p>
-											<h3>{i18n.t("instant_money_transfer_P20")}</h3>
+											<h3 className="blackhead">{i18n.t("instant_money_transfer_P20")}</h3>
 											<p>{i18n.t("instant_money_transfer_P21")}</p>
 											<h3 className="blackhead">{i18n.t("instant_money_transfer_P22")} </h3>
 											<p>{i18n.t("instant_money_transfer_P23")} </p>
