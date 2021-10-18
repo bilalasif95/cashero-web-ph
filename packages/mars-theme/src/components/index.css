@@ -2,7 +2,7 @@
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   src: local('Roboto Regular'),local('Roboto-Regular'), url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2');
-  font-display: optional;
+  font-display: swap;
 }
 body{
   font-family: 'Roboto', sans-serif;
@@ -1246,6 +1246,9 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
       width: 100%; } }
 
 @media (max-width: 540px) {
+  .customNav .dropdown-menu {
+    left: 0px;
+  }
   .highInterestHeading {
     display: block !important;
   }
@@ -1624,9 +1627,39 @@ b {
     }
   }
   @media (max-width: 767px) {
+    .customNav ul li:not(:last-child) {
+      margin-right: 0px;
+  }
+    .customNav ul li a:after {
+      display: block!important;
+  }
+    .customNav>.navbar-collapse .navbar-nav>li>a:not(:last-child):after {
+      position: absolute;
+      top: 17px;
+      right: 15px;
+      -webkit-transition: 0.5s ease all;
+      transition: 0.5s ease all;
+      -webkit-transition: 0.5s ease all;
+      color: #9ea0a5!important;
+  }
     .compaignForm {
       margin: 2rem 0 0;
     }
+    .customNav .dropdown-menu {
+      border: none;
+     }
+     .customNav .ListTitle {
+      position: relative;
+      padding-left: 45px;
+  }
+  .customNav .ListTitle img {
+    position: absolute;
+    left: 0;
+}
+.HeaderList li a {
+  padding: 0px!important;
+  margin-bottom: 20px;
+}
   }
   
   @media (max-width: 414px) {
@@ -3386,6 +3419,7 @@ button:focus {
   flex-wrap: wrap; }
 
 .blackhead {
+  font-size: 18px;
   color: #363636; }
 
 .expandTypo p {
