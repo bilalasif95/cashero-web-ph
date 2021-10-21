@@ -614,7 +614,7 @@ export const brazilian = {
     multi_currency_country: "Posso abrir uma conta em várias moedas no meu país?",
     multi_currency_country_P: "O Cashero está disponível em mais de 120 países. Para saber se você é elegível, ",
     click_here: "clique aqui",
-    multi_currency_country_P_1: " para ver uma lista de países onde a ópera Cashero.",
+    multi_currency_country_P_1: " para ver a lista de países onde o Cashero opera.",
     multi_currency_account: "Qual o custo original para obter uma conta digital em várias moedas do Cashero?",
     multi_currency_account_P: "Nada. Criar uma conta no Cashero é grátis! Nenhum saldo mínimo é necessário e não há taxas de manutenção.",
     currency_fluctuations: "Qual a garantia de proteção do meu dinheiro contra flutuações cambiais?",
