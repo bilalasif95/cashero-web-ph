@@ -1,4 +1,4 @@
-export const inenglish = {
+export const nlenglish = {
     Compaign_1: "Need Free & Instant Payments To India?",
     Compaign_2: "Cashero Makes It Happen.",
     Compaign_3: "CASHERO MOVES MONEY FAST",

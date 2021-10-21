@@ -12,6 +12,8 @@ import { german } from "./languages/german";
 import { italian } from "./languages/italian";
 import { zaenglish } from "./languages/zaenglish";
 import { inenglish } from "./languages/inenglish";
+import { ruenglish } from "./languages/ruenglish";
+import { nlenglish } from "./languages/nlenglish";
 import { bahasa } from "./languages/bahasa";
 import { filipino } from "./languages/filipino";
 import { malay } from "./languages/malay";
@@ -53,6 +55,12 @@ i18n.use(XHR).use(LanguageDetector).init({
         },
         inenglish: {
             translations: inenglish
+        },
+        ruenglish: {
+            translations: ruenglish
+        },
+        nlenglish: {
+            translations: nlenglish
         },
         bahasa: {
             translations: bahasa
