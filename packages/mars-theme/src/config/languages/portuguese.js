@@ -43,7 +43,7 @@ export const portuguese = {
     main_features_B7: "Prémios:",
     What_are_Cashero_main_features_P7: "Os utilizadores podem ainda receber prémios sempre que indicarem o nome de amigos ou colegas à Cashero.",
     Launch_Date: "Quando será o lançamento oficial da Cashero?",
-    Launch_Date_P: "Setembro de 2021.",
+    Launch_Date_P: "No outono de 2021.",
     Cashero_regulated: "Como a Cashero é regulada?",
     Cashero_regulated_P1: "A Cashero está prestes a tornar-se numa instituição financeira regulada pela UE.",
     money_safe_2: "O meu dinheiro está seguro?",

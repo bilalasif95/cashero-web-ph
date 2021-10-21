@@ -134,8 +134,8 @@ const PersonalCompaignNl = ({ i18n }) => {
     <>
       <Head>
         <html lang="en-Nl" />
-        <link rel="alternate" hreflang="en-Nl" href="https://www.cashero.com/en-nl/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en-nl/" />
+        <link rel="alternate" hreflang="en-Nl" href="https://www.cashero.com/ng/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ng/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -294,7 +294,7 @@ const PersonalCompaignNl = ({ i18n }) => {
       <div className="container">
         <Savings focus={focus} />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en-nl" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="ng" />}
       <CampaignTabs />
       <CampaignSignup focus={focus} />
     </>
