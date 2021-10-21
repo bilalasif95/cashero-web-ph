@@ -189,7 +189,7 @@ const thankyouHandler = {
 }
 
 const personalCompaignHandler = {
-  pattern: "/en",
+  pattern: "/us",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -338,6 +338,46 @@ const personalCompaignESHandler = {
   }
 }
 
+const personalCompaignPHENHandler = {
+  pattern: "/ph-en",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignPHEN: true,
+    })
+  }
+}
+
+const personalCompaignENRUHandler = {
+  pattern: "/en-ru",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignENRU: true,
+    })
+  }
+}
+
+const personalCompaignENNlHandler = {
+  pattern: "/en-nl",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignENNl: true,
+    })
+  }
+}
+
+const countriesHandler = {
+  pattern: "/countries",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isCountries: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -402,6 +442,10 @@ const marsTheme = {
         libraries.source.handlers.push(personalCompaignPHHandler);
         libraries.source.handlers.push(personalCompaignCOHandler);
         libraries.source.handlers.push(personalCompaignESHandler);
+        libraries.source.handlers.push(personalCompaignPHENHandler);
+        libraries.source.handlers.push(personalCompaignENRUHandler);
+        libraries.source.handlers.push(personalCompaignENNlHandler);
+        libraries.source.handlers.push(countriesHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

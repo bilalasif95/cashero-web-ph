@@ -15,13 +15,13 @@ import SignupSection from "../signupSection/signupSection";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import CounterIcon from "../../assets/counterIcon.svg";
-import Earning from "../../assets/earning.svg";
 import SearchIcon from "@material-ui/icons/Search";
 import MovingCoins from "../../assets/movingCoins.png";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import currencieslist from "../../config/currenciesList";
+import currencieslistBR from "../../config/currenciesListBR";
 import { Head, connect } from "frontity";
 import Link from "../link";
 import { structuredData, faqStructuredData, organizationStructuredData } from "../../config/SEO/MultiCurrencySavingsAccount/structuredData";
@@ -39,11 +39,11 @@ const CurrencyAccounts = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
   const ref = useRef(null);
   const [flaggbp, setflaggbp] = useState("🇺🇸");
-  const [flagcurrencygbp, setflagcurrencygbp] = useState("US Dollar - USD");
+  const [flagcurrencygbp, setflagcurrencygbp] = useState(i18n.language === "brazilian" ? "Dollar Americano - USD" : "US Dollar - USD");
   const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
   const [searchTermgbp, setSearchTermgbp] = useState("");
   const [searchResults2gbp, setSearchResults2gbp] = useState([]);
-  const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslist);
+  const [searchResultsgbp, setSearchResultsgbp] = useState(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
   const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
   const [baseCurrencyGBPValue, setBaseCurrencyGBPValue] = useState("1");
   const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
@@ -64,10 +64,24 @@ const CurrencyAccounts = ({ state, i18n }) => {
   };
   const selectCountrygbp = (country) => {
     setSearchTermgbp("");
-    setSearchResults2gbp(currencieslist);
+    setSearchResults2gbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
     setflaggbp(country.flag);
     setflagcurrencygbp(country.name)
   };
+  useEffect(() => {
+    if (i18n.language === "brazilian") {
+      setSearchResultsgbp(currencieslistBR)
+      setSearchResults2gbp([])
+      setflagcurrencygbp("Dollar Americano - USD")
+      setflaggbp("🇺🇸")
+    }
+    else {
+      setSearchResultsgbp(currencieslist)
+      setSearchResults2gbp([])
+      setflagcurrencygbp("US Dollar - USD")
+      setflaggbp("🇺🇸")
+    }
+  }, [i18n.language])
   useEffect(() => {
     var start = 1000;
     var speed = 0;
@@ -81,7 +95,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
         start += 1;
       }
     }, speed);
-    setSearchResultsgbp(currencieslist)
+    setSearchResultsgbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist)
     callApi(FirebaseEndPoints.ExchangeRates, "get", "")
       .then((doc) => {
         setBaseCurrencyEURValue(doc.fields.eur.stringValue)
@@ -103,7 +117,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
     return x ? temp[0] + "." + x : "0.00";
   };
   const calculateBRL = (value, label) => {
-    if (label === "US Dollar - USD") {
+    if (label === "Dollar Americano - USD" || label === "US Dollar - USD") {
       const multi = bigDecimal.multiply(50.00, value)
       const final = limit(multi)
       return final
@@ -128,7 +142,17 @@ const CurrencyAccounts = ({ state, i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/multi-currency-savings-account/"
         />
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/multi-currency-savings-account/" />
+        {i18n.language === "brazilian" ?
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/multi-currency-savings-account/" />
+            <html lang="pt-BR" />
+          </>
+          :
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/multi-currency-savings-account/" />
+            <html lang="en" />
+          </>
+        }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/multi-currency-savings-account/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
@@ -145,13 +169,13 @@ const CurrencyAccounts = ({ state, i18n }) => {
           <div className="row align-items-center">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1>{i18n.t("Multi_Currency")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
+                <h1 className="noBreakGetPaidHeading">{i18n.t("Multi_Currency_Savings_Account")}</h1>
                 <p className="bannerPara">{i18n.t("Multi_Currency_Savings_Account_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">
@@ -162,109 +186,61 @@ const CurrencyAccounts = ({ state, i18n }) => {
                   src={CounterIcon}
                 />
                 <div className="GraphCont">
-                  <img
-                    className="img-fluid countryFlag mb-3"
-                    src={Earning}
-                    alt="Earning"
-                  />
+                  <div className="earningText">
+                    <p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
+                  </div>
                   <p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
-                    flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : calculateBRL(baseCurrencyGBPValue, "")}</p>
+                    flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "Dollar Americano - USD" ? calculateBRL(baseCurrencyUSDValue, "Dollar Americano - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
                   <div className="CustomCounter">
                     <span className="CounterText">
-                      {flagcurrencygbp === "US Dollar - USD" ? "$" :
-                        flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" ? "50.00" :
+                      {flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "Dollar Americano - USD" ? "$" :
+                        flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "Dollar Americano - USD" ? "50.00" :
                           flagcurrencygbp === "EU Euro - EUR" ? "60.00" : "70.00"}
                     </span>
                     <span ref={ref} id="counter"></span>
                   </div>
-                  <Dropdown
-                    isOpen={dropdownOpengbp}
-                    toggle={togglegbp}
-                  >
+                  <Dropdown isOpen={dropdownOpengbp} toggle={togglegbp}>
                     <DropdownToggle caret>
                       <div className="mr-3"><span className="FlagIcon">{flaggbp} </span></div>
                       <span className="FlagCode">{flagcurrencygbp}</span>
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem
-                        header
-                      >
+                      <DropdownItem header>
                         <>
                           <SearchIcon />
                           <input
                             type="text"
-                            value={
-                              searchTermgbp
-                            }
-                            onChange={
-                              handleChangegbp
-                            }
+                            value={searchTermgbp}
+                            onChange={handleChangegbp}
                           />
                         </>
                       </DropdownItem>
                       <div className="country-list">
-                        {searchResults2gbp.length >
-                          0
-                          ? searchResults2gbp.map(
-                            (
-                              item,
-                              index
-                            ) => (
-                              <DropdownItem
-                                key={
-                                  index +
-                                  1
-                                }
-                                onClick={() =>
-                                  selectCountrygbp(
-                                    item
-                                  )
-                                }
-                                className="country-item"
-                              >
-                                <div className="flag-name">
-                                  <span>
-                                    {
-                                      item.flag
-                                    }
-                                  </span>
-                                  {
-                                    item.name
-                                  }
-                                </div>
-                              </DropdownItem>
-                            )
-                          )
-                          : searchResultsgbp.map(
-                            (
-                              item,
-                              index
-                            ) => (
-                              <DropdownItem
-                                key={
-                                  index +
-                                  1
-                                }
-                                onClick={() =>
-                                  selectCountrygbp(
-                                    item
-                                  )
-                                }
-                                className="country-item"
-                              >
-                                <div className="flag-name">
-                                  <span>
-                                    {
-                                      item.flag
-                                    }
-                                  </span>
-                                  {
-                                    item.name
-                                  }
-                                </div>
-                              </DropdownItem>
-                            )
-                          )}
+                        {searchResults2gbp.length > 0
+                          ? searchResults2gbp.map((item, index) => (
+                            <DropdownItem
+                              key={index + 1}
+                              onClick={() => selectCountrygbp(item)}
+                              className="country-item"
+                            >
+                              <div className="flag-name">
+                                <span>{item.flag}</span>
+                                {item.name}
+                              </div>
+                            </DropdownItem>
+                          ))
+                          : searchResultsgbp.map((item, index) => (
+                            <DropdownItem
+                              key={index + 1}
+                              onClick={() => selectCountrygbp(item)}
+                              className="country-item"
+                            >
+                              <div className="flag-name">
+                                <span>{item.flag}</span>
+                                {item.name}
+                              </div>
+                            </DropdownItem>
+                          ))}
                       </div>
                     </DropdownMenu>
                   </Dropdown>
@@ -301,7 +277,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img className="img-fluid" alt="Favourite" src={Fav} />
+                  <img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
@@ -310,6 +286,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
               <div className="GetStartedBox2 w-100">
                 <img
                   className="img-fluid"
+                  height="152px" width="152px"
                   alt="Wallet Coins"
                   src={WalletCoins}
                 />
@@ -319,7 +296,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Moving Coins" src={MovingCoins} />
+                  <img className="img-fluid" height="152px" width="152px" alt="Moving Coins" src={MovingCoins} />
                   <h3>
                     {i18n.t("Multi_Currency_Savings_Account_Work3")}
                   </h3>
@@ -332,7 +309,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Multi_Currency_Savings_Account_Work_P")}</p>
                 <button onClick={appModalOpen} className="LinkBtn">
-                  {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow1} />
                 </button>
               </div>
             </div>

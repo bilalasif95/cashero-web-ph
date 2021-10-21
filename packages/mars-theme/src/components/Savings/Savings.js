@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import BitCircle from "../../assets/BitCircle.png";
+import BitCircleBR from "../../assets/BitCircleBR.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const Savings = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -20,13 +25,13 @@ const Savings = ({ i18n }) => {
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up">
 							<h2 className="oneAppTitle">
-								{i18n.t("How_Does_Cashero")} <span className="br-block-with-no-display"></span> {i18n.t("High_Yield_Savings_Work")}
+								{i18n.t("How_Does_Cashero")}
 							</h2>
 							<p>
 								{i18n.t("High_Yield_Savings_Work_P")}
 							</p>
 							<button onClick={appModalOpen} className="LinkBtn">
-								{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -35,8 +40,9 @@ const Savings = ({ i18n }) => {
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block"
+						height="100%"width="444px"
 						alt="Bit Circle"
-						src={BitCircle} />
+						src={storage === "brazilian" ? BitCircleBR : BitCircle} />
 				</div>
 			</div>
 		</div>

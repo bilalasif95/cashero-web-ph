@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from "../link";
 import PropTypes from 'prop-types';
 import Logo from "../../assets/logo.svg";
 import Android from "../../assets/AndroidApp.svg";
+import AndroidBR from "../../assets/AndroidAppBR.svg";
 import IOS from "../../assets/iOSApp.svg";
+import IOSBR from "../../assets/iOSAppBR.svg";
 import LinkedIn from "../../assets/linkedin.svg";
 import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg";
@@ -40,18 +42,22 @@ TabPanel.propTypes = {
 };
 
 const Footer = ({ i18n }) => {
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	return (
 		<div className="container">
 			<div className="Footer">
 				<div className="row">
 					<div className="col-md-6">
 						<Link link="/">
-							<img src={Logo} alt="logo" />
+							<img src={Logo} height="36px" width="190px" alt="logo" />
 						</Link>
-						<p className="HelpText">{i18n.t("Footer_P1")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P2")} <span className="br-block-with-no-display"></span> {i18n.t("Footer_P3")}</p>
+						<p className="HelpText footerBreakText">{i18n.t("Footer_P1")}</p>
 						<ul className="list-unstyled AppList">
-							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="100%" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
+							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="100%" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>
 						</ul>
 					</div>
 					<div className="col-md-6">
@@ -92,11 +98,11 @@ const Footer = ({ i18n }) => {
 					<div className="SocialCont">
 						{/* <p>United States - English</p> */}
 						<ul className="SocialIcons list-unstyled">
-							<li><a href="https://www.linkedin.com/company/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" src={LinkedIn} /> </a></li>
-							<li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" src={Facebook} /> </a></li>
-							<li><a href="https://twitter.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Twitter" src={Twitter} /> </a></li>
-							<li><a href="https://www.instagram.com/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="Instagram" src={Instagram} /> </a></li>
-							<li><a href="https://www.youtube.com/channel/UCnFJebay3pAJBu-DpbYWjCQ" target="_blank" rel="noopener noreferrer"><img alt="Youtube" src={Youtube} /> </a></li>
+							<li><a href="https://www.linkedin.com/company/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" height="100%" width="100%" src={LinkedIn} /> </a></li>
+							<li><a href="https://www.facebook.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Facebook" height="100%" width="100%" src={Facebook} /> </a></li>
+							<li><a href="https://twitter.com/casheroapp" target="_blank" rel="noopener noreferrer"><img alt="Twitter" height="100%" width="100%" src={Twitter} /> </a></li>
+							<li><a href="https://www.instagram.com/casheroapp/" target="_blank" rel="noopener noreferrer"><img alt="Instagram" height="100%" width="100%" src={Instagram} /> </a></li>
+							<li><a href="https://www.youtube.com/channel/UCnFJebay3pAJBu-DpbYWjCQ" target="_blank" rel="noopener noreferrer"><img alt="Youtube" height="100%" width="100%" src={Youtube} /> </a></li>
 						</ul>
 					</div>
 				</div>

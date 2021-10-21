@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Check from "../../assets/check-mark2.png";
 import { parse as parseQs } from "qs";
 import depositUSD from "../../assets/depositUSD.svg";
@@ -29,7 +29,7 @@ const PersonalCompaignGR = ({ i18n }) => {
   const [value, setValue] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phonenoLength, setPhoneNoLength] = useState(0);
+  // const [phonenoLength, setPhoneNoLength] = useState(0);
   const [openSuccessModal, setSuccessModal] = useState(false);
   const [error, setError] = useState("");
   const [utmCampaign, setUtmCampaign] = useState("");
@@ -37,6 +37,8 @@ const PersonalCompaignGR = ({ i18n }) => {
   const [utmMedium, setUtmMedium] = useState("");
   const [utmSource, setUtmSource] = useState("");
   const [utmTerm, setUtmTerm] = useState("");
+  const [innerWidth, setInnerWidth] = useState(0);
+  const fullName = useRef(null);
   const toggle = () => {
     setSearchTerm("");
     setDropdownOpen((prevState) => !prevState);
@@ -45,7 +47,7 @@ const PersonalCompaignGR = ({ i18n }) => {
     setSearchTerm(e.target.value);
     const results = searchResults.filter(
       (country) =>
-        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.name_gr.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
         country.dial_code.includes(searchTerm.toLocaleLowerCase())
     );
     setSearchResults2(results);
@@ -55,7 +57,7 @@ const PersonalCompaignGR = ({ i18n }) => {
   };
   const selectCountry = (country) => {
     setCode(country.dial_code);
-    setPhoneNoLength(country.phone_length);
+    // setPhoneNoLength(country.phone_length);
     setSearchTerm("");
     setSearchResults2(counrtrylist);
   };
@@ -64,6 +66,7 @@ const PersonalCompaignGR = ({ i18n }) => {
   };
   useEffect(() => {
     i18n.changeLanguage("german")
+    setInnerWidth(window.innerWidth)
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
     setUtmContent(qs.utm_content)
@@ -75,16 +78,16 @@ const PersonalCompaignGR = ({ i18n }) => {
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
-          const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
-          setPhoneNoLength(countryCode[0].phone_length)
+          // const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
+          // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+1");
-          setPhoneNoLength(10);
+          setCode("+49");
+          // setPhoneNoLength(11);
         }
       }).catch(() => {
-        setCode("+1");
-        setPhoneNoLength(10);
+        setCode("+49");
+        // setPhoneNoLength(11);
       })
   }, [])
   const handleOnChange = (e) => {
@@ -124,10 +127,14 @@ const PersonalCompaignGR = ({ i18n }) => {
         });
     }
   };
+  const focus = () => {
+    fullName.current.focus();
+  }
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="es-DE" href="https://www.cashero.com/de/" />
+        <html lang="de-DE" />
+        <link rel="alternate" hreflang="de-DE" href="https://www.cashero.com/de/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/de/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
@@ -136,8 +143,9 @@ const PersonalCompaignGR = ({ i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <p className="text-uppercase bannerPara font-medium">{i18n.t("Compaign_1")}<span className="br-block"></span>{i18n.t("Compaign_2")}</p>
-                <h1>{i18n.t("High_Yield")} <span className="br-block-with-no-display"></span> {i18n.t("Savings_Account")}</h1>
+                <p className="text-uppercase bannerPara font-medium mb-0">{i18n.t("Compaign_1")}</p>
+                <p className="text-uppercase bannerPara font-medium">{i18n.t("Compaign_2")}</p>
+                <h1 className="compaignHighYield">{i18n.t("High_Yield_Savings_Account")}</h1>
                 <div className="Banner-list compaignList">
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
@@ -162,10 +170,10 @@ const PersonalCompaignGR = ({ i18n }) => {
             <div className="col-md-5">
               <div className="compaignForm">
                 <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
-                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")} Germany.<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
+                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
-                    <input type="text" className="form-control" autoFocus={true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
+                    <input id="ContainerElementID" ref={fullName} type="text" className="form-control" autoFocus={innerWidth <= 540 ? false : true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
                   </div>
                   <div className="form-group">
                     <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder={i18n.t("Enter_Email")} />
@@ -199,7 +207,7 @@ const PersonalCompaignGR = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name}
+                                      {item.name_gr}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>
@@ -212,7 +220,7 @@ const PersonalCompaignGR = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name}
+                                      {item.name_gr}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>
@@ -221,7 +229,7 @@ const PersonalCompaignGR = ({ i18n }) => {
                           </DropdownMenu>
                         </Dropdown>
                       </div>
-                      <div className="inputNum width80">
+                      <div className="inputNum">
                         <input
                           className="form-control"
                           type="number"
@@ -239,13 +247,14 @@ const PersonalCompaignGR = ({ i18n }) => {
                       sitekey={recaptchaSiteKep}
                       onChange={onCaptchaHandler}
                       height="140px"
+                      hl="de"
                       width="100%"
                     />
                   </div>
                   {error && <label className="contactUsFormError">{error}</label>}
-                  <button onClick={() => getStarted()} disabled={!email || !name || !value || loading || !newPhone.length || (newPhone.length !== phonenoLength)}
+                  <button onClick={() => getStarted()} disabled={!email || !name || !value || loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone))}
                     className={
-                      !email || !name || !value || loading || !newPhone.length || (newPhone.length !== phonenoLength)
+                      !email || !name || !value || loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone))
                         ? "btn btn-default Compaignbtn disabled"
                         : "btn btn-default Compaignbtn"
                     }>{i18n.t("Join_the_Waitlist")}</button>
@@ -262,19 +271,19 @@ const PersonalCompaignGR = ({ i18n }) => {
             <div className="col-md -12">
               <div className="inflation">
                 <div className="inflation-cont text-center">
-                  <img src={inflation} />
+                  <img className="img-fluid" height="70px" width="70px" alt="inflation" src={inflation} />
                   <p>{i18n.t("PersonalPage_li1")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={depositUSD} />
+                  <img className="img-fluid" height="70px" width="70px" alt="depositUSD" src={depositUSD} />
                   <p>{i18n.t("Compaign_Img_2")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={interestpaid} />
+                  <img className="img-fluid" height="70px" width="70px" alt="interestpaid" src={interestpaid} />
                   <p>{i18n.t("PersonalPage_li2")}</p>
                 </div>
                 <div className="inflation-cont text-center">
-                  <img src={depositmoneytime} />
+                  <img className="img-fluid" height="70px" width="70px" alt="depositmoneytime" src={depositmoneytime} />
                   <p>{i18n.t("PersonalPage_li3")}</p>
                 </div>
               </div>
@@ -282,13 +291,13 @@ const PersonalCompaignGR = ({ i18n }) => {
           </div>
         </div>
       </div>
-      <CompaignNoEffort />
+      <CompaignNoEffort lang="de" focus={focus} />
       <div className="container">
-        <Savings />
+        <Savings lang="de" focus={focus} />
       </div>
       {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="de" />}
       <CampaignTabs />
-      <CampaignSignup />
+      <CampaignSignup focus={focus} />
     </>
   );
 }

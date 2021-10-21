@@ -19,8 +19,8 @@ const Protect = ({ i18n }) => {
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
-							<h2 className="oneAppTitle">
-								{i18n.t("Use_Cashero_to_Protect")} <span className="br-block-with-no-display"></span> {i18n.t("Your_Money_from_Currency")} <span className="br-block-with-no-display"></span> {i18n.t("Value_Fluctuations")}
+							<h2 className="oneAppTitle noBreakBannerHeading">
+								{i18n.t("Use_Cashero_to_Protect")}
 							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={400}>
@@ -29,7 +29,7 @@ const Protect = ({ i18n }) => {
 						</Fade>
 						<Fade triggerOnce direction="up" delay={1000}>
 							<button onClick={appModalOpen} className="LinkBtn" >
-								{i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}
@@ -38,6 +38,8 @@ const Protect = ({ i18n }) => {
 				<div className="col-md-6 sm-mt-30">
 					<img
 						className="img-fluid mx-auto d-block"
+						height="100%"
+						width="277px"
 						src={Lock}
 						alt="Lock"
 					/>

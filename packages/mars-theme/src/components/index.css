@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  src: local('Roboto Regular'),local('Roboto-Regular'), url('https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2');
+  font-display: swap;
+}
 body{
   font-family: 'Roboto', sans-serif;
 }
@@ -179,6 +184,9 @@ body{
   .compaignForm {
     padding: 40px 30px;
 }
+.compaignForm .captcha-cont {
+  display: block !important;
+}
   .seenList {
     justify-content: center;
   }
@@ -245,7 +253,10 @@ body{
       height: auto;
       margin: 5rem auto 0;
       width: 100%;
-      display: block; } }
+      display: block; } 
+      .inflation-cont {
+        width: 50% !important;}
+    }
 
 @media (min-width: 475px) {
   .CampaignFooter {
@@ -276,24 +287,56 @@ body{
   background-color: #cde0fb !important; }
 
 .bannerImg {
-  padding: 0 3rem; }
+  padding: 0 3rem;
+}
 
 @media (max-width: 1150px) {
   .numberSelection .selectCountry {
     width: 16% !important; }
   .numberSelection .inputNum {
-    width: 40%; } }
+    width: 30%; } }
 
-@media (max-width: 960px) and (min-width: 768px) {
+  .compaignForm .numberSelection .selectCountry {
+    width: 16% !important; }
+  .compaignForm .numberSelection .inputNum {
+    width: 80%; }
+
+    @media (max-width: 1199px) and (min-width: 992px) {
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 262px !important;
+    }
+    }
+@media (max-width: 992px) and (min-width: 768px) {
   .numberSelection {
     justify-content: space-between; }
     .numberSelection .selectCountry {
-      width: 20% !important; }
+      width: 15% !important; }
     .numberSelection .inputNum {
-      width: 42%; }
+      width: 40%; }
+      .banner .numberSelection .inputNum input, .PersonalCont .numberSelection .inputNum input {
+        width: 100%;
+      }
+      .numberSelection .selectCountry .dropdown-menu.show{
+        width: 440px !important;
+      }
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 290px !important;
+    }
     .numberSelection .Appbtn {
       margin-left: 0 !important;
       margin-top: 1.5rem !important; } }
+
+      @media (max-width: 768px) and (min-width: 540px) { 
+        .numberSelection .selectCountry .dropdown-menu.show{
+          width: 450px !important;
+        }
+        .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+          width: 470px !important;
+      }
+      .SignUp {
+        padding: 50px !important;
+    }
+      }    
 
 .WhoSection .WhoSectionCont h1 {
   color: #363636;
@@ -480,10 +523,23 @@ h4 {
     height: 100%;
     width: 100%;
     border-radius: 20px; }
-
+    @media (max-width: 475px) and (min-width: 320px) {
+      .numberSelection .selectCountry .dropdown-menu.show {
+        width: 280px!important;
+    }
+    }
+@media (max-width: 475px) and (min-width: 375px) {
+  .compaign-select .numberSelection .inputNum {
+    width: 80% !important;
+  }
+}
 @media (max-width: 475px) {
   .blogDetailImg {
-    min-height: 180px !important; } }
+    min-height: 180px !important; }
+    .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+      width: 405px !important;
+  }
+  }
 
 @media (max-width: 425px) {
   .customNav ul li:not(:last-child) {
@@ -491,21 +547,37 @@ h4 {
   .numberSelection .selectCountry .dropdown-menu.show{
     width: 285px;
   }
+  .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+    width: 355px !important;
 }
-
+}
 @media (max-width: 375px) {
   .customNav ul li:not(:last-child) {
     margin-right: 10px !important; }
+    .compaign-select .selectCountry {
+      width: 25% !important;
+    }
+    .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+      width: 316px !important;
+  }
   .blogDetailImg {
     min-height: 140px !important; } }
-
 @media (max-width: 320px) {
+  .compaignForm .numberSelection .selectCountry {
+    width: 20%!important;
+}
+.compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+  width: 260px !important;
+}
+.compaign-select .numberSelection .inputNum {
+  width: 75%!important;
+}
   .circle-cont .blue-circle {
     width: 275px;
     height: 290px;
 }
 .numberSelection .selectCountry .dropdown-menu.show{
-  width: 230px;
+  width: 230px !important;
 }
 .circle-cont .blue-circle {
   margin: -6rem auto 0px;
@@ -1003,7 +1075,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
   text-align: inherit !important; }
   .waitlistcont p {
     text-align: left !important; }
-  .waitlistcont h3 {
+  .waitlistcont h1 {
     text-align: left !important;
     font-style: normal;
     font-weight: 400;
@@ -1174,6 +1246,9 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
       width: 100%; } }
 
 @media (max-width: 540px) {
+  .customNav .dropdown-menu {
+    left: 0px;
+  }
   .highInterestHeading {
     display: block !important;
   }
@@ -1256,7 +1331,7 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
     padding: 0px !important;
     background-color: #fff;
     height: 100vh !important; }
-  .waitlistcont h3 {
+  .waitlistcont h1 {
     font-size: 32px !important;
     line-height: 40px !important;
     text-align: center; }
@@ -1547,6 +1622,44 @@ b {
       width: 33%;
       margin: 0 0 1rem;
     }
+    .compaignForm {
+      padding: 20px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .customNav ul li:not(:last-child) {
+      margin-right: 0px;
+  }
+    .customNav ul li a:after {
+      display: block!important;
+  }
+    .customNav>.navbar-collapse .navbar-nav>li>a:not(:last-child):after {
+      position: absolute;
+      top: 17px;
+      right: 15px;
+      -webkit-transition: 0.5s ease all;
+      transition: 0.5s ease all;
+      -webkit-transition: 0.5s ease all;
+      color: #9ea0a5!important;
+  }
+    .compaignForm {
+      margin: 2rem 0 0;
+    }
+    .customNav .dropdown-menu {
+      border: none;
+     }
+     .customNav .ListTitle {
+      position: relative;
+      padding-left: 45px;
+  }
+  .customNav .ListTitle img {
+    position: absolute;
+    left: 0;
+}
+.HeaderList li a {
+  padding: 0px!important;
+  margin-bottom: 20px;
+}
   }
   
   @media (max-width: 414px) {
@@ -1684,7 +1797,7 @@ b {
   margin-top: 15px; }
 
 .Enhance {
-  background-image: url("https://i.imgur.com/7avIJ78.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F7avIJ78.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 0px 0px 0px;
@@ -2210,13 +2323,6 @@ b {
     background-size: cover; }
     .SavingAccount .Link {
       color: #fff !important; } }
-
-.HighInterestText {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.01em; }
 
 #counter {
   font-weight: normal;
@@ -2899,12 +3005,14 @@ b {
     padding: 0px 0px 40px 0px; }
   .CasheroSignupCont {
     margin-top: 40px; } }
-
+    .compaign-signup {
+      padding: 134px 0 !important;
+    }
 .SignUp {
-  background-image: url("https://i.imgur.com/gF6V6lg.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FgF6V6lg.png?alt=media");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 134px 191px 134px 191px;
+  padding: 134px 0px;
   text-align: center; }
 
 .SignUpText {
@@ -3028,10 +3136,13 @@ b {
         box-shadow: inherit; }
 
 @media (max-width: 540px) {
+  .PesonalCompaignBanner {
+    padding: 30px 0px !important;
+  }
   .SignInEmail {
     display: none; }
   .SignUp {
-    padding: 20px 20px 20px 20px; }
+    padding: 30px 0px !important; }
     .SignUp .numberSelection {
       display: none; }
   .SignUpTitle {
@@ -3132,14 +3243,6 @@ b {
     background-size: cover; }
     .SavingAccount .Link {
       color: #fff !important; } }
-
-.HighInterestText {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.01em; }
-
 #counter {
   font-weight: normal;
   letter-spacing: 1px;
@@ -3316,6 +3419,7 @@ button:focus {
   flex-wrap: wrap; }
 
 .blackhead {
+  font-size: 18px;
   color: #363636; }
 
 .expandTypo p {
@@ -3565,6 +3669,9 @@ button:focus {
     font-size: 12px !important;
     width: 80px;
     text-align: center; }
+    .brazilianButton button {
+      width: 116px !important;
+    }
   .BlogSocialList li:not(:last-child) {
     margin-right: 10px; }
   .BlogSocialList li:first-of-type a,.BlogSocialList li:first-of-type button {
@@ -3856,19 +3963,6 @@ button:focus {
     border-bottom: 1px dashed #9ea0a5 !important; }
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
-
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 @media (max-width: 540px) {
   .YearsSec {
     padding: 30px 0px !important; }
@@ -4313,7 +4407,7 @@ button:focus {
     height: 100%; }
 
 .PesonalBanner {
-  background-image: url("https://i.imgur.com/1OhH9GF.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F1OhH9GF.png?alt=media");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4447,7 +4541,7 @@ button:focus {
       text-align: center; } }
 
 .ExchangeBanner {
-  background-image: url("https://i.imgur.com/1OhH9GF.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2F1OhH9GF.png?alt=media");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -4569,19 +4663,6 @@ button:focus {
     border-bottom: 1px dashed #9ea0a5 !important; }
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
-
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 .charityImg {
   z-index: 1;
   position: relative;
@@ -4640,9 +4721,6 @@ button:focus {
     margin-bottom: -7px; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li:not(:last-child) {
       margin-bottom: 50px;
       height: 45px; } }
@@ -4845,7 +4923,7 @@ button:focus {
   font-size: 14px; }
 
 .SavingAccount {
-  background-image: url("https://i.imgur.com/UQVk2iI.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FUQVk2iI.png?alt=media");
   background-repeat: no-repeat;
   background-position: left; }
 
@@ -5021,18 +5099,6 @@ button:focus {
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
 
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
       font-size: 36px !important;
@@ -5052,9 +5118,6 @@ button:focus {
     text-align: left !important; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li:not(:last-child) {
       margin-bottom: 50px;
       height: 45px; } }
@@ -5141,7 +5204,7 @@ button:focus {
   color: #FFFFFF !important; }
 
 .InterestBanner .selectCountry {
-  width: 14% !important; }
+  width: 10% !important; }
 
   .InputBox1 .MuiInputBase-input {
     padding: 0px 0px 4px; }
@@ -5244,18 +5307,6 @@ button:focus {
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
 
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 .PersonalCompanyList4 {
   display: flex;
   justify-content: space-between;
@@ -5282,9 +5333,6 @@ button:focus {
       font-size: 17px; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li:not(:last-child) {
       margin-bottom: 50px;
       height: 45px; } }
@@ -5376,18 +5424,6 @@ button:focus {
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
 
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
       font-size: 36px !important;
@@ -5405,9 +5441,6 @@ button:focus {
       font-size: 17px; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li:not(:last-child) {
       margin-bottom: 50px;
       height: 45px; } }
@@ -5475,18 +5508,6 @@ button:focus {
   .inputRow .MuiInput-underline:hover:not(.Mui-disabled):before {
     border-bottom: 1px dashed #9ea0a5 !important; }
 
-.PersonalCompanyList {
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 0px; }
-  .PersonalCompanyList li {
-    font-size: 16px;
-    color: #9ea0a5 !important;
-    position: relative;
-    padding-left: 60px;
-    display: flex;
-    align-items: center; }
-
 @media (max-width: 540px) {
     .PesonalBanner .PersonalCont h1 {
       font-size: 36px !important;
@@ -5504,9 +5525,6 @@ button:focus {
       font-size: 17px; }
   .FinalTextBox {
     padding: 20px 0px; }
-  .PersonalCompanyList {
-    display: inherit !important;
-    margin-bottom: 0px; }
     .PersonalCompanyList li {
       width: 100% !important; }
     .PersonalCompanyList li:not(:last-child) {
@@ -5629,7 +5647,7 @@ button:focus {
           font-size: 14px !important;
       }
         .compaignForm {
-          padding: 30px 30px !important;
+          padding: 15px !important;
       }
         .circle-cont .blue-circle {
           width: 275px;
@@ -8914,7 +8932,7 @@ button:focus {
       .dropdown-menu {
       position: absolute;
       top: 100%;
-      left: 0;
+      left: 0px;
       z-index: 1000;
       display: none;
       float: left;
@@ -15262,7 +15280,7 @@ button:focus {
 }
 
 /* Icons */
-@font-face
+/* @font-face
 {
     font-family: 'slick';
     font-weight: normal;
@@ -15270,7 +15288,8 @@ button:focus {
 
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-}
+    font-display: swap;
+  } */
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -15718,6 +15737,7 @@ select:-webkit-autofill:focus {
     } */
     .numberSelection .selectCountry .dropdown-menu.show{
       background-color: #fff !important;
+      width: 500px;
     }
     .Appbtn.disabled{
       background-color: #0667eb !important;
@@ -16029,6 +16049,33 @@ select:-webkit-autofill:focus {
     /* padding: 0 0 0 1rem; */
     width: 60px;
   }
+
+  @media (min-width: 1200px) {
+    .compaignHeading {
+      padding-right: 170px;
+    }
+    .noBreakHeading {
+      width: 65%;
+    }
+    .noBreakHomeHeading {
+      width: 60%;
+    }
+    .noBreakBannerHeading {
+      width: 91%;
+    }
+    .noBreakOnlineCurrencyHeading {
+      width: 85%;
+    }
+    .noBreakGetPaidHeading {
+      width: 70%;
+    }
+    .compaignHighYield {
+      width: 48%;
+    }
+    .footerBreakText {
+      width: 38%;
+    }
+  }
   @media (max-width: 540px) {
     .dropdown-more {
       padding: 8px 0px;
@@ -16090,6 +16137,9 @@ select:-webkit-autofill:focus {
       margin: 40px 0px 20px;}
     .compaignFormCont .form-group {
       margin-bottom: 30px;}
+      .compaignFormCont .numberSelection .selectCountry .dropdown-menu.show {
+        width: 378px;
+    }
     .compaignFormCont input {
       border: none;
       border-bottom: 1px solid #0f6df5 !important;
@@ -16119,7 +16169,7 @@ select:-webkit-autofill:focus {
         justify-content: space-between;
         flex-wrap: wrap;}
         .inflation-cont {
-          padding: 0 4rem;
+          padding: 0 1.5rem;
           width: 25%;
         }
         .inflation-cont:last-child {
@@ -16136,7 +16186,8 @@ select:-webkit-autofill:focus {
           .compaignLink {
             color: #ee7120 !important;}
           .Waitlistbtn {
-            width: 35%;
+            width: 100%;
+            max-width: 270px;
             margin: 0px auto;
             margin-top: 40px;}
             .campaignFaq {
@@ -16159,9 +16210,6 @@ select:-webkit-autofill:focus {
   box-shadow: inherit;
   border-bottom: 1px solid #0f6df5;
   color: #495057;
-}
-.width80 {
-  width: 80%;
 }
 .compaignFormCont .selectCountry .btn {
   border-bottom: 0px !important;
@@ -16209,7 +16257,7 @@ select:-webkit-autofill:focus {
   outline: none;
 }
 .PesonalCompaignBanner {
-  background-image: url(https://i.imgur.com/Vbv2uT3.png);
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FVbv2uT3.png?alt=media");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -16218,19 +16266,26 @@ select:-webkit-autofill:focus {
   margin-top: 98px;
 }
 .CompaignSignUp {
-  background-image: url(https://i.imgur.com/HL4RcXS.png);
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FHL4RcXS.png?alt=media");
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 134px 0 134px 0;
   text-align: center;
 }
-
-@media (max-width: 375px) {
-  .compaign-select .selectCountry {
-    width: 25% !important;
-  }
-  .compaign-select .numberSelection .inputNum {
-    width: 70% !important;
-  }
+.earningText {
+  border: 1px solid #eeeeec;
+  border-radius: 13px;
+  width: auto;
+  display: inline-block;
+  padding: 0px 32px;
+  margin-bottom: 1rem;
+}
+.earningText p {
+  margin-bottom: 0px;
+  font-size: 13px;
+  color: #0667eb !important;
+}
+.dropdown-header input::placeholder{
+  color: #9ea1a6 !important
 }

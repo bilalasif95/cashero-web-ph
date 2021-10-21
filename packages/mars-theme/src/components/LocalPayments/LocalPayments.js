@@ -17,13 +17,13 @@ const LocalPayments = ({ i18n }) => {
 		<div className="MoneyRequest sm-mt-40">
 			<div className="row align-items-center">
 				<div className="col-md-6 sm-mb-30">
-					<img className="img-fluid mx-auto d-block" alt="Mobile" src={Mobile} />
+					<img className="img-fluid mx-auto d-block" height="100%" width="479px" alt="Mobile" src={Mobile} />
 				</div>
 				<div className="col-md-6">
 					<div className="MoneyRequestCont">
 						<Fade triggerOnce direction="up" delay={100}>
 							<h2 className="oneAppTitle">
-								{i18n.t("Local_and_Global_Instant")} <span className="br-block-with-no-display"></span> {i18n.t("Payments_at_the_Tip")} <span className="br-block-with-no-display"></span> {i18n.t("of_Your_Fingers")}
+								{i18n.t("Local_and_Global_Instant")}
 							</h2>
 						</Fade>
 						<Fade triggerOnce direction="up" delay={300}>
@@ -33,7 +33,7 @@ const LocalPayments = ({ i18n }) => {
 						</Fade>
 						<Fade triggerOnce direction="up" delay={700}>
 							<button onClick={appModalOpen} className="LinkBtn">
-								{i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Get_Early_Access")} <img className="ArrowBtn" height="24px" width="24px" alt="Arrow" src={Arrow} />
 							</button>
 						</Fade>
 						{appModal && <GetTheAppModal open={appModal} handleClose={appModalClose} />}

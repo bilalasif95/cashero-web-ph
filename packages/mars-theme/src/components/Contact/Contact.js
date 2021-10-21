@@ -11,7 +11,7 @@ const Contact = ({ i18n }) => {
 						<div className="row">
 							<div className="col-md-12 d-flex">
 								<div className="ContactBox w-100">
-									<img className="img-fluid" alt="Chat" src={Chat} />
+									<img className="img-fluid" height="100px" width="100px" alt="Chat" src={Chat} />
 									<h2>{i18n.t("In_App_Chat")}</h2>
 									<p>{i18n.t("Monday_Sunday")} &nbsp; {i18n.t("hours")}</p>
 								</div>

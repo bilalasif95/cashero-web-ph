@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "../link";
 import Flags from "../../assets/Flags.svg";
+import FlagsBR from "../../assets/FlagsBR.svg";
 import usdflag from "../../assets/usdflag.png";
+import usdflagBR from "../../assets/usdflagBR.png";
 import gbpflag from "../../assets/gbpflag.png";
+import gbpflagBR from "../../assets/gbpflagBR.png";
 import eurflag from "../../assets/eurflag.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const MultiCurrency = ({ i18n }) => {
+	const [storage, setStorage] = useState("")
+	useEffect(() => {
+		setStorage(localStorage.getItem("lang"))
+	}, [i18n.language])
 	return (
 		<div className="MultiCurrency">
 			<div className="row">
@@ -22,7 +29,7 @@ const MultiCurrency = ({ i18n }) => {
 							</h2>
 							<p>{i18n.t("Multi_Currency_Savings_Account_MainP")} </p>
 							<Link link="/multi-currency-savings-account" className="Link sm-mb-30">
-								{i18n.t("Learn_more_about_Accounts")}<img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Learn_more_about_Accounts")}<img className="ArrowBtn" height="24px" width="24px" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>
@@ -35,7 +42,9 @@ const MultiCurrency = ({ i18n }) => {
 									<Fade triggerOnce direction="right" duration={2000} delay={100}>
 										<img
 											className="d-block"
-											src={usdflag}
+											height="100%"
+											width="100%"
+											src={storage === "brazilian" ? usdflagBR : usdflag}
 											alt="american flag"
 										/>
 									</Fade>
@@ -44,7 +53,9 @@ const MultiCurrency = ({ i18n }) => {
 									<Fade triggerOnce direction="left" duration={2000} delay={300}>
 										<img
 											className="d-block"
-											src={gbpflag}
+											height="100%"
+											width="100%"
+											src={storage === "brazilian" ? gbpflagBR : gbpflag}
 											alt="uk flag"
 										/>
 									</Fade>
@@ -53,6 +64,8 @@ const MultiCurrency = ({ i18n }) => {
 									<Fade triggerOnce direction="right" duration={2000} delay={100}>
 										<img
 											className="d-block"
+											height="100%"
+											width="100%"
 											src={eurflag}
 											alt="europe flag"
 										/>
@@ -63,7 +76,9 @@ const MultiCurrency = ({ i18n }) => {
 					</div>
 					<img
 						className="img-fluid mx-auto main-flags"
-						src={Flags}
+						height="100%"
+						width="100%"
+						src={storage === "brazilian" ? FlagsBR : Flags}
 						alt="Flags"
 					/>
 				</div>

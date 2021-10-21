@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import Clock from "../../assets/clockImg.svg";
 import Instant from "../../assets/instant.svg";
@@ -16,6 +16,7 @@ import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import KuWu from "../../assets/KuWu.png";
+import KuWuBR from "../../assets/KuWuBR.png";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Head, connect } from "frontity";
 import Link from "../link";
@@ -24,6 +25,10 @@ import { withTranslation } from "react-i18next";
 
 const ReceivePayments = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -39,7 +44,17 @@ const ReceivePayments = ({ state, i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/instant-money-transfer/"
         />
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/instant-money-transfer/" />
+        {i18n.language === "brazilian" ?
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/instant-money-transfer/" />
+            <html lang="pt-BR" />
+          </>
+          :
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/instant-money-transfer/" />
+            <html lang="en" />
+          </>
+        }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/instant-money-transfer/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
@@ -62,11 +77,11 @@ const ReceivePayments = ({ state, i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway"> {i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="KuWu" className="img-fluid mx-auto d-block" src={KuWu} />
+              <img alt="KuWu" width="100%" height="100%" className="img-fluid mx-auto d-block" src={storage === "brazilian" ? KuWuBR : KuWu} />
             </div>
           </div>
         </div>
@@ -98,30 +113,22 @@ const ReceivePayments = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img className="img-fluid" alt="Favourite" src={Fav} />
+                  <img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img
-                  className="img-fluid"
-                  alt="Dollar"
-                  src={Dollar}
-                />
-                <h3>
-                  {i18n.t("Add_funds_to_your_account")}
-                </h3>
+                <img className="img-fluid" height="152px" width="152px" alt="Dollar" src={Dollar} />
+                <h3>{i18n.t("Add_funds_to_your_account")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Path" src={Path} />
-                  <h3>
-                    {i18n.t("Send_request_and_receive_payments_in_an_instant")}
-                  </h3>
+                  <img className="img-fluid" height="152px" width="152px" alt="Path" src={Path} />
+                  <h3>{i18n.t("Send_request_and_receive_payments_in_an_instant")}</h3>
                 </div>
               </Fade>
             </div>
@@ -131,7 +138,7 @@ const ReceivePayments = ({ state, i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Send_request_and_receive_payments_in_an_instant_P")}</p>
                 <button onClick={appModalOpen} className="LinkBtn">
-                  {i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img alt="arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow1} />
                 </button>
               </div>
             </div>

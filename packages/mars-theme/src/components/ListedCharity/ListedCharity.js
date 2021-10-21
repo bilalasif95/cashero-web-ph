@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Clock from "../../assets/clockImg.svg";
 import donateDollar from "../../assets/donateDollar.svg";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
@@ -8,6 +8,7 @@ import StepsWallet from "../../assets/stepsWallet.png";
 import heartDollar from "../../assets/heartDollar.svg";
 import listHome from "../../assets/listHome.svg";
 import freeFund from "../../assets/freeFund.png";
+import freeFundBR from "../../assets/freeFundBR.png";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import QuestionTabs from "../Tabs/Tabs";
 import SignupSection from "../signupSection/signupSection";
@@ -23,6 +24,10 @@ import { withTranslation } from "react-i18next";
 
 const ListedCharity = ({ i18n }) => {
   const [appModal, setAppModal] = useState(false);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -36,7 +41,17 @@ const ListedCharity = ({ i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/become-listed-charity/"
         />
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/become-listed-charity/" />
+        {i18n.language === "brazilian" ?
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/become-listed-charity/" />
+            <html lang="pt-BR" />
+          </>
+          :
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/become-listed-charity/" />
+            <html lang="en" />
+          </>
+        }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/become-listed-charity/" />
       </Head>
       <div className="PesonalBanner">
@@ -50,11 +65,11 @@ const ListedCharity = ({ i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-6">
-              <img alt="free Fund" className="img-fluid mx-auto d-block" src={freeFund} />
+              <img alt="free Fund" className="img-fluid mx-auto d-block" height="100%" width="579px" src={storage === "brazilian" ? freeFundBR : freeFund} />
             </div>
           </div>
         </div>
@@ -84,30 +99,22 @@ const ListedCharity = ({ i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img className="img-fluid" alt="Favourite" src={Fav} />
+                  <img className="img-fluid" height="100%" width="100%" alt="Favourite" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
-                <img
-                  className="img-fluid"
-                  alt="list Image"
-                  src={listImg}
-                />
-                <h3>
-                  {i18n.t("Apply_to_become_a_listed_charity")}
-                </h3>
+                <img className="img-fluid" alt="list Image" height="152px" width="152px" src={listImg} />
+                <h3>{i18n.t("Apply_to_become_a_listed_charity")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Steps Wallet" src={StepsWallet} />
-                  <h3>
-                    {i18n.t("Receive_donations_and_make_a_difference")}
-                  </h3>
+                  <img className="img-fluid" height="152px" width="152px" alt="Steps Wallet" src={StepsWallet} />
+                  <h3>{i18n.t("Receive_donations_and_make_a_difference")}</h3>
                 </div>
               </Fade>
             </div>
@@ -117,7 +124,7 @@ const ListedCharity = ({ i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Listed_Charity_Work_P")}</p>
                 <button onClick={appModalOpen} className="LinkBtn">
-                  {i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="arrow" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img className="ArrowBtn" height="24px" width="24px" alt="arrow" src={Arrow1} />
                 </button>
               </div>
             </div>

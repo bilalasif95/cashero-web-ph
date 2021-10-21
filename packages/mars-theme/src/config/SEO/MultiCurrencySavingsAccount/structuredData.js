@@ -79,8 +79,8 @@ export const organizationStructuredData = () => {
     url: "https://www.cashero.com/multi-currency-savings-account/",
     name: "Multi-Currency Savings Account | Cashero App",
     description: "Don’t be limited to keeping your savings in a single currency. With the Cashero Multi-Currency Savings Account you can hold your savings in USD, EUR, and GBP, offering you protection against currency fluctuations.",
-    logo: "https://i.imgur.com/Bs18pDE.png",
-    image: "https://i.imgur.com/RQSek8v.gif",
+    logo: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FBs18pDE.png?alt=media",
+    image: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FRQSek8v.gif?alt=media",
     "brand": {
       "@type": "Website",
       "name": "Cashero App",

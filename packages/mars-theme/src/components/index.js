@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Global, css, connect, Head } from "frontity";
 import Switch from "@frontity/components/switch";
+import { parse as parseQs } from "qs";
 // import Header from "./header";
 import List from "./list";
 import CampaignHeader from "../components/campaignHeader/campaignHeader";
@@ -23,13 +24,16 @@ import PersonalCompaignIT from "./PersonalCompaignIT/PersonalCompaignIT";
 import PersonalCompaignZA from "./PersonalCompaignZA/PersonalCompaignZA";
 import PersonalCompaignIN from "./PersonalCompaignIN/PersonalCompaignIN";
 import PersonalCompaignID from "./PersonalCompaignID/PersonalCompaignID";
+import PersonalCompaignRU from "./PersonalCompaignRU/PersonalCompaignRU";
+import PersonalCompaignNl from "./PersonalCompaignNl/PersonalCompaignNl";
 import PersonalCompaignPH from "./PersonalCompaignPH/PersonalCompaignPH";
 import PersonalCompaignCO from "./PersonalCompaignCO/PersonalCompaignCO";
 import PersonalCompaignES from "./PersonalCompaignES/PersonalCompaignES";
+import PersonalCompaignPHEN from "./PersonalCompaignPHEN/PersonalCompaignPHEN";
 import Footer from "./footer/Footer";
 import BlogPage from "./BlogPage/BlogPage";
 import HomePage from "./HomePage/HomePage";
-import { Company } from "./Company/Company";
+import Company from "./Company/Company";
 import ContactUs from "./ContactUs/ContactUs";
 import Donation from "./Donation/Donation";
 import ListedCharity from "./ListedCharity/ListedCharity";
@@ -44,6 +48,7 @@ import AppTerms from "./AppTerms/AppTerms";
 import AppPrivacy from "./AppPrivacy/AppPrivacy";
 import Sitemap from "./Sitemap/Sitemap";
 import Thankyou from "./Thankyou/Thankyou";
+import Countries from "./Countries/Countries";
 import { websiteLink } from "../config/config";
 import { I18nextProvider } from "react-i18next";
 import i18n from '../config/i18n';
@@ -69,20 +74,77 @@ const Theme = ({ state }) => {
     }
   })
   // const [version, setVersion] = useState(false);
-  // useEffect(() => {
-  //   let name = 'cashero-web'
-  //   let version = '1.0.26'
-  //   const last_version = localStorage.getItem(`${name}-Version`)
-  //   if (!last_version) {
-  //     setVersion(true)
-  //     // window.location.reload();
-  //   }
-  //   if (last_version !== version) {
-  //     localStorage.setItem(`${name}-Version`, version)
-  //     setVersion(true)
-  //     // window.location.reload();
-  //   }
-  // }, [])
+  useEffect(() => {
+    const qs = parseQs(window.location.search.substr(1));
+    if (data.isPersonalCompaignPT) {
+      i18n.changeLanguage("portuguese")
+    }
+    else if (data.isPersonalCompaignAR) {
+      i18n.changeLanguage("arspanish")
+    }
+    else if (data.isPersonalCompaignBR || qs.lang === "pt_BR") {
+      i18n.changeLanguage("brazilian")
+    }
+    else if (data.isPersonalCompaignCL) {
+      i18n.changeLanguage("clspanish")
+    }
+    else if (data.isPersonalCompaignCO) {
+      i18n.changeLanguage("malay")
+    }
+    else if (data.isPersonalCompaignES) {
+      i18n.changeLanguage("spspanish")
+    }
+    else if (data.isPersonalCompaignFR) {
+      i18n.changeLanguage("french")
+    }
+    else if (data.isPersonalCompaignGR) {
+      i18n.changeLanguage("german")
+    }
+    else if (data.isPersonalCompaignID) {
+      i18n.changeLanguage("bahasa")
+    }
+    else if (data.isPersonalCompaignENRU) {
+      i18n.changeLanguage("ruenglish")
+    }
+    else if (data.isPersonalCompaignIN) {
+      i18n.changeLanguage("inenglish")
+    }
+    else if (data.isPersonalCompaignENNl) {
+      i18n.changeLanguage("nlenglish")
+    }
+    else if (data.isPersonalCompaignIT) {
+      i18n.changeLanguage("italian")
+    }
+    else if (data.isPersonalCompaignPH) {
+      i18n.changeLanguage("filipino")
+    }
+    else if (data.isPersonalCompaignZA) {
+      i18n.changeLanguage("zaenglish")
+    }
+    else if (data.isPersonalCompaignMX) {
+      i18n.changeLanguage("spanish")
+    }
+    else if (data.isPersonalCompaign || qs.lang === "en") {
+      i18n.changeLanguage("english")
+      localStorage.setItem("lang", "english")
+    }
+    else if (data.isPersonalCompaignPHEN) {
+      i18n.changeLanguage("enfilipino")
+    }
+    else { }
+    //   let name = 'cashero-web'
+    //   let version = '1.0.26'
+    //   const last_version = localStorage.getItem(`${name}-Version`)
+    //   if (!last_version) {
+    //     setVersion(true)
+    //     // window.location.reload();
+    //   }
+    //   if (last_version !== version) {
+    //     localStorage.setItem(`${name}-Version`, version)
+    //     setVersion(true)
+    //     // window.location.reload();
+    //   }
+  }, [i18n.language])
   // const onRefreshButtonClick = () => {
   //   window.location.reload();
   // }
@@ -92,22 +154,44 @@ const Theme = ({ state }) => {
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
         <meta name="google-site-verification" content="ULLpQHl1XeVHE2H-ZSPLosCUY10CBkttCwbNrfMBVsc" />
         <meta name="facebook-domain-verification" content="ao1nxtpttahaf3nsk7ukhlila8irwf" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
+        <meta name="googlebot" content="noindex" />
         <link rel="canonical" href={websiteLink} />
+        <link rel="preload" as="font" font-display="swap" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://ipwhois.app" crossorigin />
+        <link rel="dns-prefetch" href="https://ipwhois.app" />
+        <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+        <link rel="dns-prefetch" href="https://www.gstatic.com" />
+        <link rel="preconnect" href="https://firestore.googleapis.com" crossorigin />
+        <link rel="dns-prefetch" href="https://firestore.googleapis.com" />
+        <link rel="preconnect" href="https://stats.g.doubleclick.net" crossorigin />
+        <link rel="dns-prefetch" href="https://stats.g.doubleclick.net" />
+        <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://www.google.com.pk" crossorigin />
+        <link rel="dns-prefetch" href="https://www.google.com.pk" />
+        <link rel="preconnect" href="https://www.facebook.com" crossorigin />
+        <link rel="dns-prefetch" href="https://www.facebook.com" />
+        <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossorigin />
+        <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
+        <link rel="preconnect" href="https://cdn.loom.com" crossorigin />
+        <link rel="dns-prefetch" href="https://cdn.loom.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
         <meta property="og:title" content={state.frontity.title} />
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={websiteLink} />
-        <meta property="og:image" content="https://i.imgur.com/EMTwA7F.png" />
+        <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FEMTwA7F.png?alt=media" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={state.frontity.title} />
         <meta name="twitter:description" content={state.frontity.description} />
         <meta name="twitter:url" content={websiteLink} />
-        <meta name="twitter:image" content="https://i.imgur.com/WjbRyFw.png" />
+        <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FWjbRyFw.png?alt=media" />
         <meta http-equiv='cache-control' content='no-cache' />
         <meta http-equiv='expires' content='0' />
         <meta http-equiv='pragma' content='no-cache' />
@@ -122,7 +206,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO) ? <CampaignHeader /> : <List />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -166,13 +250,17 @@ const Theme = ({ state }) => {
           <PersonalCompaignIT when={data.isPersonalCompaignIT} />
           <PersonalCompaignZA when={data.isPersonalCompaignZA} />
           <PersonalCompaignIN when={data.isPersonalCompaignIN} />
+          <PersonalCompaignRU when={data.isPersonalCompaignENRU} />
+          <PersonalCompaignNl when={data.isPersonalCompaignENNl} />
           <PersonalCompaignID when={data.isPersonalCompaignID} />
           <PersonalCompaignPH when={data.isPersonalCompaignPH} />
           <PersonalCompaignCO when={data.isPersonalCompaignCO} />
           <PersonalCompaignES when={data.isPersonalCompaignES} />
+          <PersonalCompaignPHEN when={data.isPersonalCompaignPHEN} />
+          <Countries when={data.isCountries} />
         </Switch>
         {/* </Main> */}
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO) ? <CampaignFooter /> : <Footer />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
       </I18nextProvider >
     </>
   );

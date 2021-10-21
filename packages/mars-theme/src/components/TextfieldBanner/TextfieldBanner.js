@@ -23,7 +23,7 @@ const TextfieldBanner = ({ i18n }) => {
   const [utmSource, setUtmSource] = useState("");
   const [utmTerm, setUtmTerm] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [phonenoLength, setPhoneNoLength] = useState(0);
+  // const [phonenoLength, setPhoneNoLength] = useState(0);
   const toggle = () => {
     setSearchTerm("");
     setDropdownOpen((prevState) => !prevState);
@@ -31,16 +31,22 @@ const TextfieldBanner = ({ i18n }) => {
   const [newPhone, setNewPhoneNumber] = useState("");
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
-    const results = searchResults.filter(
-      (country) =>
-        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-        country.dial_code.includes(searchTerm.toLocaleLowerCase())
-    );
+    const results = i18n.language === "brazilian" ?
+      searchResults.filter(
+        (country) =>
+          country.name_br.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+          country.dial_code.includes(searchTerm.toLocaleLowerCase())
+      ) :
+      searchResults.filter(
+        (country) =>
+          country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+          country.dial_code.includes(searchTerm.toLocaleLowerCase())
+      );
     setSearchResults2(results);
   };
   const selectCountry = (country) => {
     setCode(country.dial_code);
-    setPhoneNoLength(country.phone_length);
+    // setPhoneNoLength(country.phone_length);
     setSearchTerm("");
     setSearchResults2(counrtrylist);
   };
@@ -88,16 +94,16 @@ const TextfieldBanner = ({ i18n }) => {
       .then((res) => {
         if (res.success) {
           setCode(res.country_phone);
-          const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
-          setPhoneNoLength(countryCode[0].phone_length)
+          // const countryCode = counrtrylist.filter(({ code }) => code === res.country_code)
+          // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
           setCode("+1");
-          setPhoneNoLength(10);
+          // setPhoneNoLength(10);
         }
       }).catch(() => {
         setCode("+1");
-        setPhoneNoLength(10);
+        // setPhoneNoLength(10);
       })
   }, [])
   const onCaptchaHandler = (value) => {
@@ -133,7 +139,7 @@ const TextfieldBanner = ({ i18n }) => {
                     >
                       <div className="flag-name">
                         <span>{item.flag}</span>
-                        {item.name}
+                        {i18n.language === "brazilian" ? item.name_br : item.name}
                       </div>
                       <div className="code">{item.dial_code}</div>
                     </DropdownItem>
@@ -146,7 +152,7 @@ const TextfieldBanner = ({ i18n }) => {
                     >
                       <div className="flag-name">
                         <span>{item.flag}</span>
-                        {item.name}
+                        {i18n.language === "brazilian" ? item.name_br : item.name}
                       </div>
                       <div className="code">{item.dial_code}</div>
                     </DropdownItem>
@@ -165,9 +171,9 @@ const TextfieldBanner = ({ i18n }) => {
         </div>
         <button
           onClick={() => getStarted()}
-          disabled={loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value}
+          disabled={loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone)) || !value}
           className={
-            loading || !newPhone.length || (newPhone.length !== phonenoLength) || !value
+            loading || !newPhone.length || (!/^[0-9]{7,15}$/.test(newPhone)) || !value
               ? "btn btn-primary my-2 my-sm-0 Appbtn disabled"
               : "btn btn-primary my-2 my-sm-0 Appbtn"
           }
@@ -184,6 +190,7 @@ const TextfieldBanner = ({ i18n }) => {
           onChange={onCaptchaHandler}
           height="140px"
           width="100%"
+          hl={i18n.language === "brazilian" ? "pt-BR" : "en"}
         />
       </div>
       {error &&

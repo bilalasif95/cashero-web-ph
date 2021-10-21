@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "frontity";
+import { parse as parseQs } from "qs";
 // import { connect, styled, decode } from "frontity";
 // import Item from "./list-item";
 // import Pagination from "./pagination";
@@ -14,12 +15,14 @@ import CharityImg from "../../assets/charityImg.svg";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Android from "../../assets/AndroidApp.svg";
+import AndroidBR from "../../assets/AndroidAppBR.svg";
 import IOS from "../../assets/iOSApp.svg";
+import IOSBR from "../../assets/iOSAppBR.svg";
 import { androidAppLink, iosAppLink, ipAPI } from "../../config/config";
 import { withTranslation } from "react-i18next";
 import { callApi } from "../../config/call-api";
 
-const List = ({ i18n }) => {
+const List = ({ i18n, state }) => {
   const [toggleBotton, setToggleBotton] = useState(false);
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
@@ -31,6 +34,10 @@ const List = ({ i18n }) => {
   const [openDiv, setOpenDiv] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [Language, setLanguage] = useState(i18n.language);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const onToggleButtonClicked = () => {
     if (toggleBotton) {
       return setToggleBotton(false);
@@ -89,30 +96,63 @@ const List = ({ i18n }) => {
     }
   };
   useEffect(() => {
+    if (localStorage.getItem("lang") === "brazilian") {
+      setLanguage("brazilian")
+      localStorage.setItem("lang", "brazilian")
+      i18n.changeLanguage("brazilian")
+    }
+    else if (localStorage.getItem("lang") === "english") {
+      setLanguage("english")
+      localStorage.setItem("lang", "english")
+      i18n.changeLanguage("english")
+    }
+    else { }
+  }, [state.router.link])
+  useEffect(() => {
+    const qs = parseQs(window.location.search.substr(1));
     callApi(ipAPI, "get")
       .then((res) => {
         if (res.success) {
-          if (res.country_code === "BR") {
+          if (res.country_code === "BR" || qs.lang === "pt_BR" || localStorage.getItem("lang") === "brazilian") {
             setLanguage("brazilian")
+            localStorage.setItem("lang", "brazilian")
             i18n.changeLanguage("brazilian")
           }
           else {
             setLanguage("english")
+            localStorage.setItem("lang", "english")
             i18n.changeLanguage("english")
           }
         }
         else {
-          setLanguage("english")
-          i18n.changeLanguage("english")
+          if (qs.lang === "pt_BR" || localStorage.getItem("lang") === "brazilian") {
+            setLanguage("brazilian")
+            localStorage.setItem("lang", "brazilian")
+            i18n.changeLanguage("brazilian")
+          }
+          else {
+            setLanguage("english")
+            localStorage.setItem("lang", "english")
+            i18n.changeLanguage("english")
+          }
         }
       }).catch(() => {
-        setLanguage("english")
-        i18n.changeLanguage("english")
+        if (qs.lang === "pt_BR" || localStorage.getItem("lang") === "brazilian") {
+          setLanguage("brazilian")
+          localStorage.setItem("lang", "brazilian")
+          i18n.changeLanguage("brazilian")
+        }
+        else {
+          setLanguage("english")
+          localStorage.setItem("lang", "english")
+          i18n.changeLanguage("english")
+        }
       })
     setInnerWidth(window.innerWidth)
     window.addEventListener("scroll", handleScroll)
   }, []);
   const setLanguageLocal = (lang) => {
+    localStorage.setItem("lang", lang);
     setLanguage(lang);
     i18n.changeLanguage(lang);
   };
@@ -122,7 +162,7 @@ const List = ({ i18n }) => {
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light customNav">
             <Link link="/" className="navbar-brand">
-              <img className="Logo" alt="Logo" src={Logo} />
+              <img className="Logo" height="100%" width="100%" alt="Logo" src={Logo} />
             </Link>
             <button
               className="navbar-toggler"
@@ -156,7 +196,7 @@ const List = ({ i18n }) => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onPersonalToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    id="navbarDropdown"
+                    id="PersonalDropdown"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -166,7 +206,7 @@ const List = ({ i18n }) => {
                   </a>
                   <div
                     className={personalToggleBotton ? "dropdown-menu toggleButtonShow" : "dropdown-menu"}
-                    aria-labelledby="navbarDropdown"
+                    aria-labelledby="PersonalDropdown"
                   >
                     <div className="row">
                       <div className="col-md-6">
@@ -181,7 +221,7 @@ const List = ({ i18n }) => {
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/high-yield-savings-account">
-                                {i18n.t("High_Yield_Savings_Account_Menu")}
+                                {i18n.t("High_Yield_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
@@ -226,7 +266,7 @@ const List = ({ i18n }) => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onBusinessToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    id="navbarDropdown"
+                    id="BusinessDropdown"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -236,7 +276,7 @@ const List = ({ i18n }) => {
                   </a>
                   <div
                     className={businessToggleBotton ? "dropdown-menu toggleButtonShow BusinessDropdown" : "dropdown-menu BusinessDropdown"}
-                    aria-labelledby="navbarDropdown"
+                    aria-labelledby="BusinessDropdown"
                   >
                     <div className="row">
                       <div className="col-md-6">
@@ -251,7 +291,7 @@ const List = ({ i18n }) => {
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
                               <Link link="/high-yield-savings-account">
-                                {i18n.t("High_Yield_Savings_Account_Menu")}
+                                {i18n.t("High_Yield_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
@@ -296,7 +336,7 @@ const List = ({ i18n }) => {
                 <li className="nav-item dropdown" onClick={innerWidth < 992 ? onDonationsToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    id="navbarDropdown"
+                    id="DonationsDropdown"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -306,7 +346,7 @@ const List = ({ i18n }) => {
                   </a>
                   <div
                     className={donationsToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
-                    aria-labelledby="navbarDropdown"
+                    aria-labelledby="DonationsDropdown"
                   >
                     <div className="row">
                       <div className="col-md-12">
@@ -348,7 +388,7 @@ const List = ({ i18n }) => {
                 <li className="nav-item dropdown languageDropdown" onClick={innerWidth < 992 ? onLanguageToggleButtonClicked : null}>
                   <a
                     className="nav-link dropdown-toggle"
-                    id="navbarDropdown"
+                    id="LanguageDropdown"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -358,12 +398,12 @@ const List = ({ i18n }) => {
                   </a>
                   <div
                     className={languageToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
-                    aria-labelledby="navbarDropdown"
+                    aria-labelledby="LanguageDropdown"
                   >
                     <div className="row">
                       <div className="col-md-12">
                         <div className="HeaderListCont">
-                        <p className="ListTitle CharityTitle">
+                          <p className="ListTitle CharityTitle">
                             <img
                               src={Lang}
                               alt="Charity"
@@ -376,7 +416,7 @@ const List = ({ i18n }) => {
                               English
                             </li>
                             <li onClick={() => { setLanguageLocal("brazilian"); setToggleBotton(false) }}>
-                              Portuguese (Brazil)
+                              Português
                             </li>
                           </ul>
                         </div>
@@ -410,8 +450,8 @@ const List = ({ i18n }) => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
-            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
+            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="132px" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
+            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="116px" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>
           </ul>
           {/* <button
             className="btn btn-primary my-2 my-sm-0 Appbtn GetAppBtn"

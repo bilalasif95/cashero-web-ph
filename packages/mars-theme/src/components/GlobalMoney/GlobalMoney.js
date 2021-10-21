@@ -23,6 +23,8 @@ const GlobalMoney = ({ i18n }) => {
 						>
 							<img
 								className="img-fluid mx-auto d-block"
+								height="100%"
+								width="100%"
 								alt="Locations"
 								src={Locations}
 							/>
@@ -37,10 +39,11 @@ const GlobalMoney = ({ i18n }) => {
 							alt="Cashero"
 							src={CasheroC}
 						/>
-
 					</div>
 					<img
 						className="img-fluid mx-auto c-map-mob sm-mt-30"
+						height="auto"
+						width="auto"
 						alt="Cashero"
 						src={TransferMoneyAbroad}
 					/>
@@ -57,7 +60,7 @@ const GlobalMoney = ({ i18n }) => {
 								{i18n.t("Transfer_Money_Abroad_P")}
 							</p>
 							<Link link="/transfer-money-abroad" className="Link">
-								{i18n.t("Learn_more_about_Transfers")}  <img className="ArrowBtn" alt="Arrow" src={Arrow} />
+								{i18n.t("Learn_more_about_Transfers")}  <img className="ArrowBtn" height="24px" width="24px" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
 					</div>

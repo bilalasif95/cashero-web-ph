@@ -25,7 +25,17 @@ const HomePage = ({ state, i18n }) => {
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="en-US" href={websiteLink} />
+        {i18n.language === "brazilian" ?
+          <>
+            <link rel="alternate" hreflang="pt-BR" href={websiteLink} />
+            <html lang="pt-BR" />
+          </>
+          :
+          <>
+            <link rel="alternate" hreflang="en-US" href={websiteLink} />
+            <html lang="en" />
+          </>
+        }
         <link rel="alternate" hreflang="x-default" href={websiteLink} />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
@@ -72,7 +82,7 @@ const HomePage = ({ state, i18n }) => {
             </div>
             <div className="col-md-4">
               <div className="bannerImg">
-                <img className="img-fluid " alt="Banner" src={CasheroIntro} />
+                <img className="img-fluid" height="100%" width="100%" alt="Banner" src={CasheroIntro} />
               </div>
             </div>
           </div>

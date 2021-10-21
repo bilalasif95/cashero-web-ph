@@ -17,14 +17,14 @@ const OnlineSave = ({ i18n }) => {
 		<div className="CurrencyConversion">
 			<div className="row flex-column-reverse flex-sm-row">
 				<div className="col-md-6">
-					<img className="img-fluid" alt="Exchange Coins" src={ExchangeCoins} />
+					<img className="img-fluid" height="100%" width="490px" alt="Exchange Coins" src={ExchangeCoins} />
 				</div>
 				<div className="col-md-6 sm-mb-30">
 					<div className="CurrencyConversionCont">
 						<div>
 							<Fade triggerOnce direction="up" delay={0}>
-								<h2 className="oneAppTitle">
-									{i18n.t("Transfer_Money_Instantly")} <span className="br-block-with-no-display"></span> {i18n.t("and_Save_on_Exchange")} <span className="br-block-with-no-display"></span> {i18n.t("Fees")}
+								<h2 className="oneAppTitle noBreakBannerHeading">
+									{i18n.t("Transfer_Money_Instantly")}
 								</h2>
 							</Fade>
 							<Fade triggerOnce direction="up" delay={300}>
@@ -32,7 +32,7 @@ const OnlineSave = ({ i18n }) => {
 							</Fade>
 							<Fade triggerOnce direction="up" delay={700}>
 								<button onClick={appModalOpen} className="LinkBtn">
-									{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" src={Arrow} />
+									{i18n.t("Get_Early_Access")} <img alt="arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow} />
 								</button>
 							</Fade>
 						</div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Head, connect } from "frontity";
 import Clock from "../../assets/clockImg.svg";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
@@ -13,7 +13,9 @@ import GlobeDollar from "../../assets/GlobeDollar.svg";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Casher0map from "../../assets/Casher0map.svg";
+import Casher0mapBR from "../../assets/Casher0mapBR.svg";
 import Done from "../../assets/done.svg";
+import DoneBR from "../../assets/doneBR.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import StepsDollar from "../../assets/StepsDollar.svg";
@@ -24,6 +26,10 @@ import { withTranslation } from "react-i18next";
 
 const Remittance = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
+  const [storage, setStorage] = useState("")
+  useEffect(() => {
+    setStorage(localStorage.getItem("lang"))
+  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -39,7 +45,17 @@ const Remittance = ({ state, i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/transfer-money-abroad/"
         />
-        <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/transfer-money-abroad/" />
+        {i18n.language === "brazilian" ?
+          <>
+            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/transfer-money-abroad/" />
+            <html lang="pt-BR" />
+          </>
+          :
+          <>
+            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/transfer-money-abroad/" />
+            <html lang="en" />
+          </>
+        }
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/transfer-money-abroad/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
@@ -62,11 +78,11 @@ const Remittance = ({ state, i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text">{i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span> <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Cashero map" className="mx-auto d-block w-100" src={Casher0map} />
+              <img alt="Cashero map" className="mx-auto d-block w-100" height="100%" width="100%" src={storage === "brazilian" ? Casher0mapBR : Casher0map} />
             </div>
           </div>
         </div>
@@ -89,16 +105,14 @@ const Remittance = ({ state, i18n }) => {
         <div className="getStarted">
           <div className="row">
             <div className="col-md-12">
-              <h3 className="getStartedTitle">
-                {i18n.t("Multi_Currency_Savings_Account_h3")}
-              </h3>
+              <h3 className="getStartedTitle">{i18n.t("Multi_Currency_Savings_Account_h3")}</h3>
             </div>
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 smBox1">
               <Fade triggerOnce direction="left">
                 <div className="GetStartedBox1 w-100">
-                  <img alt="Favourite" className="img-fluid" src={Fav} />
+                  <img alt="Favourite" height="100%" width="100%" className="img-fluid" src={Fav} />
                   <h3>{i18n.t("Multi_Currency_Savings_Account_Work1")}</h3>
                 </div>
               </Fade>
@@ -107,18 +121,18 @@ const Remittance = ({ state, i18n }) => {
               <div className="GetStartedBox2 w-100">
                 <img
                   className="img-fluid"
+                  height="152px"
+                  width="152px"
                   alt="Steps Dollar"
                   src={StepsDollar}
                 />
-                <h3>
-                  {i18n.t("Add_funds_to_your_account")}
-                </h3>
+                <h3>{i18n.t("Add_funds_to_your_account")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" alt="Done" src={Done} />
+                  <img className="img-fluid" height="100%" width="84px" alt="Done" src={storage === "brazilian" ? DoneBR : Done} />
                   <h3>
                     {i18n.t("Remittance_Work")}
                   </h3>
@@ -131,7 +145,7 @@ const Remittance = ({ state, i18n }) => {
               <div className="MultistepsCont">
                 <p>{i18n.t("Remittance_Work_P")}</p>
                 <button className="LinkBtn" onClick={appModalOpen}>
-                  {i18n.t("Get_Early_Access")} <img alt="Arrow" className="ArrowBtn" src={Arrow1} />
+                  {i18n.t("Get_Early_Access")} <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={Arrow1} />
                 </button>
               </div>
             </div>
