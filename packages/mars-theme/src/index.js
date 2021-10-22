@@ -349,7 +349,7 @@ const personalCompaignPHENHandler = {
 }
 
 const personalCompaignENRUHandler = {
-  pattern: "/ru",
+  pattern: "/en-ru",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -359,7 +359,7 @@ const personalCompaignENRUHandler = {
 }
 
 const personalCompaignENNlHandler = {
-  pattern: "/ng",
+  pattern: "/en-ni",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
