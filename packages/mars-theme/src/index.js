@@ -348,6 +348,36 @@ const personalCompaignPHENHandler = {
   }
 }
 
+const personalCompaignENRUHandler = {
+  pattern: "/en-ru",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignENRU: true,
+    })
+  }
+}
+
+const personalCompaignENNlHandler = {
+  pattern: "/en-ni",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignENNl: true,
+    })
+  }
+}
+
+const countriesHandler = {
+  pattern: "/countries",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isCountries: true,
+    })
+  }
+}
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -413,6 +443,9 @@ const marsTheme = {
         libraries.source.handlers.push(personalCompaignCOHandler);
         libraries.source.handlers.push(personalCompaignESHandler);
         libraries.source.handlers.push(personalCompaignPHENHandler);
+        libraries.source.handlers.push(personalCompaignENRUHandler);
+        libraries.source.handlers.push(personalCompaignENNlHandler);
+        libraries.source.handlers.push(countriesHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

@@ -24,6 +24,8 @@ import PersonalCompaignIT from "./PersonalCompaignIT/PersonalCompaignIT";
 import PersonalCompaignZA from "./PersonalCompaignZA/PersonalCompaignZA";
 import PersonalCompaignIN from "./PersonalCompaignIN/PersonalCompaignIN";
 import PersonalCompaignID from "./PersonalCompaignID/PersonalCompaignID";
+import PersonalCompaignRU from "./PersonalCompaignRU/PersonalCompaignRU";
+import PersonalCompaignNl from "./PersonalCompaignNl/PersonalCompaignNl";
 import PersonalCompaignPH from "./PersonalCompaignPH/PersonalCompaignPH";
 import PersonalCompaignCO from "./PersonalCompaignCO/PersonalCompaignCO";
 import PersonalCompaignES from "./PersonalCompaignES/PersonalCompaignES";
@@ -46,6 +48,7 @@ import AppTerms from "./AppTerms/AppTerms";
 import AppPrivacy from "./AppPrivacy/AppPrivacy";
 import Sitemap from "./Sitemap/Sitemap";
 import Thankyou from "./Thankyou/Thankyou";
+import Countries from "./Countries/Countries";
 import { websiteLink } from "../config/config";
 import { I18nextProvider } from "react-i18next";
 import i18n from '../config/i18n';
@@ -100,8 +103,14 @@ const Theme = ({ state }) => {
     else if (data.isPersonalCompaignID) {
       i18n.changeLanguage("bahasa")
     }
+    else if (data.isPersonalCompaignENRU) {
+      i18n.changeLanguage("ruenglish")
+    }
     else if (data.isPersonalCompaignIN) {
       i18n.changeLanguage("inenglish")
+    }
+    else if (data.isPersonalCompaignENNl) {
+      i18n.changeLanguage("nlenglish")
     }
     else if (data.isPersonalCompaignIT) {
       i18n.changeLanguage("italian")
@@ -151,7 +160,7 @@ const Theme = ({ state }) => {
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <meta name="googlebot" content="noindex" />
         <link rel="canonical" href={websiteLink} />
-        <link rel="preload" as="font" font-display="optional" />
+        <link rel="preload" as="font" font-display="swap" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://ipwhois.app" crossorigin />
@@ -197,7 +206,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -241,14 +250,17 @@ const Theme = ({ state }) => {
           <PersonalCompaignIT when={data.isPersonalCompaignIT} />
           <PersonalCompaignZA when={data.isPersonalCompaignZA} />
           <PersonalCompaignIN when={data.isPersonalCompaignIN} />
+          <PersonalCompaignRU when={data.isPersonalCompaignENRU} />
+          <PersonalCompaignNl when={data.isPersonalCompaignENNl} />
           <PersonalCompaignID when={data.isPersonalCompaignID} />
           <PersonalCompaignPH when={data.isPersonalCompaignPH} />
           <PersonalCompaignCO when={data.isPersonalCompaignCO} />
           <PersonalCompaignES when={data.isPersonalCompaignES} />
           <PersonalCompaignPHEN when={data.isPersonalCompaignPHEN} />
+          <Countries when={data.isCountries} />
         </Switch>
         {/* </Main> */}
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
       </I18nextProvider >
     </>
   );

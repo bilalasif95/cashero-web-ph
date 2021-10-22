@@ -18,7 +18,7 @@ import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const PersonalCompaignIN = ({ i18n }) => {
+const PersonalCompaignRU = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -65,7 +65,7 @@ const PersonalCompaignIN = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
-    i18n.changeLanguage("inenglish")
+    i18n.changeLanguage("ruenglish")
     setInnerWidth(window.innerWidth)
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
@@ -133,9 +133,9 @@ const PersonalCompaignIN = ({ i18n }) => {
   return (
     <>
       <Head>
-        <html lang="en-IN" />
-        <link rel="alternate" hreflang="en-IN" href="https://www.cashero.com/in/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/in/" />
+        <html lang="en-RU" />
+        <link rel="alternate" hreflang="en-RU" href="https://www.cashero.com/en-ru/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en-ru/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -169,7 +169,7 @@ const PersonalCompaignIN = ({ i18n }) => {
             </div>
             <div className="col-md-5">
               <div className="compaignForm">
-                <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
+                <h2 className="text-center">{i18n.t("Compaign_3")}</h2>
                 <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
@@ -294,11 +294,11 @@ const PersonalCompaignIN = ({ i18n }) => {
       <div className="container">
         <Savings focus={focus} />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="in" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en-ru" />}
       <CampaignTabs />
       <CampaignSignup focus={focus} />
     </>
   );
 }
 
-export default withTranslation()(PersonalCompaignIN);
+export default withTranslation()(PersonalCompaignRU);
