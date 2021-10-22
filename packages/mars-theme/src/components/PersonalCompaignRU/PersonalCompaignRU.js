@@ -134,8 +134,8 @@ const PersonalCompaignRU = ({ i18n }) => {
     <>
       <Head>
         <html lang="en-RU" />
-        <link rel="alternate" hreflang="en-RU" href="https://www.cashero.com/ru/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ru/" />
+        <link rel="alternate" hreflang="en-RU" href="https://www.cashero.com/en-ru/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en-ru/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -169,7 +169,7 @@ const PersonalCompaignRU = ({ i18n }) => {
             </div>
             <div className="col-md-5">
               <div className="compaignForm">
-                <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
+                <h2 className="text-center">{i18n.t("Compaign_3")}</h2>
                 <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
@@ -294,7 +294,7 @@ const PersonalCompaignRU = ({ i18n }) => {
       <div className="container">
         <Savings focus={focus} />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="ru" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en-ru" />}
       <CampaignTabs />
       <CampaignSignup focus={focus} />
     </>
