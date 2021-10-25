@@ -169,7 +169,7 @@ const PersonalCompaignIN = ({ i18n }) => {
             </div>
             <div className="col-md-5">
               <div className="compaignForm">
-                <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
+                <h2 className="text-center">{i18n.t("Compaign_3")}</h2>
                 <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
