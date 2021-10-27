@@ -1,5 +1,5 @@
-export const enfilipino = {
-    Compaign_1: "Need Free & Instant Cross-Platform Payments To The Philippines?",
+export const filipino = {
+    Compaign_1: "Need Free & Instant Cross-Platform PaymentsTo The Philippines?",
     Compaign_2: "Cashero Makes It Happen.",
     Compaign_3: "Cashero Moves Money Fast",
     High_Yield_Savings_Account: "Send Money Locally & Internationally",
