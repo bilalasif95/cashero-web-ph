@@ -10,7 +10,7 @@ export const enfilipino = {
     Compaign_Img_5: "No hidden fees, no minimum balance, no stress",
     Compaign_P: "With Cashero, we protect the value of your money and maximize your savings. Gethigher returns and make your money work harder.",
     Compaign_Launch_1: "We are launching multinationally.",
-    Compaign_Launch_2: "Be among the firstto start earning in the Philippines.",
+    Compaign_Launch_2: "Be among the first to start earning in the Philippines.",
     Compaign_Launch_3: "",
     Enter_Name: "Enter Name",
     Enter_Email: "Enter Email",
