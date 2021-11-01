@@ -143,8 +143,8 @@ const PersonalCompaignPHEN = ({ i18n }) => {
           <div className="row">
             <div className="col-lg-7 col-md-6 col-sm-12">
               <div className="PersonalCont">
-                <p className="text-uppercase bannerPara font-medium mb-0">{i18n.t("Compaign_1")}</p>
-                <p className="text-uppercase bannerPara font-medium">{i18n.t("Compaign_2")}</p>
+                <p className="bannerPara font-medium mb-0">{i18n.t("Compaign_1")}</p>
+                <p className="bannerPara font-medium">{i18n.t("Compaign_2")}</p>
                 <h1 className="compaignHighYield">{i18n.t("High_Yield_Savings_Account")}</h1>
                 <div className="Banner-list compaignList">
                   {/* <h2 className="bannerText">
@@ -163,13 +163,17 @@ const PersonalCompaignPHEN = ({ i18n }) => {
                     <img src={Check} alt="check" />
                     {i18n.t("Compaign_Img_4")}
                   </h2>
+                  <h2 className="bannerText">
+                    <img src={Check} alt="check" />
+                    {i18n.t("Compaign_Img_5")}
+                  </h2>
                 </div>
                 <p className="bannerPara font-medium">{i18n.t("Compaign_P")}</p>
               </div>
             </div>
             <div className="col-lg-5 col-md-6 col-sm-12">
               <div className="compaignForm">
-                <h2 className="text-center">{i18n.t("Compaign_2")}</h2>
+                <h2 className="text-center">{i18n.t("Compaign_3")}</h2>
                 <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
@@ -275,7 +279,7 @@ const PersonalCompaignPHEN = ({ i18n }) => {
                 </div>
                 <div className="inflation-cont text-center">
                   <img className="img-fluid" height="70px" width="70px" alt="depositUSD" src={depositUSD} />
-                  <p>{i18n.t("Compaign_Img_2_1")}</p>
+                  <p>{i18n.t("Compaign_Img_3")}</p>
                 </div>
                 <div className="inflation-cont text-center">
                   <img className="img-fluid" height="70px" width="70px" alt="interestpaid" src={interestpaid} />
