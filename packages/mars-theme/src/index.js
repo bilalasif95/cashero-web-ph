@@ -358,12 +358,42 @@ const personalCompaignENRUHandler = {
   }
 }
 
-const personalCompaignENNlHandler = {
+const personalCompaignENNIHandler = {
   pattern: "/en-ni",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
-      isPersonalCompaignENNl: true,
+      isPersonalCompaignENNI: true,
+    })
+  }
+}
+
+const personalCompaignENNISavingsTestHandler = {
+  pattern: "/en-nii",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignENNISavingsTest: true,
+    })
+  }
+}
+
+const personalCompaignENIEHandler = {
+  pattern: "/en-ie",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignENIE: true,
+    })
+  }
+}
+
+const personalCompaignENSGHandler = {
+  pattern: "/en-sg",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignENSG: true,
     })
   }
 }
@@ -444,8 +474,11 @@ const marsTheme = {
         libraries.source.handlers.push(personalCompaignESHandler);
         libraries.source.handlers.push(personalCompaignPHENHandler);
         libraries.source.handlers.push(personalCompaignENRUHandler);
-        libraries.source.handlers.push(personalCompaignENNlHandler);
+        libraries.source.handlers.push(personalCompaignENNIHandler);
         libraries.source.handlers.push(countriesHandler);
+        libraries.source.handlers.push(personalCompaignENSGHandler);
+        libraries.source.handlers.push(personalCompaignENIEHandler);
+        libraries.source.handlers.push(personalCompaignENNISavingsTestHandler);
       },
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;

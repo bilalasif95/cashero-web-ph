@@ -18,7 +18,7 @@ import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const PersonalCompaignRU = ({ i18n }) => {
+const PersonalCompaignNI = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -65,7 +65,7 @@ const PersonalCompaignRU = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
-    i18n.changeLanguage("ruenglish")
+    i18n.changeLanguage("nienglish")
     setInnerWidth(window.innerWidth)
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
@@ -82,11 +82,11 @@ const PersonalCompaignRU = ({ i18n }) => {
           // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+7");
+          setCode("+234");
           // setPhoneNoLength(10);
         }
       }).catch(() => {
-        setCode("+7");
+        setCode("+234");
         // setPhoneNoLength(10);
       })
   }, [])
@@ -133,9 +133,9 @@ const PersonalCompaignRU = ({ i18n }) => {
   return (
     <>
       <Head>
-        <html lang="en-RU" />
-        <link rel="alternate" hreflang="en-RU" href="https://www.cashero.com/en-ru/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en-ru/" />
+        <html lang="en-NI" />
+        <link rel="alternate" hreflang="en-NI" href="https://www.cashero.com/en-ni/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en-ni/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -294,11 +294,11 @@ const PersonalCompaignRU = ({ i18n }) => {
       <div className="container">
         <Savings focus={focus} />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en-ru" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en-ni" />}
       <CampaignTabs />
       <CampaignSignup focus={focus} />
     </>
   );
 }
 
-export default withTranslation()(PersonalCompaignRU);
+export default withTranslation()(PersonalCompaignNI);
