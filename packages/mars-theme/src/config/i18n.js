@@ -13,7 +13,10 @@ import { italian } from "./languages/italian";
 import { zaenglish } from "./languages/zaenglish";
 import { inenglish } from "./languages/inenglish";
 import { ruenglish } from "./languages/ruenglish";
-import { nlenglish } from "./languages/nlenglish";
+import { nienglish } from "./languages/nienglish";
+import { ennisavingstest } from "./languages/ennisavingstest";
+import { ieenglish } from "./languages/ieenglish";
+import { sgenglish } from "./languages/sgenglish";
 import { bahasa } from "./languages/bahasa";
 import { filipino } from "./languages/filipino";
 import { malay } from "./languages/malay";
@@ -59,8 +62,17 @@ i18n.use(XHR).use(LanguageDetector).init({
         ruenglish: {
             translations: ruenglish
         },
-        nlenglish: {
-            translations: nlenglish
+        nienglish: {
+            translations: nienglish
+        },
+        ieenglish: {
+            translations: ieenglish
+        },
+        ennisavingstest: {
+            translations: ennisavingstest
+        },
+        sgenglish: {
+            translations: sgenglish
         },
         bahasa: {
             translations: bahasa

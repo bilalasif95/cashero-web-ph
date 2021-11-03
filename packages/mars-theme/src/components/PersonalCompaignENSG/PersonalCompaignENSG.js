@@ -18,7 +18,7 @@ import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const PersonalCompaignNl = ({ i18n }) => {
+const PersonalCompaignENSG = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -47,7 +47,7 @@ const PersonalCompaignNl = ({ i18n }) => {
     setSearchTerm(e.target.value);
     const results = searchResults.filter(
       (country) =>
-        country.name_in.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
         country.dial_code.includes(searchTerm.toLocaleLowerCase())
     );
     setSearchResults2(results);
@@ -65,7 +65,7 @@ const PersonalCompaignNl = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
-    i18n.changeLanguage("nlenglish")
+    i18n.changeLanguage("sgenglish")
     setInnerWidth(window.innerWidth)
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
@@ -82,11 +82,11 @@ const PersonalCompaignNl = ({ i18n }) => {
           // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+91");
+          setCode("+65");
           // setPhoneNoLength(10);
         }
       }).catch(() => {
-        setCode("+91");
+        setCode("+65");
         // setPhoneNoLength(10);
       })
   }, [])
@@ -133,9 +133,9 @@ const PersonalCompaignNl = ({ i18n }) => {
   return (
     <>
       <Head>
-        <html lang="en-Nl" />
-        <link rel="alternate" hreflang="en-Nl" href="https://www.cashero.com/en-ni/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en-ni/" />
+        <html lang="en-SG" />
+        <link rel="alternate" hreflang="en-SG" href="https://www.cashero.com/en-sg/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en-sg/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -207,7 +207,7 @@ const PersonalCompaignNl = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name_in}
+                                      {item.name}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>
@@ -220,7 +220,7 @@ const PersonalCompaignNl = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name_in}
+                                      {item.name}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>
@@ -294,11 +294,11 @@ const PersonalCompaignNl = ({ i18n }) => {
       <div className="container">
         <Savings focus={focus} />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en-ni" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en-sg" />}
       <CampaignTabs />
       <CampaignSignup focus={focus} />
     </>
   );
 }
 
-export default withTranslation()(PersonalCompaignNl);
+export default withTranslation()(PersonalCompaignENSG);
