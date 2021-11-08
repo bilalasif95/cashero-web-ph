@@ -18,7 +18,7 @@ import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const PersonalCompaignMX = ({ i18n }) => {
+const PersonalCompaignENNISavingsTest = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -47,7 +47,7 @@ const PersonalCompaignMX = ({ i18n }) => {
     setSearchTerm(e.target.value);
     const results = searchResults.filter(
       (country) =>
-        country.name_mx.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
         country.dial_code.includes(searchTerm.toLocaleLowerCase())
     );
     setSearchResults2(results);
@@ -65,7 +65,7 @@ const PersonalCompaignMX = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
-    i18n.changeLanguage("spanish")
+    i18n.changeLanguage("ennisavingstest")
     setInnerWidth(window.innerWidth)
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
@@ -82,11 +82,11 @@ const PersonalCompaignMX = ({ i18n }) => {
           // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+52");
+          setCode("+234");
           // setPhoneNoLength(10);
         }
       }).catch(() => {
-        setCode("+52");
+        setCode("+234");
         // setPhoneNoLength(10);
       })
   }, [])
@@ -133,9 +133,9 @@ const PersonalCompaignMX = ({ i18n }) => {
   return (
     <>
       <Head>
-        <html lang="es-MX" />
-        <link rel="alternate" hreflang="es-MX" href="https://www.cashero.com/mx/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/mx/" />
+        <html lang="en-NI" />
+        <link rel="alternate" hreflang="en-NI" href="https://www.cashero.com/en-nii/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/en-nii/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -170,7 +170,7 @@ const PersonalCompaignMX = ({ i18n }) => {
             <div className="col-md-5">
               <div className="compaignForm">
                 <h2 className="text-center">{i18n.t("Compaign_3")}</h2>
-                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
+                <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
                     <input id="ContainerElementID" ref={fullName} type="text" className="form-control" autoFocus={innerWidth <= 540 ? false : true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
@@ -207,7 +207,7 @@ const PersonalCompaignMX = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name_mx}
+                                      {item.name}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>
@@ -220,7 +220,7 @@ const PersonalCompaignMX = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name_mx}
+                                      {item.name}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>
@@ -248,7 +248,6 @@ const PersonalCompaignMX = ({ i18n }) => {
                       onChange={onCaptchaHandler}
                       height="140px"
                       width="100%"
-                      hl="es"
                     />
                   </div>
                   {error && <label className="contactUsFormError">{error}</label>}
@@ -291,15 +290,15 @@ const PersonalCompaignMX = ({ i18n }) => {
           </div>
         </div>
       </div>
-      <CompaignNoEffort lang="mx" focus={focus} />
+      <CompaignNoEffort focus={focus} />
       <div className="container">
-        <Savings lang="mx" focus={focus} />
+        <Savings focus={focus} />
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="mx" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="en-nii" />}
       <CampaignTabs />
       <CampaignSignup focus={focus} />
     </>
   );
 }
 
-export default withTranslation()(PersonalCompaignMX);
+export default withTranslation()(PersonalCompaignENNISavingsTest);

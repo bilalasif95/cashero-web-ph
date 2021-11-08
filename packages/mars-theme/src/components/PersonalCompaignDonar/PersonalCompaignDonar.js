@@ -13,12 +13,13 @@ import Savings from "../campaignSavings/campaignSavings";
 import CampaignTabs from "../campaignTabs/campaignTabs";
 import SearchIcon from "@material-ui/icons/Search";
 import CampaignSignup from "../campaignSignup/campaignSignup";
+import Charity from "../../components/CharitySectionMX/CharitySectionMX";
 import CompaignThanksModal from "../CompaignThanksModal/CompaignThanksModal";
 import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const PersonalCompaignMX = ({ i18n }) => {
+const PersonalCompaignDonar = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -65,7 +66,7 @@ const PersonalCompaignMX = ({ i18n }) => {
     setSuccessModal(false);
   };
   useEffect(() => {
-    i18n.changeLanguage("spanish")
+    i18n.changeLanguage("donarmx")
     setInnerWidth(window.innerWidth)
     const qs = parseQs(window.location.search.substr(1));
     setUtmCampaign(qs.utm_campaign)
@@ -134,8 +135,8 @@ const PersonalCompaignMX = ({ i18n }) => {
     <>
       <Head>
         <html lang="es-MX" />
-        <link rel="alternate" hreflang="es-MX" href="https://www.cashero.com/mx/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/mx/" />
+        <link rel="alternate" hreflang="es-MX" href="https://www.cashero.com/mx-donar/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/mx-donar/" />
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
       </Head>
       <div className="PesonalCompaignBanner compaign-banner">
@@ -153,7 +154,7 @@ const PersonalCompaignMX = ({ i18n }) => {
                   </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
-                    {i18n.t("Compaign_Img_2_1")}
+                    {i18n.t("Compaign_Img_2")}
                   </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
@@ -162,6 +163,10 @@ const PersonalCompaignMX = ({ i18n }) => {
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
                     {i18n.t("Compaign_Img_4")}
+                  </h2>
+                  <h2 className="bannerText">
+                    <img src={Check} alt="check" />
+                    {i18n.t("Compaign_Img_5")}
                   </h2>
                 </div>
                 <p className="bannerPara font-medium">{i18n.t("Compaign_P")}</p>
@@ -276,7 +281,7 @@ const PersonalCompaignMX = ({ i18n }) => {
                 </div>
                 <div className="inflation-cont text-center">
                   <img className="img-fluid" height="70px" width="70px" alt="depositUSD" src={depositUSD} />
-                  <p>{i18n.t("Compaign_Img_2_1")}</p>
+                  <p>{i18n.t("Compaign_Img_2")}</p>
                 </div>
                 <div className="inflation-cont text-center">
                   <img className="img-fluid" height="70px" width="70px" alt="interestpaid" src={interestpaid} />
@@ -294,12 +299,13 @@ const PersonalCompaignMX = ({ i18n }) => {
       <CompaignNoEffort lang="mx" focus={focus} />
       <div className="container">
         <Savings lang="mx" focus={focus} />
+        <Charity focus={focus}/>
       </div>
-      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="mx" />}
+      {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="mx-donar" />}
       <CampaignTabs />
       <CampaignSignup focus={focus} />
     </>
   );
 }
 
-export default withTranslation()(PersonalCompaignMX);
+export default withTranslation()(PersonalCompaignDonar);

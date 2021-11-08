@@ -14,11 +14,12 @@ import CampaignTabs from "../campaignTabs/campaignTabs";
 import SearchIcon from "@material-ui/icons/Search";
 import CampaignSignup from "../campaignSignup/campaignSignup";
 import CompaignThanksModal from "../CompaignThanksModal/CompaignThanksModal";
+import Charity from "../../components/CharitySectionBR/CharitySectionBR";
 import { Head } from "frontity";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
-const PersonalCompaignBR = ({ i18n }) => {
+const PersonalCompaignDOE = ({ i18n }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [code, setCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -153,7 +154,7 @@ const PersonalCompaignBR = ({ i18n }) => {
                   </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
-                    {i18n.t("Compaign_Img_2_1")}
+                    {i18n.t("Compaign_Img_2")}
                   </h2>
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
@@ -162,6 +163,10 @@ const PersonalCompaignBR = ({ i18n }) => {
                   <h2 className="bannerText">
                     <img src={Check} alt="check" />
                     {i18n.t("Compaign_Img_4")}
+                  </h2>
+                  <h2 className="bannerText">
+                    <img src={Check} alt="check" />
+                    {i18n.t("Compaign_Img_5")}
                   </h2>
                 </div>
                 <p className="bannerPara font-medium">{i18n.t("Compaign_P")}</p>
@@ -276,7 +281,7 @@ const PersonalCompaignBR = ({ i18n }) => {
                 </div>
                 <div className="inflation-cont text-center">
                   <img className="img-fluid" height="70px" width="70px" alt="depositUSD" src={depositUSD} />
-                  <p>{i18n.t("Compaign_Img_2_1")}</p>
+                  <p>{i18n.t("Compaign_Img_2")}</p>
                 </div>
                 <div className="inflation-cont text-center">
                   <img className="img-fluid" height="70px" width="70px" alt="interestpaid" src={interestpaid} />
@@ -294,6 +299,7 @@ const PersonalCompaignBR = ({ i18n }) => {
       <CompaignNoEffort lang="br" focus={focus} />
       <div className="container">
         <Savings lang="br" focus={focus} />
+        <Charity focus={focus} />
       </div>
       {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="br-doe" />}
       <CampaignTabs />
@@ -302,4 +308,4 @@ const PersonalCompaignBR = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(PersonalCompaignBR);
+export default withTranslation()(PersonalCompaignDOE);

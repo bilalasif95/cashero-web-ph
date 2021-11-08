@@ -16,6 +16,7 @@ import PersonalCompaign from "./PersonalCompaign/PersonalCompaign";
 import PersonalCompaignBR from "./PersonalCompaignBR/PersonalCompaignBR";
 import PersonalCompaignPT from "./PersonalCompaignPT/PersonalCompaignPT";
 import PersonalCompaignMX from "./PersonalCompaignMX/PersonalCompaignMX";
+import PersonalCompaignDonar from "./PersonalCompaignDonar/PersonalCompaignDonar";
 import PersonalCompaignDOE from "./PersonalCompaignDOE/PersonalCompaignDOE";
 import PersonalCompaignAR from "./PersonalCompaignAR/PersonalCompaignAR";
 import PersonalCompaignCL from "./PersonalCompaignCL/PersonalCompaignCL";
@@ -26,7 +27,10 @@ import PersonalCompaignZA from "./PersonalCompaignZA/PersonalCompaignZA";
 import PersonalCompaignIN from "./PersonalCompaignIN/PersonalCompaignIN";
 import PersonalCompaignID from "./PersonalCompaignID/PersonalCompaignID";
 import PersonalCompaignRU from "./PersonalCompaignRU/PersonalCompaignRU";
-import PersonalCompaignNl from "./PersonalCompaignNl/PersonalCompaignNl";
+import PersonalCompaignNI from "./PersonalCompaignNI/PersonalCompaignNI";
+import PersonalCompaignENNISavingsTest from "./PersonalCompaignENNISavingsTest/PersonalCompaignENNISavingsTest";
+import PersonalCompaignENIE from "./PersonalCompaignENIE/PersonalCompaignENIE";
+import PersonalCompaignENSG from "./PersonalCompaignENSG/PersonalCompaignENSG";
 import PersonalCompaignPH from "./PersonalCompaignPH/PersonalCompaignPH";
 import PersonalCompaignCO from "./PersonalCompaignCO/PersonalCompaignCO";
 import PersonalCompaignES from "./PersonalCompaignES/PersonalCompaignES";
@@ -110,8 +114,17 @@ const Theme = ({ state }) => {
     else if (data.isPersonalCompaignIN) {
       i18n.changeLanguage("inenglish")
     }
-    else if (data.isPersonalCompaignENNl) {
-      i18n.changeLanguage("nlenglish")
+    else if (data.isPersonalCompaignENNI) {
+      i18n.changeLanguage("nienglish")
+    }
+    else if (data.isPersonalCompaignENNISavingsTest) {
+      i18n.changeLanguage("ennisavingstest")
+    }
+    else if (data.isPersonalCompaignENIE) {
+      i18n.changeLanguage("ieenglish")
+    }
+    else if (data.isPersonalCompaignENSG) {
+      i18n.changeLanguage("sgenglish")
     }
     else if (data.isPersonalCompaignIT) {
       i18n.changeLanguage("italian")
@@ -124,6 +137,9 @@ const Theme = ({ state }) => {
     }
     else if (data.isPersonalCompaignMX) {
       i18n.changeLanguage("spanish")
+    }
+    else if (data.isPersonalCompaignDonar) {
+      i18n.changeLanguage("donarmx")
     }
     else if (data.isPersonalCompaignDOE) {
       i18n.changeLanguage("brazillianDOE")
@@ -210,7 +226,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignDOE || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignDOE || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignDonar || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNI || data.isPersonalCompaignENSG || data.isPersonalCompaignENIE || data.isPersonalCompaignENNISavingsTest || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -247,6 +263,7 @@ const Theme = ({ state }) => {
           <PersonalCompaignBR when={data.isPersonalCompaignBR} />
           <PersonalCompaignPT when={data.isPersonalCompaignPT} />
           <PersonalCompaignMX when={data.isPersonalCompaignMX} />
+          <PersonalCompaignDonar when={data.isPersonalCompaignDonar} />
           <PersonalCompaignDOE when={data.isPersonalCompaignDOE} />
           <PersonalCompaignAR when={data.isPersonalCompaignAR} />
           <PersonalCompaignCL when={data.isPersonalCompaignCL} />
@@ -256,8 +273,11 @@ const Theme = ({ state }) => {
           <PersonalCompaignZA when={data.isPersonalCompaignZA} />
           <PersonalCompaignIN when={data.isPersonalCompaignIN} />
           <PersonalCompaignRU when={data.isPersonalCompaignENRU} />
-          <PersonalCompaignNl when={data.isPersonalCompaignENNl} />
+          <PersonalCompaignNI when={data.isPersonalCompaignENNI} />
+          <PersonalCompaignENNISavingsTest when={data.isPersonalCompaignENNISavingsTest} />
           <PersonalCompaignID when={data.isPersonalCompaignID} />
+          <PersonalCompaignENIE when={data.isPersonalCompaignENIE} />
+          <PersonalCompaignENSG when={data.isPersonalCompaignENSG} />
           <PersonalCompaignPH when={data.isPersonalCompaignPH} />
           <PersonalCompaignCO when={data.isPersonalCompaignCO} />
           <PersonalCompaignES when={data.isPersonalCompaignES} />
@@ -265,7 +285,7 @@ const Theme = ({ state }) => {
           <Countries when={data.isCountries} />
         </Switch>
         {/* </Main> */}
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignDOE || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignDOE || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignDonar || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNI || data.isPersonalCompaignENSG || data.isPersonalCompaignENIE || data.isPersonalCompaignENNISavingsTest || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
       </I18nextProvider >
     </>
   );

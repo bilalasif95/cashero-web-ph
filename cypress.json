@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://www.cashero.com/",
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/reports/mocha/assets",
+  "reporter": "mochawesome",
+  "video": true,
+  "reporterOptions": {
+    "reportDir": "cypress/reports/mocha",
+    "embeddedScreenshots": true,
+    "charts": true,
+    "overwrite": false,
+    "html": false,
+    "json": true
+ 
+  }
+}

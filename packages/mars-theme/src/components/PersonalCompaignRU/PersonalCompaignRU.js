@@ -47,7 +47,7 @@ const PersonalCompaignRU = ({ i18n }) => {
     setSearchTerm(e.target.value);
     const results = searchResults.filter(
       (country) =>
-        country.name_in.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
         country.dial_code.includes(searchTerm.toLocaleLowerCase())
     );
     setSearchResults2(results);
@@ -82,11 +82,11 @@ const PersonalCompaignRU = ({ i18n }) => {
           // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+91");
+          setCode("+7");
           // setPhoneNoLength(10);
         }
       }).catch(() => {
-        setCode("+91");
+        setCode("+7");
         // setPhoneNoLength(10);
       })
   }, [])
@@ -143,8 +143,8 @@ const PersonalCompaignRU = ({ i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <p className="text-uppercase bannerPara font-medium mb-0">{i18n.t("Compaign_1")}</p>
-                <p className="text-uppercase bannerPara font-medium">{i18n.t("Compaign_2")}</p>
+                <p className="bannerPara font-medium mb-0">{i18n.t("Compaign_1")}</p>
+                <p className="bannerPara font-medium">{i18n.t("Compaign_2")}</p>
                 <h1 className="compaignHighYield">{i18n.t("High_Yield_Savings_Account")}</h1>
                 <div className="Banner-list compaignList">
                   <h2 className="bannerText">
@@ -207,7 +207,7 @@ const PersonalCompaignRU = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name_in}
+                                      {item.name}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>
@@ -220,7 +220,7 @@ const PersonalCompaignRU = ({ i18n }) => {
                                   >
                                     <div className="flag-name">
                                       <span>{item.flag}</span>
-                                      {item.name_in}
+                                      {item.name}
                                     </div>
                                     <div className="code">{item.dial_code}</div>
                                   </DropdownItem>

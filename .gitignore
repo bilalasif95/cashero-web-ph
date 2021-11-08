@@ -1,3 +1,7 @@
 node_modules
 build
 package-lock.json
+cypress/videos/
+cypress/screenshots/
+cypress/reports/mocha
+mochawesome-report/
