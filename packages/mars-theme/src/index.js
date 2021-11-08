@@ -228,6 +228,26 @@ const personalCompaignMXHandler = {
   }
 }
 
+const personalCompaignDOEHandler = {
+  pattern: "/br-doe",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignDOE: true,
+    })
+  }
+}
+
+const personalCompaignDonarHandler = {
+  pattern: "/mx-donar",
+  func: ({ route, state }) => {
+    Object.assign(state.source.data[route], {
+      type: "page",
+      isPersonalCompaignDonar: true,
+    })
+  }
+}
+
 const personalCompaignARHandler = {
   pattern: "/ar",
   func: ({ route, state }) => {
@@ -459,6 +479,8 @@ const marsTheme = {
         libraries.source.handlers.push(appPrivacyHandler);
         libraries.source.handlers.push(appTermsHandler);
         libraries.source.handlers.push(personalCompaignBRHandler);
+        libraries.source.handlers.push(personalCompaignDOEHandler);
+        libraries.source.handlers.push(personalCompaignDonarHandler);
         libraries.source.handlers.push(personalCompaignPTHandler);
         libraries.source.handlers.push(personalCompaignMXHandler);
         libraries.source.handlers.push(personalCompaignARHandler);
