@@ -16,6 +16,7 @@ import PersonalCompaign from "./PersonalCompaign/PersonalCompaign";
 import PersonalCompaignBR from "./PersonalCompaignBR/PersonalCompaignBR";
 import PersonalCompaignPT from "./PersonalCompaignPT/PersonalCompaignPT";
 import PersonalCompaignMX from "./PersonalCompaignMX/PersonalCompaignMX";
+import PersonalCompaignDOE from "./PersonalCompaignDOE/PersonalCompaignDOE";
 import PersonalCompaignAR from "./PersonalCompaignAR/PersonalCompaignAR";
 import PersonalCompaignCL from "./PersonalCompaignCL/PersonalCompaignCL";
 import PersonalCompaignFR from "./PersonalCompaignFR/PersonalCompaignFR";
@@ -124,6 +125,9 @@ const Theme = ({ state }) => {
     else if (data.isPersonalCompaignMX) {
       i18n.changeLanguage("spanish")
     }
+    else if (data.isPersonalCompaignDOE) {
+      i18n.changeLanguage("brazillianDOE")
+    }
     else if (data.isPersonalCompaign || qs.lang === "en") {
       i18n.changeLanguage("english")
       localStorage.setItem("lang", "english")
@@ -206,7 +210,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignDOE || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -243,6 +247,7 @@ const Theme = ({ state }) => {
           <PersonalCompaignBR when={data.isPersonalCompaignBR} />
           <PersonalCompaignPT when={data.isPersonalCompaignPT} />
           <PersonalCompaignMX when={data.isPersonalCompaignMX} />
+          <PersonalCompaignDOE when={data.isPersonalCompaignDOE} />
           <PersonalCompaignAR when={data.isPersonalCompaignAR} />
           <PersonalCompaignCL when={data.isPersonalCompaignCL} />
           <PersonalCompaignFR when={data.isPersonalCompaignFR} />
@@ -260,7 +265,7 @@ const Theme = ({ state }) => {
           <Countries when={data.isCountries} />
         </Switch>
         {/* </Main> */}
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
+        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignDOE || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNl || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
       </I18nextProvider >
     </>
   );

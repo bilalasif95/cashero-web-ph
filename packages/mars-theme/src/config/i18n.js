@@ -7,6 +7,7 @@ import { portuguese } from "./languages/portuguese";
 import { spanish } from "./languages/spanish";
 import { arspanish } from "./languages/arspanish";
 import { clspanish } from "./languages/clspanish";
+import { brazillianDOE } from "./languages/brazillianDOE";
 import { french } from "./languages/french";
 import { german } from "./languages/german";
 import { italian } from "./languages/italian";
@@ -40,6 +41,9 @@ i18n.use(XHR).use(LanguageDetector).init({
         },
         clspanish: {
             translations: clspanish
+        },
+        brazillianDOE: {
+            translations: brazillianDOE
         },
         french: {
             translations: french
