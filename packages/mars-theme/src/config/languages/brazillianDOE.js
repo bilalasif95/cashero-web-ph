@@ -1,5 +1,5 @@
 export const brazillianDOE = {
-    Compaign_1: "Na Cashero, nossa moeda mais",
+    Compaign_1: "Na Cashero, nossa moeda mais valiosa é a bondade.",
     Compaign_2: "CASHERO FAZ O DINHEIRO SE MOVER RÁPIDO",
     High_Yield_Savings_Account: "ENVIE DINHEIRO LOCALMENTE OU INTERNACIONALMENTE E DOE PARA QUEM PRECISA",
     Compaign_Img_1: "Envie dinheiro para usuários Cashero de qualquer lugar do mundo",
