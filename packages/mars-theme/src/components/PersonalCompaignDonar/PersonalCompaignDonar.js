@@ -299,7 +299,7 @@ const PersonalCompaignDonar = ({ i18n }) => {
       <CompaignNoEffort lang="mx" focus={focus} />
       <div className="container">
         <Savings lang="mx" focus={focus} />
-        <Charity focus={focus}/>
+        <Charity />
       </div>
       {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="mx-donar" />}
       <CampaignTabs />

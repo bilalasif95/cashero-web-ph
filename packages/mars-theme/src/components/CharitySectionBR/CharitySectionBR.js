@@ -5,7 +5,7 @@ import Arrow from "../../assets/arrowLink.png";
 import { animateScroll as scroll } from "react-scroll";
 import { withTranslation } from "react-i18next";
 
-const CharitySectionBR = ({ i18n, focus }) => {
+const CharitySectionBR = ({ i18n }) => {
 	return (
 		<div className="Charity sm-pb-0">
 			<div className="row flex-column-reverse flex-sm-row">
@@ -25,7 +25,6 @@ const CharitySectionBR = ({ i18n, focus }) => {
 						<Fade triggerOnce direction="up">
 							<h2 className="oneAppTitle">{i18n.t("Fee_Free_Donations")}</h2>
 							<p>{i18n.t("Fee_Free_Donations_P")}</p>
-							<button onClick={() => { focus(); scroll.scrollTo('myScrollToElement', { containerId: 'ContainerElementID' }) }} className="LinkBtn compaignLink" >{i18n.t("Join_the_Waitlist")}<img alt="arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow} /> </button>
 						</Fade>
 					</div>
 				</div>
