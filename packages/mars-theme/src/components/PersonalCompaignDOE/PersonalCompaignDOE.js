@@ -299,7 +299,7 @@ const PersonalCompaignDOE = ({ i18n }) => {
       <CompaignNoEffort lang="br" focus={focus} />
       <div className="container">
         <Savings lang="br" focus={focus} />
-        <Charity focus={focus} />
+        <Charity/>
       </div>
       {openSuccessModal && <CompaignThanksModal open={openSuccessModal} handleClose={thanksModalClose} lang="br-doe" />}
       <CampaignTabs />
