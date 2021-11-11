@@ -173,10 +173,10 @@ const PersonalCompaignPH = ({ i18n }) => {
                 <p className="text-center">{i18n.t("Compaign_Launch_1")}<span className="br-block"></span>{i18n.t("Compaign_Launch_2")}<span className="br-block"></span>{i18n.t("Compaign_Launch_3")}</p>
                 <div className="compaignFormCont">
                   <div className="form-group">
-                    <input id="ContainerElementID" ref={fullName} type="text" className="form-control" autoFocus={innerWidth <= 540 ? false : true} value={name} onChange={e => setName(e.target.value)} placeholder={i18n.t("Enter_Name")} />
+                    <input id="ContainerElementID" ref={fullName} type="text" className="form-control" autoFocus={innerWidth <= 540 ? false : true} value={name} onChange={e => setName(e.target.value)} placeholder="Ilagay ang Pangalan" />
                   </div>
                   <div className="form-group">
-                    <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder={i18n.t("Enter_Email")} />
+                    <input type="email" className="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder="Ilagay ang Email" />
                   </div>
                   <div className="compaign-select form-group mb-0 mt-0 p-0">
                     <div className="numberSelection m-0">
