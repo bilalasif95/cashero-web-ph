@@ -1,7 +1,7 @@
 export const english = {
     Personal: "Personal",
     Wealth: "Wealth",
-    High_Yield_Savings_Account: "High Yield Savings Account",
+    High_Yield_Savings_Account: "BR Website High Yield Savings Account",
     High_Yield_Savings_Account_Meta_Description: "Put your money to work with the Cashero High Yield Savings Account. Beat the rate of inflation with an average APY of 5% on your deposits. Our savings accounts...",
     High_Yield_Savings_Account_Menu_1: "High Yield Savings Account | Cashero App",
     Multi_Currency_Savings_Account: "Multi-Currency Savings Account",
