@@ -20,7 +20,6 @@ import MovingCoins from "../../assets/movingCoins.png";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
-import currencieslist from "../../config/currenciesList";
 import currencieslistBR from "../../config/currenciesListBR";
 import { Head, connect } from "frontity";
 import Link from "../link";
@@ -39,11 +38,11 @@ const CurrencyAccounts = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
   const ref = useRef(null);
   const [flaggbp, setflaggbp] = useState("🇺🇸");
-  const [flagcurrencygbp, setflagcurrencygbp] = useState(i18n.language === "brazilian" ? "Dollar Americano - USD" : "US Dollar - USD");
+  const [flagcurrencygbp, setflagcurrencygbp] = useState("Dollar Americano - USD");
   const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
   const [searchTermgbp, setSearchTermgbp] = useState("");
   const [searchResults2gbp, setSearchResults2gbp] = useState([]);
-  const [searchResultsgbp, setSearchResultsgbp] = useState(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+  const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslistBR);
   const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
   const [baseCurrencyGBPValue, setBaseCurrencyGBPValue] = useState("1");
   const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
@@ -64,24 +63,10 @@ const CurrencyAccounts = ({ state, i18n }) => {
   };
   const selectCountrygbp = (country) => {
     setSearchTermgbp("");
-    setSearchResults2gbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+    setSearchResults2gbp(currencieslistBR);
     setflaggbp(country.flag);
     setflagcurrencygbp(country.name)
   };
-  useEffect(() => {
-    if (i18n.language === "brazilian") {
-      setSearchResultsgbp(currencieslistBR)
-      setSearchResults2gbp([])
-      setflagcurrencygbp("Dollar Americano - USD")
-      setflaggbp("🇺🇸")
-    }
-    else {
-      setSearchResultsgbp(currencieslist)
-      setSearchResults2gbp([])
-      setflagcurrencygbp("US Dollar - USD")
-      setflaggbp("🇺🇸")
-    }
-  }, [i18n.language])
   useEffect(() => {
     var start = 1000;
     var speed = 0;
@@ -95,7 +80,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
         start += 1;
       }
     }, speed);
-    setSearchResultsgbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist)
+    setSearchResultsgbp(currencieslistBR)
     callApi(FirebaseEndPoints.ExchangeRates, "get", "")
       .then((doc) => {
         setBaseCurrencyEURValue(doc.fields.eur.stringValue)
@@ -142,17 +127,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/multi-currency-savings-account/"
         />
-        {i18n.language === "brazilian" ?
-          <>
-            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/multi-currency-savings-account/" />
-            <html lang="pt-BR" />
-          </>
-          :
-          <>
-            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/multi-currency-savings-account/" />
-            <html lang="en" />
-          </>
-        }
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/multi-currency-savings-account/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/multi-currency-savings-account/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}

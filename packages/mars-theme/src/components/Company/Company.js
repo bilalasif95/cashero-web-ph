@@ -1,34 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import SignupSection from "../signupSection/signupSection";
 import Countup from "../Countup/Countup";
 import WhoSection from "../WhoSection/WhoSection";
-import CasheroImg from "../../assets/CasheroImg.png";
 import CasheroImgBR from "../../assets/CasheroImgBR.jpg";
-import YearsImg from "../../assets/YearsImg.png";
 import YearsImgBR from "../../assets/YearsImgBR.png";
 import { Head } from "frontity";
-import { withTranslation } from "react-i18next";
 
-const Company = ({ i18n }) => {
-  const [storage, setStorage] = useState("")
-  useEffect(() => {
-    setStorage(localStorage.getItem("lang"))
-  }, [i18n.language])
+const Company = () => {
   return (
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/company/" />
-        {i18n.language === "brazilian" ?
-          <>
-            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/company/" />
-            <html lang="pt-BR" />
-          </>
-          :
-          <>
-            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/company/" />
-            <html lang="en" />
-          </>
-        }
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/company/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/company/" />
       </Head>
       <div className="CompanyBanner">
@@ -40,7 +23,7 @@ const Company = ({ i18n }) => {
                 height="100%"
                 width="100%"
                 alt="Cashero Image"
-                src={storage === "brazilian" ? CasheroImgBR : CasheroImg}
+                src={CasheroImgBR}
               />
             </div>
           </div>
@@ -57,7 +40,7 @@ const Company = ({ i18n }) => {
                 height="100%"
                 width="1150px"
                 alt="Years Image"
-                src={storage === "brazilian" ? YearsImgBR : YearsImg}
+                src={YearsImgBR}
               />
             </div>
           </div>
@@ -68,4 +51,4 @@ const Company = ({ i18n }) => {
   );
 }
 
-export default withTranslation()(Company);
+export default Company;

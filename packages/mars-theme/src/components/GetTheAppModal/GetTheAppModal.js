@@ -10,9 +10,7 @@ import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist, androidAppLink, iosAppLink, recaptchaSiteKep, ipAPI } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import Link from "../link";
-import Android from "../../assets/AndroidApp.svg";
 import AndroidBR from "../../assets/AndroidAppBR.svg";
-import IOS from "../../assets/iOSApp.svg";
 import IOSBR from "../../assets/iOSAppBR.svg";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
@@ -55,17 +53,11 @@ const GetTheAppModal = (props) => {
   };
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
-    const results = i18n.language === "brazilian" ?
-      searchResults.filter(
-        (country) =>
-          country.name_br.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-          country.dial_code.includes(searchTerm.toLocaleLowerCase())
-      ) :
-      searchResults.filter(
-        (country) =>
-          country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-          country.dial_code.includes(searchTerm.toLocaleLowerCase())
-      );
+    const results = searchResults.filter(
+      (country) =>
+        country.name_br.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.dial_code.includes(searchTerm.toLocaleLowerCase())
+    );
     setSearchResults2(results);
   };
   const handleOnChange = (e) => {
@@ -82,7 +74,7 @@ const GetTheAppModal = (props) => {
       UtmMedium: utmMedium,
       UtmSource: utmSource,
       UtmTerm: utmTerm
-    }, i18n.language)
+    })
       .then((res) => {
         setLoading(false);
         if (res.code === 400) {
@@ -113,11 +105,11 @@ const GetTheAppModal = (props) => {
           // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+1");
+          setCode("+55");
           // setPhoneNoLength(10);
         }
       }).catch(() => {
-        setCode("+1");
+        setCode("+55");
         // setPhoneNoLength(10);
       })
   }, [])
@@ -149,8 +141,8 @@ const GetTheAppModal = (props) => {
                   {i18n.t("Join_Cashero_in")} <span className="br-block highInterestHeading"></span>{i18n.t("seconds")}
                 </h2>
                 <ul className="list-unstyled MobileAppList">
-                  <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={i18n.language === "brazilian" ? AndroidBR : Android} /></a></li>
-                  <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={i18n.language === "brazilian" ? IOSBR : IOS} /></a></li>
+                  <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={AndroidBR} /></a></li>
+                  <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOSBR} /></a></li>
                 </ul>
               </div>
             </div> :
@@ -195,7 +187,7 @@ const GetTheAppModal = (props) => {
                                 >
                                   <div className="flag-name">
                                     <span>{item.flag}</span>
-                                    {i18n.language === "brazilian" ? item.name_br : item.name}
+                                    {item.name_br}
                                   </div>
                                   <div className="code">{item.dial_code}</div>
                                 </DropdownItem>
@@ -208,7 +200,7 @@ const GetTheAppModal = (props) => {
                                 >
                                   <div className="flag-name">
                                     <span>{item.flag}</span>
-                                    {i18n.language === "brazilian" ? item.name_br : item.name}
+                                    {item.name_br}
                                   </div>
                                   <div className="code">{item.dial_code}</div>
                                 </DropdownItem>
@@ -268,7 +260,7 @@ const GetTheAppModal = (props) => {
                       onChange={onCaptchaHandler}
                       height="140px"
                       width="100%"
-                      hl={i18n.language === "brazilian" ? "pt-BR" : "en"}
+                      hl="pt-BR"
                     />
                   </div>
                 </div>

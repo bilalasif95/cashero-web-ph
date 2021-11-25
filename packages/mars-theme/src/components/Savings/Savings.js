@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import BitCircle from "../../assets/BitCircle.png";
 import BitCircleBR from "../../assets/BitCircleBR.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
@@ -8,10 +7,6 @@ import { withTranslation } from "react-i18next";
 
 const Savings = ({ i18n }) => {
 	const [appModal, setAppModal] = useState(false);
-	const [storage, setStorage] = useState("")
-	useEffect(() => {
-		setStorage(localStorage.getItem("lang"))
-	}, [i18n.language])
 	const appModalOpen = () => {
 		setAppModal(true)
 	};
@@ -40,9 +35,9 @@ const Savings = ({ i18n }) => {
 				<div className="col-md-6">
 					<img
 						className="img-fluid mx-auto d-block"
-						height="100%"width="444px"
+						height="100%" width="444px"
 						alt="Bit Circle"
-						src={storage === "brazilian" ? BitCircleBR : BitCircle} />
+						src={BitCircleBR} />
 				</div>
 			</div>
 		</div>

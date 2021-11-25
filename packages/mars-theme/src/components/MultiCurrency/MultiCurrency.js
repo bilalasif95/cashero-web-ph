@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "../link";
-import Flags from "../../assets/Flags.svg";
 import FlagsBR from "../../assets/FlagsBR.svg";
-import usdflag from "../../assets/usdflag.png";
 import usdflagBR from "../../assets/usdflagBR.png";
-import gbpflag from "../../assets/gbpflag.png";
 import gbpflagBR from "../../assets/gbpflagBR.png";
 import eurflag from "../../assets/eurflag.png";
 import { Fade } from "react-awesome-reveal";
@@ -12,10 +9,6 @@ import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const MultiCurrency = ({ i18n }) => {
-	const [storage, setStorage] = useState("")
-	useEffect(() => {
-		setStorage(localStorage.getItem("lang"))
-	}, [i18n.language])
 	return (
 		<div className="MultiCurrency">
 			<div className="row">
@@ -44,7 +37,7 @@ const MultiCurrency = ({ i18n }) => {
 											className="d-block"
 											height="100%"
 											width="100%"
-											src={storage === "brazilian" ? usdflagBR : usdflag}
+											src={usdflagBR}
 											alt="american flag"
 										/>
 									</Fade>
@@ -55,7 +48,7 @@ const MultiCurrency = ({ i18n }) => {
 											className="d-block"
 											height="100%"
 											width="100%"
-											src={storage === "brazilian" ? gbpflagBR : gbpflag}
+											src={gbpflagBR}
 											alt="uk flag"
 										/>
 									</Fade>
@@ -78,7 +71,7 @@ const MultiCurrency = ({ i18n }) => {
 						className="img-fluid mx-auto main-flags"
 						height="100%"
 						width="100%"
-						src={storage === "brazilian" ? FlagsBR : Flags}
+						src={FlagsBR}
 						alt="Flags"
 					/>
 				</div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg";
 import donateDollar from "../../assets/donateDollar.svg";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
@@ -7,7 +7,6 @@ import listImg from "../../assets/list.png";
 import StepsWallet from "../../assets/stepsWallet.png";
 import heartDollar from "../../assets/heartDollar.svg";
 import listHome from "../../assets/listHome.svg";
-import freeFund from "../../assets/freeFund.png";
 import freeFundBR from "../../assets/freeFundBR.png";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import QuestionTabs from "../Tabs/Tabs";
@@ -24,10 +23,6 @@ import { withTranslation } from "react-i18next";
 
 const ListedCharity = ({ i18n }) => {
   const [appModal, setAppModal] = useState(false);
-  const [storage, setStorage] = useState("")
-  useEffect(() => {
-    setStorage(localStorage.getItem("lang"))
-  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -41,17 +36,7 @@ const ListedCharity = ({ i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/become-listed-charity/"
         />
-        {i18n.language === "brazilian" ?
-          <>
-            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/become-listed-charity/" />
-            <html lang="pt-BR" />
-          </>
-          :
-          <>
-            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/become-listed-charity/" />
-            <html lang="en" />
-          </>
-        }
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/become-listed-charity/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/become-listed-charity/" />
       </Head>
       <div className="PesonalBanner">
@@ -69,7 +54,7 @@ const ListedCharity = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-6">
-              <img alt="free Fund" className="img-fluid mx-auto d-block" height="100%" width="579px" src={storage === "brazilian" ? freeFundBR : freeFund} />
+              <img alt="free Fund" className="img-fluid mx-auto d-block" height="100%" width="579px" src={freeFundBR} />
             </div>
           </div>
         </div>

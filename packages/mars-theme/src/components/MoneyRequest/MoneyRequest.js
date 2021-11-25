@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "../link";
-import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
 import InstantMoneyTransferBR from "../../assets/InstantMoneyTransferBR.svg";
-import Send from "../../assets/send.svg";
 import SendBR from "../../assets/sendBR.svg";
-import Request from "../../assets/request.svg";
 import RequestBR from "../../assets/requestBR.svg";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const MoneyRequest = ({ i18n }) => {
-	const [storage, setStorage] = useState("")
-	useEffect(() => {
-		setStorage(localStorage.getItem("lang"))
-	}, [i18n.language])
 	return (
 		<div className="MoneyRequest transfer-money sm-mt-30">
 			<div className="row">
@@ -51,7 +44,7 @@ const MoneyRequest = ({ i18n }) => {
 												className="img-fluid mx-auto d-block"
 												height="100%"
 												width="100%"
-												src={storage === "brazilian" ? RequestBR : Request}
+												src={RequestBR}
 												alt="Request"
 											/>
 										</Slide>
@@ -68,7 +61,7 @@ const MoneyRequest = ({ i18n }) => {
 												className="img-fluid mx-auto d-block"
 												height="100%"
 												width="100%"
-												src={storage === "brazilian" ? SendBR : Send}
+												src={SendBR}
 												alt="Send"
 											/>
 										</Slide>
@@ -80,7 +73,7 @@ const MoneyRequest = ({ i18n }) => {
 							className="img-fluid mx-auto money-transfer sm-mt-30"
 							height="100%"
 							width="100%"
-							src={storage === "brazilian" ? InstantMoneyTransferBR : InstantMoneyTransfer}
+							src={InstantMoneyTransferBR}
 							alt="Instant Money Transfer"
 						/>
 					</div>

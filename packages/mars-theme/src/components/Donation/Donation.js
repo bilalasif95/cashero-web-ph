@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg";
-import SlideGroup from "../../assets/SlideGroup.png";
 import SlideGroupBR from "../../assets/SlideGroupBR.png";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import donateDollar from "../../assets/donateDollar.svg";
@@ -24,10 +23,6 @@ import { withTranslation } from "react-i18next";
 
 const Donation = ({ i18n }) => {
   const [appModal, setAppModal] = useState(false)
-  const [storage, setStorage] = useState("")
-  useEffect(() => {
-    setStorage(localStorage.getItem("lang"))
-  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -38,17 +33,7 @@ const Donation = ({ i18n }) => {
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/donation/" />
-        {i18n.language === "brazilian" ?
-          <>
-            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/donation/" />
-            <html lang="pt-BR" />
-          </>
-          :
-          <>
-            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/donation/" />
-            <html lang="en" />
-          </>
-        }
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/donation/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/donation/" />
       </Head>
       <div className="PesonalBanner">
@@ -66,7 +51,7 @@ const Donation = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Slide Group" height="100%" width="100%" className="img-fluid mx-auto d-block sm-mt-30" src={storage === "brazilian" ? SlideGroupBR : SlideGroup} />
+              <img alt="Slide Group" height="100%" width="100%" className="img-fluid mx-auto d-block sm-mt-30" src={SlideGroupBR} />
             </div>
           </div>
         </div>
