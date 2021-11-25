@@ -13,7 +13,7 @@
 // ***********************
 
 
-def CONTAINER_NAME="rnssolution/cashero-web"
+def CONTAINER_NAME="rnssolution/cashero-web-br"
 def CONTAINER_TAG="0.0.1"
 def DOCKER_HUB_USER="rnssolutions"
 
