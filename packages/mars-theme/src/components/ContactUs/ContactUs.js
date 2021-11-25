@@ -10,17 +10,7 @@ const ContactUs = ({ i18n }) => {
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/contact-us/" />
-        {i18n.language === "brazilian" ?
-          <>
-            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/contact-us/" />
-            <html lang="pt-BR" />
-          </>
-          :
-          <>
-            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/contact-us/" />
-            <html lang="en" />
-          </>
-        }
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/contact-us/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/contact-us/" />
       </Head>
       <div className="ContactUsBanner">

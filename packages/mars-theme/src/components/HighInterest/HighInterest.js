@@ -5,7 +5,6 @@ import ArrowWhite from "../../assets/arrowLinkWhite.svg";
 import CounterIcon from "../../assets/counterIcon.svg";
 import { Fade } from "react-awesome-reveal";
 import SearchIcon from "@material-ui/icons/Search";
-import currencieslist from "../../config/currenciesList";
 import currencieslistBR from "../../config/currenciesListBR";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import { callApi } from "../../config/call-api";
@@ -16,7 +15,7 @@ var bigDecimal = require('js-big-decimal');
 
 const HighInterest = ({ i18n }) => {
 	const [flaggbp, setflaggbp] = useState("🇺🇸");
-	const [flagcurrencygbp, setflagcurrencygbp] = useState(i18n.language === "brazilian" ? "Dollar Americano - USD" : "US Dollar - USD");
+	const [flagcurrencygbp, setflagcurrencygbp] = useState("Dollar Americano - USD");
 	const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
 	const [baseCurrencyGBPValue, setBaseCurrencyGBPValue] = useState("1");
 	const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
@@ -24,7 +23,7 @@ const HighInterest = ({ i18n }) => {
 	const [searchTermgbp, setSearchTermgbp] = useState("");
 	const ref = useRef(null);
 	const [innerWidth, setInnerWidth] = useState(0);
-	const [searchResultsgbp, setSearchResultsgbp] = useState(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+	const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslistBR);
 	const [searchResults2gbp, setSearchResults2gbp] = useState([]);
 	const togglegbp = () => {
 		setSearchTermgbp("");
@@ -44,7 +43,7 @@ const HighInterest = ({ i18n }) => {
 			}
 		}, speed);
 		setInnerWidth(window.innerWidth)
-		setSearchResultsgbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist)
+		setSearchResultsgbp(currencieslistBR)
 		callApi(FirebaseEndPoints.ExchangeRates, "get", "")
 			.then((doc) => {
 				setBaseCurrencyEURValue(doc.fields.eur.stringValue);
@@ -55,24 +54,10 @@ const HighInterest = ({ i18n }) => {
 	}, []);
 	const selectCountrygbp = (country) => {
 		setSearchTermgbp("");
-		setSearchResults2gbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+		setSearchResults2gbp(currencieslistBR);
 		setflaggbp(country.flag);
 		setflagcurrencygbp(country.name)
 	};
-	useEffect(() => {
-		if (i18n.language === "brazilian") {
-			setSearchResultsgbp(currencieslistBR)
-			setSearchResults2gbp([])
-			setflagcurrencygbp("Dollar Americano - USD")
-			setflaggbp("🇺🇸")
-		}
-		else {
-			setSearchResultsgbp(currencieslist)
-			setSearchResults2gbp([])
-			setflagcurrencygbp("US Dollar - USD")
-			setflaggbp("🇺🇸")
-		}
-	}, [i18n.language])
 	const handleChangegbp = (e) => {
 		setSearchTermgbp(e.target.value);
 		const results = searchResultsgbp.filter(

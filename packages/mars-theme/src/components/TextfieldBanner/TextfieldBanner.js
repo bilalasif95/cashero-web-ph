@@ -31,17 +31,11 @@ const TextfieldBanner = ({ i18n }) => {
   const [newPhone, setNewPhoneNumber] = useState("");
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
-    const results = i18n.language === "brazilian" ?
-      searchResults.filter(
-        (country) =>
-          country.name_br.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-          country.dial_code.includes(searchTerm.toLocaleLowerCase())
-      ) :
-      searchResults.filter(
-        (country) =>
-          country.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-          country.dial_code.includes(searchTerm.toLocaleLowerCase())
-      );
+    const results = searchResults.filter(
+      (country) =>
+        country.name_br.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.dial_code.includes(searchTerm.toLocaleLowerCase())
+    );
     setSearchResults2(results);
   };
   const selectCountry = (country) => {
@@ -60,7 +54,7 @@ const TextfieldBanner = ({ i18n }) => {
       UtmMedium: utmMedium,
       UtmSource: utmSource,
       UtmTerm: utmTerm
-    }, i18n.language)
+    })
       .then((res) => {
         setLoading(false);
         if (res.code === 400) {
@@ -98,11 +92,11 @@ const TextfieldBanner = ({ i18n }) => {
           // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+1");
+          setCode("+55");
           // setPhoneNoLength(10);
         }
       }).catch(() => {
-        setCode("+1");
+        setCode("+55");
         // setPhoneNoLength(10);
       })
   }, [])
@@ -139,7 +133,7 @@ const TextfieldBanner = ({ i18n }) => {
                     >
                       <div className="flag-name">
                         <span>{item.flag}</span>
-                        {i18n.language === "brazilian" ? item.name_br : item.name}
+                        {item.name_br}
                       </div>
                       <div className="code">{item.dial_code}</div>
                     </DropdownItem>
@@ -152,7 +146,7 @@ const TextfieldBanner = ({ i18n }) => {
                     >
                       <div className="flag-name">
                         <span>{item.flag}</span>
-                        {i18n.language === "brazilian" ? item.name_br : item.name}
+                        {item.name_br}
                       </div>
                       <div className="code">{item.dial_code}</div>
                     </DropdownItem>
@@ -190,7 +184,7 @@ const TextfieldBanner = ({ i18n }) => {
           onChange={onCaptchaHandler}
           height="140px"
           width="100%"
-          hl={i18n.language === "brazilian" ? "pt-BR" : "en"}
+          hl="pt-BR"
         />
       </div>
       {error &&
