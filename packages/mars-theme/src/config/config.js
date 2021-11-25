@@ -15,11 +15,11 @@ const firebaseAPI =
 
 export const websiteLink = "https://www.cashero.com";
 
-export const wordPressLink = "https://wp-testing.cashero.com/br";
+export const wordPressLink = "https://wp-staging.cashero.com/br";
 //testing: "https://wp-testing.cashero.com/br"
 //development: "https://wp-development.cashero.com/br"
 //production: "https://wp.cashero.com"
-//staging: "http://130.211.200.187:8005"
+//staging: "https://wp-staging.cashero.com/br"
 
 export const androidAppLink = "https://play.google.com/store/apps/details?id=com.rns.casheroapp";
 
