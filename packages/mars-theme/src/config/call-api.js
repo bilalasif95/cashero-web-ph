@@ -11,7 +11,7 @@ export const callApi = (endpoint, method, token, payload) => {
         url: endpoint,
         data: payload,
         headers: {
-            'Accept-Language': "br",
+            'Accept-Language': "pt_BR",
             'Content-Type': 'application/x-www-form-urlencoded',
             ...authHeaders,
         }

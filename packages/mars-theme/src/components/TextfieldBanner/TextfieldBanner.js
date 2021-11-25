@@ -67,7 +67,7 @@ const TextfieldBanner = ({ i18n }) => {
       })
       .catch(() => {
         setLoading(false);
-        setError("Invalid phone number.");
+        setError("Número de telefone inválido.");
       });
   };
   const handleOnChange = (e) => {

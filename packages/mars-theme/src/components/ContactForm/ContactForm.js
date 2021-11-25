@@ -27,7 +27,7 @@ const ContactForm = ({ i18n }) => {
 		setSuccess("");
 		if (!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(email)) {
 			setLoading(false);
-			setError("Invalid Email.")
+			setError("E-mail inválido.")
 		}
 		else {
 			callApi(EndPoints.contactUs, "post", "", {
