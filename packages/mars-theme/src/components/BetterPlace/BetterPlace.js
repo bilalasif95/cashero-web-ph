@@ -15,7 +15,7 @@ const BetterPlace = ({ i18n }) => {
 	return (
 		<>
 			<div className="MoneyRequest">
-				<div className="row">
+				<div className="row align-items-center">
 					<div className="col-md-6">
 						<img className="img-fluid mx-auto d-block" height="100%" width="422px" alt="Place" src={Place} />
 					</div>

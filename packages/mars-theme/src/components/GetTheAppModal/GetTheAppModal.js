@@ -87,7 +87,7 @@ const GetTheAppModal = (props) => {
       })
       .catch(() => {
         setLoading(false);
-        setError("Invalid phone number.");
+        setError("Número de telefone inválido.");
       });
   };
   useEffect(() => {
