@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import Clock from "../../assets/clockImg.svg";
 import Instant from "../../assets/instant.svg";
@@ -15,7 +15,6 @@ import GetPaid from "../Getpaid/Getpaid";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
-import KuWu from "../../assets/KuWu.png";
 import KuWuBR from "../../assets/KuWuBR.png";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Head, connect } from "frontity";
@@ -25,10 +24,6 @@ import { withTranslation } from "react-i18next";
 
 const ReceivePayments = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
-  const [storage, setStorage] = useState("")
-  useEffect(() => {
-    setStorage(localStorage.getItem("lang"))
-  }, [i18n.language])
   const appModalOpen = () => {
     setAppModal(true)
   };
@@ -44,17 +39,7 @@ const ReceivePayments = ({ state, i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/instant-money-transfer/"
         />
-        {i18n.language === "brazilian" ?
-          <>
-            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/instant-money-transfer/" />
-            <html lang="pt-BR" />
-          </>
-          :
-          <>
-            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/instant-money-transfer/" />
-            <html lang="en" />
-          </>
-        }
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/instant-money-transfer/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/instant-money-transfer/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
@@ -81,7 +66,7 @@ const ReceivePayments = ({ state, i18n }) => {
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="KuWu" width="100%" height="100%" className="img-fluid mx-auto d-block" src={storage === "brazilian" ? KuWuBR : KuWu} />
+              <img alt="KuWu" width="100%" height="100%" className="img-fluid mx-auto d-block" src={KuWuBR} />
             </div>
           </div>
         </div>

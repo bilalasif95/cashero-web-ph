@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "../link";
-import currExchange from "../../assets/exchange.svg";
 import currExchangeBR from "../../assets/exchangeBR.svg";
 import { Fade } from "react-awesome-reveal";
 import { Zoom } from "react-awesome-reveal";
@@ -8,10 +7,6 @@ import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
 
 const CurrencyConversion = ({ i18n }) => {
-	const [storage, setStorage] = useState("")
-	useEffect(() => {
-		setStorage(localStorage.getItem("lang"))
-	}, [i18n.language])
 	return (
 		<div className="CurrencyConversion">
 			<div className="row flex-column-reverse flex-sm-row">
@@ -27,7 +22,7 @@ const CurrencyConversion = ({ i18n }) => {
 							height="100%"
 							width="100%"
 							alt="currency exchange"
-							src={storage === "brazilian" ? currExchangeBR : currExchange}
+							src={currExchangeBR}
 						/>
 					</div>
 				</div>

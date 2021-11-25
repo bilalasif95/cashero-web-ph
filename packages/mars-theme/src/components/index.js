@@ -1,40 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Global, css, connect, Head } from "frontity";
 import Switch from "@frontity/components/switch";
-import { parse as parseQs } from "qs";
 // import Header from "./header";
 import List from "./list";
-import CampaignHeader from "../components/campaignHeader/campaignHeader";
-import CampaignFooter from "../components/Campaignfooter/Campaignfooter";
 import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
 import externalCss from "./index.css";
 import Personal from "./Personal/Personal";
-import PersonalCompaign from "./PersonalCompaign/PersonalCompaign";
-import PersonalCompaignBR from "./PersonalCompaignBR/PersonalCompaignBR";
-import PersonalCompaignPT from "./PersonalCompaignPT/PersonalCompaignPT";
-import PersonalCompaignMX from "./PersonalCompaignMX/PersonalCompaignMX";
-import PersonalCompaignDonar from "./PersonalCompaignDonar/PersonalCompaignDonar";
-import PersonalCompaignDOE from "./PersonalCompaignDOE/PersonalCompaignDOE";
-import PersonalCompaignAR from "./PersonalCompaignAR/PersonalCompaignAR";
-import PersonalCompaignCL from "./PersonalCompaignCL/PersonalCompaignCL";
-import PersonalCompaignFR from "./PersonalCompaignFR/PersonalCompaignFR";
-import PersonalCompaignGR from "./PersonalCompaignGR/PersonalCompaignGR";
-import PersonalCompaignIT from "./PersonalCompaignIT/PersonalCompaignIT";
-import PersonalCompaignZA from "./PersonalCompaignZA/PersonalCompaignZA";
-import PersonalCompaignIN from "./PersonalCompaignIN/PersonalCompaignIN";
-import PersonalCompaignID from "./PersonalCompaignID/PersonalCompaignID";
-import PersonalCompaignRU from "./PersonalCompaignRU/PersonalCompaignRU";
-import PersonalCompaignNI from "./PersonalCompaignNI/PersonalCompaignNI";
-import PersonalCompaignENNISavingsTest from "./PersonalCompaignENNISavingsTest/PersonalCompaignENNISavingsTest";
-import PersonalCompaignENIE from "./PersonalCompaignENIE/PersonalCompaignENIE";
-import PersonalCompaignENSG from "./PersonalCompaignENSG/PersonalCompaignENSG";
-import PersonalCompaignPH from "./PersonalCompaignPH/PersonalCompaignPH";
-import PersonalCompaignCO from "./PersonalCompaignCO/PersonalCompaignCO";
-import PersonalCompaignES from "./PersonalCompaignES/PersonalCompaignES";
-import PersonalCompaignPHEN from "./PersonalCompaignPHEN/PersonalCompaignPHEN";
 import Footer from "./footer/Footer";
 import BlogPage from "./BlogPage/BlogPage";
 import HomePage from "./HomePage/HomePage";
@@ -78,101 +52,12 @@ const Theme = ({ state }) => {
       state.source.data[type.link] = Object
     }
   })
-  // const [version, setVersion] = useState(false);
-  useEffect(() => {
-    const qs = parseQs(window.location.search.substr(1));
-    if (data.isPersonalCompaignPT) {
-      i18n.changeLanguage("portuguese")
-    }
-    else if (data.isPersonalCompaignAR) {
-      i18n.changeLanguage("arspanish")
-    }
-    else if (data.isPersonalCompaignBR || qs.lang === "pt_BR") {
-      i18n.changeLanguage("brazilian")
-    }
-    else if (data.isPersonalCompaignCL) {
-      i18n.changeLanguage("clspanish")
-    }
-    else if (data.isPersonalCompaignCO) {
-      i18n.changeLanguage("malay")
-    }
-    else if (data.isPersonalCompaignES) {
-      i18n.changeLanguage("spspanish")
-    }
-    else if (data.isPersonalCompaignFR) {
-      i18n.changeLanguage("french")
-    }
-    else if (data.isPersonalCompaignGR) {
-      i18n.changeLanguage("german")
-    }
-    else if (data.isPersonalCompaignID) {
-      i18n.changeLanguage("bahasa")
-    }
-    else if (data.isPersonalCompaignENRU) {
-      i18n.changeLanguage("ruenglish")
-    }
-    else if (data.isPersonalCompaignIN) {
-      i18n.changeLanguage("inenglish")
-    }
-    else if (data.isPersonalCompaignENNI) {
-      i18n.changeLanguage("nienglish")
-    }
-    else if (data.isPersonalCompaignENNISavingsTest) {
-      i18n.changeLanguage("ennisavingstest")
-    }
-    else if (data.isPersonalCompaignENIE) {
-      i18n.changeLanguage("ieenglish")
-    }
-    else if (data.isPersonalCompaignENSG) {
-      i18n.changeLanguage("sgenglish")
-    }
-    else if (data.isPersonalCompaignIT) {
-      i18n.changeLanguage("italian")
-    }
-    else if (data.isPersonalCompaignPH) {
-      i18n.changeLanguage("filipino")
-    }
-    else if (data.isPersonalCompaignZA) {
-      i18n.changeLanguage("zaenglish")
-    }
-    else if (data.isPersonalCompaignMX) {
-      i18n.changeLanguage("spanish")
-    }
-    else if (data.isPersonalCompaignDonar) {
-      i18n.changeLanguage("donarmx")
-    }
-    else if (data.isPersonalCompaignDOE) {
-      i18n.changeLanguage("brazillianDOE")
-    }
-    else if (data.isPersonalCompaign || qs.lang === "en") {
-      i18n.changeLanguage("english")
-      localStorage.setItem("lang", "english")
-    }
-    else if (data.isPersonalCompaignPHEN) {
-      i18n.changeLanguage("enfilipino")
-    }
-    else { }
-    //   let name = 'cashero-web'
-    //   let version = '1.0.26'
-    //   const last_version = localStorage.getItem(`${name}-Version`)
-    //   if (!last_version) {
-    //     setVersion(true)
-    //     // window.location.reload();
-    //   }
-    //   if (last_version !== version) {
-    //     localStorage.setItem(`${name}-Version`, version)
-    //     setVersion(true)
-    //     // window.location.reload();
-    //   }
-  }, [i18n.language])
-  // const onRefreshButtonClick = () => {
-  //   window.location.reload();
-  // }
   return (
     <>
       {/* Add some metatags to the <head> of the HTML. */}
       <Title />
       <Head>
+        <html lang="pt-BR" />
         <meta name="description" content={state.frontity.description} />
         <meta name="google-site-verification" content="ULLpQHl1XeVHE2H-ZSPLosCUY10CBkttCwbNrfMBVsc" />
         <meta name="facebook-domain-verification" content="ao1nxtpttahaf3nsk7ukhlila8irwf" />
@@ -226,7 +111,7 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer> */}
       <I18nextProvider i18n={i18n}>
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignDOE || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignDonar || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNI || data.isPersonalCompaignENSG || data.isPersonalCompaignENIE || data.isPersonalCompaignENNISavingsTest || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignHeader /> : <List />}
+        <List />
         {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
         {/* <Main> */}
@@ -259,33 +144,10 @@ const Theme = ({ state }) => {
           <Thankyou when={data.isThankYou} />
           <BlogPage when={data.isBlog} />
           <PageError when={data.isError} />
-          <PersonalCompaign when={data.isPersonalCompaign} />
-          <PersonalCompaignBR when={data.isPersonalCompaignBR} />
-          <PersonalCompaignPT when={data.isPersonalCompaignPT} />
-          <PersonalCompaignMX when={data.isPersonalCompaignMX} />
-          <PersonalCompaignDonar when={data.isPersonalCompaignDonar} />
-          <PersonalCompaignDOE when={data.isPersonalCompaignDOE} />
-          <PersonalCompaignAR when={data.isPersonalCompaignAR} />
-          <PersonalCompaignCL when={data.isPersonalCompaignCL} />
-          <PersonalCompaignFR when={data.isPersonalCompaignFR} />
-          <PersonalCompaignGR when={data.isPersonalCompaignGR} />
-          <PersonalCompaignIT when={data.isPersonalCompaignIT} />
-          <PersonalCompaignZA when={data.isPersonalCompaignZA} />
-          <PersonalCompaignIN when={data.isPersonalCompaignIN} />
-          <PersonalCompaignRU when={data.isPersonalCompaignENRU} />
-          <PersonalCompaignNI when={data.isPersonalCompaignENNI} />
-          <PersonalCompaignENNISavingsTest when={data.isPersonalCompaignENNISavingsTest} />
-          <PersonalCompaignID when={data.isPersonalCompaignID} />
-          <PersonalCompaignENIE when={data.isPersonalCompaignENIE} />
-          <PersonalCompaignENSG when={data.isPersonalCompaignENSG} />
-          <PersonalCompaignPH when={data.isPersonalCompaignPH} />
-          <PersonalCompaignCO when={data.isPersonalCompaignCO} />
-          <PersonalCompaignES when={data.isPersonalCompaignES} />
-          <PersonalCompaignPHEN when={data.isPersonalCompaignPHEN} />
           <Countries when={data.isCountries} />
         </Switch>
         {/* </Main> */}
-        {(data.isPersonalCompaign || data.isPersonalCompaignBR || data.isPersonalCompaignPHEN || data.isPersonalCompaignDOE || data.isPersonalCompaignPT || data.isPersonalCompaignMX || data.isPersonalCompaignDonar || data.isPersonalCompaignAR || data.isPersonalCompaignCL || data.isPersonalCompaignFR || data.isPersonalCompaignGR || data.isPersonalCompaignIT || data.isPersonalCompaignZA || data.isPersonalCompaignIN || data.isPersonalCompaignENRU || data.isPersonalCompaignENNI || data.isPersonalCompaignENSG || data.isPersonalCompaignENIE || data.isPersonalCompaignENNISavingsTest || data.isPersonalCompaignID || data.isPersonalCompaignPH || data.isPersonalCompaignCO || data.isPersonalCompaignES) ? <CampaignFooter /> : <Footer />}
+        <Footer />
       </I18nextProvider >
     </>
   );

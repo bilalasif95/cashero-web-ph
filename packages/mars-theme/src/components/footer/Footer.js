@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from "../link";
 import PropTypes from 'prop-types';
 import Logo from "../../assets/logo.svg";
-import Android from "../../assets/AndroidApp.svg";
 import AndroidBR from "../../assets/AndroidAppBR.svg";
-import IOS from "../../assets/iOSApp.svg";
 import IOSBR from "../../assets/iOSAppBR.svg";
 import LinkedIn from "../../assets/linkedin.svg";
 import Facebook from "../../assets/facebook.svg";
@@ -42,10 +40,6 @@ TabPanel.propTypes = {
 };
 
 const Footer = ({ i18n }) => {
-	const [storage, setStorage] = useState("")
-	useEffect(() => {
-		setStorage(localStorage.getItem("lang"))
-	}, [i18n.language])
 	return (
 		<div className="container">
 			<div className="Footer">
@@ -56,8 +50,8 @@ const Footer = ({ i18n }) => {
 						</Link>
 						<p className="HelpText footerBreakText">{i18n.t("Footer_P1")}</p>
 						<ul className="list-unstyled AppList">
-							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="100%" src={storage === "brazilian" ? AndroidBR : Android} /></a></li>
-							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="100%" src={storage === "brazilian" ? IOSBR : IOS} /></a></li>
+							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="100%" src={AndroidBR} /></a></li>
+							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="100%" src={IOSBR} /></a></li>
 						</ul>
 					</div>
 					<div className="col-md-6">

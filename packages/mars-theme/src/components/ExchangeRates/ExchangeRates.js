@@ -18,7 +18,6 @@ import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import SearchIcon from "@material-ui/icons/Search";
-import currencieslist from "../../config/currenciesList";
 import currencieslistBR from "../../config/currenciesListBR";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { callApi } from "../../config/call-api";
@@ -40,11 +39,11 @@ const ExchangeRates = ({ state, i18n }) => {
   };
   const [appModal, setAppModal] = useState(false);
   const [searchTermgbp, setSearchTermgbp] = useState("");
-  const [searchResultsgbp, setSearchResultsgbp] = useState(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+  const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslistBR);
   const [searchResults2gbp, setSearchResults2gbp] = useState([]);
   const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
   const [searchTermeuro, setSearchTermeuro] = useState("");
-  const [searchResultseuro, setSearchResultseuro] = useState(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+  const [searchResultseuro, setSearchResultseuro] = useState(currencieslistBR);
   const [searchResults2euro, setSearchResults2euro] = useState([]);
   const [dropdownOpeneuro, setDropdownOpeneuro] = useState(false);
   const [flaggbp, setflaggbp] = useState("🇬🇧");
@@ -64,8 +63,8 @@ const ExchangeRates = ({ state, i18n }) => {
   const [quoteCurrencyValue, setQuoteCurrencyValue] = useState("");
   useEffect(() => {
     setLoading(true);
-    setSearchResultseuro(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
-    setSearchResultsgbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+    setSearchResultseuro(currencieslistBR);
+    setSearchResultsgbp(currencieslistBR);
     callApi(
       FirebaseEndPoints.IndividualExchangeRates + `/${flagcodegbp}`,
       "get",
@@ -86,20 +85,6 @@ const ExchangeRates = ({ state, i18n }) => {
       })
       .catch(() => { });
   }, []);
-  useEffect(() => {
-    if (i18n.language === "brazilian") {
-      setSearchResultsgbp(currencieslistBR)
-      setSearchResultseuro(currencieslistBR)
-      setSearchResults2gbp([])
-      setSearchResults2euro([])
-    }
-    else {
-      setSearchResultsgbp(currencieslist)
-      setSearchResultseuro(currencieslist)
-      setSearchResults2gbp([])
-      setSearchResults2euro([])
-    }
-  }, [i18n.language])
   const togglegbp = () => {
     setSearchTermgbp("");
     setDropdownOpengbp((prevState) => !prevState);
@@ -136,7 +121,7 @@ const ExchangeRates = ({ state, i18n }) => {
     setBaseCurrencyUSDValue("");
     setSearchTermgbp("");
     setQuoteCurrencyValue("");
-    setSearchResults2gbp(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+    setSearchResults2gbp(currencieslistBR);
     if (swap) {
       setflageuro(country.flag);
       setflagcodeeuro(country.code);
@@ -180,7 +165,7 @@ const ExchangeRates = ({ state, i18n }) => {
   };
   const selectCountryeuro = (country) => {
     setSearchTermeuro("");
-    setSearchResults2euro(i18n.language === "brazilian" ? currencieslistBR : currencieslist);
+    setSearchResults2euro(currencieslistBR);
     setflageuro(country.flag);
     setflagcodeeuro(country.code);
     setflagcurrencyeuro(country.currencyCode);
@@ -261,17 +246,7 @@ const ExchangeRates = ({ state, i18n }) => {
           rel="canonical"
           href="https://www.cashero.com/online-currency-exchange/"
         />
-        {i18n.language === "brazilian" ?
-          <>
-            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/online-currency-exchange/" />
-            <html lang="pt-BR" />
-          </>
-          :
-          <>
-            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/online-currency-exchange/" />
-            <html lang="en" />
-          </>
-        }
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/online-currency-exchange/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/online-currency-exchange/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}

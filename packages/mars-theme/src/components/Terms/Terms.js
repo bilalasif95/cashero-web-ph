@@ -9,17 +9,7 @@ const Terms = ({ i18n }) => {
     <>
       <Head>
         <link rel="canonical" href="https://www.cashero.com/terms/" />
-        {i18n.language === "brazilian" ?
-          <>
-            <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/terms/" />
-            <html lang="pt-BR" />
-          </>
-          :
-          <>
-            <link rel="alternate" hreflang="en-US" href="https://www.cashero.com/terms/" />
-            <html lang="en" />
-          </>
-        }
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/terms/" />
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/terms/" />
       </Head>
       <div className="container">
