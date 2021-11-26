@@ -6,9 +6,9 @@ const Countries = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.cashero.com/countries/" />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/countries/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/countries/" />
+        <link rel="canonical" href="https://www.cashero.com/br/countries/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/countries/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/countries/" />
       </Head>
       <div className="container">
         <div className="conditions-cont">

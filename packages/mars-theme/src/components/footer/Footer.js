@@ -45,7 +45,7 @@ const Footer = ({ i18n }) => {
 			<div className="Footer">
 				<div className="row">
 					<div className="col-md-6">
-						<Link link="/">
+						<Link link="/br">
 							<img src={Logo} height="36px" width="190px" alt="logo" />
 						</Link>
 						<p className="HelpText footerBreakText">{i18n.t("Footer_P1")}</p>
@@ -59,26 +59,26 @@ const Footer = ({ i18n }) => {
 							<div className="col-md-5">
 								<h4 className="NavTitle">{i18n.t("Features")}</h4>
 								<ul className="list-unstyled FooterList">
-									<li><Link link="/high-yield-savings-account">{i18n.t("High_Yield_Savings")}</Link></li>
-									<li><Link link="/multi-currency-savings-account">{i18n.t("Multi_Currency_Account")}</Link></li>
-									<li><Link link="/online-currency-exchange">{i18n.t("Currency_Exchange")}</Link></li>
-									<li><Link link="/instant-money-transfer">{i18n.t("Instant_Payments")}</Link></li>
-									<li><Link link="/transfer-money-abroad">{i18n.t("Global_Transfers")}</Link></li>
+									<li><Link link="/br/high-yield-savings-account">{i18n.t("High_Yield_Savings")}</Link></li>
+									<li><Link link="/br/multi-currency-savings-account">{i18n.t("Multi_Currency_Account")}</Link></li>
+									<li><Link link="/br/online-currency-exchange">{i18n.t("Currency_Exchange")}</Link></li>
+									<li><Link link="/br/instant-money-transfer">{i18n.t("Instant_Payments")}</Link></li>
+									<li><Link link="/br/transfer-money-abroad">{i18n.t("Global_Transfers")}</Link></li>
 								</ul>
 							</div>
 							<div className="col-md-3">
 								<h4 className="NavTitle">{i18n.t("Company")}</h4>
 								<ul className="list-unstyled FooterList">
-									<li><Link link="/company">{i18n.t("About_Us")}</Link></li>
-									<li><Link link="/blog">{i18n.t("Blog")}</Link></li>
+									<li><Link link="/br/company">{i18n.t("About_Us")}</Link></li>
+									<li><Link link="/br/blog">{i18n.t("Blog")}</Link></li>
 								</ul>
 							</div>
 							<div className="col-md-4">
 								<h4 className="NavTitle">{i18n.t("Legal")}</h4>
 								<ul className="list-unstyled FooterList">
-									<li><Link link="/terms">{i18n.t("Terms")}</Link></li>
-									<li><Link link="/privacy-policy">{i18n.t("Privacy")}</Link></li>
-									<li><Link link="/sitemap">{i18n.t("Sitemap")}</Link></li>
+									<li><Link link="/br/terms">{i18n.t("Terms")}</Link></li>
+									<li><Link link="/br/privacy-policy">{i18n.t("Privacy")}</Link></li>
+									<li><Link link="/br/sitemap">{i18n.t("Sitemap")}</Link></li>
 								</ul>
 							</div>
 						</div>

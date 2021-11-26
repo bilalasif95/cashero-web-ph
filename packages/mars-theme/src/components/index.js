@@ -138,7 +138,7 @@ const Theme = ({ state }) => {
           <AppTerms when={data.isAppTerms} />
           <AppPrivacy when={data.isAppPrivacy} />
           <Loading when={data.isFetching} />
-          <HomePage when={data.isArchive} />
+          <HomePage when={data.isMain} />
           <Post when={data.isPostType} />
           <Sitemap when={data.isSitemap} />
           <Thankyou when={data.isThankYou} />

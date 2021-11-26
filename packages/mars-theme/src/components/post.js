@@ -69,7 +69,7 @@ const Post = ({ state, actions, libraries, i18n }) => {
           <div className="BlogHeader">
             <div className="BackIcon">
               <ul className="list-unstyled backList">
-                <Link link="/blog"><li><img alt="back icon" src={backicon} /> {i18n.t("Back")}</li></Link>
+                <Link link="/br/blog"><li><img alt="back icon" src={backicon} /> {i18n.t("Back")}</li></Link>
               </ul>
             </div>
             <div>

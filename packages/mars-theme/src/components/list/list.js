@@ -81,7 +81,7 @@ const List = ({ i18n }) => {
       <div className={`${scrolled ? "active header" : "header"}`} id="header">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light customNav">
-            <Link link="/" className="navbar-brand">
+            <Link link="/br" className="navbar-brand">
               <img className="Logo" height="100%" width="100%" alt="Logo" src={Logo} />
             </Link>
             <button
@@ -140,17 +140,17 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/high-yield-savings-account">
+                              <Link link="/br/high-yield-savings-account">
                                 {i18n.t("High_Yield_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/multi-currency-savings-account">
+                              <Link link="/br/multi-currency-savings-account">
                                 {i18n.t("Multi_Currency_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/online-currency-exchange">
+                              <Link link="/br/online-currency-exchange">
                                 {i18n.t("Online_Currency_Exchange")}
                               </Link>
                             </li>
@@ -168,12 +168,12 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/instant-money-transfer">
+                              <Link link="/br/instant-money-transfer">
                                 {i18n.t("Instant_Money_Transfer")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/transfer-money-abroad">
+                              <Link link="/br/transfer-money-abroad">
                                 {i18n.t("Transfer_Money_Abroad")}
                               </Link>
                             </li>
@@ -210,17 +210,17 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/high-yield-savings-account">
+                              <Link link="/br/high-yield-savings-account">
                                 {i18n.t("High_Yield_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/multi-currency-savings-account">
+                              <Link link="/br/multi-currency-savings-account">
                                 {i18n.t("Multi_Currency_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/online-currency-exchange">
+                              <Link link="/br/online-currency-exchange">
                                 {i18n.t("Online_Currency_Exchange")}
                               </Link>
                             </li>
@@ -238,12 +238,12 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/instant-money-transfer">
+                              <Link link="/br/instant-money-transfer">
                                 {i18n.t("Instant_Money_Transfer")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/transfer-money-abroad">
+                              <Link link="/br/transfer-money-abroad">
                                 {i18n.t("Transfer_Money_Abroad")}
                               </Link>
                             </li>
@@ -280,12 +280,12 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/donation">
+                              <Link link="/br/donation">
                                 {i18n.t("Donate")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/become-listed-charity">
+                              <Link link="/br/become-listed-charity">
                                 {i18n.t("Become_a_Listed_Charity")}
                               </Link>
                             </li>
@@ -296,12 +296,12 @@ const List = ({ i18n }) => {
                   </div>
                 </li>
                 <li className="nav-item" onClick={() => setToggleBotton(false)}>
-                  <Link link="/company" className="nav-link">
+                  <Link link="/br/company" className="nav-link">
                     {i18n.t("Company")}
                   </Link>
                 </li>
                 <li className="nav-item" onClick={() => setToggleBotton(false)}>
-                  <Link link="/contact-us" className="nav-link">
+                  <Link link="/br/contact-us" className="nav-link">
                     {i18n.t("Help")}
                   </Link>
                 </li>

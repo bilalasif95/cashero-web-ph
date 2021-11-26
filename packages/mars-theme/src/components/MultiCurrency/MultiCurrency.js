@@ -21,7 +21,7 @@ const MultiCurrency = ({ i18n }) => {
 								{i18n.t("Savings_Account")}
 							</h2>
 							<p>{i18n.t("Multi_Currency_Savings_Account_MainP")} </p>
-							<Link link="/multi-currency-savings-account" className="Link sm-mb-30">
+							<Link link="/br/multi-currency-savings-account" className="Link sm-mb-30">
 								{i18n.t("Learn_more_about_Accounts")}<img className="ArrowBtn" height="24px" width="24px" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>

@@ -9,9 +9,9 @@ const ContactUs = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.cashero.com/contact-us/" />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/contact-us/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/contact-us/" />
+        <link rel="canonical" href="https://www.cashero.com/br/contact-us/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/contact-us/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/contact-us/" />
       </Head>
       <div className="ContactUsBanner">
         <div className="container">

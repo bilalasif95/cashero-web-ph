@@ -20,7 +20,7 @@ const MoneyRequest = ({ i18n }) => {
 								{i18n.t("Transfer")}
 							</h2>
 							<p>{i18n.t("Money_Request_P")}</p>
-							<Link link="/instant-money-transfer" className="Link">
+							<Link link="/br/instant-money-transfer" className="Link">
 								{i18n.t("Learn_more_about_Payments")} <img className="ArrowBtn" alt="Arrow" height="24px" width="24px" src={Arrow} />
 							</Link>
 						</Fade>

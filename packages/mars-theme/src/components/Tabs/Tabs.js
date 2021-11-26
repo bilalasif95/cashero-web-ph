@@ -144,7 +144,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/multi-currency-savings-account/" ? i18n.t("What_is_Cashero_P_1") : i18n.t("What_is_Cashero_P")}
+											{path === "/br/multi-currency-savings-account/" ? i18n.t("What_is_Cashero_P_1") : i18n.t("What_is_Cashero_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -180,7 +180,7 @@ const QuestionTabs = (props) => {
 											<span className="bold-text">{i18n.t("main_features_B3")} </span> {i18n.t("main_features_P3")}
 										</p>
 										<p className="FaqText">
-											<span className="bold-text">{i18n.t("Instant_Payments")}: </span> {path === "/multi-currency-savings-account/" ? i18n.t("main_features_P4_1") : i18n.t("main_features_P4")}
+											<span className="bold-text">{i18n.t("Instant_Payments")}: </span> {path === "/br/multi-currency-savings-account/" ? i18n.t("main_features_P4_1") : i18n.t("main_features_P4")}
 										</p>
 										<p className="FaqText">
 											<span className="bold-text">{i18n.t("main_features_B5")} </span> {i18n.t("main_features_P5")}
@@ -189,7 +189,7 @@ const QuestionTabs = (props) => {
 											<span className="bold-text">{i18n.t("main_features_B6")} </span> {i18n.t("main_features_P6")}
 										</p>
 										<p className="FaqText">
-											<span className="bold-text">{i18n.t("main_features_B7")} </span> {i18n.t("main_features_Users")}  <Link className="giveaway-link" link="/giveaway">{i18n.t("main_features_Link")}</Link> {i18n.t("main_features_P7")}
+											<span className="bold-text">{i18n.t("main_features_B7")} </span> {i18n.t("main_features_Users")}  <Link className="giveaway-link" link="/br/giveaway">{i18n.t("main_features_Link")}</Link> {i18n.t("main_features_P7")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -274,7 +274,7 @@ const QuestionTabs = (props) => {
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<p className="FaqText">{path === "/multi-currency-savings-account/" ? i18n.t("savings_account_P1_1") : i18n.t("savings_account_P1")}</p>
+										<p className="FaqText">{path === "/br/multi-currency-savings-account/" ? i18n.t("savings_account_P1_1") : i18n.t("savings_account_P1")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -371,18 +371,18 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h2 className="heading">
-										{path === "/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
+										{path === "/br/high-yield-savings-account/" ? i18n.t("money_safe") : i18n.t("money_safe_2")}
 									</h2>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
+											{path === "/br/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/high-yield-savings-account/" &&
+							{path === "/br/high-yield-savings-account/" &&
 								<Accordion expanded={expanded === 'panel6'} onChange={accordionhandleChange('panel6')}>
 									<AccordionSummary
 										expandIcon={expanded === 'panel6' ? <RemoveCircleOutlineIcon /> : <ControlPointIcon />}
@@ -492,7 +492,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("multi_currency_country_P")} <Link link="/countries">{i18n.t("click_here")}</Link> {i18n.t("multi_currency_country_P_1")}
+											{i18n.t("multi_currency_country_P")} <Link link="/br/countries">{i18n.t("click_here")}</Link> {i18n.t("multi_currency_country_P_1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -571,12 +571,12 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
+											{path === "/br/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/multi-currency-savings-account/" &&
+							{path === "/br/multi-currency-savings-account/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -693,7 +693,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/multi-currency-savings-account/" ? i18n.t("multi_currency_exchange_H4_1_P_1") : i18n.t("multi_currency_exchange_H4_1_P")}
+											{path === "/br/multi-currency-savings-account/" ? i18n.t("multi_currency_exchange_H4_1_P_1") : i18n.t("multi_currency_exchange_H4_1_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -791,18 +791,18 @@ const QuestionTabs = (props) => {
 									id="panel5a-header"
 								>
 									<h2 className="heading">
-										{path === "/instant-money-transfer/" ? i18n.t("multi_currency_exchange_H4_5_1") : i18n.t("multi_currency_exchange_H4_5")}
+										{path === "/br/instant-money-transfer/" ? i18n.t("multi_currency_exchange_H4_5_1") : i18n.t("multi_currency_exchange_H4_5")}
 									</h2>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/instant-money-transfer/" ? i18n.t("multi_currency_exchange_H4_5_P_1") : i18n.t("multi_currency_exchange_H4_5_P")}
+											{path === "/br/instant-money-transfer/" ? i18n.t("multi_currency_exchange_H4_5_P_1") : i18n.t("multi_currency_exchange_H4_5_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/online-currency-exchange/" &&
+							{path === "/br/online-currency-exchange/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -1012,7 +1012,7 @@ const QuestionTabs = (props) => {
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/instant-money-transfer/" &&
+							{path === "/br/instant-money-transfer/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}
@@ -1127,13 +1127,13 @@ const QuestionTabs = (props) => {
 									id="panel2a-header"
 								>
 									<h2 className="heading">
-										{path === "/instant-money-transfer/" ? i18n.t("instant_money_transfer_panel5_2") : i18n.t("instant_money_transfer_panel5_2_1")}
+										{path === "/br/instant-money-transfer/" ? i18n.t("instant_money_transfer_panel5_2") : i18n.t("instant_money_transfer_panel5_2_1")}
 									</h2>
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/transfer-money-abroad/" ? i18n.t("instant_money_transfer_panel5_2_P_1") : i18n.t("instant_money_transfer_panel5_2_P")}
+											{path === "/br/transfer-money-abroad/" ? i18n.t("instant_money_transfer_panel5_2_P_1") : i18n.t("instant_money_transfer_panel5_2_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -1187,7 +1187,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/transfer-money-abroad/" ? i18n.t("instant_money_transfer_panel5_4_P_1") : i18n.t("instant_money_transfer_panel5_4_P")}
+											{path === "/br/transfer-money-abroad/" ? i18n.t("instant_money_transfer_panel5_4_P_1") : i18n.t("instant_money_transfer_panel5_4_P")}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -1214,12 +1214,12 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{path === "/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
+											{path === "/br/multi-currency-savings-account/" ? i18n.t("money_safe_P2") : i18n.t("money_safe_P1")}
 										</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
-							{path === "/transfer-money-abroad/" &&
+							{path === "/br/transfer-money-abroad/" &&
 								<Accordion
 									expanded={expanded === "panel6"}
 									onChange={accordionhandleChange("panel6")}

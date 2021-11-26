@@ -156,7 +156,7 @@ const GetTheAppModal = (props) => {
                   {i18n.t("We_will_send_you_a_message_with_a_link_to_download_the_app")}
                 </p>
                 <p id="transition-modal-description">
-                  {i18n.t("You_will_also_earn_a_chance_to_win_1000_every_3_days")} <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link></span> {i18n.t("apply")}
+                  {i18n.t("You_will_also_earn_a_chance_to_win_1000_every_3_days")} <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/br/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link></span> {i18n.t("apply")}
                 </p>
                 <div className="ModalPhone">
                   <div className="numberSelection">

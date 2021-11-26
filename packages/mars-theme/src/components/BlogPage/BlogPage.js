@@ -54,9 +54,9 @@ const BlogPage = ({ state, i18n }) => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.cashero.com/blog/" />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/blog/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/blog/" />
+        <link rel="canonical" href="https://www.cashero.com/br/blog/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/blog/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/blog/" />
       </Head>
       <div className="ContactUsBanner">
         <div className="container">

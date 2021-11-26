@@ -224,7 +224,7 @@ const HighInterest = ({ i18n }) => {
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle noBreakHomeHeading">{i18n.t("High_Yield_Savings_Account")}</h3>
 								<p className="HighInterestText">{i18n.t("High_Yield_Savings_Account_P")}</p>
-								<Link link="/high-yield-savings-account" className="Link">{i18n.t("Learn_more_about_Savings")}
+								<Link link="/br/high-yield-savings-account" className="Link">{i18n.t("Learn_more_about_Savings")}
 									{innerWidth >= 540 ?
 										<img alt="Arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow} />
 										:

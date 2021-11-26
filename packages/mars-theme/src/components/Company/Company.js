@@ -10,9 +10,9 @@ const Company = () => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.cashero.com/company/" />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/company/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/company/" />
+        <link rel="canonical" href="https://www.cashero.com/br/company/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/company/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/company/" />
       </Head>
       <div className="CompanyBanner">
         <div className="container">

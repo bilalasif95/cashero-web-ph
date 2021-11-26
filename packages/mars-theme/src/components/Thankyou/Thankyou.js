@@ -7,9 +7,9 @@ const Thankyou = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.cashero.com/Thankyou/" />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/Thankyou/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/Thankyou/" />
+        <link rel="canonical" href="https://www.cashero.com/br/Thankyou/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/Thankyou/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/Thankyou/" />
       </Head>
       <div className="container">
         <div className="Thankyou">
