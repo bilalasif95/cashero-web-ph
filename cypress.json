@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://www.cashero.com/",
+  "baseUrl": "https://www.cashero.com/ph/",
   "screenshotOnRunFailure": true,
   "screenshotsFolder": "cypress/reports/mocha/assets",
   "reporter": "mochawesome",

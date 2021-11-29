@@ -11,7 +11,7 @@
 LABEL=$(git log -1 --format=%h)
 
 
-CONTAINER_NAME=cashero-web-br
+CONTAINER_NAME=cashero-web-ph
 CONTAINER_CURRENT=rnssolutions/$CONTAINER_NAME:$LABEL
 echo $HOST_USER
 echo $HOST_IP

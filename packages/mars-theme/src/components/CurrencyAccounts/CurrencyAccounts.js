@@ -20,7 +20,7 @@ import MovingCoins from "../../assets/movingCoins.png";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
-import currencieslistBR from "../../config/currenciesListBR";
+import currencieslistPH from "../../config/currencieslistPH";
 import { Head, connect } from "frontity";
 import Link from "../link";
 import { structuredData, faqStructuredData, organizationStructuredData } from "../../config/SEO/MultiCurrencySavingsAccount/structuredData";
@@ -38,11 +38,11 @@ const CurrencyAccounts = ({ state, i18n }) => {
   const [appModal, setAppModal] = useState(false);
   const ref = useRef(null);
   const [flaggbp, setflaggbp] = useState("🇺🇸");
-  const [flagcurrencygbp, setflagcurrencygbp] = useState("Dollar Americano - USD");
+  const [flagcurrencygbp, setflagcurrencygbp] = useState("US Dollar - USD");
   const [dropdownOpengbp, setDropdownOpengbp] = useState(false);
   const [searchTermgbp, setSearchTermgbp] = useState("");
   const [searchResults2gbp, setSearchResults2gbp] = useState([]);
-  const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslistBR);
+  const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslistPH);
   const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
   const [baseCurrencyGBPValue, setBaseCurrencyGBPValue] = useState("1");
   const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
@@ -63,7 +63,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
   };
   const selectCountrygbp = (country) => {
     setSearchTermgbp("");
-    setSearchResults2gbp(currencieslistBR);
+    setSearchResults2gbp(currencieslistPH);
     setflaggbp(country.flag);
     setflagcurrencygbp(country.name)
   };
@@ -80,7 +80,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
         start += 1;
       }
     }, speed);
-    setSearchResultsgbp(currencieslistBR)
+    setSearchResultsgbp(currencieslistPH)
     callApi(FirebaseEndPoints.ExchangeRates, "get", "")
       .then((doc) => {
         setBaseCurrencyEURValue(doc.fields.eur.stringValue)
@@ -102,7 +102,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
     return x ? temp[0] + "." + x : "0.00";
   };
   const calculateBRL = (value, label) => {
-    if (label === "Dollar Americano - USD" || label === "US Dollar - USD") {
+    if (label === "US Dollar - USD" || label === "US Dollar - USD") {
       const multi = bigDecimal.multiply(50.00, value)
       const final = limit(multi)
       return final
@@ -125,10 +125,10 @@ const CurrencyAccounts = ({ state, i18n }) => {
         <meta name="description" content={i18n.t("Multi_Currency_Savings_Account_Meta_Description")} />
         <link
           rel="canonical"
-          href="https://www.cashero.com/multi-currency-savings-account/"
+          href="https://www.cashero.com/ph/multi-currency-savings-account/"
         />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/multi-currency-savings-account/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/multi-currency-savings-account/" />
+        <link rel="alternate" hreflang="tl-PH" href="https://www.cashero.com/ph/multi-currency-savings-account/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/multi-currency-savings-account/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
         </script>
@@ -150,7 +150,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">
@@ -165,11 +165,11 @@ const CurrencyAccounts = ({ state, i18n }) => {
                     <p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
                   </div>
                   <p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
-                    flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "Dollar Americano - USD" ? calculateBRL(baseCurrencyUSDValue, "Dollar Americano - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
+                    flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
                   <div className="CustomCounter">
                     <span className="CounterText">
-                      {flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "Dollar Americano - USD" ? "$" :
-                        flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "Dollar Americano - USD" ? "50.00" :
+                      {flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "US Dollar - USD" ? "$" :
+                        flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "US Dollar - USD" ? "50.00" :
                           flagcurrencygbp === "EU Euro - EUR" ? "60.00" : "70.00"}
                     </span>
                     <span ref={ref} id="counter"></span>

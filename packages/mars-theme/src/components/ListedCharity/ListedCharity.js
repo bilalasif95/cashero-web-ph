@@ -7,7 +7,7 @@ import listImg from "../../assets/list.png";
 import StepsWallet from "../../assets/stepsWallet.png";
 import heartDollar from "../../assets/heartDollar.svg";
 import listHome from "../../assets/listHome.svg";
-import freeFundBR from "../../assets/freeFundBR.png";
+import freeFund from "../../assets/freeFund.png";
 import PeoplesSection from "../PeoplesSection/PeoplesSection";
 import QuestionTabs from "../Tabs/Tabs";
 import SignupSection from "../signupSection/signupSection";
@@ -34,10 +34,10 @@ const ListedCharity = ({ i18n }) => {
       <Head>
         <link
           rel="canonical"
-          href="https://www.cashero.com/become-listed-charity/"
+          href="https://www.cashero.com/ph/become-listed-charity/"
         />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/become-listed-charity/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/become-listed-charity/" />
+        <link rel="alternate" hreflang="tl-PH" href="https://www.cashero.com/ph/become-listed-charity/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/become-listed-charity/" />
       </Head>
       <div className="PesonalBanner">
         <div className="container">
@@ -50,11 +50,11 @@ const ListedCharity = ({ i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-6">
-              <img alt="free Fund" className="img-fluid mx-auto d-block" height="100%" width="579px" src={freeFundBR} />
+              <img alt="free Fund" className="img-fluid mx-auto d-block" height="100%" width="579px" src={freeFund} />
             </div>
           </div>
         </div>

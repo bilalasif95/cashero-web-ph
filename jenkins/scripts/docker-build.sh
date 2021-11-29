@@ -8,6 +8,6 @@ LABEL=$(git log -1 --format=%h)
 echo "Build docker image with label "$LABEL
 
 # Build docker of current directory
-docker build -t rnssolutions/cashero-web-br:$LABEL .
+docker build -t rnssolutions/cashero-web-ph:$LABEL .
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import HandBR from "../../assets/handImgBR.png";
+import Hand from "../../assets/handImg.png";
 import { Fade } from "react-awesome-reveal";
 import ArrowWhite from "../../assets/arrowLinkWhite.svg";
 import { withTranslation } from "react-i18next";
@@ -23,7 +23,7 @@ const Enhance = ({ i18n }) => {
 						</div>
 					</div>
 					<div className="col-md-5">
-						<img className="img-fluid PhoneHand" height="100%" width="100%" alt="Hand" src={HandBR} />
+						<img className="img-fluid PhoneHand" height="100%" width="100%" alt="Hand" src={Hand} />
 					</div>
 				</div>
 			</div>

@@ -13,13 +13,13 @@ const firebaseAPI =
 //development: "https://firestore.googleapis.com/v1/projects/cashero-development-76cca/databases/(default)/documents/"
 //staging: "https://firestore.googleapis.com/v1/projects/cashero-staging/databases/(default)/documents/"
 
-export const websiteLink = "https://www.cashero.com";
+export const websiteLink = "https://www.cashero.com/ph";
 
-export const wordPressLink = "https://wp-staging.cashero.com/br";
-//testing: "https://wp-testing.cashero.com/br"
-//development: "https://wp-development.cashero.com/br"
+export const wordPressLink = "https://wp-staging.cashero.com/ph";
+//testing: "https://wp-testing.cashero.com/ph"
+//development: "https://wp-development.cashero.com/ph"
 //production: "https://wp.cashero.com"
-//staging: "https://wp-staging.cashero.com/br"
+//staging: "https://wp-staging.cashero.com/ph"
 
 export const androidAppLink = "https://play.google.com/store/apps/details?id=com.rns.casheroapp";
 

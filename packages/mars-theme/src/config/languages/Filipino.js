@@ -1,4 +1,4 @@
-export const brazilian = {
+export const Filipino = {
     Personal: "Pessoal",
     Wealth: "Patrimônio",
     High_Yield_Savings_Account: "Conta Online de Alto Rendimento",
@@ -95,7 +95,7 @@ export const brazilian = {
     Your_Moneys_Superhero_H2_1: "Deposite em reais e tenha a mesma segurança da poupança, com 3 vezes mais rendimento",
     Your_Moneys_Superhero_H2_2: "Faça operações de câmbio, envie dinheiro para o exterior e faça pagamentos instantâneos.",
     Your_Moneys_Superhero_H2_3: "Sem tarifas ocultas, sem saldo mínimo e sem estresse.",
-    Open_an_account_in_minutes: "Abra sua conta em alguns minutos. Lançamento oficial no final do ano.",
+    Open_an_account_in_minutes: "Abra sua conta em alguns minutos. Lançamento em breve.",
     Open_an_account_in_minutes_P: "Obtenha acesso antecipado ao aplicativo Cashero. Você pode ganhar $1.000 a cada 3 dias!",
     Raise_More_Money_to: "Arrecade dinheiro para",
     Make_Our_World_a: "tornar o mundo um",
@@ -180,7 +180,7 @@ export const brazilian = {
     Giveaway_h3_6_P_1: "Você poderá sacar seus fundos (e os juros que acumulou) assim que o Cashero estiver em funcionamento. Nesse momento, basta ir até o KYC, nossa verificação de identidade Know Your Customer, apenas para certificar-se de que você é quem afirma ser. O valor do prêmio somente pode ser sacado e não pode ser enviado a outros usuários como pagamento.",
     Giveaway_h3_6: "VOU PODER SACAR O VALOR DO MEU PRÊMIO?",
     Giveaway_h3_7: "QUANDO TERMINAM O SORTEIOS?",
-    Giveaway_h3_7_P: "A campanha Golden Ticket Early Access é um sorteio que ocorre a cada 3 dias desde Maio de 2021. O sorteios continuarão até ao lançamento do Cashero no Outono de 2021.",
+    Giveaway_h3_7_P: "A campanha Golden Ticket Early Access é um sorteio que ocorre a cada 3 dias desde Maio de 2021. O sorteios continuarão até ao do Cashero Lançamento em breve.",
     Giveaway_h3_8: "O QUE MAIS PRECISO SABER?",
     Giveaway_h3_8_P: "Somos totalmente transparentes, por isso, vamos assegurar que estejamos em sintonia.",
     Giveaway_li1: "Nós podemos, a nosso exclusivo critério, suspender, encerrar ou alterar os termos e requisitos do Prêmio Golden Ticket Cashero.",
@@ -555,7 +555,7 @@ export const brazilian = {
     main_features_P7: "por indicar pessoas para o Cashero.",
     main_features_Users: "os usuários",
     Launch_Date: "Quando o Cashero será lançado oficialmente?",
-    Launch_Date_P: "No final de 2021.",
+    Launch_Date_P: "O aplicativo móvel do Cashero será lançado em breve. Fique atento!",
     Cashero_regulated: "Como o Cashero é regulado?",
     Cashero_regulated_P1: "A Cashero está no processo de se tornar uma instituição financeira regulamentada pela União Europeia.",
     savings_account: "Como abro uma conta de Alto Rendimento?",

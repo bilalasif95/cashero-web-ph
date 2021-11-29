@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../link";
-import CharityBR from "../../assets/CharityBR.jpg";
+import Charity from "../../assets/Charity.jpg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
@@ -16,7 +16,7 @@ const CharitySection = ({ i18n }) => {
 							height="100%"
 							width="430px"
 							alt="Charity"
-							src={CharityBR}
+							src={Charity}
 						/>
 					</div>
 				</div>
@@ -25,7 +25,7 @@ const CharitySection = ({ i18n }) => {
 						<Fade triggerOnce direction="up">
 							<h2 className="oneAppTitle">{i18n.t("Fee_Free_Donations")}</h2>
 							<p>{i18n.t("Fee_Free_Donations_P")}</p>
-							<Link link="/donation" className="Link">{i18n.t("Learn_more_about_Charity")}<img className="ArrowBtn" height="24px" width="24px" alt="arrow" src={Arrow} /></Link>
+							<Link link="/ph/donation" className="Link">{i18n.t("Learn_more_about_Charity")}<img className="ArrowBtn" height="24px" width="24px" alt="arrow" src={Arrow} /></Link>
 						</Fade>
 					</div>
 				</div>
