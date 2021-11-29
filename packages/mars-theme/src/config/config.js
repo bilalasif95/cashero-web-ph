@@ -15,7 +15,7 @@ const firebaseAPI =
 
 export const websiteLink = "https://www.cashero.com/ph";
 
-export const wordPressLink = "https://wp-development.cashero.com/ph";
+export const wordPressLink = "https://wp-testing.cashero.com/ph";
 //testing: "https://wp-testing.cashero.com/ph"
 //development: "https://wp-development.cashero.com/ph"
 //production: "https://wp.cashero.com"
