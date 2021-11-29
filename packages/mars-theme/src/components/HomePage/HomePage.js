@@ -25,7 +25,7 @@ const HomePage = ({ state, i18n }) => {
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="pt-BR" href={websiteLink} />
+        <link rel="alternate" hreflang="tl-PH" href={websiteLink} />
         <link rel="alternate" hreflang="x-default" href={websiteLink} />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
@@ -66,7 +66,7 @@ const HomePage = ({ state, i18n }) => {
                 </ul>
                 <p className="draw-text">
                   {i18n.t("Open_an_account_in_minutes_P")} <span className="br-block-with-no-display"></span>
-                  <Link className="giveaway-link" link="/br/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")}
+                  <Link className="giveaway-link" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")}
                 </p>
               </div>
             </div>

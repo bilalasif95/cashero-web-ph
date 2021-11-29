@@ -27,7 +27,7 @@ const ContactForm = ({ i18n }) => {
 		setSuccess("");
 		if (!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(email)) {
 			setLoading(false);
-			setError("E-mail inválido.")
+			setError("Di-wastong Email.")
 		}
 		else {
 			callApi(EndPoints.contactUs, "post", "", {
@@ -76,7 +76,7 @@ const ContactForm = ({ i18n }) => {
 							onChange={onCaptchaHandler}
 							height="140px"
 							width="100%"
-							hl="pt-BR"
+							hl="fil"
 						/>
 					</div>
 					<button onClick={() => sendMessage()} disabled={loading || !name || !email || !message || !value} className={(loading || !name || !email || !message || !value) ? "btn btn-default formbtn disabled" : "btn btn-default formbtn"}>{i18n.t("Send_Message")}</button>

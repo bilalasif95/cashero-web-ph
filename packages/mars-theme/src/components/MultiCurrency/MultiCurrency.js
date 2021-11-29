@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "../link";
-import FlagsBR from "../../assets/FlagsBR.svg";
-import usdflagBR from "../../assets/usdflagBR.png";
-import gbpflagBR from "../../assets/gbpflagBR.png";
+import Flags from "../../assets/Flags.svg";
+import usdflag from "../../assets/usdflag.png";
+import gbpflag from "../../assets/gbpflag.png";
 import eurflag from "../../assets/eurflag.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
@@ -21,7 +21,7 @@ const MultiCurrency = ({ i18n }) => {
 								{i18n.t("Savings_Account")}
 							</h2>
 							<p>{i18n.t("Multi_Currency_Savings_Account_MainP")} </p>
-							<Link link="/br/multi-currency-savings-account" className="Link sm-mb-30">
+							<Link link="/ph/multi-currency-savings-account" className="Link sm-mb-30">
 								{i18n.t("Learn_more_about_Accounts")}<img className="ArrowBtn" height="24px" width="24px" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>
@@ -37,7 +37,7 @@ const MultiCurrency = ({ i18n }) => {
 											className="d-block"
 											height="100%"
 											width="100%"
-											src={usdflagBR}
+											src={usdflag}
 											alt="american flag"
 										/>
 									</Fade>
@@ -48,7 +48,7 @@ const MultiCurrency = ({ i18n }) => {
 											className="d-block"
 											height="100%"
 											width="100%"
-											src={gbpflagBR}
+											src={gbpflag}
 											alt="uk flag"
 										/>
 									</Fade>
@@ -71,7 +71,7 @@ const MultiCurrency = ({ i18n }) => {
 						className="img-fluid mx-auto main-flags"
 						height="100%"
 						width="100%"
-						src={FlagsBR}
+						src={Flags}
 						alt="Flags"
 					/>
 				</div>

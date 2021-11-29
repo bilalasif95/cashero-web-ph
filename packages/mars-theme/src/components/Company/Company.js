@@ -2,17 +2,17 @@ import React from "react";
 import SignupSection from "../signupSection/signupSection";
 import Countup from "../Countup/Countup";
 import WhoSection from "../WhoSection/WhoSection";
-import CasheroImgBR from "../../assets/CasheroImgBR.jpg";
-import YearsImgBR from "../../assets/YearsImgBR.png";
+import CasheroImg from "../../assets/CasheroImg.png";
+import YearsImg from "../../assets/YearsImg.png";
 import { Head } from "frontity";
 
 const Company = () => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.cashero.com/br/company/" />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/company/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/company/" />
+        <link rel="canonical" href="https://www.cashero.com/ph/company/" />
+        <link rel="alternate" hreflang="tl-PH" href="https://www.cashero.com/ph/company/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/company/" />
       </Head>
       <div className="CompanyBanner">
         <div className="container">
@@ -23,7 +23,7 @@ const Company = () => {
                 height="100%"
                 width="100%"
                 alt="Cashero Image"
-                src={CasheroImgBR}
+                src={CasheroImg}
               />
             </div>
           </div>
@@ -40,7 +40,7 @@ const Company = () => {
                 height="100%"
                 width="1150px"
                 alt="Years Image"
-                src={YearsImgBR}
+                src={YearsImg}
               />
             </div>
           </div>

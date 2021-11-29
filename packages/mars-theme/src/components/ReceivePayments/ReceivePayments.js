@@ -15,7 +15,7 @@ import GetPaid from "../Getpaid/Getpaid";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
-import KuWuBR from "../../assets/KuWuBR.png";
+import KuWu from "../../assets/KuWu.png";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Head, connect } from "frontity";
 import Link from "../link";
@@ -37,10 +37,10 @@ const ReceivePayments = ({ state, i18n }) => {
         <meta name="description" content={i18n.t("Instant_Money_Transfer_Meta_Description")} />
         <link
           rel="canonical"
-          href="https://www.cashero.com/br/instant-money-transfer/"
+          href="https://www.cashero.com/ph/instant-money-transfer/"
         />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/instant-money-transfer/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/instant-money-transfer/" />
+        <link rel="alternate" hreflang="tl-PH" href="https://www.cashero.com/ph/instant-money-transfer/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/instant-money-transfer/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
         </script>
@@ -62,11 +62,11 @@ const ReceivePayments = ({ state, i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/br/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="KuWu" width="100%" height="100%" className="img-fluid mx-auto d-block" src={KuWuBR} />
+              <img alt="KuWu" width="100%" height="100%" className="img-fluid mx-auto d-block" src={KuWu} />
             </div>
           </div>
         </div>

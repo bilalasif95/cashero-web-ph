@@ -4,7 +4,7 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
 const personalHandler = {
-  pattern: "/br/high-yield-savings-account",
+  pattern: "/ph/high-yield-savings-account",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -14,7 +14,7 @@ const personalHandler = {
 }
 
 const companyHandler = {
-  pattern: "/br/company",
+  pattern: "/ph/company",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -24,7 +24,7 @@ const companyHandler = {
 }
 
 const contactusHandler = {
-  pattern: "/br/contact-us",
+  pattern: "/ph/contact-us",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -34,7 +34,7 @@ const contactusHandler = {
 }
 
 const donationHandler = {
-  pattern: "/br/donation",
+  pattern: "/ph/donation",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -44,7 +44,7 @@ const donationHandler = {
 }
 
 const listedcharityHandler = {
-  pattern: "/br/become-listed-charity",
+  pattern: "/ph/become-listed-charity",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -54,7 +54,7 @@ const listedcharityHandler = {
 }
 
 const currencyaccountsHandler = {
-  pattern: "/br/multi-currency-savings-account",
+  pattern: "/ph/multi-currency-savings-account",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -64,7 +64,7 @@ const currencyaccountsHandler = {
 }
 
 const exchangeratesHandler = {
-  pattern: "/br/online-currency-exchange",
+  pattern: "/ph/online-currency-exchange",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -74,7 +74,7 @@ const exchangeratesHandler = {
 }
 
 const receivepaymentsHandler = {
-  pattern: "/br/instant-money-transfer",
+  pattern: "/ph/instant-money-transfer",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -84,7 +84,7 @@ const receivepaymentsHandler = {
 }
 
 const remittanceHandler = {
-  pattern: "/br/transfer-money-abroad",
+  pattern: "/ph/transfer-money-abroad",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -94,7 +94,7 @@ const remittanceHandler = {
 }
 
 const blogsHandler = {
-  pattern: "/br/blog",
+  pattern: "/ph/blog",
   func: async ({ route, state, libraries }) => {
     const { api, populate } = libraries.source
     const response = await api.get({
@@ -119,7 +119,7 @@ const blogsHandler = {
 }
 
 const giveawayHandler = {
-  pattern: "/br/giveaway",
+  pattern: "/ph/giveaway",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -129,7 +129,7 @@ const giveawayHandler = {
 }
 
 const privacyHandler = {
-  pattern: "/br/privacy-policy",
+  pattern: "/ph/privacy-policy",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -139,7 +139,7 @@ const privacyHandler = {
 }
 
 const appPrivacyHandler = {
-  pattern: "/br/app-privacy-policy",
+  pattern: "/ph/app-privacy-policy",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -149,7 +149,7 @@ const appPrivacyHandler = {
 }
 
 const appTermsHandler = {
-  pattern: "/br/app-terms",
+  pattern: "/ph/app-terms",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -159,7 +159,7 @@ const appTermsHandler = {
 }
 
 const termsHandler = {
-  pattern: "/br/terms",
+  pattern: "/ph/terms",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -169,7 +169,7 @@ const termsHandler = {
 }
 
 const sitemapHandler = {
-  pattern: "/br/sitemap",
+  pattern: "/ph/sitemap",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -179,7 +179,7 @@ const sitemapHandler = {
 }
 
 const thankyouHandler = {
-  pattern: "/br/Thankyou",
+  pattern: "/ph/Thankyou",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -189,7 +189,7 @@ const thankyouHandler = {
 }
 
 const countriesHandler = {
-  pattern: "/br/countries",
+  pattern: "/ph/countries",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",
@@ -199,7 +199,7 @@ const countriesHandler = {
 }
 
 const mainHandler = {
-  pattern: "/br",
+  pattern: "/ph",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",

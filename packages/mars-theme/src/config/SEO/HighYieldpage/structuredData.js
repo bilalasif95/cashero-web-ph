@@ -14,7 +14,7 @@ export const structuredData = page => {
       "@type": "ListItem",
       "position": 2,
       "item": {
-        "@id": "https://www.cashero.com/br/high-yield-savings-account/",
+        "@id": "https://www.cashero.com/ph/high-yield-savings-account/",
         "name": "High Yield Savings Account",
         "description": "Introducing a first-of-its-kind approach to high yield savings. Cashero, the superhero your hard-earned money has been waiting for."
       }
@@ -27,7 +27,7 @@ export const faqStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "name": "Cashero - High Yield Savings Account - FAQ",
-    "url": "https://www.cashero.com/br/high-yield-savings-account/",
+    "url": "https://www.cashero.com/ph/high-yield-savings-account/",
     "mainEntity": [{
       "@type": "Question",
       "name": "How do I open a high-yield savings account?",
@@ -68,7 +68,7 @@ export const organizationStructuredData = () => {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
-    url: "https://www.cashero.com/br/high-yield-savings-account/",
+    url: "https://www.cashero.com/ph/high-yield-savings-account/",
     name: "High Yield Savings Account | Cashero App",
     description: "Put your money to work with the Cashero High Yield Savings Account. Beat the rate of inflation with an average APY of 5% on your deposits.",
     logo: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FBs18pDE.png?alt=media",
@@ -89,7 +89,7 @@ export const organizationStructuredData = () => {
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "url": "https://www.cashero.com/br/contact-us/"
+        "url": "https://www.cashero.com/ph/contact-us/"
       }],
     "location": {
       "@type": "Place",

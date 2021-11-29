@@ -8,9 +8,9 @@ const Terms = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.cashero.com/br/terms/" />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/terms/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/terms/" />
+        <link rel="canonical" href="https://www.cashero.com/ph/terms/" />
+        <link rel="alternate" hreflang="tl-PH" href="https://www.cashero.com/ph/terms/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/terms/" />
       </Head>
       <div className="container">
         <div className="conditions-cont">
@@ -106,7 +106,7 @@ const Terms = ({ i18n }) => {
               </div>
               <div className="terms_titles">
                 <h3 className="text-uppercase">{i18n.t("PRIVACY_POLICY")}</h3>
-                <p>{i18n.t("PRIVACY_POLICY_SHORT")} <Link link="/br/privacy-policy">{i18n.t("PRIVACY_POLICY")}</Link>.</p>
+                <p>{i18n.t("PRIVACY_POLICY_SHORT")} <Link link="/ph/privacy-policy">{i18n.t("PRIVACY_POLICY")}</Link>.</p>
               </div>
               <div className="terms_titles">
                 <h3>{i18n.t("TERMINATION")}</h3>

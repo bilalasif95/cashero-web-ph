@@ -7,8 +7,8 @@ BRANCH=$( git branch --show-current)
 LABEL=$(git log -1 --format=%h)
 
 # Label the docker container
-CONTAINER_NAME=rnssolutions/cashero-web-br
-CONTAINER_CURRENT=rnssolutions/cashero-web-br:$LABEL
+CONTAINER_NAME=rnssolutions/cashero-web-ph
+CONTAINER_CURRENT=rnssolutions/cashero-web-ph:$LABEL
 CONTAINER_LATEST=${CONTAINER_NAME}:latest
 
 # DOCKER_PASSWORD is controller by jenkins env

@@ -12,8 +12,8 @@ import DropdownArrow from "../../assets/DropdownArrow.svg";
 import CharityImg from "../../assets/charityImg.svg";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import AndroidBR from "../../assets/AndroidAppBR.svg";
-import IOSBR from "../../assets/iOSAppBR.svg";
+import Android from "../../assets/AndroidApp.svg";
+import IOS from "../../assets/iOSApp.svg";
 import { androidAppLink, iosAppLink } from "../../config/config";
 import { withTranslation } from "react-i18next";
 
@@ -81,7 +81,7 @@ const List = ({ i18n }) => {
       <div className={`${scrolled ? "active header" : "header"}`} id="header">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light customNav">
-            <Link link="/br" className="navbar-brand">
+            <Link link="/ph" className="navbar-brand">
               <img className="Logo" height="100%" width="100%" alt="Logo" src={Logo} />
             </Link>
             <button
@@ -140,17 +140,17 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/high-yield-savings-account">
+                              <Link link="/ph/high-yield-savings-account">
                                 {i18n.t("High_Yield_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/multi-currency-savings-account">
+                              <Link link="/ph/multi-currency-savings-account">
                                 {i18n.t("Multi_Currency_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/online-currency-exchange">
+                              <Link link="/ph/online-currency-exchange">
                                 {i18n.t("Online_Currency_Exchange")}
                               </Link>
                             </li>
@@ -168,12 +168,12 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/instant-money-transfer">
+                              <Link link="/ph/instant-money-transfer">
                                 {i18n.t("Instant_Money_Transfer")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/transfer-money-abroad">
+                              <Link link="/ph/transfer-money-abroad">
                                 {i18n.t("Transfer_Money_Abroad")}
                               </Link>
                             </li>
@@ -210,17 +210,17 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/high-yield-savings-account">
+                              <Link link="/ph/high-yield-savings-account">
                                 {i18n.t("High_Yield_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/multi-currency-savings-account">
+                              <Link link="/ph/multi-currency-savings-account">
                                 {i18n.t("Multi_Currency_Savings_Account")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/online-currency-exchange">
+                              <Link link="/ph/online-currency-exchange">
                                 {i18n.t("Online_Currency_Exchange")}
                               </Link>
                             </li>
@@ -238,12 +238,12 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/instant-money-transfer">
+                              <Link link="/ph/instant-money-transfer">
                                 {i18n.t("Instant_Money_Transfer")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/transfer-money-abroad">
+                              <Link link="/ph/transfer-money-abroad">
                                 {i18n.t("Transfer_Money_Abroad")}
                               </Link>
                             </li>
@@ -280,12 +280,12 @@ const List = ({ i18n }) => {
                           </p>
                           <ul className="HeaderList list-unstyled">
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/donation">
+                              <Link link="/ph/donation">
                                 {i18n.t("Donate")}
                               </Link>
                             </li>
                             <li onClick={() => setToggleBotton(false)}>
-                              <Link link="/br/become-listed-charity">
+                              <Link link="/ph/become-listed-charity">
                                 {i18n.t("Become_a_Listed_Charity")}
                               </Link>
                             </li>
@@ -296,12 +296,12 @@ const List = ({ i18n }) => {
                   </div>
                 </li>
                 <li className="nav-item" onClick={() => setToggleBotton(false)}>
-                  <Link link="/br/company" className="nav-link">
+                  <Link link="/ph/company" className="nav-link">
                     {i18n.t("Company")}
                   </Link>
                 </li>
                 <li className="nav-item" onClick={() => setToggleBotton(false)}>
-                  <Link link="/br/contact-us" className="nav-link">
+                  <Link link="/ph/contact-us" className="nav-link">
                     {i18n.t("Help")}
                   </Link>
                 </li>
@@ -331,8 +331,8 @@ const List = ({ i18n }) => {
       {openDiv ? (
         <div className="MobileGetAppBtn">
           <ul className="list-unstyled MobileAppList">
-            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="132px" src={AndroidBR} /></a></li>
-            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="116px" src={IOSBR} /></a></li>
+            <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="132px" src={Android} /></a></li>
+            <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="116px" src={IOS} /></a></li>
           </ul>
           {/* <button
             className="btn btn-primary my-2 my-sm-0 Appbtn GetAppBtn"

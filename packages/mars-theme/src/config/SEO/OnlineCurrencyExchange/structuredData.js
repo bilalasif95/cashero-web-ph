@@ -14,7 +14,7 @@ export const structuredData = page => {
       "@type": "ListItem",
       "position": 2,
       "item": {
-        "@id": "https://www.cashero.com/br/online-currency-exchange/",
+        "@id": "https://www.cashero.com/ph/online-currency-exchange/",
         "name": "Online Currency Exchange | Cashero App",
         "description": "Exchange currency online easily with the Cashero App. Your currency exchange happens in an instant and with mid-market rates, best of all, there’s no hidden fees."
       }
@@ -27,7 +27,7 @@ export const faqStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "name": "Cashero App - Online Currency Exchange",
-    "url": "https://www.cashero.com/br/online-currency-exchange/",
+    "url": "https://www.cashero.com/ph/online-currency-exchange/",
     "mainEntity": [{
       "@type": "Question",
       "name": "How can I exchange funds from one currency to another?",
@@ -52,7 +52,7 @@ export const organizationStructuredData = () => {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
-    url: "https://www.cashero.com/br/online-currency-exchange/",
+    url: "https://www.cashero.com/ph/online-currency-exchange/",
     name: "Online Currency Exchange | Cashero App",
     description: "Exchange currency online easily with the Cashero App. Your currency exchange happens in an instant and with mid-market rates, best of all, there’s no hidden fees.",
     logo: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FBs18pDE.png?alt=media",
@@ -73,7 +73,7 @@ export const organizationStructuredData = () => {
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "url": "https://www.cashero.com/br/contact-us/"
+        "url": "https://www.cashero.com/ph/contact-us/"
       }],
     "location": {
       "@type": "Place",

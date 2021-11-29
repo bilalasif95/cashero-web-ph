@@ -23,7 +23,7 @@ export const structuredData = home => {
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "url": "https://www.cashero.com/br/contact-us/"
+        "url": "https://www.cashero.com/ph/contact-us/"
       }],
     "location": {
       "@type": "Place",

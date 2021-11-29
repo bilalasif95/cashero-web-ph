@@ -59,7 +59,7 @@ const GlobalMoney = ({ i18n }) => {
 							<p>
 								{i18n.t("Transfer_Money_Abroad_P")}
 							</p>
-							<Link link="/br/transfer-money-abroad" className="Link">
+							<Link link="/ph/transfer-money-abroad" className="Link">
 								{i18n.t("Learn_more_about_Transfers")}  <img className="ArrowBtn" height="24px" width="24px" alt="Arrow" src={Arrow} />
 							</Link>
 						</Fade>

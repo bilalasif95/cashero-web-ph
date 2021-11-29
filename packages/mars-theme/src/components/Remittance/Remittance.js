@@ -12,8 +12,8 @@ import Sendpayments from "../Sendpayments/Sendpayments";
 import GlobeDollar from "../../assets/GlobeDollar.svg";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
-import Casher0mapBR from "../../assets/Casher0mapBR.svg";
-import DoneBR from "../../assets/doneBR.svg";
+import Casher0map from "../../assets/Casher0map.svg";
+import done from "../../assets/done.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import StepsDollar from "../../assets/StepsDollar.svg";
@@ -37,10 +37,10 @@ const Remittance = ({ state, i18n }) => {
         <meta name="description" content={i18n.t("Transfer_Money_Abroad_Meta_Description")} />
         <link
           rel="canonical"
-          href="https://www.cashero.com/br/transfer-money-abroad/"
+          href="https://www.cashero.com/ph/transfer-money-abroad/"
         />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/transfer-money-abroad/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/transfer-money-abroad/" />
+        <link rel="alternate" hreflang="tl-PH" href="https://www.cashero.com/ph/transfer-money-abroad/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/transfer-money-abroad/" />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
         </script>
@@ -62,11 +62,11 @@ const Remittance = ({ state, i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
-                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/br/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
+                <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
             </div>
             <div className="col-md-5">
-              <img alt="Cashero map" className="mx-auto d-block w-100" height="100%" width="100%" src={Casher0mapBR} />
+              <img alt="Cashero map" className="mx-auto d-block w-100" height="100%" width="100%" src={Casher0map} />
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ const Remittance = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">
               <Fade triggerOnce direction="right">
                 <div className="GetStartedBox3 w-100">
-                  <img className="img-fluid" height="100%" width="84px" alt="Done" src={DoneBR} />
+                  <img className="img-fluid" height="100%" width="84px" alt="Done" src={done} />
                   <h3>
                     {i18n.t("Remittance_Work")}
                   </h3>

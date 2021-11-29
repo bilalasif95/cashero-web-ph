@@ -4,7 +4,7 @@
 
 describe("High Yields Savings Account Page", () => {
     it("Should check links for High Yields Savings Account Page", () => {
-        cy.visit("/br/high-yield-savings-account/")
+        cy.visit("/ph/high-yield-savings-account/")
         cy.get('.css-wmgr56 > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click();
 
         cy.get("a").each(a => {

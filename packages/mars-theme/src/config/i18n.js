@@ -1,17 +1,17 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import XHR from "i18next-xhr-backend";
-import { brazilian } from "./languages/brazilian";
+import { Filipino } from "./languages/Filipino";
 
 i18n.use(XHR).use(LanguageDetector).init({
     // we init with resources
     resources: {
-        brazilian: {
-            translations: brazilian
+        Filipino: {
+            translations: Filipino
         },
     },
-    lng: "brazilian",
-    // fallbackLng: "brazilian",
+    lng: "Filipino",
+    // fallbackLng: "Filipino",
     debug: false,
     // have a common namespace used around the full app
     ns: ["translations"],

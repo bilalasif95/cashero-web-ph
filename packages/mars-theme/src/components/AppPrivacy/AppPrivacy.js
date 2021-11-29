@@ -8,10 +8,10 @@ const AppPrivacy = ({ i18n }) => {
       <Head>
         <link
           rel="canonical"
-          href="https://www.cashero.com/br/app-privacy-policy/"
+          href="https://www.cashero.com/ph/app-privacy-policy/"
         />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/app-privacy-policy/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/app-privacy-policy/" />
+        <link rel="alternate" hreflang="tl-PH" href="https://www.cashero.com/ph/app-privacy-policy/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/app-privacy-policy/" />
       </Head>
       <div className="container">
         <div className="conditions-cont">

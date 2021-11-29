@@ -5,7 +5,7 @@ import ArrowWhite from "../../assets/arrowLinkWhite.svg";
 import CounterIcon from "../../assets/counterIcon.svg";
 import { Fade } from "react-awesome-reveal";
 import SearchIcon from "@material-ui/icons/Search";
-import currencieslistBR from "../../config/currenciesListBR";
+import currencieslistPH from "../../config/currencieslistPH";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import { callApi } from "../../config/call-api";
 import { FirebaseEndPoints } from "../../config/config";
@@ -15,7 +15,7 @@ var bigDecimal = require('js-big-decimal');
 
 const HighInterest = ({ i18n }) => {
 	const [flaggbp, setflaggbp] = useState("🇺🇸");
-	const [flagcurrencygbp, setflagcurrencygbp] = useState("Dollar Americano - USD");
+	const [flagcurrencygbp, setflagcurrencygbp] = useState("US Dollar - USD");
 	const [baseCurrencyEURValue, setBaseCurrencyEURValue] = useState("1");
 	const [baseCurrencyGBPValue, setBaseCurrencyGBPValue] = useState("1");
 	const [baseCurrencyUSDValue, setBaseCurrencyUSDValue] = useState("1");
@@ -23,7 +23,7 @@ const HighInterest = ({ i18n }) => {
 	const [searchTermgbp, setSearchTermgbp] = useState("");
 	const ref = useRef(null);
 	const [innerWidth, setInnerWidth] = useState(0);
-	const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslistBR);
+	const [searchResultsgbp, setSearchResultsgbp] = useState(currencieslistPH);
 	const [searchResults2gbp, setSearchResults2gbp] = useState([]);
 	const togglegbp = () => {
 		setSearchTermgbp("");
@@ -43,7 +43,7 @@ const HighInterest = ({ i18n }) => {
 			}
 		}, speed);
 		setInnerWidth(window.innerWidth)
-		setSearchResultsgbp(currencieslistBR)
+		setSearchResultsgbp(currencieslistPH)
 		callApi(FirebaseEndPoints.ExchangeRates, "get", "")
 			.then((doc) => {
 				setBaseCurrencyEURValue(doc.fields.eur.stringValue);
@@ -54,7 +54,7 @@ const HighInterest = ({ i18n }) => {
 	}, []);
 	const selectCountrygbp = (country) => {
 		setSearchTermgbp("");
-		setSearchResults2gbp(currencieslistBR);
+		setSearchResults2gbp(currencieslistPH);
 		setflaggbp(country.flag);
 		setflagcurrencygbp(country.name)
 	};
@@ -82,7 +82,7 @@ const HighInterest = ({ i18n }) => {
 		return x ? temp[0] + "." + x : "0.00";
 	};
 	const calculateBRL = (value, label) => {
-		if (label === "Dollar Americano - USD" || label === "US Dollar - USD") {
+		if (label === "US Dollar - USD" || label === "US Dollar - USD") {
 			const multi = bigDecimal.multiply(50.00, value)
 			const final = limit(multi)
 			return final
@@ -116,11 +116,11 @@ const HighInterest = ({ i18n }) => {
 									<p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
 								</div>
 								<p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
-									flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "Dollar Americano - USD" ? calculateBRL(baseCurrencyUSDValue, "Dollar Americano - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
+									flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
 								<div className="CustomCounter">
 									<span className="CounterText">
-										{flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "Dollar Americano - USD" ? "$" :
-											flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "Dollar Americano - USD" ? "50.00" :
+										{flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "US Dollar - USD" ? "$" :
+											flagcurrencygbp === "EU Euro - EUR" ? "€" : "£"}{flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "US Dollar - USD" ? "50.00" :
 												flagcurrencygbp === "EU Euro - EUR" ? "60.00" : "70.00"}
 									</span>
 									<span ref={ref} id="counter"></span>
@@ -224,7 +224,7 @@ const HighInterest = ({ i18n }) => {
 							<Fade triggerOnce direction="up">
 								<h3 className="HighInterestTitle noBreakHomeHeading">{i18n.t("High_Yield_Savings_Account")}</h3>
 								<p className="HighInterestText">{i18n.t("High_Yield_Savings_Account_P")}</p>
-								<Link link="/br/high-yield-savings-account" className="Link">{i18n.t("Learn_more_about_Savings")}
+								<Link link="/ph/high-yield-savings-account" className="Link">{i18n.t("Learn_more_about_Savings")}
 									{innerWidth >= 540 ?
 										<img alt="Arrow" className="ArrowBtn" height="24px" width="24px" src={Arrow} />
 										:

@@ -14,7 +14,7 @@ export const structuredData = page => {
       "@type": "ListItem",
       "position": 2,
       "item": {
-        "@id": "https://www.cashero.com/br/instant-money-transfer/",
+        "@id": "https://www.cashero.com/ph/instant-money-transfer/",
         "name": "Instant Money Transfer: Send Money Instantly Between Cashero Accounts | Cashero App",
         "description": "Cashero allows you to make instant money transfers to other Cashero Accounts all over the world. We offer an all-in-one platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero."
       }
@@ -27,7 +27,7 @@ export const faqStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "name": "Cashero App - Instant Money Transfer",
-    "url": "https://www.cashero.com/br/instant-money-transfer/",
+    "url": "https://www.cashero.com/ph/instant-money-transfer/",
     "mainEntity": [{
       "@type": "Question",
       "name": "What kind of payments can I make with Cashero?",
@@ -76,7 +76,7 @@ export const organizationStructuredData = () => {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
-    url: "https://www.cashero.com/br/instant-money-transfer/",
+    url: "https://www.cashero.com/ph/instant-money-transfer/",
     name: "Instant Money Transfer: Send Money Instantly Between Cashero Accounts | Cashero App",
     description: "Cashero allows you to make instant money transfers to other Cashero Accounts all over the world. We offer an all-in-one platform for multi-currency high-yield savings, currency exchange and instant cross-border payments. We're your money's superhero.",
     logo: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FBs18pDE.png?alt=media",
@@ -97,7 +97,7 @@ export const organizationStructuredData = () => {
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "url": "https://www.cashero.com/br/contact-us/"
+        "url": "https://www.cashero.com/ph/contact-us/"
       }],
     "location": {
       "@type": "Place",

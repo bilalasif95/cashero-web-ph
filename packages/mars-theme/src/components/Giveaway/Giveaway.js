@@ -6,9 +6,9 @@ const Giveaway = ({ i18n }) => {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.cashero.com/br/giveaway/" />
-        <link rel="alternate" hreflang="pt-BR" href="https://www.cashero.com/br/giveaway/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/br/giveaway/" />
+        <link rel="canonical" href="https://www.cashero.com/ph/giveaway/" />
+        <link rel="alternate" hreflang="tl-PH" href="https://www.cashero.com/ph/giveaway/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/giveaway/" />
       </Head>
       <div className="container">
         <div className="conditions-cont">

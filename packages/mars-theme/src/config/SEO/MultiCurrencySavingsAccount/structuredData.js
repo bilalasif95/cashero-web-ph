@@ -14,7 +14,7 @@ export const structuredData = page => {
       "@type": "ListItem",
       "position": 2,
       "item": {
-        "@id": "https://www.cashero.com/br/multi-currency-savings-account/",
+        "@id": "https://www.cashero.com/ph/multi-currency-savings-account/",
         "name": "Multi-Currency Savings Account | Cashero App",
         "description": "Don’t be limited to keeping your savings in a single currency. With the Cashero Multi-Currency Savings Account you can hold your savings in USD, EUR, and GBP, offering you protection against currency fluctuations."
       }
@@ -27,7 +27,7 @@ export const faqStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "name": "Cashero App - Multi-Currency Savings Account",
-    "url": "https://www.cashero.com/br/multi-currency-savings-account/",
+    "url": "https://www.cashero.com/ph/multi-currency-savings-account/",
     "mainEntity": [{
       "@type": "Question",
       "name": "How does the multi-currency account work?",
@@ -76,7 +76,7 @@ export const organizationStructuredData = () => {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
-    url: "https://www.cashero.com/br/multi-currency-savings-account/",
+    url: "https://www.cashero.com/ph/multi-currency-savings-account/",
     name: "Multi-Currency Savings Account | Cashero App",
     description: "Don’t be limited to keeping your savings in a single currency. With the Cashero Multi-Currency Savings Account you can hold your savings in USD, EUR, and GBP, offering you protection against currency fluctuations.",
     logo: "https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FBs18pDE.png?alt=media",
@@ -97,7 +97,7 @@ export const organizationStructuredData = () => {
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "url": "https://www.cashero.com/br/contact-us/"
+        "url": "https://www.cashero.com/ph/contact-us/"
       }],
     "location": {
       "@type": "Place",

@@ -57,8 +57,7 @@ const Post = ({ state, actions, libraries, i18n }) => {
           rel="canonical"
           href={websiteLink + state.router.link}
         />
-        <link rel="alternate" hreflang="pt-BR" href={websiteLink + state.router.link} />
-        <html lang="pt-BR" />
+        <link rel="alternate" hreflang="tl-PH" href={websiteLink + state.router.link} />
         <link rel="alternate" hreflang="x-default" href={websiteLink + state.router.link} />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
@@ -69,18 +68,18 @@ const Post = ({ state, actions, libraries, i18n }) => {
           <div className="BlogHeader">
             <div className="BackIcon">
               <ul className="list-unstyled backList">
-                <Link link="/br/blog"><li><img alt="back icon" src={backicon} /> {i18n.t("Back")}</li></Link>
+                <Link link="/ph/blog"><li><img alt="back icon" src={backicon} /> {i18n.t("Back")}</li></Link>
               </ul>
             </div>
             <div>
               <ul className="list-unstyled BlogSocialList">
-                <li className="brazilianButton"><FacebookShareButton url={websiteLink + state.router.link}><img height="15px" width="15px" alt="facebook icon" src={FB} /><span className="SocialText">{i18n.t("Share")}</span></FacebookShareButton></li>
-                <li className="brazilianButton"><TwitterShareButton url={websiteLink + state.router.link}><img height="15px" width="15px" alt="twitter icon" src={twitter} /><span className="SocialText">{i18n.t("Tweet")}</span></TwitterShareButton></li>
-                <li className="brazilianButton"><LinkedinShareButton url={websiteLink + state.router.link}><img height="15px" width="15px" alt="linkedIn icon" src={linkedIn} /><span className="SocialText">{i18n.t("Post")}</span></LinkedinShareButton></li>
+                <li className="FilipinoButton"><FacebookShareButton url={websiteLink + state.router.link}><img height="15px" width="15px" alt="facebook icon" src={FB} /><span className="SocialText">{i18n.t("Share")}</span></FacebookShareButton></li>
+                <li className="FilipinoButton"><TwitterShareButton url={websiteLink + state.router.link}><img height="15px" width="15px" alt="twitter icon" src={twitter} /><span className="SocialText">{i18n.t("Tweet")}</span></TwitterShareButton></li>
+                <li className="FilipinoButton"><LinkedinShareButton url={websiteLink + state.router.link}><img height="15px" width="15px" alt="linkedIn icon" src={linkedIn} /><span className="SocialText">{i18n.t("Post")}</span></LinkedinShareButton></li>
                 {copied ?
-                  <li className="brazilianButton"><button className="copiedButton"><img height="15px" width="15px" alt="Tick icon" src={Tick} /><span className="SocialText">{i18n.t("Copied")}</span></button></li>
+                  <li className="FilipinoButton"><button className="copiedButton"><img height="15px" width="15px" alt="Tick icon" src={Tick} /><span className="SocialText">{i18n.t("Copied")}</span></button></li>
                   :
-                  <li className="brazilianButton"><button onClick={() => CopyText(websiteLink + state.router.link)}><img height="15px" width="15px" alt="URL icon" src={URL} /><span className="SocialText">{i18n.t("URL")}</span></button></li>
+                  <li className="FilipinoButton"><button onClick={() => CopyText(websiteLink + state.router.link)}><img height="15px" width="15px" alt="URL icon" src={URL} /><span className="SocialText">{i18n.t("URL")}</span></button></li>
                 }
               </ul>
             </div>
