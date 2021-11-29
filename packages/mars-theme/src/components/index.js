@@ -57,7 +57,7 @@ const Theme = ({ state }) => {
       {/* Add some metatags to the <head> of the HTML. */}
       <Title />
       <Head>
-        <html lang="pt-BR" />
+        <html lang="tl-PH" />
         <meta name="description" content={state.frontity.description} />
         <meta name="google-site-verification" content="ULLpQHl1XeVHE2H-ZSPLosCUY10CBkttCwbNrfMBVsc" />
         <meta name="facebook-domain-verification" content="ao1nxtpttahaf3nsk7ukhlila8irwf" />
@@ -138,7 +138,7 @@ const Theme = ({ state }) => {
           <AppTerms when={data.isAppTerms} />
           <AppPrivacy when={data.isAppPrivacy} />
           <Loading when={data.isFetching} />
-          <HomePage when={data.isArchive} />
+          <HomePage when={data.isMain} />
           <Post when={data.isPostType} />
           <Sitemap when={data.isSitemap} />
           <Thankyou when={data.isThankYou} />

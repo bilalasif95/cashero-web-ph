@@ -33,7 +33,7 @@ const TextfieldBanner = ({ i18n }) => {
     setSearchTerm(e.target.value);
     const results = searchResults.filter(
       (country) =>
-        country.name_br.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.name_ph.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
         country.dial_code.includes(searchTerm.toLocaleLowerCase())
     );
     setSearchResults2(results);
@@ -92,11 +92,11 @@ const TextfieldBanner = ({ i18n }) => {
           // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+55");
+          setCode("+63");
           // setPhoneNoLength(10);
         }
       }).catch(() => {
-        setCode("+55");
+        setCode("+63");
         // setPhoneNoLength(10);
       })
   }, [])
@@ -133,7 +133,7 @@ const TextfieldBanner = ({ i18n }) => {
                     >
                       <div className="flag-name">
                         <span>{item.flag}</span>
-                        {item.name_br}
+                        {item.name_ph}
                       </div>
                       <div className="code">{item.dial_code}</div>
                     </DropdownItem>
@@ -146,7 +146,7 @@ const TextfieldBanner = ({ i18n }) => {
                     >
                       <div className="flag-name">
                         <span>{item.flag}</span>
-                        {item.name_br}
+                        {item.name_ph}
                       </div>
                       <div className="code">{item.dial_code}</div>
                     </DropdownItem>
@@ -184,7 +184,7 @@ const TextfieldBanner = ({ i18n }) => {
           onChange={onCaptchaHandler}
           height="140px"
           width="100%"
-          hl="pt-BR"
+          hl="fil"
         />
       </div>
       {error &&

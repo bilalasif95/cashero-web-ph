@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "frontity dev",
-    "build": "frontity build",
+    "build": "frontity build --public-path /ph/static/",
     "serve": "frontity serve",
     "clean:reports": "rm -R -f cypress/reports/mocha && mkdir cypress/reports/mocha",
     "cy:pretest": "npm run clean:reports",

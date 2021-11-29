@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
-import ExchangeBR from "../../assets/exchangeBR.svg";
+import Exchange from "../../assets/exchange.svg";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
@@ -40,7 +40,7 @@ const EasyCurrencyExchange = ({ i18n }) => {
 						height="100%"
 						width="372px"
 						alt="exchange"
-						src={ExchangeBR}
+						src={Exchange}
 					/>
 				</div>
 			</div>

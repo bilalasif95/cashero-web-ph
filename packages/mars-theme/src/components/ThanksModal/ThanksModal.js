@@ -43,7 +43,7 @@ const ThanksModal = (props) => {
                                 <div className="win-cont">
                                     <h3 id="transition-modal-title">{i18n.t("Want_to_win_1000")}</h3>
                                     <p>{i18n.t("Want_to_win_1000_P")}</p>
-                                    <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link></span>
+                                    <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link></span>
                                     <ul className="Thankyou-modal-list list-unstyled">
                                         <li>{i18n.t("Click_AND_Share")}</li>
                                         <li><FacebookShareButton quote="Join me on Cashero and start earning up to 5% APY. Download the app today and make your money work for you: https://play.google.com/store/apps/details?id=com.rns.casheroapp https://apps.apple.com/us/app/cashero/id1547603420" url={websiteLink}><img alt="Facebook" src={Facebook} /> </FacebookShareButton></li>

@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "../link";
-import InstantMoneyTransferBR from "../../assets/InstantMoneyTransferBR.svg";
-import SendBR from "../../assets/sendBR.svg";
-import RequestBR from "../../assets/requestBR.svg";
+import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
+import Send from "../../assets/send.svg";
+import Request from "../../assets/request.svg";
 import { Fade, Slide } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";
@@ -20,7 +20,7 @@ const MoneyRequest = ({ i18n }) => {
 								{i18n.t("Transfer")}
 							</h2>
 							<p>{i18n.t("Money_Request_P")}</p>
-							<Link link="/instant-money-transfer" className="Link">
+							<Link link="/ph/instant-money-transfer" className="Link">
 								{i18n.t("Learn_more_about_Payments")} <img className="ArrowBtn" alt="Arrow" height="24px" width="24px" src={Arrow} />
 							</Link>
 						</Fade>
@@ -44,7 +44,7 @@ const MoneyRequest = ({ i18n }) => {
 												className="img-fluid mx-auto d-block"
 												height="100%"
 												width="100%"
-												src={RequestBR}
+												src={Request}
 												alt="Request"
 											/>
 										</Slide>
@@ -61,7 +61,7 @@ const MoneyRequest = ({ i18n }) => {
 												className="img-fluid mx-auto d-block"
 												height="100%"
 												width="100%"
-												src={SendBR}
+												src={Send}
 												alt="Send"
 											/>
 										</Slide>
@@ -73,7 +73,7 @@ const MoneyRequest = ({ i18n }) => {
 							className="img-fluid mx-auto money-transfer sm-mt-30"
 							height="100%"
 							width="100%"
-							src={InstantMoneyTransferBR}
+							src={InstantMoneyTransfer}
 							alt="Instant Money Transfer"
 						/>
 					</div>

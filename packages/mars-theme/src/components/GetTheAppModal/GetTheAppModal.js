@@ -10,8 +10,8 @@ import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist, androidAppLink, iosAppLink, recaptchaSiteKep, ipAPI } from "../../config/config";
 import ThanksModal from "../ThanksModal/ThanksModal";
 import Link from "../link";
-import AndroidBR from "../../assets/AndroidAppBR.svg";
-import IOSBR from "../../assets/iOSAppBR.svg";
+import Android from "../../assets/AndroidApp.svg";
+import IOS from "../../assets/iOSApp.svg";
 import ReCAPTCHA from "react-google-recaptcha";
 import { withTranslation } from "react-i18next";
 
@@ -55,7 +55,7 @@ const GetTheAppModal = (props) => {
     setSearchTerm(e.target.value);
     const results = searchResults.filter(
       (country) =>
-        country.name_br.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+        country.name_ph.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
         country.dial_code.includes(searchTerm.toLocaleLowerCase())
     );
     setSearchResults2(results);
@@ -87,7 +87,7 @@ const GetTheAppModal = (props) => {
       })
       .catch(() => {
         setLoading(false);
-        setError("Número de telefone inválido.");
+        setError("Di-wastong numero ng telepono.");
       });
   };
   useEffect(() => {
@@ -105,11 +105,11 @@ const GetTheAppModal = (props) => {
           // setPhoneNoLength(countryCode[0].phone_length)
         }
         else {
-          setCode("+55");
+          setCode("+63");
           // setPhoneNoLength(10);
         }
       }).catch(() => {
-        setCode("+55");
+        setCode("+63");
         // setPhoneNoLength(10);
       })
   }, [])
@@ -141,8 +141,8 @@ const GetTheAppModal = (props) => {
                   {i18n.t("Join_Cashero_in")} <span className="br-block highInterestHeading"></span>{i18n.t("seconds")}
                 </h2>
                 <ul className="list-unstyled MobileAppList">
-                  <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={AndroidBR} /></a></li>
-                  <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOSBR} /></a></li>
+                  <li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" src={Android} /></a></li>
+                  <li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" src={IOS} /></a></li>
                 </ul>
               </div>
             </div> :
@@ -156,7 +156,7 @@ const GetTheAppModal = (props) => {
                   {i18n.t("We_will_send_you_a_message_with_a_link_to_download_the_app")}
                 </p>
                 <p id="transition-modal-description">
-                  {i18n.t("You_will_also_earn_a_chance_to_win_1000_every_3_days")} <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link></span> {i18n.t("apply")}
+                  {i18n.t("You_will_also_earn_a_chance_to_win_1000_every_3_days")} <span onClick={() => handleClose()}><Link className="giveaway-link2" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link></span> {i18n.t("apply")}
                 </p>
                 <div className="ModalPhone">
                   <div className="numberSelection">
@@ -187,7 +187,7 @@ const GetTheAppModal = (props) => {
                                 >
                                   <div className="flag-name">
                                     <span>{item.flag}</span>
-                                    {item.name_br}
+                                    {item.name_ph}
                                   </div>
                                   <div className="code">{item.dial_code}</div>
                                 </DropdownItem>
@@ -200,7 +200,7 @@ const GetTheAppModal = (props) => {
                                 >
                                   <div className="flag-name">
                                     <span>{item.flag}</span>
-                                    {item.name_br}
+                                    {item.name_ph}
                                   </div>
                                   <div className="code">{item.dial_code}</div>
                                 </DropdownItem>
@@ -260,7 +260,7 @@ const GetTheAppModal = (props) => {
                       onChange={onCaptchaHandler}
                       height="140px"
                       width="100%"
-                      hl="pt-BR"
+                      hl="fil"
                     />
                   </div>
                 </div>

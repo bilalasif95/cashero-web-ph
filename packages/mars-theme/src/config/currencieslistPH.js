@@ -1,6 +1,6 @@
 const currencies = [
     {
-        name: "Libra Esterlina - GBP",
+        name: "Pound ng UK - GBP",
         flag: "🇬🇧",
         code: "GB",
         currencyCode: "GBP",
@@ -20,7 +20,7 @@ const currencies = [
         white_listed: false,
     },
     {
-        name: "Dollar Americano - USD",
+        name: "US Dollar - USD",
         flag: "🇺🇸",
         code: "US",
         currencyCode: "USD",
