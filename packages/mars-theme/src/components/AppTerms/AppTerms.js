@@ -16,7 +16,7 @@ const AppTerms = ({ i18n }) => {
           <div className="row">
             <div className="col-md-8 offset-md-2">
               <div className="terms_titles">
-                <h1>{i18n.t("TERMS_AND_CONDITIONS")}</h1>
+                <h1>{i18n.t("TERMS_AND_CONDITIONS_Terms")}</h1>
                 <div className="custom-border"></div>
                 <p>{i18n.t("TERMS_AND_CONDITIONS_P1")}</p>
                 <p>{i18n.t("TERMS_AND_CONDITIONS_P2")}</p>
