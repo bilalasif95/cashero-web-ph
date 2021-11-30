@@ -49,7 +49,8 @@ export const FirebaseEndPoints = {
 
 export const counrtrylist = [
   {
-    name_br: "Afeganistão",
+
+    name_ph: "Afghanistan",
     flag: "🇦🇫",
     code: "AF",
     dial_code: "+93",
@@ -57,7 +58,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Aland",
+    name_ph: "Åland Islands",
     flag: "🇦🇽",
     code: "AX",
     dial_code: "+358",
@@ -65,7 +66,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Albânia",
+    name_ph: "Albania",
     flag: "🇦🇱",
     code: "AL",
     dial_code: "+355",
@@ -73,7 +74,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Argélia",
+    name_ph: "Algeria",
     flag: "🇩🇿",
     code: "DZ",
     dial_code: "+213",
@@ -81,7 +82,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Samoa Americana",
+    name_ph: "American Samoa",
     flag: "🇦🇸",
     code: "AS",
     dial_code: "+1684",
@@ -89,7 +90,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Andorra",
+    name_ph: "Andorra",
     flag: "🇦🇩",
     code: "AD",
     dial_code: "+376",
@@ -97,7 +98,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Angola",
+    name_ph: "Angola",
     flag: "🇦🇴",
     code: "AO",
     dial_code: "+244",
@@ -105,7 +106,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Anguilla",
+    name_ph: "Anguilla",
     flag: "🇦🇮",
     code: "AI",
     dial_code: "+1264",
@@ -113,7 +114,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Antártica",
+    name_ph: "Antarctica",
     flag: "🇦🇶",
     code: "AQ",
     dial_code: "+672",
@@ -121,7 +122,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Antígua e Barbuda",
+    name_ph: "Antigua at Barbuda",
     flag: "🇦🇬",
     code: "AG",
     dial_code: "+1268",
@@ -129,7 +130,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Argentina",
+    name_ph: "Argentina",
     flag: "🇦🇷",
     code: "AR",
     dial_code: "+54",
@@ -137,7 +138,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Armênia",
+    name_ph: "Armenia",
     flag: "🇦🇲",
     code: "AM",
     dial_code: "+374",
@@ -145,7 +146,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Aruba",
+    name_ph: "Aruba",
     flag: "🇦🇼",
     code: "AW",
     dial_code: "+297",
@@ -153,7 +154,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Austrália",
+    name_ph: "Australia",
     flag: "🇦🇺",
     code: "AU",
     dial_code: "+61",
@@ -161,7 +162,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Áustria",
+    name_ph: "Austria",
     flag: "🇦🇹",
     code: "AT",
     dial_code: "+43",
@@ -169,7 +170,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Azerbaijão",
+    name_ph: "Azerbaijan",
     flag: "🇦🇿",
     code: "AZ",
     dial_code: "+994",
@@ -177,7 +178,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Bahamas",
+    name_ph: "Bahamas",
     flag: "🇧🇸",
     code: "BS",
     dial_code: "+1242",
@@ -185,7 +186,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Bahrain",
+    name_ph: "Bahrain",
     flag: "🇧🇭",
     code: "BH",
     dial_code: "+973",
@@ -193,7 +194,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Bangladesh",
+    name_ph: "Bangladesh",
     flag: "🇧🇩",
     code: "BD",
     dial_code: "+880",
@@ -201,7 +202,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Barbados",
+    name_ph: "Barbados",
     flag: "🇧🇧",
     code: "BB",
     dial_code: "+1246",
@@ -209,7 +210,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Belarus",
+    name_ph: "Belarus",
     flag: "🇧🇾",
     code: "BY",
     dial_code: "+375",
@@ -217,7 +218,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Bélgica",
+    name_ph: "Belgium",
     flag: "🇧🇪",
     code: "BE",
     dial_code: "+32",
@@ -225,7 +226,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Belize",
+    name_ph: "Belize",
     flag: "🇧🇿",
     code: "BZ",
     dial_code: "+501",
@@ -233,7 +234,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Benin",
+    name_ph: "Benin",
     flag: "🇧🇯",
     code: "BJ",
     dial_code: "+229",
@@ -241,7 +242,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Bermudas",
+    name_ph: "Bermuda",
     flag: "🇧🇲",
     code: "BM",
     dial_code: "+1441",
@@ -249,7 +250,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Butão",
+    name_ph: "Bhutan",
     flag: "🇧🇹",
     code: "BT",
     dial_code: "+975",
@@ -257,7 +258,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Bolívia, Estado Plurinacional da Bolívia",
+    name_ph: "Bolivia, Plurinational State ng bolivia",
     flag: "🇧🇴",
     code: "BO",
     dial_code: "+591",
@@ -265,7 +266,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Bósnia e Herzegovina",
+    name_ph: "Bosnia at Herzegovina",
     flag: "🇧🇦",
     code: "BA",
     dial_code: "+387",
@@ -273,7 +274,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Botswana",
+    name_ph: "Botswana",
     flag: "🇧🇼",
     code: "BW",
     dial_code: "+267",
@@ -281,7 +282,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilha Bouvet",
+    name_ph: "Bouvet Island",
     flag: "🇧🇻",
     code: "BV",
     dial_code: "+47",
@@ -289,7 +290,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Brasil",
+    name_ph: "Brazil",
     flag: "🇧🇷",
     code: "BR",
     dial_code: "+55",
@@ -297,7 +298,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Território Britânico do Oceano Índico",
+    name_ph: "Teritoryo ng British Indian Ocean",
     flag: "🇮🇴",
     code: "IO",
     dial_code: "+246",
@@ -305,7 +306,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Brunei Darussalam",
+    name_ph: "Brunei Darussalam",
     flag: "🇧🇳",
     code: "BN",
     dial_code: "+673",
@@ -313,7 +314,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Bulgária",
+    name_ph: "Bulgaria",
     flag: "🇧🇬",
     code: "BG",
     dial_code: "+359",
@@ -321,7 +322,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Burkina Faso",
+    name_ph: "Burkina Faso",
     flag: "🇧🇫",
     code: "BF",
     dial_code: "+226",
@@ -329,7 +330,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Burundi",
+    name_ph: "Burundi",
     flag: "🇧🇮",
     code: "BI",
     dial_code: "+257",
@@ -337,7 +338,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Camboja",
+    name_ph: "Cambodia",
     flag: "🇰🇭",
     code: "KH",
     dial_code: "+855",
@@ -345,7 +346,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Camarões",
+    name_ph: "Cameroon",
     flag: "🇨🇲",
     code: "CM",
     dial_code: "+237",
@@ -353,7 +354,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Canadá",
+    name_ph: "Canada",
     flag: "🇨🇦",
     code: "CA",
     dial_code: "+1",
@@ -361,7 +362,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Cabo Verde",
+    name_ph: "Cape Verde",
     flag: "🇨🇻",
     code: "CV",
     dial_code: "+238",
@@ -369,7 +370,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Cayman",
+    name_ph: "Mga Isla ng Cayman",
     flag: "🇰🇾",
     code: "KY",
     dial_code: "+345",
@@ -377,7 +378,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "República Centro-Africano",
+    name_ph: "Republika ng Central Africa",
     flag: "🇨🇫",
     code: "CF",
     dial_code: "+236",
@@ -385,7 +386,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Chade",
+    name_ph: "Chad",
     flag: "🇹🇩",
     code: "TD",
     dial_code: "+235",
@@ -393,7 +394,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Chile",
+    name_ph: "Chile",
     flag: "🇨🇱",
     code: "CL",
     dial_code: "+56",
@@ -401,7 +402,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "China",
+    name_ph: "Tsina",
     flag: "🇨🇳",
     code: "CN",
     dial_code: "+86",
@@ -409,7 +410,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilha do Natal",
+    name_ph: "Christmas Island",
     flag: "🇨🇽",
     code: "CX",
     dial_code: "+61",
@@ -417,7 +418,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Cocos (Keeling)",
+    name_ph: "Cocos (Keeling) Islands",
     flag: "🇨🇨",
     code: "CC",
     dial_code: "+61",
@@ -425,7 +426,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Colômbia",
+    name_ph: "Colombia",
     flag: "🇨🇴",
     code: "CO",
     dial_code: "+57",
@@ -433,7 +434,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Comores",
+    name_ph: "Mga Comoro",
     flag: "🇰🇲",
     code: "KM",
     dial_code: "+269",
@@ -441,7 +442,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Congo",
+    name_ph: "Kongo",
     flag: "🇨🇬",
     code: "CG",
     dial_code: "+242",
@@ -449,7 +450,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Congo, República Democrática do Congo",
+    name_ph: "Congo, Ang Demokratikong Republika ng Congo",
     flag: "🇨🇩",
     code: "CD",
     dial_code: "+243",
@@ -457,7 +458,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Cook",
+    name_ph: "Mga Isla ng Cook",
     flag: "🇨🇰",
     code: "CK",
     dial_code: "+682",
@@ -465,7 +466,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Costa Rica",
+    name_ph: "Costa Rica",
     flag: "🇨🇷",
     code: "CR",
     dial_code: "+506",
@@ -473,7 +474,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Cote d'Ivoire",
+    name_ph: "Cote d'Ivoire",
     flag: "🇨🇮",
     code: "CI",
     dial_code: "+225",
@@ -481,7 +482,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Croácia",
+    name_ph: "Croatia",
     flag: "🇭🇷",
     code: "HR",
     dial_code: "+385",
@@ -489,7 +490,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Cuba",
+    name_ph: "Cuba",
     flag: "🇨🇺",
     code: "CU",
     dial_code: "+53",
@@ -497,7 +498,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Chipre",
+    name_ph: "Siprus",
     flag: "🇨🇾",
     code: "CY",
     dial_code: "+357",
@@ -505,7 +506,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "República Checa",
+    name_ph: "Czech Republic",
     flag: "🇨🇿",
     code: "CZ",
     dial_code: "+420",
@@ -513,7 +514,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Dinamarca",
+    name_ph: "Denmark",
     flag: "🇩🇰",
     code: "DK",
     dial_code: "+45",
@@ -521,7 +522,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Djibouti",
+    name_ph: "Djibouti",
     flag: "🇩🇯",
     code: "DJ",
     dial_code: "+253",
@@ -529,7 +530,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Dominica",
+    name_ph: "Dominica",
     flag: "🇩🇲",
     code: "DM",
     dial_code: "+1767",
@@ -537,7 +538,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "República Dominicana",
+    name_ph: "Dominican Republic",
     flag: "🇩🇴",
     code: "DO",
     dial_code: "+1849",
@@ -545,7 +546,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Equador",
+    name_ph: "Ecuador",
     flag: "🇪🇨",
     code: "EC",
     dial_code: "+593",
@@ -553,7 +554,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Egito",
+    name_ph: "Egypt",
     flag: "🇪🇬",
     code: "EG",
     dial_code: "+20",
@@ -561,7 +562,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "El Salvador",
+    name_ph: "El Salvador",
     flag: "🇸🇻",
     code: "SV",
     dial_code: "+503",
@@ -569,7 +570,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Guiné Equatorial",
+    name_ph: "Equatorial Guinea",
     flag: "🇬🇶",
     code: "GQ",
     dial_code: "+240",
@@ -577,7 +578,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Eritrea",
+    name_ph: "Eritrea",
     flag: "🇪🇷",
     code: "ER",
     dial_code: "+291",
@@ -585,7 +586,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Estônia",
+    name_ph: "Estonia",
     flag: "🇪🇪",
     code: "EE",
     dial_code: "+372",
@@ -593,7 +594,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Etiópia",
+    name_ph: "Ethiopia",
     flag: "🇪🇹",
     code: "ET",
     dial_code: "+251",
@@ -601,7 +602,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Falkland (Malvinas)",
+    name_ph: "Falkland Islands (Malvinas)",
     flag: "🇫🇰",
     code: "FK",
     dial_code: "+500",
@@ -609,7 +610,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Faroe",
+    name_ph: "Isla ng Faroe",
     flag: "🇫🇴",
     code: "FO",
     dial_code: "+298",
@@ -617,7 +618,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Fiji",
+    name_ph: "Fiji",
     flag: "🇫🇯",
     code: "FJ",
     dial_code: "+679",
@@ -625,7 +626,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Finlândia",
+    name_ph: "Pinlandiya",
     flag: "🇫🇮",
     code: "FI",
     dial_code: "+358",
@@ -633,14 +634,15 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "França",
+    name_ph: "France",
+    flag: "🇫🇷",
     code: "FR",
     dial_code: "+33",
     phone_length: 9,
     white_listed: true,
   },
   {
-    name_br: "Guiana Francesa",
+    name_ph: "French Guiana",
     flag: "🇬🇫",
     code: "GF",
     dial_code: "+594",
@@ -648,7 +650,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Polinésia Francesa",
+    name_ph: "French Polynesia",
     flag: "🇵🇫",
     code: "PF",
     dial_code: "+689",
@@ -656,7 +658,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Territórios Franceses do Sul",
+    name_ph: "Mga Teritoryo sa Timog na Pransya",
     flag: "🇹🇫",
     code: "TF",
     dial_code: "+262",
@@ -664,7 +666,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Gabão",
+    name_ph: "Gabon",
     flag: "🇬🇦",
     code: "GA",
     dial_code: "+241",
@@ -672,7 +674,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Gâmbia",
+    name_ph: "Gambia",
     flag: "🇬🇲",
     code: "GM",
     dial_code: "+220",
@@ -680,7 +682,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Georgia",
+    name_ph: "Georgia",
     flag: "🇬🇪",
     code: "GE",
     dial_code: "+995",
@@ -688,7 +690,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Alemanha",
+    name_ph: "Alemanya",
     flag: "🇩🇪",
     code: "DE",
     dial_code: "+49",
@@ -696,15 +698,15 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Gana",
+    name_ph: "Ghana",
     flag: "🇬🇭",
     code: "GH",
     dial_code: "+233",
     phone_length: 10,
     white_listed: false,
   },
-  {
-    name_br: "Gibraltar",
+  { 
+    name_ph: "Gibraltar",
     flag: "🇬🇮",
     code: "GI",
     dial_code: "+350",
@@ -712,7 +714,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Grécia",
+    name_ph: "Greece",
     flag: "🇬🇷",
     code: "GR",
     dial_code: "+30",
@@ -720,7 +722,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_mx: "Groenlandia",
+    name_ph: "Greenland",
     flag: "🇬🇱",
     code: "GL",
     dial_code: "+299",
@@ -728,7 +730,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Grenada",
+    name_ph: "Grenada",
     flag: "🇬🇩",
     code: "GD",
     dial_code: "+1473",
@@ -736,7 +738,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Guadalupe",
+    name_ph: "Guadeloupe",
     flag: "🇬🇵",
     code: "GP",
     dial_code: "+590",
@@ -744,7 +746,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Guam",
+    name_ph: "Guam",
     flag: "🇬🇺",
     code: "GU",
     dial_code: "+1671",
@@ -752,7 +754,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Guatemala",
+    name_ph: "Guatemala",
     flag: "🇬🇹",
     code: "GT",
     dial_code: "+502",
@@ -760,7 +762,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Guernsey",
+    name_ph: "Guernsey",
     flag: "🇬🇬",
     code: "GG",
     dial_code: "+44",
@@ -768,7 +770,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Guiné",
+    name_ph: "Guinea",
     flag: "🇬🇳",
     code: "GN",
     dial_code: "+224",
@@ -776,7 +778,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Guiné-Bissau",
+    name_ph: "Guinea-Bissau",
     flag: "🇬🇼",
     code: "GW",
     dial_code: "+245",
@@ -784,7 +786,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Guiana",
+    name_ph: "Guyana",
     flag: "🇬🇾",
     code: "GY",
     dial_code: "+592",
@@ -792,7 +794,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Haiti",
+    name_ph: "Haiti",
     flag: "🇭🇹",
     code: "HT",
     dial_code: "+509",
@@ -800,7 +802,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Heard e Mcdonald",
+    name_ph: "Heard Island at Mcdonald Islands",
     flag: "🇭🇲",
     code: "HM",
     dial_code: "+672",
@@ -808,7 +810,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Santa Sé (Cidade do Vaticano)",
+    name_ph: "Holy See (Estado ng Lungsod ng Vatican)",
     flag: "🇻🇦",
     code: "VA",
     dial_code: "+379",
@@ -816,7 +818,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Honduras",
+    name_ph: "Honduras",
     flag: "🇭🇳",
     code: "HN",
     dial_code: "+504",
@@ -824,7 +826,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Hong Kong",
+    name_ph: "Hong Kong",
     flag: "🇭🇰",
     code: "HK",
     dial_code: "+852",
@@ -832,7 +834,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Hungria",
+    name_ph: "Hungary",
     flag: "🇭🇺",
     code: "HU",
     dial_code: "+36",
@@ -840,7 +842,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Islândia",
+    name_ph: "Iceland",
     flag: "🇮🇸",
     code: "IS",
     dial_code: "+354",
@@ -848,7 +850,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Índia",
+    name_ph: "India",
     flag: "🇮🇳",
     code: "IN",
     dial_code: "+91",
@@ -856,7 +858,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Indonésia",
+    name_ph: "Indonesia",
     flag: "🇮🇩",
     code: "ID",
     dial_code: "+62",
@@ -864,7 +866,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Irã",
+    name_ph: "Iran, Islamic Republic of Persian Gulf",
     flag: "🇮🇷",
     code: "IR",
     dial_code: "+98",
@@ -872,7 +874,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Iraque",
+    name_ph: "Iraq",
     flag: "🇮🇶",
     code: "IQ",
     dial_code: "+964",
@@ -880,7 +882,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Irlanda",
+    name_ph: "Ireland",
     flag: "🇮🇪",
     code: "IE",
     dial_code: "+353",
@@ -888,7 +890,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Isle of Man",
+    name_ph: "Pulo ng Tao",
     flag: "🇮🇲",
     code: "IM",
     dial_code: "+44",
@@ -896,7 +898,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Israel",
+    name_ph: "Israel",
     flag: "🇮🇱",
     code: "IL",
     dial_code: "+972",
@@ -904,7 +906,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Itália",
+    name_ph: "Italya",
     flag: "🇮🇹",
     code: "IT",
     dial_code: "+39",
@@ -912,7 +914,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Jamaica",
+    name_ph: "Jamaica",
     flag: "🇯🇲",
     code: "JM",
     dial_code: "+1876",
@@ -920,7 +922,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Japão",
+    name_ph: "Hapon",
     flag: "🇯🇵",
     code: "JP",
     dial_code: "+81",
@@ -928,7 +930,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Camisola",
+    name_ph: "Jersey",
     flag: "🇯🇪",
     code: "JE",
     dial_code: "+44",
@@ -936,7 +938,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Jordânia",
+    name_ph: "Jordan",
     flag: "🇯🇴",
     code: "JO",
     dial_code: "+962",
@@ -944,7 +946,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Cazaquistão",
+    name_ph: "Kazakhstan",
     flag: "🇰🇿",
     code: "KZ",
     dial_code: "+7",
@@ -952,7 +954,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Quênia",
+    name_ph: "Kenya",
     flag: "🇰🇪",
     code: "KE",
     dial_code: "+254",
@@ -960,7 +962,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Kiribati",
+    name_ph: "Kiribati",
     flag: "🇰🇮",
     code: "KI",
     dial_code: "+686",
@@ -968,7 +970,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "República Popular da Coreia",
+    name_ph: "Korea, Demokratikong Tao ng Republika ng Korea",
     flag: "🇰🇵",
     code: "KP",
     dial_code: "+850",
@@ -976,7 +978,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "República da Coreia do Sul",
+    name_ph: "Korea, Republic of South Korea",
     flag: "🇰🇷",
     code: "KR",
     dial_code: "+82",
@@ -984,7 +986,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Kosovo",
+    name_ph: "Kosovo",
     flag: "🇽🇰",
     code: "XK",
     dial_code: "+383",
@@ -992,7 +994,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Kuweit",
+    name_ph: "Kuwait",
     flag: "🇰🇼",
     code: "KW",
     dial_code: "+965",
@@ -1000,7 +1002,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Quirguistão",
+    name_ph: "Kyrgyzstan",
     flag: "🇰🇬",
     code: "KG",
     dial_code: "+996",
@@ -1008,7 +1010,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Laos",
+    name_ph: "Laos",
     flag: "🇱🇦",
     code: "LA",
     dial_code: "+856",
@@ -1016,7 +1018,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Letônia",
+    name_ph: "Latvia",
     flag: "🇱🇻",
     code: "LV",
     dial_code: "+371",
@@ -1024,7 +1026,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Líbano",
+    name_ph: "Lebanon",
     flag: "🇱🇧",
     code: "LB",
     dial_code: "+961",
@@ -1032,7 +1034,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Lesoto",
+    name_ph: "Lesotho",
     flag: "🇱🇸",
     code: "LS",
     dial_code: "+266",
@@ -1040,7 +1042,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Libéria",
+    name_ph: "Liberia",
     flag: "🇱🇷",
     code: "LR",
     dial_code: "+231",
@@ -1048,7 +1050,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Líbia",
+    name_ph: "Libyan Arab Jamahiriya",
     flag: "🇱🇾",
     code: "LY",
     dial_code: "+218",
@@ -1056,7 +1058,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Liechtenstein",
+    name_ph: "Liechtenstein",
     flag: "🇱🇮",
     code: "LI",
     dial_code: "+423",
@@ -1064,7 +1066,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Lituânia",
+    name_ph: "Lithuania",
     flag: "🇱🇹",
     code: "LT",
     dial_code: "+370",
@@ -1072,7 +1074,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Luxemburgo",
+    name_ph: "Luxembourg",
     flag: "🇱🇺",
     code: "LU",
     dial_code: "+352",
@@ -1080,7 +1082,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Macau",
+    name_ph: "Macao",
     flag: "🇲🇴",
     code: "MO",
     dial_code: "+853",
@@ -1088,7 +1090,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Macedonia",
+    name_ph: "Macedonia",
     flag: "🇲🇰",
     code: "MK",
     dial_code: "+389",
@@ -1096,7 +1098,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Madagáscar",
+    name_ph: "Madagascar",
     flag: "🇲🇬",
     code: "MG",
     dial_code: "+261",
@@ -1104,7 +1106,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Malavi",
+    name_ph: "Malawi",
     flag: "🇲🇼",
     code: "MW",
     dial_code: "+265",
@@ -1112,7 +1114,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Malásia",
+    name_ph: "Malaysia",
     flag: "🇲🇾",
     code: "MY",
     dial_code: "+60",
@@ -1120,7 +1122,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Maldivas",
+    name_ph: "Maldives",
     flag: "🇲🇻",
     code: "MV",
     dial_code: "+960",
@@ -1128,7 +1130,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Mali",
+    name_ph: "Mali",
     flag: "🇲🇱",
     code: "ML",
     dial_code: "+223",
@@ -1136,7 +1138,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Malta",
+    name_ph: "Malta",
     flag: "🇲🇹",
     code: "MT",
     dial_code: "+356",
@@ -1144,7 +1146,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Ilhas Marshall",
+    name_ph: "Marshall Islands",
     flag: "🇲🇭",
     code: "MH",
     dial_code: "+692",
@@ -1152,7 +1154,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Martinique",
+    name_ph: "Martinique",
     flag: "🇲🇶",
     code: "MQ",
     dial_code: "+596",
@@ -1160,7 +1162,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Mauritânia",
+    name_ph: "Mauritania",
     flag: "🇲🇷",
     code: "MR",
     dial_code: "+222",
@@ -1168,7 +1170,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Mauritius",
+    name_ph: "Mauricio",
     flag: "🇲🇺",
     code: "MU",
     dial_code: "+230",
@@ -1176,7 +1178,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Mayotte",
+    name_ph: "Mayotte",
     flag: "🇾🇹",
     code: "YT",
     dial_code: "+262",
@@ -1184,7 +1186,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "México",
+    name_ph: "Mexico",
     flag: "🇲🇽",
     code: "MX",
     dial_code: "+52",
@@ -1192,7 +1194,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Micronesia",
+    name_ph: "Micronesia, Federated States ng Micronesia",
     flag: "🇫🇲",
     code: "FM",
     dial_code: "+691",
@@ -1200,7 +1202,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Moldova",
+    name_ph: "Moldova",
     flag: "🇲🇩",
     code: "MD",
     dial_code: "+373",
@@ -1208,7 +1210,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Monaco",
+    name_ph: "Monaco",
     flag: "🇲🇨",
     code: "MC",
     dial_code: "+377",
@@ -1216,7 +1218,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Mongólia",
+    name_ph: "Mongolia",
     flag: "🇲🇳",
     code: "MN",
     dial_code: "+976",
@@ -1224,7 +1226,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Montenegro",
+    name_ph: "Montenegro",
     flag: "🇲🇪",
     code: "ME",
     dial_code: "+382",
@@ -1232,7 +1234,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Montserrat",
+    name_ph: "Montserrat",
     flag: "🇲🇸",
     code: "MS",
     dial_code: "+1664",
@@ -1240,7 +1242,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Marrocos",
+    name_ph: "Morocco",
     flag: "🇲🇦",
     code: "MA",
     dial_code: "+212",
@@ -1248,7 +1250,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Moçambique",
+    name_ph: "Mozambique",
     flag: "🇲🇿",
     code: "MZ",
     dial_code: "+258",
@@ -1256,7 +1258,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Myanmar",
+    name_ph: "Myanmar",
     flag: "🇲🇲",
     code: "MM",
     dial_code: "+95",
@@ -1264,7 +1266,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Namíbia",
+    name_ph: "Namibia",
     flag: "🇳🇦",
     code: "NA",
     dial_code: "+264",
@@ -1272,7 +1274,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Nauru",
+    name_ph: "Nauru",
     flag: "🇳🇷",
     code: "NR",
     dial_code: "+674",
@@ -1280,7 +1282,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Nepal",
+    name_ph: "Nepal",
     flag: "🇳🇵",
     code: "NP",
     dial_code: "+977",
@@ -1288,7 +1290,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Países Baixos",
+    name_ph: "Netherlands",
     flag: "🇳🇱",
     code: "NL",
     dial_code: "+31",
@@ -1296,7 +1298,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Antilhas Holandesas",
+    name_ph: "Netherlands Antilles",
     flag: "",
     code: "AN",
     dial_code: "+599",
@@ -1304,7 +1306,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Nova Caledônia",
+    name_ph: "Bagong Caledonia",
     flag: "🇳🇨",
     code: "NC",
     dial_code: "+687",
@@ -1312,7 +1314,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Nova Zelândia",
+    name_ph: "New Zealand",
     flag: "🇳🇿",
     code: "NZ",
     dial_code: "+64",
@@ -1320,7 +1322,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Nicarágua",
+    name_ph: "Nicaragua",
     flag: "🇳🇮",
     code: "NI",
     dial_code: "+505",
@@ -1328,7 +1330,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Níger",
+    name_ph: "Nigeria",
     flag: "🇳🇪",
     code: "NE",
     dial_code: "+227",
@@ -1336,7 +1338,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Nigéria",
+    name_ph: "Nigeria",
     flag: "🇳🇬",
     code: "NG",
     dial_code: "+234",
@@ -1344,7 +1346,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Niue",
+    name_ph: "Niue",
     flag: "🇳🇺",
     code: "NU",
     dial_code: "+683",
@@ -1352,7 +1354,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilha Norfolk",
+    name_ph: "Pulo ng Norfolk",
     flag: "🇳🇫",
     code: "NF",
     dial_code: "+672",
@@ -1360,7 +1362,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Marianas do Norte",
+    name_ph: "Mga Pulo ng Hilagang Mariana",
     flag: "🇲🇵",
     code: "MP",
     dial_code: "+1670",
@@ -1368,7 +1370,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Noruega",
+    name_ph: "Noruwega",
     flag: "🇳🇴",
     code: "NO",
     dial_code: "+47",
@@ -1376,7 +1378,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Omã",
+    name_ph: "Oman",
     flag: "🇴🇲",
     code: "OM",
     dial_code: "+968",
@@ -1384,7 +1386,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Paquistão",
+    name_ph: "Pakistan",
     flag: "🇵🇰",
     code: "PK",
     dial_code: "+92",
@@ -1392,7 +1394,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Palau",
+    name_ph: "Palau",
     flag: "🇵🇼",
     code: "PW",
     dial_code: "+680",
@@ -1400,7 +1402,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Estado da Palestina",
+    name_ph: "Teritoryo ng Palestinian, Sinakop",
     flag: "🇵🇸",
     code: "PS",
     dial_code: "+970",
@@ -1408,7 +1410,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Panamá",
+    name_ph: "Panama",
     flag: "🇵🇦",
     code: "PA",
     dial_code: "+507",
@@ -1416,7 +1418,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Papua Nova Guiné",
+    name_ph: "Papua New Guinea",
     flag: "🇵🇬",
     code: "PG",
     dial_code: "+675",
@@ -1424,7 +1426,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Paraguai",
+    name_ph: "Paraguay",
     flag: "🇵🇾",
     code: "PY",
     dial_code: "+595",
@@ -1432,7 +1434,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Peru",
+    name_ph: "Peru",
     flag: "🇵🇪",
     code: "PE",
     dial_code: "+51",
@@ -1440,7 +1442,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Filipinas",
+    name_ph: "Pilipinas",
     flag: "🇵🇭",
     code: "PH",
     dial_code: "+63",
@@ -1448,7 +1450,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Pitcairn",
+    name_ph: "Pitcairn",
     flag: "🇵🇳",
     code: "PN",
     dial_code: "+64",
@@ -1456,7 +1458,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Polônia",
+    name_ph: "Poland",
     flag: "🇵🇱",
     code: "PL",
     dial_code: "+48",
@@ -1464,7 +1466,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Portugal",
+    name_ph: "Portugal",
     flag: "🇵🇹",
     code: "PT",
     dial_code: "+351",
@@ -1472,7 +1474,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Porto Rico",
+    name_ph: "Puerto Rico",
     flag: "🇵🇷",
     code: "PR",
     dial_code: "+1939",
@@ -1480,7 +1482,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Catar",
+    name_ph: "Qatar",
     flag: "🇶🇦",
     code: "QA",
     dial_code: "+974",
@@ -1488,7 +1490,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Romênia",
+    name_ph: "Romania",
     flag: "🇷🇴",
     code: "RO",
     dial_code: "+40",
@@ -1496,7 +1498,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Rússia",
+    name_ph: "Russia",
     flag: "🇷🇺",
     code: "RU",
     dial_code: "+7",
@@ -1504,7 +1506,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ruanda",
+    name_ph: "Rwanda",
     flag: "🇷🇼",
     code: "RW",
     dial_code: "+250",
@@ -1512,7 +1514,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Reunião",
+    name_ph: "Muling pagkikita",
     flag: "🇷🇪",
     code: "RE",
     dial_code: "+262",
@@ -1520,7 +1522,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "São Bartolomeu",
+    name_ph: "Saint Barthelemy",
     flag: "🇧🇱",
     code: "BL",
     dial_code: "+590",
@@ -1528,7 +1530,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Santa Helena, Ascensão e Tristão da Cunha",
+    name_ph: "Saint Helena, Ascension at Tristan Da Cunha",
     flag: "🇸🇭",
     code: "SH",
     dial_code: "+290",
@@ -1536,7 +1538,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "São Cristóvão e Nevis",
+    name_ph: "Saint Kitts at Nevis",
     flag: "🇰🇳",
     code: "KN",
     dial_code: "+1869",
@@ -1544,7 +1546,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Santa Lúcia",
+    name_ph: "Saint Lucia",
     flag: "🇱🇨",
     code: "LC",
     dial_code: "+1758",
@@ -1552,7 +1554,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "São Martinho",
+    name_ph: "Saint Martin",
     flag: "🇲🇫",
     code: "MF",
     dial_code: "+590",
@@ -1560,7 +1562,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Saint Pierre e Miquelon",
+    name_ph: "Saint Pierre at Miquelon",
     flag: "🇵🇲",
     code: "PM",
     dial_code: "+508",
@@ -1568,7 +1570,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "São Vicente e Granadinas",
+    name_ph: "Saint Vincent at ang Grenadines",
     flag: "🇻🇨",
     code: "VC",
     dial_code: "+1784",
@@ -1576,7 +1578,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Samoa",
+    name_ph: "Samoa",
     flag: "🇼🇸",
     code: "WS",
     dial_code: "+685",
@@ -1584,7 +1586,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "San Marino",
+    name_ph: "San Marino",
     flag: "🇸🇲",
     code: "SM",
     dial_code: "+378",
@@ -1592,7 +1594,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "São Tomé e Príncipe",
+    name_ph: "Sao Tome at Principe",
     flag: "🇸🇹",
     code: "ST",
     dial_code: "+239",
@@ -1600,7 +1602,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Arábia Saudita",
+    name_ph: "Saudi Arabia",
     flag: "🇸🇦",
     code: "SA",
     dial_code: "+966",
@@ -1608,7 +1610,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Senegal",
+    name_ph: "Senegal",
     flag: "🇸🇳",
     code: "SN",
     dial_code: "+221",
@@ -1616,7 +1618,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Sérvia",
+    name_ph: "Serbia",
     flag: "🇷🇸",
     code: "RS",
     dial_code: "+381",
@@ -1624,7 +1626,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Seychelles",
+    name_ph: "Seychelles",
     flag: "🇸🇨",
     code: "SC",
     dial_code: "+248",
@@ -1632,7 +1634,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Serra Leoa",
+    name_ph: "Sierra Leone",
     flag: "🇸🇱",
     code: "SL",
     dial_code: "+232",
@@ -1640,7 +1642,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Cingapura",
+    name_ph: "Singapore",
     flag: "🇸🇬",
     code: "SG",
     dial_code: "+65",
@@ -1648,7 +1650,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Eslováquia",
+    name_ph: "Slovakia",
     flag: "🇸🇰",
     code: "SK",
     dial_code: "+421",
@@ -1656,7 +1658,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Eslovenia",
+    name_ph: "Slovenia",
     flag: "🇸🇮",
     code: "SI",
     dial_code: "+386",
@@ -1664,7 +1666,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Ilhas Salomão",
+    name_ph: "Solomon Islands",
     flag: "🇸🇧",
     code: "SB",
     dial_code: "+677",
@@ -1672,7 +1674,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Somália",
+    name_ph: "Espanya",
     flag: "🇸🇴",
     code: "SO",
     dial_code: "+252",
@@ -1680,7 +1682,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "África do Sul",
+    name_ph: "Timog Africa",
     flag: "🇿🇦",
     code: "ZA",
     dial_code: "+27",
@@ -1688,7 +1690,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Sudão do Sul",
+    name_ph: "Timog Sudan",
     flag: "🇸🇸",
     code: "SS",
     dial_code: "+211",
@@ -1696,7 +1698,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Geórgia do Sul e Sandwich do Sul",
+    name_ph: "South Georgia at ang South Sandwich Islands",
     flag: "🇬🇸",
     code: "GS",
     dial_code: "+500",
@@ -1704,7 +1706,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Espanha",
+    name_ph: "Espanya",
     flag: "🇪🇸",
     code: "ES",
     dial_code: "+34",
@@ -1712,7 +1714,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Sri Lanka",
+    name_ph: "Sri Lanka",
     flag: "🇱🇰",
     code: "LK",
     dial_code: "+94",
@@ -1720,7 +1722,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Sudão",
+    name_ph: "Sudan",
     flag: "🇸🇩",
     code: "SD",
     dial_code: "+249",
@@ -1728,7 +1730,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Suriname",
+    name_ph: "Suriname",
     flag: "🇸🇷",
     code: "SR",
     dial_code: "+597",
@@ -1736,7 +1738,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Svalbard e Jan Mayen",
+    name_ph: "Svalbard at Jan Mayen",
     flag: "🇸🇯",
     code: "SJ",
     dial_code: "+47",
@@ -1744,7 +1746,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Suazilândia",
+    name_ph: "Swaziland",
     flag: "🇸🇿",
     code: "SZ",
     dial_code: "+268",
@@ -1752,7 +1754,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Suécia",
+    name_ph: "Sweden",
     flag: "🇸🇪",
     code: "SE",
     dial_code: "+46",
@@ -1760,7 +1762,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Suíça",
+    name_ph: "Switzerland",
     flag: "🇨🇭",
     code: "CH",
     dial_code: "+41",
@@ -1768,7 +1770,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Síria",
+    name_ph: "Syrian Arab Republic",
     flag: "🇸🇾",
     code: "SY",
     dial_code: "+963",
@@ -1776,7 +1778,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Taiwan",
+    name_ph: "Taiwan",
     flag: "🇹🇼",
     code: "TW",
     dial_code: "+886",
@@ -1784,7 +1786,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Tadjiquistão",
+    name_ph: "Tajikistan",
     flag: "🇹🇯",
     code: "TJ",
     dial_code: "+992",
@@ -1792,7 +1794,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Tanzânia",
+    name_ph: "Tanzania, United Republic of Tanzania",
     flag: "🇹🇿",
     code: "TZ",
     dial_code: "+255",
@@ -1800,7 +1802,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Tailândia",
+    name_ph: "Thailand",
     flag: "🇹🇭",
     code: "TH",
     dial_code: "+66",
@@ -1808,7 +1810,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Timor-Leste",
+    name_ph: "Timor-Leste",
     flag: "🇹🇱",
     code: "TL",
     dial_code: "+670",
@@ -1816,7 +1818,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ir",
+    name_ph: "Togo",
     flag: "🇹🇬",
     code: "TG",
     dial_code: "+228",
@@ -1824,7 +1826,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Tokelau",
+    name_ph: "Tokelau",
     flag: "🇹🇰",
     code: "TK",
     dial_code: "+690",
@@ -1832,7 +1834,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Tonga",
+    name_ph: "Tonga",
     flag: "🇹🇴",
     code: "TO",
     dial_code: "+676",
@@ -1840,7 +1842,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Trinidad e Tobago",
+    name_ph: "Trinidad at Tobago",
     flag: "🇹🇹",
     code: "TT",
     dial_code: "+1868",
@@ -1848,7 +1850,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Tunísia",
+    name_ph: "Tunisia",
     flag: "🇹🇳",
     code: "TN",
     dial_code: "+216",
@@ -1856,7 +1858,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Peru",
+    name_ph: "Turkey",
     flag: "🇹🇷",
     code: "TR",
     dial_code: "+90",
@@ -1864,7 +1866,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Turcomenistão",
+    name_ph: "Turkmenistan",
     flag: "🇹🇲",
     code: "TM",
     dial_code: "+993",
@@ -1872,7 +1874,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ilhas Turcas e Caicos",
+    name_ph: "Mga Pulo ng Turks at Caicos",
     flag: "🇹🇨",
     code: "TC",
     dial_code: "+1649",
@@ -1880,7 +1882,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Tuvalu",
+    name_ph: "Tuvalu",
     flag: "🇹🇻",
     code: "TV",
     dial_code: "+688",
@@ -1888,7 +1890,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Uganda",
+    name_ph: "Uganda",
     flag: "🇺🇬",
     code: "UG",
     dial_code: "+256",
@@ -1896,7 +1898,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Ucrânia",
+    name_ph: "Ukraine",
     flag: "🇺🇦",
     code: "UA",
     dial_code: "+380",
@@ -1904,7 +1906,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Emirados Árabes Unidos",
+    name_ph: "United Arab Emirates",
     flag: "🇦🇪",
     code: "AE",
     dial_code: "+971",
@@ -1912,7 +1914,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Reino Unido",
+    name_ph: "Estados Unidos",
     flag: "🇬🇧",
     code: "GB",
     dial_code: "+44",
@@ -1920,7 +1922,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Estados Unidos",
+    name_ph: "Estados Unidos",
     flag: "🇺🇸",
     code: "US",
     dial_code: "+1",
@@ -1928,7 +1930,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Estados Unidos Ilhas Menores",
+    name_ph: "Mga Pulo ng Estados Unidos",
     flag: "🇺🇸",
     code: "US",
     dial_code: "+246",
@@ -1936,7 +1938,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Uruguai",
+    name_ph: "Uruguay",
     flag: "🇺🇾",
     code: "UY",
     dial_code: "+598",
@@ -1944,7 +1946,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Uzbequistão",
+    name_ph: "Uzbekistan",
     flag: "🇺🇿",
     code: "UZ",
     dial_code: "+998",
@@ -1952,7 +1954,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Vanuatu",
+    name_ph: "Vanuatu",
     flag: "🇻🇺",
     code: "VU",
     dial_code: "+678",
@@ -1960,7 +1962,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Venezuela",
+    name_ph: "Venezuela, Bolivarian Republic of Venezuela",
     flag: "🇻🇪",
     code: "VE",
     dial_code: "+58",
@@ -1968,7 +1970,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Vietnã",
+    name_ph: "Vietnam",
     flag: "🇻🇳",
     code: "VN",
     dial_code: "+84",
@@ -1976,7 +1978,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Ilhas Virgens Britânicas",
+    name_ph: "Virgin Islands, British",
     flag: "🇻🇬",
     code: "VG",
     dial_code: "+1284",
@@ -1984,7 +1986,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Ilhas Virgens Americanas",
+    name_ph: "Virgin Islands, U.S.",
     flag: "🇻🇮",
     code: "VI",
     dial_code: "+1340",
@@ -1992,7 +1994,7 @@ export const counrtrylist = [
     white_listed: true,
   },
   {
-    name_br: "Wallis e Futuna",
+    name_ph: "Wallis at Futuna",
     flag: "🇼🇫",
     code: "WF",
     dial_code: "+681",
@@ -2000,7 +2002,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Iémen",
+    name_ph: "Yemen",
     flag: "🇾🇪",
     code: "YE",
     dial_code: "+967",
@@ -2008,7 +2010,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Zâmbia",
+    name_ph: "Zambia",
     flag: "🇿🇲",
     code: "ZM",
     dial_code: "+260",
@@ -2016,7 +2018,7 @@ export const counrtrylist = [
     white_listed: false,
   },
   {
-    name_br: "Zimbábue",
+    name_ph: "Zimbabwe",
     flag: "🇿🇼",
     code: "ZW",
     dial_code: "+263",
