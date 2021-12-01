@@ -397,7 +397,7 @@ const QuestionTabs = (props) => {
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P1")}</h2>
 												<p>{i18n.t("Learn_more_savings_P2")}</p>
 												<p>{i18n.t("Learn_more_savings_P3")}</p>
-												<h3 className="blackhead"><a href="https://www.cashero.com/ph/blog/what-is-a-high-yield-savings-account/" target="_blank" rel="noopener noreferrer">{i18n.t("Learn_more_savings_P4")}</a></h3>
+												<h3 className="blackhead"><a href="https://www.cashero.com/ph/blog/what-is-a-high-yield-savings-account/" target="_blank" rel="noopener noreferrer">{i18n.t("Learn_more_savings_P4")}</a> {i18n.t("Learn_more_savings_P4_1")}</h3>
 												<p>{i18n.t("Learn_more_savings_P5")}</p>
 												<h3 className="blackhead">{i18n.t("Learn_more_savings_P6")}</h3>
 												<p>{i18n.t("Learn_more_savings_P7")}</p>
