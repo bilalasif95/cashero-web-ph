@@ -106,7 +106,7 @@ const ReceivePayments = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
                 <img className="img-fluid" height="152px" width="152px" alt="Dollar" src={Dollar} />
-                <h3>{i18n.t("Add_funds_to_your_account")}</h3>
+                <h3>{i18n.t("Add_funds_to_your_account_Transfer")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">

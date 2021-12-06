@@ -144,11 +144,11 @@ const CurrencyAccounts = ({ state, i18n }) => {
           <div className="row align-items-center">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1 className="noBreakGetPaidHeading">{i18n.t("Multi_Currency_Savings_Account")}</h1>
+                <h1 className="noBreakGetPaidHeading">{i18n.t("Multi_Currency_Savings_Account_Multi")}</h1>
                 <p className="bannerPara">{i18n.t("Multi_Currency_Savings_Account_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
-                  <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
+                  <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes_Multi")}</li>
                 </ul>
                 <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
@@ -164,7 +164,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
                   <div className="earningText">
                     <p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
                   </div>
-                  <p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
+                  <p className="mt-3">PHP: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
                     flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
                   <div className="CustomCounter">
                     <span className="CounterText">
@@ -230,7 +230,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
           <div className="col-md -12">
             <ul className="PersonalCompanyList2 list-unstyled">
               <li><img alt="one Wallet" src={oneWallet} />{i18n.t("Multi_Currency_Savings_Account_li1")}</li>
-              <li><img alt="List Phone" src={ListPhone} />{i18n.t("Multi_Currency_Savings_Account_li2")}</li>
+              <li><img alt="List Phone" src={ListPhone} />{i18n.t("Multi_Currency_Savings_Account_li2_Multi")}</li>
               <li><img alt="Draw" src={Draw} />{i18n.t("Multi_Currency_Savings_Account_li3")}</li>
               <li><img alt="Draw" src={Draw} />{i18n.t("Multi_Currency_Savings_Account_li4")}</li>
             </ul>

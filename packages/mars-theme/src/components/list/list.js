@@ -7,6 +7,7 @@ import Link from "../link";
 import Logo from "../../assets/logo.svg";
 import Close from "../../assets/clear.svg";
 import close from "../../assets/close.svg";
+import Lang from "../../assets/lang-icon.png";
 import DropdownGraph from "../../assets/DropdownGraph.svg";
 import DropdownArrow from "../../assets/DropdownArrow.svg";
 import CharityImg from "../../assets/charityImg.svg";
@@ -14,7 +15,7 @@ import ThanksModal from "../ThanksModal/ThanksModal";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import Android from "../../assets/AndroidApp.svg";
 import IOS from "../../assets/iOSApp.svg";
-import { androidAppLink, iosAppLink } from "../../config/config";
+import { androidAppLink, iosAppLink, websiteLink } from "../../config/config";
 import { withTranslation } from "react-i18next";
 
 const List = ({ i18n }) => {
@@ -22,6 +23,7 @@ const List = ({ i18n }) => {
   const [personalToggleBotton, setPersonalToggleBotton] = useState(false);
   const [businessToggleBotton, setBusinessToggleBotton] = useState(false);
   const [donationsToggleBotton, setDonationsToggleBotton] = useState(false);
+  const [languageToggleBotton, setLanguageToggleBotton] = useState(false);
   const [open, setOpen] = useState(false);
   const [innerWidth, setInnerWidth] = useState(0);
   const [openSuccessModal, setSuccessModal] = useState(false);
@@ -40,6 +42,7 @@ const List = ({ i18n }) => {
     setPersonalToggleBotton(true);
     setBusinessToggleBotton(false);
     setDonationsToggleBotton(false);
+    setLanguageToggleBotton(false);
   };
   const onBusinessToggleButtonClicked = () => {
     if (businessToggleBotton) {
@@ -48,12 +51,23 @@ const List = ({ i18n }) => {
     setBusinessToggleBotton(true);
     setPersonalToggleBotton(false);
     setDonationsToggleBotton(false);
+    setLanguageToggleBotton(false);
   };
   const onDonationsToggleButtonClicked = () => {
     if (donationsToggleBotton) {
       return setDonationsToggleBotton(false);
     }
     setDonationsToggleBotton(true);
+    setBusinessToggleBotton(false);
+    setPersonalToggleBotton(false);
+    setLanguageToggleBotton(false);
+  };
+  const onLanguageToggleButtonClicked = () => {
+    if (languageToggleBotton) {
+      return setLanguageToggleBotton(false);
+    }
+    setLanguageToggleBotton(true);
+    setDonationsToggleBotton(false);
     setBusinessToggleBotton(false);
     setPersonalToggleBotton(false);
   };
@@ -304,6 +318,50 @@ const List = ({ i18n }) => {
                   <Link link="/ph/contact-us" className="nav-link">
                     {i18n.t("Help")}
                   </Link>
+                </li>
+                <li className="nav-item dropdown languageDropdown" onClick={innerWidth < 992 ? onLanguageToggleButtonClicked : null}>
+                  <a
+                    className="nav-link dropdown-toggle"
+                    id="LanguageDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Ph
+                  </a>
+                  <div
+                    className={languageToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
+                    aria-labelledby="LanguageDropdown"
+                  >
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="HeaderListCont">
+                          <p className="ListTitle CharityTitle">
+                            <img
+                              src={Lang}
+                              alt="Charity"
+                            />
+                            Languages
+                          </p>
+                          <ul className="HeaderList list-unstyled">
+                            <li onClick={() => setToggleBotton(false)}>
+                              <a href="https://www.cashero.com">English</a>
+                            </li>
+                            <li onClick={() => setToggleBotton(false)}>
+                              <a href="https://www.cashero.com/br">Português</a>
+                            </li>
+                            <li onClick={() => setToggleBotton(false)}>
+                              <a href="https://www.cashero.com/in">Indian</a>
+                            </li>
+                            <li onClick={() => setToggleBotton(false)}>
+                              <a href={websiteLink}>Filipino</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
               <button

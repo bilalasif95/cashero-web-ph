@@ -115,7 +115,7 @@ const HighInterest = ({ i18n }) => {
 								<div className="earningText">
 									<p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
 								</div>
-								<p className="mt-3">BRL: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
+								<p className="mt-3">PHP: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
 									flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
 								<div className="CustomCounter">
 									<span className="CounterText">

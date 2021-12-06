@@ -431,7 +431,7 @@ h4 {
       transition: color 0.2s ease 0s;
      }
 .customNav ul li:not(:last-child) {
-  margin-right: 40px; }
+  margin-right: 25px; }
 
   .customNav ul li:last-child a:after{
         display: inherit !important;
