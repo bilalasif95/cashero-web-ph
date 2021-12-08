@@ -44,7 +44,7 @@ const ContactForm = ({ i18n }) => {
 						setError("");
 						setSuccess("");
 						setMessage("");
-						setValue("");
+						// setValue("");
 					}, 1500)
 				})
 				.catch((err) => {

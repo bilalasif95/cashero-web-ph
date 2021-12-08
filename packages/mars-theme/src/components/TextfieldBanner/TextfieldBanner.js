@@ -61,7 +61,7 @@ const TextfieldBanner = ({ i18n }) => {
           setError(res.message);
         } else {
           setNewPhoneNumber("");
-          setValue("");
+          // setValue("");
           setSuccessModal(true);
         }
       })

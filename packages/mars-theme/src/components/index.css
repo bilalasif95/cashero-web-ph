@@ -16002,6 +16002,9 @@ select:-webkit-autofill:focus {
       transform: scale(0.77);
       transform-origin: 0px 0px;
     }
+    .g-recaptcha iframe {
+      height: 100px !important;
+    }
     .captcha-cont {
       margin-top: 30px;
     }

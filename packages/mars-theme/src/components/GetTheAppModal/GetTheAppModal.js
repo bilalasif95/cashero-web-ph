@@ -81,7 +81,7 @@ const GetTheAppModal = (props) => {
           setError(res.message);
         } else {
           setNewPhoneNumber("");
-          setValue("");
+          // setValue("");
           setSuccessModal(true);
         }
       })
