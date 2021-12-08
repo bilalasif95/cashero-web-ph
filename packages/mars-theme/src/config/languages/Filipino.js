@@ -497,7 +497,7 @@ export const Filipino = {
     // PERSONAL_INFORMATION_li1: "Processe suas transações e depósitos. Processaremos suas informações pessoais apenas para os fins para os quais nos foram fornecidas;",
     PERSONAL_INFORMATION_li1: "Process your transactions and deposits. We will process your Personal Information only for the purpose(s) for which it has been provided to us;",
     // PERSONAL_INFORMATION_li6: "Analise o uso do aplicativo e melhore nosso site, aplicativo e ofertas. Analisar e rastrear dados para determinar a utilidade ou popularidade de determinado conteúdo e para entender melhor a atividade online de nossos usuários;",
-    ERSONAL_INFORMATION_li6: "Analyze the App usage and improve our Site, App, and offerings. Analyzing and tracking data to determine the usefulness or popularity of certain content and to better understand the online activity of our App users;",
+    PERSONAL_INFORMATION_li6: "Analyze the App usage and improve our Site, App, and offerings. Analyzing and tracking data to determine the usefulness or popularity of certain content and to better understand the online activity of our App users;",
     // PERSONAL_INFORMATION_li9: "Administrar um concurso, promoção, pesquisa ou outros recursos conforme será mais explicado no Site ou no Aplicativo;",
     PERSONAL_INFORMATION_li9: "Administer a contest, promotion, survey, or other features as will be more explained on the Site or the App;",
     // PERSONAL_INFORMATION_li12: "Não realizamos rastreamento comportamental das atividades de usuários em nosso aplicativo ou em diferentes sites, nem permitimos a coleta de dados de terceiros por meio de nossos serviços. Se desejar parar de receber nossas comunicações, entre em contato conosco para cancelar o recebimento.",

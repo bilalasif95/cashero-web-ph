@@ -492,7 +492,8 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("multi_currency_country_P")} <Link link="/ph/countries">{i18n.t("click_here")}</Link> {i18n.t("multi_currency_country_P_1")}
+											{i18n.t("multi_currency_country_P")}
+											{/* <Link link="/ph/countries">{i18n.t("click_here")}</Link> {i18n.t("multi_currency_country_P_1")} */}
 										</p>
 									</Typography>
 								</AccordionDetails>
