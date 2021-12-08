@@ -77,17 +77,17 @@ const GetTheAppModal = (props) => {
     })
       .then((res) => {
         setLoading(false);
-        if (res.code === 400) {
-          setError(res.message);
-        } else {
+        if (res.code === 1000) {
           setNewPhoneNumber("");
           // setValue("");
           setSuccessModal(true);
+        } else {
+          setError("May nangyaring mali.");
         }
       })
       .catch(() => {
         setLoading(false);
-        setError("Di-wastong numero ng telepono.");
+        setError("May nangyaring mali.");
       });
   };
   useEffect(() => {
