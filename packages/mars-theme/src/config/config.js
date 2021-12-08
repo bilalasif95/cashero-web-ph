@@ -43,7 +43,7 @@ const firebaseTableName = {
 };
 
 export const FirebaseEndPoints = {
-  ExchangeRates: `${firebaseAPI + `${firebaseTableName.ExchangeRates}/BR`}`,
+  ExchangeRates: `${firebaseAPI + `${firebaseTableName.ExchangeRates}/PH`}`,
   IndividualExchangeRates: `${firebaseAPI + firebaseTableName.ExchangeRates}`,
 };
 

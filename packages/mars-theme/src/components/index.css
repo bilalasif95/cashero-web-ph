@@ -431,7 +431,7 @@ h4 {
       transition: color 0.2s ease 0s;
      }
 .customNav ul li:not(:last-child) {
-  margin-right: 40px; }
+  margin-right: 25px; }
 
   .customNav ul li:last-child a:after{
         display: inherit !important;
@@ -16001,6 +16001,9 @@ select:-webkit-autofill:focus {
     .g-recaptcha {
       transform: scale(0.77);
       transform-origin: 0px 0px;
+    }
+    .g-recaptcha iframe {
+      height: 100px !important;
     }
     .captcha-cont {
       margin-top: 30px;
