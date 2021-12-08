@@ -101,7 +101,7 @@ const CurrencyAccounts = ({ state, i18n }) => {
     let x = n && (n + "00").substring(0, 2);
     return x ? temp[0] + "." + x : "0.00";
   };
-  const calculateBRL = (value, label) => {
+  const calculatePHP = (value, label) => {
     if (label === "US Dollar - USD" || label === "US Dollar - USD") {
       const multi = bigDecimal.multiply(50.00, value)
       const final = limit(multi)
@@ -164,8 +164,8 @@ const CurrencyAccounts = ({ state, i18n }) => {
                   <div className="earningText">
                     <p className="HighInterestText">{i18n.t("Earning_5_APY")}</p>
                   </div>
-                  <p className="mt-3">PHP: {flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") :
-                    flagcurrencygbp === "EU Euro - EUR" ? calculateBRL(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "US Dollar - USD" ? calculateBRL(baseCurrencyUSDValue, "US Dollar - USD") : calculateBRL(baseCurrencyGBPValue, "")}</p>
+                  <p className="mt-3">PHP: {flagcurrencygbp === "US Dollar - USD" ? calculatePHP(baseCurrencyUSDValue, "US Dollar - USD") :
+                    flagcurrencygbp === "EU Euro - EUR" ? calculatePHP(baseCurrencyEURValue, "EU Euro - EUR") : flagcurrencygbp === "US Dollar - USD" ? calculatePHP(baseCurrencyUSDValue, "US Dollar - USD") : calculatePHP(baseCurrencyGBPValue, "")}</p>
                   <div className="CustomCounter">
                     <span className="CounterText">
                       {flagcurrencygbp === "US Dollar - USD" || flagcurrencygbp === "US Dollar - USD" ? "$" :
