@@ -36,20 +36,24 @@ const ContactForm = ({ i18n }) => {
 				message: message,
 			})
 				.then((res) => {
-					setSuccess(res.message);
-					setTimeout(() => {
-						setLoading(false);
-						setName("");
-						setEmail("");
-						setError("");
-						setSuccess("");
-						setMessage("");
-						setValue("");
-					}, 1500)
+					if (res.code === 1000) {
+						setSuccess("Pinapahalagahan namin ang pakikipag-ugnayan mo sa amin. Makikipag-ugnayan kami muli sa iyo sa lalong madaling panahon! Magkaroon ng magandang araw!");
+						setTimeout(() => {
+							setLoading(false);
+							setName("");
+							setEmail("");
+							setError("");
+							setSuccess("");
+							setMessage("");
+							// setValue("");
+						}, 1500)
+					} else {
+						setError("May nangyaring mali.");
+					}
 				})
-				.catch((err) => {
+				.catch(() => {
 					setLoading(false);
-					setError(err.message);
+					setError("May nangyaring mali.");
 				});
 		}
 	}

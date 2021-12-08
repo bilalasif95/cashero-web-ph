@@ -60,7 +60,7 @@ const ReceivePayments = ({ state, i18n }) => {
                 <p className="bannerPara">{i18n.t("Receive_Payments_Main_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
-                  <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes")}</li>
+                  <li><img alt="Clock" src={Clock} />{i18n.t("Open_an_account_in_minutes_Transfer")}</li>
                 </ul>
                 <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
@@ -106,7 +106,7 @@ const ReceivePayments = ({ state, i18n }) => {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox2">
               <div className="GetStartedBox2 w-100">
                 <img className="img-fluid" height="152px" width="152px" alt="Dollar" src={Dollar} />
-                <h3>{i18n.t("Add_funds_to_your_account")}</h3>
+                <h3>{i18n.t("Add_funds_to_your_account_Transfer")}</h3>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12  smBox3">

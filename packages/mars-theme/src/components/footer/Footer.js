@@ -66,14 +66,14 @@ const Footer = ({ i18n }) => {
 									<li><Link link="/ph/transfer-money-abroad">{i18n.t("Global_Transfers")}</Link></li>
 								</ul>
 							</div>
-							<div className="col-md-3">
+							<div className="col-md-4">
 								<h4 className="NavTitle">{i18n.t("Company")}</h4>
 								<ul className="list-unstyled FooterList">
 									<li><Link link="/ph/company">{i18n.t("About_Us")}</Link></li>
 									<li><Link link="/ph/blog">{i18n.t("Blog")}</Link></li>
 								</ul>
 							</div>
-							<div className="col-md-4">
+							<div className="col-md-3">
 								<h4 className="NavTitle">{i18n.t("Legal")}</h4>
 								<ul className="list-unstyled FooterList">
 									<li><Link link="/ph/terms">{i18n.t("Terms")}</Link></li>

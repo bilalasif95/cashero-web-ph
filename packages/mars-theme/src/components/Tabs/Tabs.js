@@ -397,7 +397,7 @@ const QuestionTabs = (props) => {
 												<h2 className="blackhead">{i18n.t("Learn_more_savings_P1")}</h2>
 												<p>{i18n.t("Learn_more_savings_P2")}</p>
 												<p>{i18n.t("Learn_more_savings_P3")}</p>
-												<h3 className="blackhead"><a href="https://www.cashero.com/ph/blog/what-is-a-high-yield-savings-account/" target="_blank" rel="noopener noreferrer">{i18n.t("Learn_more_savings_P4")}</a></h3>
+												<h3 className="blackhead"><a href="https://www.cashero.com/blog/what-is-a-high-yield-savings-account/" target="_blank" rel="noopener noreferrer">{i18n.t("Learn_more_savings_P4")}</a> {i18n.t("Learn_more_savings_P4_1")}</h3>
 												<p>{i18n.t("Learn_more_savings_P5")}</p>
 												<h3 className="blackhead">{i18n.t("Learn_more_savings_P6")}</h3>
 												<p>{i18n.t("Learn_more_savings_P7")}</p>
@@ -492,7 +492,8 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{i18n.t("multi_currency_country_P")} <Link link="/ph/countries">{i18n.t("click_here")}</Link> {i18n.t("multi_currency_country_P_1")}
+											{i18n.t("multi_currency_country_P")}
+											{/* <Link link="/ph/countries">{i18n.t("click_here")}</Link> {i18n.t("multi_currency_country_P_1")} */}
 										</p>
 									</Typography>
 								</AccordionDetails>
@@ -605,7 +606,7 @@ const QuestionTabs = (props) => {
 											<p>(1) {i18n.t("multi_currency_Learn_P5")} </p>
 											<p>(2) {i18n.t("multi_currency_Learn_P6")} </p>
 											<p>(3) {i18n.t("multi_currency_Learn_P7")} </p>
-											<p>{i18n.t("multi_currency_Learn_P8")}<a href="https://www.cashero.com/ph/blog/what-is-the-safest-way-to-travel-with-money/" target="_blank" rel="noopener noreferrer">{i18n.t("multi_currency_Learn_P8_1")}</a>{i18n.t("multi_currency_Learn_P8_2")}</p>
+											<p>{i18n.t("multi_currency_Learn_P8")}<a href="https://www.cashero.com/blog/what-is-the-safest-way-to-travel-with-money/" target="_blank" rel="noopener noreferrer">{i18n.t("multi_currency_Learn_P8_1")}</a>{i18n.t("multi_currency_Learn_P8_2")}</p>
 											<h2 className="blackhead">{i18n.t("multi_currency_Learn_P9")}</h2>
 											<p>{i18n.t("multi_currency_Learn_P10")}</p>
 											<h3 className="blackhead">{i18n.t("multi_currency_Learn_P11")}</h3>
@@ -841,7 +842,7 @@ const QuestionTabs = (props) => {
 													<li><p><b>{i18n.t("online_currency_exchange_learn_15_1")} – </b>{i18n.t("online_currency_exchange_learn_15_2")}</p></li>
 												</ol>
 											</div>
-											<p><b>{i18n.t("Note")}</b>: {i18n.t("Note_1")}<a href="https://www.cashero.com/ph/blog/is-buying-foreign-currency-a-good-investment/" target="_blank" rel="noopener noreferrer">{i18n.t("Note_1_1")}</a>{i18n.t("Note_1_2")}</p>
+											<p><b>{i18n.t("Note")}</b>: {i18n.t("Note_1")}<a href="https://www.cashero.com/blog/is-buying-foreign-currency-a-good-investment/" target="_blank" rel="noopener noreferrer">{i18n.t("Note_1_1")}</a>{i18n.t("Note_1_2")}</p>
 											<h3 className="blackhead">{i18n.t("online_currency_exchange_learn_16")}</h3>
 											<p>{i18n.t("online_currency_exchange_learn_17")}</p>
 											<p>{i18n.t("online_currency_exchange_learn_18")}</p>
@@ -1053,7 +1054,7 @@ const QuestionTabs = (props) => {
 											<h4 className="blackhead">4. {i18n.t("instant_money_transfer_P13")}</h4>
 											<p>{i18n.t("instant_money_transfer_P14")}</p>
 											<p>{i18n.t("instant_money_transfer_P15")}</p>
-											<h2 className="blackhead">{i18n.t("instant_money_transfer_P16")}<a href="https://www.cashero.com/ph/blog/how-to-transfer-money-instantly-online/" target="_blank" rel="noopener noreferrer">{i18n.t("instant_money_transfer_P16_1")}</a></h2>
+											<h2 className="blackhead">{i18n.t("instant_money_transfer_P16")}<a href="https://www.cashero.com/blog/how-to-transfer-money-instantly-online/" target="_blank" rel="noopener noreferrer">{i18n.t("instant_money_transfer_P16_1")}</a></h2>
 											<p>{i18n.t("instant_money_transfer_P17")}</p>
 											<div className="inner-div">
 												<p><b>{i18n.t("Register")} </b> – {i18n.t("Register_P")}</p>
@@ -1255,7 +1256,7 @@ const QuestionTabs = (props) => {
 												</div>
 												<h3 className="blackhead">{i18n.t("transfer_money_abroad_P9")}</h3>
 												<p>{i18n.t("transfer_money_abroad_P10")} </p>
-												<p>{i18n.t("transfer_money_abroad_P11")}<a href="https://www.cashero.com/ph/blog/what-is-the-safest-way-to-transfer-money-internationally/" target="_blank" rel="noopener noreferrer">{i18n.t("transfer_money_abroad_P11_1")}</a>{i18n.t("transfer_money_abroad_P11_2")} </p>
+												<p>{i18n.t("transfer_money_abroad_P11")}<a href="https://www.cashero.com/blog/what-is-the-safest-way-to-transfer-money-internationally/" target="_blank" rel="noopener noreferrer">{i18n.t("transfer_money_abroad_P11_1")}</a>{i18n.t("transfer_money_abroad_P11_2")} </p>
 												<h3 className="blackhead">{i18n.t("transfer_money_abroad_P12")}</h3>
 												<p>{i18n.t("transfer_money_abroad_P13")} </p>
 												<h2 className="blackhead">{i18n.t("transfer_money_abroad_P14")}</h2>
