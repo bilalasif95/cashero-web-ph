@@ -19,7 +19,7 @@ export const websiteLink = "https://cashero.com";
 //production: "https://cashero.com"
 //staging: "https://staging.cashero.com"
 
-export const wordPressLink = "https://wp.cashero.com/br/pt-br/";
+export const wordPressLink = "https://wp.cashero.com/ph/fil-ph/";
 //testing: "https://wp-testing.cashero.com/ph/"
 //development: "https://wp-development.cashero.com/ph/"
 //production: "https://wp.cashero.com"
