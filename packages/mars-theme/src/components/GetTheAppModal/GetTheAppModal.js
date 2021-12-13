@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { parse as parseQs } from "qs";
 import { styled } from "frontity";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
@@ -33,6 +33,7 @@ const GetTheAppModal = (props) => {
   const [innerWidth, setInnerWidth] = useState(0);
   const [loading, setLoading] = useState(false);
   const [openSuccessModal, setSuccessModal] = useState(false);
+  const recaptcha = useRef(null);
   useEffect(() => {
     setSearchResults(counrtrylist);
     setInnerWidth(window.innerWidth)
@@ -79,6 +80,7 @@ const GetTheAppModal = (props) => {
         setLoading(false);
         if (res.code === 1000) {
           setNewPhoneNumber("");
+          recaptcha.current.reset();
           // setValue("");
           setSuccessModal(true);
         } else {
@@ -254,6 +256,7 @@ const GetTheAppModal = (props) => {
                   }
                   <div className="captcha-cont">
                     <ReCAPTCHA
+                      ref={recaptcha}
                       className="g-recaptcha"
                       data-theme="light"
                       sitekey={recaptchaSiteKep}

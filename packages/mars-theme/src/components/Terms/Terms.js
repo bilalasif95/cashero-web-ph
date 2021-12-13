@@ -19,7 +19,7 @@ const Terms = ({ i18n }) => {
               <div className="terms_titles">
                 <h1>{i18n.t("TERMS_AND_CONDITIONS_Terms")}</h1>
                 <div className="custom-border"></div>
-                <p>{i18n.t("TERMS_P1")} <a href={websiteLink} target="_blank" rel="noopener noreferrer">www.cashero.com</a> {i18n.t("TERMS_P1_B")}</p>
+                <p>{i18n.t("TERMS_P1")} <a href={websiteLink + "/ph/"} target="_blank" rel="noopener noreferrer">www.cashero.com</a> {i18n.t("TERMS_P1_B")}</p>
                 <p>{i18n.t("TERMS_P2")}</p>
                 <p>{i18n.t("TERMS_P3")}</p>
               </div>

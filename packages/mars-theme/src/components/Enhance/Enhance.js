@@ -16,7 +16,7 @@ const Enhance = ({ i18n }) => {
 								<p>
 									{i18n.t("Business_P1")} <span className="br-block-with-no-display"></span>{i18n.t("Business_P2")}
 								</p>
-								<a className="Link" href="/#">
+								<a className="Link" href="/ph/#">
 									{i18n.t("Learn_more_about_Business")}  <img alt="Arrow" height="24px" width="24px" className="ArrowBtn" src={ArrowWhite} />
 								</a>
 							</Fade>

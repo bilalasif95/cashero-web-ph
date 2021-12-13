@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { callApi } from "../../config/call-api";
 import { EndPoints, recaptchaSiteKep } from "../../config/config";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -12,6 +12,7 @@ const ContactForm = ({ i18n }) => {
 	const [success, setSuccess] = useState("");
 	const [error, setError] = useState("");
 	const [value, setValue] = useState("");
+	const recaptcha = useRef(null);
 	const onNameChange = (e) => {
 		setName(e.target.value)
 	}
@@ -45,8 +46,9 @@ const ContactForm = ({ i18n }) => {
 							setError("");
 							setSuccess("");
 							setMessage("");
+							recaptcha.current.reset();
 							// setValue("");
-						}, 1500)
+						}, 3000)
 					} else {
 						setError("May nangyaring mali.");
 					}
@@ -74,6 +76,7 @@ const ContactForm = ({ i18n }) => {
 					{success && <label className="contactUsFormSuccess">{success}</label>}
 					<div className="captcha-cont">
 						<ReCAPTCHA
+							ref={recaptcha}
 							className="g-recaptcha"
 							data-theme="light"
 							sitekey={recaptchaSiteKep}

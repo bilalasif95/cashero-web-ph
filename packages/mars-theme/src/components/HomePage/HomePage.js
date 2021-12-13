@@ -25,8 +25,8 @@ const HomePage = ({ state, i18n }) => {
   return (
     <>
       <Head>
-        <link rel="alternate" hreflang="tl-PH" href={websiteLink} />
-        <link rel="alternate" hreflang="x-default" href={websiteLink} />
+        <link rel="alternate" hreflang="tl-PH" href={websiteLink + "/ph/"} />
+        <link rel="alternate" hreflang="x-default" href={websiteLink + "/ph/"} />
         <script className="structured-data-list" type="application/ld+json">
           {structuredData(state)}
         </script>

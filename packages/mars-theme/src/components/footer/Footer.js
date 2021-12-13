@@ -45,7 +45,7 @@ const Footer = ({ i18n }) => {
 			<div className="Footer">
 				<div className="row">
 					<div className="col-md-6">
-						<Link link="/ph">
+						<Link link="/ph/">
 							<img src={Logo} height="36px" width="190px" alt="logo" />
 						</Link>
 						<p className="HelpText footerBreakText">{i18n.t("Footer_P1")}</p>

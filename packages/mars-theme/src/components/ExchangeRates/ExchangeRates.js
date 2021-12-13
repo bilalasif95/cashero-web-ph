@@ -60,7 +60,7 @@ const ExchangeRates = ({ state, i18n }) => {
   const [loading, setLoading] = useState(false);
   const [swap, setSwap] = useState(false);
   const [baseCurrencyValue, setBaseCurrencyValue] = useState("399");
-  const [quoteCurrencyValue, setQuoteCurrencyValue] = useState("");
+  const [quoteCurrencyValue, setQuoteCurrencyValue] = useState("0.00");
   useEffect(() => {
     setLoading(true);
     setSearchResultseuro(currencieslistPH);
@@ -80,7 +80,7 @@ const ExchangeRates = ({ state, i18n }) => {
             : flagcodeeuro === "GB"
               ? doc.fields.gbp.stringValue
               : doc.fields.eur.stringValue;
-        setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
+        setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(baseCurrencyValue, val), 2));
         setLoading(false);
       })
       .catch(() => { });
@@ -120,7 +120,6 @@ const ExchangeRates = ({ state, i18n }) => {
     setBaseCurrencyGBPValue("");
     setBaseCurrencyUSDValue("");
     setSearchTermgbp("");
-    setQuoteCurrencyValue("");
     setSearchResults2gbp(currencieslistPH);
     if (swap) {
       setflageuro(country.flag);
@@ -149,7 +148,7 @@ const ExchangeRates = ({ state, i18n }) => {
               : flagcodegbp === "GB"
                 ? doc.fields.gbp.stringValue
                 : doc.fields.eur.stringValue;
-          setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
+          setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(baseCurrencyValue, val), 2));
         } else {
           const val =
             flagcodeeuro === "US"
@@ -157,7 +156,7 @@ const ExchangeRates = ({ state, i18n }) => {
               : flagcodeeuro === "GB"
                 ? doc.fields.gbp.stringValue
                 : doc.fields.eur.stringValue;
-          setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
+          setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(baseCurrencyValue, val), 2));
         }
         setLoading(false);
       })
@@ -176,18 +175,82 @@ const ExchangeRates = ({ state, i18n }) => {
         : country.code === "GB"
           ? baseCurrencyGBPValue
           : baseCurrencyEURValue;
-    setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
+    setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(baseCurrencyValue, val), 2));
   };
   const onBaseCurrencyValueChange = (e) => {
-    setBaseCurrencyValue(e.target.value);
+    let isDecimal = /^[-+]?[0-9]+\.[0-9]+$/.test(e.target.value);
+    if (isDecimal) {
+      let noDigitAfterDecimal = countDecimals(e.target.value);
+      if (noDigitAfterDecimal > 2) {
+        e.preventDefault();
+      } else {
+        if (e.keyCode === 8) {
+          setBaseCurrencyValue(e.target.value);
+        }
+        else {
+          setBaseCurrencyValue(e.target.value);
+        }
+      }
+    }
+    else {
+      if (e.keyCode === 8) {
+        setBaseCurrencyValue(e.target.value);
+      }
+      else {
+        setBaseCurrencyValue(e.target.value);
+      }
+    }
     const val =
       flagcodeeuro === "US"
         ? baseCurrencyUSDValue
         : flagcodeeuro === "GB"
           ? baseCurrencyGBPValue
           : baseCurrencyEURValue;
-    setQuoteCurrencyValue(bigDecimal.multiply(e.target.value, val));
+    setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(e.target.value, val), 2));
   };
+  var countDecimals = function (value) {
+    let text = value.toString();
+    if (text.indexOf("e-") > -1) {
+      let [base, trail] = text.split("e-");
+      let deg = parseInt(trail, 10);
+      return deg;
+    }
+    if (Math.floor(value) !== value) {
+      return value.toString().split(".")[1].length || 0;
+    }
+    return 0;
+  };
+  const onQuoteCurrencyValueChange = (e) => {
+    let isDecimal = /^[-+]?[0-9]+\.[0-9]+$/.test(e.target.value);
+    if (isDecimal) {
+      let noDigitAfterDecimal = countDecimals(e.target.value);
+      if (noDigitAfterDecimal > 2) {
+        e.preventDefault();
+      } else {
+        if (e.keyCode === 8) {
+          setQuoteCurrencyValue(e.target.value);
+        }
+        else {
+          setQuoteCurrencyValue(e.target.value);
+        }
+      }
+    }
+    else {
+      if (e.keyCode === 8) {
+        setQuoteCurrencyValue(e.target.value);
+      }
+      else {
+        setQuoteCurrencyValue(e.target.value);
+      }
+    }
+    const val =
+      flagcodeeuro === "US"
+        ? baseCurrencyUSDValue
+        : flagcodeeuro === "GB"
+          ? baseCurrencyGBPValue
+          : baseCurrencyEURValue;
+    setBaseCurrencyValue(bigDecimal.round(bigDecimal.multiply(e.target.value, val), 2));
+  }
   const actualLimit = (bal) => {
     let temp = bal ? bal.toString() : "0";
     if (temp) {
@@ -199,20 +262,29 @@ const ExchangeRates = ({ state, i18n }) => {
     let x = n && (n + "0000").substring(0, 4);
     return x ? temp[0] + "." + x : "0.0000";
   };
-  const limit = (bal) => {
-    let temp = bal ? bal.toString() : "0";
-    if (temp) {
-      temp = temp.split(".");
-    } else {
-      return temp;
-    }
-    let n = temp[1] ? "" + temp[1] : "0";
-    let x = n && (n + "00").substring(0, 2);
-    return x ? temp[0] + "." + x : "0.00";
-  };
   const onSwap = () => {
     if (swap) {
-      return setSwap(false);
+      setSwap(false);
+      setLoading(true);
+      callApi(
+        FirebaseEndPoints.IndividualExchangeRates + `/${flagcodegbp}`,
+        "get",
+        ""
+      )
+        .then((doc) => {
+          setBaseCurrencyEURValue(doc.fields.eur.stringValue);
+          setBaseCurrencyGBPValue(doc.fields.gbp.stringValue);
+          setBaseCurrencyUSDValue(doc.fields.usd.stringValue);
+          const val =
+            flagcodeeuro === "US"
+              ? doc.fields.usd.stringValue
+              : flagcodeeuro === "GB"
+                ? doc.fields.gbp.stringValue
+                : doc.fields.eur.stringValue;
+          setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(baseCurrencyValue, val), 2));
+          setLoading(false);
+        })
+        .catch(() => { });
     } else {
       setSwap(true);
       setLoading(true);
@@ -231,7 +303,7 @@ const ExchangeRates = ({ state, i18n }) => {
               : flagcodegbp === "GB"
                 ? doc.fields.gbp.stringValue
                 : doc.fields.eur.stringValue;
-          setQuoteCurrencyValue(bigDecimal.multiply(baseCurrencyValue, val));
+          setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(baseCurrencyValue, val), 2));
           setLoading(false);
         })
         .catch(() => { });
@@ -528,10 +600,8 @@ const ExchangeRates = ({ state, i18n }) => {
                           {baseCurrency}&nbsp;
                         </div>
                         <TextField
-                          value={limit(quoteCurrencyValue)}
-                          onChange={(e) =>
-                            setQuoteCurrencyValue(e.target.value)
-                          }
+                          value={quoteCurrencyValue}
+                          onChange={onQuoteCurrencyValueChange}
                           fullWidth
                           type="number"
                           variant="standard"
@@ -609,10 +679,8 @@ const ExchangeRates = ({ state, i18n }) => {
                         </div>
                         <TextField
                           fullWidth
-                          value={limit(quoteCurrencyValue)}
-                          onChange={(e) =>
-                            setQuoteCurrencyValue(e.target.value)
-                          }
+                          value={quoteCurrencyValue}
+                          onChange={onQuoteCurrencyValueChange}
                           type="number"
                           variant="standard"
                           className="PersonalBoxFieldGet"

@@ -131,7 +131,7 @@ const Personal = ({ state, i18n }) => {
                       <div className="col-6">
                         <div className="InterestBox mt-0 TotalText interest-box-cont">
                           <p>{i18n.t("Total_Interest")}</p>
-                          <p className="value">$<NumericLabel params={{
+                          <p className={`${totalInterest().length === 8 ? "valueFont value" : totalInterest().length === 9 ? "valueFont1 value" : "value"}`}>$<NumericLabel params={{
                             'shortFormat': true,
                             'justification': 'C',
                             'shortFormatMinValue': 1000000000000
