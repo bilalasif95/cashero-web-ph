@@ -1,3 +1,5 @@
 User-agent: *
 
-Disallow: /
+Allow: /
+# Sitemap files
+Sitemap: https://www.cashero.com/ph/sitemap.xml

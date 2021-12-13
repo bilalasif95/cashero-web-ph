@@ -1,25 +1,25 @@
 const API = process.env.REACT_APP_API_URL
   ? process.env.REACT_APP_API_URL
-  : "https://staging-spot.cashero.com";
+  : "https://spot.cashero.com";
 //testing: "https://testing-spot.cashero.com"
 //development: "https://development-spot.cashero.com"
 //production: "https://spot.cashero.com"
 //staging: "https://staging-spot.cashero.com"
 
 const firebaseAPI =
-  "https://firestore.googleapis.com/v1/projects/cashero-staging/databases/(default)/documents/";
+  "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/";
 //testing: "https://firestore.googleapis.com/v1/projects/cashero-testing-54a48/databases/(default)/documents/"
 //production: "https://firestore.googleapis.com/v1/projects/cashero-828/databases/(default)/documents/"
 //development: "https://firestore.googleapis.com/v1/projects/cashero-development-76cca/databases/(default)/documents/"
 //staging: "https://firestore.googleapis.com/v1/projects/cashero-staging/databases/(default)/documents/"
 
-export const websiteLink = "https://staging.cashero.com";
+export const websiteLink = "https://cashero.com";
 //testing: "https://testing.cashero.com"
 //development: "https://development.cashero.com"
 //production: "https://cashero.com"
 //staging: "https://staging.cashero.com"
 
-export const wordPressLink = "https://wp-staging.cashero.com/ph/";
+export const wordPressLink = "https://wp.cashero.com/br/pt-br/";
 //testing: "https://wp-testing.cashero.com/ph/"
 //development: "https://wp-development.cashero.com/ph/"
 //production: "https://wp.cashero.com"
@@ -33,7 +33,7 @@ export const recaptchaSiteKep = "6Lc5YbQaAAAAAJRSNLyM9ZXpbvweEgr3bRzdbMaB";
 
 export const ipAPI = "https://ipwhois.app/json/";
 
-export const gtmId = "GTM-KKSRK7H";
+export const gtmId = "GTM-MBGVT62";
 //testing/development/staging:   GTM-KKSRK7H
 //production: GTM-MBGVT62
 
