@@ -199,7 +199,7 @@ const countriesHandler = {
 }
 
 const mainHandler = {
-  pattern: "/ph",
+  pattern: "/ph/",
   func: ({ route, state }) => {
     Object.assign(state.source.data[route], {
       type: "page",

@@ -16296,3 +16296,9 @@ select:-webkit-autofill:focus {
 .dropdown-header input::placeholder{
   color: #9ea1a6 !important
 }
+.valueFont {
+  font-size: 30px !important;
+}
+.valueFont1 {
+  font-size: 27px !important;
+}

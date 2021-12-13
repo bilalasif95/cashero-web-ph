@@ -7,7 +7,6 @@ import Link from "../link";
 import Logo from "../../assets/logo.svg";
 import Close from "../../assets/clear.svg";
 import close from "../../assets/close.svg";
-import Lang from "../../assets/lang-icon.png";
 import DropdownGraph from "../../assets/DropdownGraph.svg";
 import DropdownArrow from "../../assets/DropdownArrow.svg";
 import CharityImg from "../../assets/charityImg.svg";
@@ -95,7 +94,7 @@ const List = ({ i18n }) => {
       <div className={`${scrolled ? "active header" : "header"}`} id="header">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light customNav">
-            <Link link="/ph" className="navbar-brand">
+            <Link link="/ph/" className="navbar-brand">
               <img className="Logo" height="100%" width="100%" alt="Logo" src={Logo} />
             </Link>
             <button
@@ -328,7 +327,7 @@ const List = ({ i18n }) => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Ph
+                    PH
                   </a>
                   <div
                     className={languageToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
@@ -337,26 +336,21 @@ const List = ({ i18n }) => {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="HeaderListCont">
-                          <p className="ListTitle CharityTitle">
-                            <img
-                              src={Lang}
-                              alt="Charity"
-                            />
-                            Languages
-                          </p>
-                          <ul className="HeaderList list-unstyled">
-                            <li onClick={() => setToggleBotton(false)}>
-                              <a href="https://www.cashero.com">English</a>
-                            </li>
-                            <li onClick={() => setToggleBotton(false)}>
-                              <a href="https://www.cashero.com/br">Português</a>
-                            </li>
-                            <li onClick={() => setToggleBotton(false)}>
-                              <a href="https://www.cashero.com/in">Indian</a>
-                            </li>
-                            <li onClick={() => setToggleBotton(false)}>
-                              <a href={websiteLink}>Filipino</a>
-                            </li>
+                          <ul className="list-unstyled">
+                            <ul className="list-unstyled">
+                              <li onClick={() => setToggleBotton(false)}>
+                                <a href={websiteLink + "/en/"}>🇺🇸&nbsp;&nbsp;&nbsp;USA</a>
+                              </li>
+                              <li onClick={() => setToggleBotton(false)}>
+                                <a href={websiteLink + "/br/"}>🇧🇷&nbsp;&nbsp;&nbsp;Brasil</a>
+                              </li>
+                              <li onClick={() => setToggleBotton(false)}>
+                                <a href={websiteLink + "/in/"}>🇮🇳&nbsp;&nbsp;&nbsp;India</a>
+                              </li>
+                              <li onClick={() => setToggleBotton(false)}>
+                                <a href={websiteLink + "/ph/"}>🇵🇭&nbsp;&nbsp;&nbsp;Philippines</a>
+                              </li>
+                            </ul>
                           </ul>
                         </div>
                       </div>

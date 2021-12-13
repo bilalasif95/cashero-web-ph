@@ -64,7 +64,7 @@ const Theme = ({ state }) => {
         <meta name="robots" content="noodp, noydir, noindex, nofollow, archive" />
         <meta name="robots" content="max-snippet:50, max-image-preview:large" />
         <meta name="googlebot" content="noindex" />
-        <link rel="canonical" href={websiteLink} />
+        <link rel="canonical" href={websiteLink + "/ph/"} />
         <link rel="preload" as="font" font-display="swap" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,12 +90,12 @@ const Theme = ({ state }) => {
         <meta property="og:title" content={state.frontity.title} />
         <meta property="og:description" content={state.frontity.description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={websiteLink} />
+        <meta property="og:url" content={websiteLink + "/ph/"} />
         <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FEMTwA7F.png?alt=media" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={state.frontity.title} />
         <meta name="twitter:description" content={state.frontity.description} />
-        <meta name="twitter:url" content={websiteLink} />
+        <meta name="twitter:url" content={websiteLink + "/ph/"} />
         <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/cashero-828.appspot.com/o/website%2FWjbRyFw.png?alt=media" />
         <meta http-equiv='cache-control' content='no-cache' />
         <meta http-equiv='expires' content='0' />

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { parse as parseQs } from "qs";
 import { callApi } from "../../config/call-api";
 import { EndPoints, counrtrylist, recaptchaSiteKep, ipAPI } from "../../config/config";
@@ -23,6 +23,7 @@ const TextfieldBanner = ({ i18n }) => {
   const [utmSource, setUtmSource] = useState("");
   const [utmTerm, setUtmTerm] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const recaptcha = useRef(null);
   // const [phonenoLength, setPhoneNoLength] = useState(0);
   const toggle = () => {
     setSearchTerm("");
@@ -59,6 +60,7 @@ const TextfieldBanner = ({ i18n }) => {
         setLoading(false);
         if (res.code === 1000) {
           setNewPhoneNumber("");
+          recaptcha.current.reset();
           // setValue("");
           setSuccessModal(true);
         } else {
@@ -178,6 +180,7 @@ const TextfieldBanner = ({ i18n }) => {
       </div>
       <div className="captcha-cont">
         <ReCAPTCHA
+          ref={recaptcha}
           className="g-recaptcha"
           data-theme="light"
           sitekey={recaptchaSiteKep}
