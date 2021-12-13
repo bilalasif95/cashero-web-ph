@@ -2,7 +2,7 @@
 
 describe("Home Page", () => {
     it("Should check links for Home Page", () => {
-        cy.visit("/ph")
+        cy.visit("/ph/")
         cy.get('.css-wmgr56 > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click();
         cy.get("a").each(a => {
             if (a[0].href != "") {
