@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../link";
-import Charity from "../../assets/Charity.jpg";
+import Charity from "../../assets/Charity.png";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
 import { withTranslation } from "react-i18next";

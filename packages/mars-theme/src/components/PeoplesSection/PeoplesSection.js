@@ -7,10 +7,9 @@ const PeoplesSection = ({ i18n }) => {
 		<div className="peoples">
 			<div className="PeoplesCont">
 				<div className="container">
-					<h3 className="PeoplesTitle">{i18n.t("Cashero_Works_Across_the_Globe")}</h3>
+					<h3 className="PeoplesTitle mb-0">{i18n.t("Cashero_Works_Across_the_Globe")}</h3>
 					<div className="row">
-						<div className="col-md-2" />
-						<div className="col-md-8">
+						<div className="col-md-10 offset-md-1">
 							<div className="people-map">
 								<img alt="map" className="img-fluid" height="100%" width="100%" src={Map} />
 							</div>
