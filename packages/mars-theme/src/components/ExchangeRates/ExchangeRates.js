@@ -341,7 +341,7 @@ const ExchangeRates = ({ state, i18n }) => {
                 <ul className="PersonalList list-unstyled">
                   <li>
                     <img alt="Clock" src={Clock} />
-                    {i18n.t("Open_an_account_in_minutes")}
+                    {i18n.t("Open_an_account_in_minutes_Online")}
                   </li>
                 </ul>
                 <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>

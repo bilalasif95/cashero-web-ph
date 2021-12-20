@@ -102,7 +102,7 @@ const Personal = ({ state, i18n }) => {
                 <p className="bannerPara">{i18n.t("Personal_Main_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
-                  <li><img src={Clock} alt="Clock" />{i18n.t("Open_an_account_in_minutes")}</li>
+                  <li><img src={Clock} alt="Clock" />{i18n.t("Open_an_account_in_minutes_Multi")}</li>
                 </ul>
                 <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>

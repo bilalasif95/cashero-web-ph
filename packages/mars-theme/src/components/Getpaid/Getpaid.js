@@ -25,9 +25,9 @@ const GetPaid = ({ i18n }) => {
 							<p>
 								{i18n.t("Get_Paid_P")}
 							</p>
-							<p>
+							{/* <p>
 								{i18n.t("Get_Paid_P_1")}
-							</p>
+							</p> */}
 							<button onClick={appModalOpen} className="LinkBtn">
 								{i18n.t("Get_Early_Access")} <img className="ArrowBtn" alt="Arrow" height="24px" width="24px" src={Arrow} />
 							</button>
