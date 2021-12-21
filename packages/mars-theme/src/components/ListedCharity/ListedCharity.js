@@ -54,7 +54,7 @@ const ListedCharity = ({ i18n }) => {
               </div>
             </div>
             <div className="col-md-6">
-              <img alt="free Fund" className="img-fluid mx-auto d-block" height="100%" width="579px" src={freeFund} />
+              <img alt="free Fund" className="img-fluid mx-auto d-block" height="auto" width="auto" src={freeFund} />
             </div>
           </div>
         </div>

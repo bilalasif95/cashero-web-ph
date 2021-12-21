@@ -15,7 +15,7 @@ import GetPaid from "../Getpaid/Getpaid";
 import { Fade } from "react-awesome-reveal";
 import Fav from "../../assets/favImg.svg";
 import Arrow1 from "../../assets/arrowLink.svg";
-import KuWu from "../../assets/KuWu.png";
+import KuWu from "../../assets/KuWu.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { Head, connect } from "frontity";
 import Link from "../link";

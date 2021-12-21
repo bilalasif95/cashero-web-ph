@@ -11,7 +11,7 @@ import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg";
 import Youtube from "../../assets/youtube.svg";
 import Instagram from "../../assets/instagram.svg";
-import { androidAppLink, iosAppLink } from "../../config/config";
+import { androidAppLink, iosAppLink, websiteLink  } from "../../config/config";
 import { withTranslation } from "react-i18next";
 
 function TabPanel(props) {
@@ -45,14 +45,38 @@ const Footer = ({ i18n }) => {
 			<div className="Footer">
 				<div className="row">
 					<div className="col-md-6">
-						<Link link="/ph/">
-							<img src={Logo} height="36px" width="190px" alt="logo" />
-						</Link>
-						<p className="HelpText footerBreakText">{i18n.t("Footer_P1")}</p>
-						<ul className="list-unstyled AppList">
-							<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="100%" src={Android} /></a></li>
-							<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="100%" src={IOS} /></a></li>
-						</ul>
+					<div className="footerLanDropdown">
+							<div>
+								<Link link="/ph/">
+									<img src={Logo} height="36px" width="190px" alt="logo" />
+								</Link>
+								<p className="HelpText footerBreakText">{i18n.t("Footer_P1")}</p>
+								<ul className="list-unstyled AppList">
+									<li><a href={androidAppLink} target="_blank" rel="noopener noreferrer"><img alt="Android" height="100%" width="100%" src={Android} /></a></li>
+									<li><a href={iosAppLink} target="_blank" rel="noopener noreferrer"><img alt="IOS" height="100%" width="100%" src={IOS} /></a></li>
+								</ul>
+							</div>
+							<div>
+								<nav className="customNav">
+									<ul className="navbar-nav ml-auto">
+										<li className="nav-item dropdown languageDropdown">
+											<a href={websiteLink + "/en/"} className="nav-link dropdown-toggle">
+												🇺🇸&nbsp;&nbsp;USA
+											</a>
+											<a href={websiteLink + "/br/"} className="nav-link dropdown-toggle">
+												🇧🇷&nbsp;&nbsp;Brasil
+											</a>
+											<a href={websiteLink + "/in/"} className="nav-link dropdown-toggle">
+												🇮🇳&nbsp;&nbsp;India
+											</a>
+											<a href={websiteLink + "/ph/"} className="nav-link dropdown-toggle">
+												🇵🇭&nbsp;&nbsp;Philippines
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
 					</div>
 					<div className="col-md-6">
 						<div className="row">

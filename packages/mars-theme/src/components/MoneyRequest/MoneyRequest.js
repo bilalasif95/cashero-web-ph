@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../link";
-import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.png";
+import InstantMoneyTransfer from "../../assets/InstantMoneyTransfer.jpg";
 import Send from "../../assets/send.svg";
 import Request from "../../assets/request.svg";
 import { Fade, Slide } from "react-awesome-reveal";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Clock from "../../assets/clockImg.svg";
-import SlideGroup from "../../assets/SlideGroup.png";
+import SlideGroup from "../../assets/SlideGroup.svg";
 import TextfieldBanner from "../TextfieldBanner/TextfieldBanner";
 import donateDollar from "../../assets/donateDollar.svg";
 import heart from "../../assets/heart.svg";

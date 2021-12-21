@@ -439,6 +439,9 @@ h4 {
         top: 45%;
         right: 0;
       }
+      .footerLanDropdown .customNav ul li:last-child a:after {
+        display: none !important;
+      }
       /* .languageDropdown .dropdown-menu {
         width: 200px !important;
         padding: 59px 50px 51px 50px !important;
@@ -794,7 +797,20 @@ h4 {
     left: -120px; }
   .CharityDropdown {
     width: 356px !important; } }
-
+    .CountriesDropdown {
+      width: 160px !important;
+    }
+    .footerLanDropdown .customNav .dropdown-menu {
+      padding: 20px 20px;
+      left: -30px;
+    }
+    .customNav ul li:last-child .dropdown-menu .HeaderListCont {
+      margin-bottom: 0;
+    }
+    .LanguageDropdown {
+      width: 150px !important;
+      padding: 30px 0px 30px 30px !important;
+    }
 .HeaderListCont {
   margin-bottom: 20px;
   padding-left: 6px; }
@@ -978,6 +994,7 @@ h4 {
       .jss62 .makeStyles-closeButton-69 svg path,
       .jss62 .jss69 svg path {
         fill: #000; }
+        
 
 .makeStyles-paper-4:focus {
   outline: none !important; }
@@ -1250,6 +1267,22 @@ input#mobile-number.MuiInputBase-input.MuiInput-input {
       width: 100%; } }
 
 @media (max-width: 540px) {
+  .footerLanDropdown .customNav .languageDropdown .dropdown-menu {
+    position: absolute !important;
+    z-index: 1;
+    top: 35px !important;
+    background-color: #fff;
+    width: 150px !important;
+  }
+  .footerLanDropdown {
+    display: initial !important;
+  }
+  .footerLanDropdown .customNav .languageDropdown {
+    width: 45% !important;
+  }
+  .footerLanDropdown div {
+    width: 100%;
+  }
   .customNav .dropdown-menu {
     left: 0px;
   }
@@ -16301,4 +16334,13 @@ select:-webkit-autofill:focus {
 }
 .valueFont1 {
   font-size: 27px !important;
+}
+.footerLanDropdown {
+  display: flex;
+}
+.footerLanDropdown div:first-of-type {
+  width: 70%;
+}
+.footerLanDropdown div:nth-of-type(2) {
+  width: 30%;
 }

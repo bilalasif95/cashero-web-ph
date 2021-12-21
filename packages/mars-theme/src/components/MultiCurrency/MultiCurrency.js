@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../link";
-import Flags from "../../assets/Flags.svg";
+import Flags from "../../assets/Flags.png";
 import usdflag from "../../assets/usdflag.png";
 import gbpflag from "../../assets/gbpflag.png";
 import eurflag from "../../assets/eurflag.png";

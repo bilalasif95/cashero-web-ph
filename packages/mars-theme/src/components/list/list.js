@@ -327,10 +327,10 @@ const List = ({ i18n }) => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    PH
+                    ENG
                   </a>
                   <div
-                    className={languageToggleBotton ? "dropdown-menu toggleButtonShow CharityDropdown" : "dropdown-menu CharityDropdown"}
+                    className={languageToggleBotton ? "dropdown-menu toggleButtonShow LanguageDropdown" : "dropdown-menu LanguageDropdown"}
                     aria-labelledby="LanguageDropdown"
                   >
                     <div className="row">
@@ -339,17 +339,14 @@ const List = ({ i18n }) => {
                           <ul className="list-unstyled">
                             <ul className="list-unstyled">
                               <li onClick={() => setToggleBotton(false)}>
-                                <a href={websiteLink + "/en/"}>🇺🇸&nbsp;&nbsp;&nbsp;USA</a>
+                                <a href={websiteLink + "/en/"}>English</a>
                               </li>
                               <li onClick={() => setToggleBotton(false)}>
-                                <a href={websiteLink + "/br/"}>🇧🇷&nbsp;&nbsp;&nbsp;Brasil</a>
+                                <a href={websiteLink + "/br/"}>Português</a>
                               </li>
-                              <li onClick={() => setToggleBotton(false)}>
-                                <a href={websiteLink + "/in/"}>🇮🇳&nbsp;&nbsp;&nbsp;India</a>
-                              </li>
-                              <li onClick={() => setToggleBotton(false)}>
-                                <a href={websiteLink + "/ph/"}>🇵🇭&nbsp;&nbsp;&nbsp;Philippines</a>
-                              </li>
+                              {/* <li onClick={() => setToggleBotton(false)}>
+                                <a href={websiteLink + "/es/"}>Español</a>
+                              </li> */}
                             </ul>
                           </ul>
                         </div>

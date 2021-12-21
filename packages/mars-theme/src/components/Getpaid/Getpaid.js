@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "../../assets/arrowLink.svg";
-import Paid from "../../assets/paid.png";
+import Paid from "../../assets/paid.svg";
 import GetTheAppModal from "../GetTheAppModal/GetTheAppModal";
 import { withTranslation } from "react-i18next";
 
