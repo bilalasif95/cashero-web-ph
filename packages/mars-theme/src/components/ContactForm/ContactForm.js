@@ -28,7 +28,7 @@ const ContactForm = ({ i18n }) => {
 		setSuccess("");
 		if (!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test(email)) {
 			setLoading(false);
-			setError("Di-wastong Email.")
+			setError("Invalid Email.")
 		}
 		else {
 			callApi(EndPoints.contactUs, "post", "", {
@@ -38,7 +38,7 @@ const ContactForm = ({ i18n }) => {
 			})
 				.then((res) => {
 					if (res.code === 1000) {
-						setSuccess("Pinapahalagahan namin ang pakikipag-ugnayan mo sa amin. Makikipag-ugnayan kami muli sa iyo sa lalong madaling panahon! Magkaroon ng magandang araw!");
+						setSuccess("We appreciate you contacting us. We will get back in touch with you soon! Have a great day!");
 						setTimeout(() => {
 							setLoading(false);
 							setName("");
@@ -50,12 +50,12 @@ const ContactForm = ({ i18n }) => {
 							// setValue("");
 						}, 3000)
 					} else {
-						setError("May nangyaring mali.");
+						setError("Something went wrong.");
 					}
 				})
 				.catch(() => {
 					setLoading(false);
-					setError("May nangyaring mali.");
+					setError("Something went wrong.");
 				});
 		}
 	}
@@ -83,7 +83,6 @@ const ContactForm = ({ i18n }) => {
 							onChange={onCaptchaHandler}
 							height="140px"
 							width="100%"
-							hl="fil"
 						/>
 					</div>
 					<button onClick={() => sendMessage()} disabled={loading || !name || !email || !message || !value} className={(loading || !name || !email || !message || !value) ? "btn btn-default formbtn disabled" : "btn btn-default formbtn"}>{i18n.t("Send_Message")}</button>

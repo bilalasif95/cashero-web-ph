@@ -84,12 +84,12 @@ const GetTheAppModal = (props) => {
           // setValue("");
           setSuccessModal(true);
         } else {
-          setError("May nangyaring mali.");
+          setError("Something went wrong.");
         }
       })
       .catch(() => {
         setLoading(false);
-        setError("May nangyaring mali.");
+        setError("Something went wrong.");
       });
   };
   useEffect(() => {
@@ -263,7 +263,6 @@ const GetTheAppModal = (props) => {
                       onChange={onCaptchaHandler}
                       height="140px"
                       width="100%"
-                      hl="fil"
                     />
                   </div>
                 </div>

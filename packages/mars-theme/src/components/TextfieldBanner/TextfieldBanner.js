@@ -64,12 +64,12 @@ const TextfieldBanner = ({ i18n }) => {
           // setValue("");
           setSuccessModal(true);
         } else {
-          setError("May nangyaring mali.");
+          setError("Something went wrong.");
         }
       })
       .catch(() => {
         setLoading(false);
-        setError("May nangyaring mali.");
+        setError("Something went wrong.");
       });
   };
   const handleOnChange = (e) => {
@@ -187,7 +187,6 @@ const TextfieldBanner = ({ i18n }) => {
           onChange={onCaptchaHandler}
           height="140px"
           width="100%"
-          hl="fil"
         />
       </div>
       {error &&
