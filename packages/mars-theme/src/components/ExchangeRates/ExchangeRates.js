@@ -200,13 +200,24 @@ const ExchangeRates = ({ state, i18n }) => {
         setBaseCurrencyValue(e.target.value);
       }
     }
-    const val =
-      flagcodeeuro === "US"
-        ? baseCurrencyUSDValue
-        : flagcodeeuro === "GB"
-          ? baseCurrencyGBPValue
-          : baseCurrencyEURValue;
-    setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(e.target.value, val), 2));
+    if (swap) {
+      const val =
+        flagcodegbp === "US"
+          ? baseCurrencyUSDValue
+          : flagcodegbp === "GB"
+            ? baseCurrencyGBPValue
+            : baseCurrencyEURValue;
+      setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(e.target.value, val), 2));
+    }
+    else {
+      const val =
+        flagcodeeuro === "US"
+          ? baseCurrencyUSDValue
+          : flagcodeeuro === "GB"
+            ? baseCurrencyGBPValue
+            : baseCurrencyEURValue
+      setQuoteCurrencyValue(bigDecimal.round(bigDecimal.multiply(e.target.value, val), 2));
+    }
   };
   var countDecimals = function (value) {
     let text = value.toString();
@@ -243,13 +254,24 @@ const ExchangeRates = ({ state, i18n }) => {
         setQuoteCurrencyValue(e.target.value);
       }
     }
-    const val =
-      flagcodeeuro === "US"
-        ? baseCurrencyUSDValue
-        : flagcodeeuro === "GB"
-          ? baseCurrencyGBPValue
-          : baseCurrencyEURValue;
-    setBaseCurrencyValue(bigDecimal.round(bigDecimal.multiply(e.target.value, val), 2));
+    if (swap) {
+      const val =
+        flagcodegbp === "US"
+          ? baseCurrencyUSDValue
+          : flagcodegbp === "GB"
+            ? baseCurrencyGBPValue
+            : baseCurrencyEURValue;
+      setBaseCurrencyValue(bigDecimal.round(bigDecimal.multiply(e.target.value, val), 2));
+    }
+    else {
+      const val =
+        flagcodeeuro === "US"
+          ? baseCurrencyUSDValue
+          : flagcodeeuro === "GB"
+            ? baseCurrencyGBPValue
+            : baseCurrencyEURValue
+      setBaseCurrencyValue(bigDecimal.round(bigDecimal.multiply(e.target.value, val), 2));
+    }
   }
   const actualLimit = (bal) => {
     let temp = bal ? bal.toString() : "0";
@@ -416,8 +438,8 @@ const ExchangeRates = ({ state, i18n }) => {
                         </div>
                         <TextField
                           fullWidth
-                          value={baseCurrencyValue}
-                          onChange={onBaseCurrencyValueChange}
+                          value={quoteCurrencyValue}
+                          onChange={onQuoteCurrencyValueChange}
                           type="number"
                           variant="standard"
                           className="PersonalBoxFieldGet"
@@ -600,8 +622,8 @@ const ExchangeRates = ({ state, i18n }) => {
                           {baseCurrency}&nbsp;
                         </div>
                         <TextField
-                          value={quoteCurrencyValue}
-                          onChange={onQuoteCurrencyValueChange}
+                          value={baseCurrencyValue}
+                          onChange={onBaseCurrencyValueChange}
                           fullWidth
                           type="number"
                           variant="standard"
