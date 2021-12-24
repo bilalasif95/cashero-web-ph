@@ -53,7 +53,6 @@ export const FirebaseEndPoints = {
 
 export const counrtrylist = [
   {
-
     name_ph: "Afghanistan",
     flag: "🇦🇫",
     code: "AF",
@@ -709,7 +708,7 @@ export const counrtrylist = [
     phone_length: 10,
     white_listed: false,
   },
-  { 
+  {
     name_ph: "Gibraltar",
     flag: "🇬🇮",
     code: "GI",

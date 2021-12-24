@@ -274,7 +274,9 @@ const QuestionTabs = (props) => {
 								</AccordionSummary>
 								<AccordionDetails>
 									<Typography>
-										<p className="FaqText">{path === "/ph/multi-currency-savings-account/" ? i18n.t("savings_account_P1_1") : i18n.t("savings_account_P1")}</p>
+										<p className="FaqText">
+											{/* {path === "/ph/multi-currency-savings-account/" ? i18n.t("savings_account_P1_1") :  */}
+											{i18n.t("savings_account_P1")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
