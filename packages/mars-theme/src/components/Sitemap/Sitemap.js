@@ -12,7 +12,7 @@ const Sitemap = ({ i18n }) => {
         <link rel="alternate" hreflang="x-default" href="https://www.cashero.com/ph/sitemap/" />
       </Head>
       <div className="container">
-        <div className="banner">
+        <div className="banner pt-3">
           <div className="row">
             <div className="col-md-12">
               <div className="bannerCont">

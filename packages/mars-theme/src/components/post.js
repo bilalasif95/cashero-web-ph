@@ -63,7 +63,7 @@ const Post = ({ state, actions, libraries, i18n }) => {
           {structuredData(state)}
         </script>
       </Head>
-      <div className="ContactUsBanner">
+      <div className="ContactUsBanner p-0">
         <div className="container">
           <div className="BlogHeader">
             <div className="BackIcon">

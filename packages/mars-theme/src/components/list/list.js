@@ -327,7 +327,7 @@ const List = ({ i18n }) => {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    ENG
+                    FIL
                   </a>
                   <div
                     className={languageToggleBotton ? "dropdown-menu toggleButtonShow LanguageDropdown" : "dropdown-menu LanguageDropdown"}
@@ -343,6 +343,9 @@ const List = ({ i18n }) => {
                               </li>
                               <li onClick={() => setToggleBotton(false)}>
                                 <a href={websiteLink + "/br/"}>Português</a>
+                              </li>
+                              <li onClick={() => setToggleBotton(false)}>
+                                <a href={websiteLink + "/ph/"}>Filipino</a>
                               </li>
                               {/* <li onClick={() => setToggleBotton(false)}>
                                 <a href={websiteLink + "/es/"}>Español</a>
