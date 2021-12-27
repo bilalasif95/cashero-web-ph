@@ -275,8 +275,7 @@ const QuestionTabs = (props) => {
 								<AccordionDetails>
 									<Typography>
 										<p className="FaqText">
-											{/* {path === "/ph/multi-currency-savings-account/" ? i18n.t("savings_account_P1_1") :  */}
-											{i18n.t("savings_account_P1")}</p>
+											{path === "/ph/multi-currency-savings-account/" ? i18n.t("savings_account_P1_1") : i18n.t("savings_account_P1")}</p>
 									</Typography>
 								</AccordionDetails>
 							</Accordion>
@@ -1064,7 +1063,7 @@ const QuestionTabs = (props) => {
 												<p><b>{i18n.t("Provide_the_recipients_information")}</b> – {i18n.t("Provide_the_recipients_information_P")}</p>
 												<p><b>{i18n.t("Pay_for_the_transfer")}</b> – {i18n.t("Pay_for_the_transfer_P")}</p>
 											</div>
-											<p><b>{i18n.t("Note")}</b>:  {i18n.t("instant_money_transfer_Note")}</p>
+											<p><b>{i18n.t("Notee")}</b>:  {i18n.t("instant_money_transfer_Note")}</p>
 											<h3 className="blackhead">{i18n.t("instant_money_transfer_P18")}</h3>
 											<p>{i18n.t("instant_money_transfer_P19")}</p>
 											<h3 className="blackhead">{i18n.t("instant_money_transfer_P20")}</h3>

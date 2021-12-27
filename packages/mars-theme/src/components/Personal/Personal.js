@@ -98,11 +98,11 @@ const Personal = ({ state, i18n }) => {
           <div className="row">
             <div className="col-md-7">
               <div className="PersonalCont">
-                <h1 className="noBreakHeading">{i18n.t("High_Yield_Savings_Account_h1")}</h1>
+                <h1 className="noBreakHeading">{i18n.t("High_Yield_Savings_Account")}</h1>
                 <p className="bannerPara">{i18n.t("Personal_Main_P")}</p>
                 <TextfieldBanner />
                 <ul className="PersonalList list-unstyled">
-                  <li><img src={Clock} alt="Clock" />{i18n.t("Open_an_account_in_minutes_Multi")}</li>
+                  <li><img src={Clock} alt="Clock" />{i18n.t("Open_an_account_in_minutes")}</li>
                 </ul>
                 <p className="draw-banner-text noBreakBannerHeading">{i18n.t("Open_an_account_in_minutes_P")} <Link className="giveaway-link1" link="/ph/giveaway">{i18n.t("TERMS_AND_CONDITIONS")}</Link> {i18n.t("apply")} </p>
               </div>
